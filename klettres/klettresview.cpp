@@ -98,7 +98,7 @@ void KLettresView::paintEvent( QPaintEvent * )
 {
     if (Prefs::level()%2==1) {
         QPainter paint(this);
-
+        paint.setFont(Prefs::font());
         QString start = i18n("Start");
 
         paint.setFont(Prefs::font());
