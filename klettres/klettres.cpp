@@ -231,7 +231,7 @@ void KLettres::timer1()
 
 	QString string1;
 	QString string2;
-	string2.sprintf("klettres/sons/a%i.wav",n);
+	string2.sprintf("klettres/sons/a-%i.wav",n);
 	string1=locate("data",string2);
 	KAudioPlayer::play(string1);
 
@@ -339,7 +339,7 @@ void KLettres::timerDone2()
 
 		QString string1;
 		QString string2;
-		string2.sprintf("klettres/sons2/ad%i.wav",n);
+		string2.sprintf("klettres/sons2/ad-%i.wav",n);
 		string1=locate("data",string2);
 		KAudioPlayer::play(string1);
 
@@ -357,7 +357,7 @@ void KLettres::timerDone2()
 
 		QString string1;
 		QString string2;
-		string2.sprintf("klettres/sons2/ad%i.wav",n);
+		string2.sprintf("klettres/sons2/ad-%i.wav",n);
 		string1=locate("data",string2);
 		KAudioPlayer::play(string1);
 
