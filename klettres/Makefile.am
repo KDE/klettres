@@ -10,30 +10,13 @@ SUBDIRS = pics French Dutch Danish
 
 EXTRA_DIST = main.cpp klettres.cpp klettres.h klettres.desktop lo32-app-klettres.png lo16-app-klettres.png hi16-app-klettres.png hi32-app-klettres.png khsplash.cpp khsplash.h lo32-app-klettres.xcf klettresui.rc 
 
-install-data-local:
-	$(mkinstalldirs) $(kde_appsdir)/Edutainment/
-	$(INSTALL_DATA) $(srcdir)/klettres.desktop $(kde_appsdir)/Edutainment/klettres.desktop
-	$(mkinstalldirs) $(kde_icondir)/locolor/32x32/apps/
-	$(INSTALL_DATA) $(srcdir)/lo32-app-klettres.png $(kde_icondir)/locolor/32x32/apps/klettres.png
-	$(mkinstalldirs) $(kde_icondir)/locolor/16x16/apps/
-	$(INSTALL_DATA) $(srcdir)/lo16-app-klettres.png $(kde_icondir)/locolor/16x16/apps/klettres.png
-	$(mkinstalldirs) $(kde_icondir)/hicolor/16x16/apps/
-	$(INSTALL_DATA) $(srcdir)/hi16-app-klettres.png $(kde_icondir)/hicolor/16x16/apps/klettres.png
-	$(mkinstalldirs) $(kde_icondir)/hicolor/32x32/apps/
-	$(INSTALL_DATA) $(srcdir)/hi32-app-klettres.png $(kde_icondir)/hicolor/32x32/apps/klettres.png
-	$(mkinstalldirs) $(kde_icondir)/locolor/32x32/apps/
-	$(INSTALL_DATA) $(srcdir)/lo32-app-klettres.xcf $(kde_icondir)/locolor/32x32/apps/klettres.xcf
-	$(mkinstalldirs) $(kde_datadir)/klettres/
-	$(INSTALL_DATA) $(srcdir)/klettresui.rc $(kde_datadir)/klettres/klettresui.rc
+desktopdir = $(kde_appsdir)/Edutainment
 
-uninstall-local:
-	-rm -f $(kde_appsdir)/Edutainment/klettres.desktop
-	-rm -f $(kde_icondir)/locolor/32x32/apps/klettres.png
-	-rm -f $(kde_icondir)/locolor/16x16/apps/klettres.png
-	-rm -f $(kde_icondir)/hicolor/16x16/apps/klettres.png
-	-rm -f $(kde_icondir)/hicolor/32x32/apps/klettres.png
-	-rm -f $(kde_icondir)/locolor/32x32/apps/klettres.xcf
-	-rm -f $(kde_datadir)/klettres/klettresui.rc
+desktop_DATA = klettres.desktop
+
+appdir = $(kde_datadir)/klettres
+
+app_DATA = klettresui.rc
 
 ####### kdevelop will overwrite this part!!! (end)############
 # this 10 paths are KDE specific. Use them:
