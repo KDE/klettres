@@ -1,16 +1,16 @@
 # KDE Config File  
 [Desktop Entry]
+Encoding=UTF-8
 Type=Application
 Exec=klettres -caption "%c" %i %m  
 Icon=klettres
-MiniIcon=klettres
 DocPath=klettres/index.html
 Comment=
 Comment[sl]=Periodna tabela elementov
 Comment[xx]=xxxx
 Terminal=0
 Name=KLettres
-Name[af]=Kletters
+Name[af]=K-letters
 Name[ar]=الاحرف ك
 Name[hi]=के-लेटर्स
 Name[hr]=Slova
@@ -25,6 +25,8 @@ Name[xx]=xxKLettresxx
 Name[zh_TW]=KLetters
 Name[zu]=IKLettres
 GenericName=Learn Alphabet
+GenericName[af]=Leer die  Alfabet
+GenericName[ar]=تعلّم الحروف
 GenericName[bg]=Изучаване на азбуката
 GenericName[bs]=Naučite abecedu
 GenericName[ca]=Aprenent l'alfabet

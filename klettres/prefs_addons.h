@@ -17,7 +17,7 @@ public:
     i = Prefs::self()->m_languages.findIndex(defaultLanguage());
     if (i != -1)
       return i;
-    i = Prefs::self()->m_languages.findIndex("fr");
+    i = Prefs::self()->m_languages.findIndex("en");
     if (i != -1)
       return i;
 

@@ -5,3 +5,4 @@ ClassName=Prefs
 Singleton=true
 CustomAdditions=true
 Mutators=true
+

@@ -57,7 +57,7 @@ KLettres::KLettres()
 	soundFactory = new SoundFactory(this, "sounds");
 	//Read config, must come after SoundFactory, otherwise we don't have all languages
 	loadSettings();
-	// activate language
+	// activate language selectedLanguage is default or saved current language
 	soundFactory->change(selectedLanguage);
 	//Set up StatusBar
 	KStatusBar *st=statusBar();
@@ -141,6 +141,7 @@ void KLettres::setupActions()
 void KLettres::registerLanguage(const QString &language, const QString &menuItem)
 {
 	m_languages.append(language);
+	kdDebug() << "m_languages :" << m_languages << endl;
 	//this is for translation of the languages
 	KConfig entry(locate("locale", "all_languages"));
 	entry.setGroup(language);
@@ -168,6 +169,8 @@ void KLettres::changeLanguage(int newLanguage)
 
 bool KLettres::loadLayout(QDomDocument &layoutDocument)
 {
+	kdDebug() << "m_languages :" << m_languages << endl;
+	kdDebug() << "language code :" << m_languages[Prefs::languageNumber()] << endl;
 	//QFile layoutFile(QFile::encodeName(locate("data", "klettres/data/sounds.xml")));
 	QFile layoutFile(locate("data", "klettres/data/sounds.xml"));
 	//if xml file is not found, program exits

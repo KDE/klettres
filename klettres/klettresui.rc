@@ -23,8 +23,6 @@
 </MenuBar>
 <ToolBar name="mainToolBar" noMerge="1"><Text>Main</Text>
 	<Action name="file_quit"/>
-    	<Separator/>
-    	<Action name="help_contents"/>
 </ToolBar>
 <ToolBar name="secondToolbar" position="bottom" noMerge="1"><text>Characters</text>
 </ToolBar>
