@@ -42,6 +42,8 @@ int main(int argc, char *argv[])
     KLETTRES_VERSION, description, KAboutData::License_GPL,
     "(c) 2001, Anne-Marie Mahfouf", 0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
   aboutData.addAuthor("Anne-Marie Mahfouf",0, "annma@kde.org");
+  aboutData.addCredit("Ludovic Grossard",
+	    I18N_NOOP("French sounds"), "ludovic.grossard@libertysurf.fr");
   aboutData.addCredit("Geert Stams",
 	    I18N_NOOP("Dutch sounds"), "geert@pa3csg.myweb.nl");
   aboutData.addCredit("Erik Kjaer Pedersen",
