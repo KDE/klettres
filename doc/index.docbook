@@ -114,7 +114,11 @@ that you do the game together.</para>
 
 <para>This screenshot shows &klettres; defaults: level is Level 1, language is French
 and look-and-feel is <emphasis>grown-up</emphasis>.</para>
-
+<note>
+<para>
+If your KDE language is set to Czech, Danish, Dutch or French, then this will be the default language the first time you run KLetttres. For other languages, French is the default.
+</para>
+</note>
 <para>
 In level 1, the user sees the letter and hears the sound. He then has to type
 in the letter in the box. If it is correct, the next letter appears (without
@@ -176,7 +180,7 @@ is wrong, the letter appears to help him. </para>
 </screenshot>
 </para>
 
-<para>Here you can see &klettres; level 3, <quote>grown-up</quote> look-and-feel and Czech language.
+<para>Here you can see &klettres; level 3, <emphasis>grown-up</emphasis> look-and-feel and Czech language.
 </para>
 
 <para>
@@ -212,7 +216,7 @@ for a young child. </para>
 There is one more setting you can change: the font that displays the letters. In some distribution, the default font used from the system is really ugly. In Grow-up style, in the Settings menu, there is a Change Font menu item that brings you a font chooser dialog.
 </para>
 <para>
-Please be aware that certain fonts are not able to display accented characters correctly.
+Please be aware that certain fonts are not able to display correctly accented characters.
 </para>
 
 <screenshot>
