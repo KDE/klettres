@@ -177,7 +177,7 @@
 	<sound name="W" file="en/alpha/W.ogg" />
 	<sound name="X" file="en/alpha/X.ogg" />
 	<sound name="Y" file="en/alpha/Y.ogg" />
-	<sound name="z" file="en/alpha/Z.ogg" />
+	<sound name="Z" file="en/alpha/Z.ogg" />
     </alphabet>
 
       <syllables>
