@@ -24,7 +24,7 @@ int n=0, niveau=1;
 
 KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name)
 {
-   setCaption( i18n( "Klettres - version 1.3" ) );
+   setCaption( i18n( "KLettres - version 1.3" ) );
    // QToolTip::add( this, i18n( "Type the same letter that you hear or see" ) );
 
 	//Actions
@@ -138,10 +138,10 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	 num=numRead;
 	 if (!langString) //if there is no config file
 	 {
-		QString mString=QString(i18n("This is the first time you run KLettres.\n"
-                                                  "Default learning language is set to French.\n"
+		QString mString=QString(i18n("This is the first time you have run KLettres.\n"
+                                                  "The default learning language is set to French.\n"
 																"You can change the language in the Settings menu.\n\n"
-																"Default Level is Level 1, the easiest one.\n"
+																"Default level is Level 1, the easiest one.\n"
 																"You can change the level in the Levels menu."));
 		KMessageBox::information( this, mString,"KLettres - Default" );
 		l1=26;   //set French as default
