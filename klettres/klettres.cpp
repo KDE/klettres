@@ -201,23 +201,6 @@ void KLettres::updateLanguage()
 	loadLangToolBar();
 }
 
-void KLettres::optionsConfigureToolbars()
-{
-	// use the standard toolbar editor
-	saveMainWindowSettings( KGlobal::config(), autoSaveGroup() );
-	KEditToolbar dlge(actionCollection());
-	connect(&dlge, SIGNAL(newToolbarConfig()), this, SLOT(newToolbarConfig()));
-	dlge.exec();
-}
-
-void KLettres::newToolbarConfig()
-{
-	// this slot is called when user clicks "Ok" or "Apply" in the toolbar editor.
-	// recreate our GUI, and re-apply the settings (e.g. "text under icons", etc.)
-	createGUI();
-	applyMainWindowSettings( KGlobal::config(), autoSaveGroup() );
-}
-
 void KLettres::loadSettings()
 {
 	selectedLanguage = Prefs::languageNumber();

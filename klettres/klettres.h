@@ -96,14 +96,8 @@ public:
 
 private slots:
 
-	///Configure toolbars icons, use the standard toollbar editor
-	void optionsConfigureToolbars();
 	///Open the Settings->Configure KLettres dialog
 	void optionsPreferences();
-	/**This slot is called when user clicks "Ok" or "Apply" in the toolbar editor.
-	* Recreate our GUI, and re-apply the settings (e.g. "text under icons", etc.)
-	*/
-	void newToolbarConfig();
 	///Hide and show the MenuBar, called by Settings->Show Menubar
 	void slotMenubar();
 	///Show menuBar, called by the MenuBar button which is only visible when the menubar is not shown
