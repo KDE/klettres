@@ -42,7 +42,7 @@ the basics of a foreign language. </para>
 Nine languages are available at the moment: Czech, Danish, Dutch, English, French, Italian, Romanized Hindi, Spanish and Slovak but only English, French and your language if it is among those are installed by default.
 </para>
 <para>
-KLettres is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar or via the Level menu. Themes (background and font color) can be changed in a drop down box or in the Look -> Themes menu. Three themes are available: classroom, arctic and desert. Finally, the mode can be changed from kid to grown-up using the Look -> Mode menu.
+KLettres is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar or via the Level menu. Themes (background and font color) can be changed in a drop down box or in the <guimenu>Look</guimenu> -&gt;<guimenuitem>Themes</guimenuitem> menu. Three themes are available: classroom, arctic and desert. Finally, the mode can be changed from kid to grown-up using the <guimenu>Look</guimenu> -&gt; <guimenuitem>Mode</guimenuitem> menu.
 </para>
 
 </abstract>
@@ -78,7 +78,7 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are nine languages available at the moment: Czech, Danish, Dutch, English, French, Italian, Romanized Hindi, Spanish and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get A New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
+<para>There are nine languages available at the moment: Czech, Danish, Dutch, English, French, Italian, Romanized Hindi, Spanish and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
 
 <note><para>KLettres needs aRts running for the sound</para></note>
 
@@ -540,6 +540,13 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
+<para>I don't hear any sounds</para>
+</question>
+<answer>
+<para>You need to have aRts support and the aRts daemon needs to be running. Make sure you compiled kdelibs with arts if you compiled KDE. In any doubt, ask your distribution. You can also check if arts is running in &kcontrol; -&gt; Sound &amp; Multimedia in the Sound System tab. There you must make sure that <emphasis role="bold">Enable the Sound System</emphasis> is checked.</para> </answer>
+</qandaentry>
+<qandaentry>
+<question>
 <para>I don't see  some letters on the icons on the Special Characters Toolbar. I see rectangles instead for some languages.</para>
 </question>
 <answer>
@@ -578,7 +585,7 @@ able to do that. See <ulink url="http://edu.kde.org/klettres/add_language.php">t
 &klettres;
 </para>
 <para>
-Program copyright 2001 Anne-Marie Mahfouf <email>annma@kde.org</email>
+Program copyright 2001-2005 Anne-Marie Mahfouf <email>annma@kde.org</email>
 </para>
 <para>
 I am very grateful to the following people whose contribution has been greatly valuable:
@@ -619,7 +626,7 @@ I am very grateful to the following people whose contribution has been greatly v
 </para>
 
 <para>
-Documentation copyright 2001 Anne-Marie Mahfouf <email>annma@kde.org</email>
+Documentation copyright 2001-2005 Anne-Marie Mahfouf <email>annma@kde.org</email>
 </para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
