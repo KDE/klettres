@@ -139,7 +139,7 @@ void KLettres::changeLanguage(uint newLanguage)
     ((KToggleAction*) actionCollection()->action(languageActions[newLanguage].latin1()))->setChecked(true);
     return;
   }
-  // Unselect preceeding language
+  // Unselect preceding language
   ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setChecked(false);
   ((KToggleAction*) actionCollection()->action(languageActions[newLanguage].latin1()))->setChecked(true);
   // Change language in the remembered options
