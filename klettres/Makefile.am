@@ -8,8 +8,7 @@ klettres_LDADD   = $(LIB_KDEUI)
 
 SUBDIRS = pics data
 
-desktopdir = $(kde_appsdir)/Edutainment/Languages
-desktop_DATA = klettres.desktop
+xdg_apps_DATA = klettres.desktop
 
 appdir = $(kde_datadir)/klettres
 app_DATA = klettresui.rc
