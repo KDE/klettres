@@ -376,6 +376,71 @@ You can also choose here the size you like the best.
 
 </sect2>
 <!--add Look menu-->
+
+<sect2>
+<title>The <guimenu>Look</guimenu> Menu</title>
+
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Alt;<keycap>C</keycap></keycombo>
+</shortcut>
+<guimenu>Look</guimenu>
+<guisubmenu>Theme</guisubmenu>
+<guimenuitem>Classroom</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Switch</action> to the desert theme</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Alt;<keycap>A</keycap></keycombo>
+</shortcut>
+<guimenu>Look</guimenu>
+<guisubmenu>Theme</guisubmenu>
+<guimenuitem>Arctic</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Switch</action> to the arctic theme</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>
+</shortcut>
+<guimenu>Look</guimenu>
+<guisubmenu>Theme</guisubmenu>
+<guimenuitem>Desert</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Switch</action> to the desert theme</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Ctrl;<keycap>K</keycap></keycombo>
+</shortcut>
+<guimenu>Look</guimenu>
+<guimenuitem>Mode Kid</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Toggle</action> the kid mode: no menubar</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Ctrl;<keycap>G</keycap></keycombo>
+</shortcut>
+<guimenu>Look</guimenu>
+<guimenuitem>Mode Grownup</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Toggle</action> the grown-up mode: normal interface</para></listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
 <sect2>
 <title>The <guimenu>Settings</guimenu> Menu</title>
 
