@@ -103,8 +103,6 @@ KLettres::KLettres()
 	updateLevMenu(Prefs::level()-1);
 	
 	m_view->selectedLanguage = selectedLanguage;
-	kdDebug() << "------- languages: " << m_languages << endl;
-	kdDebug() << "selectedLanguage from Prefs: " << selectedLanguage << endl;
 	//write the present languages in config so they cannot be downloaded
 	KConfig *config=kapp->config();
 	config->setGroup("KNewStuffStatus");
@@ -152,8 +150,6 @@ void KLettres::setupActions()
 void KLettres::registerLanguage(const QString &language, const QString &menuItem)
 {
 	m_languages.append(language);
-	kdDebug() << "In KLettres::register Language " << language << endl;
-	kdDebug() << "In KLettres: m_languages: " << m_languages << endl;
 	//this is for translation of the languages
 	KConfig entry(locate("locale", "all_languages"));
 	entry.setGroup(language);
@@ -209,10 +205,8 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 void KLettres::updateLanguage()
 {
 	QString langString = m_languageNames[selectedLanguage];
-	kdDebug() << "langString : ---------- " << langString << endl;
 	langString.replace("&", QString::null);
 	langLabel->setText(i18n("Current language is %1").arg(langString));
-	kdDebug() << "Selected language: --------- " << selectedLanguage << endl;
 	loadLangToolBar();
 }
 
