@@ -25,8 +25,6 @@ KLettresPreferences::KLettresPreferences()
     : KDialogBase(IconList, i18n("KLettres Preferences"),
                   Help|Default|Ok|Apply|Cancel, Ok)
 {
-    //disable the Apply button before any changes are made
-    enableButton( Apply, false);
     //read the config file to set everything accordingly
     readConfig();
     //GUI
@@ -52,6 +50,8 @@ KLettresPreferences::KLettresPreferences()
 
     //set everything according to config file
     slotSet();
+    //disable the Apply button before any changes are made
+    enableButton( Apply, false);
 }
 
 KLettresPrefPageOne::KLettresPrefPageOne(QWidget *parent)
@@ -109,7 +109,7 @@ void KLettresPreferences::slotDefault()
     style = "grownup";
     langString = "French";
     newFont = QFont(KGlobalSettings::largeFont());
-    newFont.setWeight(75);
+    newFont.setBold(true);
     slotSet();
     slotChanged();
 }
@@ -182,7 +182,6 @@ void KLettresPreferences::slotSetNewFont(const QFont &font)
 	{
 		slotChanged();
 		newFont = font;
-		writeConfig();
 	}
 }
 
@@ -204,7 +203,6 @@ void KLettresPreferences::slotChangeLevel(int id)
 
 void KLettresPreferences::slotChangeLook(int id)
 {
-    kdDebug() << id << endl;
     switch (id) {
         case 0:
             style = "grownup";

@@ -105,7 +105,6 @@ KLettres::KLettres()
     if (!m_view->niveau) m_view->niveau = 1;
     setLang();
     updateLevMenu(m_view->niveau-1);
-    //langLabel->setText(i18n("Current language is %1").arg(language));
 }
 
 KLettres::~KLettres()
@@ -229,16 +228,16 @@ void KLettres::optionsPreferences()
 void KLettres::slotClickApply()
 {
      KLettresPreferences dlg;
-      //refresh the font when changed in pref dialog
-      if (newFont != dlg.newFont)
+     //refresh the font when changed in pref dialog
+      if (newFont.family() != dlg.newFont.family() ||  newFont.pointSize() != dlg.newFont.pointSize() || newFont.weight() != dlg.newFont.weight())
       {
-      	newFont = dlg.newFont;
-      	m_view->button1->setFont(newFont);
-      	m_view->line1->setFont(newFont);
+	newFont = dlg.newFont;
+	slotSetFont();
       }
       //refresh the level if changed
       if (m_view->niveau != dlg.niveau)
         slotChangeLevel(dlg.niveau-1);
+      //refresh the bacjground if changed
       if (style != dlg.style)
       {
       	style = dlg.style;
@@ -247,15 +246,16 @@ void KLettres::slotClickApply()
       }
       if (langString!=dlg.langString)
       {
-         langString = dlg.langString;
-	 setLang();
+      	  langString = dlg.langString;
+	  setLang();
       }
+
 }
 
 void KLettres::slotQuit()
 {
-    writeConfig();
-    kapp->quit();
+      writeConfig();
+      kapp->quit();
 }
 
 void KLettres::slotGrownup()
