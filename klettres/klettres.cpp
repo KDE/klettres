@@ -139,11 +139,11 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	 style=config->readEntry("myStyle");
 	 if (!langString) //if there is no config file
 	 {
-		QString mString=QString(i18n("This is the first time you have run KLettres.\n"
+		QString mString=i18n("This is the first time you have run KLettres.\n"
                                                   "The default learning language is set to French.\n"
 																"You can change the language in the Settings menu.\n\n"
 																"Default level is Level 1, the easiest one.\n"
-																"You can change the level in the Levels menu."));
+																"You can change the level in the Levels menu.");
 		KMessageBox::information( this, mString,"KLettres - Default" );
 		l1=26;   //set French as default
 		l2=28;
@@ -394,8 +394,8 @@ void KLettres::play()
       lev1File.setName(locate("data",dataString));
        if (!lev1File.exists()) //if the data files are not installed in the correct dir
          {
-					QString mString=QString(i18n("File $KDEDIR/share/apps/%1 not found!\n"
-                                                  "Check your installation, please!")).arg(dataString);
+					QString mString=i18n("File $KDEDIR/share/apps/%1 not found!\n"
+                                                  "Check your installation, please!").arg(dataString);
 					KMessageBox::sorry( this, mString,
 		                    i18n("KLettres - Error") );
 					exit(1);
@@ -418,8 +418,8 @@ void KLettres::play()
 		string1=locate("data",string2);
 		 if (!string1) //if the sound files are not installed  correctly
          {
-					QString mString=QString(i18n("File $KDEDIR/share/apps/%1 not found!\n"
-                                                  "Check your installation, please!")).arg(string2);
+					QString mString=i18n("File $KDEDIR/share/apps/%1 not found!\n"
+                                                  "Check your installation, please!").arg(string2);
 					KMessageBox::sorry( this, mString,
 		                    i18n("KLettres - Error") );
 					exit(1);
