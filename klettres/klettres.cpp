@@ -50,35 +50,6 @@ KLettres::KLettres()
     loadSettings();
     //selectedLanguage must be read from config file
     soundFactory = new SoundFactory(this, "sounds", selectedLanguage);
-    //if fr dir does not exist
-     if (!a[2])
-     {
-        QString mString=i18n("The data directory fr/ with the \n"
-                             "French sounds was not found.\n\n"
-			     "Please install this data and start KLettres again.\n\n");
-        KMessageBox::information( this, mString,"KLettres - Error" );
-        exit(0);
-     }
-    //in case the language read from config is not installed due to old config or other problem
-    //in that case, set French as default
-    if (!a[selectedLanguage])
-    {
-       //uncheck selectedLanguage in Languages menu
-       ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setEnabled(true);
-       ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setChecked(false);
-       ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setEnabled(false);
-       //check French in Languages menu
-       ((KToggleAction*) actionCollection()->action(languageActions[2].latin1()))->setChecked(true);
-       selectedLanguage = 2;
-       //write new language in config file
-       KConfig *config = kapp->config();
-       if (config)
-       {
-          config->setGroup("General");
-          config->writeEntry("LanguageNumber", "2");
-       }
-       soundFactory->change(2);
-    }
     // then, setup our actions, must be done after loading soundFactory as it has some actions too
     setupActions();
 
@@ -164,14 +135,6 @@ void KLettres::registerLanguage(const QString &menuItem, const char *actionId, b
   if( t ) {
       if (languages == selectedLanguage) t->setChecked(true);
       t->setEnabled(enabled);
-      a[languages]=enabled;
-      KConfig *config = kapp->config();
-      if (config)
-      {
-	config->setGroup("Languages");
-	config->writeEntry(QString("a[%1]").arg(languages), a[languages]);
-	sync();
-      }
       languageActions[languages] = actionId;
       languages++;
   }
@@ -186,7 +149,6 @@ void KLettres::changeLanguage(uint newLanguage)
     return;
   }
   // Unselect preceeding language
-   if (a[selectedLanguage])
   ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setChecked(false);
   ((KToggleAction*) actionCollection()->action(languageActions[newLanguage].latin1()))->setChecked(true);
   // Change language in the remembered options
@@ -268,7 +230,6 @@ void KLettres::updateLanguage(int index)
             break;
         case 2:
             langString = i18n("French");
-	    kdDebug() << "in French" <<endl;
             break;
         case 3:
             langString = i18n("Dutch");

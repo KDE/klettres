@@ -60,8 +60,6 @@ public:
    ///is false when grownup button not shown
    bool grownBool;
 
-   bool a[5];
-
    void registerLanguage(const QString &menuItem, const char *actionId, bool enabled);
    /**
     *Switch to another language
