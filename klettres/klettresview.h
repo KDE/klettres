@@ -1,32 +1,32 @@
-/*
- * Copyright (C) 2001-2004 Anne-Marie Mahfouf <annma@kde.org>
+/***************************************************************************
+ *   Copyright (C) 2001-2005 by Anne-Marie Mahfouf                              *
+ *   annemarie.mahfouf@free.fr                                             *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
 
-    This program is free software; you can redistribute it and/or
-    modify it under the terms of version 2 of the GNU General Public
-    License as published by the Free Software Foundation.
+#ifndef KLETTRESVIEW_H
+#define KLETTRESVIEW_H
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+#include <qwidget.h>
+#include <qpalette.h>
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- */
-
-#ifndef _KLETTRESVIEW_H_
-#define _KLETTRESVIEW_H_
-
-//Qt includes
-#include <qlabel.h>
-//KDE includes
-#include <kapplication.h>
-#include <klineedit.h>
-#include <kstandarddirs.h>
-
-class QDomDocument;
+class QLabel;
 class KLettres;
+class KLineEdit;
 
 /**
  * This class serves as the view for KLettres.  It holds the GUI for the kid and grown-up looks
@@ -36,70 +36,70 @@ class KLettres;
  * @author Anne-Marie Mahfouf <annma@kde.org>
  * @version 1.1
  */
- 
+
+
 class KLettresView : public QWidget
 {
     Q_OBJECT
 public:
-	/**
-	 * Default constructor
-	 */
-    	KLettresView(KLettres *parent);
+    /**
+     * Default constructor
+     */
+    KLettresView(KLettres *parent);
 
-	/**
-	 * Destructor
-	 */
-    	virtual ~KLettresView();
+    /**
+     * Destructor
+     */
+    virtual ~KLettresView();
 
-        ///The button that display the letter or syllable
-	QLabel* button1;
-        ///The line where the user enters his/her input
-        QLineEdit* line1;
-	///The pixmap for the kid background
-	QPixmap pm_k;
-        ///The pixmap for the grown-up background
-	QPixmap pm_a;
-	///Palette changes wether it's kid or grown-up
-	QPalette pal;
-        QColorGroup cg;
-        ///Random number that decides on the letter/syllable and sound
-        int n;
-        ///Temporary number to store the previous random and check that it's not twice the same
-        int  temp;
-        ///Length of the syllables
-        int length;
-        ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch
-        uint selectedLanguage;
-        ///Current letter or syllable stored
-        QString st;
-        ///Current input in line1
-        QString sj;
-	///User input in upper case
-        QString t1;
-        ///User input
-        QString a1;
-	///Cursor position in the line edit
-        int input;
-	///A Klettres object
-	KLettres *klettres;
-	///The timer value i.e. the time for displaying the letters/syllables
-	int m_timer;
-	
-public slots:
-	///Set the Grown-up background, show menubar, show the Kid button
-	void slotGrownup();
-	///Set the Kid background pic, hide the menubar, show the Grownup button
-	void slotKid();
-	/**This begin the game or begin a new level: set button and lineedit sizes
-	 * set connections
-	 */
-	void game();
-	void treat1(const QString& );
-	void timer1();
-	void slotLet2(const QString& );
-	void timerDone();
-	///Choose a sound in random and ensure that it's not the same than the previous one
-	void chooseSound();
+    ///Set the Grown-up background, show menubar, show the Kid button
+    void viewThemeArctic();
+    ///Set the Kid background pic, hide the menubar, show the Grownup button
+    void viewThemeClassroom();
+    ///Set the Desert background pic, hide the menubar, show the Grownup button
+    void viewThemeDesert();
+    ///Start playing displaying a new letter/syllable, playing the associated sound
+    void game();
+
+    int selectedLanguage;
+    ///The timer value i.e. the time for displaying the letters/syllables
+    int m_timer;
+    ///A Klettres object
+    KLettres *m_klettres;
+
+protected:
+
+    ///The line where the user enters his/her input
+    KLineEdit *m_letterEdit;
+    ///The pixmaps for the grown-up and  backgrounds
+    QPixmap m_grownupPicture,
+    m_kidPicture,
+    m_desertPicture;
+    ///Palette changes wether it's kid or grown-up
+    QPalette pal;
+    QColorGroup cg;
+    ///cursor position in the line edit
+    int m_cursorPos;
+    ///Random number that decides on the letter/syllable and sound
+    int m_random;
+    ///Length of the syllables
+    int m_length;
+    ///Choose a sound in random and ensure that it's not the same than the previous one
+    void chooseSound();
+    ///Current letter or syllable stored
+    QString m_currentLetter;
+
+    QString t1;
+
+    QString a1;
+    ///Paint the letter/syllable in levels 1 and 3
+    void paintEvent( QPaintEvent * );
+
+    protected slots:
+    void slotProcess(const QString &inputLetter);
+
+    void slotTimerDone();
+
 };
 
-#endif // _KLETTRESVIEW_H_
+#endif // KLETTRESVIEW_H

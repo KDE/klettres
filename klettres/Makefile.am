@@ -32,6 +32,12 @@ messages: rc.cpp
 LANGS = fr en
 SUBS = alpha syllab
 
+xmlen_DATA = en/sounds.xml
+xmlendir = $(kde_datadir)/klettres/en
+
+xmlfr_DATA = fr/sounds.xml
+xmlfrdir = $(kde_datadir)/klettres/fr
+
 install-data-local:
 	@for lang in $(LANGS); do \
 		for sub in $(SUBS); do \

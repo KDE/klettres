@@ -1,29 +1,45 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="klettres" version="3">
-<MenuBar>
-	<Menu name="file" noMerge="1"><text>&amp;File</text>	
-		<Action name="downloadnewstuff"/>
-		<Action name="file_quit"/>
-	</Menu>
+<kpartgui name="klettres" version="5">
+	<MenuBar>
+		<Menu name="file" noMerge="1"><text>&amp;File</text>	
+			<Action name="downloadnewstuff"/>
+			<Action name="file_quit"/>
+		</Menu>
 
-        <Action name="languages"/>
+		<Action name="levels"/>
 		
+		<Action name="languages"/>
+		
+		<Menu name="look_mode" noMerge="1"><text>L&amp;ook</text>
+			<Action name="looks" />
+			<Separator/>
+			<Action name="mode_kid"/>
+			<Action name="mode_grownup"/>
+		</Menu>
 
-	<Menu name="settings" noMerge="1"><text>&amp;Settings</text>
-		<Action name="menubar" />
-		<Merge name="StandardToolBarMenuHandler" />
-		<Action name="options_show_statusbar"/>
+
+		<Menu name="settings" noMerge="1"><text>&amp;Settings</text>
+			<Action name="menubar" />
+			<Merge name="StandardToolBarMenuHandler" />
+			<Action name="options_show_statusbar"/>
+			<Separator/>
+			<Action name="options_configure_keybinding"/>
+			<Action name="options_configure_toolbars"/>
+			<Action name="options_configure"/>	
+		</Menu>
+	</MenuBar>
+	<ToolBar name="mainToolbar" noMerge="1"><Text>Main</Text>
+		<Action name="levels"/>
 		<Separator/>
-		<Action name="font"/>
-		<Action name="timer"/>
-		<Action name="options_configure_keybinding"/>
-		<Action name="options_configure_toolbars"/>
-
-	</Menu>
-</MenuBar>
-<ToolBar name="mainToolBar" noMerge="1"><Text>Main</Text>
-	<Action name="file_quit"/>
-</ToolBar>
-<ToolBar name="secondToolbar" position="bottom" noMerge="1"><text>Characters</text>
-</ToolBar>
+		<Action name="looks" />
+		<Separator/>
+		<Action name="mode_kid"/>
+		<Action name="mode_grownup"/>
+		<Separator/>
+		<Action name="menubar"/>
+		<Separator/>
+		<Action name="file_quit"/>
+	</ToolBar>
+	<ToolBar name="secondToolbar" position="bottom" noMerge="1"><text>Characters</text>
+	</ToolBar>
 </kpartgui>

@@ -1,0 +1,81 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+
+  <language code="fr">
+
+    <menuitem>
+      <label>&amp;French</label>
+    </menuitem>
+      <alphabet>
+	<sound name="A" file="fr/alpha/a-0.ogg" />
+	<sound name="B" file="fr/alpha/a-1.ogg" />
+	<sound name="C" file="fr/alpha/a-2.ogg" />
+	<sound name="D" file="fr/alpha/a-3.ogg" />
+	<sound name="E" file="fr/alpha/a-4.ogg" />
+	<sound name="F" file="fr/alpha/a-5.ogg" />
+	<sound name="G" file="fr/alpha/a-6.ogg" />
+	<sound name="H" file="fr/alpha/a-7.ogg" />
+	<sound name="I" file="fr/alpha/a-8.ogg" />
+	<sound name="J" file="fr/alpha/a-9.ogg" />
+	<sound name="K" file="fr/alpha/a-10.ogg" />
+	<sound name="L" file="fr/alpha/a-11.ogg" />
+	<sound name="M" file="fr/alpha/a-12.ogg" />
+	<sound name="N" file="fr/alpha/a-13.ogg" />
+	<sound name="O" file="fr/alpha/a-14.ogg" />
+	<sound name="P" file="fr/alpha/a-15.ogg" />
+	<sound name="Q" file="fr/alpha/a-16.ogg" />
+	<sound name="R" file="fr/alpha/a-17.ogg" />
+	<sound name="S" file="fr/alpha/a-18.ogg" />
+	<sound name="T" file="fr/alpha/a-19.ogg" />
+	<sound name="U" file="fr/alpha/a-20.ogg" />
+	<sound name="V" file="fr/alpha/a-21.ogg" />
+	<sound name="W" file="fr/alpha/a-22.ogg" />
+	<sound name="X" file="fr/alpha/a-23.ogg" />
+	<sound name="Y" file="fr/alpha/a-24.ogg" />
+	<sound name="Z" file="fr/alpha/a-25.ogg" />
+      </alphabet>
+
+      <syllables>
+	<sound name="LA" file="fr/syllab/ad-0.ogg" />
+	<sound name="LE" file="fr/syllab/ad-1.ogg" />
+	<sound name="LI" file="fr/syllab/ad-2.ogg" />
+	<sound name="LO" file="fr/syllab/ad-3.ogg" />
+	<sound name="LU" file="fr/syllab/ad-4.ogg" />
+	<sound name="DE" file="fr/syllab/ad-5.ogg" />
+	<sound name="DA" file="fr/syllab/ad-6.ogg" />
+	<sound name="DI" file="fr/syllab/ad-7.ogg" />
+	<sound name="DO" file="fr/syllab/ad-8.ogg" />
+	<sound name="DU" file="fr/syllab/ad-9.ogg" />
+	<sound name="ME" file="fr/syllab/ad-10.ogg" />
+	<sound name="MA" file="fr/syllab/ad-11.ogg" />
+	<sound name="MO" file="fr/syllab/ad-12.ogg" />
+	<sound name="MI" file="fr/syllab/ad-13.ogg" />
+	<sound name="MU" file="fr/syllab/ad-14.ogg" />
+	<sound name="RA" file="fr/syllab/ad-15.ogg" />
+	<sound name="RE" file="fr/syllab/ad-16.ogg" />
+	<sound name="RI" file="fr/syllab/ad-17.ogg" />
+	<sound name="RO" file="fr/syllab/ad-18.ogg" />
+	<sound name="RU" file="fr/syllab/ad-19.ogg" />
+	<sound name="PO" file="fr/syllab/ad-20.ogg" />
+	<sound name="PA" file="fr/syllab/ad-21.ogg" />
+	<sound name="PI" file="fr/syllab/ad-22.ogg" />
+	<sound name="PU" file="fr/syllab/ad-23.ogg" />
+	<sound name="SA" file="fr/syllab/ad-24.ogg" />
+	<sound name="SI" file="fr/syllab/ad-25.ogg" />
+	<sound name="SO" file="fr/syllab/ad-26.ogg" />
+	<sound name="SU" file="fr/syllab/ad-27.ogg" />
+      </syllables>
+
+    </language>
+</klettres>

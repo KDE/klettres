@@ -3,9 +3,9 @@
    mailto:e.bischoff@noos.fr
  ------------------------------------------------------------- */
  /*
- * Copyright (C) 2001-2004 
+ * Copyright (C) 2001 
    Eric Bischoff
-   Anne-Marie Mahfouf <annma@kde.org>
+   2004-2005 Anne-Marie Mahfouf <annma@kde.org>
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of version 2 of the GNU General Public
@@ -47,11 +47,13 @@ public:
 	SoundFactory(KLettres *parent, const char *name);
 	~SoundFactory();
 	
+	///Call the main instance of the program
+	KLettres *klettres;
 	///Change the language when the user changes the language in the Languages menu
-	void change(uint selectedLanguage);
+	void change(QString currentLanguage);
 	///Play the sound associated to int soundRef
 	void playSound(int ) ;
-	///Number of sounds corresponding to the current langauge and level (alphabet or syllables)
+	///Number of sounds corresponding to the current language and level (alphabet or syllables)
 	uint sounds;
 	///List of sound names
 	QString *namesList;
@@ -62,22 +64,14 @@ public:
 	* Call that when you read the language from Config and when the language changes
 	* or when the level changes
 	*/
-	bool loadLanguage(QDomDocument &layoutDocument, uint toLoad);
-
-protected:
-
-	///Register the various available languages
-	bool registerLanguages(QDomDocument &layoutDocument);
+	bool loadLanguage(QDomDocument &layoutDocument, QString currentLanguage);
+	///The language document
+  	QDomDocument m_layoutsDocument;
 
 private:
 	///Report a load failure
 	void loadFailure();
 
-private:
-	///Call the main instance of the program
-	KLettres *klettres;
-	///The language document
-  QDomDocument m_layoutsDocument;
 };
 
 #endif

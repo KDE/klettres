@@ -3,8 +3,8 @@
    mailto:e.bischoff@noos.fr
  ------------------------------------------------------------- */
 /*
- * Copyright (C) 2001-2004 Eric Bischoff
-  Anne-Marie Mahfouf <annma@kde.org>
+ * Copyright (C) 2001 Eric Bischoff
+   2004-2005 Anne-Marie Mahfouf <annma@kde.org>
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of version 2 of the GNU General Public
@@ -25,6 +25,7 @@
 #include <klocale.h>
 #include <kaudioplayer.h>
 #include <kdebug.h>
+#include <kstandarddirs.h>
 
 #include "soundfactory.h"
 #include "soundfactory.moc"
@@ -41,8 +42,7 @@ SoundFactory::SoundFactory(KLettres *parent, const char *name)
     sounds = 0;
 
     bool ok = klettres->loadLayout(m_layoutsDocument);
-    if (ok)
-        ok = registerLanguages(m_layoutsDocument);
+    if (ok) change(Prefs::language());
     if (!ok) loadFailure();
 }
 
@@ -52,10 +52,11 @@ SoundFactory::~SoundFactory()
     if (filesList) delete [] filesList;
 }
 
-void SoundFactory::change(uint selectedLanguage)
+void SoundFactory::change(QString currentLanguage)
 {
     //go load the sounds for the current language
-    bool ok = loadLanguage(m_layoutsDocument, selectedLanguage);
+    bool ok = loadLanguage(m_layoutsDocument, currentLanguage);
+    kdDebug() << "ok " << ok << endl;
     //tell the user if there are no sounds
     if (!ok) loadFailure();
 }
@@ -66,7 +67,7 @@ void SoundFactory::playSound(int mySound)
 
     if ((uint) mySound >= sounds) return;
 
-    soundFile = locate("data", "klettres/" + filesList[mySound]);
+    soundFile = locate("data", "klettres/languages" + filesList[mySound]);
 
     if (soundFile == 0) return;
 
@@ -78,43 +79,7 @@ void SoundFactory::loadFailure()
     KMessageBox::error(klettres, i18n("Error while loading the sound names."));
 }
 
-bool SoundFactory::registerLanguages(QDomDocument &layoutDocument)
-{
-    QDomNodeList languagesList, menuItemsList, labelsList;
-    QDomElement languageElement, menuItemElement, labelElement;
-    QDomAttr codeAttribute, actionAttribute;
-    bool enabled;
-    //languagesList: "languages" tags from sounds.xml
-    languagesList = layoutDocument.elementsByTagName("language");
-    if (languagesList.count() < 1)
-        return false;
-
-    for (uint i = 0; i < languagesList.count(); i++)
-    {
-        languageElement = (const QDomElement &) languagesList.item(i).toElement();
-        codeAttribute = languageElement.attributeNode("code");
-        //here it looks in $KDEDIR/share/apps/klettres and in $KDEHOME/share/apps/klettres
-        enabled = locate("data", "klettres/" + codeAttribute.value() + "/") != 0;
-        menuItemsList = languageElement.elementsByTagName("menuitem");
-        if (menuItemsList.count() != 1)
-            return false;
-
-        menuItemElement = (const QDomElement &) menuItemsList.item(0).toElement();
-
-        labelsList = menuItemElement.elementsByTagName("label");
-        if (labelsList.count() != 1)
-            return false;
-
-        labelElement = (const QDomElement &) labelsList.item(0).toElement();
-
-        if (enabled)
-            klettres->registerLanguage(codeAttribute.value(), labelElement.text());
-    }
-
-    return true;
-}
-
-bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
+bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, QString currentLanguage)
 {
     QDomNodeList languagesList,
     alphabetList,
@@ -127,18 +92,15 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
     QDomAttr nameAttribute, fileAttribute;
 
     languagesList = layoutDocument.elementsByTagName("language");
-    if (toLoad >= languagesList.count())
-        return false;
-
     QDomAttr codeAttribute;
-    //find the language in the list
-    for (uint i = 0; i < languagesList.count(); i++)
-    {
-        languageElement = (const QDomElement &) languagesList.item(i).toElement();
-        codeAttribute = languageElement.attributeNode("code");
-        if (codeAttribute.value() == klettres->m_languages[toLoad])
-            break;
+    //check if the sound files match current language
+    languageElement = (const QDomElement &) languagesList.item(0).toElement();
+    codeAttribute = languageElement.attributeNode("code");
+    if (currentLanguage != codeAttribute.value()) {
+        kdDebug() << "Fail reading language !!! " << endl;
+        return false;
     }
+    else kdDebug() << "current language " << currentLanguage << endl;
     //load the sounds for level 1 and 2 (alphabet)
     if ((Prefs::level() == 1) || (Prefs::level() == 2))
     {

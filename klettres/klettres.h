@@ -1,173 +1,145 @@
-/*
- * Copyright (C) 2001-2005 Anne-Marie Mahfouf <annma@kde.org>
+/***************************************************************************
+ *   Copyright (C) 2001-2005 by Anne-Marie Mahfouf                              *
+ *   annemarie.mahfouf@free.fr                                             *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
 
-    This program is free software; you can redistribute it and/or
-    modify it under the terms of version 2 of the GNU General Public
-    License as published by the Free Software Foundation.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- */
-
-#ifndef _KLETTRES_H_
-#define _KLETTRES_H_
+#ifndef KLETTRES_H
+#define KLETTRES_H
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
 
-//KDE headers
 #include <kmainwindow.h>
+
 #include "klettresview.h"
 #include "soundfactory.h"
 
+class QLabel;
 class KToggleAction;
 class KSelectAction;
-class KToolBar;
 class KComboBox;
-class QDomDocument;
+class KToolBar;
 class KLNewStuff;
 
 /**
- * This class serves as the main window for KLettres.  It handles the
- * menus, toolbars, and status bars.
- *
- * @short Main window class
- * @author Anne-Marie Mahfouf <annma@kde.org>
- * @version 1.1
+ * @short Application Main Window
+ * @author Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>
+ * @version 1.4
  */
 class KLettres : public KMainWindow
 {
     Q_OBJECT
 public:
 
-	///Constructor
-	KLettres();
-	///Destructor
-	virtual ~KLettres();
-	///Label on statusBar that displays the current language
-	QLabel *langLabel;
-	///Label on the statusBar that displays the current level
-	QLabel *levLabel;
-	///Holds the current font
-	QFont newFont;
-	///Create an instance of a KToolBar
-	KToolBar *tb;
-	///Combobox that holds the different levels in the toolbar
-	KComboBox *lev_comb;
-	///Holds the i18n current language
-	QString language;
-	///Holds the file from which the letters or syllables are read
-	int length, input, num, numRead;
-	///is false when menubar button is not shown
-	bool menuBool;
-	///is false when kid button not shown
-	bool kidBool;
-	///is false when grownup button not shown
-	bool grownBool;
-	///Register an available language
-	void registerLanguage(const QString &language, const QString &menuItem);
-	/**
-	*Load the xml file
-	*@param - the xml file
-	*@return - bool true if the xml document is found and well formed, false otherwise
-	*/
-	bool loadLayout(QDomDocument &layoutDocument);
-	///Call an instance of the KLettresView widget
-	KLettresView *m_view;
-	///Sound class
-	SoundFactory *soundFactory;
-	///All available language codes
-	QStringList m_languages;
-	///All the special characters from a language file, these characters will be as buttons on the Special Characters Toolbar
-	QStringList allData;
-	///All available language names
-	QStringList m_languageNames;
-	///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
-	uint selectedLanguage;
-	///Action that sets up the Language menu
-	KSelectAction *m_languageAction;
+    ///Constructor
+    KLettres();
+    ///Destructor
+    virtual ~KLettres();
 
-private slots:
+    ///Sound class
+    SoundFactory *soundFactory;
+    ///All available language codes
+    QStringList m_languages;
+    ///All available language names
+    QStringList m_languageNames;
+    /**
+    *Load the xml file
+    *@param - the xml file
+    *@return - bool true if the xml document is found and well formed, false otherwise
+    */
+    bool loadLayout(QDomDocument &layoutDocument);
+    ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is English (default), 3 is French, 4 is Dutch, 5 is Slovak
+    uint selectedLanguage;
+    ///Action that sets up the Language menu
+    KSelectAction *m_languageAction;
+    ///Look for all languages available
+    void findLanguages();
 
-	///Open the Settings->Configure KLettres dialog
-	void optionsPreferences();
-	///Hide and show the MenuBar, called by Settings->Show Menubar
-	void slotMenubar();
-	///Show menuBar, called by the MenuBar button which is only visible when the menubar is not shown
-	void slotShowM();
-	///Switch to the grown-up look, menubar is shown
-	void slotGrownup();
-	///Switch to the kid look, menubar is hidden
-	void slotKid();
-	/**
-	 *When the user change levels
-	 *@param int - The id of the new level
-	 */
-	void slotChangeLevel(int );
-	/**
-	 *Update the level menu and level combobox
-	 * @param int - The id of the new level
-	 */
-	void updateLevMenu(int );
-	/**
-	 *Change from kid look to grownUp look and viceversa
-	 */
-	void switchLook();
-	/**
-	 *Switch to another language
-	 *@param - newLanguage the index of the new language in m_languages
-	 */
-	void changeLanguage(int newLanguage);
-	/**Read settings from KLettres config file
-	 *If no config file found, put French as default
-	 */
-	void loadSettings();
-	///When a button is clicked on the characters toolbar, the corresponding character is written in the lineedit 
-	void slotPasteChar();
-	///Access the KNewStuff class to install new data
-	void downloadNewStuff();
-	///Call the timer settings dialog
-	void slotTimer();
+    public slots:
+    ///Set the new language
+    void slotChangeLanguage(int);
 
-private:
-	///Enable accel keys
-	void setupAccel();
-	///Setup our actins using klettresui.rc
-	void setupActions();
-	/**
-	 * Set the label in the StatusBar to indicate the correct language
-	 */
-	void updateLanguage();
-	///Set the correct buttons on the second toolbar according to the language
-	void loadLangToolBar();
-    
+protected:
+    ///Call an instance of the KLettresView widget
+    KLettresView *m_view;
+    ///Action that enables the ShowMenuBar item in the Settings menu
+    KToggleAction *m_menubarAction;
+    ///Action that sets up the Level menu
+    KSelectAction *m_levelAction;
+    ///Action that sets up the Look menu
+    KSelectAction *m_themeAction;
+    ///Action allow the Kid mode
+    KToggleAction *m_kidAction;
+    ///Action allow the Grownup mode
+    KToggleAction *m_grownupAction;
+    ///Label stating the language in the statusbar
+    QLabel *m_langLabel;
+    ///Label stating the level in the statusbar
+    QLabel *m_levLabel;
+    ///Holds the levels
+    QStringList m_levelsNames;
+    ///Holds the looks
+    QStringList m_themesNames;
+    ///Create an instance of a KToolBar
+    KToolBar *m_mainToolbar;
+    ///Second toolbar with buttons of special characters per language
+    KToolBar *m_secondToolbar;
+    ///is false when menubar button is not shown
+    bool menuBool;
+    ///Build the main window menus
+    void setupActions();
+    ///Create and setup statusbar
+    void setupStatusbar();
+    ///Create main and second toolbars
+    void setupToolbars();
+    /**generates icons for the special characters toolbar
+        	 * @param c the character that will be painted on the icon
+            */
+    QString charIcon(const QChar &);
+    /**
+     *Update the level menu and level combobox
+     * @param int - The id of the new level
+     */
+    void updateLevMenu(int );
+    ///Create a KNewStuff instance
+    KLNewStuff *mNewStuff;
 
-
-private:
-
-	///Action that enables the ShowMenuBar item in the Settings menu
-	KToggleAction *m_action;
-	///Action that calls the Font Chooser Dialog
-	KAction *fontAct;
-	
-	KAction *changeLookAction;
-	
-	KAction *timerAct;
-	///Second toolbar with buttons of special characters per language
-	KToolBar *secondToolbar;
-	///Create a KNewStuff instance
-	KLNewStuff *mNewStuff;
-	/**generates icons for the special characters toolbar
-     	 * @param c the character that will be painted on the icon
-         */
-	QString charIcon(const QChar &);
+    protected slots:
+    ///Call the Get New Stuff dialog
+    void slotDownloadNewStuff();
+    ///Hide/Show the menubar
+    void slotMenubar();
+    ///Set the new font and the new timers
+    void slotUpdateSettings();
+    ///Set the new level
+    void slotChangeLevel(int);
+    ///Switch to the grown-up look, menubar is shown
+    void slotModeGrownup();
+    ///Switch to the kid look, menubar is hidden
+    void slotModeKid();
+    ///Change Look from menu Look
+    void slotChangeTheme(int);
+    ///Display the Configure KLettres dialog
+    void optionsPreferences();
+    ///Load the configuration settings and apply them
+    void loadSettings();
 };
 
-#endif // _KLETTRES_H_
+#endif // KLETTRES_H

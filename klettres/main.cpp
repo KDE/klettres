@@ -1,34 +1,52 @@
-/*
- * Copyright (C) 2001-2004 Anne-Marie Mahfouf <annma@kde.org>
- */
+/***************************************************************************
+ *   Copyright (C) 2001-2005 by Anne-Marie Mahfouf                              *
+ *   annemarie.mahfouf@free.fr                                             *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ ***************************************************************************/
+
 /*****************************************************/
 /* Please save with utf8 encoding, thanks  */
 /*****************************************************/
 
-#include <dcopclient.h>
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
+#include <kapplication.h>
 
 #include "klettres.h"
 #include "version.h"
-
 
 static const char description[] =
     I18N_NOOP("KLettres helps a very young child or an adult learning \n"
               "a new language by associating sounds and \n"
               "letters in this language.\n"
-              "6 languages are available: Czech, Danish, Dutch, French, Italian and Slovak.");
+              "7 languages are available: Czech, Danish, Dutch, French, Italian, Spanish and Slovak.");
+
+static const char version[] = "1.4";
 
 static KCmdLineOptions options[] =
     {
-        { "+[URL]", I18N_NOOP( "Document to open" ), 0 },
+        //    { "+[URL]", I18N_NOOP( "Document to open" ), 0 },
         KCmdLineLastOption
     };
 
 int main(int argc, char **argv)
 {
     KAboutData about("klettres", I18N_NOOP("KLettres"), KLETTRES_VERSION, description,
-                     KAboutData::License_GPL, "(C) 2001-2003 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
+                     KAboutData::License_GPL, "(C) 2001-2005 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
     about.addAuthor( "Anne-Marie Mahfouf", 0, "annma@kde.org");
     about.addCredit("Ludovic Grossard",
                     I18N_NOOP("French sounds"), "grossard@kde.org");
@@ -86,3 +104,4 @@ int main(int argc, char **argv)
 
     return app.exec();
 }
+
