@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>487</width>
-            <height>293</height>
+            <width>484</width>
+            <height>330</height>
         </rect>
     </property>
     <property name="caption">
@@ -33,6 +33,8 @@
         </widget>
     </grid>
 </widget>
+<customwidgets>
+</customwidgets>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>kfontdialog.h</includehint>

@@ -47,143 +47,143 @@ class KLettres : public KMainWindow
     Q_OBJECT
 public:
 
-    ///Constructor
-    KLettres();
-    ///Destructor
-    virtual ~KLettres();
-    ///Label on statusBar that displays the current language
-    QLabel *langLabel;
-    ///Label on the statusBar that displays the current level
-    QLabel *levLabel;
-    ///Holds the current font
-    QFont newFont;
-    ///Create an instance of a KToolBar
-    KToolBar *tb;
-    ///Combobox that holds the different levels in the toolbar
-    KComboBox *lev_comb;
-    ///Holds the i18n current language
-   QString language;
-   //Holds the file from which the letters or syllables are read
-   int length, input, num, numRead;
-   ///is false when menubar button is not shown
-   bool menuBool;
-   ///is false when kid button not shown
-   bool kidBool;
-   ///is false when grownup button not shown
-   bool grownBool;
-
-   void registerLanguage(const QString &language, const QString &menuItem);
-   /**
-    *Load the xml file
-    *@param - the xml file
-    *@return - bool true if the xml document is found and well formed, false otherwise
-    */
-   bool loadLayout(QDomDocument &layoutDocument);
-   ///Call an instance of the KLettresView widget
-   KLettresView *m_view;
-   ///Sound class
-   SoundFactory *soundFactory;
-   
-       // All available language codes
-    QStringList m_languages;
-    // All available language names
-    QStringList m_languageNames;
-    
-        ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
-    int selectedLanguage;
-    
-        ///Action that sets up the Language menu
-    KSelectAction *m_languageAction;
+	///Constructor
+	KLettres();
+	///Destructor
+	virtual ~KLettres();
+	///Label on statusBar that displays the current language
+	QLabel *langLabel;
+	///Label on the statusBar that displays the current level
+	QLabel *levLabel;
+	///Holds the current font
+	QFont newFont;
+	///Create an instance of a KToolBar
+	KToolBar *tb;
+	///Combobox that holds the different levels in the toolbar
+	KComboBox *lev_comb;
+	///Holds the i18n current language
+	QString language;
+	//Holds the file from which the letters or syllables are read
+	int length, input, num, numRead;
+	///is false when menubar button is not shown
+	bool menuBool;
+	///is false when kid button not shown
+	bool kidBool;
+	///is false when grownup button not shown
+	bool grownBool;
+	
+	void registerLanguage(const QString &language, const QString &menuItem);
+	/**
+	*Load the xml file
+	*@param - the xml file
+	*@return - bool true if the xml document is found and well formed, false otherwise
+	*/
+	bool loadLayout(QDomDocument &layoutDocument);
+	///Call an instance of the KLettresView widget
+	KLettresView *m_view;
+	///Sound class
+	SoundFactory *soundFactory;
+	
+	// All available language codes
+	QStringList m_languages;
+	// All available language names
+	QStringList m_languageNames;
+	
+		///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
+	int selectedLanguage;
+	
+		///Action that sets up the Language menu
+	KSelectAction *m_languageAction;
 
 private slots:
 
-    /// Configure shortcut keys
-    void optionsConfigureKeys();
-    ///Configure toolbars icons, use the standard toollbar editor
-    void optionsConfigureToolbars();
-     ///Open the Settings->Configure KLettres dialog
-    void optionsPreferences();
-    /**This slot is called when user clicks "Ok" or "Apply" in the toolbar editor.
-     * Recreate our GUI, and re-apply the settings (e.g. "text under icons", etc.)
-     */
-    void newToolbarConfig();
-    ///Hide and show the MenuBar, called by Settings->Show Menubar
-    void slotMenubar();
-    ///Show menuBar, called by the MenuBar button which is only visible when the menubar is not shown
-    void slotShowM();
-    ///Switch to the grown-up look, menubar is shown
-    void slotGrownup();
-    ///Switch to the kid look, menubar is hidden
-    void slotKid();
-    /**
-     *When the user change levels
-     *@param int - The id of the new level
-     */
-    void slotChangeLevel(int );
-    /**
-      *Update the level menu and level combobox
-      * @param int - The id of the new level
-      */
-    void updateLevMenu(int );
-       /**Read settings from KLettres config file
-    *If no config file found, put French as default
-    */
-    /**
-     *Switch to another language
-     *@param - newLanguage the index of the new language in m_languages
-     */
-    void changeLanguage(int newLanguage);
-    void loadSettings();
-
-    void slotPasteCcaron();
-    void slotPasteDcaron();
-    void slotPasteRcaron();
-    void slotPasteScaron();
-    void slotPasteTcaron();
-    void slotPasteZcaron();
-    void slotPasteAcircle();
-    void slotPasteAwithE();
-    void slotPasteObarre();
-    void slotPasteAacute();
-    void slotPasteAumlaut();
-    void slotPasteEacute();
-    void slotPasteIacute();
-    void slotPasteLacute();
-    void slotPasteLapos();
-    void slotPasteOacute();
-    void slotPasteOchap();
-    void slotPasteRacute();
-    void slotPasteUacute();
-    void slotPasteNcaron();
-    void downloadNewStuff();
+	/// Configure shortcut keys
+	void optionsConfigureKeys();
+	///Configure toolbars icons, use the standard toollbar editor
+	void optionsConfigureToolbars();
+	///Open the Settings->Configure KLettres dialog
+	void optionsPreferences();
+	/**This slot is called when user clicks "Ok" or "Apply" in the toolbar editor.
+	* Recreate our GUI, and re-apply the settings (e.g. "text under icons", etc.)
+	*/
+	void newToolbarConfig();
+	///Hide and show the MenuBar, called by Settings->Show Menubar
+	void slotMenubar();
+	///Show menuBar, called by the MenuBar button which is only visible when the menubar is not shown
+	void slotShowM();
+	///Switch to the grown-up look, menubar is shown
+	void slotGrownup();
+	///Switch to the kid look, menubar is hidden
+	void slotKid();
+	/**
+	*When the user change levels
+	*@param int - The id of the new level
+	*/
+	void slotChangeLevel(int );
+	/**
+	*Update the level menu and level combobox
+	* @param int - The id of the new level
+	*/
+	void updateLevMenu(int );
+	/**Read settings from KLettres config file
+	*If no config file found, put French as default
+	*/
+	/**
+	*Switch to another language
+	*@param - newLanguage the index of the new language in m_languages
+	*/
+	void changeLanguage(int newLanguage);
+	void loadSettings();
+	
+	void slotPasteCcaron();
+	void slotPasteDcaron();
+	void slotPasteRcaron();
+	void slotPasteScaron();
+	void slotPasteTcaron();
+	void slotPasteZcaron();
+	void slotPasteAcircle();
+	void slotPasteAwithE();
+	void slotPasteObarre();
+	void slotPasteAacute();
+	void slotPasteAumlaut();
+	void slotPasteEacute();
+	void slotPasteIacute();
+	void slotPasteLacute();
+	void slotPasteLapos();
+	void slotPasteOacute();
+	void slotPasteOchap();
+	void slotPasteRacute();
+	void slotPasteUacute();
+	void slotPasteNcaron();
+	void downloadNewStuff();
 
 private:
-    ///Enable accel keys
-    void setupAccel();
-    ///Setup our actins using klettresui.rc
-    void setupActions();
-    /**
-     * Set the label in the StatusBar to indicate the correct language
-     */
-    void updateLanguage();
-    ///Set the correct buttons on the second toolbar according to the language
-    void loadLangToolBar();
+	///Enable accel keys
+	void setupAccel();
+	///Setup our actins using klettresui.rc
+	void setupActions();
+	/**
+	* Set the label in the StatusBar to indicate the correct language
+	*/
+	void updateLanguage();
+	///Set the correct buttons on the second toolbar according to the language
+	void loadLangToolBar();
     
 
 
 private:
 
-    ///Action that enables the ShowMenuBar item in the Settings menu
-    KToggleAction *m_action;
-
-    ///Action that calls the Font Chooser Dialog
-    KAction *fontAct;
-
-
-    ///second toolbar with buttons of special characters per language
-    KToolBar *secondToolbar;
-    
-    KLNewStuff *mNewStuff;
+	///Action that enables the ShowMenuBar item in the Settings menu
+	KToggleAction *m_action;
+	
+	///Action that calls the Font Chooser Dialog
+	KAction *fontAct;
+	
+	
+	///second toolbar with buttons of special characters per language
+	KToolBar *secondToolbar;
+	
+	KLNewStuff *mNewStuff;
 };
 
 #endif // _KLETTRES_H_
