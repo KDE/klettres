@@ -67,11 +67,13 @@ void SoundFactory::playSound(int mySound)
 
     if ((uint) mySound >= sounds) return;
 
-    soundFile = locate("data", "klettres/languages" + filesList[mySound]);
-
+    soundFile = locate("data", "klettres/" + filesList[mySound]);
+    kdDebug() << "soundFile " << soundFile << endl;
+    
     if (soundFile == 0) return;
-
+    
     KAudioPlayer::play(soundFile);
+    kdDebug() << "-------- after playing " << endl;
 }
 
 void SoundFactory::loadFailure()
@@ -143,6 +145,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, QString currentLan
         fileAttribute = soundNameElement.attributeNode("file");
         //filesList helds the names of the sound files (i.e the location of the sounds like fr/alpha/a-0.mp3)
         filesList[sound] = fileAttribute.value();
+        kdDebug() << "fileLists[sound] " << filesList[sound] << endl;
     }
     return true;
 }

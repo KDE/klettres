@@ -77,6 +77,7 @@ void KLettresView::chooseSound()
     }
 
     //The sound is played
+    kdDebug() << "m_random " << m_random << endl;
     m_klettres->soundFactory->playSound(m_random);
     //store letter or syllable in m_currentLetter
     m_currentLetter = m_klettres->soundFactory->namesList[m_random];
