@@ -16,9 +16,7 @@
     Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     */
 
-#include <kapplication.h>
 #include <kdebug.h>
-#include <kconfig.h>
 #include <ktar.h>
 #include <qdir.h>
 #include <kaction.h>

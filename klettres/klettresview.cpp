@@ -19,7 +19,6 @@
 #include <qtimer.h>
 #include <qtooltip.h>
 //KDE headers
-#include <kapplication.h>
 #include <klocale.h>
 //C++ includes
 #include <stdlib.h>

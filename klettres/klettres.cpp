@@ -23,7 +23,6 @@
 #include <kcombobox.h>
 #include <klocale.h>
 #include <kdebug.h>
-#include <kiconloader.h>
 #include <kmenubar.h>
 #include <kmessagebox.h>
 #include <kstatusbar.h>
@@ -31,7 +30,6 @@
 #include <kfiledialog.h>
 #include <kedittoolbar.h>
 #include <kaction.h>
-#include <kfontdialog.h>
 #include <kconfigdialog.h>
 #include <ktoolbarbutton.h>
 //Project headers
@@ -346,21 +344,16 @@ void KLettres::updateLevMenu(int id)
 void KLettres::loadLangToolBar()
 {
 	secondToolbar->clear();
-	if (m_languages[selectedLanguage]== "nl" || m_languages[selectedLanguage]== "fr" || m_languages[selectedLanguage]== "it")//Dutch and French
+	if (m_languages[selectedLanguage]== "cs" || m_languages[selectedLanguage]== "da" || m_languages[selectedLanguage]== "sk")//Dutch, French and Italian have no special characters
 	{
-		if (secondToolbar) secondToolbar->hide();
-		setMinimumSize( QSize( 640, 480 ) );
-		setMaximumSize( QSize( 640, 480 ) );
-	}
-	else {
 		allData.clear();
 		QString myString=QString("klettres/%1.txt").arg(m_languages[selectedLanguage]);
 		QFile myFile;
 		myFile.setName(locate("data",myString));
 		if (!myFile.exists())
 		{
-			QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
-						"please check your installation.").arg(m_languages[selectedLanguage]);
+			QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found!\n"
+						"Check your installation, please!").arg(m_languages[selectedLanguage]);
 			KMessageBox::sorry( this, mString,
 						i18n("Error") );
 			exit(1);
@@ -378,11 +371,6 @@ void KLettres::loadLangToolBar()
 				secondToolbar->insertButton (charIcon(allData[i].at(0)), i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
 		}
 	}
-	KConfig *config = kapp->config();
-	config->setGroup("General Toolbar secondToolbar");
-	if (config->readBoolEntry("Hidden"))
-		secondToolbar->hide();
-	else secondToolbar->show();
 }
 
 void KLettres::slotPasteChar()
