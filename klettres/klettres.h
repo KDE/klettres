@@ -65,8 +65,6 @@ protected:
 
 
 private slots:
-    void optionsShowToolbar();
-    void optionsShowStatusbar();
     void optionsConfigureKeys();
     void optionsConfigureToolbars();
     void newToolbarConfig();
@@ -97,9 +95,6 @@ private:
 
 private:
     KLettresView *m_view;
-
-    KToggleAction *m_toolbarAction;
-    KToggleAction *m_statusbarAction;
 
 	KToggleAction *m_action;
 

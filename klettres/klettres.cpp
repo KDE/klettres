@@ -116,8 +116,8 @@ void KLettres::setupActions()
 	m_action = new KToggleAction(i18n("Show &Menubar"),CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
 	m_action->setChecked(true);
 
-    m_toolbarAction = KStdAction::showToolbar(this, SLOT(optionsShowToolbar()), actionCollection());
-    m_statusbarAction = KStdAction::showStatusbar(this, SLOT(optionsShowStatusbar()), actionCollection());
+   createStandardStatusBarAction();
+   setStandardToolBarMenuEnabled(true);
 
     KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
     KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
@@ -169,27 +169,6 @@ void KLettres::readProperties(KConfig *)
     // config file.  this function is automatically called whenever
     // the app is being restored.  read in here whatever you wrote
     // in 'saveProperties'
-}
-
-
-void KLettres::optionsShowToolbar()
-{
-    // this is all very cut and paste code for showing/hiding the
-    // toolbar
-    if (m_toolbarAction->isChecked())
-        toolBar()->show();
-    else
-        toolBar()->hide();
-}
-
-void KLettres::optionsShowStatusbar()
-{
-    // this is all very cut and paste code for showing/hiding the
-    // statusbar
-    if (m_statusbarAction->isChecked())
-        statusBar()->show();
-    else
-        statusBar()->hide();
 }
 
 void KLettres::optionsConfigureKeys()
