@@ -32,16 +32,15 @@
 #include <qfile.h>
 #include <qtextstream.h>
 //KDE includes
-#include <kapplication.h>
+#include <kapp.h>
 #include <kaudioplayer.h>
 #include <kcombobox.h>
+#include <khelpmenu.h>
 #include <klineedit.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <kstandarddirs.h>
-#include <khelpmenu.h>
 #include <kpopupmenu.h>
-
+#include <kstddirs.h>
 //C++ includes
 #include <stdlib.h>
 #include <string.h>
@@ -49,15 +48,10 @@
 //project includes
 #include <klettresdlg.h>
 
-
-class KHelpMenu;
-class KPopupMenu;
-
 /** KLettres is the base class of the project */
 class KLettres : public KLettresDlg
 {
   Q_OBJECT
-
   private:
   KHelpMenu *mHelpMenu;
 
@@ -70,8 +64,6 @@ class KLettres : public KLettresDlg
 public slots: // Public slots
   /** No descriptions */
   void game();
-  /** No descriptions */
-  //void slotAide();
   /** No descriptions */
   void slotNext(int);
   /** No descriptions */

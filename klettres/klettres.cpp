@@ -26,14 +26,20 @@ KLettres::KLettres(QWidget *parent, const char *name) : KLettresDlg(parent, name
 	a->connectItem( a->insertItem(Key_L+ALT), // adds ALT+N accelerator
 	                this,                  // connected to this'
 	                SLOT(slotNiveau()) );
+
+	quitte->setGeometry( QRect( 555, 12, 77, 34 ) );
+
 	// signals and slots connections
 	connect( comb1, SIGNAL( activated(int) ), this, SLOT( slotNext(int) ) );
 	QObject::connect( quitte, SIGNAL( clicked() ), kapp, SLOT( quit() ) );
-
 	// Set up the help menu
-
-	mHelpMenu = new KHelpMenu(this, KGlobal::instance()->aboutData(), true);
+   	mHelpMenu = new KHelpMenu(this, KGlobal::instance()->aboutData(), true);
 	aide->setPopup(mHelpMenu->menu());
+
+	QPixmap pm;
+	pm.load(locate("data","klettres/pics/klettres_back.jpeg"));
+	setBackgroundPixmap(pm);
+
 	game();
 }
 
@@ -69,14 +75,10 @@ void KLettres::slotNext(int index)
 void KLettres::game()
 {
 	if (niveau==1)
-	{
 		button1->show();
-	}
 
 	if (niveau==2)
-	{
 		button1->hide();
-	}
 
 	if (niveau==1||niveau==2)
 	{
@@ -104,7 +106,7 @@ void KLettres::game()
 			nameString=namesStream.readLine();
 			if (count==n)
 				st=nameString; //store the choosen word in variable st
-			count=count+1 ;
+			count++ ;
 		}
 		lev1File.close();
 		button1->setText(st);
@@ -121,15 +123,10 @@ void KLettres::game()
 	}
 
 	if (niveau==3)
-	{
 		button1->show();
-	}
 
 	if (niveau==4)
-	{
 		button1->hide();
-	}
-
 
 	if (niveau==3||niveau==4)
 	{
@@ -159,7 +156,7 @@ void KLettres::game()
 			nameString=namesStream.readLine();
 			if (count==n)
 				st=nameString; //store the choosen word in variable st
-			count=count+1 ;
+			count++ ;
 		}
 		lev1File.close();
 		button1->setText(st);
@@ -223,7 +220,7 @@ void KLettres::timer1()
 			nameString=namesStream.readLine();
 			if (count==n)
 				st=nameString; //store the choosen word in variable st
-			count=count+1 ;
+			count++ ;
 		}
 		lev1File.close();
 		button1->setText(st);
@@ -374,15 +371,11 @@ void KLettres::timerDone2()
 void KLettres::slotNiveau()
 {
 	if ((niveau==1)||(niveau==2)||(niveau==3))
-	{
-		niveau=niveau+1;
-	}
+		niveau++;
 	else
 	{
 		if (niveau==4)
-		{
-			niveau=niveau-1;
-		}
+			niveau--;
 	}
 	comb1->setCurrentItem( niveau-1 );
 	game();

@@ -20,7 +20,7 @@
 
 #include <qwidget.h>
 #include <qframe.h>
-#include <kapplication.h>
+#include <kapp.h>
 #include <qtimer.h>
 #include <klettres.h>
 

@@ -16,14 +16,14 @@
  ***************************************************************************/
 
 #include <kaudioplayer.h>
-#include <kstandarddirs.h>
+#include <kstddirs.h>
 
 #include "khsplash.h"
 
 KhSplash::KhSplash(QWidget *parent, const char *name ) : QFrame(parent,name,QWidget::WStyle_NoBorder | QWidget::WStyle_Customize)
 {
 	QPixmap pm;
-	pm.load(locate("data","klettres/pics/klettres.png"));
+	pm.load(locate("data","klettres/pics/klettres_splash.png"));
 	setBackgroundPixmap(pm);
 	setGeometry(QApplication::desktop()->width ()/2-200,
 	            QApplication::desktop()->height()/2-124, 400, 248);
