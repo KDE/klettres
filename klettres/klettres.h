@@ -24,6 +24,7 @@
 
 //Qt includes
 #include <qaccel.h>
+#include <qfont.h>
 #include <qlabel.h>
 #include <qpixmap.h>
 #include <qpushbutton.h>
@@ -31,25 +32,33 @@
 #include <qwidget.h>
 #include <qfile.h>
 #include <qtextstream.h>
+#include <qtooltip.h>
 //KDE includes
-#include <kapplication.h>
+#include <kaction.h>
+#include <kapp.h>
 #include <kaudioplayer.h>
 #include <kcombobox.h>
+#include <kconfig.h>
+#include <kdebug.h>
 #include <khelpmenu.h>
 #include <klineedit.h>
 #include <klocale.h>
+#include <kmainwindow.h>
 #include <kmessagebox.h>
+#include <kmenubar.h>
 #include <kpopupmenu.h>
-#include <kstandarddirs.h>
+#include <kstatusbar.h>
+#include <kstdaction.h>
+#include <kstddirs.h>
+#include <ktoolbar.h>
 //C++ includes
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 //project includes
-#include <klettresdlg.h>
 
 /** KLettres is the base class of the project */
-class KLettres : public KLettresDlg
+class KLettres : public KMainWindow
 {
   Q_OBJECT
   private:
@@ -60,6 +69,25 @@ class KLettres : public KLettresDlg
     KLettres(QWidget* parent=0, const char *name=0);
     /** destructor */
     ~KLettres();
+ 	void play();
+	QString string1, string2, dataString;
+	QString language, langString;
+	QFile lev1File;
+	int l1, l2, length, input, num, numRead;
+
+	KSelectAction *language_menu;	
+	KSelectAction *levels_menu;	
+	KToggleAction *m_action;
+	KToggleAction *t_action;
+   KConfig *config;
+	void setupActions();
+	
+	KComboBox* lev_comb;
+	KComboBox* lang_comb;
+	QLabel* button1;
+    QLineEdit* line1;
+	QLabel *langLabel;
+	QLabel *levLabel;
 
 public slots: // Public slots
   /** No descriptions */
@@ -67,25 +95,36 @@ public slots: // Public slots
   /** No descriptions */
   void slotNext(int);
   /** No descriptions */
-  void slotNiveau();
-  /** No descriptions */
   void slotLet2(const QString&);
-  /** No descriptions */
-  void slotLet3(const QString&);
   /** No descriptions */
   void timer1();
   /** No descriptions */
   void timerDone();
   /** No descriptions */
-  void timerDone2();
-  /** No descriptions */
   void treat1(const QString&);
+  /** No descriptions */
+  void slotBackground();
+  /** Choose Dutch */
+  void slotDutch();
+  /** Choose French */
+  void slotFrench();
+  /** Update the Settings->Choose Language menu **/
+  void updateLangMenu(int);
+
+  void changeNumeration(int);
+  /** No descriptions */
+  void slotQuit();
+  /** Hide and Show the ToolBar */
+  void slotToolbar();
+  /** Hide and show the MenuBar */
+  void slotMenubar();
+  /** Update the Levels menu **/
+  void updateLevMenu(int);
 
 signals:
   /** No descriptions */
   void newText( const QString& );
-
-   };
+};
 
 #endif
 

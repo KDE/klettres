@@ -1,0 +1,17 @@
+28 April 2002
+- better internationalization
+- i18n() the KLettres on the splash-screen
+- suppress the sound with the splash-screen as it was too long
+- add menubar, toolbar and statusbar, configurable using KAction
+- settings allow to choose the language and the level from the menuBar and toolBar
+- statusBar indicates level and language
+- suppressed the .ui file
+- fixed the bug in levels 3 & 4 (prevented upper-case letters and inversed letters)
+
+25 February 2002
+- dutch sounds
+- setup dialog for language
+- if file or sound not found: warning 
+- cleaned code
+- changed sounds from wav to mp3
+

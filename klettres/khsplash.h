@@ -18,12 +18,16 @@
 #ifndef KHSPLASH_H
 #define KHSPLASH_H
 
-#include <qwidget.h>
+//Qt includes
 #include <qframe.h>
-#include <kapplication.h>
+#include <qpainter.h>
 #include <qtimer.h>
-#include <klettres.h>
+#include <qwidget.h>
+//KDE includes
+#include <kapp.h>
+//project includes
 
+#include "klettres.h"
 /**
   *@author Anne-Marie Mahfouf
   */
@@ -34,11 +38,13 @@ class KhSplash : public QFrame  {
 public: 
 	KhSplash(QWidget *parent=0, const char *name=0);
     ~KhSplash();
+	int l1, l2;
+   QString langString;
+	KLettres *klettres;
 
 public slots: // Public slots
   /** No descriptions */
   void slotHide();
-
 };
 
 #endif

@@ -1,0 +1,28 @@
+<!DOCTYPE kpartgui>
+<kpartgui name="klettres" version="0.1">
+<MenuBar>
+	<Menu name="file" noMerge="1"><text>&amp;File</text>
+   				<Action name="file_quit"/>
+ 	</Menu>
+	<Menu name="levels" noMerge="1"><text>&amp;Levels</text>
+	<Action name="levels"/>
+	</Menu>
+   <Menu name="settings"><text>&amp;Settings</text>
+		<Action name="menubar"/>
+		<Action name="toolbar"/>
+		<separator/>
+ 		<Action name="languages"/>
+       <Menu name="change_background"><text>&amp;Choose Background</text>
+			<Action name="adult"/>
+			<Action name="child"/>
+       </Menu>
+   </Menu>
+<separator/>
+</MenuBar>
+
+<ToolBar name="mainToolBar" noMerge="1" position="bottom"><text>Main</text>
+<Action name="file_quit"/>
+<Separator/>
+<Action name="help"/>
+</ToolBar>
+</kpartgui>
