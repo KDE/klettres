@@ -80,7 +80,7 @@ public:
         QString a1;
 	///Cursor position in the line edit
         int input;
-
+	KLettres *klettres;
 public slots:
 	///Set the Grown-up background, show menubar, show the Kid button
 	void slotGrownup();
@@ -99,7 +99,7 @@ public slots:
 
 private:
 
-	KLettres *klettres;
+	//KLettres *klettres;
 
 };
 

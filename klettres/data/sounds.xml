@@ -406,4 +406,47 @@
 
   </language>
 
+   <language code="it">
+
+    <menuitem>
+      <label>&amp;Italian</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="A" file="it/alpha/a.ogg" />
+	<sound name="B" file="it/alpha/b.ogg" />
+	<sound name="C" file="it/alpha/c.ogg" />
+	<sound name="D" file="it/alpha/d.ogg" />  
+	<sound name="E" file="it/alpha/e.ogg" />
+	<sound name="F" file="it/alpha/f.ogg" />
+	<sound name="G" file="it/alpha/d.ogg" />
+	<sound name="H" file="it/alpha/h.ogg" />
+	<sound name="I" file="it/alpha/i.ogg" />
+	<sound name="J" file="it/alpha/j.ogg" /> 
+	<sound name="K" file="it/alpha/k.ogg" />
+	<sound name="L" file="it/alpha/l.ogg" />
+	<sound name="M" file="it/alpha/m.ogg" />
+	<sound name="N" file="it/alpha/n.ogg" />
+	<sound name="O" file="it/alpha/o.ogg" />
+	<sound name="P" file="it/alpha/p.ogg" />
+	<sound name="Q" file="it/alpha/q.ogg" />
+	<sound name="R" file="it/alpha/r.ogg" />
+	<sound name="S" file="it/alpha/s.ogg" />
+	<sound name="T" file="it/alpha/t.ogg" />
+	<sound name="U" file="it/alpha/u.ogg" />
+	<sound name="W" file="it/alpha/w.ogg" />
+	<sound name="X" file="it/alpha/x.ogg" />
+	<sound name="Y" file="it/alpha/y.ogg" />
+	<sound name="Z" file="it/alpha/z.ogg" />
+    </alphabet>
+
+    <syllables>
+ 	<sound name="BA" file="it/syllab/ba.ogg" />
+	<sound name="BE" file="it/syllab/be.ogg" />
+	<sound name="BI" file="it/syllab/bi.ogg" />
+	<sound name="BO" file="it/syllab/bo.ogg" />
+	<sound name="BU" file="it/syllab/bu.ogg" />
+    </syllables>
+
+  </language>
 </klettres>

@@ -24,6 +24,7 @@
 #include <kcombobox.h>
 #include <klocale.h>
 #include <kdebug.h>
+#include <kiconloader.h>
 #include <kmenubar.h>
 #include <kmessagebox.h>
 #include <kstatusbar.h>
@@ -34,6 +35,7 @@
 #include <kfontdialog.h>
 #include <kconfigdialog.h>
 //Project headers
+#include "klnewstuff.h"
 #include "klettres.h"
 #include "fontsdlg.h"
 #include "prefs.h"
@@ -52,7 +54,7 @@ KLettres::KLettres()
     m_view = new KLettresView(this);
     // tell the KMainWindow that this is indeed the main widget
     setCentralWidget(m_view);
-
+    mNewStuff = 0;
     // Setup all available sounds
     soundFactory = new SoundFactory(this, "sounds");
     //Read config, must come after SoundFactory, otherwise we don't have all languages
@@ -110,6 +112,8 @@ KLettres::~KLettres()
 
 void KLettres::setupActions()
 {
+    KGlobal::iconLoader()->loadIcon("knewstuff", KIcon::Small);
+    new KAction( i18n("Get a new language..."), "knewstuff", this, SLOT( downloadNewStuff() ), actionCollection(), "downloadnewstuff" );
     KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 
     m_action = new KToggleAction(i18n("Show &Menubar"),CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
@@ -485,6 +489,23 @@ QString Prefs::defaultLanguage()
   if (!defaultLanguages.isEmpty())
      return defaultLanguages[0];
   return QString::null;
+}
+
+void KLettres::downloadNewStuff()
+{
+	if ( !mNewStuff ) 
+		mNewStuff = new KLNewStuff( m_view );
+ 	mNewStuff->download();
+	kdDebug() << "- - - - Download finished - - - - - " << endl;
+	/*bool enabled;
+	//change it by readConfig() in 
+	//kapp->config()->setGroup("KNewStuffStatus");
+	enabled = locate("data", "klettres/it/") != 0;
+	if (enabled)
+		registerLanguage("it"," &amp;Italian");
+	kdDebug()<<m_languageNames<<endl;
+	m_languageAction->setItems(m_languageNames);
+       */
 }
 
 #include "klettres.moc"

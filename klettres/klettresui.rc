@@ -1,11 +1,13 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
 <kpartgui name="klettres" version="3">
 <MenuBar>
-	<Menu name="file" noMerge="1"><text>&amp;File</text>
+	<Menu name="file" noMerge="1"><text>&amp;File</text>	
+		<Action name="downloadnewstuff"/>
 		<Action name="file_quit"/>
 	</Menu>
 
         <Action name="languages"/>
+		
 
 	<Menu name="settings" noMerge="1"><text>&amp;Settings</text>
 		<Action name="menubar" />

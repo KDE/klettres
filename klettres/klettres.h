@@ -32,7 +32,7 @@ class KSelectAction;
 class KToolBar;
 class KComboBox;
 class QDomDocument;
-
+class KLNewStuff;
 
 /**
  * This class serves as the main window for KLettres.  It handles the
@@ -83,6 +83,17 @@ public:
    KLettresView *m_view;
    ///Sound class
    SoundFactory *soundFactory;
+   
+       // All available language codes
+    QStringList m_languages;
+    // All available language names
+    QStringList m_languageNames;
+    
+        ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
+    int selectedLanguage;
+    
+        ///Action that sets up the Language menu
+    KSelectAction *m_languageAction;
 
 private slots:
 
@@ -144,6 +155,7 @@ private slots:
     void slotPasteRacute();
     void slotPasteUacute();
     void slotPasteNcaron();
+    void downloadNewStuff();
 
 private:
     ///Enable accel keys
@@ -156,23 +168,22 @@ private:
     void updateLanguage();
     ///Set the correct buttons on the second toolbar according to the language
     void loadLangToolBar();
+    
+
 
 private:
 
     ///Action that enables the ShowMenuBar item in the Settings menu
     KToggleAction *m_action;
-    ///Action that sets up the Language menu
-    KSelectAction *m_languageAction;
+
     ///Action that calls the Font Chooser Dialog
     KAction *fontAct;
-    ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
-    int selectedLanguage;
-    // All available language codes
-    QStringList m_languages;
-    // All available language names
-    QStringList m_languageNames;
+
+
     ///second toolbar with buttons of special characters per language
     KToolBar *secondToolbar;
+    
+    KLNewStuff *mNewStuff;
 };
 
 #endif // _KLETTRES_H_

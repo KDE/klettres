@@ -3,10 +3,10 @@ bin_PROGRAMS = klettres
 
 ## INCLUDES were found outside kdevelop specific part
 
-klettres_SOURCES = fontsdlg.ui klettres.cpp main.cpp klettresview.cpp soundfactory.cpp prefs.kcfgc
-klettres_LDADD   = $(LIB_KDEUI)
+klettres_SOURCES = fontsdlg.ui klettres.cpp klnewstuff.cpp main.cpp klettresview.cpp soundfactory.cpp prefs.kcfgc
+klettres_LDADD   = $(LIB_KDEUI) -lknewstuff
 
-SUBDIRS = pics data
+SUBDIRS = pics data 
 
 xdg_apps_DATA = klettres.desktop
 kde_kcfg_DATA = klettres.kcfg
@@ -20,8 +20,6 @@ INCLUDES= $(all_includes)
 
 METASOURCES = AUTO
 
-# install all the standard icons
-# added by bml
 KDE_ICON = AUTO
 
 # the library search path.
