@@ -19,7 +19,7 @@
 #include <kaboutdata.h>
 #include <klocale.h>
 
-#include "khsplash.h"
+#include "klettres.h"
 #include "version.h"
 
 static const char *description =
@@ -47,19 +47,21 @@ int main(int argc, char *argv[])
   aboutData.addCredit("Erik Kjaer Pedersen",
 	    I18N_NOOP("Danish sounds"), "erik@binghamton.edu");
   aboutData.addCredit("Primoz Anzur",
-	    I18N_NOOP("Splash-screen and icons"), "zerokode@yahoo.com");
+	    I18N_NOOP("Icons"), "zerokode@yahoo.com");
   aboutData.addCredit("Renaud Blanchard",
 	    I18N_NOOP("Background picture"), "kisukuma@chez.com");
-  aboutData.addCredit("Ludovic Grossard",
-	    I18N_NOOP("Splash-screen sound"), "ludovic.grossard@libertysurf.fr");
+  //aboutData.addCredit("Ludovic Grossard",
+ //	    I18N_NOOP("Splash-screen sound"), "ludovic.grossard@libertysurf.fr");
   aboutData.addCredit("Robert Gogolok",
 	    I18N_NOOP("Support and coding guidance"), "mail@robert-gogolok.de");
   KCmdLineArgs::init( argc, argv, &aboutData );
   KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
 
   KApplication a;
-  KhSplash *splash=new KhSplash();
-  splash->show();
-
+  /*KhSplash *splash=new KhSplash();
+  splash->show(); 08/09*/
+ KLettres *klettres = new KLettres();
+ klettres->show();
+ 
   return a.exec();
 }

@@ -78,10 +78,10 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	tb->insertWidget(1, 100, lev_comb,1); //id, width, widget, index
    connect( lev_comb, SIGNAL( activated(int) ), this, SLOT( slotNext(int) ) );
 
-   //font for comboxes
-	QFont f_comb( "times" , 14, QFont::Bold );
+   //font for comboxes 08/09 commented that; try to find a way to make it just one point bigger
+	/*QFont f_comb( "times" , 14, QFont::Bold );
 	tb->setFont( f_comb );
-	lev_comb->setFont( f_comb );
+	lev_comb->setFont( f_comb );*/
 
     //Button with letter or syllable
     button1 = new QLabel( this, "button1" );
@@ -123,14 +123,14 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	st->addWidget(levLabel);
 	st->insertFixedItem("", 1);//add a space
 	st->addWidget(langLabel);
-	levLabel->setFont(f_lab);
-   langLabel->setFont( f_lab);
+	// 08/09 levLabel->setFont(f_lab);
+        // 08/09  langLabel->setFont( f_lab);
 	 //load background pics
 	pm_a.load(locate("data","klettres/pics/background1.png"));
 	pm_k.load(locate("data","klettres/pics/klettres_back.jpeg"));
 
       //Read config TODO a read config method
-   //if not, put default as French
+      //if not, put default as French
         config = kapp->config();
 	 config->setGroup("Language");
 	 langString=config->readEntry("MyLanguage");
@@ -212,7 +212,7 @@ void KLettres::game()
         	setMinimumSize( QSize( 640, 525) );
         	setMaximumSize( QSize( 640, 525 ) );
 	}
-	show();
+	//08/09 show();
 	if (niveau==1)
 		button1->show();
 
@@ -484,7 +484,7 @@ void KLettres::changeNumeration(int id)
 /** Set language to French */
 void KLettres::slotFrench()
 {
-	language="French";
+	language=i18n("French");
 	num=2;
 	config->setGroup("Language");
 	langString=config->readEntry("MyLanguage");
@@ -504,7 +504,7 @@ void KLettres::slotFrench()
 /** Set Language to Dutch */
 void KLettres::slotDutch()
 {
-	language="Dutch";
+	language=i18n("Dutch");
 	num=1;
         langLabel->setText(i18n("Current language is %1").arg(language));
 	language_menu->setCurrentItem(num);
@@ -529,7 +529,7 @@ void KLettres::slotDutch()
 /** Set Language to Danish*/
 void KLettres::slotDanish()
 {
-	language="Danish";
+	language=i18n("Danish");
 	num=0;
         langLabel->setText(i18n("Current language is %1").arg(language));
 	language_menu->setCurrentItem(num);
