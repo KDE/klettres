@@ -3,10 +3,10 @@ bin_PROGRAMS = klettres
 
 ## INCLUDES were found outside kdevelop specific part
 
-klettres_SOURCES = pref1ui.ui pref2ui.ui klettres.cpp main.cpp klettresview.cpp pref.cpp
+klettres_SOURCES = pref1ui.ui pref2ui.ui klettres.cpp main.cpp klettresview.cpp pref.cpp soundfactory.cpp
 klettres_LDADD   = $(LIB_KDEUI)
 
-SUBDIRS = pics 
+SUBDIRS = pics data
 
 desktopdir = $(kde_appsdir)/Edutainment/Languages
 desktop_DATA = klettres.desktop
@@ -30,8 +30,8 @@ klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 messages: rc.cpp
 	$(XGETTEXT) *.cpp -o $(podir)/klettres.pot;
 
-LANGS = Danish Dutch French
-SUBS = alpha data syllab
+LANGS = fr
+SUBS = alpha syllab
 
 install-data-local:
 	@for lang in $(LANGS); do \

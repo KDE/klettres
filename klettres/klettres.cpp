@@ -3,6 +3,7 @@
  */
 
 #include <qtooltip.h>
+#include <qbuttongroup.h>
 //KDE headers
 #include <kcombobox.h>
 #include <ktoolbar.h>
@@ -12,33 +13,43 @@
 #include <kdebug.h>
 #include <kiconloader.h>
 #include <kmenubar.h>
+#include <kmessagebox.h>
 #include <kstatusbar.h>
 #include <kkeydialog.h>
 #include <kaccel.h>
 #include <kfiledialog.h>
+#include <kconfig.h>
 #include <kedittoolbar.h>
+#include <kstatusbar.h>
 #include <kstdaccel.h>
 #include <kaction.h>
 #include <kstdaction.h>
+#include <kstandarddirs.h>
 #include <kfontdialog.h>
 #include <kglobalsettings.h>
 //Project headers
 #include "klettres.h"
 #include "pref.h"
+//standard C++ headers
+#include <stdlib.h>
+#include <unistd.h>
 
-const int ID_KIDB      = 100;
-const int ID_GROWNB    = 101;
+const int ID_KIDB            = 100;
+const int ID_GROWNB     = 101;
 const int ID_MENUBARB  = 102;
 
 KLettres::KLettres()
-    : KMainWindow( 0, "KLettres" ),
-      m_view(new KLettresView(this))
+    : KMainWindow( 0, "KLettres" )
 {
-
+    m_view = new KLettresView(this);
+    languages = 0;
     // tell the KMainWindow that this is indeed the main widget
     setCentralWidget(m_view);
-
-    // then, setup our actions
+    //Read config
+    loadSettings();
+    //selectedLanguage must be read from config file
+    soundFactory = new SoundFactory(this, "sounds", selectedLanguage);
+     // then, setup our actions, must be done after loading soundFactory as it has some actions too
     setupActions();
 
     menuBool=false; //false when menubar button is not shown
@@ -57,15 +68,6 @@ KLettres::KLettres()
     connect( lev_comb, SIGNAL( activated(int) ), this, SLOT( slotChangeLevel(int) ) );
     QToolTip::add(lev_comb, i18n("Change the level of difficulty"));
     tb->insertSeparator(5, 5);
-    //Language combobox
-    lang_comb= new KComboBox(tb);
-    lang_comb->insertItem( i18n( "Danish" ) );
-    lang_comb->insertItem( i18n( "Dutch" ) );
-    lang_comb->insertItem( i18n( "French" ) );
-    tb->insertWidget(6, 100, lang_comb, 6); //id, width, widget,
-    connect(lang_comb, SIGNAL(activated(int)), this, SLOT(changeNumeration(int)));
-    QToolTip::add(lang_comb, i18n("Change the language to learn"));
-    tb->insertSeparator(7, 7);
 
     //Set up StatusBar
     KStatusBar *st=statusBar();
@@ -76,33 +78,19 @@ KLettres::KLettres()
     st->addWidget(langLabel);
     statusBar()->show();
 
-    //Load settings from config file
-    //if not, put default as French
-    loadSettings();
     slotSetFont();//set the font from config
-    if (!langString) //if there is no config file
-    {
-	QString mString=i18n("This is the first time you have run KLettres.\n"
-                             "The default learning language is set to French.\n"
-			     "You can change the language in the Settings -> Learning Language menu.\n\n"
-			      "Default level is Level 1, the easiest one.\n"
-			      "You can change the level in the Settings -> Levels menu.");
-	KMessageBox::information( this, mString,"KLettres - Default" );
-	m_view->l1=26;   //set French as default language
-	m_view->l2=28;
-	langString="French";
-	language=i18n("%1").arg(langString);
-	m_view->niveau=1;
-	slotGrownup();//default style==grown-up
-    }
-    else
-    {
-	if (style=="grownup") slotGrownup();
+    //from the Read config, growup is set as default if no style
+    if (style=="grownup") slotGrownup();
 	else slotKid();
-    }
+
     if (!m_view->niveau) m_view->niveau = 1;
-    setLang();
+
     updateLevMenu(m_view->niveau-1);
+
+    m_view->selectedLanguage = selectedLanguage;
+    updateLanguage(selectedLanguage);
+
+    m_view->game();
 }
 
 KLettres::~KLettres()
@@ -111,7 +99,7 @@ KLettres::~KLettres()
 
 void KLettres::setupActions()
 {
-    KStdAction::quit(this, SLOT(slotQuit()), actionCollection());
+    KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 
     m_action = new KToggleAction(i18n("Show &Menubar"),CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
     m_action->setChecked(true);
@@ -123,17 +111,138 @@ void KLettres::setupActions()
     KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 
-    //Settings->Choose Language menu
-    QStringList language_list;
-    language_list.append(i18n("D&anish"));
-    language_list.append(i18n("&Dutch"));
-    language_list.append(i18n("F&rench"));
-    language_menu = new KSelectAction(i18n("Learning L&anguage"), 0, actionCollection(), "languages");
-    language_menu->setItems(language_list);
-    connect(language_menu, SIGNAL(activated(int)), this, SLOT(changeNumeration(int)));
-    connect(language_menu, SIGNAL(activated(int)), this, SLOT(updateLangMenu(int)));
-
     createGUI();
+}
+
+// Register an available language
+void KLettres::registerLanguage(const QString &menuItem, const char *actionId, bool enabled)
+{
+  KToggleAction *t = 0;
+
+  switch (languages)
+  {
+  	case 0: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language0()), actionCollection(), actionId);
+		break;
+  	case 1: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language1()), actionCollection(), actionId);
+		break;
+  	case 2: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language2()), actionCollection(), actionId);
+		break;
+  	case 3: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language3()), actionCollection(), actionId);
+		break;
+  }
+
+  if( t ) {
+      if (languages == selectedLanguage) t->setChecked(true);
+      t->setEnabled(enabled);
+      a[languages]=enabled;
+      KConfig *config = kapp->config();
+      if (config)
+      {
+	config->setGroup("Languages");
+	config->writeEntry(QString("a[%1]").arg(languages), a[languages]);
+	sync();
+      }
+      languageActions[languages] = actionId;
+      languages++;
+  }
+}
+
+void KLettres::changeLanguage(uint newLanguage)
+{
+  // Do not accept to switch to same language
+  if (newLanguage == selectedLanguage) {
+    // newLanguage should stay checked
+    ((KToggleAction*) actionCollection()->action(languageActions[newLanguage].latin1()))->setChecked(true);
+    return;
+  }
+
+  // Unselect preceeding language
+  ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setChecked(false);
+  ((KToggleAction*) actionCollection()->action(languageActions[newLanguage].latin1()))->setChecked(true);
+  // Change language in the remembered options
+  selectedLanguage = newLanguage;
+  //write new language in config file
+  KConfig *config = kapp->config();
+  if (config)
+  {
+    config->setGroup("General");
+    config->writeEntry("LanguageNumber", selectedLanguage);
+    sync();
+  }
+  // Update the StatusBar
+  updateLanguage(selectedLanguage);
+  // Change language effectively
+  soundFactory->change(newLanguage);
+  m_view->game();
+}
+
+bool KLettres::loadLayout(QDomDocument &layoutDocument)
+{
+  QFile layoutFile(QFile::encodeName(locate("data", "klettres/data/sounds.xml")));
+  if (!layoutFile.exists())
+     {
+     kdWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/data/" <<endl;
+     QString mString=i18n("The sounds.xml file was not found in\n"
+                             "$KDEDIR/share/apps/klettres/data/\n\n"
+			     "Please install this file and start KLettres again.\n\n");
+     KMessageBox::information( this, mString,"KLettres - Default" );
+     exit(1);
+     }
+  if (!layoutFile.open(IO_ReadOnly))
+     return false;
+  ///Check if document is well-formed
+  if (!layoutDocument.setContent(&layoutFile))
+  {
+     layoutFile.close();
+     return false;
+  }
+  layoutFile.close();
+
+  return true;
+}
+
+///Switch to language #0
+void KLettres::language0()
+{
+  changeLanguage(0);
+}
+
+///Switch to language #1
+void KLettres::language1()
+{
+  changeLanguage(1);
+}
+
+///Switch to language #2
+void KLettres::language2()
+{
+  changeLanguage(2);
+}
+
+///Switch to language #3
+void KLettres::language3()
+{
+  changeLanguage(3);
+}
+
+///Set the label in the StatusBar to indicate the correct language
+void KLettres::updateLanguage(int index)
+{
+    switch(index){
+	case 0:
+            langString = i18n("Czech");
+            break;
+        case 1:
+            langString = i18n("Danish");
+            break;
+        case 2:
+            langString = i18n("French");
+            break;
+        case 3:
+            langString = i18n("Dutch");
+            break;
+    }
+    langLabel->setText(i18n("Current language is %1").arg(langString));
 }
 
 void KLettres::saveProperties(KConfig *)
@@ -160,9 +269,9 @@ void KLettres::optionsConfigureToolbars()
 {
     // use the standard toolbar editor
     saveMainWindowSettings( KGlobal::config(), autoSaveGroup() );
-    KEditToolbar dlg(actionCollection());
-    connect(&dlg, SIGNAL(newToolbarConfig()), this, SLOT(newToolbarConfig()));
-    dlg.exec();
+    KEditToolbar dlge(actionCollection());
+    connect(&dlge, SIGNAL(newToolbarConfig()), this, SLOT(newToolbarConfig()));
+    dlge.exec();
 }
 
 void KLettres::newToolbarConfig()
@@ -176,38 +285,19 @@ void KLettres::newToolbarConfig()
 void KLettres::loadSettings()
 {
     KConfig *config = kapp->config();
+    QString option;
     config->setGroup("General");
-    langString=config->readEntry("MyLanguage");
-    style=config->readEntry("myStyle");
-    m_view->niveau=config->readNumEntry("myLevel");
-    config->setGroup(langString);
-    m_view->l1 =config->readNumEntry("Alphabet");
-    m_view->l2 =config->readNumEntry("Syllables");
+    //if no language, default language is french
+    option = config->readEntry("LanguageNumber", "2");
+    selectedLanguage = option.toInt();
+    if (selectedLanguage <= 0) selectedLanguage = 0;
+    if (selectedLanguage > 3) selectedLanguage = 3;
+    //if no style, default style is grownup
+    style=config->readEntry("myStyle", "grownup");
+    //if no level, default level is 1
+    m_view->niveau=config->readNumEntry("myLevel", 1);
     config->setGroup("Font");
     newFont=QFont(config->readEntry("Family"), config->readNumEntry("Size"), config->readNumEntry("Weight"), false);
-}
-
-void KLettres::writeConfig()
-{
-    //write current config
-    KConfig *config = kapp->config();
-    config->setGroup("General");
-    config->writeEntry("MyLanguage", langString);
-    config->writeEntry("myStyle", m_view->style);
-    config->writeEntry("myLevel", m_view->niveau);
-    config->setGroup("French");
-    config->writeEntry("Alphabet", 26);
-    config->writeEntry("Syllables", 28);
-    config->setGroup("Dutch");
-    config->writeEntry("Alphabet", 22);
-    config->writeEntry("Syllables", 26);
-    config->setGroup("Danish");
-    config->writeEntry("Alphabet", 29);
-    config->writeEntry("Syllables", 28);
-    config->setGroup("Font");
-    config->writeEntry("Family", newFont.family());
-    config->writeEntry("Size", newFont.pointSize());
-    config->writeEntry("Weight", newFont.weight());
 }
 
 void KLettres::optionsPreferences()
@@ -225,26 +315,14 @@ void KLettres::optionsPreferences()
 //when Apply button in Preferences dialog is clicked, refresh view
 void KLettres::slotClickApply()
 {
-     KLettresPreferences dlg;
+      KLettresPreferences dlg;
      //refresh the font when changed in pref dialog
       if (newFont.family() != dlg.newFont.family() ||  newFont.pointSize() != dlg.newFont.pointSize() || newFont.weight() != dlg.newFont.weight())
       {
 	newFont = dlg.newFont;
 	slotSetFont();
       }
-     //refresh the language if changed
-      if (langString!=dlg.langString)
-      {
-      	  langString = dlg.langString;
-	  setLang();
-      }
-
-}
-
-void KLettres::slotQuit()
-{
-      writeConfig();
-      kapp->quit();
+      //download the new language
 }
 
 void KLettres::slotGrownup()
@@ -264,7 +342,9 @@ void KLettres::slotGrownup()
     kidBool=true;
     m_view->slotGrownup();
     style = m_view->style;
-    writeConfig();
+    KConfig *config = kapp->config();
+    config->setGroup("General");
+    config->writeEntry("myStyle", m_view->style);
 }
 
 void KLettres::slotKid()
@@ -284,50 +364,9 @@ void KLettres::slotKid()
     grownBool=true;
     m_view->slotKid();
     style = m_view->style;
-    writeConfig();
-}
-
-void KLettres::changeNumeration(int id)
-{
-    updateLangMenu(id);
-    switch (id) {
-        case 0:
-            langString="Danish";
-            break;
-        case 1:
-            langString="Dutch";
-            break;
-	case 2:
-            langString="French";
-            break;
-    }
-    language=i18n(langString.latin1());
-    writeConfig();
-    loadSettings();
-    langLabel->setText(i18n("Current language is %1").arg(language));
-    language_menu->setCurrentItem(id);
-    lang_comb->setCurrentItem(id);
-    m_view->langLoc=langString;
-    m_view->game();
-}
-
-void KLettres::updateLangMenu(int id)
-{
-    language_menu->setCurrentItem(id);
-    lang_comb->setCurrentItem(id);
-}
-
-void KLettres::setLang()
-{
-    int id=2;
-    if (langString=="Danish")//not i18n because in config
-    	id=0;
-    if (langString=="Dutch")//not i18n because in config
-	id=1;
-    if (langString=="French")//not i18n because in config
-	id=2;
-
-    changeNumeration(id);
+    KConfig *config = kapp->config();
+    config->setGroup("General");
+    config->writeEntry("myStyle", m_view->style);
 }
 
 /** Hide and show the MenuBar */
@@ -362,7 +401,13 @@ void KLettres::slotChangeLevel(int id)
 {
     m_view->niveau=id+1;
     updateLevMenu(id);
-    writeConfig();
+    //Change level effectively by reloading sounds
+    soundFactory->change(selectedLanguage);
+    //write new level in config file
+    KConfig *config = kapp->config();
+    config->setGroup("General");
+    config->writeEntry("myLevel", m_view->niveau);
+    //update game effectively
     m_view->game();
 }
 
@@ -372,6 +417,7 @@ void KLettres::updateLevMenu(int id)
     levLabel->setText(i18n("Current level is %1").arg(m_view->niveau));
 }
 
+///Set new font after a change in the Configure KLettres dialog
 void KLettres::slotSetFont()
 {
      if (newFont.pointSize()==1)

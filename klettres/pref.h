@@ -6,6 +6,7 @@
 #define _KLETTRESPREF_H_
 
 #include <kdialogbase.h>
+#include <kfontdialog.h>
 #include <qfont.h>
 #include <qframe.h>
 #include <qstring.h>
@@ -19,40 +20,39 @@ class KLettresPreferences : public KDialogBase
 {
     Q_OBJECT
 public:
-    //!constructor
+    ///Constructor
     KLettresPreferences();
-    //!the current font
+    ///The current font
     QFont newFont;
-    //!holds the current language
-    QString langString;
-    //! holds kid or grownup to define background style
-    QString style;
-    int niveau;
+    ///true if settings have changed
     bool configChanged;
+    ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch
+    uint selectedLanguage;
 
-private:
-    KLettresPrefPageOne *m_pageOne;
     KLettresPrefPageTwo *m_pageTwo;
 
+    bool a[5];
+private:
+    KLettresPrefPageOne *m_pageOne;
+
+
 private slots:
-        ///load settings from configuration file
+
+	///Read settings in config file
 	void loadSettings();
+        ///When the Ok button is clicked, settings are written in config and dialog closes
 	void slotOk();
+        ///When Apply button is clicked, then it's disabled
 	void slotApply();
 	void slotCancel();
 	void slotDefault();
-	void slotSet();
 	void slotChanged();
-	///this slot is called when the user selects a new font
 	void slotSetNewFont(const QFont &);
-	///this slot is called when the user selects a new language
-	void slotLang(int);
 
 signals:
       	void aClicked();
 
 };
-
 
 class KLettresPrefPageOne : public QFrame
 {
@@ -64,15 +64,11 @@ public:
     KFontChooser *fdlg;
 };
 
-
 class KLettresPrefPageTwo : public pref2ui
 {
     Q_OBJECT
 public:
     KLettresPrefPageTwo(QWidget *parent = 0);
-
-private slots:
-
 };
 
 #endif // _KLETTRESPREF_H_

@@ -3,25 +3,29 @@
  */
 
 //Qt headers
+#include <qdom.h>
 #include <qlayout.h>
-#include <qtextstream.h>
 #include <qtimer.h>
 #include <qtooltip.h>
 //KDE headers
 #include <kaudioplayer.h>
 #include <kdebug.h>
 #include <klocale.h>
-#include <kmessagebox.h>
+#include <klocale.h>
 //C++ includes
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 //Project headers
+#include "klettres.h"
 #include "klettresview.h"
 
-KLettresView::KLettresView(QWidget *parent)
+
+KLettresView::KLettresView(KLettres *parent)
     : QWidget(parent)
 {
+    klettres = parent;
+
     setMinimumSize( QSize( 640, 538 ) );
     setMaximumSize( QSize( 640, 538 ) );
 
@@ -45,12 +49,14 @@ KLettresView::KLettresView(QWidget *parent)
     //maybe a warning if background pics are not found
     n = 0;
     temp=-1;
+
 }
 
 KLettresView::~KLettresView()
 {
 }
 
+///Set the GUI for the grownup look
 void KLettresView::slotGrownup()
 {
     style="grownup";
@@ -64,6 +70,7 @@ void KLettresView::slotGrownup()
     button1->setPalette( pal );
 }
 
+///Set GUI for kid look
 void KLettresView::slotKid()
 {
     style="kid";
@@ -77,9 +84,19 @@ void KLettresView::slotKid()
     button1->setPalette( pal );
 }
 
+///Start the prog
 void KLettresView::game()
 {
-    if (niveau==1)
+ //reset everything so when you change language or levels
+ //it all restart nicely
+ QObject::disconnect(line1, SIGNAL(textChanged(const
+ QString&)),this,SLOT(slotLet2(const QString&)) );
+ input = 1;
+ line1->clear();
+ line1->setCursorPosition(0);
+ line1->setFocus();
+
+ if (niveau==1)
 	button1->show();
 
     if (niveau==2)
@@ -91,11 +108,7 @@ void KLettresView::game()
 	button1->setMaximumSize( QSize( 200, 160 ) );
 	line1->setMinimumSize( QSize( 140, 160 ) );
 	line1->setMaximumSize( QSize( 140, 160 ) );
-	l=l1;
-	slotChooseSound();
-	dataString=QString("klettres/%1/data/level1.txt").arg(langLoc);  //dataString holds the data file name
-	string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);
-	 play();
+	chooseSound();
 
     	QObject::connect(line1, SIGNAL(textChanged(const
  QString&)),this,SLOT(treat1(const QString&)) );
@@ -111,11 +124,7 @@ void KLettresView::game()
 
     if (niveau==3 || niveau==4)
     {
-	l=l2;
-	slotChooseSound();
-	dataString=QString("klettres/%1/data/level3.txt").arg(langLoc);  //dataString holds the data file name
-	string2=QString("klettres/%1/syllab/ad-%2.mp3").arg(langLoc).arg(n);
-        play();
+        chooseSound();
 	if (length==2)
 	{
 		button1->setMinimumSize( QSize( 200, 160 ) );
@@ -164,20 +173,13 @@ void KLettresView::timer1()
 	line1->selectAll();
 	if ((button1->text())==t1)
 	{
-		l=l1;
-		slotChooseSound();
-		dataString=QString("klettres/%1/data/level1.txt").arg(langLoc);
-		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);
-		play();
+		chooseSound();
 	}
 	else
 	{
 		if (niveau==2)
 		button1->show(); //show letter after first miss
-
-		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);    //replay sound
-		string1=locate("data",string2);                //of letter
-		KAudioPlayer::play(string1);
+		klettres->soundFactory->playSound(n);//replay sound
 	}
 
 	line1->cut();
@@ -238,66 +240,39 @@ void KLettresView::timerDone()
 		line1->backspace();  //delete the char to the left  and position curseur accordingly
 		line1->setFocus();
 		//play sound again
-		string2=QString("klettres/%1/syllab/ad-%2.mp3").arg(langLoc).arg(n);
-		string1=locate("data",string2);
-		KAudioPlayer::play(string1);
+		klettres->soundFactory->playSound(n);
 
 		QObject::connect(line1, SIGNAL(textChanged(const
  QString&)),this,SLOT(slotLet2(const QString&)) );
 	}
 }
 
-/**Play the sound and display the letter/syllable*/
-void KLettresView::play()
+void KLettresView::chooseSound()
 {
-	input=1;
-	lev1File.setName(locate("data",dataString));
-	if (!lev1File.exists()) //if the data files are not installed in the correct dir
-	{
-		QString mString=i18n("File $KDEDIR/share/apps/%1 not found!\n"
-					       "Check your installation, please!").arg(dataString);
-		KMessageBox::sorry( this, mString, i18n("KLettres - Error") );
-		exit(1);
-	}
-	lev1File.open(IO_ReadOnly);
-	QTextStream namesStream( &lev1File);
-	QString nameString;
-	int count=0;
-	while (namesStream.atEnd()==0)
-	{
-		//read one line from the text
-		nameString=namesStream.readLine();
-		if (count==n)
-		 	st=nameString; //store the choosen word in variable st
-		count++ ;
-	}
-	lev1File.close();
-  	button1->setText(st);
-	length=st.length();
-	string1=locate("data",string2);
-	 if (!string1) //if the sound files are not installed  correctly
-         {
-		QString mString=i18n("File $KDEDIR/share/apps/%1 not found!\n"
-                                                "Check your installation, please!").arg(string2);
-		KMessageBox::sorry( this, mString, i18n("KLettres - Error") );
-		exit(1);
-	}
-	KAudioPlayer::play(string1);
-}
-
-void KLettresView::slotChooseSound()
-{
+	input =1;
 	srand((unsigned int)time((time_t *)NULL));
-	n=rand()%l;
+        //If there are no sounds loaded
+        if (klettres->soundFactory->sounds ==0)
+        	return;
+	n=rand()%(klettres->soundFactory->sounds);//l;
 	//have not 2 same sounds consecutively
 	if (temp<0)
 		temp=n;
 	else
 	{
 		while (n==temp)
-			n=rand()%l;
+			n=rand()%(klettres->soundFactory->sounds);
 		temp=n;
 	}
+
+        //The sound is played
+        klettres->soundFactory->playSound(n);
+        //The letter/syllable is displayed
+        button1->setText(klettres->soundFactory->namesList[n]);
+        //store letter or syllable in st
+        st = klettres->soundFactory->namesList[n];
+        //Find the length of the syllable
+        length=klettres->soundFactory->namesList[n].length();
 }
 
 #include "klettresview.moc"

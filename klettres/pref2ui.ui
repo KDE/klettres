@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>196</width>
-            <height>212</height>
+            <width>253</width>
+            <height>327</height>
         </rect>
     </property>
     <property name="caption">
@@ -27,123 +27,198 @@
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
-                <widget class="QLabel">
+                <widget class="QFrame">
                     <property name="name">
-                        <cstring>textLabel1</cstring>
+                        <cstring>frame4</cstring>
                     </property>
                     <property name="frameShape">
-                        <enum>Panel</enum>
+                        <enum>TabWidgetPanel</enum>
                     </property>
                     <property name="frameShadow">
-                        <enum>Raised</enum>
+                        <enum>Plain</enum>
                     </property>
                     <property name="lineWidth">
-                        <number>0</number>
+                        <number>2</number>
                     </property>
-                    <property name="text">
-                        <string>Please choose the 
-language for the letters.</string>
-                    </property>
-                    <property name="alignment">
-                        <set>AlignCenter</set>
-                    </property>
-                </widget>
-                <spacer>
-                    <property name="name">
-                        <cstring>spacer3</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Vertical</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Minimum</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>10</width>
-                            <height>10</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="QButtonGroup">
-                    <property name="name">
-                        <cstring>langGroup</cstring>
-                    </property>
-                    <property name="title">
-                        <string>Language</string>
-                    </property>
-                    <property name="exclusive">
-                        <bool>true</bool>
-                    </property>
-                    <property name="radioButtonExclusive">
-                        <bool>true</bool>
-                    </property>
-                    <widget class="QRadioButton">
+                    <grid>
                         <property name="name">
-                            <cstring>daBox</cstring>
+                            <cstring>unnamed</cstring>
                         </property>
-                        <property name="geometry">
-                            <rect>
-                                <x>13</x>
-                                <y>22</y>
-                                <width>80</width>
-                                <height>23</height>
-                            </rect>
-                        </property>
-                        <property name="text">
-                            <string>Danish</string>
-                        </property>
-                        <property name="toolTip" stdset="0">
-                            <string>Set the "adult" Look and Feel</string>
-                        </property>
-                        <property name="whatsThis" stdset="0">
-                            <string>Check that if you want the "adult" Look and Feel</string>
-                        </property>
-                    </widget>
-                    <widget class="QRadioButton">
-                        <property name="name">
-                            <cstring>duBox</cstring>
-                        </property>
-                        <property name="geometry">
-                            <rect>
-                                <x>13</x>
-                                <y>51</y>
-                                <width>80</width>
-                                <height>23</height>
-                            </rect>
-                        </property>
-                        <property name="text">
-                            <string>Dutch</string>
-                        </property>
-                        <property name="toolTip" stdset="0">
-                            <string>Set the "blue" Look and Feel</string>
-                        </property>
-                        <property name="whatsThis" stdset="0">
-                            <string>Check that if youwant the "blue" Look and Feel</string>
-                        </property>
-                    </widget>
-                    <widget class="QRadioButton">
-                        <property name="name">
-                            <cstring>frBox</cstring>
-                        </property>
-                        <property name="geometry">
-                            <rect>
-                                <x>13</x>
-                                <y>80</y>
-                                <width>80</width>
-                                <height>23</height>
-                            </rect>
-                        </property>
-                        <property name="text">
-                            <string>French</string>
-                        </property>
-                        <property name="toolTip" stdset="0">
-                            <string>Set the "nature" Look and Feel</string>
-                        </property>
-                        <property name="whatsThis" stdset="0">
-                            <string>Check that if youwant the "nature" Look and Feel</string>
-                        </property>
-                    </widget>
+                        <widget class="QLayoutWidget" row="0" column="0">
+                            <property name="name">
+                                <cstring>layout4</cstring>
+                            </property>
+                            <vbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel1</cstring>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>Panel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Raised</enum>
+                                    </property>
+                                    <property name="lineWidth">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="text">
+                                        <string>&lt;p align="center"&gt;Please choose a language to download.&lt;/p&gt;
+&lt;p align="center"&gt;Only available languages are displayed.&lt;/p&gt;</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>WordBreak|AlignCenter</set>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer3</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Vertical</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Fixed</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>16</width>
+                                            <height>16</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QButtonGroup">
+                                    <property name="name">
+                                        <cstring>langGroup</cstring>
+                                    </property>
+                                    <property name="title">
+                                        <string>Language</string>
+                                    </property>
+                                    <property name="exclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="radioButtonExclusive">
+                                        <bool>true</bool>
+                                    </property>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>czBox</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="geometry">
+                                            <rect>
+                                                <x>10</x>
+                                                <y>20</y>
+                                                <width>72</width>
+                                                <height>23</height>
+                                            </rect>
+                                        </property>
+                                        <property name="text">
+                                            <string>Czech</string>
+                                        </property>
+                                        <property name="buttonGroupId">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Select the Czech language</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Check that if you want to learn the letters and syllables in Czech</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>nlBox</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="geometry">
+                                            <rect>
+                                                <x>11</x>
+                                                <y>109</y>
+                                                <width>72</width>
+                                                <height>23</height>
+                                            </rect>
+                                        </property>
+                                        <property name="text">
+                                            <string>Dutch</string>
+                                        </property>
+                                        <property name="buttonGroupId">
+                                            <number>3</number>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Set the Dutch language</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Check that if you want to learn the letters and syllables in Dutch</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>frBox</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="geometry">
+                                            <rect>
+                                                <x>11</x>
+                                                <y>80</y>
+                                                <width>72</width>
+                                                <height>23</height>
+                                            </rect>
+                                        </property>
+                                        <property name="text">
+                                            <string>French</string>
+                                        </property>
+                                        <property name="buttonGroupId">
+                                            <number>2</number>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Set the French language</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Check that if you want to learn the letters and syllables in French</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QRadioButton">
+                                        <property name="name">
+                                            <cstring>dkBox</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="geometry">
+                                            <rect>
+                                                <x>11</x>
+                                                <y>51</y>
+                                                <width>72</width>
+                                                <height>23</height>
+                                            </rect>
+                                        </property>
+                                        <property name="text">
+                                            <string>Danish</string>
+                                        </property>
+                                        <property name="buttonGroupId">
+                                            <number>1</number>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Select the Danish language</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Check that if you want to learn the letters and syllables in Danish</string>
+                                        </property>
+                                    </widget>
+                                </widget>
+                            </vbox>
+                        </widget>
+                    </grid>
                 </widget>
             </vbox>
         </widget>

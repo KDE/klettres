@@ -4,11 +4,13 @@
 	<Menu name="file" noMerge="1"><text>&amp;File</text>
 		<Action name="file_quit"/>
 	</Menu>
-		<Menu name="languages" noMerge="1"><text>&amp;Languages</text>
-		<Action name="data_da"/><!--Danish-->
-		<Action name="data_nl"/><!--Dutch-->
-		<Action name="data_fr"/><!--French-->
-	</Menu>
+         <Menu name="speech"><text>&amp;Languages</text>
+    		<Action name="speech_czech"/>
+    		<Action name="speech_danish"/>
+    		<Action name="speech_french"/>
+    		<Action name="speech_dutch"/>
+       </Menu>
+
 	 <Menu name="settings" noMerge="1"><text>&amp;Settings</text>
 		<Action name="menubar" />
 		<Merge name="StandardToolBarMenuHandler" />

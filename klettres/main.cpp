@@ -16,7 +16,7 @@ static const char *description =
 	I18N_NOOP("KLettres helps a very young child or an adult learning \n"
 						"a new language by associating sounds and \n"
                        	"letters in this language.\n"
-						"3 languages are available: Danish, Dutch and French.");
+						"4 languages are available: Czech, Danish, Dutch and French.");
 
 static KCmdLineOptions options[] =
 {
@@ -39,8 +39,6 @@ int main(int argc, char **argv)
 	    I18N_NOOP("Icons"), "zerokode@yahoo.com");
     about.addCredit("Renaud Blanchard",
 	    I18N_NOOP("Background picture"), "kisukuma@chez.com");
-    //aboutData.addCredit("Ludovic Grossard",
- 	//	    I18N_NOOP("Splash-screen sound"), "ludovic.grossard@libertysurf.fr");
     about.addCredit("Robert Gogolok",
 	    I18N_NOOP("Support and coding guidance"), "mail@robert-gogolok.de");
     KCmdLineArgs::init(argc, argv, &about);
