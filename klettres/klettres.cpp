@@ -3,6 +3,7 @@
  */
 
 #include <qtooltip.h>
+#include <qwhatsthis.h>
 //KDE headers
 #include <kcombobox.h>
 #include <klocale.h>
@@ -55,6 +56,7 @@ KLettres::KLettres()
     tb->insertWidget(4, 100, lev_comb, 4); //id, width, widget, index
     connect( lev_comb, SIGNAL( activated(int) ), this, SLOT( slotChangeLevel(int) ) );
     QToolTip::add(lev_comb, i18n("Change the level of difficulty"));
+    QWhatsThis::add(lev_comb, i18n( "Use this box to choose the level of difficulty" ));
     tb->insertSeparator(5, 5);
 
     //Set up StatusBar

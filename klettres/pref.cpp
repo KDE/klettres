@@ -18,7 +18,7 @@
 
 
 KLettresPreferences::KLettresPreferences()
-    : KDialogBase(IconList, i18n("KLettres Preferences"),
+    : KDialogBase(IconList, i18n("Preferences"),
                   Help|Default|Ok|Apply|Cancel, Ok)
 {
     //GUI
