@@ -365,7 +365,7 @@ void KLettres::loadLangToolBar()
         secondToolbar->insertButton ("R_acute.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteRacute()), true, i18n("Try ")+ QString::fromUtf8("Ŕ", -1), 12 );
         secondToolbar->insertButton ("S_caron.png", 40, SIGNAL( clicked() ), this, SLOT( slotPasteScaron()), true, i18n("Try ")+ QString::fromUtf8("Š", -1), 13 );
 	secondToolbar->insertButton ("T_caron.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteTcaron()), true, i18n("Try ") + QString::fromUtf8("Ť", -1), 14);
-	secondToolbar->insertButton ("U_acute.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteRacute()), true, i18n("Try ")+ QString::fromUtf8("Ú", -1), 15 );
+	secondToolbar->insertButton ("U_acute.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteUacute()), true, i18n("Try ")+ QString::fromUtf8("Ú", -1), 15 );
 	secondToolbar->insertButton ("Z_caron.png", 60, SIGNAL( clicked() ), this, SLOT( slotPasteZcaron()), true, i18n("Try ")+ QString::fromUtf8("Ž", -1), 16 );
     }
     KConfig *config = kapp->config();
