@@ -153,6 +153,8 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	 else
 	{
 	       config->setGroup("Language");
+		langLoc=config->readEntry("MyLanguage");
+		//language=QString(i18n("%1")).arg(langLoc); //not after 3.1 breaks i18n freeze
 		language=config->readEntry("MyLanguage");
 		config->setGroup(langString);
 		l1 =config->readNumEntry("Alphabet");
@@ -227,8 +229,8 @@ void KLettres::game()
 		line1->setMaximumSize( QSize( 140, 160 ) );
 		srand((unsigned int)time((time_t *)NULL));
 		n=rand()%l1;     //choose a random number
-		dataString=QString("klettres/%1/data/level1.txt").arg(language);  //dataString holds the data file name
-		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(language).arg(n);
+		dataString=QString("klettres/%1/data/level1.txt").arg(langLoc);  //dataString holds the data file name
+		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);
 		 play();
 
 		QObject::connect(line1, SIGNAL(textChanged(const
@@ -247,8 +249,8 @@ void KLettres::game()
 	{
 		srand((unsigned int)time((time_t *)NULL));
 		n=rand()%l2;
-		dataString=QString("klettres/%1/data/level3.txt").arg(language);  //dataString holds the data file name
-		string2=QString("klettres/%1/syllab/ad-%2.mp3").arg(language).arg(n);
+		dataString=QString("klettres/%1/data/level3.txt").arg(langLoc);  //dataString holds the data file name
+		string2=QString("klettres/%1/syllab/ad-%2.mp3").arg(langLoc).arg(n);
        play();
 		if (length==2)
 		{
@@ -301,8 +303,8 @@ void KLettres::timer1()
 	{
 		srand((unsigned int)time((time_t *)NULL));
 		n=rand()%l1;
-		dataString=QString("klettres/%1/data/level1.txt").arg(language);
-		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(language).arg(n);
+		dataString=QString("klettres/%1/data/level1.txt").arg(langLoc);
+		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);
 		play();
 	}
 	else
@@ -310,7 +312,7 @@ void KLettres::timer1()
 		if (niveau==2)
 		button1->show(); //show letter after first miss
 
-		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(language).arg(n);    //replay sound
+		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);    //replay sound
 		string1=locate("data",string2);                //of letter
 		KAudioPlayer::play(string1);
 	}
@@ -376,7 +378,7 @@ void KLettres::timerDone()
 		line1->backspace();  //delete the char to the left  and position curseur accordingly
 		line1->setFocus();
 		//play sound again
-		string2=QString("klettres/%1/syllab/ad-%2.mp3").arg(language).arg(n);
+		string2=QString("klettres/%1/syllab/ad-%2.mp3").arg(langLoc).arg(n);
 		string1=locate("data",string2);
 		KAudioPlayer::play(string1);
 
@@ -483,15 +485,17 @@ void KLettres::changeNumeration(int id)
 
 /** Set language to French */
 void KLettres::slotFrench()
-{
-	language=i18n("French");
+{	
+	langLoc="French"; // please no i18n() around that
+	//language=QString(i18n("%1")).arg(langLoc);//after 3.1
+	language=i18n("French"); //does not break i18n freeze until 3.1
 	num=2;
 	config->setGroup("Language");
 	langString=config->readEntry("MyLanguage");
 	if ( !langString.isNull() )
 	{
  	  	//read config to find l1 and l2
-		config->setGroup(language);	
+		config->setGroup(langLoc);	
 		l1 =config->readNumEntry("Alphabet");
 		l2 =config->readNumEntry("Syllables");
 	}
@@ -504,6 +508,8 @@ void KLettres::slotFrench()
 /** Set Language to Dutch */
 void KLettres::slotDutch()
 {
+	langLoc="Dutch";//please no i18n() around that
+	//language=QString(i18n("%1")).arg(langLoc);
 	language=i18n("Dutch");
 	num=1;
         langLabel->setText(i18n("Current language is %1").arg(language));
@@ -519,7 +525,7 @@ void KLettres::slotDutch()
 	}
 	else
 	{
-		config->setGroup(language);
+		config->setGroup(langLoc);
 		l1 =config->readNumEntry("Alphabet");
 		l2 =config->readNumEntry("Syllables");
 	}
@@ -529,7 +535,9 @@ void KLettres::slotDutch()
 /** Set Language to Danish*/
 void KLettres::slotDanish()
 {
+	langLoc="Danish";
 	language=i18n("Danish");
+	//language=QString(i18n("%1")).arg(langLoc);
 	num=0;
         langLabel->setText(i18n("Current language is %1").arg(language));
 	language_menu->setCurrentItem(num);
@@ -544,7 +552,7 @@ void KLettres::slotDanish()
 	}
 	else
 	{
-		config->setGroup(language);
+		config->setGroup(langLoc);
 		l1 =config->readNumEntry("Alphabet");
 		l2 =config->readNumEntry("Syllables");
 	}
@@ -556,7 +564,7 @@ void KLettres::slotQuit()
 {
 	//write current config
 	config->setGroup("Language");
-	config->writeEntry("MyLanguage", language);
+	config->writeEntry("MyLanguage", langLoc);
 	config->writeEntry("Number",num);
 	config->writeEntry("myStyle", style);
 	kdDebug() << style << endl;

@@ -72,7 +72,7 @@ class KLettres : public KMainWindow
     ~KLettres();
  	void play();
 	QString string1, string2, dataString;
-	QString language, langString, style;
+	QString language, langString, style, langLoc;
 	QFile lev1File;
 	int l1, l2, length, input, num, numRead;
 
