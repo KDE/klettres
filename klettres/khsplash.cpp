@@ -17,7 +17,7 @@
 
 #include <kaudioplayer.h>
 #include <kstddirs.h>
-
+#include <qcursor.h>
 #include "khsplash.h"
 
 KhSplash::KhSplash(QWidget *parent, const char *name ) : QFrame(parent,name,QWidget::WStyle_NoBorder | QWidget::WStyle_Customize)
@@ -25,8 +25,10 @@ KhSplash::KhSplash(QWidget *parent, const char *name ) : QFrame(parent,name,QWid
 	QPixmap pm;
 	pm.load(locate("data","klettres/pics/klettres_splash.png"));
 	setBackgroundPixmap(pm);
-	setGeometry(QApplication::desktop()->width ()/2-200,
-	            QApplication::desktop()->height()/2-124, 400, 248);
+	int screen = QApplication::desktop()->screenNumber(QCursor::pos());
+	QRect geom = QApplication::desktop()->screenGeometry(screen);
+	setGeometry(geom.width()/2-200+geom.x(),
+	            geom.height()/2-124+geom.y(), 400, 248);
 	setFrameStyle( QFrame::Box | QFrame::Raised );
 	setLineWidth(1);
 	show();
