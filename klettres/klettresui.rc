@@ -12,11 +12,8 @@
 		<Action name="toolbar"/>
 		<separator/>
  		<Action name="languages"/>
-       <Menu name="change_background"><text>&amp;Choose Background</text>
-			<Action name="adult"/>
-			<Action name="child"/>
-       </Menu>
-   </Menu>
+       <Action name="look_feel"/>
+  </Menu>
 <separator/>
 </MenuBar>
 

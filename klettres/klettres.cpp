@@ -26,7 +26,7 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
     setMaximumSize( QSize( 640, 530 ) );
 
     setCaption( i18n( "Klettres - version 1.3" ) );
-    QToolTip::add( this, i18n( "Type the same letter that you hear or see" ) );
+   // QToolTip::add( this, i18n( "Type the same letter that you hear or see" ) );
 
 	//Actions
 	setupActions();
@@ -35,12 +35,20 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 
    //Settings->Choose Language menu
 	QStringList language_list;
-	language_list.append(i18n("Dutch"));
-	language_list.append(i18n("French"));
+	language_list.append(i18n("&Dutch"));
+	language_list.append(i18n("F&rench"));
 	language_menu = new KSelectAction(i18n("Learning L&anguage"), 0, actionCollection(), "languages");
 	language_menu->setItems(language_list);
    connect(language_menu, SIGNAL(activated(int)), this, SLOT(changeNumeration(int)));
    connect(language_menu, SIGNAL(activated(int)), this, SLOT(updateLangMenu(int)));
+   //Settings->Look & Feel menu
+	QStringList look_list;
+    look_list.append(i18n("&Grown-up"));
+	look_list.append(i18n("&Kids"));
+	look_menu = new KSelectAction(i18n("Look and &Feel"), 0, actionCollection(), "look_feel");
+   look_menu->setItems(look_list);
+   connect(look_menu, SIGNAL(activated(int)), this, SLOT(changeLook(int)));
+   connect(look_menu, SIGNAL(activated(int)), this, SLOT(updateLookMenu(int)));	
    //Levels menu
 	QStringList levels_list;
 	levels_list.append(i18n("Level 1"));
@@ -56,7 +64,7 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	createGUI(locate("data", "klettres/klettresui.rc"));
 
 	/*** GUI ***/
-	KToolBar *tb = toolBar("mainToolBar");
+	tb = toolBar("mainToolBar");
 	//Levels comboBox
 	lev_comb= new KComboBox(tb);
 	lev_comb->insertItem( i18n( "Level 1" ) );
@@ -65,37 +73,33 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
    lev_comb->insertItem( i18n( "Level 4" ) );
 	tb->insertWidget(1, 100, lev_comb,1); //id, width, widget, index
 	connect( lev_comb, SIGNAL( activated(int) ), this, SLOT( slotNext(int) ) );
-   //language comboBox
+   //language choice comboBox
 	lang_comb= new KComboBox(tb);
 	lang_comb->insertItem( i18n( "Dutch" ) );
    lang_comb->insertItem( i18n( "French" ) );
 	tb->insertWidget(2, 100, lang_comb,2); //id, width, widget, index
    connect( lang_comb, SIGNAL( activated(int) ), this, SLOT( changeNumeration(int)));
+
    //font for comboxes
    	QFont f_comb( "times" , 14, QFont::Bold );
 	lang_comb->setFont( f_comb );
    lev_comb->setFont( f_comb );
 
-    QPalette pal;
-    QColorGroup cg;
     //Button with letter or syllable
     button1 = new QLabel( this, "button1" );
     button1->setGeometry( QRect( 50, 100, 160, 160 ) );
     cg.setColor( QColorGroup::Foreground, white );
-    cg.setColor( QColorGroup::Background, black );
+    cg.setColor( QColorGroup::Background, QColor(53,87,158));
     pal.setActive( cg );
     button1->setPalette( pal );
     button1->setText( i18n( "A" ) );
+	QToolTip::add( button1, i18n( "You must type the letter you hear and/or see in the field below" ) );
     //lineEdit for user input
     line1 = new QLineEdit( this, "line1" );
     line1->setGeometry( QRect( 40, 310, 161, 160 ) ); 
     QToolTip::add( line1, i18n( "Type the letter that you just heard" ) );
-    //background pic
-	QPixmap pm;
-	pm.load(locate("data","klettres/pics/klettres_back.jpeg"));
-	setBackgroundPixmap(pm);
     //font for button and lineEdit
-	QFont f( "times" , 100, QFont::Bold );
+	QFont f( "courrier" , 80, QFont::Bold );
    button1->setFont( f );
 	line1->setFont(f);
 
@@ -104,12 +108,16 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	QFont f_lab( "times" , 14);  //font for statusBar
 	langLabel = new QLabel(st);
 	levLabel = new QLabel(st);
-	st->addWidget(langLabel);
-	st->insertFixedItem("", 1);//add a space
 	st->addWidget(levLabel);
-	langLabel->setFont( f_lab);
+	st->insertFixedItem("", 1);//add a space
+	st->addWidget(langLabel);
 	levLabel->setFont(f_lab);
+   langLabel->setFont( f_lab);
+	 //load background pics
+	pm_a.load(locate("data","klettres/pics/background1.png"));
+	pm_k.load(locate("data","klettres/pics/klettres_back.jpeg"));
 
+    slotGrownup();	//default style==grown-up
    //Read config
 	//if not, put default as French
     config = kapp->config();
@@ -418,7 +426,6 @@ void KLettres::updateLangMenu(int id)
 	 lang_comb->setCurrentItem(id);
 }
 
-
 /** Update Levels menu */
 void KLettres::updateLevMenu(int id)
 {
@@ -426,6 +433,11 @@ void KLettres::updateLevMenu(int id)
 	lev_comb->setCurrentItem(id);
 }
 
+/** Update Look menu */
+void KLettres::updateLookMenu(int id)
+{
+	look_menu->setCurrentItem(id);
+}
 
 void KLettres::changeNumeration(int id)
 {
@@ -487,7 +499,7 @@ void KLettres::slotDutch()
 /** Quit KLettres and write config */
 void KLettres::slotQuit()
 {
-	//write curretn config
+	//write current config
 	config->setGroup("Language");
 	config->writeEntry("MyLanguage", language);
 	config->writeEntry("Number",num);
@@ -507,10 +519,12 @@ void KLettres::slotMenubar()
 		case false:
 			m_action->setChecked(false);
 			menuBar()->hide();
-			break;
+			tb->insertButton ("menubar.png", 3, SIGNAL( clicked() ), this, SLOT( slotShowM()), true, i18n("Show the MenuBar") );
+		break;
 		case true:
 			m_action->setChecked(true);
 			menuBar()->show();
+			tb->removeItem(3);
 		break;
 		}
 }
@@ -532,7 +546,98 @@ void KLettres::slotToolbar()
 		}
 }
 
+/** switch between different looks */
+void KLettres::changeLook(int id)
+{
+	updateLookMenu(id);
+    switch (id) {
+        case 0:
+            slotGrownup();
+            break;
+        case 1:
+            slotKid();
+            break;
+    }
+}
+
+/** Set the Grown-up style */
+void KLettres::slotGrownup()
+{
+	//button1 background
+	cg.setColor( QColorGroup::Foreground, white );
+    cg.setColor( QColorGroup::Background, QColor(53,87,158));
+    pal.setActive( cg );
+    button1->setPalette( pal );
+
+	look_menu->setCurrentItem(0);
+	setBackgroundPixmap(pm_a);
+	QPalette pal;
+    QColorGroup cg;
+    cg.setColor( QColorGroup::Background, white);
+    pal.setActive( cg );
+    statusBar()->setPalette( pal );
+	lang_comb->show();
+	menuBar()->show();
+	m_action->setChecked(true);
+	int i = tb->count();
+	if (i>4)
+	{
+		tb->removeItem(5);
+		tb->removeItem(3);
+	}
+	tb->insertButton ("kids.png", 4, SIGNAL( clicked() ), this, SLOT( slotKid()), true, i18n("Switch to the kid look") );
+	if (t_action->isChecked()==false)
+	{
+     		t_action->setChecked(true);
+			toolBar()->show();
+			resize( QSize( 640, 530 ) );
+	}
+}
+
+/** Set the kid style */
+void KLettres::slotKid()
+{
+	//change button1 background
+	cg.setColor( QColorGroup::Foreground, white );
+	cg.setColor( QColorGroup::Background, black);
+    pal.setActive( cg );
+    button1->setPalette( pal );
+
+	look_menu->setCurrentItem(1);
+	setBackgroundPixmap(pm_k);
+	QPalette pal;
+    QColorGroup cg;
+    cg.setColor( QColorGroup::Background, white);
+    pal.setActive( cg );
+    statusBar()->setPalette( pal );
+	lang_comb->hide();
+	menuBar()->hide();   //and insert show_menubar button
+	int i = tb->count();
+	if (i<6)
+	tb->insertButton ("menubar.png", 3, SIGNAL( clicked() ), this, SLOT( slotShowM()), true, i18n("Show the MenuBar") );
+	m_action->setChecked(false);
+	tb->removeItem(4);//remove kid_look button
+//button to show grown-up style
+    tb->insertButton ("grownup.png", 5, SIGNAL( clicked() ), this, SLOT( slotGrownup()), true, i18n("Switch to the grown-up look") );
+	 if (t_action->isChecked()==false)
+	{
+     		t_action->setChecked(true);
+			toolBar()->show();
+			resize( QSize( 640, 530 ) );
+	}
+ }
+
+
+/** No descriptions */
+void KLettres::slotShowM()
+{
+	m_action->setChecked(true);
+	menuBar()->show();
+	tb->removeItem(3);//remove menubar_button
+}
+
 #include "klettres.moc"
+
 
 
 

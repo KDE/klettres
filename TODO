@@ -1,5 +1,22 @@
 28 April 2002
 
-- accel keys don't show in Settings menu
+For 3.1 release
+
+- accel keys don't show in Settings menu  (CTRL-M for toggle MenuBar)
+- add a Help button in the toolbar (standard help button)
 - add QWhat'sthis
-- sounds from mp3 to ogg
+- sounds from mp3 to ogg (Rob Kaper?)
+- bigger icons in the toolbar for Kid look.
+- check if KLettres fully uses KDE standard dirs and correct i18n
+- have configurable font size???
+- clean the code (could be shortened a bit)
+- icons for toolBar install in $(kde_icondir)/hicolor/48x48/apps/grownup.png.
+Check wether this is OK.
+- find new background pic for "grown-up" look and new "show menubar" icon
+- finish the KLettres handbook
+
+For 3.2 release
+
+- install sounds in the relevant i18n packages. Wait for that to have
+English sounds as this will be the default if desktop-language non supported.
+- add languages when sounds for them are provided

@@ -45,7 +45,7 @@ KhSplash::KhSplash(QWidget *parent, const char *name ) : QFrame(parent,name,QWid
 	QTimer *timer = new QTimer(this);
 	connect( timer, SIGNAL(timeout()),
 	         this, SLOT(slotHide()) );
-	timer->start( 3000, TRUE );
+	timer->start( 1200, TRUE );
 }
 
 KhSplash::~KhSplash()

@@ -22,7 +22,8 @@
 #include "khsplash.h"
 
 static const char *description =
-	I18N_NOOP("KLettres helps a very young child to associate sounds and \n"
+	I18N_NOOP("KLettres helps a very young child or an adult learning \n"
+							"a new language to associate sounds and \n"
                        "letters in his/her language.\n"
 						    "2 languages are available: Dutch and French.");
 // INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
     "(c) 2001, Anne-Marie Mahfouf", 0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
   aboutData.addAuthor("Anne-Marie Mahfouf",0, "annma@kde.org");
   aboutData.addCredit("Geert Stams",
-	    I18N_NOOP("Dutch sounds"), "gstams.1@hccnet.nl");
+	    I18N_NOOP("Dutch sounds"), "geert@pa3csg.myweb.nl");
   aboutData.addCredit("Primoz Anzur",
 	    I18N_NOOP("Splash-screen and icons"), "zerokode@yahoo.com");
   aboutData.addCredit("Renaud Blanchard",

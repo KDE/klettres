@@ -1,3 +1,8 @@
+29 April 2002
+- add "Look and Feel" menu that allow 2 different styles. Style "kid" has no MenuBar, has a kid background pic and a toolbar.
+Style "grown-up" has a different background, a menuBar and a toolbar.
+Buttons appear consequently in the 2 styles to allow menuBar and other style.
+
 28 April 2002
 - better internationalization
 - i18n() the KLettres on the splash-screen
@@ -6,7 +11,7 @@
 - settings allow to choose the language and the level from the menuBar and toolBar
 - statusBar indicates level and language
 - suppressed the .ui file
-- fixed the bug in levels 3 & 4 (prevented upper-case letters and inversed letters)
+- fixed the bug in levels 3 & 4 (prevented upper-case letters and got it wrong in those 2 levels)
 
 25 February 2002
 - dutch sounds

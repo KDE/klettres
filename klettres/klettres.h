@@ -34,6 +34,7 @@
 #include <qtextstream.h>
 #include <qtooltip.h>
 //KDE includes
+#include <kaccelgen.h>
 #include <kaction.h>
 #include <kapp.h>
 #include <kaudioplayer.h>
@@ -77,17 +78,25 @@ class KLettres : public KMainWindow
 
 	KSelectAction *language_menu;	
 	KSelectAction *levels_menu;	
+	KSelectAction *look_menu;
 	KToggleAction *m_action;
 	KToggleAction *t_action;
    KConfig *config;
 	void setupActions();
 	
+	KToolBar *tb;
 	KComboBox* lev_comb;
 	KComboBox* lang_comb;
 	QLabel* button1;
     QLineEdit* line1;
 	QLabel *langLabel;
 	QLabel *levLabel;
+
+	QPixmap pm_k;
+	QPixmap pm_a;
+
+	 QPalette pal;
+    QColorGroup cg;
 
 public slots: // Public slots
   /** No descriptions */
@@ -119,11 +128,24 @@ public slots: // Public slots
   /** Hide and show the MenuBar */
   void slotMenubar();
   /** Update the Levels menu **/
+  /** No descriptions */
+  void slotKid();
+  /** No descriptions */
+  void slotGrownup();
+  /** No descriptions */
+  void updateLookMenu(int);
+  /** switch between different looks */
+  void changeLook(int);
   void updateLevMenu(int);
+  /** No descriptions */
+  void slotShowM();
 
 signals:
   /** No descriptions */
   void newText( const QString& );
+
+protected:
+
 };
 
 #endif
