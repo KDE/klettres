@@ -40,8 +40,8 @@ int main(int argc, char **argv)
             I18N_NOOP("Czech sounds"), "evmi@seznam.cz");
    about.addCredit("Silvia Motyčková & Jozef Říha",
             I18N_NOOP("Slovak sounds"), "silviamotycka@seznam.cz");
-   about.addCredit("Alessandro Pasotti",
-            I18N_NOOP("Italian sounds"), "alessandro@acqualba.it");
+   about.addCredit("Pietro Pasotti",
+		   I18N_NOOP("Italian sounds"), "pietro@itopen.it");
     about.addCredit("Primoz Anzur",
             I18N_NOOP("Icons"), "zerokode@yahoo.com");
     about.addCredit("Renaud Blanchard",
