@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	    I18N_NOOP("Dutch sounds"), "geert@pa3csg.myweb.nl");
     about.addCredit("Erik Kjaer Pedersen",
 	    I18N_NOOP("Danish sounds"), "erik@binghamton.edu");
-	    about.addCredit("Eva Mikulč íková",
+	    about.addCredit("Eva Mikulčíková",
 	    I18N_NOOP("Czech sounds"), "eva@seznam.cz");
     about.addCredit("Primoz Anzur",
 	    I18N_NOOP("Icons"), "zerokode@yahoo.com");

@@ -2,7 +2,7 @@
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
  "dtd/kdex.dtd" [
   <!ENTITY kappname "&klettres;"><!-- replace klettres here -->
-  <!ENTITY package "kdeedu"> 
+  <!ENTITY package "kdeedu">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
@@ -29,8 +29,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2002-10-08</date>
-<releaseinfo>0.99</releaseinfo>
+<date>2003-05-30</date>
+<releaseinfo>1.0</releaseinfo>
 
 <abstract>
 <para>
@@ -39,7 +39,7 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Three languages are available at the moment: Danish, Dutch and French.
+Four languages are available at the moment: Czech, Danish, Dutch and French.
 </para>
 </abstract>
 
@@ -47,6 +47,7 @@ Three languages are available at the moment: Danish, Dutch and French.
 <keyword>KDE</keyword>
 <keyword>kdeedu</keyword>
 <keyword>klettres</keyword>
+<keyword>Czech</keyword>
 <keyword>Danish</keyword>
 <keyword>Dutch</keyword>
 <keyword>French</keyword>
@@ -67,7 +68,7 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are three languages available at the moment: Danish, Dutch
+<para>There are four languages available at the moment: Czech, Danish, Dutch
 and French.</para>
 
 <para>Two different Look and Feel allow you to adapt &klettres; to
@@ -78,9 +79,9 @@ older user, the background is not so childish and the menuBar is
 present.</para>
 
 <note>
-<para>To use Danish as a learning language, you need to have the
-Danish keyboard layout set up on your system in order to type in
-special letters of the Danish alphabet. Please use &kcontrol;, in the
+<para>To use Czech or Danish as a learning language, you need to have the
+Czech or Danish keyboard layout set up on your system in order to type in
+special letters of those alphabets. Please use &kcontrol;, in the
 section <guimenu>Peripherals</guimenu> and submenu
 <guimenuitem>Keyboard</guimenuitem>.</para>
 </note>
@@ -116,13 +117,13 @@ In level 1, the user sees the letter and hears the sound. He then has to type
 in the letter in the box. If it is correct, the next letter appears (without
 having to press <keycap>Enter</keycap> or whatever). If the user types
 the wrong letter, he hears the sound again. In this level, the user
-memorizes the letters and recognizes them on the keyboard. 
-</para> 
+memorizes the letters and recognizes them on the keyboard.
+</para>
 
 <note>
 <para>The user can type in either lower or upper case letters. The letters are automatically put in upper case so
 that a child will match them with the keyboard. He can type only one letter at a
-time.</para> 
+time.</para>
 </note>
 
 <para>
@@ -333,16 +334,16 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only three langages?</para>
+<para>Why are there only four languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
 for the alphabet and some basic syllables. Someone speaking natively
-the new language must record these sounds in ogg format. For levels 3
+the new language must record these sounds in wav, mp3 or preferably, ogg format. For levels 3
 and 4, the syllables must be choosen by a teacher: these must be the
 syllables you have to learn just after the alphabet in order to learn
 well the basics of this language. Please send me a mail if you are
-able to do that.</para> </answer> 
+able to do that.</para> </answer>
 </qandaentry>
 </qandaset>
 </chapter>
@@ -360,15 +361,17 @@ Program copyright 2001 Anne-Marie Mahfouf <email>annma@kde.org</email>
 <para>
 I am very grateful to the following people whose contribution has been greatly valuable:
 <itemizedlist>
+<listitem><para>Czech sounds: Eva Mikulčíková
+<email>eva@seznam.cz</email></para> </listitem>
 <listitem><para>Dutch sounds: Geert Stams
 <email>geert@pa3csg.myweb.nl</email></para> </listitem>
 <listitem><para>Danish sounds: Erik Kjaer Pedersen
 <email>erik@binghamton.edu</email></para> </listitem>
 <listitem><para>Background picture: Renaud Blanchard
 <email>kisukuma@chez.com</email></para> </listitem>
-<listitem><para>Splashscreen:  Primoz Anzur
+<listitem><para>Icons:  Primoz Anzur
 <email>zerokode@yahoo.com</email></para></listitem>
-<listitem><para>Splashscreen sound: Ludovic Grossard
+<listitem><para>French sounds: Ludovic Grossard
 <email>ludovic.grossard@libertysurf.fr/email</email></para>
 </listitem>
 <listitem><para>Support and coding guidance: Robert Gogolok
