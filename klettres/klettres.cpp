@@ -84,7 +84,7 @@ KLettres::KLettres()
     st->addWidget(levLabel);
     st->insertFixedItem("", 1);//add a space
     st->addWidget(langLabel);
-    statusBar()->show();
+    statusBar();
 
     slotSetFont();//set the font from config
     //from the Read config, growup is set as default if no style
@@ -118,7 +118,7 @@ void KLettres::setupActions()
     KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
     KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
     fontAct = new KAction(i18n("Change &Font"), "fonts", CTRL+Key_F, this, SLOT(optionsPreferences()), actionCollection(), "font");
-
+    setAutoSaveSettings("General");
     createGUI();
 }
 
@@ -381,6 +381,9 @@ void KLettres::slotGrownup()
     KConfig *config = kapp->config();
     config->setGroup("General");
     config->writeEntry("myStyle", m_view->style);
+    secondToolbar->setIconSize(22);
+    setMinimumSize( QSize( 640, 538 ) );
+    setMaximumSize( QSize( 640, 538 ) );
 }
 
 void KLettres::slotKid()
@@ -403,6 +406,9 @@ void KLettres::slotKid()
     KConfig *config = kapp->config();
     config->setGroup("General");
     config->writeEntry("myStyle", m_view->style);
+    secondToolbar->setIconSize(32);
+    setMinimumSize( QSize( 640, 480 ) );
+    setMaximumSize( QSize( 640, 480 ) );
 }
 
 /** Hide and show the MenuBar */
@@ -469,7 +475,6 @@ void KLettres::slotSetFont()
 void KLettres::loadLangToolBar()
 {
     secondToolbar->clear();
-    secondToolbar->show();
     if (selectedLanguage == 0)//Czech
     {
 	secondToolbar->insertButton ("C_caron.png", 10, SIGNAL( clicked() ), this, SLOT( slotPasteCcaron()), true, i18n("Try ") + QString::fromUtf8("Č", -1), 1 );
@@ -488,7 +493,7 @@ void KLettres::loadLangToolBar()
     }
     else if (selectedLanguage == 2 || selectedLanguage==3)//Dutch and French
     {
-	secondToolbar->hide();
+	if (secondToolbar) secondToolbar->hide();
 	setMinimumSize( QSize( 640, 480 ) );
         setMaximumSize( QSize( 640, 480 ) );
     }
@@ -511,6 +516,11 @@ void KLettres::loadLangToolBar()
 	secondToolbar->insertButton ("U_acute.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteRacute()), true, i18n("Try ")+ QString::fromUtf8("Ú", -1), 15 );
 	secondToolbar->insertButton ("Z_caron.png", 60, SIGNAL( clicked() ), this, SLOT( slotPasteZcaron()), true, i18n("Try ")+ QString::fromUtf8("Ž", -1), 16 );
     }
+    KConfig *config = kapp->config();
+    config->setGroup("General Toolbar secondToolbar");
+    if (config->readBoolEntry("Hidden"))
+    	secondToolbar->hide();
+    else secondToolbar->show();
 }
 
 void KLettres::slotPasteCcaron()

@@ -46,11 +46,11 @@ KLettresView::KLettresView(KLettres *parent)
     pal.setActive( cg );
     button1->setPalette( pal );
     button1->setText( i18n( "A" ) );
-    QToolTip::add( button1, i18n( "You must type the letter you hear and/or see in the field below" ) );
+    QToolTip::add( button1, i18n( "You must type the letter/syllable you hear and/or see in the field below" ) );
     //lineEdit for user input
     line1 = new QLineEdit( this, "line1" );
     line1->setGeometry( QRect( 40, 310, 161, 160 ) );
-    QToolTip::add( line1, i18n( "Type the letter that you just heard" ) );
+    QToolTip::add( line1, i18n( "Type the letter or syllable that you just heard" ) );
 
     //load background pics
     pm_a.load(locate("data","klettres/pics/background1.png"));
