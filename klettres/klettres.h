@@ -96,8 +96,6 @@ public:
 
 private slots:
 
-	/// Configure shortcut keys
-	void optionsConfigureKeys();
 	///Configure toolbars icons, use the standard toollbar editor
 	void optionsConfigureToolbars();
 	///Open the Settings->Configure KLettres dialog

@@ -26,7 +26,6 @@
 #include <kmenubar.h>
 #include <kmessagebox.h>
 #include <kstatusbar.h>
-#include <kkeydialog.h>
 #include <kfiledialog.h>
 #include <kedittoolbar.h>
 #include <kaction.h>
@@ -129,7 +128,7 @@ void KLettres::setupActions()
 	createStandardStatusBarAction();
 	setStandardToolBarMenuEnabled(true);
 
-	KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
+	KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
 	KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
 	fontAct = new KAction(i18n("Change &Font..."), "fonts", CTRL+Key_F, this, SLOT(optionsPreferences()), actionCollection(), "font");
 	timerAct = new KAction(i18n("Set &Timer..."), "clock", CTRL+Key_T, this, SLOT(slotTimer()), actionCollection(), "timer");
@@ -205,11 +204,6 @@ void KLettres::updateLanguage()
 	langString.replace("&", QString::null);
 	langLabel->setText(i18n("Current language is %1").arg(langString));
 	loadLangToolBar();
-}
-
-void KLettres::optionsConfigureKeys()
-{
-    	KKeyDialog::configure(actionCollection());
 }
 
 void KLettres::optionsConfigureToolbars()
