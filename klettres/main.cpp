@@ -35,21 +35,21 @@ int main(int argc, char **argv)
     about.addCredit("Geert Stams",
 	    I18N_NOOP("Dutch sounds"), "geert@pa3csg.myweb.nl");
     about.addCredit("Erik Kjaer Pedersen",
-	    I18N_NOOP("Danish sounds"), "erik@binghamton.edu");
-    about.addCredit("Eva MikulÄÃ­kovÃ¡",
-	    I18N_NOOP("Czech sounds"), "evmi@seznam.cz");
-   about.addCredit("Silvia MotyÄkovÃ¡ & Jozef ÅÃ­ha",
-	    I18N_NOOP("Slovak sounds"), "silviamotycka@seznam.cz");
+            I18N_NOOP("Danish sounds"), "erik@binghamton.edu");
+    about.addCredit("Eva Mikulčíková",
+            I18N_NOOP("Czech sounds"), "evmi@seznam.cz");
+   about.addCredit("Silvia Motyčková & Jozef Říha",
+            I18N_NOOP("Slovak sounds"), "silviamotycka@seznam.cz");
    about.addCredit("Alessandro Pasotti",
-	    I18N_NOOP("Italian sounds"), "alessandro@acqualba.it");
+            I18N_NOOP("Italian sounds"), "alessandro@acqualba.it");
     about.addCredit("Primoz Anzur",
-	    I18N_NOOP("Icons"), "zerokode@yahoo.com");
+            I18N_NOOP("Icons"), "zerokode@yahoo.com");
     about.addCredit("Renaud Blanchard",
-	    I18N_NOOP("Background picture"), "kisukuma@chez.com");
+            I18N_NOOP("Background picture"), "kisukuma@chez.com");
     about.addCredit("Robert Gogolok",
-	    I18N_NOOP("Support and coding guidance"), "mail@robert-gogolok.de");
+            I18N_NOOP("Support and coding guidance"), "mail@robert-gogolok.de");
     about.addCredit("Chris Luetchford", 
-    	    I18N_NOOP("svg icon"), "chris@os11.com");
+            I18N_NOOP("svg icon"), "chris@os11.com");
     about.addCredit("Peter Hedlund", 
     	    I18N_NOOP("Code for generating special characters icons"), "peter@peterandlinda.com");
    about.addCredit("Waldo Bastian",

@@ -83,17 +83,14 @@ public:
 	KLettresView *m_view;
 	///Sound class
 	SoundFactory *soundFactory;
-	
 	///All available language codes
 	QStringList m_languages;
-	
+	///All the special characters from a language file, these characters will be as buttons on the Special Characters Toolbar
 	QStringList allData;
 	///All available language names
 	QStringList m_languageNames;
-	
 	///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
 	uint selectedLanguage;
-	
 	///Action that sets up the Language menu
 	KSelectAction *m_languageAction;
 
@@ -118,27 +115,27 @@ private slots:
 	///Switch to the kid look, menubar is hidden
 	void slotKid();
 	/**
-	*When the user change levels
-	*@param int - The id of the new level
-	*/
+	 *When the user change levels
+	 *@param int - The id of the new level
+	 */
 	void slotChangeLevel(int );
 	/**
-	*Update the level menu and level combobox
-	* @param int - The id of the new level
-	*/
+	 *Update the level menu and level combobox
+	 * @param int - The id of the new level
+	 */
 	void updateLevMenu(int );
-	/**Read settings from KLettres config file
-	*If no config file found, put French as default
-	*/
 	/**
-	*Switch to another language
-	*@param - newLanguage the index of the new language in m_languages
-	*/
+	 *Switch to another language
+	 *@param - newLanguage the index of the new language in m_languages
+	 */
 	void changeLanguage(int newLanguage);
+	/**Read settings from KLettres config file
+	 *If no config file found, put French as default
+	 */
 	void loadSettings();
-	
+	///When a button is clicked on the characters toolbar, the corresponding character is written in the lineedit 
 	void slotPasteChar();
-
+	///Access the KNewStuff class to install new data
 	void downloadNewStuff();
 
 private:
@@ -147,8 +144,8 @@ private:
 	///Setup our actins using klettresui.rc
 	void setupActions();
 	/**
-	* Set the label in the StatusBar to indicate the correct language
-	*/
+	 * Set the label in the StatusBar to indicate the correct language
+	 */
 	void updateLanguage();
 	///Set the correct buttons on the second toolbar according to the language
 	void loadLangToolBar();
@@ -159,16 +156,15 @@ private:
 
 	///Action that enables the ShowMenuBar item in the Settings menu
 	KToggleAction *m_action;
-	
 	///Action that calls the Font Chooser Dialog
 	KAction *fontAct;
-	
-	
-	///second toolbar with buttons of special characters per language
+	///Second toolbar with buttons of special characters per language
 	KToolBar *secondToolbar;
-	
+	///Create a KNewStuff instance
 	KLNewStuff *mNewStuff;
-	
+	/**generates icons for the special characters toolbar
+     	 * @param c the character that will be painted on the icon
+         */
 	QString charIcon(const QChar &);
 };
 

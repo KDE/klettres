@@ -60,8 +60,6 @@ KLettres::KLettres()
 	//Read config, must come after SoundFactory, otherwise we don't have all languages
 	loadSettings();
 	// activate language
-	kdDebug() << "selectedLanguage from Prefs -------" << selectedLanguage << endl;
-	kdDebug() << "m_languages " << m_languages << endl;
 	soundFactory->change(selectedLanguage);
 	// then, setup our actions, must be done after loading soundFactory as it has some actions too
 	setupActions();
@@ -123,7 +121,7 @@ KLettres::~KLettres()
 
 void KLettres::setupActions()
 {
-	new KAction( i18n("Get a new language..."), "knewstuff", 0, this, SLOT( downloadNewStuff() ), actionCollection(), "downloadnewstuff" );
+	new KAction( i18n("Get A New Language..."), "knewstuff", 0, this, SLOT( downloadNewStuff() ), actionCollection(), "downloadnewstuff" );
 	KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 	
 	m_action = new KToggleAction(i18n("Show &Menubar"),CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
