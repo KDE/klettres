@@ -45,7 +45,6 @@ SoundFactory::~SoundFactory()
 //When the language changes in KLettres menu
 void SoundFactory::change(uint selectedLanguage)
 {
-  kdDebug() << "in soundFactory, change language " << "language is " << selectedLanguage << endl;
   QDomDocument layoutsDocument;
   bool ok = klettres->loadLayout(layoutsDocument);
   //go load the sounds for the current language
@@ -91,7 +90,6 @@ bool SoundFactory::registerLanguages(QDomDocument &layoutDocument)
     languageElement = (const QDomElement &) languagesList.item(i).toElement();
     codeAttribute = languageElement.attributeNode("code");
     //here it looks in $KDEDIR/share/apps/klettres and in $KDEHOME/share/apps/klettres
-    //which is $HOME/.kde/share/apps/klettres/
     enabled = locate("data", "klettres/" + codeAttribute.value() + "/") != 0;
     menuItemsList = languageElement.elementsByTagName("menuitem");
     if (menuItemsList.count() != 1)
@@ -145,7 +143,6 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
   	alphabetElement = (const QDomElement &) alphabetList.item(0).toElement();
 
   	soundNamesList = alphabetElement.elementsByTagName("sound");
-        kdDebug() << "In SoundFactory, level 1 or 2 " << endl;
   }
 
   //load the sounds for level 3 and 4 (syllables)
@@ -158,11 +155,9 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
   	syllableElement = (const QDomElement &) syllablesList.item(0).toElement();
 
   	soundNamesList = syllableElement.elementsByTagName("sound");
-        kdDebug() << "In SoundFactory, level 3 or 4 " << endl;
   }
   ///Counts the number of sounds
   sounds = soundNamesList.count();
-  kdDebug() << "Number of sounds: " << sounds << endl;
   if (sounds < 1)
     return false;
 

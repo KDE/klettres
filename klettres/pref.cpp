@@ -10,19 +10,12 @@
 #include <kfontdialog.h>
 #include <kglobalsettings.h>
 #include <kiconloader.h>
-#include <kio/netaccess.h>
 #include <klocale.h>
-#include <kprocess.h>
 #include <kstddirs.h>
-#include <kurl.h>
 //Qt headers
-#include <qdir.h>
-#include <qbuttongroup.h>
 #include <qcombobox.h>
-#include <qfile.h>
 #include <qlabel.h>
 #include <qlayout.h>
-#include <qradiobutton.h>
 #include <qstring.h>
 //Project headers
 #include "pref.h"
@@ -40,11 +33,6 @@ KLettresPreferences::KLettresPreferences()
 
     connect (m_pageOne->fdlg, SIGNAL (fontSelected( const QFont & )), this, SLOT (slotSetNewFont( const QFont & )));
 
-    frame = addPage(i18n("Add Language"), i18n("Add a new language"), BarIcon ("locale", KIcon::SizeMedium));
-    m_pageTwo = new KLettresPrefPageTwo(frame);
-
-    QObject::connect(m_pageTwo->langGroup, SIGNAL(clicked(int)), this, SLOT(slotChanged()));
-    //read the config file to set everything accordingly
     loadSettings();
     //disable the Apply button before any changes are made
     enableButton( Apply, false);
@@ -61,30 +49,12 @@ KLettresPrefPageOne::KLettresPrefPageOne(QWidget *parent)
     adjustSize();
  }
 
- KLettresPrefPageTwo::KLettresPrefPageTwo(QWidget *parent)
-    : pref2ui(parent)
-{
-	adjustSize();
-}
 
 void KLettresPreferences::loadSettings()
 {
    	KConfigBase *conf = kapp->config();
 	if (conf)
 	{
-        	conf->setGroup("Languages");
-        	m_pageTwo->csBox->setEnabled(!conf->readBoolEntry("a[0]"));
-        	m_pageTwo->daBox->setEnabled(!conf->readBoolEntry("a[1]"));
-       	 	m_pageTwo->frBox->setEnabled(!conf->readBoolEntry("a[2]"));
-        	m_pageTwo->nlBox->setEnabled(!conf->readBoolEntry("a[3]"));
-    		conf->setGroup("General");
-                QString option;
-    		option = conf->readEntry("LanguageNumber", "2");
-    		selectedLanguage = option.toInt();
-    		if (selectedLanguage <= 0)
-                	selectedLanguage = 0;
-    		if (selectedLanguage > 3)
-                	selectedLanguage = 3;
 		//read font and set default
     		conf->setGroup("Font");
     		newFont=QFont(conf->readEntry("Family"), conf->readNumEntry("Size"), conf->readNumEntry("Weight"), false);
@@ -101,7 +71,6 @@ void KLettresPreferences::loadSettings()
 //Set the system defaults
 void KLettresPreferences::slotDefault()
 {
-    selectedLanguage = 2;
     newFont = QFont(KGlobalSettings::largeFont());
     newFont.setBold(true);
     m_pageOne->newFont = newFont;
@@ -127,17 +96,6 @@ void KLettresPreferences::slotApply()
         config->writeEntry("Family", newFont.family());
         config->writeEntry("Size", newFont.pointSize());
         config->writeEntry("Weight", newFont.weight());
-	 if (m_pageTwo->csBox->isChecked()==true)
-          tarString = "klettres_sounds.cs.tar.gz";
-         else if (m_pageTwo->daBox->isChecked()==true)
-          tarString = "klettres_sounds.da.tar.gz";
-         else if (m_pageTwo->frBox->isChecked()==true)
-          tarString = "klettres_sounds.fr.tar.gz";
-         else  if (m_pageTwo->nlBox->isChecked()==true)
-          tarString = "klettres_sounds.nl.tar.gz";
-	 config->setGroup("General");
-	 config->writeEntry("Tarfile", tarString);
-	 config->sync();
 	 emit aClicked();
 }
 

@@ -354,9 +354,6 @@ void KLettres::slotClickApply()
 	newFont = dlg.newFont;
 	slotSetFont();
       }
-      tarString = dlg.tarString;
-      //download the new language
-      downloadNewLang();
 }
 
 void KLettres::slotGrownup()
@@ -462,17 +459,6 @@ void KLettres::slotSetFont()
     //otherwise newFont=read from config
     m_view->button1->setFont(newFont);
     m_view->line1->setFont(newFont);
-}
-
-void KLettres::downloadNewLang()
-{
-     KConfig *config = kapp->config();
-     config->setGroup("General");
-     tarString = config->readEntry("Tarfile");
-     kdDebug() << "In KLettres, downloadNewLanguage(), tarString=   " << tarString << endl;
-     if (tarString.isNull())
-        return;
-     //use KIO::NetAccess to download the file from ftp.kde.org
 }
 
 #include "klettres.moc"

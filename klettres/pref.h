@@ -9,12 +9,8 @@
 #include <kfontdialog.h>
 #include <qfont.h>
 #include <qframe.h>
-#include <qstring.h>
-
-#include "pref2ui.h"
 
 class KLettresPrefPageOne;
-class KLettresPrefPageTwo;
 
 class KLettresPreferences : public KDialogBase
 {
@@ -26,15 +22,6 @@ public:
     QFont newFont;
     ///true if settings have changed
     bool configChanged;
-    ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch
-    uint selectedLanguage;
-
-    KLettresPrefPageTwo *m_pageTwo;
-
-    bool a[5];
-
-    QString tarString;
-
 private:
     KLettresPrefPageOne *m_pageOne;
 
@@ -65,13 +52,6 @@ public:
 
     QFont newFont;
     KFontChooser *fdlg;
-};
-
-class KLettresPrefPageTwo : public pref2ui
-{
-    Q_OBJECT
-public:
-    KLettresPrefPageTwo(QWidget *parent = 0);
 };
 
 #endif // _KLETTRESPREF_H_

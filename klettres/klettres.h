@@ -79,8 +79,6 @@ public:
    ///Sound class
    SoundFactory *soundFactory;
 
-   QString tarString;
-
 protected:
     /**
      * This function is called when it is time for the app to save its
@@ -135,8 +133,6 @@ private slots:
     void language2();
     ///Switch to language #3 Dutch
     void language3();
-    ///Download the new language tarball and install it in the user HOME
-    void downloadNewLang();
 
 private:
     ////Enable accel keys
