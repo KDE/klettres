@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2001-2004 Anne-Marie Mahfouf <annma@kde.org>
+ * Copyright (C) 2001-2005 Anne-Marie Mahfouf <annma@kde.org>
  *
     This program is free software; you can redistribute it and/or
     modify it under the terms of version 2 of the GNU General Public
@@ -32,6 +32,7 @@
 #include <kconfigdialog.h>
 #include <ktoolbarbutton.h>
 #include <knuminput.h>
+#include <kiconloader.h>
 //Project headers
 #include "klnewstuff.h"
 #include "klettres.h"
@@ -430,6 +431,8 @@ void KLettres::slotTimer()
 	KConfigDialog *dialog = new KConfigDialog(this, "timer", Prefs::self());
 	timerdlg *m_timer = new timerdlg();
 	dialog->addPage(m_timer, i18n("Timer"), "clock");
+	m_timer->kidPixLabel -> setPixmap(KGlobal::iconLoader()->loadIcon("kids", KIcon::NoGroup));
+	m_timer->grownPixLabel -> setPixmap(KGlobal::iconLoader()->loadIcon("grownup", KIcon::NoGroup));
 	m_timer->kcfg_KidTimer->setRange(0, 20, 2, true);
 	m_timer->kcfg_GrownTimer->setRange(0, 20, 2, true);
 	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(loadSettings()));
