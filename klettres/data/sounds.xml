@@ -20,37 +20,45 @@
 
     <alphabet>
 	<sound name="A" file="cs/alpha/a-0.ogg" />
-	<sound name="B" file="cs/alpha/a-1.ogg" />
-	<sound name="C" file="cs/alpha/a-2.ogg" />
-	<sound name="D" file="cs/alpha/a-3.ogg" />
-	<sound name="E" file="cs/alpha/a-4.ogg" />
-	<sound name="F" file="cs/alpha/a-5.ogg" />
-	<sound name="G" file="cs/alpha/a-6.ogg" />
-	<sound name="H" file="cs/alpha/a-7.ogg" />
-	<sound name="I" file="cs/alpha/a-8.ogg" />
-	<sound name="J" file="cs/alpha/a-9.ogg" />
-	<sound name="K" file="cs/alpha/a-10.ogg" />
-	<sound name="L" file="cs/alpha/a-11.ogg" />
-	<sound name="M" file="cs/alpha/a-12.ogg" />
-	<sound name="N" file="cs/alpha/a-13.ogg" />
-	<sound name="O" file="cs/alpha/a-14.ogg" />
-	<sound name="P" file="cs/alpha/a-15.ogg" />
-	<sound name="Q" file="cs/alpha/a-16.ogg" />
-	<sound name="R" file="cs/alpha/a-17.ogg" />
-	<sound name="S" file="cs/alpha/a-18.ogg" />
-	<sound name="T" file="cs/alpha/a-19.ogg" />
-	<sound name="U" file="cs/alpha/a-20.ogg" />
-	<sound name="V" file="cs/alpha/a-21.ogg" />
-	<sound name="W" file="cs/alpha/a-22.ogg" />
-	<sound name="X" file="cs/alpha/a-23.ogg" />
-	<sound name="Y" file="cs/alpha/a-24.ogg" />
-	<sound name="Z" file="cs/alpha/a-25.ogg" />
-	<sound name="Š" file="cs/alpha/a-26.ogg" />
-        <sound name="Ť" file="cs/alpha/a-27.ogg" />
-        <sound name="Ž" file="cs/alpha/a-28.ogg" />
-        <sound name="Č" file="cs/alpha/a-29.ogg" />
-        <sound name="Ď" file="cs/alpha/a-30.ogg" />
-        <sound name="Ř" file="cs/alpha/a-31.ogg" />
+	<sound name="Á" file="cs/alpha/a-1.ogg" />
+	<sound name="B" file="cs/alpha/a-2.ogg" />
+	<sound name="C" file="cs/alpha/a-3.ogg" />
+	<sound name="Č" file="cs/alpha/a-4.ogg" />
+	<sound name="D" file="cs/alpha/a-5.ogg" />
+	<sound name="Ď" file="cs/alpha/a-6.ogg" />
+	<sound name="E" file="cs/alpha/a-7.ogg" />
+	<sound name="É" file="cs/alpha/a-8.ogg" />
+	<sound name="F" file="cs/alpha/a-9.ogg" />
+	<sound name="G" file="cs/alpha/a-10.ogg" />
+	<sound name="H" file="cs/alpha/a-11.ogg" />
+	<sound name="CH" file="cs/alpha/a-12.ogg" />
+	<sound name="I" file="cs/alpha/a-13.ogg" />
+	<sound name="Í" file="cs/alpha/a-14.ogg" />
+	<sound name="J" file="cs/alpha/a-15.ogg" />
+	<sound name="K" file="cs/alpha/a-16.ogg" />
+	<sound name="L" file="cs/alpha/a-17.ogg" />
+	<sound name="M" file="cs/alpha/a-18.ogg" />
+	<sound name="N" file="cs/alpha/a-19.ogg" />
+	<sound name="Ň" file="cs/alpha/a-20.ogg" />
+	<sound name="O" file="cs/alpha/a-21.ogg" />
+	<sound name="Ó" file="cs/alpha/a-22.ogg" />
+	<sound name="P" file="cs/alpha/a-23.ogg" />
+	<sound name="Q" file="cs/alpha/a-24.ogg" />
+	<sound name="R" file="cs/alpha/a-25.ogg" />
+	<sound name="Ř" file="cs/alpha/a-26.ogg" />
+	<sound name="S" file="cs/alpha/a-27.ogg" />
+	<sound name="Š" file="cs/alpha/a-28.ogg" />
+	<sound name="T" file="cs/alpha/a-29.ogg" />
+	<sound name="Ť" file="cs/alpha/a-30.ogg" />
+	<sound name="U" file="cs/alpha/a-31.ogg" />
+	<sound name="Ú" file="cs/alpha/a-32.ogg" />
+	<sound name="V" file="cs/alpha/a-33.ogg" />
+	<sound name="W" file="cs/alpha/a-34.ogg" />
+	<sound name="X" file="cs/alpha/a-35.ogg" />
+	<sound name="Y" file="cs/alpha/a-36.ogg" />
+	<sound name="Z" file="cs/alpha/a-37.ogg" />
+	<sound name="Ž" file="cs/alpha/a-38.ogg" />
+
     </alphabet>
 
     <syllables>
