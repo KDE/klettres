@@ -211,6 +211,9 @@ for a young child. </para>
 <para>
 There is one more setting you can change: the font that displays the letters. In some distribution, the default font used from the system is really ugly. In Grow-up style, in the Settings menu, there is a Change Font menu item that brings you a font chooser dialog.
 </para>
+<para>
+Please be aware that certain fonts are not able to display accented characters correctly.
+</para>
 
 <screenshot>
 <screeninfo>Screenshot of &klettres; Font Chooser Dialog</screeninfo>
@@ -255,18 +258,51 @@ There is one more setting you can change: the font that displays the letters. In
 </sect2>
 
 <sect2>
-<title>The <guimenu>Levels</guimenu> Menu</title>
+<title>The <guimenu>Languages</guimenu> Menu</title>
 
 <variablelist>
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo action="simul">&Alt;<keycap>L</keycap></keycombo>
+<keycombo action="simul">&Alt;<keycap>C</keycap></keycombo>
 </shortcut>
-<guimenu>Levels</guimenu>
-<guimenuitem>Levels</guimenuitem>
+<guimenu>Languages</guimenu>
+<guimenuitem>Czech</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the level</para></listitem>
+<listitem><para><action>Choose</action> the Czech language</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>
+</shortcut>
+<guimenu>Languages</guimenu>
+<guimenuitem>Danish</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the Danish language</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Alt;<keycap>F</keycap></keycombo>
+</shortcut>
+<guimenu>Languages</guimenu>
+<guimenuitem>French</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the French language</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Alt;<keycap>U</keycap></keycombo>
+</shortcut>
+<guimenu>Languages</guimenu>
+<guimenuitem>Dutch</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the Dutch language</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -289,7 +325,7 @@ There is one more setting you can change: the font that displays the letters. In
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo action="simul">&Ctrl;<keycap>T</keycap></keycombo>
+<keycombo action="simul">&Alt;<keycap>T</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
 <guimenuitem>Show ToolBar</guimenuitem>
@@ -302,22 +338,41 @@ There is one more setting you can change: the font that displays the letters. In
 <keycombo action="simul">&Alt;<keycap>A</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
-<guimenuitem>Learning Language</guimenuitem>
+<guimenuitem>Show Statusbar</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the language to learn between Danish, Dutch and
-French.</para>
+<listitem><para><action>Toggle</action> the StatusBar</para>
 </listitem>
 </varlistentry>
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo action="simul">&Alt;<keycap>f</keycap></keycombo>
+<keycombo action="simul">&Alt;<keycap>h</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
-<guimenuitem>Look and Feel</guimenuitem>
+<guimenuitem>Configure Shortcuts...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the style of &klettres;
-between <quote>Grown-up</quote> and <quote>kid</quote>.</para></listitem>
+<listitem><para><action>Configure</action> &klettres; shortcuts</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Alt;<keycap>b</keycap></keycombo>
+</shortcut>
+<guimenu>Settings</guimenu>
+<guimenuitem>Configure Toolbars...</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Configure</action> &klettres; toolbars</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Ctrl;<keycap>F</keycap></keycombo>
+</shortcut>
+<guimenu>Settings</guimenu>
+<guimenuitem>Change Font</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> a new font for &klettres;
+</para></listitem>
 </varlistentry>
 </variablelist>
 
