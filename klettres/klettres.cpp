@@ -39,7 +39,7 @@ KLettres::KLettres(QWidget *parent, const char *name) : KLettresDlg(parent, name
 
 	 aboutDataMenu = new KAboutData("klettres", I18N_NOOP("KLettres"),
          version, description, KAboutData::License_GPL,
-	 "(c) 2001, Anne-Marie Mahfouf", 0, "http://edu.kde.org/klettres", "annma@kde.org");
+	 "(c) 2001, Anne-Marie Mahfouf", 0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
 	aboutDataMenu->addAuthor("Anne-Marie Mahfouf",0, "annma@kde.org");
 
 	// Set up the help menu
