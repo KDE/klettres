@@ -82,9 +82,9 @@ KLettres::KLettres()
     {
 	QString mString=i18n("This is the first time you have run KLettres.\n"
                              "The default learning language is set to French.\n"
-			     "You can change the language in the Settings menu.\n\n"
+			     "You can change the language in the Settings -> Learning Language menu.\n\n"
 			      "Default level is Level 1, the easiest one.\n"
-			      "You can change the level in the Levels menu.");
+			      "You can change the level in the Settings -> Levels menu.");
 	KMessageBox::information( this, mString,"KLettres - Default" );
 	m_view->l1=26;   //set French as default language
 	m_view->l2=28;
@@ -101,8 +101,7 @@ KLettres::KLettres()
     if (!m_view->niveau) m_view->niveau = 1;
     setLang();
     updateLevMenu(m_view->niveau-1);
-    levLabel->setText(i18n("Current level is %1").arg(m_view->niveau));
-    langLabel->setText(i18n("Current language is %1").arg(language));
+    //langLabel->setText(i18n("Current language is %1").arg(language));
 }
 
 KLettres::~KLettres()
@@ -314,7 +313,6 @@ void KLettres::changeNumeration(int id)
 void KLettres::updateLangMenu(int id)
 {
     language_menu->setCurrentItem(id);
-    //lang_comb->setCurrentComboItem(2, id);
     lang_comb->setCurrentItem(id);
 }
 
@@ -381,7 +379,6 @@ void KLettres::slotNext(int id)
 		break;
 	}
     updateLevMenu(id);
-    levLabel->setText(i18n("Current level is %1").arg(m_view->niveau));
     m_view->game();
 }
 
@@ -389,7 +386,7 @@ void KLettres::updateLevMenu(int id)
 {
     levels_menu->setCurrentItem(id);
     lev_comb->setCurrentItem(id);
-    kdDebug() << id <<endl;
+    levLabel->setText(i18n("Current level is %1").arg(m_view->niveau));
 }
 
 
