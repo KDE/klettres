@@ -97,7 +97,7 @@ void KLettres::setupActions()
 
     KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
     KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
-    KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
+    fontAct = new KAction(i18n("&Change Font"), CTRL+Key_F, this, SLOT(optionsPreferences()), actionCollection(), "font");
 
     createGUI();
 }
@@ -161,7 +161,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
   //if xml file is not found, program exits
    if (!layoutFile.exists())
      {
-     kdWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/data/" <<endl;
+     kdWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/data/" << endl;
      QString mString=i18n("The sounds.xml file was not found in\n"
                              "$KDEDIR/share/apps/klettres/data/\n\n"
 			     "Please install this file and start KLettres again.\n\n");
@@ -277,7 +277,7 @@ void KLettres::loadSettings()
     //if no level, default level is 1
     m_view->niveau=config->readNumEntry("myLevel", 1);
     config->setGroup("Font");
-    newFont=QFont(config->readEntry("Family"), config->readNumEntry("Size"), config->readNumEntry("Weight"), false);
+    newFont=QFont(config->readEntry("Family", "Charter"), config->readNumEntry("Size",48), config->readNumEntry("Weight",75), false);
 }
 
 void KLettres::optionsPreferences()

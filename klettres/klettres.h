@@ -150,6 +150,8 @@ private:
     KToggleAction *m_action;
     ///Action that sets up the Language menu
     KSelectAction *language_menu;
+
+    KAction *fontAct;
     ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch
     uint selectedLanguage;
     ///Total number of languages
