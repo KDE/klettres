@@ -32,13 +32,13 @@ public:
   QString *namesList;
   ///List of sound files associated with each sound name
   QString *filesList;
+  ///Load the sounds of one given language
+  bool loadLanguage(QDomDocument &layoutDocument, uint toLoad);
 
 protected:
 
   ///Register the various available languages
   bool registerLanguages(QDomDocument &layoutDocument);
-  ///Load the sounds of one given language
-  bool loadLanguage(QDomDocument &layoutDocument, uint toLoad);
 
 private:
   ///Report a load failure

@@ -50,7 +50,36 @@ KLettres::KLettres()
     loadSettings();
     //selectedLanguage must be read from config file
     soundFactory = new SoundFactory(this, "sounds", selectedLanguage);
-     // then, setup our actions, must be done after loading soundFactory as it has some actions too
+    //if fr dir does not exist
+     if (!a[2])
+     {
+        QString mString=i18n("The data directory fr/ with the \n"
+                             "French sounds was not found.\n\n"
+			     "Please install this data and start KLettres again.\n\n");
+        KMessageBox::information( this, mString,"KLettres - Error" );
+        exit(0);
+     }
+    //in case the language read from config is not installed due to old config or other problem
+    //in that case, set French as default
+    if (!a[selectedLanguage])
+    {
+       //uncheck selectedLanguage in Languages menu
+       ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setEnabled(true);
+       ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setChecked(false);
+       ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setEnabled(false);
+       //check French in Languages menu
+       ((KToggleAction*) actionCollection()->action(languageActions[2].latin1()))->setChecked(true);
+       selectedLanguage = 2;
+       //write new language in config file
+       KConfig *config = kapp->config();
+       if (config)
+       {
+          config->setGroup("General");
+          config->writeEntry("LanguageNumber", "2");
+       }
+       soundFactory->change(2);
+    }
+    // then, setup our actions, must be done after loading soundFactory as it has some actions too
     setupActions();
 
     menuBool=false; //false when menubar button is not shown
@@ -156,19 +185,18 @@ void KLettres::changeLanguage(uint newLanguage)
     ((KToggleAction*) actionCollection()->action(languageActions[newLanguage].latin1()))->setChecked(true);
     return;
   }
-
   // Unselect preceeding language
+   if (a[selectedLanguage])
   ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setChecked(false);
   ((KToggleAction*) actionCollection()->action(languageActions[newLanguage].latin1()))->setChecked(true);
   // Change language in the remembered options
   selectedLanguage = newLanguage;
-  //write new language in config file
+  // write new language in config file
   KConfig *config = kapp->config();
   if (config)
   {
     config->setGroup("General");
     config->writeEntry("LanguageNumber", selectedLanguage);
-    sync();
   }
   // Update the StatusBar
   updateLanguage(selectedLanguage);
@@ -188,7 +216,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
      QString mString=i18n("The sounds.xml file was not found in\n"
                              "$KDEDIR/share/apps/klettres/data/\n\n"
 			     "Please install this file and start KLettres again.\n\n");
-     KMessageBox::information( this, mString,"KLettres - Default" );
+     KMessageBox::information( this, mString,"KLettres - Error" );
      exit(1);
      }
   if (!layoutFile.open(IO_ReadOnly))
@@ -240,6 +268,7 @@ void KLettres::updateLanguage(int index)
             break;
         case 2:
             langString = i18n("French");
+	    kdDebug() << "in French" <<endl;
             break;
         case 3:
             langString = i18n("Dutch");
@@ -440,7 +469,7 @@ void KLettres::downloadNewLang()
      KConfig *config = kapp->config();
      config->setGroup("General");
      tarString = config->readEntry("Tarfile");
-     kdDebug() << "In KLettres, download new language   " << tarString << endl;
+     kdDebug() << "In KLettres, downloadNewLanguage(), tarString=   " << tarString << endl;
      if (tarString.isNull())
         return;
      //use KIO::NetAccess to download the file from ftp.kde.org

@@ -128,13 +128,13 @@ void KLettresPreferences::slotApply()
         config->writeEntry("Size", newFont.pointSize());
         config->writeEntry("Weight", newFont.weight());
 	 if (m_pageTwo->csBox->isChecked()==true)
-          tarString = "klettres_data.cs.tar.gz";
+          tarString = "klettres_sounds.cs.tar.gz";
          else if (m_pageTwo->daBox->isChecked()==true)
-          tarString = "klettres_data.da.tar.gz";
+          tarString = "klettres_sounds.da.tar.gz";
          else if (m_pageTwo->frBox->isChecked()==true)
-          tarString = "klettres_data.fr.tar.gz";
+          tarString = "klettres_sounds.fr.tar.gz";
          else  if (m_pageTwo->nlBox->isChecked()==true)
-          tarString = "klettres_data.nl.tar.gz";
+          tarString = "klettres_sounds.nl.tar.gz";
 	 config->setGroup("General");
 	 config->writeEntry("Tarfile", tarString);
 	 config->sync();
