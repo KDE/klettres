@@ -74,6 +74,10 @@ void KLettres::slotNext(int index)
 
 void KLettres::game()
 {
+	QFont f( "courrier", 100, QFont::Bold );
+    	button1->setFont( f );
+	line1->setFont(f);
+
 	if (niveau==1)
 		button1->show();
 
@@ -179,6 +183,15 @@ void KLettres::game()
 
 void KLettres::treat1(const QString& p)
 {
+	QObject::disconnect(line1, SIGNAL(textChanged(const
+ 				QString&)),this,SLOT(treat1(const QString&)) );
+	QObject::disconnect(line1, SIGNAL(textChanged(const
+ 				QString&)),this,SLOT(slotLet2(const QString&)) );
+	a1=line1->text();         //uppercase
+        t1.sprintf(a1.upper().latin1());
+	line1->selectAll();
+	line1->cut();
+	line1->setText(t1);     //annma
 	if (niveau==2)
 		button1->hide();
 	emit newText(p);
@@ -247,11 +260,16 @@ void KLettres::slotLet2(const QString& s)
 	line1->clearFocus();
 	//disconnect
 	QObject::disconnect(line1, SIGNAL(textChanged(const
- QString&)),this,SLOT(slotLet2(const QString&)) );
+ 		QString&)),this,SLOT(slotLet2(const QString&)) );
+
+	a1=line1->text(); //upper case
+        t1.sprintf(a1.upper().latin1());
+	line1->selectAll();
+	line1->cut();
+	line1->setText(t1);
+
 	//test the first letter
 	char c[1];
-	a1=line1->text();
-	t1.sprintf(a1.upper().latin1());
 	sb=button1->text();
 	strncpy(c,sb.latin1(),1);
 	sj.sprintf("%c",c[0]);
@@ -291,10 +309,14 @@ void KLettres::slotLet3(const QString& s)
 	emit newText(s);
 	line1->clearFocus();
 	QObject::disconnect(line1, SIGNAL(textChanged(const
- QString&)),this,SLOT(slotLet3(const QString&)) );
+ 		QString&)),this,SLOT(slotLet3(const QString&)) );
 
-	a1=line1->text();
+	a1=line1->text();    //to have Upper case
 	t1.sprintf(a1.upper().latin1());
+	line1->selectAll();
+	line1->cut();
+	line1->setText(t1);     //annma
+;
 	s1=button1->text();
 	QTimer *timer = new QTimer( this );
 	connect( timer, SIGNAL(timeout()),
