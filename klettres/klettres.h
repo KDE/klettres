@@ -50,7 +50,7 @@
 #include <kpopupmenu.h>
 #include <kstatusbar.h>
 #include <kstdaction.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 #include <ktoolbar.h>
 //C++ includes
 #include <stdlib.h>
@@ -76,14 +76,14 @@ class KLettres : public KMainWindow
 	QFile lev1File;
 	int l1, l2, length, input, num, numRead;
 
-	KSelectAction *language_menu;	
-	KSelectAction *levels_menu;	
+	KSelectAction *language_menu;
+	KSelectAction *levels_menu;
 	KSelectAction *look_menu;
 	KToggleAction *m_action;
 	KToggleAction *t_action;
    KConfig *config;
 	void setupActions();
-	
+
 	KToolBar *tb;
 	KComboBox* lev_comb;
 	KComboBox* lang_comb;
