@@ -300,7 +300,7 @@ void KLettres::loadSettings()
     config->setGroup("General");
     //if no language, default language is KDE language or French if KDE language is not cz, fr, da or nl
     selectedLanguage = config->readNumEntry("LanguageNumber", defaultLang);
-    if (selectedLanguage >= (int) m_languages.count())
+    if (selectedLanguage >= (uint) m_languages.count())
                 selectedLanguage = 2;
     //if no style, default style is grownup
     style=config->readEntry("myStyle", "grownup");
