@@ -63,7 +63,7 @@ public:
 	KComboBox *lev_comb;
 	///Holds the i18n current language
 	QString language;
-	//Holds the file from which the letters or syllables are read
+	///Holds the file from which the letters or syllables are read
 	int length, input, num, numRead;
 	///is false when menubar button is not shown
 	bool menuBool;
@@ -71,7 +71,7 @@ public:
 	bool kidBool;
 	///is false when grownup button not shown
 	bool grownBool;
-	
+	///Register an available language
 	void registerLanguage(const QString &language, const QString &menuItem);
 	/**
 	*Load the xml file
@@ -84,15 +84,15 @@ public:
 	///Sound class
 	SoundFactory *soundFactory;
 	
-	// All available language codes
+	///All available language codes
 	QStringList m_languages;
-	// All available language names
+	///All available language names
 	QStringList m_languageNames;
 	
-		///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
+	///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
 	uint selectedLanguage;
 	
-		///Action that sets up the Language menu
+	///Action that sets up the Language menu
 	KSelectAction *m_languageAction;
 
 private slots:

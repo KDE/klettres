@@ -60,6 +60,8 @@ KLettres::KLettres()
 	//Read config, must come after SoundFactory, otherwise we don't have all languages
 	loadSettings();
 	// activate language
+	kdDebug() << "selectedLanguage from Prefs -------" << selectedLanguage << endl;
+	kdDebug() << "m_languages " << m_languages << endl;
 	soundFactory->change(selectedLanguage);
 	// then, setup our actions, must be done after loading soundFactory as it has some actions too
 	setupActions();
@@ -102,6 +104,7 @@ KLettres::KLettres()
 	
 	m_view->selectedLanguage = selectedLanguage;
 	kdDebug() << "------- languages: " << m_languages << endl;
+	kdDebug() << "selectedLanguage from Prefs: " << selectedLanguage << endl;
 	//write the present languages in config so they cannot be downloaded
 	KConfig *config=kapp->config();
 	config->setGroup("KNewStuffStatus");
@@ -138,7 +141,7 @@ void KLettres::setupActions()
 	m_languageAction = new KSelectAction(i18n("Language"), KShortcut(), actionCollection(), "languages");
 	m_languageAction->setItems(m_languageNames);
 	if (selectedLanguage < m_languageNames.count())
-	m_languageAction->setCurrentItem(selectedLanguage);
+		m_languageAction->setCurrentItem(selectedLanguage);
 	
 	connect(m_languageAction, SIGNAL(activated(int)), this, SLOT(changeLanguage(int)));
 	
@@ -146,10 +149,11 @@ void KLettres::setupActions()
 	createGUI();
 }
 
-// Register an available language
 void KLettres::registerLanguage(const QString &language, const QString &menuItem)
 {
 	m_languages.append(language);
+	kdDebug() << "In KLettres::register Language " << language << endl;
+	kdDebug() << "In KLettres: m_languages: " << m_languages << endl;
 	//this is for translation of the languages
 	KConfig entry(locate("locale", "all_languages"));
 	entry.setGroup(language);
@@ -160,7 +164,7 @@ void KLettres::registerLanguage(const QString &language, const QString &menuItem
 void KLettres::changeLanguage(int newLanguage)
 {
 	// Do not accept to switch to same language
-	if (newLanguage == selectedLanguage)
+	if ((uint)newLanguage == selectedLanguage)
 		return;
 	// Change language in the remembered options
 	selectedLanguage = newLanguage;
@@ -205,8 +209,10 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 void KLettres::updateLanguage()
 {
 	QString langString = m_languageNames[selectedLanguage];
+	kdDebug() << "langString : ---------- " << langString << endl;
 	langString.replace("&", QString::null);
 	langLabel->setText(i18n("Current language is %1").arg(langString));
+	kdDebug() << "Selected language: --------- " << selectedLanguage << endl;
 	loadLangToolBar();
 }
 
@@ -294,7 +300,6 @@ void KLettres::slotKid()
 	setMaximumSize( QSize( 640, 480 ) );
 }
 
-/** Hide and show the MenuBar */
 void KLettres::slotMenubar()
 {
 	switch (m_action->isChecked()){
@@ -342,7 +347,9 @@ void KLettres::updateLevMenu(int id)
 void KLettres::loadLangToolBar()
 {
 	secondToolbar->clear();
-	if (selectedLanguage == 0)//Czech
+	kdDebug() << "in LoadLangToolbar ----------: " << selectedLanguage << endl;
+	kdDebug() << "in LoadLangToolbar ----------: m_languages[selectedLanguage] " << m_languages[selectedLanguage] << endl;
+	if (m_languages[selectedLanguage]=="cs")//Czech
 	{
 		secondToolbar->insertButton ("C_caron.png", 10, SIGNAL( clicked() ), this, SLOT( slotPasteCcaron()), true, i18n("Try ") + QString::fromUtf8("Č", -1), 1 );
 		secondToolbar->insertButton ("D_caron.png", 20, SIGNAL( clicked() ), this, SLOT( slotPasteDcaron()), true, i18n("Try ")+ QString::fromUtf8("Ď", -1), 2 );
@@ -351,20 +358,20 @@ void KLettres::loadLangToolBar()
 		secondToolbar->insertButton ("T_caron.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteTcaron()), true, i18n("Try ")+ QString::fromUtf8("Ť", -1), 5);
 		secondToolbar->insertButton ("Z_caron.png", 60, SIGNAL( clicked() ), this, SLOT( slotPasteZcaron()), true, i18n("Try ") + QString::fromUtf8("Ž", -1), 6 );
 	}
-	else if (selectedLanguage == 1)//Danish
+	else if (m_languages[selectedLanguage]== "da")//Danish
 	{
 		secondToolbar->insertButton ("A_circle.png", 10, SIGNAL( clicked() ), this, SLOT( slotPasteAcircle()), true, i18n("Try ") + QString::fromUtf8("Å", -1), 1 );
 		secondToolbar->insertButton ("A_withE.png", 20, SIGNAL( clicked() ), this, SLOT( slotPasteAwithE()), true, i18n("Try ") + QString::fromUtf8("Æ", -1), 2 );
 		secondToolbar->insertButton ("O_barre.png", 30, SIGNAL( clicked() ), this, SLOT( slotPasteObarre()), true, i18n("Try ")+ QString::fromUtf8("Ø", -1), 3 );
 	
 	}
-	else if (selectedLanguage == 2 || selectedLanguage==3)//Dutch and French
+	else if (m_languages[selectedLanguage]== "nl" || m_languages[selectedLanguage]== "fr" || m_languages[selectedLanguage]== "it")//Dutch and French
 	{
 		if (secondToolbar) secondToolbar->hide();
 		setMinimumSize( QSize( 640, 480 ) );
 		setMaximumSize( QSize( 640, 480 ) );
 	}
-	else if (selectedLanguage == 4)//Slovak
+	else if (m_languages[selectedLanguage]== "sk")//Slovak
 	{
 		secondToolbar->insertButton ("A_acute.png", 10, SIGNAL( clicked() ), this, SLOT( slotPasteAacute()), true, i18n("Try ")+ QString::fromUtf8("Á", -1), 1 );
 		secondToolbar->insertButton ("A_umlaut.png", 20, SIGNAL( clicked() ), this, SLOT( slotPasteAumlaut()), true, i18n("Try ")+ QString::fromUtf8("Ä", -1), 2 );

@@ -24,6 +24,7 @@
 #include <kmessagebox.h>
 #include <klocale.h>
 #include <kaudioplayer.h>
+#include <kdebug.h>
 
 #include "soundfactory.h"
 #include "soundfactory.moc"
@@ -83,6 +84,7 @@ bool SoundFactory::registerLanguages(QDomDocument &layoutDocument)
 	QDomElement languageElement, menuItemElement, labelElement;
 	QDomAttr codeAttribute, actionAttribute;
 	bool enabled;
+	//languagesList: "languages" tags from sounds.xml
 	languagesList = layoutDocument.elementsByTagName("language");
 	if (languagesList.count() < 1)
 		return false;
@@ -93,6 +95,7 @@ bool SoundFactory::registerLanguages(QDomDocument &layoutDocument)
 		codeAttribute = languageElement.attributeNode("code");
 		//here it looks in $KDEDIR/share/apps/klettres and in $KDEHOME/share/apps/klettres
 		enabled = locate("data", "klettres/" + codeAttribute.value() + "/") != 0;
+		kdDebug() << "In soundfactory.cpp, languages    " << codeAttribute.value() << endl;
 		menuItemsList = languageElement.elementsByTagName("menuitem");
 		if (menuItemsList.count() != 1)
 			return false;
@@ -127,9 +130,17 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
 	languagesList = layoutDocument.elementsByTagName("language");
 	if (toLoad >= languagesList.count())
 		return false;
-	
-	languageElement = (const QDomElement &) languagesList.item(toLoad).toElement();
-	
+
+	QDomAttr codeAttribute;
+	//find the language in the list
+	for (uint i = 0; i < languagesList.count(); i++)
+	{
+		languageElement = (const QDomElement &) languagesList.item(i).toElement();
+		codeAttribute = languageElement.attributeNode("code");
+		if (codeAttribute.value() == klettres->m_languages[toLoad])
+			break;		
+	}
+	kdDebug() << "language element ------- " << codeAttribute.value() << endl;
 	//load the sounds for level 1 and 2 (alphabet)
 	if ((Prefs::level() == 1) || (Prefs::level() == 2))
 	{
