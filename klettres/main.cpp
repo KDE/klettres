@@ -20,6 +20,7 @@
 #include <klocale.h>
 
 #include "khsplash.h"
+#include "version.h"
 
 static const char *description =
 	I18N_NOOP("KLettres helps a very young child or an adult learning \n"
@@ -38,7 +39,7 @@ static KCmdLineOptions options[] =
 int main(int argc, char *argv[])
 {
   KAboutData aboutData( "klettres", I18N_NOOP("KLettres"),
-    VERSION, description, KAboutData::License_GPL,
+    KLETTRES_VERSION, description, KAboutData::License_GPL,
     "(c) 2001, Anne-Marie Mahfouf", 0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
   aboutData.addAuthor("Anne-Marie Mahfouf",0, "annma@kde.org");
   aboutData.addCredit("Geert Stams",
