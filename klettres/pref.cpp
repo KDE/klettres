@@ -42,7 +42,7 @@ KLettresPreferences::KLettresPreferences()
 
     frame = addPage(i18n("Add Language"), i18n("Add a new language"), BarIcon ("locale", KIcon::SizeMedium));
     m_pageTwo = new KLettresPrefPageTwo(frame);
-    //QObject::connect(m_pageTwo->langGroup, SIGNAL(clicked(int)), this, SLOT(slotLang(int)));
+
     QObject::connect(m_pageTwo->langGroup, SIGNAL(clicked(int)), this, SLOT(slotChanged()));
     //read the config file to set everything accordingly
     loadSettings();
@@ -73,8 +73,8 @@ void KLettresPreferences::loadSettings()
 	if (conf)
 	{
         	conf->setGroup("Languages");
-        	m_pageTwo->czBox->setEnabled(!conf->readBoolEntry("a[0]"));
-        	m_pageTwo->dkBox->setEnabled(!conf->readBoolEntry("a[1]"));
+        	m_pageTwo->csBox->setEnabled(!conf->readBoolEntry("a[0]"));
+        	m_pageTwo->daBox->setEnabled(!conf->readBoolEntry("a[1]"));
        	 	m_pageTwo->frBox->setEnabled(!conf->readBoolEntry("a[2]"));
         	m_pageTwo->nlBox->setEnabled(!conf->readBoolEntry("a[3]"));
     		conf->setGroup("General");
@@ -127,7 +127,18 @@ void KLettresPreferences::slotApply()
         config->writeEntry("Family", newFont.family());
         config->writeEntry("Size", newFont.pointSize());
         config->writeEntry("Weight", newFont.weight());
-	emit aClicked();
+	 if (m_pageTwo->csBox->isChecked()==true)
+          tarString = "klettres_data.cs.tar.gz";
+         else if (m_pageTwo->daBox->isChecked()==true)
+          tarString = "klettres_data.da.tar.gz";
+         else if (m_pageTwo->frBox->isChecked()==true)
+          tarString = "klettres_data.fr.tar.gz";
+         else  if (m_pageTwo->nlBox->isChecked()==true)
+          tarString = "klettres_data.nl.tar.gz";
+	 config->setGroup("General");
+	 config->writeEntry("Tarfile", tarString);
+	 config->sync();
+	 emit aClicked();
 }
 
 //Don't validate the changes in the dialog and close the dialog
@@ -153,6 +164,5 @@ void KLettresPreferences::slotChanged()
     enableButton( Apply, true );
     configChanged = true;
 }
-
 
 #include "pref.moc"

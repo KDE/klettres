@@ -32,6 +32,9 @@ public:
     KLettresPrefPageTwo *m_pageTwo;
 
     bool a[5];
+
+    QString tarString;
+
 private:
     KLettresPrefPageOne *m_pageOne;
 

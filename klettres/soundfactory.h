@@ -22,9 +22,9 @@ public:
   SoundFactory(KLettres *parent, const char *name, uint selectedLanguage);
   ~SoundFactory();
 
-  ///Change the language
+  ///Change the language when the user changes the language in the Languages menu
   void change(uint selectedLanguage);
-  ///Play the sound associated to soundRef
+  ///Play the sound associated to int soundRef
  void playSound(int ) ;
   ///Number of sounds corresponding to the current langauge and level (alphabet or syllables)
   int sounds;
