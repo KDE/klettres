@@ -95,7 +95,6 @@ bool SoundFactory::registerLanguages(QDomDocument &layoutDocument)
 		codeAttribute = languageElement.attributeNode("code");
 		//here it looks in $KDEDIR/share/apps/klettres and in $KDEHOME/share/apps/klettres
 		enabled = locate("data", "klettres/" + codeAttribute.value() + "/") != 0;
-		kdDebug() << "In soundfactory.cpp, languages    " << codeAttribute.value() << endl;
 		menuItemsList = languageElement.elementsByTagName("menuitem");
 		if (menuItemsList.count() != 1)
 			return false;
@@ -140,7 +139,6 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
 		if (codeAttribute.value() == klettres->m_languages[toLoad])
 			break;		
 	}
-	kdDebug() << "language element ------- " << codeAttribute.value() << endl;
 	//load the sounds for level 1 and 2 (alphabet)
 	if ((Prefs::level() == 1) || (Prefs::level() == 2))
 	{

@@ -80,7 +80,11 @@ public:
         QString a1;
 	///Cursor position in the line edit
         int input;
+	///A Klettres object
 	KLettres *klettres;
+	///The timer value i.e. the time for displaying the letters/syllables
+	int m_timer;
+	
 public slots:
 	///Set the Grown-up background, show menubar, show the Kid button
 	void slotGrownup();
@@ -96,11 +100,6 @@ public slots:
 	void timerDone();
 	///Choose a sound in random and ensure that it's not the same than the previous one
 	void chooseSound();
-
-private:
-
-	//KLettres *klettres;
-
 };
 
 #endif // _KLETTRESVIEW_H_

@@ -65,7 +65,6 @@ KLettresView::~KLettresView()
 {
 }
 
-///Set the GUI for the grownup look
 void KLettresView::slotGrownup()
 {
     Prefs::setStyle(Prefs::EnumStyle::grownup);
@@ -80,7 +79,6 @@ void KLettresView::slotGrownup()
     button1->setPalette( pal );
 }
 
-///Set GUI for kid look
 void KLettresView::slotKid()
 {
     Prefs::setStyle(Prefs::EnumStyle::kid);
@@ -95,7 +93,6 @@ void KLettresView::slotKid()
     button1->setPalette( pal );
 }
 
-///Start the prog
 void KLettresView::game()
 {
  //reset everything so when you change language or levels
@@ -183,7 +180,7 @@ void KLettresView::treat1(const QString& )
 	QTimer *timer = new QTimer( this );
 	connect( timer, SIGNAL(timeout()),
 	         this, SLOT(timer1()) );
-	timer->start( 300, TRUE );
+	timer->start( m_timer*100, TRUE );
 }
 
 void KLettresView::timer1()
@@ -225,7 +222,7 @@ void KLettresView::slotLet2(const QString& )
 	QTimer *timer = new QTimer( this );
 	connect( timer, SIGNAL(timeout()),
 	         this, SLOT(timerDone()) );
-	timer->start( 300, TRUE );
+	timer->start( m_timer*100, TRUE );
 }
 
 void KLettresView::timerDone()

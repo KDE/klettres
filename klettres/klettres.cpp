@@ -38,6 +38,7 @@
 #include "klnewstuff.h"
 #include "klettres.h"
 #include "fontsdlg.h"
+#include "timerdlg.h"
 #include "prefs.h"
 
 //standard C++ headers
@@ -133,7 +134,7 @@ void KLettres::setupActions()
 	KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
 	KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
 	fontAct = new KAction(i18n("Change &Font..."), "fonts", CTRL+Key_F, this, SLOT(optionsPreferences()), actionCollection(), "font");
-	
+	timerAct = new KAction(i18n("Set &Timer..."), "clock", CTRL+Key_T, this, SLOT(slotTimer()), actionCollection(), "timer");
 	m_languageAction = new KSelectAction(i18n("Language"), KShortcut(), actionCollection(), "languages");
 	m_languageAction->setItems(m_languageNames);
 	if (selectedLanguage < m_languageNames.count())
@@ -235,6 +236,10 @@ void KLettres::loadSettings()
 	selectedLanguage = Prefs::languageNumber();
 	//apply the font
 	m_view->setFont(Prefs::font());
+	if (!kidBool)
+		m_view->m_timer = Prefs::kidTimer();
+	if (!grownBool)
+		m_view->m_timer = Prefs::grownTimer();
 }
 
 void KLettres::optionsPreferences()
@@ -269,6 +274,7 @@ void KLettres::slotGrownup()
 	secondToolbar->setIconSize(22);
 	setMinimumSize( QSize( 640, 538 ) );
 	setMaximumSize( QSize( 640, 538 ) );
+	m_view->m_timer = Prefs::grownTimer();
 }
 
 void KLettres::slotKid()
@@ -290,6 +296,7 @@ void KLettres::slotKid()
 	secondToolbar->setIconSize(32);
 	setMinimumSize( QSize( 640, 480 ) );
 	setMaximumSize( QSize( 640, 480 ) );
+	m_view->m_timer = Prefs::kidTimer();
 }
 
 void KLettres::slotMenubar()
@@ -440,6 +447,17 @@ QString KLettres::charIcon(const QChar & c)
 	pm.save(s, "PNG");
 	
 	return s;
+}
+
+void KLettres::slotTimer()
+{
+	if(KConfigDialog::showDialog("timer"))
+		return;
+
+	KConfigDialog *dialogue = new KConfigDialog(this, "timer", Prefs::self());
+	dialogue->addPage(new timerdlg(0, "mTimer"), i18n("Timer"), "clock");
+	connect(dialogue, SIGNAL(settingsChanged()), this, SLOT(loadSettings()));
+	dialogue->show();
 }
 
 #include "klettres.moc"

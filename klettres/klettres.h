@@ -137,6 +137,8 @@ private slots:
 	void slotPasteChar();
 	///Access the KNewStuff class to install new data
 	void downloadNewStuff();
+	///Call the timer settings dialog
+	void slotTimer();
 
 private:
 	///Enable accel keys
@@ -158,6 +160,8 @@ private:
 	KToggleAction *m_action;
 	///Action that calls the Font Chooser Dialog
 	KAction *fontAct;
+	
+	KAction *timerAct;
 	///Second toolbar with buttons of special characters per language
 	KToolBar *secondToolbar;
 	///Create a KNewStuff instance

@@ -21,6 +21,14 @@
       <max>4</max>
       <default>1</default>
     </entry>
+    <entry name="KidTimer" type="Int">
+      <label>Kid Timer</label>
+      <default>4</default>
+    </entry>
+    <entry name="GrownTimer" type="Int">
+      <label>Grown-up Timer</label>
+      <default>3</default>
+    </entry>
   </group>
   <group name="mFont">
     <entry name="Font" type="Font" Key="mFont">
