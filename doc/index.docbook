@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN"
  "dtd/kdex.dtd" [
-  <!ENTITY klettres '<application>KLettres</application>'>
   <!ENTITY kappname "&klettres;"><!-- replace klettres here -->
   <!ENTITY package "kdeedu"> 
   <!ENTITY % addindex "IGNORE">
@@ -70,16 +69,17 @@ mouse, the keyboard only is needed.</para>
 There are three languages available at the moment: Danish, Dutch and French.
 </para>
 <para>
-Two different Look and Feel allow you to adapt KLettres to your need.
-For a child, the menuBar and the language button are not visible. We assume that a child will not want to set the language himself.
+Two different Look and Feel allow you to adapt &klettres; to your need.
+For a child, the menu bar and the language button are not visible. We assume that a child will not want to set the language himself.
 A box allows him to choose the different levels. For an older user, the background is not so childish
 and the menuBar is present.
 </para>
 <note>
 <para>
-To use Danish as a learning language, you need to have the Danish keyboard layout
+To use Danish as a learning language, you need to have the Danish
+keyboard layout 
 set up on your system in order to type in special letters of the Danish alphabet.
-Please use KControl, the KDE Control Center menu <guimenu>Peripherals</guimenu> and
+Please use &kcontrol;, in the section <guimenu>Peripherals</guimenu> and
 submenu <guimenuitem>Keyboard</guimenuitem>.
 </para>
 </note>
@@ -108,15 +108,15 @@ that you do the game together.</para>
 	</mediaobject>
 </screenshot>
 </para>
-<para>This screenshot shows &klettres; on Level 1, language is Dutch and look-and-feel is "grown-up".
+<para>This screenshot shows &klettres; on Level 1, language is Dutch and look-and-feel is <quote>grown-up</quote>.
 </para>
 
 <para>
 In level 1, the user sees the letter and hears the sound. He then has to type
 in the letter in the box. If it is correct, the next letter appears (without
-having to press enter or whatever). If the user types the wrong letter,
-he hears the sound again. In this level, the user memorizes the letters and
-recognizes them on the keyboard. 
+having to press <keycap>Enter</keycap> or whatever). If the user types
+the wrong letter, he hears the sound again. In this level, the user
+memorizes the letters and recognizes them on the keyboard. 
 </para> 
 
 <note>
@@ -126,11 +126,12 @@ time.</para>
 </note>
 
 <para>
-Default is Level 1 when you run KLettres.
+Default is Level 1 when you run &klettres;.
 </para>
-<para>The first time KLettres is run, default is set to French and Level1.
+<para>The first time &klettres; is run, default is set to French and
+Level 1.
 After the first time, the language setting is saved in a configuration file
-on closing of KLettres and loaded the next time, with Level 1.
+on closing of &klettres; and loaded the next time, with Level 1.
 </para>
 <para>The look-and-feel is saved in the config file and therefore
 is kept until you change.</para>
@@ -149,10 +150,10 @@ is kept until you change.</para>
 	</mediaobject>
 </screenshot>
 </para>
-<para>Here is a screenshot of Level 1 with the "kid" look and French language.</para>
+<para>Here is a screenshot of Level 1 with the <quote>kid</quote> look and French language.</para>
 
-<para>Clicking in the Level combo-box and choosing <guilabel>Level
-2</guilabel> or using the Levels menu brings you to level 2. In that level, the user only
+<para>Clicking in the <guilabel>Level</guilabel> combo-box and choosing <guilabel>Level
+2</guilabel> or using the <guimenu>Levels</guimenu> menu brings you to level 2. In that level, the user only
 hears the sound of the letter and has to type in the letter. If he
 is wrong, the letter appears to help him. </para>
 </sect1>
@@ -174,7 +175,7 @@ is wrong, the letter appears to help him. </para>
 </screenshot>
 </para>
 
-<para>Here you can see &klettres; level 3, "grown-up" look-and-feel and Dutch language.
+<para>Here you can see &klettres; level 3, <quote>grown-up</quote> look-and-feel and Dutch language.
 </para>
 
 <para>
@@ -197,11 +198,11 @@ three, it depends of the language.</para>
 	</mediaobject>
 </screenshot>
 </para>
-<para>Here you can see &klettres; level 4, "kid" look-and-feel and French language.
+<para>Here you can see &klettres; level 4, <quote>kid</quote> look-and-feel and French language.
 </para>
 
 <para>The sounds appear in random order. </para> <para>Clicking in the
-Level combo-box or using the Levels menu in the menuBar
+<guilabel>Level</guilabel> combo-box or using the <guimenu>Levels</guimenu> menu in the menuBar
 and choosing <guilabel>Level 4</guilabel> brings you
 to level 4. In that level, the user only hears the sound of the
 syllable and has to type in the letters. This level is quite difficult
@@ -219,13 +220,13 @@ for a young child. </para>
 <para></para>
 
 <sect2>
-<title>The File Menu</title>
+<title>The <guimenu>File</guimenu> Menu</title>
 <para>
 <variablelist>
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo><keycap>Ctrl</keycap><keycap>q</keycap></keycombo>
+<keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
 </shortcut>
 <guimenu>File</guimenu>
 <guimenuitem>Quit</guimenuitem>
@@ -237,13 +238,13 @@ for a young child. </para>
 </sect2>
 
 <sect2>
-<title>The Levels Menu</title>
+<title>The <guimenu>Levels</guimenu> Menu</title>
 <para>
 <variablelist>
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>
+<keycombo action="simul">&Alt;<keycap>L</keycap></keycombo>
 </shortcut>
 <guimenu>Levels</guimenu>
 <guimenuitem>Levels</guimenuitem>
@@ -255,13 +256,13 @@ for a young child. </para>
 </sect2>
 
 <sect2>
-<title>The Settings Menu</title>
-<para>
+<title>The <guimenu>Settings</guimenu> Menu</title>
+
 <variablelist>
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo><keycap>Ctrl</keycap><keycap>M</keycap></keycombo>
+<keycombo action="simul">&Ctrl;<keycap>M</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
 <guimenuitem>Show MenuBar</guimenuitem>
@@ -271,7 +272,7 @@ for a young child. </para>
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>
+<keycombo action="simul">&Ctrl;<keycap>T</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
 <guimenuitem>Show ToolBar</guimenuitem>
@@ -281,7 +282,7 @@ for a young child. </para>
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>
+<keycombo action="simul">&Alt;<keycap>A</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
 <guimenuitem>Learning Language</guimenuitem>
@@ -293,16 +294,16 @@ French.</para>
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo><keycap>Alt</keycap><keycap>f</keycap></keycombo>
+<keycombo action="simul">&Alt;<keycap>f</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
 <guimenuitem>Look and Feel</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the style of &klettres;
-between "Grown-up" and "kid".</para></listitem>
+between <quote>Grown-up</quote> and <quote>kid</quote>.</para></listitem>
 </varlistentry>
 </variablelist>
-</para>
+
 </sect2>
 </sect1>
 </chapter>
@@ -329,8 +330,9 @@ would be the default language if the user language is not available.
 <para>The background picture does not appear.</para>
 </question>
 <answer>
-<para>You need to configure with the prefix option set to your &kde; dir or
-to add this directory to your path.</para> </answer>
+<para>You need to configure with the <option>--prefix</option> option
+set to your &kde; directory or to add this directory to your
+path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
@@ -338,11 +340,12 @@ to add this directory to your path.</para> </answer>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
-for the alphabet and some basic syllables. Someone speaking natively the new language must
-record these sounds in ogg format. For levels 3 and 4, the syllables must be
-choosen by a teacher: these must be the syllables you have to learn just after the
-alphabet in order to learn well the basics of this language. Please
-send me a mail if you are able to do that.</para> </answer>
+for the alphabet and some basic syllables. Someone speaking natively
+the new language must record these sounds in ogg format. For levels 3
+and 4, the syllables must be choosen by a teacher: these must be the
+syllables you have to learn just after the alphabet in order to learn
+well the basics of this language. Please send me a mail if you are
+able to do that.</para> </answer> 
 </qandaentry>
 </qandaset>
 </chapter>
@@ -391,21 +394,9 @@ Documentation copyright 2001 Anne-Marie Mahfouf <email>annma@kde.org</email>
 <appendix id="installation">
 <title>Installation</title>
 
+&install.intro.documentation;
 
-
-<sect1 id="requirements">
-<title>Requirements</title>
-
-<para>
-In order to successfully use &klettres;, you need &kde; 3 and &Qt; 3.
-</para>
-
-<para>
-&klettres; itself can be found
-on <ulink url="http://edu.kde.org/klettres">The &klettres; home page</ulink>
-and is part of the KDE-Edu project. </para>
-</sect1>
-
+&install.compile.documentation;
 
 </appendix>
 
