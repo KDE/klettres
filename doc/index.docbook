@@ -133,7 +133,7 @@ memorizes the letters and recognizes them on the keyboard.
 <para>The user can type in either lower or upper case letters. The letters are automatically put in upper case so
 that a child will match them with the keyboard. He can type only one letter at a
 time.</para>
-<para>When you type a letter in the input field, there is no need to press Enter and the program waits for a short while before testing if the letter is right. This short wait is to leave time to a young child to understand what he/she just typed, especially if this is the wrong letter.
+<para>When you type a letter in the input field, there is no need to press Enter and the program waits for a short while before testing if the letter is right. This short wait is to leave time to a young child to understand what he/she just typed, especially if this is the wrong letter. You can change this time by using the <guimenu>Settings</guimenu> menu, <guimenuitem>Set Timer</guimenuitem> which will bring you a dialog where you can set two differeent times: one for the kid mode and one for the grown-up mode.
 </para>
 </note>
 
@@ -389,6 +389,28 @@ You can choose the size you like the best.
 <varlistentry>
 <term><menuchoice>
 <shortcut>
+<keycombo action="simul">&Ctrl;<keycap>F</keycap></keycombo>
+</shortcut>
+<guimenu>Settings</guimenu>
+<guimenuitem>Change Font</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> a new font for &klettres;
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Ctrl;<keycap>T</keycap></keycombo>
+</shortcut>
+<guimenu>Settings</guimenu>
+<guimenuitem>Set Timer</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Set</action> a delay time for both kid and grown-up mode during which the letter is displayed after being typed
+</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
 <keycombo action="simul">&Alt;<keycap>h</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
@@ -406,17 +428,7 @@ You can choose the size you like the best.
 </menuchoice></term>
 <listitem><para><action>Configure</action> &klettres; toolbars</para></listitem>
 </varlistentry>
-<varlistentry>
-<term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Ctrl;<keycap>F</keycap></keycombo>
-</shortcut>
-<guimenu>Settings</guimenu>
-<guimenuitem>Change Font</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Choose</action> a new font for &klettres;
-</para></listitem>
-</varlistentry>
+
 </variablelist>
 
 </sect2>
