@@ -27,7 +27,7 @@ METASOURCES = AUTO
 # the library search path. 
 klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
-messages: 
+messages: rc.cpp
 	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o \
                      -name \*.hxx -o -name \*.hpp -o -name \*.cpp -o \
                      -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o \
