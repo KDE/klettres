@@ -119,6 +119,8 @@ void KLettres::registerLanguage(const QString &menuItem, const char *actionId, b
 		break;
   	case 3: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language3()), actionCollection(), actionId);
 		break;
+	case 4: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language4()), actionCollection(), actionId);
+		break;
   }
 
   if( t ) {
@@ -207,6 +209,12 @@ void KLettres::language3()
   changeLanguage(3);
 }
 
+///Switch to language #3
+void KLettres::language4()
+{
+  changeLanguage(4);
+}
+
 ///Set the label in the StatusBar to indicate the correct language
 void KLettres::updateLanguage(int index)
 {
@@ -222,6 +230,9 @@ void KLettres::updateLanguage(int index)
             break;
         case 3:
             langString = i18n("Dutch");
+            break;
+	 case 4:
+            langString = i18n("Slovak");
             break;
     }
     langLabel->setText(i18n("Current language is %1").arg(langString));

@@ -131,6 +131,8 @@ private slots:
     void language2();
     ///Switch to language #3 Dutch
     void language3();
+    ///Switch to language #4 Slovak
+    void language4();
 
 private:
     ///Enable accel keys
@@ -161,7 +163,7 @@ private:
     KSelectAction *language_menu;
     ///Action that calls the Font Chooser Dialog
     KAction *fontAct;
-    ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch
+    ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
     uint selectedLanguage;
     ///Total number of languages
     uint languages;

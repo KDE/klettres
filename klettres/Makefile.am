@@ -30,7 +30,7 @@ klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 messages: rc.cpp
 	$(XGETTEXT) *.cpp -o $(podir)/klettres.pot;
 
-LANGS = cs da fr nl
+LANGS = cs da fr nl sk
 SUBS = alpha syllab
 
 install-data-local:

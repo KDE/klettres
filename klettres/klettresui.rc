@@ -9,6 +9,7 @@
     		<Action name="speech_danish"/>
     		<Action name="speech_french"/>
     		<Action name="speech_dutch"/>
+		<Action name="speech_slovak"/>
        </Menu>
 
 	 <Menu name="settings" noMerge="1"><text>&amp;Settings</text>
