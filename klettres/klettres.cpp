@@ -16,6 +16,7 @@
  ***************************************************************************/
 
 #include "klettres.h"
+#include <kaboutdata.h>
 
 QString s[26], sd[30], a1,t1,sb,s1,sj, st;
 int n=0, niveau=1;
@@ -27,10 +28,24 @@ KLettres::KLettres(QWidget *parent, const char *name) : KLettresDlg(parent, name
 	                this,                  // connected to this'
 	                SLOT(slotNiveau()) );
 	// signals and slots connections
-	connect( aide, SIGNAL( clicked() ), this, SLOT( slotAide() ) );
 	connect( comb1, SIGNAL( activated(int) ), this, SLOT( slotNext(int) ) );
 	QObject::connect( quitte, SIGNAL( clicked() ), kapp, SLOT( quit() ) );
 
+	
+	// New KAboutData for the help menu
+
+	static const char *description = I18N_NOOP("Learn the sounds of letters in French");
+	static const char *version = "1.0";
+
+	 aboutDataMenu = new KAboutData("klettres", I18N_NOOP("KLettres"),
+         version, description, KAboutData::License_GPL,
+	 "(c) 2001, Anne-Marie Mahfouf", 0, "http://edu.kde.org/klettres", "annma@kde.org");
+	aboutDataMenu->addAuthor("Anne-Marie Mahfouf",0, "annma@kde.org");
+
+	// Set up the help menu
+
+	mHelpMenu = new KHelpMenu(this, aboutDataMenu);
+	aide->setPopup(mHelpMenu->menu());
 	game();
 }
 
@@ -383,11 +398,6 @@ void KLettres::slotNiveau()
 	}
 	comb1->setCurrentItem( niveau-1 );
 	game();
-}
-
-void KLettres::slotAide()
-{
-	kapp->invokeHelp("","klettres");
 }
 
 #include "klettres.moc"

@@ -25,6 +25,7 @@ static const char *description =
 	I18N_NOOP("Learn the sounds of letters in French");
 // INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
 
+static const char *version = "1.0";
 	
 static KCmdLineOptions options[] =
 {
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
 
   KAboutData aboutData( "klettres", I18N_NOOP("KLettres"),
     VERSION, description, KAboutData::License_GPL,
-    "(c) 2001, Anne-Marie Mahfouf", 0, 0, "annma@kde.org");
+    "(c) 2001, Anne-Marie Mahfouf", 0, "http://edu.kde.org/klettres", "annma@kde.org");
   aboutData.addAuthor("Anne-Marie Mahfouf",0, "annma@kde.org");
   KCmdLineArgs::init( argc, argv, &aboutData );
   KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.

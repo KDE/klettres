@@ -39,6 +39,9 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kstddirs.h>
+#include <khelpmenu.h>
+#include <kpopupmenu.h>
+#include <kaboutdata.h>
 //C++ includes
 #include <stdlib.h>
 #include <string.h>
@@ -46,10 +49,20 @@
 //project includes
 #include <klettresdlg.h>
 
+
+class KHelpMenu;
+class KPopupMenu;
+class KAboutData;
+
 /** KLettres is the base class of the project */
 class KLettres : public KLettresDlg
 {
   Q_OBJECT
+
+  private:
+  KHelpMenu *mHelpMenu;
+  KAboutData *aboutDataMenu;
+
   public:
     /** construtor */
     KLettres(QWidget* parent=0, const char *name=0);
@@ -60,7 +73,7 @@ public slots: // Public slots
   /** No descriptions */
   void game();
   /** No descriptions */
-  void slotAide();
+  //void slotAide();
   /** No descriptions */
   void slotNext(int);
   /** No descriptions */
