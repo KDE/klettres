@@ -63,8 +63,6 @@ public:
     KComboBox *lev_comb;
     ///Holds the i18n current language
    QString language;
-   ///Holds the non i18n language
-   QString langString;
    //Holds the file from which the letters or syllables are read
    int length, input, num, numRead;
    ///is false when menubar button is not shown
@@ -74,12 +72,7 @@ public:
    ///is false when grownup button not shown
    bool grownBool;
 
-   void registerLanguage(const QString &menuItem, const char *actionId, bool enabled);
-   /**
-    *Switch to another language
-    *@param - uint is the id of the new language
-    */
-   void changeLanguage(uint newLanguage);
+   void registerLanguage(const QString &language, const QString &menuItem);
    /**
     *Load the xml file
     *@param - the xml file
@@ -139,17 +132,12 @@ private slots:
        /**Read settings from KLettres config file
     *If no config file found, put French as default
     */
+    /**
+     *Switch to another language
+     *@param - newLanguage the index of the new language in m_languages
+     */
+    void changeLanguage(int newLanguage);
     void loadSettings();
-    ///Switch to language #0 Czech
-    void language0();
-    ///Switch to language #1 danish
-    void language1();
-    ///Switch to language #2 French
-    void language2();
-    ///Switch to language #3 Dutch
-    void language3();
-    ///Switch to language #4 Slovak
-    void language4();
 
     void slotPasteCcaron();
     void slotPasteDcaron();
@@ -179,15 +167,8 @@ private:
     void setupActions();
     /**
      * Set the label in the StatusBar to indicate the correct language
-     * @param int - The id of the new language
      */
-    void updateLanguage(int );
-    /**
-     *see what languages data are present in the user machine
-     *see what language is used for KDE
-     *set the default language to that language if possible, to fr otherwise
-     */
-    void loadLanguages();
+    void updateLanguage();
     ///Set the correct buttons on the second toolbar according to the language
     void loadLangToolBar();
 
@@ -196,15 +177,15 @@ private:
     ///Action that enables the ShowMenuBar item in the Settings menu
     KToggleAction *m_action;
     ///Action that sets up the Language menu
-    KSelectAction *language_menu;
+    KSelectAction *m_languageAction;
     ///Action that calls the Font Chooser Dialog
     KAction *fontAct;
     ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
-    uint selectedLanguage;
-    ///Total number of languages
-    uint languages;
-    ///Name of actions for registered languages
-    QString languageActions[16];
+    int selectedLanguage;
+    // All available language codes
+    QStringList m_languages;
+    // All available language names
+    QStringList m_languageNames;
     ///second toolbar with buttons of special characters per language
     KToolBar *secondToolbar;
 };

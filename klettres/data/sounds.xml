@@ -4,8 +4,7 @@
    Thanks to Eric Bischoff (KTuberling)
 
    Modify this file if you want to add new sounds
-   or modify existing ones. If you do that, don't forget to update
-   klettresui.rc if you add a new language support (actions associated with menu items).
+   or modify existing ones. 
 
    IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
    utf8 in the encoding combobox on the right of the file title.
@@ -15,7 +14,7 @@
 
 <language code="cs">
 
-    <menuitem action="speech_czech">
+    <menuitem>
       <label>&amp;Czech</label>
     </menuitem>
 
@@ -79,7 +78,7 @@
 
 <language code="da">
 
-    <menuitem action="speech_danish">
+    <menuitem>
       <label>&amp;Danish</label>
     </menuitem>
     <alphabet>
@@ -149,7 +148,7 @@
 
   <language code="fr">
 
-    <menuitem action="speech_french">
+    <menuitem>
       <label>&amp;French</label>
     </menuitem>
       <alphabet>
@@ -216,7 +215,7 @@
 
    <language code="nl">
 
-    <menuitem action="speech_dutch">
+    <menuitem>
       <label>D&amp;utch</label>
     </menuitem>
 
@@ -277,7 +276,7 @@
 
     <language code="sk">
 
-    <menuitem action="speech_slovak">
+    <menuitem>
       <label>&amp;Slovak</label>
     </menuitem>
 

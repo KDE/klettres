@@ -25,8 +25,8 @@
 #ifndef _SOUNDFACTORY_H_
 #define _SOUNDFACTORY_H_
 
+#include <qdom.h>
 
-class QDomDocument;
 class KLettres;
 
 /**
@@ -44,7 +44,7 @@ class SoundFactory : public QObject
 
 public:
 
-  SoundFactory(KLettres *parent, const char *name, uint selectedLanguage);
+  SoundFactory(KLettres *parent, const char *name);
   ~SoundFactory();
 
   ///Change the language when the user changes the language in the Languages menu
@@ -52,7 +52,7 @@ public:
   ///Play the sound associated to int soundRef
  void playSound(int ) ;
   ///Number of sounds corresponding to the current langauge and level (alphabet or syllables)
-  int sounds;
+  uint sounds;
   ///List of sound names
   QString *namesList;
   ///List of sound files associated with each sound name
@@ -72,6 +72,8 @@ private:
 private:
   ///Call the main instance of the program
   KLettres *klettres;
+  // The language document
+  QDomDocument m_layoutsDocument;
 };
 
 #endif

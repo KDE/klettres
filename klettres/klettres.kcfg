@@ -4,9 +4,8 @@
   <kcfgfile name="klettresrc"/>
   <group name="General">
     <entry name="Language" type="String">
-      <code>(void)languages();</code>
       <label>Language</label>
-      <default code="true">m_defaultLanguage</default>
+      <default code="true">defaultLanguage()</default>
     </entry>
     <entry name="Style" type="Enum" Key="myStyle">
       <label>Style</label>

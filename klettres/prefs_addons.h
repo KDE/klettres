@@ -1,18 +1,26 @@
 public:
-  QStringList languages();
+  static QString defaultLanguage();
+  static void setLanguages(const QStringList &languages) 
+  {
+    Prefs::self()->m_languages = languages;
+  }
+
   static void setLanguageNumber(int i)
   {
     setLanguage(Prefs::self()->m_languages[i]);
   }
   static int languageNumber()
   {
-qWarning("Lnaguages: %s", Prefs::self()->m_languages.join(":").latin1());
     int i = Prefs::self()->m_languages.findIndex(language());
-    if (i == -1)
-      return 0;
-    return i;
-  }
+    if (i != -1)
+      return i;
+    i = Prefs::self()->m_languages.findIndex(defaultLanguage());
+    if (i != -1)
+      return i;
+    i = Prefs::self()->m_languages.findIndex("fr");
+    if (i != -1)
+      return i;
 
-private: 
+    return 0; 
+  }
   QStringList m_languages;
-  QString m_defaultLanguage;

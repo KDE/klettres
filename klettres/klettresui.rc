@@ -1,18 +1,13 @@
 <!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="klettres" version="2">
+<kpartgui name="klettres" version="3">
 <MenuBar>
 	<Menu name="file" noMerge="1"><text>&amp;File</text>
 		<Action name="file_quit"/>
 	</Menu>
-         <Menu name="speech"><text>&amp;Languages</text>
-    		<Action name="speech_czech"/>
-    		<Action name="speech_danish"/>
-    		<Action name="speech_french"/>
-    		<Action name="speech_dutch"/>
-		<Action name="speech_slovak"/>
-       </Menu>
 
-	 <Menu name="settings" noMerge="1"><text>&amp;Settings</text>
+        <Action name="languages"/>
+
+	<Menu name="settings" noMerge="1"><text>&amp;Settings</text>
 		<Action name="menubar" />
 		<Merge name="StandardToolBarMenuHandler" />
 		<Action name="options_show_statusbar"/>

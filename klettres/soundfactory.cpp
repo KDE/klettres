@@ -33,7 +33,7 @@
 #include "prefs.h"
 
 ///Constructor
-SoundFactory::SoundFactory(KLettres *parent, const char *name, uint selectedLanguage)
+SoundFactory::SoundFactory(KLettres *parent, const char *name)
 	: QObject(parent, name)
 {
   klettres = parent;
@@ -41,12 +41,9 @@ SoundFactory::SoundFactory(KLettres *parent, const char *name, uint selectedLang
   namesList = filesList = 0;
   sounds = 0;
 
-  QDomDocument layoutsDocument;
-  bool ok = klettres->loadLayout(layoutsDocument);
-   if (ok)
-  	ok = registerLanguages(layoutsDocument);
+  bool ok = klettres->loadLayout(m_layoutsDocument);
   if (ok)
-  	ok = loadLanguage(layoutsDocument, selectedLanguage);
+  	ok = registerLanguages(m_layoutsDocument);
   if (!ok) loadFailure();
 }
 
@@ -60,10 +57,8 @@ SoundFactory::~SoundFactory()
 //When the language changes in KLettres menu
 void SoundFactory::change(uint selectedLanguage)
 {
-  QDomDocument layoutsDocument;
-  bool ok = klettres->loadLayout(layoutsDocument);
   //go load the sounds for the current language
-  if (ok) ok = loadLanguage(layoutsDocument, selectedLanguage);
+  bool ok = loadLanguage(m_layoutsDocument, selectedLanguage);
   //tell the user if there are no sounds
   if (!ok) loadFailure();
 }
@@ -73,7 +68,7 @@ void SoundFactory::playSound(int mySound)
 {
   QString soundFile;
 
-   if (mySound >= sounds) return;
+   if ((uint) mySound >= sounds) return;
 
   soundFile = locate("data", "klettres/" + filesList[mySound]);
   kdDebug() << "File to play:  " << soundFile << endl;
@@ -117,9 +112,9 @@ bool SoundFactory::registerLanguages(QDomDocument &layoutDocument)
       return false;
 
     labelElement = (const QDomElement &) labelsList.item(0).toElement();
-    actionAttribute = menuItemElement.attributeNode("action");
 
-    klettres->registerLanguage(labelElement.text(), actionAttribute.value().latin1(), enabled);
+    if (enabled)
+      klettres->registerLanguage(codeAttribute.value(), labelElement.text());
   }
 
   return true;

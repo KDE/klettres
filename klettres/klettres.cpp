@@ -50,13 +50,15 @@ KLettres::KLettres()
     : KMainWindow( 0, "KLettres" )
 {
     m_view = new KLettresView(this);
-    languages = 0;
     // tell the KMainWindow that this is indeed the main widget
     setCentralWidget(m_view);
-    //Read config
+
+    // Setup all available sounds
+    soundFactory = new SoundFactory(this, "sounds");
+    //Read config, must come after SoundFactory, otherwise we don't have all languages
     loadSettings();
-    //selectedLanguage must be read from config file
-    soundFactory = new SoundFactory(this, "sounds", selectedLanguage);
+    // activate language
+    soundFactory->change(selectedLanguage);
     // then, setup our actions, must be done after loading soundFactory as it has some actions too
     setupActions();
 
@@ -97,7 +99,7 @@ KLettres::KLettres()
     updateLevMenu(Prefs::level()-1);
 
     m_view->selectedLanguage = selectedLanguage;
-    updateLanguage(selectedLanguage);
+    updateLanguage();
 
     m_view->game();
 }
@@ -119,48 +121,31 @@ void KLettres::setupActions()
     KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
     KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
     fontAct = new KAction(i18n("Change &Font..."), "fonts", CTRL+Key_F, this, SLOT(optionsPreferences()), actionCollection(), "font");
+
+    m_languageAction = new KSelectAction(i18n("Language"), KShortcut(), actionCollection(), "languages");
+    m_languageAction->setItems(m_languageNames);
+    if (selectedLanguage < m_languageNames.count())
+       m_languageAction->setCurrentItem(selectedLanguage);
+    connect(m_languageAction, SIGNAL(activated(int)), this, SLOT(changeLanguage(int)));
+    
     setAutoSaveSettings("General");
     createGUI();
 }
 
 // Register an available language
-void KLettres::registerLanguage(const QString &menuItem, const char *actionId, bool enabled)
+void KLettres::registerLanguage(const QString &language, const QString &menuItem)
 {
-  KToggleAction *t = 0;
-
-  switch (languages)
-  {
-  	case 0: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language0()), actionCollection(), actionId);
-		break;
-  	case 1: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language1()), actionCollection(), actionId);
-		break;
-  	case 2: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language2()), actionCollection(), actionId);
-		break;
-  	case 3: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language3()), actionCollection(), actionId);
-		break;
-	case 4: t = new KToggleAction(i18n(menuItem.latin1()), 0, this, SLOT(language4()), actionCollection(), actionId);
-		break;
-  }
-
-  if( t ) {
-      if (languages == selectedLanguage) t->setChecked(true);
-      t->setEnabled(enabled);
-      languageActions[languages] = actionId;
-      languages++;
-  }
+  m_languages.append(language);
+  m_languageNames.append(menuItem);
+  Prefs::setLanguages(m_languages);
 }
 
-void KLettres::changeLanguage(uint newLanguage)
+void KLettres::changeLanguage(int newLanguage)
 {
   // Do not accept to switch to same language
-  if (newLanguage == selectedLanguage) {
-    // newLanguage should stay checked
-    ((KToggleAction*) actionCollection()->action(languageActions[newLanguage].latin1()))->setChecked(true);
+  if (newLanguage == selectedLanguage)
     return;
-  }
-  // Unselect preceding language
-  ((KToggleAction*) actionCollection()->action(languageActions[selectedLanguage].latin1()))->setChecked(false);
-  ((KToggleAction*) actionCollection()->action(languageActions[newLanguage].latin1()))->setChecked(true);
+
   // Change language in the remembered options
   selectedLanguage = newLanguage;
   // write new language in config file
@@ -168,7 +153,7 @@ void KLettres::changeLanguage(uint newLanguage)
   Prefs::writeConfig();
 
   // Update the StatusBar
-  updateLanguage(selectedLanguage);
+  updateLanguage();
   // Change language effectively
   soundFactory->change(newLanguage);
   m_view->game();
@@ -201,56 +186,11 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
   return true;
 }
 
-///Switch to language #0
-void KLettres::language0()
-{
-  changeLanguage(0);
-}
-
-///Switch to language #1
-void KLettres::language1()
-{
-  changeLanguage(1);
-}
-
-///Switch to language #2
-void KLettres::language2()
-{
-  changeLanguage(2);
-}
-
-///Switch to language #3
-void KLettres::language3()
-{
-  changeLanguage(3);
-}
-
-///Switch to language #3
-void KLettres::language4()
-{
-  changeLanguage(4);
-}
-
 ///Set the label in the StatusBar to indicate the correct language
-void KLettres::updateLanguage(int index)
+void KLettres::updateLanguage()
 {
-    switch(index){
-	case 0:
-            langString = i18n("Czech");
-            break;
-        case 1:
-            langString = i18n("Danish");
-            break;
-        case 2:
-            langString = i18n("French");
-            break;
-        case 3:
-            langString = i18n("Dutch");
-            break;
-	 case 4:
-            langString = i18n("Slovak");
-            break;
-    }
+    QString langString = m_languageNames[selectedLanguage];
+    langString.replace("&", QString::null);
     langLabel->setText(i18n("Current language is %1").arg(langString));
     loadLangToolBar();
 }
@@ -548,35 +488,13 @@ void KLettres::slotPasteUacute()
 	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ú", -1));
 }
 
-QStringList Prefs::languages()
+QString Prefs::defaultLanguage()
 {
-    if (m_languages.isEmpty())
-    {
-#if 1
-      // The language list is hardcoded for now because the rest of the
-      // program isn't flexible in handling other languages
-      m_languages << "cs" << "da" << "fr" << "nl" << "sk";
-#else
-      //the program scans in klettres/ to see what languages data is found
-      QStringList dirs = KGlobal::dirs()->findDirs("data", "klettres");
-      for (QStringList::Iterator it = dirs.begin(); it != dirs.end(); ++it ) {
-        QDir dir(*it);
-        m_languages += dir.entryList(QDir::Dirs, QDir::Name);
-      }
-      m_languages.remove(".");
-      m_languages.remove("..");
-      m_languages.remove("pics");
-      m_languages.remove("data");
-#endif      
-      
-      //see what is the user language for KDE
-      QStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
-      if (!defaultLanguages.isEmpty() && m_languages.contains(defaultLanguages[0]))
-         m_defaultLanguage = defaultLanguages[0];
-      else if (m_languages.contains("fr"))
-         m_defaultLanguage = "fr";
-   }
-   return m_languages;
+  //see what is the user language for KDE
+  QStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
+  if (!defaultLanguages.isEmpty())
+     return defaultLanguages[0];
+  return QString::null;
 }
 
 #include "klettres.moc"
