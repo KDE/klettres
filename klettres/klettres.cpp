@@ -26,6 +26,7 @@
 #include <kglobalsettings.h>
 //Project headers
 #include "klettres.h"
+#include "pref.h"
 
 const int ID_KIDB      = 100;
 const int ID_GROWNB    = 101;
@@ -55,7 +56,7 @@ KLettres::KLettres()
     lev_comb->insertItem( i18n( "Level 4" ) );
     tb->insertSeparator(3, 3);
     tb->insertWidget(4, 100, lev_comb, 4); //id, width, widget, index
-    connect( lev_comb, SIGNAL( activated(int) ), this, SLOT( slotNext(int) ) );
+    connect( lev_comb, SIGNAL( activated(int) ), this, SLOT( slotChangeLevel(int) ) );
     QToolTip::add(lev_comb, i18n("Change the level of difficulty"));
     tb->insertSeparator(5, 5);
     //Language combobox
@@ -123,20 +124,7 @@ void KLettres::setupActions()
 
     KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
     KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
-
-    fonts_menu = new KAction(i18n("&Change Font"),0, this, SLOT(slotChangeFont()),actionCollection(), "fonts");
-
-    //Settings ->Levels menu item
-    QStringList levels_list;
-    levels_list.append(i18n("Level 1"));
-    levels_list.append(i18n("Level 2"));
-    levels_list.append(i18n("Level 3"));
-    levels_list.append(i18n("Level 4"));
-    levels_menu = new KSelectAction(i18n("&Levels"), 0, actionCollection(), "levels");
-    levels_menu->setItems(levels_list);
-    levels_menu->setCurrentItem(0);//default=level1 when start
-    connect(levels_menu, SIGNAL(activated(int)), this, SLOT(slotNext(int)));
-    connect(levels_menu, SIGNAL(activated(int)), this, SLOT(updateLevMenu(int)));
+    KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 
     //Settings->Choose Language menu
     QStringList language_list;
@@ -147,15 +135,6 @@ void KLettres::setupActions()
     language_menu->setItems(language_list);
     connect(language_menu, SIGNAL(activated(int)), this, SLOT(changeNumeration(int)));
     connect(language_menu, SIGNAL(activated(int)), this, SLOT(updateLangMenu(int)));
-
-    //Settings->Look & Feel menu
-    QStringList look_list;
-    look_list.append(i18n("&Grown-Up"));
-    look_list.append(i18n("&Kids"));
-    look_menu = new KSelectAction(i18n("Look && &Feel"), 0, actionCollection(), "look_feel");
-    look_menu->setItems(look_list);
-    connect(look_menu, SIGNAL(activated(int)), this, SLOT(changeLook(int)));
-    connect(look_menu, SIGNAL(activated(int)), this, SLOT(updateLookMenu(int)));
 
     createGUI();
 }
@@ -234,6 +213,42 @@ void KLettres::writeConfig()
     config->writeEntry("Weight", newFont.weight());
 }
 
+void KLettres::optionsPreferences()
+{
+    KLettresPreferences dlg;
+    dlg.resize(530, 450);
+    //dlg.cancelBool=false;
+    dlg.configChanged = false;
+    //dlg.langChanged = false;
+    QObject::connect(&dlg, SIGNAL(aClicked()), this, SLOT(slotClickApply()));
+    if (dlg.exec())
+    {
+        // redo your settings
+    }
+}
+
+//when Apply button in Preferences dialog is clicked, refresh view
+void KLettres::slotClickApply()
+{
+     KLettresPreferences dlg;
+      //refresh the font when changed in pref dialog
+      if (newFont != dlg.newFont)
+      {
+      	newFont = dlg.newFont;
+      	m_view->button1->setFont(newFont);
+      	m_view->line1->setFont(newFont);
+      }
+      //refresh the level if changed
+      if (m_view->niveau != dlg.niveau)
+        slotChangeLevel(dlg.niveau-1);
+      if (style != dlg.style)
+      {
+      	style = dlg.style;
+	if (style=="grownup") slotGrownup();
+	else slotKid();
+      }
+}
+
 void KLettres::slotQuit()
 {
     writeConfig();
@@ -242,7 +257,6 @@ void KLettres::slotQuit()
 
 void KLettres::slotGrownup()
 {
-    look_menu->setCurrentItem(0);
     QPalette pal;
     QColorGroup cg;
     cg.setColor( QColorGroup::Background, white);
@@ -257,11 +271,12 @@ void KLettres::slotGrownup()
     tb->insertButton ("kids.png", ID_KIDB, SIGNAL( clicked() ), this, SLOT( slotKid()), true, i18n("Switch to the kid look"), 9 );
     kidBool=true;
     m_view->slotGrownup();
+    style = m_view->style;
+    writeConfig();
 }
 
 void KLettres::slotKid()
 {
-    look_menu->setCurrentItem(1);
     QPalette pal;
     QColorGroup cg;
     cg.setColor( QColorGroup::Background, white);
@@ -276,25 +291,8 @@ void KLettres::slotKid()
     tb->insertButton ("grownup.png", ID_GROWNB, SIGNAL( clicked() ), this, SLOT( slotGrownup()), true, i18n("Switch to the grown-up look"),10 );
     grownBool=true;
     m_view->slotKid();
-}
-
-void KLettres::changeLook(int id)
-{
-updateLookMenu(id);
-    switch (id) {
-        case 0:
-            slotGrownup();
-            break;
-        case 1:
-            slotKid();
-            break;
-    }
-}
-
-/** Update Look menu */
-void KLettres::updateLookMenu(int id)
-{
-    look_menu->setCurrentItem(id);
+    style = m_view->style;
+    writeConfig();
 }
 
 void KLettres::changeNumeration(int id)
@@ -368,55 +366,18 @@ void KLettres::slotShowM()
     menuBool=false;//false if no menubar button
 }
 
-void KLettres::slotNext(int id)
+void KLettres::slotChangeLevel(int id)
 {
-    switch ( id)
-    {
-	default:
-	case 0:
-		m_view->niveau=1;
-		break;
-
-	case 1:
-		m_view->niveau=2;
-		break;
-
-	case 2:
-		m_view->niveau=3;
-		break;
-
-	case 3:
-		m_view->niveau=4;
-		break;
-	}
+    m_view->niveau=id+1;
     updateLevMenu(id);
+    writeConfig();
     m_view->game();
 }
 
 void KLettres::updateLevMenu(int id)
 {
-    levels_menu->setCurrentItem(id);
     lev_comb->setCurrentItem(id);
     levLabel->setText(i18n("Current level is %1").arg(m_view->niveau));
-}
-
-void KLettres::slotChangeFont()
-{
-    KFontDialog fdlg (0L, 0L, false, true);
-    fdlg.setCaption(i18n("Choose New Font"));
-    newFont = QFont(KGlobalSettings::largeFont());
-    newFont.setBold(true);
-    //this fixes the default font when you open the font dialog
-    //maybe I should set a default settings somewhere and open with the actual font
-    fdlg.setFont(newFont);
-    if (fdlg.exec() == QDialog::Accepted ) {
-      newFont = fdlg.font();
-      //newFont.setWeight(QFont::Normal);
-      newFont.setStrikeOut(false);
-      newFont.setUnderline(false);
-      m_view->button1->setFont(newFont);
-      m_view->line1->setFont(newFont);
-	}
 }
 
 void KLettres::slotSetFont()
@@ -430,6 +391,5 @@ void KLettres::slotSetFont()
     m_view->button1->setFont(newFont);
     m_view->line1->setFont(newFont);
 }
-
 
 #include "klettres.moc"

@@ -3,12 +3,12 @@ bin_PROGRAMS = klettres
 
 ## INCLUDES were found outside kdevelop specific part
 
-klettres_SOURCES = klettres.cpp main.cpp klettresview.cpp
+klettres_SOURCES = pref1ui.ui pref2ui.ui klettres.cpp main.cpp klettresview.cpp pref.cpp
 klettres_LDADD   =  $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT) $(LIBSOCKET)
 
 SUBDIRS = pics French Dutch Danish
 
-EXTRA_DIST = main.cpp klettres.cpp klettres.h klettres.desktop lo32-app-klettres.png lo16-app-klettres.png cr16-app-klettres.png cr32-app-klettres.png klettresview.cpp klettresview.h lo32-app-klettres.xcf klettresui.rc
+EXTRA_DIST = main.cpp klettres.cpp klettres.h klettres.desktop lo32-app-klettres.png lo16-app-klettres.png cr16-app-klettres.png cr32-app-klettres.png klettresview.cpp pref1ui.ui pref2ui.ui pref.h klettresview.h lo32-app-klettres.xcf klettresui.rc
 
 desktopdir = $(kde_appsdir)/Edutainment/Languages
 
@@ -21,7 +21,7 @@ app_DATA = klettresui.rc
 ####### kdevelop will overwrite this part!!! (end)############
 # this 10 paths are KDE specific. Use them:
 # kde_htmldir       Where your docs should go to. (contains lang subdirs)
-# kde_appsdir       Where your application file (.kdelnk) should go to. 
+# kde_appsdir       Where your application file (.kdelnk) should go to.
 # kde_icondir       Where your icon should go to.
 # kde_minidir       Where your mini icon should go to.
 # kde_datadir       Where you install application data. (Use a subdir)
@@ -41,7 +41,7 @@ METASOURCES = AUTO
 # added by bml
 KDE_ICON = klettres
 
-# the library search path. 
+# the library search path.
 klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
 # Uncomment the following two lines if you add a ui.rc file for your application to make use of
@@ -53,7 +53,7 @@ klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
 # messages: rc.cpp
 
-# instead of 
+# instead of
 
 # messages:
 

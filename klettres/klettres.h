@@ -69,43 +69,38 @@ protected:
 private slots:
     void optionsConfigureKeys();
     void optionsConfigureToolbars();
+    void optionsPreferences();
     void newToolbarConfig();
-	void slotMenubar();
-	void slotShowM();
+    void slotMenubar();
+    void slotShowM();
 
-	void slotQuit();
-	void slotGrownup();
-	void slotKid();
-	//look and feel menu
-	void changeLook(int );
-	void updateLookMenu(int );
-	//levels menu
-	void slotNext(int );
-	void updateLevMenu(int );
-	//language menu
-	void changeNumeration(int );
-	void updateLangMenu(int );
+    void slotQuit();
+    void slotGrownup();
+    void slotKid();
+    //levels menu
+    void slotChangeLevel(int );
+    void updateLevMenu(int );
+    //language menu
+    void changeNumeration(int );
+    void updateLangMenu(int );
 
-	void setLang();
-	void slotChangeFont();
-	void slotSetFont();
+    void setLang();
+    void slotSetFont();
+    void slotClickApply();
 
 private:
     void setupAccel();
     void setupActions();
 
-	void readConfig();
-	void writeConfig();
+    void readConfig();
+    void writeConfig();
 
 private:
     KLettresView *m_view;
 
-	KToggleAction *m_action;
+    KToggleAction *m_action;
 
-	KSelectAction *levels_menu;
-	KSelectAction *language_menu;
-	KSelectAction *look_menu;
-	KAction *fonts_menu;
+    KSelectAction *language_menu;
 };
 
 #endif // _KLETTRES_H_

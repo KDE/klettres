@@ -1,0 +1,153 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>pref2ui</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>pref2ui</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>196</width>
+            <height>212</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form2</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>layout6</cstring>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="frameShape">
+                        <enum>Panel</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Raised</enum>
+                    </property>
+                    <property name="lineWidth">
+                        <number>0</number>
+                    </property>
+                    <property name="text">
+                        <string>Please choose the 
+language for the letters.</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignCenter</set>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>spacer3</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Minimum</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>10</width>
+                            <height>10</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QButtonGroup">
+                    <property name="name">
+                        <cstring>langGroup</cstring>
+                    </property>
+                    <property name="title">
+                        <string>Language</string>
+                    </property>
+                    <property name="exclusive">
+                        <bool>true</bool>
+                    </property>
+                    <property name="radioButtonExclusive">
+                        <bool>true</bool>
+                    </property>
+                    <widget class="QRadioButton">
+                        <property name="name">
+                            <cstring>daBox</cstring>
+                        </property>
+                        <property name="geometry">
+                            <rect>
+                                <x>13</x>
+                                <y>22</y>
+                                <width>80</width>
+                                <height>23</height>
+                            </rect>
+                        </property>
+                        <property name="text">
+                            <string>Danish</string>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>Set the "adult" Look and Feel</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>Check that if you want the "adult" Look and Feel</string>
+                        </property>
+                    </widget>
+                    <widget class="QRadioButton">
+                        <property name="name">
+                            <cstring>duBox</cstring>
+                        </property>
+                        <property name="geometry">
+                            <rect>
+                                <x>13</x>
+                                <y>51</y>
+                                <width>80</width>
+                                <height>23</height>
+                            </rect>
+                        </property>
+                        <property name="text">
+                            <string>Dutch</string>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>Set the "blue" Look and Feel</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>Check that if youwant the "blue" Look and Feel</string>
+                        </property>
+                    </widget>
+                    <widget class="QRadioButton">
+                        <property name="name">
+                            <cstring>frBox</cstring>
+                        </property>
+                        <property name="geometry">
+                            <rect>
+                                <x>13</x>
+                                <y>80</y>
+                                <width>80</width>
+                                <height>23</height>
+                            </rect>
+                        </property>
+                        <property name="text">
+                            <string>French</string>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>Set the "nature" Look and Feel</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>Check that if youwant the "nature" Look and Feel</string>
+                        </property>
+                    </widget>
+                </widget>
+            </vbox>
+        </widget>
+    </grid>
+</widget>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>
