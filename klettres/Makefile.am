@@ -10,6 +10,7 @@ SUBDIRS = pics data
 
 xdg_apps_DATA = klettres.desktop
 kde_kcfg_DATA = klettres.kcfg
+kde_conf_DATA = klettresrc
 
 appdir = $(kde_datadir)/klettres
 app_DATA = klettresui.rc
