@@ -29,8 +29,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2002-05-10</date>
-<releaseinfo>0.03.00</releaseinfo>
+<date>2002-10-08</date>
+<releaseinfo>0.99</releaseinfo>
 
 <abstract>
 <para>
@@ -58,30 +58,31 @@ Three languages are available at the moment: Danish, Dutch and French.
 <chapter id="introduction">
 <title>Introduction</title>
 
-<para>
-&klettres; is a very simple application that helps a child or an adult
-to learn the alphabet and some simple sounds in his own language or in another language.
-The program picks up a letter or a syllable in random, this letter/syllable is displayed and the sound is played.
-The user should then type this letter or syllable. Training is done in the levels where the letter/syllable is not
-displayed, only the sound is played. The user does not need to know how to use the
-mouse, the keyboard only is needed.</para>
-<para>
-There are three languages available at the moment: Danish, Dutch and French.
-</para>
-<para>
-Two different Look and Feel allow you to adapt &klettres; to your need.
-For a child, the menu bar and the language button are not visible. We assume that a child will not want to set the language himself.
-A box allows him to choose the different levels. For an older user, the background is not so childish
-and the menuBar is present.
-</para>
+<para>&klettres; is a very simple application that helps a child or an
+adult to learn the alphabet and some simple sounds in his own language
+or in another language.  The program picks up a letter or a syllable
+in random, this letter/syllable is displayed and the sound is played.
+The user should then type this letter or syllable. Training is done in
+the levels where the letter/syllable is not displayed, only the sound
+is played. The user does not need to know how to use the mouse, the
+keyboard only is needed.</para>
+
+<para>There are three languages available at the moment: Danish, Dutch
+and French.</para>
+
+<para>Two different Look and Feel allow you to adapt &klettres; to
+your need.  For a child, the menu bar and the language button are not
+visible. We assume that a child will not want to set the language
+himself.  A box allows him to choose the different levels. For an
+older user, the background is not so childish and the menuBar is
+present.</para>
+
 <note>
-<para>
-To use Danish as a learning language, you need to have the Danish
-keyboard layout 
-set up on your system in order to type in special letters of the Danish alphabet.
-Please use &kcontrol;, in the section <guimenu>Peripherals</guimenu> and
-submenu <guimenuitem>Keyboard</guimenuitem>.
-</para>
+<para>To use Danish as a learning language, you need to have the
+Danish keyboard layout set up on your system in order to type in
+special letters of the Danish alphabet. Please use &kcontrol;, in the
+section <guimenu>Peripherals</guimenu> and submenu
+<guimenuitem>Keyboard</guimenuitem>.</para>
 </note>
 </chapter>
 
@@ -95,7 +96,6 @@ that you do the game together.</para>
 <sect1 id="levels1-and2">
 <title>Levels 1 and 2</title>
 
-<para>
 <screenshot>
 <screeninfo>Screenshot of &klettres; Level 1</screeninfo>
 	<mediaobject>
@@ -107,9 +107,9 @@ that you do the game together.</para>
 	  </textobject>
 	</mediaobject>
 </screenshot>
-</para>
-<para>This screenshot shows &klettres; on Level 1, language is Dutch and look-and-feel is <quote>grown-up</quote>.
-</para>
+
+<para>This screenshot shows &klettres; on Level 1, language is Dutch
+and look-and-feel is <quote>grown-up</quote>.</para>
 
 <para>
 In level 1, the user sees the letter and hears the sound. He then has to type
@@ -185,7 +185,6 @@ sound is wrong, the user cannot type in the second one. The letter
 disappears and he has to try again. The number of letters is two or
 three, it depends of the language.</para>
 
-<para>
 <screenshot>
 <screeninfo>Screenshot of &klettres; Level 4</screeninfo>
 	<mediaobject>
@@ -197,7 +196,7 @@ three, it depends of the language.</para>
 	  </textobject>
 	</mediaobject>
 </screenshot>
-</para>
+
 <para>Here you can see &klettres; level 4, <quote>kid</quote> look-and-feel and French language.
 </para>
 
@@ -217,11 +216,9 @@ for a young child. </para>
 <sect1 id="klettres-mainwindow">
 <title>The main &klettres; window</title>
 
-<para></para>
-
 <sect2>
 <title>The <guimenu>File</guimenu> Menu</title>
-<para>
+
 <variablelist>
 <varlistentry>
 <term><menuchoice>
@@ -234,12 +231,12 @@ for a young child. </para>
 <listitem><para><action>Quits</action> &klettres;</para></listitem>
 </varlistentry>
 </variablelist>
-</para>
+
 </sect2>
 
 <sect2>
 <title>The <guimenu>Levels</guimenu> Menu</title>
-<para>
+
 <variablelist>
 <varlistentry>
 <term><menuchoice>
@@ -252,7 +249,7 @@ for a young child. </para>
 <listitem><para><action>Choose</action> the level</para></listitem>
 </varlistentry>
 </variablelist>
-</para>
+
 </sect2>
 
 <sect2>
@@ -391,7 +388,7 @@ Documentation copyright 2001 Anne-Marie Mahfouf <email>annma@kde.org</email>
 &underGPL;        	 <!-- GPL License -->
 </chapter>
 
-<appendix id="installation">
+<!-- <appendix id="installation">
 <title>Installation</title>
 
 &install.intro.documentation;
@@ -399,7 +396,7 @@ Documentation copyright 2001 Anne-Marie Mahfouf <email>annma@kde.org</email>
 &install.compile.documentation;
 
 </appendix>
-
+-->
 &documentation.index;
 </book>
 <!--
