@@ -22,7 +22,7 @@ METASOURCES = AUTO
 
 # install all the standard icons
 # added by bml
-KDE_ICON = klettres
+KDE_ICON = AUTO
 
 # the library search path.
 klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
