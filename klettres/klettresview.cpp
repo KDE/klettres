@@ -26,9 +26,9 @@ KLettresView::KLettresView(QWidget *parent)
     : QWidget(parent)
 {
     setMinimumSize( QSize( 640, 538 ) );
-	setMaximumSize( QSize( 640, 538 ) );
+    setMaximumSize( QSize( 640, 538 ) );
 
-	//Button with letter or syllable
+    //Button with letter or syllable
     button1 = new QLabel( this, "button1" );
     button1->setGeometry( QRect( 50, 100, 160, 160 ) );
     cg.setColor( QColorGroup::Foreground, white );
@@ -36,23 +36,23 @@ KLettresView::KLettresView(QWidget *parent)
     pal.setActive( cg );
     button1->setPalette( pal );
     button1->setText( i18n( "A" ) );
-	QToolTip::add( button1, i18n( "You must type the letter you hear and/or see in the field below" ) );
+    QToolTip::add( button1, i18n( "You must type the letter you hear and/or see in the field below" ) );
     //lineEdit for user input
     line1 = new QLineEdit( this, "line1" );
     line1->setGeometry( QRect( 40, 310, 161, 160 ) );
     QToolTip::add( line1, i18n( "Type the letter that you just heard" ) );
 
     //font for button and lineEdit
-   	//use largeFont()
-   	QFont f(KGlobalSettings::largeFont());
-	f.setBold(true);
-   	button1->setFont( f );
-	line1->setFont(f);
-	//load background pics
-	pm_a.load(locate("data","klettres/pics/background1.png"));
-	pm_k.load(locate("data","klettres/pics/klettres_back.jpeg"));
-	//maybe a warning if background pics are not found
-	n = 0;
+    //use largeFont()
+    QFont f(KGlobalSettings::largeFont());
+    f.setBold(true);
+    button1->setFont( f );
+    line1->setFont(f);
+    //load background pics
+    pm_a.load(locate("data","klettres/pics/background1.png"));
+    pm_k.load(locate("data","klettres/pics/klettres_back.jpeg"));
+    //maybe a warning if background pics are not found
+    n = 0;
 }
 
 KLettresView::~KLettresView()
@@ -61,12 +61,12 @@ KLettresView::~KLettresView()
 
 void KLettresView::slotGrownup()
 {
-	style="grownup";
- 	setMinimumSize( QSize( 640, 480 ) );
+    style="grownup";
+    setMinimumSize( QSize( 640, 480 ) );
     setMaximumSize( QSize( 640, 480 ) );
-	setBackgroundPixmap(pm_a);
-	//button1 background
-	cg.setColor( QColorGroup::Foreground, white );
+    setBackgroundPixmap(pm_a);
+    //button1 background
+    cg.setColor( QColorGroup::Foreground, white );
     cg.setColor( QColorGroup::Background, QColor(53,87,158));
     pal.setActive( cg );
     button1->setPalette( pal );
@@ -74,73 +74,73 @@ void KLettresView::slotGrownup()
 
 void KLettresView::slotKid()
 {
-	style="kid";
+    style="kid";
     setMinimumSize( QSize( 640, 480 ) );
     setMaximumSize( QSize( 640, 480 ) );
-	setBackgroundPixmap(pm_k);
-	//change button1 background
-	cg.setColor( QColorGroup::Foreground, white );
-	cg.setColor( QColorGroup::Background, black);
+    setBackgroundPixmap(pm_k);
+    //change button1 background
+    cg.setColor( QColorGroup::Foreground, white );
+    cg.setColor( QColorGroup::Background, black);
     pal.setActive( cg );
     button1->setPalette( pal );
 }
 
 void KLettresView::game()
 {
-	if (niveau==1)
-		button1->show();
+    if (niveau==1)
+	button1->show();
 
-	if (niveau==2)
-		button1->hide();
+    if (niveau==2)
+	button1->hide();
 
-	if (niveau==1||niveau==2)
+    if (niveau==1||niveau==2)
+    {
+	button1->setMinimumSize( QSize( 200, 160 ) );
+	button1->setMaximumSize( QSize( 200, 160 ) );
+	line1->setMinimumSize( QSize( 140, 160 ) );
+	line1->setMaximumSize( QSize( 140, 160 ) );
+	srand((unsigned int)time((time_t *)NULL));
+	n=rand()%l1;     //choose a random number
+	dataString=QString("klettres/%1/data/level1.txt").arg(langLoc);  //dataString holds the data file name
+	string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);
+	 play();
+
+    	QObject::connect(line1, SIGNAL(textChanged(const
+ QString&)),this,SLOT(treat1(const QString&)) );
+   	 QObject::disconnect(line1, SIGNAL(textChanged(const
+ QString&)),this,SLOT(slotLet2(const QString&)) );
+    }
+
+    if (niveau==3)
+	button1->show();
+
+    if (niveau==4)
+	button1->hide();
+
+    if (niveau==3 || niveau==4)
+    {
+	srand((unsigned int)time((time_t *)NULL));
+	n=rand()%l2;
+	dataString=QString("klettres/%1/data/level3.txt").arg(langLoc);  //dataString holds the data file name
+	string2=QString("klettres/%1/syllab/ad-%2.mp3").arg(langLoc).arg(n);
+        play();
+	if (length==2)
 	{
 		button1->setMinimumSize( QSize( 200, 160 ) );
 		button1->setMaximumSize( QSize( 200, 160 ) );
-		line1->setMinimumSize( QSize( 140, 160 ) );
-		line1->setMaximumSize( QSize( 140, 160 ) );
-		srand((unsigned int)time((time_t *)NULL));
-		n=rand()%l1;     //choose a random number
-		dataString=QString("klettres/%1/data/level1.txt").arg(langLoc);  //dataString holds the data file name
-		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);
-		 play();
-
-		QObject::connect(line1, SIGNAL(textChanged(const
- QString&)),this,SLOT(treat1(const QString&)) );
-		QObject::disconnect(line1, SIGNAL(textChanged(const
- QString&)),this,SLOT(slotLet2(const QString&)) );
+		line1->setMinimumSize( QSize( 200, 160 ) );
+		line1->setMaximumSize( QSize( 200, 160 ) );
 	}
-
-	if (niveau==3)
-		button1->show();
-
-	if (niveau==4)
-		button1->hide();
-
-	if (niveau==3 || niveau==4)
-	{
-		srand((unsigned int)time((time_t *)NULL));
-		n=rand()%l2;
-		dataString=QString("klettres/%1/data/level3.txt").arg(langLoc);  //dataString holds the data file name
-		string2=QString("klettres/%1/syllab/ad-%2.mp3").arg(langLoc).arg(n);
-       play();
-		if (length==2)
-		{
-			button1->setMinimumSize( QSize( 200, 160 ) );
-			button1->setMaximumSize( QSize( 200, 160 ) );
-			line1->setMinimumSize( QSize( 200, 160 ) );
-			line1->setMaximumSize( QSize( 200, 160 ) );
-		}
        	if (length==3)
-		{
-			button1->setMinimumSize( QSize(250, 160 ) );
-			button1->setMaximumSize( QSize( 250, 160 ) );
-			line1->setMinimumSize( QSize( 250, 160 ) );
-			line1->setMaximumSize( QSize( 250, 160 ) );
-		}
-		QObject::connect(line1, SIGNAL(textChanged(const
+	{
+		button1->setMinimumSize( QSize(250, 160 ) );
+		button1->setMaximumSize( QSize( 250, 160 ) );
+		line1->setMinimumSize( QSize( 250, 160 ) );
+		line1->setMaximumSize( QSize( 250, 160 ) );
+	}
+	QObject::connect(line1, SIGNAL(textChanged(const
  QString&)),this,SLOT(slotLet2(const QString&)) );
-		QObject::disconnect(line1, SIGNAL(textChanged(const
+	QObject::disconnect(line1, SIGNAL(textChanged(const
  QString&)),this,SLOT(treat1(const QString&)) );
 	}
 	line1->setMaxLength( 1 );
@@ -209,7 +209,7 @@ void KLettresView::slotLet2(const QString& )
 	t1 = a1.upper(); //input in uppercase
 	line1->cut();
 	line1->setText(line1->text()+t1);
-    t1=line1->text(); //t1 is the whole lineEdit text now
+  	t1=line1->text(); //t1 is the whole lineEdit text now
 	sj=st.left(input);
 	QTimer *timer = new QTimer( this );
 	connect( timer, SIGNAL(timeout()),
@@ -237,8 +237,8 @@ void KLettresView::timerDone()
 			line1->setCursorPosition(0 );
 			line1->setFocus();
 			line1->setMaxLength( 1 );
-      		if (niveau==4)
-				button1->hide();
+      			if (niveau==4)
+			button1->hide();
 			game();  //another syllable
 		}
 	}
