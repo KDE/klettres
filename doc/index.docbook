@@ -80,7 +80,7 @@ keyboard only is needed.</para>
 
 <para>There are nine languages available at the moment: Czech, Danish, Dutch, English, French, Italian, Romanized Hindi, Spanish and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
 
-<note><para>&klettres; needs aRts running for the sound</para></note>
+<note><para>&klettres; needs &arts; running for the sound</para></note>
 
 <para>Two different modes allow you to adapt &klettres; to
 your need.  For a child, the menu bar and the language button are not
@@ -128,18 +128,14 @@ If your KDE language is set to Czech, Danish, Dutch, English, French, Italian, S
 </para>
 </note>
 <para>
-In level 1, the user sees the letter and hears the sound. He then has to type
-in the letter in the box. If it is correct, the next letter appears (without
-having to press <keycap>Enter</keycap> or whatever). If the user types
-the wrong letter, he hears the sound again. In this level, the user
-memorizes the letters and recognizes them on the keyboard.
+In level 1, the user sees the letter and hears the sound. He then has to type in the letter in the box. If it is correct, the next letter appears (without having to press <keycap>Enter</keycap> or whatever). If the user types the wrong letter, he hears the sound again. In this level, the user memorizes the letters, associates them with their sound and recognizes them on the keyboard.
 </para>
 
 <note>
 <para>The user can type in either lower or upper case letters. The letters are automatically put in upper case so
 that a child will match them with the keyboard. He can type only one letter at a
 time.</para>
-<para>When you type a letter in the input field, there is no need to press Enter and the program waits for a short while before testing if the letter is right. This short wait is to leave time to a young child to understand what he/she just typed, especially if this is the wrong letter. You can change this time by using the <guimenu>Settings</guimenu> menu, <guimenuitem>Configure &klettres;...</guimenuitem>and the Timer tab which will bring you a dialog where you can set two different times: one for the kid mode and one for the grown-up mode.
+<para>When you type a letter in the input field, there is no need to press <keycap>Enter</keycap> and the program waits for a short while before testing if the letter is right. This short wait is to leave time to a young child to understand what he/she just typed, especially if this is the wrong letter. You can change this time by using the <guimenu>Settings</guimenu> menu, <guimenuitem>Configure &klettres;...</guimenuitem>and the Timer tab which will bring you a dialog where you can set two different times: one for the kid mode and one for the grown-up mode.
 </para>
 </note>
 
@@ -215,7 +211,7 @@ three, it depends of the language.</para>
 </para>
 
 <para>The sounds appear in random order. </para> <para>Clicking in the
-<guilabel>Level</guilabel> combo-box or using the <guimenu>Levels</guimenu> menu in the menuBar
+<guilabel>Level</guilabel> combo-box or using the <guimenu>Level</guimenu> menu in the menuBar
 and choosing <guilabel>Level 4</guilabel> brings you
 to level 4. In that level, the user only hears the sound of the
 syllable and has to type in the letters. This level is quite difficult
@@ -227,7 +223,7 @@ for a young child. </para>
 <title>About fonts</title>
 
 <para>
-There is one more setting you can change: the font that displays the letters. In some distribution, the default font used from the system is really ugly. In Grow-up style, in the Settings menu, there is a Change Font menu item that brings you a font chooser dialog.
+There is one more setting you can change: the font that displays the letters. In some distribution, the default font used from the system is really ugly. In grown-up mode, in the <guimenu>Settings</guimenu> menu, in <guimenuitem>Configure &klettres;...</guimenuitem> you will find a Fonts tab with a font chooser dialog. The new font will be applied to both the displayed letter/syllable and the user field.
 </para>
 
 <warning>
@@ -375,7 +371,6 @@ You can also choose here the size you like the best.
 </variablelist>
 
 </sect2>
-<!--add Look menu-->
 
 <sect2>
 <title>The <guimenu>Look</guimenu> Menu</title>
@@ -540,17 +535,17 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>I don't hear any sounds</para>
+<para>I do not hear any sounds</para>
 </question>
 <answer>
-<para>You need to have aRts support and the aRts daemon needs to be running. Make sure you compiled kdelibs with arts if you compiled KDE. In any doubt, ask your distribution. You can also check if arts is running in &kcontrol; -&gt; Sound &amp; Multimedia in the Sound System tab. There you must make sure that <guilabel>Enable the Sound System</guilabel> is checked.</para> </answer>
+<para>You need to have &arts; support and the &arts; daemon needs to be running. Make sure you compiled kdelibs with arts if you compiled KDE. In any doubt, ask your distribution. You can also check if &arts; is running in &kcontrol; -&gt; Sound &amp; Multimedia in the Sound System tab. There you must make sure that <guilabel>Enable the Sound System</guilabel> is checked.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>I don't see  some letters on the icons on the Special Characters Toolbar. I see rectangles instead for some languages.</para>
+<para>I do not see  some letters on the icons on the Special Characters Toolbar. I see rectangles instead for some languages.</para>
 </question>
 <answer>
-<para>&klettres; in Czech and Slovak needs Arial and if you don't have this font installed, please ask your distribution support how to install it.</para> 
+<para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
 <para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -> System Administration -> Font Installer (click on 'Administrator mode' and add the Windows Font folder).</para></answer>
 </qandaentry>
 <qandaentry>
@@ -558,8 +553,8 @@ path.</para> </answer>
 <para>The letters on the icons on the Special Characters Toolbar are too small for some languages.</para>
 </question>
 <answer>
-<para>&klettres; in Czech and Slovak needs Arial and if you don't have this font installed, please ask your distribution support how to install it.</para> 
-<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via KControl -> System Administration -> Font Installer (click on 'Administrator mode' and add the Windows Font folder).</para></answer>
+<para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
+<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -> System Administration -> Font Installer (click on 'Administrator mode' and add the Windows Font folder).</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
