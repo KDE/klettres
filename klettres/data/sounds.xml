@@ -6,6 +6,9 @@
    Modify this file if you want to add new sounds
    or modify existing ones. If you do that, don't forget to update
    klettresui.rc if you add a new language support (actions associated with menu items).
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
 -->
 
 <klettres>
@@ -100,11 +103,25 @@
 	<sound name="X" file="da/alpha/a-23.mp3" />
 	<sound name="Y" file="da/alpha/a-24.mp3" />
 	<sound name="Z" file="da/alpha/a-25.mp3" />
+	<sound name="Æ" file="da/alpha/a-26.mp3" />
+	<sound name="Ø" file="da/alpha/a-27.mp3" />
+	<sound name="Å" file="da/alpha/a-28.mp3" />
     </alphabet>
 
     <syllables>
-	<sound name="AD" file="da/syllab/ad-0.mp3" />
+    	<sound name="AD" file="da/syllab/ad-0.mp3" />
 	<sound name="BE" file="da/syllab/ad-1.mp3" />
+	<sound name="BÅ" file="da/syllab/ad-2.mp3" />
+	<sound name="DA" file="da/syllab/ad-3.mp3" />
+	<sound name="DY" file="da/syllab/ad-4.mp3" />
+	<sound name="EN" file="da/syllab/ad-5.mp3" />
+	<sound name="ER" file="da/syllab/ad-6.mp3" />
+	<sound name="ET" file="da/syllab/ad-7.mp3" />
+	<sound name="ES" file="da/syllab/ad-8.mp3" />
+	<sound name="FO" file="da/syllab/ad-9.mp3" />
+	<sound name="GA" file="da/syllab/ad-10.mp3" />
+	<sound name="HU" file="da/syllab/ad-11.mp3" />
+	<sound name="HØ" file="da/syllab/ad-12.mp3" />
 	<sound name="IN" file="da/syllab/ad-13.mp3" />
 	<sound name="LE" file="da/syllab/ad-14.mp3" />
 	<sound name="ME" file="da/syllab/ad-15.mp3" />
@@ -118,6 +135,8 @@
 	<sound name="TE" file="da/syllab/ad-23.mp3" />
 	<sound name="UD" file="da/syllab/ad-24.mp3" />
 	<sound name="VI" file="da/syllab/ad-25.mp3" />
+	<sound name="VÆ" file="da/syllab/ad-26.mp3" />
+	<sound name="ÅR" file="da/syllab/ad-27.mp3" />
     </syllables>
 
   </language>

@@ -178,8 +178,10 @@ void KLettres::changeLanguage(uint newLanguage)
 
 bool KLettres::loadLayout(QDomDocument &layoutDocument)
 {
-  QFile layoutFile(QFile::encodeName(locate("data", "klettres/data/sounds.xml")));
-  if (!layoutFile.exists())
+  //QFile layoutFile(QFile::encodeName(locate("data", "klettres/data/sounds.xml")));
+  QFile layoutFile(locate("data", "klettres/data/sounds.xml"));
+  //if xml file is not found, program exits
+   if (!layoutFile.exists())
      {
      kdWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/data/" <<endl;
      QString mString=i18n("The sounds.xml file was not found in\n"
