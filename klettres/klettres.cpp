@@ -266,14 +266,14 @@ void KLettres::newToolbarConfig()
 
 void KLettres::loadSettings()
 {
+    loadLanguages();
     KConfig *config = kapp->config();
-    QString option;
     config->setGroup("General");
-    //if no language, default language is french
-    option = config->readEntry("LanguageNumber", "2");
-    selectedLanguage = option.toInt();
-    if (selectedLanguage <= 0) selectedLanguage = 0;
-    if (selectedLanguage > 3) selectedLanguage = 3;
+    //if no language, default language is KDE language or French if KDE language is not cz, fr, da or nl
+    selectedLanguage = config->readNumEntry("LanguageNumber", defaultLang);
+    kdDebug() << selectedLanguage << endl;
+    if (selectedLanguage >= (int) m_languages.count())
+                selectedLanguage = 2;
     //if no style, default style is grownup
     style=config->readEntry("myStyle", "grownup");
     //if no level, default level is 1= easy
@@ -281,6 +281,30 @@ void KLettres::loadSettings()
     config->setGroup("Font");
     //if no font, defalut font is Charter, size 48, bold
     newFont=QFont(config->readEntry("Family", "Charter"), config->readNumEntry("Size", 48), config->readNumEntry("Weight", 75),  false);
+}
+
+void KLettres::loadLanguages()
+{
+     //the program scans in klettres/ to see what languages data is found
+    QStringList dirs = KGlobal::dirs()->findDirs("data", "klettres");
+    for (QStringList::Iterator it = dirs.begin(); it != dirs.end(); ++it ) {
+	QDir dir(*it);
+	m_languages += dir.entryList(QDir::Dirs, QDir::Name);
+    }
+    m_languages.remove(m_languages.find("."));
+    m_languages.remove(m_languages.find(".."));
+    m_languages.remove(m_languages.find("pics"));
+    m_languages.remove(m_languages.find("data"));
+    //see what is the user language for KDE
+     //load the kdeglobals config file - safer way would be to load that one read-only
+    KConfigBase *globalConf = KGlobal::config();
+    globalConf->setGroup("Locale");
+    userLanguage = globalConf->readEntry("Language");
+    //keep only the first 2 characters
+    userLanguage = userLanguage.left(2);
+    defaultLang = m_languages.findIndex(userLanguage);
+    if (defaultLang == -1)
+	defaultLang = 2;
 }
 
 void KLettres::optionsPreferences()

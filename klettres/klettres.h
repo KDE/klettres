@@ -146,6 +146,12 @@ private:
      * @param int - The id of the new language
      */
     void updateLanguage(int );
+    /**
+     *see what languages data are present in the user machine
+     *see what language is used for KDE
+     *set the default language to that language if possible, to fr otherwise
+     */
+    void loadLanguages();
 
 private:
 
@@ -161,6 +167,12 @@ private:
     uint languages;
     ///Name of actions for registered languages
     QString languageActions[16];
+    ///Language codes of available languages
+    QStringList m_languages;
+    ///the language used in KDE for the user
+    QString userLanguage;
+    ///the language that is set to default: either userLanguage or en if userLanguage is not available
+    int defaultLang;
 };
 
 #endif // _KLETTRES_H_
