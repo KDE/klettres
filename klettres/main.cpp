@@ -54,6 +54,8 @@ int main(int argc, char **argv)
     	    I18N_NOOP("Code for generating special characters' icons"), "peter@peterandlinda.com");
    about.addCredit("Waldo Bastian",
    	   I18N_NOOP("Port to KConfig XT, coding help"), "bastian@kde.org");
+   about.addCredit("Danny Allen",
+		   I18N_NOOP("Kids and grownup svg icons"), "dannya40uk@yahoo.co.uk");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;
