@@ -22,9 +22,9 @@
 #include "khsplash.h"
 
 static const char *description =
-	I18N_NOOP("KLettres");
+	I18N_NOOP("Teaches the sounds of letters in French");
 // INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
-	
+
 	
 static KCmdLineOptions options[] =
 {
