@@ -303,7 +303,7 @@
 	<sound name="Ľ" file="sk/alpha/a-20.ogg" />
 	<sound name="M" file="sk/alpha/a-21.ogg" />
 	<sound name="N" file="sk/alpha/a-22.ogg" />
-	<sound name="Ľ" file="sk/alpha/a-23.ogg" />
+	<sound name="Ň" file="sk/alpha/a-23.ogg" />
 	<sound name="O" file="sk/alpha/a-24.ogg" />
 	<sound name="Ó" file="sk/alpha/a-25.ogg" />
 	<sound name="Ô" file="sk/alpha/a-26.ogg" />
@@ -393,7 +393,7 @@
 	<sound name="SÚ" file="sk/syllab/ad-66.ogg" />
 	<sound name="TO" file="sk/syllab/ad-67.ogg" />
 	<sound name="ŤA" file="sk/syllab/ad-68.ogg" />
-	<sound name="ŤU" file="sk/syllab/ad-698.ogg" />
+	<sound name="ŤU" file="sk/syllab/ad-69.ogg" />
 	<sound name="TU" file="sk/syllab/ad-70.ogg" />
 	<sound name="VA" file="sk/syllab/ad-71.ogg" />
 	<sound name="VE" file="sk/syllab/ad-72.ogg" />
