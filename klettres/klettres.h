@@ -117,6 +117,10 @@ private slots:
 	 */
 	void updateLevMenu(int );
 	/**
+	 *Change from kid look to grownUp look and viceversa
+	 */
+	void switchLook();
+	/**
 	 *Switch to another language
 	 *@param - newLanguage the index of the new language in m_languages
 	 */
@@ -152,6 +156,8 @@ private:
 	KToggleAction *m_action;
 	///Action that calls the Font Chooser Dialog
 	KAction *fontAct;
+	
+	KAction *changeLookAction;
 	
 	KAction *timerAct;
 	///Second toolbar with buttons of special characters per language

@@ -90,6 +90,9 @@ KLettres::KLettres()
 	//toolbar for special characters
 	secondToolbar = toolBar("secondToolbar");
 	
+	changeLookAction = new KAction(i18n("Switch to the kid look"), "kids.png", this, SLOT(switchLook()), actionCollection());
+	changeLookAction->plug(tb);
+	
 	//from the Read config, growup is set as default if no style
 	if (Prefs::style() == Prefs::EnumStyle::grownup)
 		slotGrownup();
@@ -228,6 +231,12 @@ void KLettres::optionsPreferences()
 	dialog->show();
 }
 
+void KLettres::switchLook()
+{
+	if (grownBool) slotGrownup();
+	else slotKid();
+}
+
 void KLettres::slotGrownup()
 {
 	QPalette pal;
@@ -240,9 +249,10 @@ void KLettres::slotGrownup()
 	langLabel->setFont(f_lab);
 	m_action->setChecked(true);
 	slotMenubar();
-	if (grownBool) tb->removeItem(ID_GROWNB);
-	tb->insertButton ("kids.png", ID_KIDB, SIGNAL( clicked() ), this, SLOT( slotKid()), true, i18n("Switch to the kid look"), 9 );
+	changeLookAction->setText(i18n("Switch to the kid look"));
+	changeLookAction->setIcon("kids.png");
 	kidBool=true;
+	grownBool=false;
 	m_view->slotGrownup();
 	secondToolbar->setIconSize(22);
 	setMinimumSize( QSize( 640, 538 ) );
@@ -262,9 +272,10 @@ void KLettres::slotKid()
 	langLabel->setFont(f_lab);
 	m_action->setChecked(false);
 	slotMenubar();
-	if (kidBool) tb->removeItem(ID_KIDB);
-	tb->insertButton ("grownup.png", ID_GROWNB, SIGNAL( clicked() ), this, SLOT( slotGrownup()), true, i18n("Switch to the grown-up look"),10 );
+	changeLookAction->setText(i18n("Switch to the grown-up look"));
+	changeLookAction->setIcon("grownup.png");
 	grownBool=true;
+	kidBool=false;
 	m_view->slotKid();
 	secondToolbar->setIconSize(32);
 	setMinimumSize( QSize( 640, 480 ) );
@@ -278,14 +289,13 @@ void KLettres::slotMenubar()
 		case false:
 			m_action->setChecked(false);
 			menuBar()->hide();
-			if (menuBool) tb->removeItem(ID_MENUBARB);//check if it is already here. if yes, remove it
-			tb->insertButton ("menubar.png", ID_MENUBARB, SIGNAL( clicked() ), this, SLOT( slotShowM()), true, i18n("Show the MenuBar"), 8 );
+			m_action->plug(tb);
 			menuBool=true;
 			break;
 		case true:
 			m_action->setChecked(true);
 			menuBar()->show();
-			if (menuBool) tb->removeItem(ID_MENUBARB);
+			if (menuBool) m_action->unplug(tb);
 			menuBool=false;//false if no menubar button
 			break;
 		}
