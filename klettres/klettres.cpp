@@ -16,6 +16,7 @@
  ***************************************************************************/
 
 #include "klettres.h"
+#include "version.h"
 
 #include <kglobalsettings.h>
 
@@ -24,7 +25,7 @@ int n=0, niveau=1;
 
 KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name)
 {
-   setCaption( i18n( "KLettres - version 1.3" ) );
+   setCaption( i18n( "KLettres - version %1" ).arg(KLETTRES_VERSION) );
 
 	//Actions
 	setupActions();
