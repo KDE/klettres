@@ -90,8 +90,9 @@ bool SoundFactory::registerLanguages(QDomDocument &layoutDocument)
   {
     languageElement = (const QDomElement &) languagesList.item(i).toElement();
     codeAttribute = languageElement.attributeNode("code");
+    //here it looks in $KDEDIR/share/apps/klettres and in $KDEHOME/share/apps/klettres
+    //which is $HOME/.kde/share/apps/klettres/
     enabled = locate("data", "klettres/" + codeAttribute.value() + "/") != 0;
-
     menuItemsList = languageElement.elementsByTagName("menuitem");
     if (menuItemsList.count() != 1)
       return false;
