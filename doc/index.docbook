@@ -29,8 +29,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2004-05-07</date>
-<releaseinfo>1.3</releaseinfo>
+<date>2005-03-15</date>
+<releaseinfo>1.4</releaseinfo>
 
 <abstract>
 <para>
@@ -39,10 +39,10 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Seven languages are available at the moment: Czech, Danish, Dutch, English, French, Italian and Slovak.
+Nine languages are available at the moment: Czech, Danish, Dutch, English, French, Italian, Romanized Hindi, Spanish and Slovak but only English, French and your language if it is among those are installed by default.
 </para>
 <para>
-KLettres is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar. Finally, the style can be changed from kid to grown-up using a button in the toolbar.
+KLettres is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar or via the Level menu. Themes (background and font color) can be changed in a drop down box or in the Look -> Themes menu. Three themes are available: classroom, arctic and desert. Finally, the mode can be changed from kid to grown-up using the Look -> Mode menu.
 </para>
 </abstract>
 
@@ -57,6 +57,8 @@ KLettres is really easy to use. The language can be changed using the Languages 
 <keyword>English</keyword>
 <keyword>French</keyword>
 <keyword>Italian</keyword>
+<keyword>Romanized Hindi</keyword>
+<keyword>Spanish</keyword>
 <keyword>Slovak</keyword>
 <keyword>language</keyword>
 </keywordset>
@@ -75,7 +77,7 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are seven languages available at the moment: Czech, Danish, Dutch, English, French, Italian and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get A New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
+<para>There are nine languages available at the moment: Czech, Danish, Dutch, English, French, Italian, Romanized Hindi, Spanish and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get A New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
 
 <para>Two different Look and Feels allow you to adapt &klettres; to
 your need.  For a child, the menu bar and the language button are not
@@ -115,11 +117,11 @@ that you do the game together.</para>
 	</mediaobject>
 </screenshot>
 
-<para>This screenshot shows &klettres; defaults: level is Level 1, language is French
-and look-and-feel is <emphasis>grown-up</emphasis>.</para>
+<para>This screenshot shows &klettres; defaults: level is Level 1, language is French, theme is desert
+and mode is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
-If your KDE language is set to Czech, Danish, Dutch, English, French, Italian or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default. KLettres comes with French and your default language if among those listed above and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get A New Language...</guimenuitem> provided you have an internet connection.
+If your KDE language is set to Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default. KLettres comes with French and your default language if among those listed above and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get A New Language...</guimenuitem> provided you have an internet connection.
 </para>
 </note>
 <para>
