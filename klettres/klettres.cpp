@@ -16,9 +16,7 @@
 #include <kkeydialog.h>
 #include <kaccel.h>
 #include <kfiledialog.h>
-#include <kconfig.h>
 #include <kedittoolbar.h>
-#include <kstatusbar.h>
 #include <kstdaccel.h>
 #include <kaction.h>
 #include <kstdaction.h>

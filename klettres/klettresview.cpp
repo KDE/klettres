@@ -12,7 +12,6 @@
 #include <kdebug.h>
 #include <klocale.h>
 #include <kmessagebox.h>
-#include <klocale.h>
 //C++ includes
 #include <stdlib.h>
 #include <string.h>
