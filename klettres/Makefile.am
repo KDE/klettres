@@ -4,34 +4,17 @@ bin_PROGRAMS = klettres
 ## INCLUDES were found outside kdevelop specific part
 
 klettres_SOURCES = pref1ui.ui pref2ui.ui klettres.cpp main.cpp klettresview.cpp pref.cpp
-klettres_LDADD   =  $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT) $(LIBSOCKET)
+klettres_LDADD   = $(LIB_KDEUI)
 
-SUBDIRS = pics French Dutch Danish
-
-EXTRA_DIST = main.cpp klettres.cpp klettres.h klettres.desktop lo32-app-klettres.png lo16-app-klettres.png cr16-app-klettres.png cr32-app-klettres.png klettresview.cpp pref1ui.ui pref2ui.ui pref.h klettresview.h lo32-app-klettres.xcf klettresui.rc
+SUBDIRS = pics 
 
 desktopdir = $(kde_appsdir)/Edutainment/Languages
-
 desktop_DATA = klettres.desktop
 
 appdir = $(kde_datadir)/klettres
-
 app_DATA = klettresui.rc
 
 ####### kdevelop will overwrite this part!!! (end)############
-# this 10 paths are KDE specific. Use them:
-# kde_htmldir       Where your docs should go to. (contains lang subdirs)
-# kde_appsdir       Where your application file (.kdelnk) should go to.
-# kde_icondir       Where your icon should go to.
-# kde_minidir       Where your mini icon should go to.
-# kde_datadir       Where you install application data. (Use a subdir)
-# kde_locale        Where translation files should go to.(contains lang subdirs)
-# kde_cgidir        Where cgi-bin executables should go to.
-# kde_confdir       Where config files should go to.
-# kde_mimedir       Where mimetypes should go to.
-# kde_toolbardir    Where general toolbar icons should go to.
-# kde_wallpaperdir  Where general wallpapers should go to.
-
 # set the include path for X, qt and KDE
 INCLUDES= $(all_includes)
 
@@ -44,19 +27,28 @@ KDE_ICON = klettres
 # the library search path.
 klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
-# Uncomment the following two lines if you add a ui.rc file for your application to make use of
-# KDE
-#rcdir = $(kde_datadir)/klettres
-#rc_DATA = klettresui.rc
-
-#WARNING: if you use a ui.rc file above, use:
-
-# messages: rc.cpp
-
-# instead of
-
-# messages:
-
 messages: rc.cpp
 	$(XGETTEXT) *.cpp -o $(podir)/klettres.pot;
+
+LANGS = Danish Dutch French
+SUBS = alpha data syllab
+
+install-data-local:
+	@for lang in $(LANGS); do \
+		for sub in $(SUBS); do \
+		   $(mkinstalldirs) $(DESTDIR)$(kde_datadir)/klettres/$$lang/$$sub ;\
+		   list=`cd $(srcdir)/$$lang/$$sub && ls -1d *` ;\
+		   for file in $$list; do \
+			if test -f $(srcdir)/$$lang/$$sub/$$file; then \
+			    echo $(INSTALL_DATA) $(srcdir)/$$lang/$$sub/$$file $(DESTDIR)$(kde_datadir)/klettres/$$lang/$$sub/$$file ;\
+			    $(INSTALL_DATA) $(srcdir)/$$lang/$$sub/$$file $(DESTDIR)$(kde_datadir)/klettres/$$lang/$$sub/$$file ;\
+			fi ;\
+		   done ;\
+		done ;\
+	done
+
+uninstall-local:
+	for lang in $(LANGS); do \
+		rm -rf $(DESTDIR)$(kde_datadir)/klettres/$$lang ;\
+	done
 
