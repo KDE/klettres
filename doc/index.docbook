@@ -41,6 +41,9 @@ the basics of a foreign language. </para>
 <para>
 Four languages are available at the moment: Czech, Danish, Dutch and French.
 </para>
+<para>
+KLettres is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar. Finally, the style can be changed from kid to grown-up using a button in the toolbar.
+</para>
 </abstract>
 
 <keywordset>
@@ -74,9 +77,9 @@ and French.</para>
 <para>Two different Look and Feel allow you to adapt &klettres; to
 your need.  For a child, the menu bar and the language button are not
 visible. We assume that a child will not want to set the language
-himself.  A box allows him to choose the different levels. For an
+himself.  A drop-down box allows him to choose the different levels. For an
 older user, the background is not so childish and the menuBar is
-present.</para>
+present in the Grown-Up style.</para>
 
 <note>
 <para>To use Czech or Danish as a learning language, you need to have the
@@ -109,8 +112,8 @@ that you do the game together.</para>
 	</mediaobject>
 </screenshot>
 
-<para>This screenshot shows &klettres; on Level 1, language is Dutch
-and look-and-feel is <quote>grown-up</quote>.</para>
+<para>This screenshot shows &klettres; defaults: level is Level 1, language is French
+and look-and-feel is <emphasis>grown-up</emphasis>.</para>
 
 <para>
 In level 1, the user sees the letter and hears the sound. He then has to type
@@ -126,9 +129,6 @@ that a child will match them with the keyboard. He can type only one letter at a
 time.</para>
 </note>
 
-<para>
-Default is Level 1 when you run &klettres;.
-</para>
 <para>The first time &klettres; is run, default is set to French and
 Level 1.
 After the first time, the language setting is saved in a configuration file
@@ -136,22 +136,22 @@ on closing of &klettres; and loaded the next time, with Level 1.
 </para>
 <para>The look-and-feel is saved in the config file and therefore
 is kept until you change.</para>
-<para>The letters appear in random order. </para>
+<para>The letters appear in random order. They are not the same consecutively. </para>
 
 <para>
 <screenshot>
-<screeninfo>Screenshot of &klettres; Level 3</screeninfo>
+<screeninfo>Screenshot of &klettres; Level 2</screeninfo>
 	<mediaobject>
 	  <imageobject>
-	    <imagedata fileref="klettres3.png" format="PNG"/>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
 	  </imageobject>
 	   <textobject>
-	    <phrase>&klettres; level3</phrase>
+	    <phrase>&klettres; level2</phrase>
 	  </textobject>
 	</mediaobject>
 </screenshot>
 </para>
-<para>Here is a screenshot of Level 1 with the <quote>kid</quote> look and French language.</para>
+<para>Here is a screenshot of Level 2 with the <emphasis>kid</emphasis> look and Danish language.</para>
 
 <para>Clicking in the <guilabel>Level</guilabel> combo-box and choosing <guilabel>Level
 2</guilabel> or using the <guimenu>Levels</guimenu> menu brings you to level 2. In that level, the user only
@@ -167,7 +167,7 @@ is wrong, the letter appears to help him. </para>
 <screeninfo>Screenshot of &klettres; Level 3</screeninfo>
 	<mediaobject>
 	  <imageobject>
-	    <imagedata fileref="klettres2.png" format="PNG"/>
+	    <imagedata fileref="klettres3.png" format="PNG"/>
 	  </imageobject>
 	   <textobject>
 	    <phrase>&klettres; level3</phrase>
@@ -176,7 +176,7 @@ is wrong, the letter appears to help him. </para>
 </screenshot>
 </para>
 
-<para>Here you can see &klettres; level 3, <quote>grown-up</quote> look-and-feel and Dutch language.
+<para>Here you can see &klettres; level 3, <quote>grown-up</quote> look-and-feel and Czech language.
 </para>
 
 <para>
@@ -198,7 +198,7 @@ three, it depends of the language.</para>
 	</mediaobject>
 </screenshot>
 
-<para>Here you can see &klettres; level 4, <quote>kid</quote> look-and-feel and French language.
+<para>Here you can see &klettres; level 4, <emphasis>kid</emphasis> look-and-feel and Dutch language.
 </para>
 
 <para>The sounds appear in random order. </para> <para>Clicking in the
@@ -207,6 +207,25 @@ and choosing <guilabel>Level 4</guilabel> brings you
 to level 4. In that level, the user only hears the sound of the
 syllable and has to type in the letters. This level is quite difficult
 for a young child. </para>
+
+<para>
+There is one more setting you can change: the font that displays the letters. In some distribution, the default font used from the system is really ugly. In Grow-up style, in the Settings menu, there is a Change Font menu item that brings you a font chooser dialog.
+</para>
+
+<screenshot>
+<screeninfo>Screenshot of &klettres; Font Chooser Dialog</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres5.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase>&klettres; Font Chooser Dialog</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para>Here you can see &klettres; Font Chooser Dialog.
+</para>
 
 </sect1>
 </chapter>
@@ -340,7 +359,7 @@ path.</para> </answer>
 <para>In order for me to add a new language, I need the sounds
 for the alphabet and some basic syllables. Someone speaking natively
 the new language must record these sounds in wav, mp3 or preferably, ogg format. For levels 3
-and 4, the syllables must be choosen by a teacher: these must be the
+and 4, the syllables must be choosen by a teacher or someone who knows how children learn: these must be the
 syllables you have to learn just after the alphabet in order to learn
 well the basics of this language. Please send me a mail if you are
 able to do that.</para> </answer>
