@@ -262,7 +262,7 @@ void KLettres::loadSettings()
     QString langString = m_languageNames[selectedLanguage];
     langString.replace("&", QString::null);
     m_langLabel->setText(i18n("Current language is %1").arg(langString));
-    // loadLangToolBar();
+    loadLangToolBar();
     // load default level
     kdDebug() << "Level ---- : " << Prefs::level() << endl;
     //m_levelCombo->setCurrentItem(Prefs::level()-1);
@@ -350,7 +350,7 @@ void KLettres::slotChangeLanguage(int newLanguage)
     QString langString = m_languageNames[newLanguage];
     langString.replace("&", QString::null);
     m_langLabel->setText(i18n("Current language is %1").arg(langString));
-    // loadLangToolBar();
+    loadLangToolBar();
     // Change language effectively
     kdDebug() << "In change language " << Prefs::language() << endl;
     bool ok = loadLayout(soundFactory->m_layoutsDocument);
@@ -425,6 +425,38 @@ void KLettres::slotModeKid()
     m_view->m_timer = Prefs::kidTimer();
     Prefs::setMode(Prefs::EnumMode::kid);
     Prefs::writeConfig();
+}
+
+void KLettres::loadLangToolBar()
+{
+    m_secondToolbar->clear();
+    if (m_languages[selectedLanguage]== "cs" || m_languages[selectedLanguage]== "da" || m_languages[selectedLanguage]== "sk" || m_languages[selectedLanguage]== "es")//Dutch, English, French and Italian have no special characters
+    {
+        allData.clear();
+        QString myString=QString("klettres/%1.txt").arg(m_languages[selectedLanguage]);
+        QFile myFile;
+        myFile.setName(locate("data",myString));
+        if (!myFile.exists())
+        {
+            QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
+                                    "please check your installation.").arg(m_languages[selectedLanguage]);
+            KMessageBox::sorry( this, mString,
+                                    i18n("Error") );
+            kapp->quit();
+        }
+        update();
+        //we open the file and store info into the stream...
+        QFile openFileStream(myFile.name());
+        openFileStream.open(IO_ReadOnly);
+        QTextStream readFileStr(&openFileStream);
+        readFileStr.setEncoding(QTextStream::UnicodeUTF8);
+        //allData contains all the words from the file
+        allData = QStringList::split("\n", readFileStr.read(), true);
+        openFileStream.close();
+        for (int i=0; i<(int) allData.count(); i++) {
+            m_secondToolbar->insertButton (charIcon(allData[i].at(0)), i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
+        }
+    }
 }
 
 QString KLettres::charIcon(const QChar & c)

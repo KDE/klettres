@@ -120,6 +120,10 @@ protected:
     void updateLevMenu(int );
     ///Create a KNewStuff instance
     KLNewStuff *mNewStuff;
+    ///Set the correct buttons on the second toolbar according to the language
+    void loadLangToolBar();
+    ///All the special characters from a language file, these characters will be as buttons on the Special Characters Toolbar
+    QStringList allData;
 
     protected slots:
     ///Call the Get New Stuff dialog
