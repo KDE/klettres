@@ -49,7 +49,7 @@ public:
 
 	QString s[30], sd[30], a1, t1, sb, s1, sj, st;
 	QString langLoc;
-	int l1, l2, n, niveau, num;
+	int l, l1, l2, n, niveau, num, temp;
 	int length, input;
 	QString string1, string2, dataString;
 	QString style;
@@ -73,6 +73,7 @@ public slots:
 	void slotLet2(const QString& );
 	void timerDone();
 	void play();
+	void slotChooseSound();
 };
 
 #endif // _KLETTRESVIEW_H_

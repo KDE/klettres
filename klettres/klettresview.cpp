@@ -45,6 +45,7 @@ KLettresView::KLettresView(QWidget *parent)
     pm_k.load(locate("data","klettres/pics/klettres_back.jpeg"));
     //maybe a warning if background pics are not found
     n = 0;
+    temp=-1;
 }
 
 KLettresView::~KLettresView()
@@ -91,8 +92,8 @@ void KLettresView::game()
 	button1->setMaximumSize( QSize( 200, 160 ) );
 	line1->setMinimumSize( QSize( 140, 160 ) );
 	line1->setMaximumSize( QSize( 140, 160 ) );
-	srand((unsigned int)time((time_t *)NULL));
-	n=rand()%l1;     //choose a random number
+	l=l1;
+	slotChooseSound();
 	dataString=QString("klettres/%1/data/level1.txt").arg(langLoc);  //dataString holds the data file name
 	string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);
 	 play();
@@ -111,8 +112,8 @@ void KLettresView::game()
 
     if (niveau==3 || niveau==4)
     {
-	srand((unsigned int)time((time_t *)NULL));
-	n=rand()%l2;
+	l=l2;
+	slotChooseSound();
 	dataString=QString("klettres/%1/data/level3.txt").arg(langLoc);  //dataString holds the data file name
 	string2=QString("klettres/%1/syllab/ad-%2.mp3").arg(langLoc).arg(n);
         play();
@@ -165,8 +166,8 @@ void KLettresView::timer1()
 	line1->selectAll();
 	if ((button1->text())==t1)
 	{
-		srand((unsigned int)time((time_t *)NULL));
-		n=rand()%l1;
+		l=l1;
+		slotChooseSound();
 		dataString=QString("klettres/%1/data/level1.txt").arg(langLoc);
 		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(langLoc).arg(n);
 		play();
@@ -286,6 +287,21 @@ void KLettresView::play()
 					exit(1);
 			}
 		KAudioPlayer::play(string1);
+}
+
+void KLettresView::slotChooseSound()
+{
+	srand((unsigned int)time((time_t *)NULL));
+	n=rand()%l;
+	//have not 2 same sounds consecutively
+	if (temp<0)
+		temp=n;
+	else
+	{
+		while (n==temp)
+			n=rand()%l;
+		temp=n;
+	}
 }
 
 #include "klettresview.moc"
