@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     about.addCredit("Ana Belén Caballero and Juan Pedro Paredes",
                     I18N_NOOP("Spanish sounds"), "neneta @iquis.com");
     about.addCredit("Vikas Kharat",
-                    I18N_NOOP("Romanized HIndi sounds"), "kharat@sancharnet.in");
+                    I18N_NOOP("Romanized Hindi sounds"), "kharat@sancharnet.in");
     about.addCredit("Primoz Anzur",
                     I18N_NOOP("Icons"), "zerokode@yahoo.com");
     about.addCredit("Renaud Blanchard",
