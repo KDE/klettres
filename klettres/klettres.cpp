@@ -2,6 +2,7 @@
  * Copyright (C) 2001-2003 Anne-Marie Mahfouf <annma@kde.org>
  */
 
+#include <qtooltip.h>
 //KDE headers
 #include <kcombobox.h>
 #include <ktoolbar.h>
@@ -53,6 +54,7 @@ KLettres::KLettres()
 	tb->insertSeparator(3, 3);
 	tb->insertWidget(4, 100, lev_comb, 4); //id, width, widget, index
     connect( lev_comb, SIGNAL( activated(int) ), this, SLOT( slotNext(int) ) );
+	QToolTip::add(lev_comb, i18n("Change the level of difficulty"));
 	tb->insertSeparator(5, 5);
 	//Language combobox
 	lang_comb= new KComboBox(tb);
@@ -61,6 +63,7 @@ KLettres::KLettres()
     lang_comb->insertItem( i18n( "French" ) );
 	tb->insertWidget(6, 100, lang_comb, 6); //id, width, widget,
 	connect(lang_comb, SIGNAL(activated(int)), this, SLOT(changeNumeration(int)));
+	QToolTip::add(lang_comb, i18n("Change the language to learn"));
 	tb->insertSeparator(7, 7);
 
 	//Set up StatusBar
