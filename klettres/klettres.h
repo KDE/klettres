@@ -173,8 +173,6 @@ private:
     QStringList m_languageNames;
     ///second toolbar with buttons of special characters per language
     KToolBar *secondToolbar;
-    
-     QStringList m_sortedNames;
 };
 
 #endif // _KLETTRES_H_
