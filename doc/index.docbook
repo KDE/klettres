@@ -39,7 +39,7 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Six languages are available at the moment: Czech, Danish, Dutch, French, Italian and Slovak.
+Seven languages are available at the moment: Czech, Danish, Dutch, English, French, Italian and Slovak.
 </para>
 <para>
 KLettres is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar. Finally, the style can be changed from kid to grown-up using a button in the toolbar.
@@ -54,6 +54,7 @@ KLettres is really easy to use. The language can be changed using the Languages 
 <keyword>Czech</keyword>
 <keyword>Danish</keyword>
 <keyword>Dutch</keyword>
+<keyword>English</keyword>
 <keyword>French</keyword>
 <keyword>Italian</keyword>
 <keyword>Slovak</keyword>
@@ -74,7 +75,7 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are six languages available at the moment: Czech, Danish, Dutch, French, Italian and Slovak. If your KDE language is Czech, Danish, Dutch, French, Italian or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get A New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
+<para>There are seven languages available at the moment: Czech, Danish, Dutch, English, French, Italian and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get A New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
 
 <para>Two different Look and Feels allow you to adapt &klettres; to
 your need.  For a child, the menu bar and the language button are not
@@ -118,7 +119,7 @@ that you do the game together.</para>
 and look-and-feel is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
-If your KDE language is set to Czech, Danish, Dutch, French, Italian or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default. KLettres comes with French and your default language if among those listed above and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get A New Language...</guimenuitem> provided you have an internet connection.
+If your KDE language is set to Czech, Danish, Dutch, English, French, Italian or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default. KLettres comes with French and your default language if among those listed above and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get A New Language...</guimenuitem> provided you have an internet connection.
 </para>
 </note>
 <para>
@@ -438,11 +439,6 @@ You can also choose here the size you like the best.
 <title>Adding Sounds to &klettres;</title>
 
 <para>
-The English sounds are the most needed at the moment. They
-would be the default language if the user language is not available.
-</para>
-
-<para>
 If you would like to add sounds in your own language, it is very easy to do so. Record the alphabet sounds and place them in a folder named 'alpha'. Please write the letters (one per line) in a text file and save it with utf8 encoding in the 'alpha' folder. Then record the most current syllables and put them in a folder named 'syllab'. Write the syllables (one per line) in a text file and save it with utf8 encoding in the 'syllab' folder. The sounds should be in wav or ogg format and long enough for KAudioPlayer to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me. Additionally you can tell me about special letters in your language so I can easily generate the Special Characters Toolbar.  
 </para>
 
@@ -485,7 +481,7 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only six languages?</para>
+<para>Why are there only seven languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
@@ -524,6 +520,8 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>silviamotycka@seznam.cz</email></para></listitem>
 <listitem><para>Italian sounds: Alessandro Pasotti
 <email>alessandro@acqualba.it</email></para></listitem>
+<listitem><para>English sounds: Robert Wadley
+<email>robntina AT juno DOT com</email></para></listitem>
 <listitem><para>Background picture: Renaud Blanchard
 <email>kisukuma@chez.com</email></para> </listitem>
 <listitem><para>Original icons:  Primoz Anzur
