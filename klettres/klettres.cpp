@@ -14,7 +14,7 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     */
-    
+
 #include <qbitmap.h>
 #include <qpainter.h>
 #include <qtooltip.h>
@@ -61,11 +61,11 @@ KLettres::KLettres()
 	soundFactory->change(selectedLanguage);
 	// then, setup our actions, must be done after loading soundFactory as it has some actions too
 	setupActions();
-	
+
 	menuBool=false; //false when menubar button is not shown
 	kidBool=false;//false when kid button not shown
 	grownBool=false;
-	
+
 	tb = toolBar("mainToolBar");
 	//Levels comboBox
 	lev_comb= new KComboBox(tb);
@@ -79,7 +79,7 @@ KLettres::KLettres()
 	QToolTip::add(lev_comb, i18n("Change the level of difficulty"));
 	QWhatsThis::add(lev_comb, i18n( "Use this box to choose the level of difficulty" ));
 	tb->insertSeparator(5, 5);
-	
+
 	//toolbar for special characters
 	secondToolbar = toolBar("secondToolbar");
 	//Set up StatusBar
@@ -95,9 +95,9 @@ KLettres::KLettres()
 		slotGrownup();
 	else
 		slotKid();
-	
+
 	updateLevMenu(Prefs::level()-1);
-	
+
 	m_view->selectedLanguage = selectedLanguage;
 	//write the present languages in config so they cannot be downloaded
 	KConfig *config=kapp->config();
@@ -109,7 +109,7 @@ KLettres::KLettres()
 			config->writeEntry(tmp, QDate::currentDate().toString());
 	}
 	updateLanguage();
-	
+
 	m_view->game();
 }
 
@@ -121,13 +121,14 @@ void KLettres::setupActions()
 {
 	new KAction( i18n("Get A New Language..."), "knewstuff", 0, this, SLOT( downloadNewStuff() ), actionCollection(), "downloadnewstuff" );
 	KStdAction::quit(kapp, SLOT(quit()), actionCollection());
-	
+
 	m_action = new KToggleAction(i18n("Show &Menubar"),CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
+	m_action->setCheckedState(i18n("Hide &Menubar"));
 	m_action->setChecked(true);
-	
+
 	createStandardStatusBarAction();
 	setStandardToolBarMenuEnabled(true);
-	
+
 	KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
 	KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
 	fontAct = new KAction(i18n("Change &Font..."), "fonts", CTRL+Key_F, this, SLOT(optionsPreferences()), actionCollection(), "font");
@@ -136,9 +137,9 @@ void KLettres::setupActions()
 	m_languageAction->setItems(m_languageNames);
 	if (selectedLanguage < m_languageNames.count())
 		m_languageAction->setCurrentItem(selectedLanguage);
-	
+
 	connect(m_languageAction, SIGNAL(activated(int)), this, SLOT(changeLanguage(int)));
-	
+
 	setAutoSaveSettings("General");
 	createGUI();
 }
@@ -163,7 +164,7 @@ void KLettres::changeLanguage(int newLanguage)
 	// write new language in config file
 	Prefs::setLanguageNumber(selectedLanguage);
 	Prefs::writeConfig();
-	
+
 	// Update the StatusBar
 	updateLanguage();
 	// Change language effectively
@@ -194,7 +195,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 		return false;
 	}
 	layoutFile.close();
-	
+
 	return true;
 }
 
@@ -389,7 +390,7 @@ QString Prefs::defaultLanguage()
 
 void KLettres::downloadNewStuff()
 {
-	if ( !mNewStuff ) 
+	if ( !mNewStuff )
 		mNewStuff = new KLNewStuff( m_view );
  	mNewStuff->download();
 }
@@ -398,27 +399,27 @@ QString KLettres::charIcon(const QChar & c)
 {
 	///Create a name and path for the icon
 	QString s = locateLocal("icon", "char" + QString::number(c.unicode()) + ".png");
-	
+
 	///No need to redraw if it already exists
 	// if (KStandardDirs::exists(s))
 	// return s;
-	
+
 	QRect r(4, 4, 120, 120);
-	
+
 	///A font to draw the character with
 	QFont font;
 	font.setFamily( "Arial" );
 	font.setPixelSize(120);
 	font.setWeight(QFont::Normal);
-	
-	///Create the pixmap        
+
+	///Create the pixmap
 	QPixmap pm(128, 128);
 	pm.fill(Qt::white);
 	QPainter p(&pm);
 	p.setFont(font);
 	p.setPen(Qt::black);
 	p.drawText(r, Qt::AlignCenter, (QString) c);
-	
+
 	///Create transparency mask
 	QBitmap bm(128, 128);
 	bm.fill(Qt::color0);
@@ -426,13 +427,13 @@ QString KLettres::charIcon(const QChar & c)
 	b.setFont(font);
 	b.setPen(Qt::color1);
 	b.drawText(r, Qt::AlignCenter, (QString) c);
-	
+
 	///Mask the pixmap
-	pm.setMask(bm); 
-	
+	pm.setMask(bm);
+
 	///Save the icon to disk
 	pm.save(s, "PNG");
-	
+
 	return s;
 }
 
