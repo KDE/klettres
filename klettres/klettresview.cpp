@@ -44,7 +44,7 @@ KLettresView::KLettresView(KLettres *parent)
     cg.setColor( QColorGroup::Background, QColor(53,87,158));
     pal.setActive( cg );
     button1->setPalette( pal );
-    button1->setText( i18n( "A" ) );
+    button1->setText( "");
     QToolTip::add( button1, i18n( "You must type the letter/syllable you hear and/or see in the field below" ) );
     //lineEdit for user input
     line1 = new QLineEdit( this, "line1" );
