@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 {
 
   KAboutData aboutData( "klettres", I18N_NOOP("KLettres"),
-    VERSION, description, KAboutData::License_GPL,
+    version, description, KAboutData::License_GPL,
     "(c) 2001, Anne-Marie Mahfouf", 0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
   aboutData.addAuthor("Anne-Marie Mahfouf",0, "annma@kde.org");
   KCmdLineArgs::init( argc, argv, &aboutData );

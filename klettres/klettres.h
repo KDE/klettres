@@ -41,7 +41,7 @@
 #include <kstddirs.h>
 #include <khelpmenu.h>
 #include <kpopupmenu.h>
-#include <kaboutdata.h>
+
 //C++ includes
 #include <stdlib.h>
 #include <string.h>
@@ -52,7 +52,6 @@
 
 class KHelpMenu;
 class KPopupMenu;
-class KAboutData;
 
 /** KLettres is the base class of the project */
 class KLettres : public KLettresDlg
@@ -61,7 +60,6 @@ class KLettres : public KLettresDlg
 
   private:
   KHelpMenu *mHelpMenu;
-  KAboutData *aboutDataMenu;
 
   public:
     /** construtor */
