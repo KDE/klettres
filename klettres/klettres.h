@@ -85,6 +85,7 @@ private slots:
 	void updateLangMenu(int );
 
 	void setLang();
+	void slotChangeFont();
 
 private:
     void setupAccel();
@@ -101,6 +102,7 @@ private:
 	KSelectAction *levels_menu;
 	KSelectAction *language_menu;
 	KSelectAction *look_menu;
+	KAction *fonts_menu;
 };
 
 #endif // _KLETTRES_H_

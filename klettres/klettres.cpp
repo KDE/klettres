@@ -22,6 +22,7 @@
 #include <kstdaccel.h>
 #include <kaction.h>
 #include <kstdaction.h>
+#include <kfontdialog.h>
 //Project headers
 #include "klettres.h"
 
@@ -120,6 +121,8 @@ void KLettres::setupActions()
 
     KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
     KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
+
+    fonts_menu = new KAction(i18n("&Change Font"),0, this, SLOT(slotChangeFont()),actionCollection(), "fonts");
 
     //Settings ->Levels menu item
     QStringList levels_list;
@@ -389,5 +392,21 @@ void KLettres::updateLevMenu(int id)
     levLabel->setText(i18n("Current level is %1").arg(m_view->niveau));
 }
 
+void KLettres::slotChangeFont()
+{
+    KFontDialog fdlg (0L, 0L, false, true);
+    fdlg.setCaption(i18n("Choose New Font"));
+    QFont newFont(KGlobalSettings::largeFont());
+    newFont.setBold(true);
+    fdlg.setFont(newFont);
+    if (fdlg.exec() == QDialog::Accepted ) {
+      newFont = fdlg.font();
+      newFont.setWeight(QFont::Normal);
+      newFont.setStrikeOut(false);
+      newFont.setUnderline(false);
+      m_view->button1->setFont(newFont);
+      m_view->line1->setFont(newFont);
+	}
+}
 
 #include "klettres.moc"
