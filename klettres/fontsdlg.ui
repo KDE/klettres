@@ -1,0 +1,40 @@
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<class>fontsdlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>fontsdlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>487</width>
+            <height>293</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="KFontChooser" row="0" column="0">
+            <property name="name">
+                <cstring>mFont</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <family>Arial</family>
+                    <pointsize>48</pointsize>
+                    <bold>1</bold>
+                </font>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kfontdialog.h</includehint>
+</includehints>
+</UI>

@@ -132,10 +132,10 @@ private slots:
       * @param int - The id of the new level
       */
     void updateLevMenu(int );
-    ///Set current font in LineEdit line1 and PushButton button1 in KLettresView
-    void slotSetFont();
-    ///When Apply button in Preferences dialog is clicked, refresh view
-    void slotClickApply();
+       /**Read settings from KLettres config file
+    *If no config file found, put French as default
+    */
+    void loadSettings();
     ///Switch to language #0 Czech
     void language0();
     ///Switch to language #1 danish
@@ -173,10 +173,6 @@ private:
     void setupAccel();
     ///Setup our actins using klettresui.rc
     void setupActions();
-   /**Read settings from KLettres config file
-    *If no config file found, put French as default
-    */
-    void loadSettings();
     /**
      * Set the label in the StatusBar to indicate the correct language
      * @param int - The id of the new language

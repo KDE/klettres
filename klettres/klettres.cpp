@@ -32,9 +32,10 @@
 #include <kedittoolbar.h>
 #include <kaction.h>
 #include <kfontdialog.h>
+#include <kautoconfigdialog.h>
 //Project headers
 #include "klettres.h"
-#include "pref.h"
+#include "fontsdlg.h"
 //standard C++ headers
 #include <stdlib.h>
 #include <unistd.h>
@@ -85,8 +86,6 @@ KLettres::KLettres()
     st->insertFixedItem("", 1);//add a space
     st->addWidget(langLabel);
     statusBar();
-
-    slotSetFont();//set the font from config
     //from the Read config, growup is set as default if no style
     if (style=="grownup") slotGrownup();
 	else slotKid();
@@ -301,16 +300,18 @@ void KLettres::loadSettings()
     config->setGroup("General");
     //if no language, default language is KDE language or French if KDE language is not cz, fr, da or nl
     selectedLanguage = config->readNumEntry("LanguageNumber", defaultLang);
-    kdDebug() << selectedLanguage << endl;
     if (selectedLanguage >= (int) m_languages.count())
                 selectedLanguage = 2;
     //if no style, default style is grownup
     style=config->readEntry("myStyle", "grownup");
     //if no level, default level is 1= easy
     m_view->niveau=config->readNumEntry("myLevel", 1);
-    config->setGroup("Font");
-    //if no font, defalut font is Charter, size 48, bold
-    newFont=QFont(config->readEntry("Family", "Charter"), config->readNumEntry("Size", 48), config->readNumEntry("Weight", 75),  false);
+    config->setGroup("mFont");
+    //if no font, defalut font is default size 48, bold
+    QFont defaultFont = KGlobalSettings::largeFont();
+    defaultFont.setPointSize(48);
+    defaultFont.setBold(true);
+    m_view->setFont(config->readFontEntry("mFont", &defaultFont));
 }
 
 void KLettres::loadLanguages()
@@ -339,26 +340,15 @@ void KLettres::loadLanguages()
 
 void KLettres::optionsPreferences()
 {
-    KLettresPreferences dlg;
-    dlg.resize(530, 450);
-    dlg.configChanged = false;
-    QObject::connect(&dlg, SIGNAL(aClicked()), this, SLOT(slotClickApply()));
-    if (dlg.exec())
-    {
-        // redo your settings
-    }
-}
+	if(KAutoConfigDialog::showDialog("settings"))
+		return;
 
-//when Apply button in Preferences dialog is clicked, refresh view
-void KLettres::slotClickApply()
-{
-      KLettresPreferences dlg;
-     //refresh the font when changed in pref dialog
-      if (newFont.family() != dlg.newFont.family() ||  newFont.pointSize() != dlg.newFont.pointSize() || newFont.weight() != dlg.newFont.weight())
-      {
-	newFont = dlg.newFont;
-	slotSetFont();
-      }
+	KAutoConfigDialog *dialog = new KAutoConfigDialog(this, "settings");
+	dialog->addPage(new fontsdlg(0, "mFont"), i18n("Font Settings"), "mFont", "fonts");
+	//fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
+	// Font is the config entry, fonts is the icon
+	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(loadSettings()));
+	dialog->show();
 }
 
 void KLettres::slotGrownup()
@@ -457,19 +447,6 @@ void KLettres::updateLevMenu(int id)
 {
     lev_comb->setCurrentItem(id);
     levLabel->setText(i18n("Current level is %1").arg(m_view->niveau));
-}
-
-///Set new font after a change in the Configure KLettres dialog
-void KLettres::slotSetFont()
-{
-     if (newFont.pointSize()==1)
-    {
-    	newFont=QFont(KGlobalSettings::largeFont());
-    	newFont.setBold(true);
-    }
-    //otherwise newFont=read from config
-    m_view->button1->setFont(newFont);
-    m_view->line1->setFont(newFont);
 }
 
 void KLettres::loadLangToolBar()
