@@ -433,7 +433,7 @@ would be the default language if the user language is not available.
 </question>
 <answer>
 <para>You need to configure with the <option>--prefix</option> option
-set to your &kde; directory or to add this directory to your
+set to your &kde; folder or to add this folder to your
 path.</para> </answer>
 </qandaentry>
 <qandaentry>
