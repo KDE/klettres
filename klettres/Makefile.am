@@ -8,7 +8,7 @@ klettres_LDADD   =  $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT) $(LIBSOCKET)
 
 SUBDIRS = pics French Dutch Danish
 
-EXTRA_DIST = main.cpp klettres.cpp klettres.h klettres.desktop lo32-app-klettres.png lo16-app-klettres.png hi16-app-klettres.png hi32-app-klettres.png khsplash.cpp khsplash.h lo32-app-klettres.xcf klettresui.rc 
+EXTRA_DIST = main.cpp klettres.cpp klettres.h klettres.desktop lo32-app-klettres.png lo16-app-klettres.png cr16-app-klettres.png cr32-app-klettres.png khsplash.cpp khsplash.h lo32-app-klettres.xcf klettresui.rc 
 
 desktopdir = $(kde_appsdir)/Edutainment/Languages
 
