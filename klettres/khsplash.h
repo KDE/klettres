@@ -38,8 +38,6 @@ public:
 public slots: // Public slots
   /** No descriptions */
   void slotHide();
-  /** No descriptions */
-  void slotAnother();
 
 };
 

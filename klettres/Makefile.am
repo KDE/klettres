@@ -1,9 +1,9 @@
 ####### kdevelop will overwrite this part!!! (begin)##########
 bin_PROGRAMS = klettres
-klettres_SOURCES = khsplash.cpp klettresdlg.cpp klettres.cpp main.cpp 
+klettres_SOURCES = khsplash.cpp klettresdlg.ui  klettres.cpp main.cpp 
 klettres_LDADD   =  $(LIB_KDEUI) 
 
-SUBDIRS = sons sons2 
+SUBDIRS = sons sons2 pics
 
 KDE_ICON = klettres
 
@@ -28,7 +28,9 @@ METASOURCES = AUTO
 klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
 messages: 
-	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o -name \*.hxx -o -name \*.hpp -o -name \*.cpp -o -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o -name \*.C`; \
+	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o -name \*.hxx -o -name
+ \*.hpp -o -name \*.cpp -o -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o -name
+ \*.C`; \
 	if test -n "$$LIST"; then \
 	 $(XGETTEXT) $$LIST -o $(podir)/klettres.pot; \
 	fi

@@ -1,9 +1,9 @@
 /***************************************************************************
                           klettres.h  -  description
                              -------------------
-    begin                : Thu Feb 15 12:17:03 GMT 2001
+    begin                : Wed Oct 17 17:12:06 BST 2001
     copyright            : (C) 2001 by Anne-Marie Mahfouf
-    email                : a-m.mahfouf@lineone.net
+    email                : annma@kde.org
  ***************************************************************************/
 
 /***************************************************************************
@@ -25,33 +25,37 @@
 //Qt includes
 #include <qaccel.h>
 #include <qlabel.h>
+#include <qpixmap.h>
 #include <qpushbutton.h>
 #include <qtimer.h>
 #include <qwidget.h>
+#include <qfile.h>
+#include <qtextstream.h>
 //KDE includes
 #include <kapp.h>
+#include <kaudioplayer.h>
 #include <kcombobox.h>
 #include <klineedit.h>
+#include <klocale.h>
+#include <kmessagebox.h>
+#include <kstddirs.h>
 //C++ includes
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 //project includes
 #include <klettresdlg.h>
-#include <kaudioplayer.h>
-#include <kstddirs.h>
-#include <qfile.h>
-#include <qtextstream.h>
 
 /** KLettres is the base class of the project */
 class KLettres : public KLettresDlg
 {
-  Q_OBJECT 
+  Q_OBJECT
   public:
     /** construtor */
     KLettres(QWidget* parent=0, const char *name=0);
     /** destructor */
     ~KLettres();
+
 public slots: // Public slots
   /** No descriptions */
   void game();
@@ -81,3 +85,4 @@ signals:
    };
 
 #endif
+

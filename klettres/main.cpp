@@ -1,9 +1,9 @@
 /***************************************************************************
                           main.cpp  -  description
                              -------------------
-    begin                : Fri Mar  2 11:18:33 GMT 2001
+    begin                : Wed Oct 17 17:12:06 BST 2001
     copyright            : (C) 2001 by Anne-Marie Mahfouf
-    email                : a-m.mahfouf@lineone.net
+    email                : annma@kde.org
  ***************************************************************************/
 
 /***************************************************************************
@@ -37,14 +37,14 @@ int main(int argc, char *argv[])
 
   KAboutData aboutData( "klettres", I18N_NOOP("KLettres"),
     VERSION, description, KAboutData::License_GPL,
-    "(c) 2001, Anne-Marie Mahfouf");
-  aboutData.addAuthor("Anne-Marie Mahfouf",0, "a-m.mahfouf@lineone.net");
+    "(c) 2001, Anne-Marie Mahfouf", 0, 0, "annma@kde.org");
+  aboutData.addAuthor("Anne-Marie Mahfouf",0, "annma@kde.org");
   KCmdLineArgs::init( argc, argv, &aboutData );
   KCmdLineArgs::addCmdLineOptions( options ); // Add our own options.
 
-  KApplication a;
-  KhSplash *splash=new KhSplash();
-  splash->show();
+   KApplication a;
+	KhSplash *splash=new KhSplash();
+	splash->show();
 
   return a.exec();
 }
