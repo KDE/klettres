@@ -5,9 +5,9 @@
 		<Action name="file_quit"/>
 	</Menu>
 		<Menu name="languages" noMerge="1"><text>&amp;Languages</text>
-		<Action name="data_da"/>
-		<Action name="data_du"/>
-		<Action name="data_fr"/>
+		<Action name="data_da"/><!--Danish-->
+		<Action name="data_nl"/><!--Dutch-->
+		<Action name="data_fr"/><!--French-->
 	</Menu>
 	 <Menu name="settings" noMerge="1"><text>&amp;Settings</text>
 		<Action name="menubar" />

@@ -26,27 +26,20 @@ KLettresPreferences::KLettresPreferences()
                   Help|Default|Ok|Apply|Cancel, Ok)
 {
     //read the config file to set everything accordingly
-    readConfig();
+    loadSettings();
     //GUI
     QFrame *frame;
-    frame = addPage(i18n("General"), i18n("General"), BarIcon("gear", KIcon::SizeMedium));
-    m_pageOne = new KLettresPrefPageOne(frame);
-    connect(m_pageOne->levelBox, SIGNAL(activated(int)), this, SLOT(slotChangeLevel(int)));
-    connect(m_pageOne->levelBox, SIGNAL(activated(int)), this, SLOT(slotChanged()));
-
-    QObject::connect(m_pageOne->lookGroup, SIGNAL(clicked(int)), this, SLOT(slotChangeLook(int)));
-    QObject::connect(m_pageOne->lookGroup, SIGNAL(clicked(int)), this, SLOT(slotChanged()));
 
     frame = addPage(i18n("Fonts"), i18n("Font settings"), BarIcon ("fonts", KIcon::SizeMedium));
-    m_pageTwo = new KLettresPrefPageTwo(frame);
+    m_pageOne = new KLettresPrefPageOne(frame);
 
-    connect (m_pageTwo->fdlg, SIGNAL (fontSelected( const QFont & )), this, SLOT (slotSetNewFont( const QFont & )));
+    connect (m_pageOne->fdlg, SIGNAL (fontSelected( const QFont & )), this, SLOT (slotSetNewFont( const QFont & )));
 
     frame = addPage(i18n("Language"), i18n("Sounds & Letters Language"), BarIcon ("locale", KIcon::SizeMedium));
-    m_pageThree = new KLettresPrefPageThree(frame);
+    m_pageTwo = new KLettresPrefPageTwo(frame);
 
-    QObject::connect(m_pageThree->langGroup, SIGNAL(clicked(int)), this, SLOT(slotLang(int)));
-    QObject::connect(m_pageThree->langGroup, SIGNAL(clicked(int)), this, SLOT(slotChanged()));
+    QObject::connect(m_pageTwo->langGroup, SIGNAL(clicked(int)), this, SLOT(slotLang(int)));
+    QObject::connect(m_pageTwo->langGroup, SIGNAL(clicked(int)), this, SLOT(slotChanged()));
 
     //set everything according to config file
     slotSet();
@@ -54,13 +47,8 @@ KLettresPreferences::KLettresPreferences()
     enableButton( Apply, false);
 }
 
-KLettresPrefPageOne::KLettresPrefPageOne(QWidget *parent)
-    : pref1ui(parent)
-{
-	adjustSize();
-}
 
-KLettresPrefPageTwo::KLettresPrefPageTwo(QWidget *parent)
+KLettresPrefPageOne::KLettresPrefPageOne(QWidget *parent)
     : QFrame(parent)
 {
  QHBoxLayout *layout = new QHBoxLayout(this);
@@ -70,27 +58,20 @@ KLettresPrefPageTwo::KLettresPrefPageTwo(QWidget *parent)
     adjustSize();
  }
 
- KLettresPrefPageThree::KLettresPrefPageThree(QWidget *parent)
+ KLettresPrefPageTwo::KLettresPrefPageTwo(QWidget *parent)
     : pref2ui(parent)
 {
 	adjustSize();
 }
 
-void KLettresPreferences::readConfig()
+void KLettresPreferences::loadSettings()
 {
    	KConfigBase *conf = kapp->config();
 	if (conf)
 	{
-    		conf->setGroup("Language");
+    		conf->setGroup("General");
     		langString=conf->readEntry("MyLanguage");
-		//read style and set default
-    		style=conf->readEntry("myStyle");
-		if (conf->hasKey("myStyle") == false)
-			style = "grownup";
-		//read level and set default
-    		niveau=conf->readNumEntry("myLevel");
-    		if (conf->hasKey("myLevel") == false)
-			niveau = 1;
+
 		//read font and set default
     		conf->setGroup("Font");
     		newFont=QFont(conf->readEntry("Family"), conf->readNumEntry("Size"), conf->readNumEntry("Weight"), false);
@@ -105,8 +86,6 @@ void KLettresPreferences::readConfig()
 //Set the system defaults
 void KLettresPreferences::slotDefault()
 {
-    niveau = 1;
-    style = "grownup";
     langString = "French";
     newFont = QFont(KGlobalSettings::largeFont());
     newFont.setBold(true);
@@ -127,7 +106,6 @@ void KLettresPreferences::slotApply()
 {
 	enableButton( Apply, false );
         configChanged = false;
-	writeConfig();
 	emit aClicked();
 }
 
@@ -139,41 +117,17 @@ void KLettresPreferences::slotCancel()
 
 void KLettresPreferences::slotSet()
 {
-    //first page
-    m_pageOne->levelBox->setCurrentItem(niveau-1);
-    if (style == "grownup")
-    	m_pageOne->grownupButton->setChecked(true);
-    if (style == "kid")
-    	m_pageOne->kidButton->setChecked(true);
-    //second page
-    m_pageTwo->newFont = newFont;
-    m_pageTwo->fdlg->setFont(newFont);
+    //font page
+    m_pageOne->newFont = newFont;
+    m_pageOne->fdlg->setFont(newFont);
     //third page
     if (langString == "Danish")
-    	m_pageThree->daBox->setChecked(true);
+    	m_pageTwo->daBox->setChecked(true);
     if (langString == "Dutch")
-    	m_pageThree->duBox->setChecked(true);
+    	m_pageTwo->duBox->setChecked(true);
     if (langString == "French")
-    	m_pageThree->frBox->setChecked(true);
+    	m_pageTwo->frBox->setChecked(true);
  }
-
-//Write settings in config
-void KLettresPreferences::writeConfig()
-{
-	KConfigBase *conf = kapp->config();
-	if (conf)
-	{
-		conf->setGroup("Language");
-		conf->writeEntry("MyLanguage", langString);
-    		conf->writeEntry("myLevel", niveau);
-		conf->writeEntry("myStyle", style);
-		conf->setGroup("Font");
-    		conf->writeEntry("Family", newFont.family());
-    		conf->writeEntry("Size", newFont.pointSize());
-    		conf->writeEntry("Weight", newFont.weight());
-		conf->sync();
-	}
-}
 
 //change Font, pass it to the main window and save it in config
 void KLettresPreferences::slotSetNewFont(const QFont &font)
@@ -182,6 +136,16 @@ void KLettresPreferences::slotSetNewFont(const QFont &font)
 	{
 		slotChanged();
 		newFont = font;
+	}
+	//write new font in config
+	KConfigBase *conf = kapp->config();
+	if (conf)
+	{
+		conf->setGroup("Font");
+    		conf->writeEntry("Family", newFont.family());
+    		conf->writeEntry("Size", newFont.pointSize());
+    		conf->writeEntry("Weight", newFont.weight());
+		conf->sync();
 	}
 }
 
@@ -193,28 +157,6 @@ void KLettresPreferences::slotChanged()
     configChanged = true;
 }
 
-void KLettresPreferences::slotChangeLevel(int id)
-{
-	m_pageOne->levelBox->setCurrentItem(id);
-	niveau = id+1;
-	enableButton( Apply, false );
-        configChanged = false;
-}
-
-void KLettresPreferences::slotChangeLook(int id)
-{
-    switch (id) {
-        case 0:
-            style = "grownup";
-            break;
-	case 1:
-            style = "kid";
-            break;
-    }
-    	writeConfig();
-	enableButton( Apply, false );
-        configChanged = false;
-}
 
 void KLettresPreferences::slotLang(int id)
 {
@@ -232,6 +174,14 @@ void KLettresPreferences::slotLang(int id)
 	slotSet();
 	enableButton( Apply, false );
         configChanged = false;
+	//write new language in config
+	KConfigBase *conf = kapp->config();
+	if (conf)
+	{
+		conf->setGroup("General");
+		conf->writeEntry("MyLanguage", langString);
+		conf->sync();
+	}
 }
 
 #include "pref.moc"

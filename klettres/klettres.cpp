@@ -76,9 +76,9 @@ KLettres::KLettres()
     st->addWidget(langLabel);
     statusBar()->show();
 
-    //Read config
+    //Load settings from config file
     //if not, put default as French
-    readConfig();
+    loadSettings();
     slotSetFont();//set the font from config
     if (!langString) //if there is no config file
     {
@@ -173,10 +173,10 @@ void KLettres::newToolbarConfig()
     applyMainWindowSettings( KGlobal::config(), autoSaveGroup() );
 }
 
-void KLettres::readConfig()
+void KLettres::loadSettings()
 {
     KConfig *config = kapp->config();
-    config->setGroup("Language");
+    config->setGroup("General");
     langString=config->readEntry("MyLanguage");
     style=config->readEntry("myStyle");
     m_view->niveau=config->readNumEntry("myLevel");
@@ -191,7 +191,7 @@ void KLettres::writeConfig()
 {
     //write current config
     KConfig *config = kapp->config();
-    config->setGroup("Language");
+    config->setGroup("General");
     config->writeEntry("MyLanguage", langString);
     config->writeEntry("myStyle", m_view->style);
     config->writeEntry("myLevel", m_view->niveau);
@@ -232,17 +232,7 @@ void KLettres::slotClickApply()
 	newFont = dlg.newFont;
 	slotSetFont();
       }
-      //refresh the level if changed
-      if (m_view->niveau != dlg.niveau)
-        slotChangeLevel(dlg.niveau-1);
-      //refresh the background if changed
-      if (style != dlg.style)
-      {
-      	style = dlg.style;
-	if (style=="grownup") slotGrownup();
-	else slotKid();
-      }
-      //refresh the language if changed
+     //refresh the language if changed
       if (langString!=dlg.langString)
       {
       	  langString = dlg.langString;
@@ -313,7 +303,7 @@ void KLettres::changeNumeration(int id)
     }
     language=i18n(langString.latin1());
     writeConfig();
-    readConfig();
+    loadSettings();
     langLabel->setText(i18n("Current language is %1").arg(language));
     language_menu->setCurrentItem(id);
     lang_comb->setCurrentItem(id);

@@ -133,13 +133,13 @@ private:
     ////Enable accel keys
     void setupAccel();
 
-    ///Setup our actins using klettresui.rc
+    ///Setup our actions using klettresui.rc
     void setupActions();
 
    /**Read settings from KLettres config file
     *If no config file found, put French as default
     */
-    void readConfig();
+    void loadSettings();
 
     ///Write settings in config file
     void writeConfig();

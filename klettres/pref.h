@@ -10,12 +10,10 @@
 #include <qframe.h>
 #include <qstring.h>
 
-#include "pref1ui.h"
 #include "pref2ui.h"
 
 class KLettresPrefPageOne;
 class KLettresPrefPageTwo;
-class KLettresPrefPageThree;
 
 class KLettresPreferences : public KDialogBase
 {
@@ -35,20 +33,19 @@ public:
 private:
     KLettresPrefPageOne *m_pageOne;
     KLettresPrefPageTwo *m_pageTwo;
-    KLettresPrefPageThree *m_pageThree;
 
 private slots:
-	void readConfig();
-	void writeConfig();
+        ///load settings from configuration file
+	void loadSettings();
 	void slotOk();
 	void slotApply();
 	void slotCancel();
 	void slotDefault();
 	void slotSet();
 	void slotChanged();
-	void slotChangeLevel(int);
-	void slotChangeLook(int);
+	///this slot is called when the user selects a new font
 	void slotSetNewFont(const QFont &);
+	///this slot is called when the user selects a new language
 	void slotLang(int);
 
 signals:
@@ -56,31 +53,23 @@ signals:
 
 };
 
-class KLettresPrefPageOne : public pref1ui
+
+class KLettresPrefPageOne : public QFrame
 {
     Q_OBJECT
 public:
     KLettresPrefPageOne(QWidget *parent = 0);
 
-private slots:
-
-};
-
-class KLettresPrefPageTwo : public QFrame
-{
-    Q_OBJECT
-public:
-    KLettresPrefPageTwo(QWidget *parent = 0);
-
     QFont newFont;
     KFontChooser *fdlg;
 };
 
-class KLettresPrefPageThree : public pref2ui
+
+class KLettresPrefPageTwo : public pref2ui
 {
     Q_OBJECT
 public:
-    KLettresPrefPageThree(QWidget *parent = 0);
+    KLettresPrefPageTwo(QWidget *parent = 0);
 
 private slots:
 
