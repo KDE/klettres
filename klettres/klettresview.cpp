@@ -155,7 +155,7 @@ void KLettresView::treat1(const QString& p)
 	QObject::disconnect(line1, SIGNAL(textChanged(const
  QString&)),this,SLOT(slotLet2(const QString&)) );
 	a1=line1->text();         //get text from LineEdit
-   t1.sprintf(a1.upper().latin1());    //put it in uppercase
+   	t1 = a1.upper();    //put it in uppercase
 	line1->selectAll();
 	line1->cut();
 	line1->setText(t1);     //display it in uppercase
@@ -205,11 +205,8 @@ void KLettresView::slotLet2(const QString& )
  		QString&)),this,SLOT(slotLet2(const QString&)) );
 
 	line1->setSelection(input-1,1);
-//	line1->cursorBackward(true);
-	bool test=line1->hasSelectedText();
-	kdDebug() << test <<endl;
 	a1=line1->selectedText();   //get the input letter
-	t1.sprintf(a1.upper().latin1()); //input in uppercase
+	t1 = a1.upper(); //input in uppercase
 	line1->cut();
 	line1->setText(line1->text()+t1);
     t1=line1->text(); //t1 is the whole lineEdit text now
