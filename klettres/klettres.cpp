@@ -99,7 +99,6 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
     //font for button and lineEdit
    //use largeFont()
    QFont f(KGlobalSettings::largeFont());
-	f.setFamily("SansSerif");
 	f.setBold(true);
    button1->setFont( f );
 	line1->setFont(f);
