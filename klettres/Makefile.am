@@ -3,12 +3,13 @@ bin_PROGRAMS = klettres
 
 ## INCLUDES were found outside kdevelop specific part
 
-klettres_SOURCES = fontsdlg.ui klettres.cpp main.cpp klettresview.cpp soundfactory.cpp
+klettres_SOURCES = fontsdlg.ui klettres.cpp main.cpp klettresview.cpp soundfactory.cpp prefs.kcfgc
 klettres_LDADD   = $(LIB_KDEUI)
 
 SUBDIRS = pics data
 
 xdg_apps_DATA = klettres.desktop
+kde_kcfg_DATA = klettres.kcfg
 
 appdir = $(kde_datadir)/klettres
 app_DATA = klettresui.rc

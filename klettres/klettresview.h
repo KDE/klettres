@@ -62,8 +62,6 @@ public:
 	///Palette changes wether it's kid or grown-up
 	QPalette pal;
         QColorGroup cg;
-	///Current level
-        int niveau;
         ///Random number that decides on the letter/syllable and sound
         int n;
         ///Temporary number to store the previous random and check that it's not twice the same
@@ -72,8 +70,6 @@ public:
         int length;
         ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch
         uint selectedLanguage;
-        ///Current style (kid or grownup)
-        QString style;
         ///Current letter or syllable stored
         QString st;
         ///Current input in line1

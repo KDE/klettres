@@ -21,7 +21,7 @@
         </property>
         <widget class="KFontChooser" row="0" column="0">
             <property name="name">
-                <cstring>mFont</cstring>
+                <cstring>kcfg_Font</cstring>
             </property>
             <property name="font">
                 <font>

@@ -19,6 +19,7 @@
 #include <qtimer.h>
 #include <qtooltip.h>
 //KDE headers
+#include <kapplication.h>
 #include <kdebug.h>
 #include <klocale.h>
 //C++ includes
@@ -28,7 +29,7 @@
 //Project headers
 #include "klettres.h"
 #include "klettresview.h"
-
+#include "prefs.h"
 
 KLettresView::KLettresView(KLettres *parent)
     : QWidget(parent)
@@ -68,7 +69,8 @@ KLettresView::~KLettresView()
 ///Set the GUI for the grownup look
 void KLettresView::slotGrownup()
 {
-    style="grownup";
+    Prefs::setStyle(Prefs::EnumStyle::grownup);
+    Prefs::writeConfig();
     setMinimumSize( QSize( 640, 480 ) );
     setMaximumSize( QSize( 640, 480 ) );
     setBackgroundPixmap(pm_a);
@@ -82,7 +84,8 @@ void KLettresView::slotGrownup()
 ///Set GUI for kid look
 void KLettresView::slotKid()
 {
-    style="kid";
+    Prefs::setStyle(Prefs::EnumStyle::kid);
+    Prefs::writeConfig();
     setMinimumSize( QSize( 640, 480 ) );
     setMaximumSize( QSize( 640, 480 ) );
     setBackgroundPixmap(pm_k);
@@ -105,13 +108,13 @@ void KLettresView::game()
  line1->setCursorPosition(0);
  line1->setFocus();
 
- if (niveau==1)
+ if (Prefs::level()==1)
 	button1->show();
 
-    if (niveau==2)
+    if (Prefs::level()==2)
 	button1->hide();
 
-    if (niveau==1||niveau==2)
+    if (Prefs::level()==1||Prefs::level()==2)
     {
 	button1->setMinimumSize( QSize( 200, 160 ) );
 	button1->setMaximumSize( QSize( 200, 160 ) );
@@ -125,13 +128,13 @@ void KLettresView::game()
  QString&)),this,SLOT(slotLet2(const QString&)) );
     }
 
-    if (niveau==3)
+    if (Prefs::level()==3)
 	button1->show();
 
-    if (niveau==4)
+    if (Prefs::level()==4)
 	button1->hide();
 
-    if (niveau==3 || niveau==4)
+    if (Prefs::level()==3 || Prefs::level()==4)
     {
         chooseSound();
 	if (length==2)
@@ -176,7 +179,7 @@ void KLettresView::treat1(const QString& )
 	line1->selectAll();
 	line1->cut();
 	line1->setText(t1);     //display it in uppercase
-	if (niveau==2)
+	if (Prefs::level()==2)
 		button1->hide();
 	QTimer *timer = new QTimer( this );
 	connect( timer, SIGNAL(timeout()),
@@ -193,7 +196,7 @@ void KLettresView::timer1()
 	}
 	else
 	{
-		if (niveau==2)
+		if (Prefs::level()==2)
 		button1->show(); //show letter after first miss
 		klettres->soundFactory->playSound(n);//replay sound
 	}
@@ -246,7 +249,7 @@ void KLettresView::timerDone()
 			line1->setCursorPosition(0 );
 			line1->setFocus();
 			line1->setMaxLength( 1 );
-      			if (niveau==4)
+      			if (Prefs::level()==4)
 			button1->hide();
 			game();  //another syllable
 		}
@@ -266,18 +269,17 @@ void KLettresView::timerDone()
 void KLettresView::chooseSound()
 {
 	input =1;
-	srand((unsigned int)time((time_t *)NULL));
         //If there are no sounds loaded
         if (klettres->soundFactory->sounds ==0)
         	return;
-	n=rand()%(klettres->soundFactory->sounds);//l;
+	n=kapp->random()%(klettres->soundFactory->sounds);//l;
 	//have not 2 same sounds consecutively
 	if (temp<0)
 		temp=n;
 	else
 	{
 		while (n==temp)
-			n=rand()%(klettres->soundFactory->sounds);
+			n=kapp->random()%(klettres->soundFactory->sounds);
 		temp=n;
 	}
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kcfg SYSTEM "http://www.kde.org/standards/kcfg/1.0/kcfg.dtd">
+<kcfg>
+  <kcfgfile name="klettresrc"/>
+  <group name="General">
+    <entry name="Language" type="String">
+      <code>(void)languages();</code>
+      <label>Language</label>
+      <default code="true">m_defaultLanguage</default>
+    </entry>
+    <entry name="Style" type="Enum" Key="myStyle">
+      <label>Style</label>
+      <choices>
+        <choice name="kid"/>
+        <choice name="grownup"/>
+      </choices>
+      <default>grownup</default>
+    </entry>
+    <entry name="Level" type="Int" Key="myLevel"> 
+      <label>Difficulty level.</label>
+      <min>1</min>
+      <max>4</max>
+      <default>1</default>
+    </entry>
+  </group>
+  <group name="mFont">
+    <entry name="Font" type="Font" Key="mFont">
+      <label>Font</label>
+      <code>QFont defaultFont = KGlobalSettings::largeFont();
+    defaultFont.setPointSize(48);
+    defaultFont.setBold(true);
+      </code>
+      <default code="true">defaultFont</default>
+    </entry>
+  </group>
+</kcfg>

@@ -30,6 +30,7 @@
 #include "soundfactory.h"
 #include "soundfactory.moc"
 #include "klettres.h"
+#include "prefs.h"
 
 ///Constructor
 SoundFactory::SoundFactory(KLettres *parent, const char *name, uint selectedLanguage)
@@ -38,6 +39,7 @@ SoundFactory::SoundFactory(KLettres *parent, const char *name, uint selectedLang
   klettres = parent;
 
   namesList = filesList = 0;
+  sounds = 0;
 
   QDomDocument layoutsDocument;
   bool ok = klettres->loadLayout(layoutsDocument);
@@ -147,7 +149,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
   languageElement = (const QDomElement &) languagesList.item(toLoad).toElement();
 
   //load the sounds for level 1 and 2 (alphabet)
-  if ((klettres->m_view->niveau == 1) || (klettres->m_view->niveau == 2))
+  if ((Prefs::level() == 1) || (Prefs::level() == 2))
   {
  	alphabetList = languageElement.elementsByTagName("alphabet");
     	if (alphabetList.count() != 1)
@@ -159,7 +161,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
   }
 
   //load the sounds for level 3 and 4 (syllables)
-  if ((klettres->m_view->niveau == 3) || (klettres->m_view->niveau == 4))
+  if ((Prefs::level() == 3) || (Prefs::level() == 4))
   {
  	syllablesList = languageElement.elementsByTagName("syllables");
     	if (syllablesList.count() != 1)

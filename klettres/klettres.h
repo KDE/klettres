@@ -63,8 +63,8 @@ public:
     KComboBox *lev_comb;
     ///Holds the i18n current language
    QString language;
-   ///Holds the non i18n language, style is the background mode, either kid or grownup
-   QString langString, style;
+   ///Holds the non i18n language
+   QString langString;
    //Holds the file from which the letters or syllables are read
    int length, input, num, numRead;
    ///is false when menubar button is not shown
@@ -205,12 +205,6 @@ private:
     uint languages;
     ///Name of actions for registered languages
     QString languageActions[16];
-    ///Language codes of available languages
-    QStringList m_languages;
-    ///the language used in KDE for the user
-    QString userLanguage;
-    ///the language that is set to default: either userLanguage or en if userLanguage is not available
-    int defaultLang;
     ///second toolbar with buttons of special characters per language
     KToolBar *secondToolbar;
 };

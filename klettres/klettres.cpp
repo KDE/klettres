@@ -32,10 +32,12 @@
 #include <kedittoolbar.h>
 #include <kaction.h>
 #include <kfontdialog.h>
-#include <kautoconfigdialog.h>
+#include <kconfigdialog.h>
 //Project headers
 #include "klettres.h"
 #include "fontsdlg.h"
+#include "prefs.h"
+
 //standard C++ headers
 #include <stdlib.h>
 #include <unistd.h>
@@ -87,12 +89,12 @@ KLettres::KLettres()
     st->addWidget(langLabel);
     statusBar();
     //from the Read config, growup is set as default if no style
-    if (style=="grownup") slotGrownup();
-	else slotKid();
+    if (Prefs::style() == Prefs::EnumStyle::grownup)
+        slotGrownup();
+    else
+        slotKid();
 
-    if (!m_view->niveau) m_view->niveau = 1;
-
-    updateLevMenu(m_view->niveau-1);
+    updateLevMenu(Prefs::level()-1);
 
     m_view->selectedLanguage = selectedLanguage;
     updateLanguage(selectedLanguage);
@@ -162,12 +164,9 @@ void KLettres::changeLanguage(uint newLanguage)
   // Change language in the remembered options
   selectedLanguage = newLanguage;
   // write new language in config file
-  KConfig *config = kapp->config();
-  if (config)
-  {
-    config->setGroup("General");
-    config->writeEntry("LanguageNumber", selectedLanguage);
-  }
+  Prefs::setLanguageNumber(selectedLanguage);
+  Prefs::writeConfig();
+
   // Update the StatusBar
   updateLanguage(selectedLanguage);
   // Change language effectively
@@ -295,59 +294,20 @@ void KLettres::newToolbarConfig()
 
 void KLettres::loadSettings()
 {
-    loadLanguages();
-    KConfig *config = kapp->config();
-    config->setGroup("General");
-    //if no language, default language is KDE language or French if KDE language is not cz, fr, da or nl
-    selectedLanguage = config->readNumEntry("LanguageNumber", defaultLang);
-    if (selectedLanguage >= (uint) m_languages.count())
-                selectedLanguage = 2;
-    //if no style, default style is grownup
-    style=config->readEntry("myStyle", "grownup");
-    //if no level, default level is 1= easy
-    m_view->niveau=config->readNumEntry("myLevel", 1);
-    config->setGroup("mFont");
-    //if no font, defalut font is default size 48, bold
-    QFont defaultFont = KGlobalSettings::largeFont();
-    defaultFont.setPointSize(48);
-    defaultFont.setBold(true);
+    selectedLanguage = Prefs::languageNumber();
     //apply the font
-    m_view->setFont(config->readFontEntry("mFont", &defaultFont));
-}
-
-void KLettres::loadLanguages()
-{
-     //the program scans in klettres/ to see what languages data is found
-    QStringList dirs = KGlobal::dirs()->findDirs("data", "klettres");
-    for (QStringList::Iterator it = dirs.begin(); it != dirs.end(); ++it ) {
-	QDir dir(*it);
-	m_languages += dir.entryList(QDir::Dirs, QDir::Name);
-    }
-    m_languages.remove(m_languages.find("."));
-    m_languages.remove(m_languages.find(".."));
-    m_languages.remove(m_languages.find("pics"));
-    m_languages.remove(m_languages.find("data"));
-    //see what is the user language for KDE
-     //load the kdeglobals config file - safer way would be to load that one read-only
-    KConfigBase *globalConf = KGlobal::config();
-    globalConf->setGroup("Locale");
-    userLanguage = globalConf->readEntry("Language");
-    //keep only the first 2 characters
-    userLanguage = userLanguage.left(2);
-    defaultLang = m_languages.findIndex(userLanguage);
-    if (defaultLang == -1)
-	defaultLang = 2;
+    m_view->setFont(Prefs::font());
 }
 
 void KLettres::optionsPreferences()
 {
-	if(KAutoConfigDialog::showDialog("settings"))
+	if(KConfigDialog::showDialog("settings"))
 		return;
 
-	KAutoConfigDialog *dialog = new KAutoConfigDialog(this, "settings");
-	dialog->addPage(new fontsdlg(0, "mFont"), i18n("Font Settings"), "mFont", "fonts");
+	KConfigDialog *dialog = new KConfigDialog(this, "settings", Prefs::self());
+	dialog->addPage(new fontsdlg(0, "mFont"), i18n("Font Settings"), "fonts");
 	//fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
-	// Font is the config entry, fonts is the icon
+	//fonts is the icon
 	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(loadSettings()));
 	dialog->show();
 }
@@ -368,10 +328,6 @@ void KLettres::slotGrownup()
     tb->insertButton ("kids.png", ID_KIDB, SIGNAL( clicked() ), this, SLOT( slotKid()), true, i18n("Switch to the kid look"), 9 );
     kidBool=true;
     m_view->slotGrownup();
-    style = m_view->style;
-    KConfig *config = kapp->config();
-    config->setGroup("General");
-    config->writeEntry("myStyle", m_view->style);
     secondToolbar->setIconSize(22);
     setMinimumSize( QSize( 640, 538 ) );
     setMaximumSize( QSize( 640, 538 ) );
@@ -393,10 +349,6 @@ void KLettres::slotKid()
     tb->insertButton ("grownup.png", ID_GROWNB, SIGNAL( clicked() ), this, SLOT( slotGrownup()), true, i18n("Switch to the grown-up look"),10 );
     grownBool=true;
     m_view->slotKid();
-    style = m_view->style;
-    KConfig *config = kapp->config();
-    config->setGroup("General");
-    config->writeEntry("myStyle", m_view->style);
     secondToolbar->setIconSize(32);
     setMinimumSize( QSize( 640, 480 ) );
     setMaximumSize( QSize( 640, 480 ) );
@@ -432,14 +384,11 @@ void KLettres::slotShowM()
 
 void KLettres::slotChangeLevel(int id)
 {
-    m_view->niveau=id+1;
+    Prefs::setLevel(id+1);
+    Prefs::writeConfig();
     updateLevMenu(id);
     //Change level effectively by reloading sounds
     soundFactory->change(selectedLanguage);
-    //write new level in config file
-    KConfig *config = kapp->config();
-    config->setGroup("General");
-    config->writeEntry("myLevel", m_view->niveau);
     //update game effectively
     m_view->game();
 }
@@ -447,7 +396,7 @@ void KLettres::slotChangeLevel(int id)
 void KLettres::updateLevMenu(int id)
 {
     lev_comb->setCurrentItem(id);
-    levLabel->setText(i18n("Current level is %1").arg(m_view->niveau));
+    levLabel->setText(i18n("Current level is %1").arg(Prefs::level()));
 }
 
 void KLettres::loadLangToolBar()
@@ -597,6 +546,37 @@ void KLettres::slotPasteRacute()
 void KLettres::slotPasteUacute()
 {
 	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ú", -1));
+}
+
+QStringList Prefs::languages()
+{
+    if (m_languages.isEmpty())
+    {
+#if 1
+      // The language list is hardcoded for now because the rest of the
+      // program isn't flexible in handling other languages
+      m_languages << "cs" << "da" << "fr" << "nl" << "sk";
+#else
+      //the program scans in klettres/ to see what languages data is found
+      QStringList dirs = KGlobal::dirs()->findDirs("data", "klettres");
+      for (QStringList::Iterator it = dirs.begin(); it != dirs.end(); ++it ) {
+        QDir dir(*it);
+        m_languages += dir.entryList(QDir::Dirs, QDir::Name);
+      }
+      m_languages.remove(".");
+      m_languages.remove("..");
+      m_languages.remove("pics");
+      m_languages.remove("data");
+#endif      
+      
+      //see what is the user language for KDE
+      QStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
+      if (!defaultLanguages.isEmpty() && m_languages.contains(defaultLanguages[0]))
+         m_defaultLanguage = defaultLanguages[0];
+      else if (m_languages.contains("fr"))
+         m_defaultLanguage = "fr";
+   }
+   return m_languages;
 }
 
 #include "klettres.moc"
