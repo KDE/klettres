@@ -44,39 +44,39 @@ class SoundFactory : public QObject
 
 public:
 
-  SoundFactory(KLettres *parent, const char *name);
-  ~SoundFactory();
-
-  ///Change the language when the user changes the language in the Languages menu
-  void change(uint selectedLanguage);
-  ///Play the sound associated to int soundRef
- void playSound(int ) ;
-  ///Number of sounds corresponding to the current langauge and level (alphabet or syllables)
-  uint sounds;
-  ///List of sound names
-  QString *namesList;
-  ///List of sound files associated with each sound name
-  QString *filesList;
-  /**
- * Load the sounds of one given language
- * Call that when you read the language from Config and when the language changes
- * or when the level changes
- */
-  bool loadLanguage(QDomDocument &layoutDocument, uint toLoad);
+	SoundFactory(KLettres *parent, const char *name);
+	~SoundFactory();
+	
+	///Change the language when the user changes the language in the Languages menu
+	void change(uint selectedLanguage);
+	///Play the sound associated to int soundRef
+	void playSound(int ) ;
+	///Number of sounds corresponding to the current langauge and level (alphabet or syllables)
+	uint sounds;
+	///List of sound names
+	QString *namesList;
+	///List of sound files associated with each sound name
+	QString *filesList;
+	/**
+	* Load the sounds of one given language
+	* Call that when you read the language from Config and when the language changes
+	* or when the level changes
+	*/
+	bool loadLanguage(QDomDocument &layoutDocument, uint toLoad);
 
 protected:
 
-  ///Register the various available languages
-  bool registerLanguages(QDomDocument &layoutDocument);
+	///Register the various available languages
+	bool registerLanguages(QDomDocument &layoutDocument);
 
 private:
-  ///Report a load failure
-  void loadFailure();
+	///Report a load failure
+	void loadFailure();
 
 private:
-  ///Call the main instance of the program
-  KLettres *klettres;
-  ///The language document
+	///Call the main instance of the program
+	KLettres *klettres;
+	///The language document
   QDomDocument m_layoutsDocument;
 };
 

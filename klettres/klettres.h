@@ -90,7 +90,7 @@ public:
 	QStringList m_languageNames;
 	
 		///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch, 4 is Slovak
-	int selectedLanguage;
+	uint selectedLanguage;
 	
 		///Action that sets up the Language menu
 	KSelectAction *m_languageAction;

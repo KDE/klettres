@@ -154,7 +154,6 @@ void KLettres::registerLanguage(const QString &language, const QString &menuItem
 	KConfig entry(locate("locale", "all_languages"));
 	entry.setGroup(language);
 	m_languageNames.append(entry.readEntry("Name"));
-	
 	Prefs::setLanguages(m_languages);
 }
 
@@ -162,8 +161,7 @@ void KLettres::changeLanguage(int newLanguage)
 {
 	// Do not accept to switch to same language
 	if (newLanguage == selectedLanguage)
-	return;
-	
+		return;
 	// Change language in the remembered options
 	selectedLanguage = newLanguage;
 	// write new language in config file

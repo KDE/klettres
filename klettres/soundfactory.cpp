@@ -153,7 +153,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
 	
 		soundNamesList = syllableElement.elementsByTagName("sound");
 	}
-	///Counts the number of sounds
+	//Counts the number of sounds
 	sounds = soundNamesList.count();
 	if (sounds < 1)
 		return false;

@@ -23,6 +23,7 @@
 
 #include <kapplication.h>
 #include <kdebug.h>
+#include <kconfig.h>
 #include <ktar.h>
 #include <qdir.h>
 #include <kaction.h>
@@ -36,33 +37,48 @@ KLNewStuff::KLNewStuff( KLettresView *view ) :
 
 bool KLNewStuff::install( const QString &fileName )
 {
-  kdDebug(5850) << "KLNewStuff::install(): " << fileName << endl;
-
-  KTar archive( fileName );
-  if ( !archive.open( IO_ReadOnly ) )
-                 return false;
-  const KArchiveDirectory *archiveDir = archive.directory();
-  KStandardDirs myStdDir;
-  const QString destDir =myStdDir.saveLocation("data", kapp->instanceName() + "/", true);      
-  KStandardDirs::makeDir( destDir );
-  archiveDir->copyTo(destDir);
-  archive.close();
-  kdDebug() << "KLNewStuff::Dest Dir: " << destDir << endl;
-  //this return might be the result of checking if everything is installed ok
-  kdDebug() << "KLNewStuff::return "  << endl;
-  //there must be a more elegant way to do that
-  bool enabled;
-  enabled = locate("data", "klettres/it/") != 0;
-  if (enabled)
-		m_view->klettres->registerLanguage("it"," &amp;Italian");
-  kdDebug()<<m_view->klettres->m_languageNames<<endl;
-  m_view->klettres->m_languageAction->setItems(m_view->klettres->m_languageNames);
-  m_view->klettres->m_languageAction->setCurrentItem(m_view->klettres->selectedLanguage);
-  return true;
+	kdDebug(5850) << "KLNewStuff::install(): " << fileName << endl;
+	
+	KTar archive( fileName );
+	if ( !archive.open( IO_ReadOnly ) )
+			return false;
+	const KArchiveDirectory *archiveDir = archive.directory();
+	KStandardDirs myStdDir;
+	const QString destDir =myStdDir.saveLocation("data", kapp->instanceName() + "/", true);      
+	KStandardDirs::makeDir( destDir );
+	archiveDir->copyTo(destDir);
+	archive.close();
+	//look for languages dirs installed
+	QStringList mdirs = KGlobal::dirs()->findDirs("data", "klettres");
+	QStringList foundLanguages="";
+	for (QStringList::Iterator it =mdirs.begin(); it !=mdirs.end(); ++it ) {
+		QDir dir(*it);
+		foundLanguages += dir.entryList(QDir::Dirs, QDir::Name);
+		foundLanguages.remove(foundLanguages.find("."));
+		foundLanguages.remove(foundLanguages.find(".."));
+	}	
+	foundLanguages.remove(foundLanguages.find("data"));	
+	foundLanguages.remove(foundLanguages.find("pics"));	
+	foundLanguages.remove(foundLanguages.find(""));
+	//look for the new installed language: is in foundLanguages and not in m_languages
+	bool enabled;
+	QString tmp;
+	for (uint i=0;  i<foundLanguages.count(); i++)
+	{
+		if (m_view->klettres->m_languages.grep(foundLanguages[i]).isEmpty())
+			tmp = foundLanguages[i];
+	}
+	enabled = locate("data", "klettres/"+ tmp+"/") != 0; 		
+	//add the new language in the menu
+	if (enabled)
+		m_view->klettres->registerLanguage(tmp,"");			
+	m_view->klettres->m_languageAction->setItems(m_view->klettres->m_languageNames);
+	m_view->klettres->m_languageAction->setCurrentItem(m_view->klettres->selectedLanguage);
+	return true;
 }
 
 bool KLNewStuff::createUploadFile( const QString &fileName )
 {
-  //return mView->saveCalendar( fileName );
-  return true;
+	//return mView->saveCalendar( fileName );
+	return true;
 }
