@@ -1,6 +1,9 @@
 /*
  * Copyright (C) 2001-2003 Anne-Marie Mahfouf <annma@kde.org>
  */
+/*****************************************************/
+/* Please save with utf8 encoding, thanks  */
+/*****************************************************/
 
 #include <dcopclient.h>
 #include <kaboutdata.h>
@@ -14,7 +17,7 @@ static const char description[] =
 	I18N_NOOP("KLettres helps a very young child or an adult learning \n"
 		  "a new language by associating sounds and \n"
 		  "letters in this language.\n"
-		  "4 languages are available: Czech, Danish, Dutch and French.");
+		  "5 languages are available: Czech, Danish, Dutch, French and Slovak.");
 
 static KCmdLineOptions options[] =
 {
