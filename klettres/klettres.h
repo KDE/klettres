@@ -1,155 +1,111 @@
-/***************************************************************************
-                          klettres.h  -  description
-                             -------------------
-    begin                : Wed Oct 17 17:12:06 BST 2001
-    copyright            : (C) 2001 by Anne-Marie Mahfouf
-    email                : annma@kde.org
- ***************************************************************************/
+/*
+ * Copyright (C) 2001-2003 Anne-Marie Mahfouf <annma@kde.org>
+ */
 
-/***************************************************************************
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- ***************************************************************************/
-
-#ifndef KLETTRES_H
-#define KLETTRES_H
+#ifndef _KLETTRES_H_
+#define _KLETTRES_H_
 
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
 
-//Qt includes
-#include <qaccel.h>
-#include <qfont.h>
 #include <qlabel.h>
-#include <qpixmap.h>
-#include <qpushbutton.h>
-#include <qtimer.h>
-#include <qwidget.h>
-#include <qfile.h>
-#include <qtextstream.h>
-#include <qtooltip.h>
-//KDE includes
-#include <kaccelgen.h>
-#include <kaction.h>
+//KDE headers
 #include <kapplication.h>
-#include <kaudioplayer.h>
-#include <kcombobox.h>
-#include <kconfig.h>
-#include <kdebug.h>
-#include <khelpmenu.h>
-#include <klineedit.h>
-#include <klocale.h>
 #include <kmainwindow.h>
-#include <kmessagebox.h>
-#include <kmenubar.h>
-#include <kpopupmenu.h>
-#include <kstatusbar.h>
-#include <kstdaction.h>
-#include <kstandarddirs.h>
-#include <ktoolbar.h>
-//C++ includes
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
-//project includes
+//Project headers
+#include "klettresview.h"
 
-/** KLettres is the base class of the project */
+class KToggleAction;
+class KSelectAction;
+class KToolBar;
+class KComboBox;
+
+
+/**
+ * This class serves as the main window for KLettres.  It handles the
+ * menus, toolbars, and status bars.
+ */
 class KLettres : public KMainWindow
 {
-  Q_OBJECT
-  private:
-  KHelpMenu *mHelpMenu;
+    Q_OBJECT
+public:
 
-  public:
-    /** construtor */
-    KLettres(QWidget* parent=0, const char *name=0);
-    /** destructor */
-    ~KLettres();
- 	void play();
-	QString string1, string2, dataString;
-	QString language, langString, style, langLoc;
-	QFile lev1File;
-	int l1, l2, length, input, num, numRead;
+    KLettres();
 
-	KSelectAction *language_menu;
-	KSelectAction *levels_menu;
-	KSelectAction *look_menu;
-	KToggleAction *m_action;
-	KToggleAction *t_action;
-   KConfig *config;
-	void setupActions();
+    virtual ~KLettres();
 
-	KToolBar *tb;
-	KComboBox* lev_comb;
-	KComboBox* lang_comb;
-	QStringList lang_list;
-	QLabel* button1;
-    QLineEdit* line1;
 	QLabel *langLabel;
 	QLabel *levLabel;
 
-	QPixmap pm_k;
-	QPixmap pm_a;
+	KToolBar *tb;
+	KComboBox *lev_comb;
+	KComboBox *lang_comb;
 
-	 QPalette pal;
-    QColorGroup cg;
-
-public slots: // Public slots
-  /** No descriptions */
-  void game();
-  /** No descriptions */
-  void slotNext(int);
-  /** No descriptions */
-  void slotLet2(const QString&);
-  /** No descriptions */
-  void timer1();
-  /** No descriptions */
-  void timerDone();
-  /** No descriptions */
-  void treat1(const QString&);
-  /** No descriptions */
-  void slotBackground();
-   /** Choose Danish*/
-  void slotDanish();
-  /** Choose Dutch */
-  void slotDutch();
-  /** Choose French */
-  void slotFrench();
-  /** Update the Settings->Choose Language menu **/
-  void updateLangMenu(int);
-
-  void changeNumeration(int);
-  /** No descriptions */
-  void slotQuit();
-  /** Hide and Show the ToolBar */
-  void slotToolbar();
-  /** Hide and show the MenuBar */
-  void slotMenubar();
-  /** Update the Levels menu **/
-  /** No descriptions */
-  void slotKid();
-  /** No descriptions */
-  void slotGrownup();
-  /** No descriptions */
-  void updateLookMenu(int);
-  /** switch between different looks */
-  void changeLook(int);
-  void updateLevMenu(int);
-  /** No descriptions */
-  void slotShowM();
-
-signals:
-  /** No descriptions */
-  void newText( const QString& );
+	QString language, langString, style;
+	QFile lev1File;
+	int length, input, num, numRead;
+	bool menuBool;
+	bool kidBool;
+	bool grownBool;
 
 protected:
+    /**
+     * This function is called when it is time for the app to save its
+     * properties for session management purposes.
+     */
+    void saveProperties(KConfig *);
 
+    /**
+     * This function is called when this app is restored.  The KConfig
+     * object points to the session management config file that was saved
+     * with @ref saveProperties
+     */
+    void readProperties(KConfig *);
+
+
+private slots:
+    void optionsShowToolbar();
+    void optionsShowStatusbar();
+    void optionsConfigureKeys();
+    void optionsConfigureToolbars();
+    void newToolbarConfig();
+	void slotMenubar();
+	void slotShowM();
+
+	void slotQuit();
+	void slotGrownup();
+	void slotKid();
+	//look and feel menu
+	void changeLook(int );
+	void updateLookMenu(int );
+	//levels menu
+	void slotNext(int );
+	void updateLevMenu(int );
+	//language menu
+	void changeNumeration(int );
+	void updateLangMenu(int );
+
+	void setLang();
+
+private:
+    void setupAccel();
+    void setupActions();
+
+	void readConfig();
+	void writeConfig();
+
+private:
+    KLettresView *m_view;
+
+    KToggleAction *m_toolbarAction;
+    KToggleAction *m_statusbarAction;
+
+	KToggleAction *m_action;
+
+	KSelectAction *levels_menu;
+	KSelectAction *language_menu;
+	KSelectAction *look_menu;
 };
 
-#endif
-
+#endif // _KLETTRES_H_

@@ -3,12 +3,12 @@ bin_PROGRAMS = klettres
 
 ## INCLUDES were found outside kdevelop specific part
 
-klettres_SOURCES = khsplash.cpp klettres.cpp main.cpp 
+klettres_SOURCES = klettres.cpp main.cpp klettresview.cpp
 klettres_LDADD   =  $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT) $(LIBSOCKET)
 
 SUBDIRS = pics French Dutch Danish
 
-EXTRA_DIST = main.cpp klettres.cpp klettres.h klettres.desktop lo32-app-klettres.png lo16-app-klettres.png cr16-app-klettres.png cr32-app-klettres.png khsplash.cpp khsplash.h lo32-app-klettres.xcf klettresui.rc 
+EXTRA_DIST = main.cpp klettres.cpp klettres.h klettres.desktop lo32-app-klettres.png lo16-app-klettres.png cr16-app-klettres.png cr32-app-klettres.png klettresview.cpp klettresview.h lo32-app-klettres.xcf klettresui.rc
 
 desktopdir = $(kde_appsdir)/Edutainment/Languages
 
