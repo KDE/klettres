@@ -190,7 +190,7 @@ void KLettres::setupActions()
 
     m_levelAction = new KSelectAction(i18n("L&evel"), KShortcut(), actionCollection(), "levels");
     m_levelAction->setToolTip(i18n("Select the level"));
-    m_levelAction->setWhatsThis(i18n("You can select the level: level 1 displays a letter and you hear it, level 2 does not display the letter, you only hear it, level 3 displays a syllable and you hear it, level 4 does not display the syllable, you only hear it."));
+    m_levelAction->setWhatsThis(i18n("You can select the level: level 1 displays a letter and you hear it; level 2 does not display the letter, you only hear it; level 3 displays a syllable and you hear it; level 4 does not display the syllable, you only hear it."));
 
     m_languageAction = new KSelectAction(i18n("&Language"), KShortcut(), actionCollection(), "languages");
     m_languageAction->setItems(m_languageNames);
