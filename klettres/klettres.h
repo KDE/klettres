@@ -50,7 +50,7 @@
 #include <kpopupmenu.h>
 #include <kstatusbar.h>
 #include <kstdaction.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 #include <ktoolbar.h>
 //C++ includes
 #include <stdlib.h>
