@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2001-2003 Anne-Marie Mahfouf <annma@kde.org>
+ * Copyright (C) 2001-2004 Anne-Marie Mahfouf <annma@kde.org>
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of version 2 of the GNU General Public
@@ -86,6 +86,8 @@ public:
 	
 	///All available language codes
 	QStringList m_languages;
+	
+	QStringList allData;
 	///All available language names
 	QStringList m_languageNames;
 	
@@ -135,6 +137,7 @@ private slots:
 	void changeLanguage(int newLanguage);
 	void loadSettings();
 	
+	void slotPasteChar();
 	void slotPasteCcaron();
 	void slotPasteDcaron();
 	void slotPasteRcaron();
@@ -184,6 +187,8 @@ private:
 	KToolBar *secondToolbar;
 	
 	KLNewStuff *mNewStuff;
+	
+	QString charIcon(const QChar &);
 };
 
 #endif // _KLETTRES_H_
