@@ -30,17 +30,17 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2002-04-28</date>
+<date>2002-05-10</date>
 <releaseinfo>0.3</releaseinfo>
 
 <abstract>
 <para>
 &klettres; is an application specially designed to do help the user
 to learn alphabet in a new language and then to learn to read simple syllables.
-The user can be a young child aged from two and a half or an adult that want to learn
+The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Two languages are available at the moment: Dutch and French.
+Three languages are available at the moment: Danish, Dutch and French.
 </para>
 </abstract>
 
@@ -48,8 +48,10 @@ Two languages are available at the moment: Dutch and French.
 <keyword>KDE</keyword>
 <keyword>kdeedu</keyword>
 <keyword>klettres</keyword>
-<keyword>french</keyword>
-<keyword>child</keyword>
+<keyword>Danish</keyword>
+<keyword>Dutch</keyword>
+<keyword>French</keyword>
+<keyword>language</keyword>
 </keywordset>
 
 </bookinfo>
@@ -59,26 +61,34 @@ Two languages are available at the moment: Dutch and French.
 
 <para>
 &klettres; is a very simple application that helps a child or an adult
-to learn the alphabet and some simple sounds in his language or in another language.
-The program picks up a letter or a syllable in random, this letter is displayed and the sound is played.
+to learn the alphabet and some simple sounds in his own language or in another language.
+The program picks up a letter or a syllable in random, this letter/syllable is displayed and the sound is played.
 The user should then type this letter or syllable. Training is done in the levels where the letter/syllable is not
 displayed, only the sound is played. The user does not need to know how to use the
 mouse, the keyboard only is needed.</para>
 <para>
-There are two languages available at the moment: Dutch and French.
+There are three languages available at the moment: Danish, Dutch and French.
 </para>
 <para>
 Two different Look and Feel allow you to adapt KLettres to your need.
-For a child, the menuBar and the language button are not visible. A box allows him to
-choose the different levels. For an older user, the background is not so childish
+For a child, the menuBar and the language button are not visible. We assume that a child will not want to set the language himself.
+A box allows him to choose the different levels. For an older user, the background is not so childish
 and the menuBar is present.
 </para>
+<note>
+<para>
+To use Danish as a learning language, you need to have the Danish keyboard layout
+set up on your system in order to type in special letters of the Danish alphabet.
+Please use KControl, the KDE Control Center menu <guimenu>Peripherals</guimenu> and
+submenu <guimenuitem>Keyboard</guimenuitem>.
+</para>
+</note>
 </chapter>
 
 <chapter id="using-klettres">
 <title>Using &klettres;</title>
 <para>&klettres; has 4 levels. Levels 1 and 2 deal with the alphabet and
-levels 3 and 4 concern sounds. For a very young child (2 1/2 to 4), I would
+levels 3 and 4 concern syllables. For a very young child (2 1/2 to 4), I would
 suggest that he/she is sitting on your lap in front of the computer and
 that you do the game together.</para>
 
@@ -106,12 +116,15 @@ In level 1, the user sees the letter and hears the sound. He then has to type
 in the letter in the box. If it is correct, the next letter appears (without
 having to press enter or whatever). If the user types the wrong letter,
 he hears the sound again. In this level, the user memorizes the letters and
-recognizes them on the keyboard. </para> 
+recognizes them on the keyboard. 
+</para> 
+
 <note>
 <para>The user can type in either lower or upper case letters. The letters are automatically put in upper case so
 that a child will match them with the keyboard. He can type only one letter at a
 time.</para> 
 </note>
+
 <para>
 Default is Level 1 when you run KLettres.
 </para>
@@ -119,7 +132,8 @@ Default is Level 1 when you run KLettres.
 After the first time, the language setting is saved in a configuration file
 on closing of KLettres and loaded the next time, with Level 1.
 </para>
-
+<para>The look-and-feel is saved in the config file and therefore
+is kept until you change.</para>
 <para>The letters appear in random order. </para>
 
 <para>
@@ -272,7 +286,7 @@ for a young child. </para>
 <guimenu>Settings</guimenu>
 <guimenuitem>Learning Language</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the language to learn between Dutch and
+<listitem><para><action>Choose</action> the language to learn between Danish, Dutch and
 French.</para>
 </listitem>
 </varlistentry>
@@ -297,6 +311,8 @@ between "Grown-up" and "kid".</para></listitem>
 <title>Developer's Guide to &klettres;</title>
 
 <para>
+The English sounds are the most needed at the moment. They
+would be the default language if the user language is not available.
 </para>
 
 </chapter>
@@ -318,7 +334,7 @@ to add this directory to your path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only two langages?</para>
+<para>Why are there only three langages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
@@ -342,10 +358,12 @@ send me a mail if you are able to do that.</para> </answer>
 Program copyright 2001 Anne-Marie Mahfouf <email>annma@kde.org</email>
 </para>
 <para>
-Contributors:
+I am very grateful to the following people whose contribution has been greatly valuable:
 <itemizedlist>
 <listitem><para>Dutch sounds: Geert Stams
 <email>geert@pa3csg.myweb.nl</email></para> </listitem>
+<listitem><para>Danish sounds: Erik Kjaer Pedersen
+<email>erik@binghamton.edu</email></para> </listitem>
 <listitem><para>Background picture: Renaud Blanchard
 <email>kisukuma@chez.com</email></para> </listitem>
 <listitem><para>Splashscreen:  Primoz Anzur
