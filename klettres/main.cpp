@@ -73,13 +73,13 @@ int main(int argc, char **argv)
     about.addCredit("Robert Gogolok",
                     I18N_NOOP("Support and coding guidance"), "mail@robert-gogolok.de");
     about.addCredit("Chris Luetchford",
-                    I18N_NOOP("svg icon"), "chris@os11.com");
+                    I18N_NOOP("SVG icon"), "chris@os11.com");
     about.addCredit("Peter Hedlund",
                     I18N_NOOP("Code for generating special characters' icons"), "peter@peterandlinda.com");
     about.addCredit("Waldo Bastian",
                     I18N_NOOP("Port to KConfig XT, coding help"), "bastian@kde.org");
     about.addCredit("Danny Allen",
-                    I18N_NOOP("Kids and grownup svg icons"), "danny@dannyallen.co.uk");
+                    I18N_NOOP("Kids and grownup SVG icons"), "danny@dannyallen.co.uk");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;

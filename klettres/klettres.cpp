@@ -443,6 +443,7 @@ void KLettres::loadLangToolBar()
         myFile.setName(locate("data",myString));
         if (!myFile.exists())
         {
+        
             QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
                                     "please check your installation.").arg(m_languages[selectedLanguage]);
             KMessageBox::sorry( this, mString,
