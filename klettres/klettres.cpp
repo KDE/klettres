@@ -255,7 +255,7 @@ void KLettres::readProperties(KConfig *)
 
 void KLettres::optionsConfigureKeys()
 {
-    KKeyDialog::configureKeys(actionCollection(), "klettresui.rc");
+    KKeyDialog::configure(actionCollection());
 }
 
 void KLettres::optionsConfigureToolbars()
