@@ -41,7 +41,7 @@
 #include <kstandarddirs.h>
 #include <kstatusbar.h>
 #include <ktoolbar.h>
-
+#include <ktoolbarbutton.h>
 //Project includes
 #include "klnewstuff.h"
 #include "klettres.h"
@@ -457,6 +457,12 @@ void KLettres::loadLangToolBar()
             m_secondToolbar->insertButton (charIcon(allData[i].at(0)), i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
         }
     }
+}
+
+void KLettres::slotPasteChar()
+{
+        KToolBarButton *charBut = (KToolBarButton* ) sender();
+        m_view->m_letterEdit->setText(allData[charBut->id()]);
 }
 
 QString KLettres::charIcon(const QChar & c)

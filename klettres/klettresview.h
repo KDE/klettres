@@ -23,10 +23,10 @@
 
 #include <qwidget.h>
 #include <qpalette.h>
+#include <klineedit.h>
 
 class QLabel;
 class KLettres;
-class KLineEdit;
 
 /**
  * This class serves as the view for KLettres.  It holds the GUI for the kid and grown-up looks
@@ -66,11 +66,11 @@ public:
     int m_timer;
     ///A Klettres object
     KLettres *m_klettres;
+    ///The line where the user enters his/her input
+    KLineEdit *m_letterEdit;
 
 protected:
 
-    ///The line where the user enters his/her input
-    KLineEdit *m_letterEdit;
     ///The pixmaps for the grown-up and  backgrounds
     QPixmap m_grownupPicture,
     m_kidPicture,

@@ -25,7 +25,6 @@
 #include <qpainter.h>
 
 #include <kapplication.h>
-#include <klineedit.h>
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kdebug.h>

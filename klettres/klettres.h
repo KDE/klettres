@@ -144,6 +144,8 @@ protected:
     void optionsPreferences();
     ///Load the configuration settings and apply them
     void loadSettings();
+    ///When a button is clicked on the characters toolbar, the corresponding character is written in the lineedit 
+    void slotPasteChar();
 };
 
 #endif // KLETTRES_H
