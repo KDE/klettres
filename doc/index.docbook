@@ -84,7 +84,7 @@ older user, the background is not so childish and the menuBar is
 present in the Grown-Up style.</para>
 
 <note>
-<para>You don't need the language keyboard layout anymore as you can use the Special Characters Toolbar to type any special character in each language. In the Settings menu, Toolbars, select Show Characters and the toolbar will appear at the bottom of KLettres. Click on the letter you want and it will be shown in the input field. This toolbar can be dragged anywhere on your screen.</para>
+<para>You do not need the language keyboard layout anymore as you can use the Special Characters Toolbar to type any special character in each language. In the Settings menu, Toolbars, select Show Characters and the toolbar will appear at the bottom of KLettres. Click on the letter you want and it will be shown in the input field. This toolbar can be dragged anywhere on your screen.</para>
 <para>
 If you prefer having the language keyboard layout, please use &kcontrol;, in the
 section <guimenu>Peripherals</guimenu> and submenu
@@ -227,7 +227,7 @@ There is one more setting you can change: the font that displays the letters. In
 
 <warning>
 <para>
-Changing font is also nice as some fonts (helvetica for example) don't display correctly East-European languages as Czeck and Slovak. If some letters or syllables are not displayed, please change the font and choose arial for example.
+Changing font is also nice as some fonts (helvetica for example) do not display correctly East-European languages as Czeck and Slovak. If some letters or syllables are not displayed, please change the font and choose arial for example.
 </para>
 </warning>
 
