@@ -32,7 +32,7 @@
 #include <qfile.h>
 #include <qtextstream.h>
 //KDE includes
-#include <kapp.h>
+#include <kapplication.h>
 #include <kaudioplayer.h>
 #include <kcombobox.h>
 #include <khelpmenu.h>
@@ -40,7 +40,7 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <kpopupmenu.h>
-#include <kstddirs.h>
+#include <kstandarddirs.h>
 //C++ includes
 #include <stdlib.h>
 #include <string.h>
