@@ -38,7 +38,6 @@
 #include "fontsdlg.h"
 #include "timerdlg.h"
 #include "prefs.h"
-
 //standard C++ headers
 #include <stdlib.h>
 #include <unistd.h>
