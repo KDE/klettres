@@ -415,7 +415,7 @@ QString KLettres::charIcon(const QChar & c)
 	QFont font;
 	font.setFamily( "Arial" );
 	font.setPixelSize(120);
-	font.setWeight(QFont::DemiBold);
+	font.setWeight(QFont::Normal);
 	
 	///Create the pixmap        
 	QPixmap pm(128, 128);
