@@ -36,7 +36,7 @@
 //KDE includes
 #include <kaccelgen.h>
 #include <kaction.h>
-#include <kapp.h>
+#include <kapplication.h>
 #include <kaudioplayer.h>
 #include <kcombobox.h>
 #include <kconfig.h>

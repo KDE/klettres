@@ -24,7 +24,7 @@
 #include <qtimer.h>
 #include <qwidget.h>
 //KDE includes
-#include <kapp.h>
+#include <kapplication.h>
 //project includes
 
 #include "klettres.h"
