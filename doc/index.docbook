@@ -29,7 +29,7 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2003-05-30</date>
+<date>2003-06-23</date>
 <releaseinfo>1.0</releaseinfo>
 
 <abstract>
@@ -39,7 +39,7 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Four languages are available at the moment: Czech, Danish, Dutch and French.
+Five languages are available at the moment: Czech, Danish, Dutch, French and Slovak.
 </para>
 <para>
 KLettres is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar. Finally, the style can be changed from kid to grown-up using a button in the toolbar.
@@ -54,6 +54,7 @@ KLettres is really easy to use. The language can be changed using the Languages 
 <keyword>Danish</keyword>
 <keyword>Dutch</keyword>
 <keyword>French</keyword>
+<keyword>Slovak</keyword>
 <keyword>language</keyword>
 </keywordset>
 
@@ -71,8 +72,7 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are four languages available at the moment: Czech, Danish, Dutch
-and French.</para>
+<para>There are five languages available at the moment: Czech, Danish, Dutch, French and Slovak.</para>
 
 <para>Two different Look and Feel allow you to adapt &klettres; to
 your need.  For a child, the menu bar and the language button are not
@@ -82,11 +82,11 @@ older user, the background is not so childish and the menuBar is
 present in the Grown-Up style.</para>
 
 <note>
-<para>To use Czech or Danish as a learning language, you need to have the
-Czech or Danish keyboard layout set up on your system in order to type in
-special letters of those alphabets. Please use &kcontrol;, in the
+<para>To use Czech, Danish or Slovak as a learning language, you need to have the
+Czech, Danish or Slovak keyboard layout set up on your system in order to type in
+special letters of those alphabets or to have the right keyboard. Please use &kcontrol;, in the
 section <guimenu>Peripherals</guimenu> and submenu
-<guimenuitem>Keyboard</guimenuitem>.</para>
+<guimenuitem>Keyboard</guimenuitem> in order to set the correct keyboard layout.</para>
 </note>
 </chapter>
 
@@ -116,7 +116,7 @@ that you do the game together.</para>
 and look-and-feel is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
-If your KDE language is set to Czech, Danish, Dutch or French, then this will be the default language the first time you run KLetttres. For other languages, French is the default.
+If your KDE language is set to Czech, Danish, Dutch, French or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default.
 </para>
 </note>
 <para>
@@ -308,6 +308,18 @@ Please be aware that certain fonts are not able to display correctly accented ch
 </menuchoice></term>
 <listitem><para><action>Choose</action> the Dutch language</para></listitem>
 </varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Alt;<keycap>S</keycap></keycombo>
+</shortcut>
+<guimenu>Languages</guimenu>
+<guimenuitem>Slovak</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the Slovak language</para></listitem>
+</varlistentry>
+
 </variablelist>
 
 </sect2>
@@ -412,7 +424,7 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only four languages?</para>
+<para>Why are there only five languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
@@ -445,13 +457,14 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>geert@pa3csg.myweb.nl</email></para> </listitem>
 <listitem><para>Danish sounds: Erik Kjaer Pedersen
 <email>erik@binghamton.edu</email></para> </listitem>
+<listitem><para>French sounds: Ludovic Grossard
+<email>grossard@kde.org</email></para></listitem>
+<listitem><para>Slovak sounds: Silvia Motyčková and Jozef Říha
+<email>silviamotycka@seznam.cz</email></para></listitem>
 <listitem><para>Background picture: Renaud Blanchard
 <email>kisukuma@chez.com</email></para> </listitem>
 <listitem><para>Icons:  Primoz Anzur
 <email>zerokode@yahoo.com</email></para></listitem>
-<listitem><para>French sounds: Ludovic Grossard
-<email>grossard@kde.org</email></para>
-</listitem>
 <listitem><para>Support and coding guidance: Robert Gogolok
 <email>mail@robert-gogolok.de</email></para></listitem>
 </itemizedlist>
