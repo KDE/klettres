@@ -257,7 +257,7 @@ void KLettresView::timerDone()
 		klettres->soundFactory->playSound(n);
 
 		QObject::connect(line1, SIGNAL(textChanged(const
- QString&)),this,SLOT(slotLet2(const QString&)) );
+ 		QString&)),this,SLOT(slotLet2(const QString&)) );
 	}
 }
 

@@ -6,7 +6,7 @@ bin_PROGRAMS = klettres
 klettres_SOURCES = fontsdlg.ui klettres.cpp klnewstuff.cpp main.cpp klettresview.cpp soundfactory.cpp prefs.kcfgc timerdlg.ui
 klettres_LDADD   = $(LIB_KDEUI) -lknewstuff
 
-SUBDIRS = pics data 
+SUBDIRS = pics data icons
 
 xdg_apps_DATA = klettres.desktop
 kde_kcfg_DATA = klettres.kcfg
