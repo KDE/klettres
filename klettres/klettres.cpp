@@ -55,10 +55,6 @@ KLettres::KLettres()
 	// tell the KMainWindow that this is indeed the main widget
 	setCentralWidget(m_view);
 	mNewStuff = 0;
-	KConfig *cfg = KGlobal::config();
-	cfg->setGroup("KNewStuff");
-	cfg->writeEntry( "ProvidersUrl", "http://edu.kde.org/klettres/downloads/providers.xml" );
-	cfg->sync();
 	// Setup all available sounds
 	soundFactory = new SoundFactory(this, "sounds");
 	//Read config, must come after SoundFactory, otherwise we don't have all languages
@@ -126,7 +122,6 @@ KLettres::~KLettres()
 
 void KLettres::setupActions()
 {
-	//KGlobal::iconLoader()->loadIcon("knewstuff", KIcon::Small);
 	new KAction( i18n("Get a new language..."), "knewstuff", 0, this, SLOT( downloadNewStuff() ), actionCollection(), "downloadnewstuff" );
 	KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 	

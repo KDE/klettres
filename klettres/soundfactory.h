@@ -57,7 +57,11 @@ public:
   QString *namesList;
   ///List of sound files associated with each sound name
   QString *filesList;
-  ///Load the sounds of one given language
+  /**
+ * Load the sounds of one given language
+ * Call that when you read the language from Config and when the language changes
+ * or when the level changes
+ */
   bool loadLanguage(QDomDocument &layoutDocument, uint toLoad);
 
 protected:
@@ -72,7 +76,7 @@ private:
 private:
   ///Call the main instance of the program
   KLettres *klettres;
-  // The language document
+  ///The language document
   QDomDocument m_layoutsDocument;
 };
 
