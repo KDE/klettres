@@ -116,8 +116,8 @@ KLettres::~KLettres()
 
 void KLettres::setupActions()
 {
-    KGlobal::iconLoader()->loadIcon("knewstuff", KIcon::Small);
-    new KAction( i18n("Get a new language..."), "knewstuff", this, SLOT( downloadNewStuff() ), actionCollection(), "downloadnewstuff" );
+    //KGlobal::iconLoader()->loadIcon("knewstuff", KIcon::Small);
+    new KAction( i18n("Get a new language..."), "knewstuff", 0, this, SLOT( downloadNewStuff() ), actionCollection(), "downloadnewstuff" );
     KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 
     m_action = new KToggleAction(i18n("Show &Menubar"),CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
