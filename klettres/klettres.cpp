@@ -183,7 +183,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
    if (!layoutFile.exists())
      {
      kdWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/data/" << endl;
-     QString mString=i18n("The sounds.xml file was not found in\n"
+     QString mString=i18n("The file sounds.xml was not found in\n"
                              "$KDEDIR/share/apps/klettres/data/\n\n"
 			     "Please install this file and start KLettres again.\n\n");
      KMessageBox::information( this, mString,"KLettres - Error" );
@@ -311,6 +311,7 @@ void KLettres::loadSettings()
     QFont defaultFont = KGlobalSettings::largeFont();
     defaultFont.setPointSize(48);
     defaultFont.setBold(true);
+    //apply the font
     m_view->setFont(config->readFontEntry("mFont", &defaultFont));
 }
 
