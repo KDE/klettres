@@ -29,8 +29,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2003-06-23</date>
-<releaseinfo>1.1</releaseinfo>
+<date>2004-05-07</date>
+<releaseinfo>1.3</releaseinfo>
 
 <abstract>
 <para>
@@ -39,7 +39,7 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Five languages are available at the moment: Czech, Danish, Dutch, French and Slovak.
+Six languages are available at the moment: Czech, Danish, Dutch, French, Italian and Slovak.
 </para>
 <para>
 KLettres is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar. Finally, the style can be changed from kid to grown-up using a button in the toolbar.
@@ -50,10 +50,12 @@ KLettres is really easy to use. The language can be changed using the Languages 
 <keyword>KDE</keyword>
 <keyword>kdeedu</keyword>
 <keyword>klettres</keyword>
+<keyword>alphabet</keyword>
 <keyword>Czech</keyword>
 <keyword>Danish</keyword>
 <keyword>Dutch</keyword>
 <keyword>French</keyword>
+<keyword>Italian</keyword>
 <keyword>Slovak</keyword>
 <keyword>language</keyword>
 </keywordset>
@@ -72,9 +74,9 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are five languages available at the moment: Czech, Danish, Dutch, French and Slovak.</para>
+<para>There are six languages available at the moment: Czech, Danish, Dutch, French, Italian and Slovak. By default, only French plus your Czech, Danish, Dutch, Italian or Slovak if it is your KDE language are present in KLettres. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get A New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
 
-<para>Two different Look and Feel allow you to adapt &klettres; to
+<para>Two different Look and Feels allow you to adapt &klettres; to
 your need.  For a child, the menu bar and the language button are not
 visible. We assume that a child will not want to set the language
 himself.  A drop-down box allows him to choose the different levels. For an
@@ -116,7 +118,7 @@ that you do the game together.</para>
 and look-and-feel is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
-If your KDE language is set to Czech, Danish, Dutch, French or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default.
+If your KDE language is set to Czech, Danish, Dutch, French, Italian or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default.
 </para>
 </note>
 <para>
@@ -204,7 +206,7 @@ three, it depends of the language.</para>
 	</mediaobject>
 </screenshot>
 
-<para>Here you can see &klettres; level 4, <emphasis>kid</emphasis> look-and-feel and Dutch language.
+<para>Here you can see &klettres; level 4, <emphasis>kid</emphasis> look-and-feel and Slovak language.
 </para>
 
 <para>The sounds appear in random order. </para> <para>Clicking in the
