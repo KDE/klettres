@@ -538,7 +538,10 @@ path.</para> </answer>
 <para>I do not hear any sounds</para>
 </question>
 <answer>
-<para>You need to have &arts; support and the &arts; daemon needs to be running. Make sure you compiled kdelibs with arts if you compiled KDE. In any doubt, ask your distribution. You can also check if &arts; is running in &kcontrol; -&gt; Sound &amp; Multimedia in the Sound System tab. There you must make sure that <guilabel>Enable the Sound System</guilabel> is checked.</para> </answer>
+<para>You need to have &arts; support and the &arts; daemon needs to be running. Make sure you compiled kdelibs with arts if you compiled KDE. In any doubt, ask your distribution. You can also check if &arts; is running in &kcontrol; -&gt; Sound &amp; Multimedia in the <guilabel>Sound System</guilabel> tab. There you must make sure that <guilabel>Enable the Sound System</guilabel> is checked.</para>
+<para>For KDE 3.4 users, you must also be sure that the player used to play KDE sounds is the default KDE sound system player. See in &kcontrol; the <guilabel>System Notifications</guilabel> tab, click on the Player Settings button on the bottom right and in the dialog please check <guilabel>Use the KDE sound system</guilabel>.
+</para>
+ </answer>
 </qandaentry>
 <qandaentry>
 <question>
@@ -546,7 +549,7 @@ path.</para> </answer>
 </question>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
-<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -> System Administration -> Font Installer (click on 'Administrator mode' and add the Windows Font folder).</para></answer>
+<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -&gt; <guilabel>System Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on <guilabel>Administrator mode</guilabel> and add the Windows Font folder).</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
@@ -554,7 +557,7 @@ path.</para> </answer>
 </question>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
-<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -> System Administration -> Font Installer (click on 'Administrator mode' and add the Windows Font folder).</para></answer>
+<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -&gt; <guilabel>System Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on <guilabel>Administrator mode</guilabel> and add the Windows Font folder).</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
