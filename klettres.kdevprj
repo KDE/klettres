@@ -86,7 +86,7 @@ type=normal
 [doc/en/index.docbook]
 dist=true
 install=false
-install_location=$$$$(kde_icondir)/locolor/16x16/apps/klettres.png
+install_location=$(kde_icondir)/locolor/16x16/apps/klettres.png
 type=DATA
 
 [klettres.kdevprj]
@@ -121,13 +121,13 @@ type=HEADER
 [klettres/klettres-main.png]
 dist=true
 install=true
-install_location=$$(kde_datadir)/klettres/pics/klettres-main.png
+install_location=$(kde_datadir)/klettres/pics/klettres-main.png
 type=DATA
 
 [klettres/klettres-main2.png]
 dist=true
 install=true
-install_location=$$(kde_datadir)/klettres/pics/klettres-main2.png
+install_location=$(kde_datadir)/klettres/pics/klettres-main2.png
 type=DATA
 
 [klettres/klettres.cpp]
@@ -139,7 +139,7 @@ type=SOURCE
 [klettres/klettres.desktop]
 dist=true
 install=true
-install_location=$$(kde_appsdir)/Edutainment/French/klettres.desktop
+install_location=$(kde_appsdir)/Edutainment/French/klettres.desktop
 type=DATA
 
 [klettres/klettres.h]
@@ -163,19 +163,19 @@ type=HEADER
 [klettres/level1.txt]
 dist=true
 install=true
-install_location=$$(kde_datadir)/klettres/level1.txt
+install_location=$(kde_datadir)/klettres/level1.txt
 type=DATA
 
 [klettres/level3.txt]
 dist=true
 install=true
-install_location=$$(kde_datadir)/klettres/level3.txt
+install_location=$(kde_datadir)/klettres/level3.txt
 type=DATA
 
 [klettres/lo16-app-klettres.png]
 dist=true
 install=true
-install_location=$$(kde_icondir)/locolor/16x16/apps/klettres.png
+install_location=$(kde_icondir)/locolor/16x16/apps/klettres.png
 type=DATA
 
 [klettres/lo32-app-klettres.png]
@@ -533,3 +533,4 @@ type=DATA
 [po/Makefile.am]
 sub_dirs=
 type=po
+
