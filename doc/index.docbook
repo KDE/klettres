@@ -212,11 +212,23 @@ to level 4. In that level, the user only hears the sound of the
 syllable and has to type in the letters. This level is quite difficult
 for a young child. </para>
 
+</sect1>
+
+<sect1 id="about-font">
+<title>About fonts</title>
+
 <para>
 There is one more setting you can change: the font that displays the letters. In some distribution, the default font used from the system is really ugly. In Grow-up style, in the Settings menu, there is a Change Font menu item that brings you a font chooser dialog.
 </para>
+
+<warning>
 <para>
-Please be aware that certain fonts are not able to display correctly accented characters.
+Changing font is also nice as some fonts (helvetica for example) don't display correctly East-European languages as Czeck and Slovak. If some letters or syllables are not displayed, please change the font and choose arial for example.
+</para>
+</warning>
+
+<para>
+You can choose the size you like the best.
 </para>
 
 <screenshot>
@@ -433,7 +445,7 @@ the new language must record these sounds in wav, mp3 or preferably, ogg format.
 and 4, the syllables must be chosen by a teacher or someone who knows how children learn: these must be the
 syllables you have to learn just after the alphabet in order to learn
 well the basics of this language. Please send me a mail if you are
-able to do that.</para> </answer>
+able to do that. See <ulink url="http://edu.kde.org/klettres/add_language.php">the KLettres website</ulink> for detailed instructions on how to add a new language.</para> </answer>
 </qandaentry>
 </qandaset>
 </chapter>
