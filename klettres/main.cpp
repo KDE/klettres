@@ -46,6 +46,8 @@ int main(int argc, char **argv)
 	    I18N_NOOP("Background picture"), "kisukuma@chez.com");
     about.addCredit("Robert Gogolok",
 	    I18N_NOOP("Support and coding guidance"), "mail@robert-gogolok.de");
+    about.addCredit("Chris Luetchford",
+                            I18N_NOOP("SVG icon"), "chris@os11.com");	
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;
