@@ -10,7 +10,7 @@ SUBDIRS = pics French Dutch Danish
 
 EXTRA_DIST = main.cpp klettres.cpp klettres.h klettres.desktop lo32-app-klettres.png lo16-app-klettres.png hi16-app-klettres.png hi32-app-klettres.png khsplash.cpp khsplash.h lo32-app-klettres.xcf klettresui.rc 
 
-desktopdir = $(kde_appsdir)/Edutainment
+desktopdir = $(kde_appsdir)/Edutainment/Languages
 
 desktop_DATA = klettres.desktop
 
