@@ -328,6 +328,17 @@ You can choose the size you like the best.
 <varlistentry>
 <term><menuchoice>
 <shortcut>
+<keycombo action="simul">&Alt;<keycap>I</keycap></keycombo>
+</shortcut>
+<guimenu>Languages</guimenu>
+<guimenuitem>Italian</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the Italian language</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
 <keycombo action="simul">&Alt;<keycap>S</keycap></keycombo>
 </shortcut>
 <guimenu>Languages</guimenu>
@@ -440,7 +451,7 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only five languages?</para>
+<para>Why are there only six languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
@@ -477,12 +488,20 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>grossard@kde.org</email></para></listitem>
 <listitem><para>Slovak sounds: Silvia Motyčková and Jozef Říha
 <email>silviamotycka@seznam.cz</email></para></listitem>
+<listitem><para>Italian sounds: Alessandro Pasotti
+<email>alessandro@acqualba.it</email></para></listitem>
 <listitem><para>Background picture: Renaud Blanchard
 <email>kisukuma@chez.com</email></para> </listitem>
-<listitem><para>Icons:  Primoz Anzur
+<listitem><para>Original icons:  Primoz Anzur
 <email>zerokode@yahoo.com</email></para></listitem>
 <listitem><para>Support and coding guidance: Robert Gogolok
 <email>mail@robert-gogolok.de</email></para></listitem>
+<listitem><para>SVG icon: Chris Luetchford
+<email>chris@os11.com</email></para></listitem>
+<listitem><para>Code for generating special characters icons: Peter Hedlund
+<email>peter@peterandlinda.com</email></para></listitem>
+<listitem><para>Port to KConfig XT, coding help: Waldo Bastian
+<email>bastian@kde.org</email></para></listitem>
 </itemizedlist>
 </para>
 
