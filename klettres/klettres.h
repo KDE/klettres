@@ -114,6 +114,8 @@ public slots: // Public slots
   void treat1(const QString&);
   /** No descriptions */
   void slotBackground();
+   /** Choose Danish*/
+  void slotDanish();
   /** Choose Dutch */
   void slotDutch();
   /** Choose French */

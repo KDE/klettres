@@ -33,10 +33,12 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	t_action->setChecked(true);
 
    //stringlist for language combo
+        lang_list.append(i18n("Danish"));
 	lang_list.append(i18n("Dutch"));
 	lang_list.append(i18n("French"));
    //Settings->Choose Language menu
 	QStringList language_list;
+	language_list.append(i18n("D&anish"));
 	language_list.append(i18n("&Dutch"));
 	language_list.append(i18n("F&rench"));
 	language_menu = new KSelectAction(i18n("Learning L&anguage"), 0, actionCollection(), "languages");
@@ -131,7 +133,7 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
     slotGrownup();	//default style==grown-up
    //Read config
 	//if not, put default as French
-    config = kapp->config();
+        config = kapp->config();
 	 config->setGroup("Language");
 	 langString=config->readEntry("MyLanguage");
 	 numRead=config->readNumEntry("Number");
@@ -155,8 +157,9 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 		config->setGroup(langString);	
 		l1 =config->readNumEntry("Alphabet");
 		l2 =config->readNumEntry("Syllables");
-		updateLangMenu(num);
-      	game();
+		tb->setCurrentComboItem(2, num);
+		language_menu->setCurrentItem(num);
+               game();
 	}
    levLabel->setText(i18n("Current level is %1").arg(niveau));
 	langLabel->setText(i18n("Current language is %1").arg(language));
@@ -297,7 +300,7 @@ void KLettres::timer1()
 		if (niveau==2)
 		button1->show(); //show letter after first miss
 
-		string2=QString("klettres/french/alpha/a-%1.mp3").arg(n);    //replay sound
+		string2=QString("klettres/%1/alpha/a-%2.mp3").arg(language).arg(n);    //replay sound
 		string1=locate("data",string2);                //of letter
 		KAudioPlayer::play(string1);
 	}
@@ -417,6 +420,7 @@ void KLettres::setupActions()
    //actions for the File menu
    KStdAction::quit(this, SLOT(slotQuit()), actionCollection());
    //actions for theSettings menu
+   (void) new KAction (i18n("D&anish"),0, this, SLOT(slotDanish()), actionCollection(), "danish");
    (void) new KAction (i18n("&Dutch"),0, this, SLOT(slotDutch()), actionCollection(), "dutch");
    (void) new KAction (i18n("&French"),0, this, SLOT(slotFrench()), actionCollection(), "french");
 	(void) new KAction (i18n("&Background"),0, this, SLOT(slotBackground()), actionCollection(), "change_background");
@@ -434,6 +438,7 @@ void KLettres::slotBackground()
 void KLettres::updateLangMenu(int id)
 {
     language_menu->setCurrentItem(id);
+    tb->setCurrentComboItem(2, id);
 	 //lang_comb->setCurrentItem(id);
 }
 
@@ -455,9 +460,12 @@ void KLettres::changeNumeration(int id)
 	updateLangMenu(id);
     switch (id) {
         case 0:
-            slotDutch();
+            slotDanish();
             break;
         case 1:
+            slotDutch();
+            break;
+	case 2:
             slotFrench();
             break;
     }
@@ -467,7 +475,7 @@ void KLettres::changeNumeration(int id)
 void KLettres::slotFrench()
 {
 	language="French";
-	num=1;
+	num=2;
 	config->setGroup("Language");
 	langString=config->readEntry("MyLanguage");
 	if ( !langString.isNull() )
@@ -478,7 +486,7 @@ void KLettres::slotFrench()
 		l2 =config->readNumEntry("Syllables");
 	}
 	langLabel->setText(i18n("Current language is %1").arg(language));
-   language_menu->setCurrentItem(num);
+       language_menu->setCurrentItem(num);
 	tb->setCurrentComboItem(2, num);
 	game();
 }
@@ -487,8 +495,8 @@ void KLettres::slotFrench()
 void KLettres::slotDutch()
 {
 	language="Dutch";
-	num=0;
-   langLabel->setText(i18n("Current language is %1").arg(language));
+	num=1;
+        langLabel->setText(i18n("Current language is %1").arg(language));
 	language_menu->setCurrentItem(num);
 	tb->setCurrentComboItem(2, num);
 	  //read config to find l1 and l2
@@ -501,13 +509,38 @@ void KLettres::slotDutch()
 	}
 	else
 	{
-		config->setGroup(language);	
+		config->setGroup(language);
 		l1 =config->readNumEntry("Alphabet");
 		l2 =config->readNumEntry("Syllables");
 	}
    game();
 }
 
+/** Set Language to Danish*/
+void KLettres::slotDanish()
+{
+	language="Danish";
+	num=0;
+        langLabel->setText(i18n("Current language is %1").arg(language));
+	language_menu->setCurrentItem(num);
+	tb->setCurrentComboItem(2, num);
+	  //read config to find l1 and l2
+	config->setGroup("Language");
+	langString=config->readEntry("MyLanguage");
+	if (langString.isNull())
+	{
+                l1=29;
+		l2=28;
+	}
+	else
+	{
+		config->setGroup(language);
+		l1 =config->readNumEntry("Alphabet");
+		l2 =config->readNumEntry("Syllables");
+	}
+   game();
+
+}
 /** Quit KLettres and write config */
 void KLettres::slotQuit()
 {
@@ -517,10 +550,13 @@ void KLettres::slotQuit()
 	config->writeEntry("Number",num);
 	config->setGroup("French");
 	config->writeEntry("Alphabet", 26);
-   config->writeEntry("Syllables", 28);
+        config->writeEntry("Syllables", 28);
 	config->setGroup("Dutch");
 	config->writeEntry("Alphabet", 22);
-   config->writeEntry("Syllables", 26);
+        config->writeEntry("Syllables", 26);
+	config->setGroup("Danish");
+	config->writeEntry("Alphabet", 29);
+        config->writeEntry("Syllables", 28);
 	kapp->quit();
 }
 
