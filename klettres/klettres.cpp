@@ -31,6 +31,7 @@
 #include <kaction.h>
 #include <kconfigdialog.h>
 #include <ktoolbarbutton.h>
+#include <knuminput.h>
 //Project headers
 #include "klnewstuff.h"
 #include "klettres.h"
@@ -436,10 +437,13 @@ void KLettres::slotTimer()
 	if(KConfigDialog::showDialog("timer"))
 		return;
 
-	KConfigDialog *dialogue = new KConfigDialog(this, "timer", Prefs::self());
-	dialogue->addPage(new timerdlg(0, "mTimer"), i18n("Timer"), "clock");
-	connect(dialogue, SIGNAL(settingsChanged()), this, SLOT(loadSettings()));
-	dialogue->show();
+	KConfigDialog *dialog = new KConfigDialog(this, "timer", Prefs::self());
+	timerdlg *m_timer = new timerdlg();
+	dialog->addPage(m_timer, i18n("Timer"), "clock");
+	m_timer->kcfg_KidTimer->setRange(0, 20, 2, true);
+	m_timer->kcfg_GrownTimer->setRange(0, 20, 2, true);
+	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(loadSettings()));
+	dialog->show();
 }
 
 #include "klettres.moc"
