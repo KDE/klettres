@@ -8,11 +8,9 @@
 
 #include <kmessagebox.h>
 #include <klocale.h>
-#include <kstandarddirs.h>
 #include <kaudioplayer.h>
 #include <kdebug.h>
 
-#include <qdom.h>
 
 #include "soundfactory.h"
 #include "soundfactory.moc"

@@ -5,10 +5,6 @@
 #ifndef _KLETTRESPREF_H_
 #define _KLETTRESPREF_H_
 
-#include <kdialogbase.h>
-#include <kfontdialog.h>
-#include <qfont.h>
-#include <qframe.h>
 
 class KLettresPrefPageOne;
 

@@ -3,31 +3,18 @@
  */
 
 #include <qtooltip.h>
-#include <qbuttongroup.h>
-#include <qradiobutton.h>
 //KDE headers
 #include <kcombobox.h>
-#include <ktoolbar.h>
-#include <kconfig.h>
-#include <kglobal.h>
 #include <klocale.h>
 #include <kdebug.h>
-#include <kiconloader.h>
 #include <kmenubar.h>
 #include <kmessagebox.h>
 #include <kstatusbar.h>
 #include <kkeydialog.h>
-#include <kaccel.h>
 #include <kfiledialog.h>
-#include <kconfig.h>
 #include <kedittoolbar.h>
-#include <kstatusbar.h>
-#include <kstdaccel.h>
 #include <kaction.h>
-#include <kstdaction.h>
-#include <kstandarddirs.h>
 #include <kfontdialog.h>
-#include <kglobalsettings.h>
 //Project headers
 #include "klettres.h"
 #include "pref.h"

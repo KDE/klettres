@@ -3,14 +3,10 @@
  */
 
 //Qt headers
-#include <qdom.h>
-#include <qlayout.h>
 #include <qtimer.h>
 #include <qtooltip.h>
 //KDE headers
-#include <kaudioplayer.h>
 #include <kdebug.h>
-#include <klocale.h>
 #include <klocale.h>
 //C++ includes
 #include <stdlib.h>

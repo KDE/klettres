@@ -6,21 +6,10 @@
 #define _KLETTRESVIEW_H_
 
 //Qt includes
-#include <qaccel.h>
 #include <qlabel.h>
-#include <qpixmap.h>
-#include <qpushbutton.h>
-#include <qwidget.h>
-#include <qstring.h>
-#include <qfile.h>
 //KDE includes
-#include <kaccelgen.h>
-#include <kaction.h>
 #include <kapplication.h>
-#include <kcombobox.h>
-#include <khelpmenu.h>
 #include <klineedit.h>
-#include <kmessagebox.h>
 #include <kstandarddirs.h>
 
 class QDomDocument;

@@ -2,11 +2,9 @@
  * Copyright (C) 2001-2003 Anne-Marie Mahfouf <annma@kde.org>
  */
 
-#include <kapplication.h>
 #include <dcopclient.h>
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
-#include <klocale.h>
 
 #include "klettres.h"
 #include "version.h"

@@ -9,10 +9,7 @@
 #include <config.h>
 #endif
 
-#include <qfont.h>
-#include <qlabel.h>
 //KDE headers
-#include <kapplication.h>
 #include <kmainwindow.h>
 #include "klettresview.h"
 #include "soundfactory.h"

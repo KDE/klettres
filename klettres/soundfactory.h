@@ -8,7 +8,6 @@
 #ifndef _SOUNDFACTORY_H_
 #define _SOUNDFACTORY_H_
 
-#include "qobject.h"
 
 class QDomDocument;
 class KLettres;

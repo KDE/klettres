@@ -11,12 +11,8 @@
 #include <kglobalsettings.h>
 #include <kiconloader.h>
 #include <klocale.h>
-#include <kstddirs.h>
 //Qt headers
-#include <qcombobox.h>
-#include <qlabel.h>
 #include <qlayout.h>
-#include <qstring.h>
 //Project headers
 #include "pref.h"
 
