@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 {
     KAboutData about("klettres", I18N_NOOP("KLettres"), KLETTRES_VERSION, description,
                      KAboutData::License_GPL, "(C) 2001-2003 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
-    about.addAuthor( "Anne-Marie Mahfouf,", 0, "annma@kde.org");
+    about.addAuthor( "Anne-Marie Mahfouf", 0, "annma@kde.org");
     about.addCredit("Ludovic Grossard",
 	    I18N_NOOP("French sounds"), "grossard@kde.org");
     about.addCredit("Geert Stams",
