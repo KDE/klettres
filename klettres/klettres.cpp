@@ -122,8 +122,13 @@ void KLettres::findLanguages()
     KConfig entry(locate("locale", "all_languages"));
     const QStringList::ConstIterator itEnd = m_languages.end();
     for (QStringList::Iterator it = m_languages.begin(); it != m_languages.end(); ++it) {
-        entry.setGroup(*it);
-        m_languageNames.append(entry.readEntry("Name"));
+        if (*it == "hi-ro")
+            m_languageNames.append(i18n("Romanized Hindi"));
+        else
+        {
+            entry.setGroup(*it);
+            m_languageNames.append(entry.readEntry("Name"));
+        }
     }
     kdDebug() << "m_languageNames :" << m_languageNames << endl;
     kdDebug() << "Index: " << m_languages.findIndex(Prefs::defaultLanguage()) << endl;
