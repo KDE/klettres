@@ -17,15 +17,14 @@
 
 #include "klettres.h"
 
+#include <kglobalsettings.h>
+
 QString s[30], sd[30], a1, t1, sb, s1, sj, st;
 int n=0, niveau=1;
 
 KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name)
 {
-    setMinimumSize( QSize( 640, 530 ) );
-    setMaximumSize( QSize( 640, 530 ) );
-
-    setCaption( i18n( "KLettres - version 1.3" ) );
+   setCaption( i18n( "Klettres - version 1.3" ) );
    // QToolTip::add( this, i18n( "Type the same letter that you hear or see" ) );
 
 	//Actions
@@ -33,6 +32,9 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	m_action->setChecked(true);
 	t_action->setChecked(true);
 
+   //stringlist for language combo
+	lang_list.append(i18n("Dutch"));
+	lang_list.append(i18n("French"));
    //Settings->Choose Language menu
 	QStringList language_list;
 	language_list.append(i18n("&Dutch"));
@@ -73,16 +75,10 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
    lev_comb->insertItem( i18n( "Level 4" ) );
 	tb->insertWidget(1, 100, lev_comb,1); //id, width, widget, index
 	connect( lev_comb, SIGNAL( activated(int) ), this, SLOT( slotNext(int) ) );
-   //language choice comboBox
-	lang_comb= new KComboBox(tb);
-	lang_comb->insertItem( i18n( "Dutch" ) );
-   lang_comb->insertItem( i18n( "French" ) );
-	tb->insertWidget(2, 100, lang_comb,2); //id, width, widget, index
-   connect( lang_comb, SIGNAL( activated(int) ), this, SLOT( changeNumeration(int)));
 
    //font for comboxes
    	QFont f_comb( "times" , 14, QFont::Bold );
-	lang_comb->setFont( f_comb );
+	tb->setFont( f_comb );
    lev_comb->setFont( f_comb );
 
     //Button with letter or syllable
@@ -98,10 +94,25 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
     line1 = new QLineEdit( this, "line1" );
     line1->setGeometry( QRect( 40, 310, 161, 160 ) ); 
     QToolTip::add( line1, i18n( "Type the letter that you just heard" ) );
+
     //font for button and lineEdit
-	QFont f( "courrier" , 80, QFont::Bold );
+   //use largeFont()
+   QFont f(KGlobalSettings::largeFont());
+	f.setFamily("SansSerif");
+	f.setBold(true);
    button1->setFont( f );
 	line1->setFont(f);
+    //debug font
+    QFontInfo info( f );
+    QString family = info.family();
+	 kdDebug()<<"Button1 font family" <<endl;
+	 kdDebug() << family << endl;
+	 kdDebug() << "Default family" << endl;
+	 kdDebug() << f.defaultFamily() <<endl;
+	 kdDebug() << "Size" << endl;              //asked for
+	 kdDebug() << f.pointSize() <<endl;
+	 kdDebug() << "Size family" << endl;   //real one
+	 kdDebug() << info.pointSize() <<endl;
 
 	//Set up StatusBar
 	KStatusBar *st=statusBar();
@@ -127,10 +138,10 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
 	 num=numRead;
 	 if (!langString) //if there is no config file
 	 {
-		QString mString=QString(i18n("This is the first time you have run KLettres.\n"
-                                                  "The default learning language is set to French.\n"
+		QString mString=QString(i18n("This is the first time you run KLettres.\n"
+                                                  "Default learning language is set to French.\n"
 																"You can change the language in the Settings menu.\n\n"
-																"The default level is Level 1, the easiest one.\n"
+																"Default Level is Level 1, the easiest one.\n"
 																"You can change the level in the Levels menu."));
 		KMessageBox::information( this, mString,"KLettres - Default" );
 		l1=26;   //set French as default
@@ -186,8 +197,8 @@ void KLettres::slotNext(int id)
 /**main fonction */
 void KLettres::game()
 {
-	 setMinimumSize( QSize( 640, 530 ) );
-    setMaximumSize( QSize( 640, 530 ) );
+  // setMinimumSize( QSize( 640, 530 ) );
+  //  setMaximumSize( QSize( 640, 530 ) );
 	show();
 	if (niveau==1)
 		button1->show();
@@ -423,7 +434,7 @@ void KLettres::slotBackground()
 void KLettres::updateLangMenu(int id)
 {
     language_menu->setCurrentItem(id);
-	 lang_comb->setCurrentItem(id);
+	 //lang_comb->setCurrentItem(id);
 }
 
 /** Update Levels menu */
@@ -468,7 +479,7 @@ void KLettres::slotFrench()
 	}
 	langLabel->setText(i18n("Current language is %1").arg(language));
    language_menu->setCurrentItem(num);
-	lang_comb->setCurrentItem(num);
+	tb->setCurrentComboItem(2, num);
 	game();
 }
 
@@ -479,6 +490,7 @@ void KLettres::slotDutch()
 	num=0;
    langLabel->setText(i18n("Current language is %1").arg(language));
 	language_menu->setCurrentItem(num);
+	tb->setCurrentComboItem(2, num);
 	  //read config to find l1 and l2
 	config->setGroup("Language");
 	langString=config->readEntry("MyLanguage");
@@ -541,7 +553,7 @@ void KLettres::slotToolbar()
 		case true:
 			t_action->setChecked(true);
 			toolBar()->show();
-			resize( QSize( 640, 530 ) );
+			resize( QSize( 640, 525 ) );
 		break;
 		}
 }
@@ -563,6 +575,8 @@ void KLettres::changeLook(int id)
 /** Set the Grown-up style */
 void KLettres::slotGrownup()
 {
+	 setMinimumSize( QSize( 640, 525 ) );
+    setMaximumSize( QSize( 640, 525 ) );
 	//button1 background
 	cg.setColor( QColorGroup::Foreground, white );
     cg.setColor( QColorGroup::Background, QColor(53,87,158));
@@ -576,27 +590,35 @@ void KLettres::slotGrownup()
     cg.setColor( QColorGroup::Background, white);
     pal.setActive( cg );
     statusBar()->setPalette( pal );
-	lang_comb->show();
 	menuBar()->show();
 	m_action->setChecked(true);
+	tb->insertCombo(lang_list, 2, false, SIGNAL( activated(int) ), this, SLOT( changeNumeration(int)), true, i18n("Change language"), 50);
+	tb->setEnableContextMenu(false);
+	tb->setIconSize(22);
 	int i = tb->count();
 	if (i>4)
 	{
 		tb->removeItem(5);
 		tb->removeItem(3);
 	}
+
 	tb->insertButton ("kids.png", 4, SIGNAL( clicked() ), this, SLOT( slotKid()), true, i18n("Switch to the kid look") );
 	if (t_action->isChecked()==false)
 	{
      		t_action->setChecked(true);
 			toolBar()->show();
-			resize( QSize( 640, 530 ) );
+			setMinimumSize( QSize( 640, 525 ) );
+    		setMaximumSize( QSize( 640, 525) );
+			//resize( QSize( 640, 560 ) );
 	}
+	tb->enableMoving(false);
 }
 
 /** Set the kid style */
 void KLettres::slotKid()
 {
+	 setMinimumSize( QSize( 640, 538 ) );
+    setMaximumSize( QSize( 640, 538 ) );
 	//change button1 background
 	cg.setColor( QColorGroup::Foreground, white );
 	cg.setColor( QColorGroup::Background, black);
@@ -610,22 +632,25 @@ void KLettres::slotKid()
     cg.setColor( QColorGroup::Background, white);
     pal.setActive( cg );
     statusBar()->setPalette( pal );
-	lang_comb->hide();
 	menuBar()->hide();   //and insert show_menubar button
 	int i = tb->count();
 	if (i<6)
 	tb->insertButton ("menubar.png", 3, SIGNAL( clicked() ), this, SLOT( slotShowM()), true, i18n("Show the MenuBar") );
 	m_action->setChecked(false);
+	tb->removeItem(2);
 	tb->removeItem(4);//remove kid_look button
 //button to show grown-up style
     tb->insertButton ("grownup.png", 5, SIGNAL( clicked() ), this, SLOT( slotGrownup()), true, i18n("Switch to the grown-up look") );
+	 tb->setIconSize(32);
 	 if (t_action->isChecked()==false)
-	{
+	 {
      		t_action->setChecked(true);
 			toolBar()->show();
-			resize( QSize( 640, 530 ) );
-	}
- }
+			setMinimumSize( QSize( 640, 538 ) );
+          setMaximumSize( QSize( 640, 538) );
+	 }
+	tb->enableMoving(false);
+}
 
 
 /** No descriptions */

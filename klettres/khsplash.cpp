@@ -25,7 +25,7 @@ KhSplash::KhSplash(QWidget *parent, const char *name ) : QFrame(parent,name,QWid
 	QPixmap *pm = new QPixmap(locate("data","klettres/pics/klsplash.jpeg"));
 	QPainter painter;
 	painter.begin(pm);
-	QFont p_font("helvetica", 44);
+	QFont p_font("helvetica", 20);
 	painter.setFont(p_font);
 	painter.drawText(260, 200, 120, 50, Qt::AlignCenter, i18n("KLettres") );
 	painter.end();

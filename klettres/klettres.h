@@ -87,6 +87,7 @@ class KLettres : public KMainWindow
 	KToolBar *tb;
 	KComboBox* lev_comb;
 	KComboBox* lang_comb;
+	QStringList lang_list;
 	QLabel* button1;
     QLineEdit* line1;
 	QLabel *langLabel;
