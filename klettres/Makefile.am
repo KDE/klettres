@@ -10,8 +10,8 @@ KDE_ICON = klettres
 level_DATA = level1.txt level3.txt
 leveldir = $(kde_datadir)/klettres
 
-pics_DATA = klettres-main.png klettres-main2.png
-picsdir = $(kde_datadir)/klettres/pics
+#pics_DATA = klettres-main.png klettres-main2.png
+#picsdir = $(kde_datadir)/klettres/pics
 
 apps_DATA = klettres.desktop
 appsdir = $(kde_appsdir)/Edutainment/French
@@ -28,9 +28,10 @@ METASOURCES = AUTO
 klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
 messages: 
-	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o -name \*.hxx -o -name
- \*.hpp -o -name \*.cpp -o -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o -name
- \*.C`; \
+	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o \
+                     -name \*.hxx -o -name \*.hpp -o -name \*.cpp -o \
+                     -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o \
+                     -name \*.C`; \
 	if test -n "$$LIST"; then \
 	 $(XGETTEXT) $$LIST -o $(podir)/klettres.pot; \
 	fi
