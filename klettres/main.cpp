@@ -79,7 +79,7 @@ int main(int argc, char **argv)
     about.addCredit("Waldo Bastian",
                     I18N_NOOP("Port to KConfig XT, coding help"), "bastian@kde.org");
     about.addCredit("Danny Allen",
-                    I18N_NOOP("Kids and grownup SVG icons"), "danny@dannyallen.co.uk");
+                    I18N_NOOP("Kids and grown-up SVG icons"), "danny@dannyallen.co.uk");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;
