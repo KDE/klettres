@@ -37,6 +37,10 @@ class QDomDocument;
 /**
  * This class serves as the main window for KLettres.  It handles the
  * menus, toolbars, and status bars.
+ *
+ * @short Main window class
+ * @author Anne-Marie Mahfouf <annma@kde.org>
+ * @version 1.1
  */
 class KLettres : public KMainWindow
 {

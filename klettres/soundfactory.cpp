@@ -31,7 +31,7 @@
 #include "soundfactory.moc"
 #include "klettres.h"
 
-// Constructor
+///Constructor
 SoundFactory::SoundFactory(KLettres *parent, const char *name, uint selectedLanguage)
 	: QObject(parent, name)
 {
@@ -48,7 +48,7 @@ SoundFactory::SoundFactory(KLettres *parent, const char *name, uint selectedLang
   if (!ok) loadFailure();
 }
 
-// Destructor
+///Destructor
 SoundFactory::~SoundFactory()
 {
   if (namesList) delete [] namesList;
@@ -66,7 +66,7 @@ void SoundFactory::change(uint selectedLanguage)
   if (!ok) loadFailure();
 }
 
-//Play the sound associated to soundRef
+//Play the sound associated to int soundRef
 void SoundFactory::playSound(int mySound)
 {
   QString soundFile;

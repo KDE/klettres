@@ -28,6 +28,15 @@
 class QDomDocument;
 class KLettres;
 
+/**
+ * This class serves as the view for KLettres.  It holds the GUI for the kid and grown-up looks
+ * and has the code to display the letter/syllable and play the sound.
+ *
+ * @short KLettres View class
+ * @author Anne-Marie Mahfouf <annma@kde.org>
+ * @version 1.1
+ */
+ 
 class KLettresView : public QWidget
 {
     Q_OBJECT
