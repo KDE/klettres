@@ -20,7 +20,6 @@
 #include <qtooltip.h>
 //KDE headers
 #include <kapplication.h>
-#include <kdebug.h>
 #include <klocale.h>
 //C++ includes
 #include <stdlib.h>
@@ -184,7 +183,7 @@ void KLettresView::treat1(const QString& )
 	QTimer *timer = new QTimer( this );
 	connect( timer, SIGNAL(timeout()),
 	         this, SLOT(timer1()) );
-	timer->start( 2000, TRUE );
+	timer->start( 300, TRUE );
 }
 
 void KLettresView::timer1()
@@ -226,7 +225,7 @@ void KLettresView::slotLet2(const QString& )
 	QTimer *timer = new QTimer( this );
 	connect( timer, SIGNAL(timeout()),
 	         this, SLOT(timerDone()) );
-	timer->start( 1000, TRUE );
+	timer->start( 300, TRUE );
 }
 
 void KLettresView::timerDone()

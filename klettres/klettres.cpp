@@ -195,21 +195,6 @@ void KLettres::updateLanguage()
     loadLangToolBar();
 }
 
-void KLettres::saveProperties(KConfig *)
-{
-    // the 'config' object points to the session managed
-    // config file.  anything you write here will be available
-    // later when this app is restored
-}
-
-void KLettres::readProperties(KConfig *)
-{
-    // the 'config' object points to the session managed
-    // config file.  this function is automatically called whenever
-    // the app is being restored.  read in here whatever you wrote
-    // in 'saveProperties'
-}
-
 void KLettres::optionsConfigureKeys()
 {
     KKeyDialog::configure(actionCollection());

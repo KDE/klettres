@@ -24,8 +24,6 @@
 #include <kmessagebox.h>
 #include <klocale.h>
 #include <kaudioplayer.h>
-#include <kdebug.h>
-
 
 #include "soundfactory.h"
 #include "soundfactory.moc"
@@ -71,7 +69,6 @@ void SoundFactory::playSound(int mySound)
    if ((uint) mySound >= sounds) return;
 
   soundFile = locate("data", "klettres/" + filesList[mySound]);
-  kdDebug() << "File to play:  " << soundFile << endl;
 
   if (soundFile == 0) return;
 
