@@ -82,9 +82,9 @@ older user, the background is not so childish and the menuBar is
 present in the Grown-Up style.</para>
 
 <note>
-<para>To use Czech, Danish or Slovak as a learning language, you need to have the
-Czech, Danish or Slovak keyboard layout set up on your system in order to type in
-special letters of those alphabets or to have the right keyboard. Please use &kcontrol;, in the
+<para>You don't need the language keyboard layout anymore as you can use the Special Characters Toolbar to type any special character in each language. In the Settings menu, Toolbars, select Show Characters and the toolbar will appear at the bottom of KLettres. Click on the letter you want and it will be shown in the input field. This toolbar can be dragged anywhere on your screen.</para>
+<para>
+If you prefer having the language keyboard layout, please use &kcontrol;, in the
 section <guimenu>Peripherals</guimenu> and submenu
 <guimenuitem>Keyboard</guimenuitem> in order to set the correct keyboard layout.</para>
 </note>
@@ -131,6 +131,8 @@ memorizes the letters and recognizes them on the keyboard.
 <para>The user can type in either lower or upper case letters. The letters are automatically put in upper case so
 that a child will match them with the keyboard. He can type only one letter at a
 time.</para>
+<para>When you type a letter in the input field, there is no need to press Enter and the program waits for a short while before testing if the letter is right. This short wait is to leave time to a young child to understand what he/she just typed, especially if this is the wrong letter.
+</para>
 </note>
 
 <para>The first time &klettres; is run, default is set to French and
