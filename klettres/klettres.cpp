@@ -105,6 +105,16 @@ KLettres::KLettres()
 	updateLevMenu(Prefs::level()-1);
 	
 	m_view->selectedLanguage = selectedLanguage;
+	kdDebug() << "------- languages: " << m_languages << endl;
+	//write the present languages in config so they cannot be downloaded
+	KConfig *config=kapp->config();
+	config->setGroup("KNewStuffStatus");
+	for (uint i=0;  i<m_languages.count(); i++)
+	{
+		QString tmp = m_languages[i];
+		if (!config->readEntry(tmp))
+			config->writeEntry(tmp, QDate::currentDate().toString());
+	}
 	updateLanguage();
 	
 	m_view->game();
