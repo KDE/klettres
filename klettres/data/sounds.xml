@@ -46,6 +46,12 @@
 	<sound name="X" file="cs/alpha/a-23.ogg" />
 	<sound name="Y" file="cs/alpha/a-24.ogg" />
 	<sound name="Z" file="cs/alpha/a-25.ogg" />
+	<sound name="Š" file="cs/alpha/a-26.ogg" />
+        <sound name="Ť" file="cs/alpha/a-27.ogg" />
+        <sound name=" Ž" file="cs/alpha/a-28.ogg" />
+        <sound name="Č" file="cs/alpha/a-29.ogg" />
+        <sound name="Ď" file="cs/alpha/a-30.ogg" />
+        <sound name="Ř" file="cs/alpha/a-31.ogg" />
     </alphabet>
 
     <syllables>
@@ -59,7 +65,7 @@
 	<sound name="NE" file="cs/syllab/ad-7.ogg" />
 	<sound name="NO" file="cs/syllab/ad-8.ogg" />
 	<sound name="PI" file="cs/syllab/ad-9.ogg" />
-	<sound name="RE" file="cs/syllab/ad-10.ogg" />
+	<sound name="ŘE" file="cs/syllab/ad-10.ogg" />
 	<sound name="SE" file="cs/syllab/ad-11.ogg" />
 	<sound name="SI" file="cs/syllab/ad-12.ogg" />
 	<sound name="TA" file="cs/syllab/ad-13.ogg" />
