@@ -39,7 +39,7 @@
     </property>
     <property stdset="1">
         <name>caption</name>
-        <string>Klettres - version 1.01</string>
+        <string>KLettres - version 1.01</string>
     </property>
     <property>
         <name>toolTip</name>
@@ -71,7 +71,7 @@
         <item>
             <property>
                 <name>text</name>
-                <string>Level1</string>
+                <string>Level 1</string>
             </property>
         </item>
         <item>
