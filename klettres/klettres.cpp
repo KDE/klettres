@@ -200,8 +200,8 @@ void KLettres::slotNext(int id)
 /**main fonction */
 void KLettres::game()
 {
-  // setMinimumSize( QSize( 640, 530 ) );
-  //  setMaximumSize( QSize( 640, 530 ) );
+        setMinimumSize( QSize( 640, 525) );
+        setMaximumSize( QSize( 640, 525 ) );
 	show();
 	if (niveau==1)
 		button1->show();
