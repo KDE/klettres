@@ -29,19 +29,19 @@ int main(int argc, char **argv)
     KAboutData about("klettres", I18N_NOOP("KLettres"), KLETTRES_VERSION, description,
                      KAboutData::License_GPL, "(C) 2001-2003 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
     about.addAuthor( "Anne-Marie Mahfouf,", 0, "annma@kde.org");
-	about.addCredit("Ludovic Grossard",
+    about.addCredit("Ludovic Grossard",
 	    I18N_NOOP("French sounds"), "ludovic.grossard@libertysurf.fr");
-	about.addCredit("Geert Stams",
+    about.addCredit("Geert Stams",
 	    I18N_NOOP("Dutch sounds"), "geert@pa3csg.myweb.nl");
-  	about.addCredit("Erik Kjaer Pedersen",
+    about.addCredit("Erik Kjaer Pedersen",
 	    I18N_NOOP("Danish sounds"), "erik@binghamton.edu");
-  	about.addCredit("Primoz Anzur",
+    about.addCredit("Primoz Anzur",
 	    I18N_NOOP("Icons"), "zerokode@yahoo.com");
-  	about.addCredit("Renaud Blanchard",
+    about.addCredit("Renaud Blanchard",
 	    I18N_NOOP("Background picture"), "kisukuma@chez.com");
-  	//aboutData.addCredit("Ludovic Grossard",
+    //aboutData.addCredit("Ludovic Grossard",
  	//	    I18N_NOOP("Splash-screen sound"), "ludovic.grossard@libertysurf.fr");
-  	about.addCredit("Robert Gogolok",
+    about.addCredit("Robert Gogolok",
 	    I18N_NOOP("Support and coding guidance"), "mail@robert-gogolok.de");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions(options);

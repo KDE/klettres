@@ -237,13 +237,14 @@ void KLettres::slotClickApply()
       //refresh the level if changed
       if (m_view->niveau != dlg.niveau)
         slotChangeLevel(dlg.niveau-1);
-      //refresh the bacjground if changed
+      //refresh the background if changed
       if (style != dlg.style)
       {
       	style = dlg.style;
 	if (style=="grownup") slotGrownup();
 	else slotKid();
       }
+      //refresh the language if changed
       if (langString!=dlg.langString)
       {
       	  langString = dlg.langString;

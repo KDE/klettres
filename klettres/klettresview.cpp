@@ -141,7 +141,7 @@ void KLettresView::game()
 	line1->setFocus();
 }
 
-void KLettresView::treat1(const QString& p)
+void KLettresView::treat1(const QString& )
 {
 	QObject::disconnect(line1, SIGNAL(textChanged(const
  QString&)),this,SLOT(treat1(const QString&)) );
@@ -154,7 +154,6 @@ void KLettresView::treat1(const QString& p)
 	line1->setText(t1);     //display it in uppercase
 	if (niveau==2)
 		button1->hide();
-	emit newText(p);
 	QTimer *timer = new QTimer( this );
 	connect( timer, SIGNAL(timeout()),
 	         this, SLOT(timer1()) );
@@ -252,41 +251,39 @@ void KLettresView::timerDone()
 /**Play the sound and display the letter/syllable*/
 void KLettresView::play()
 {
-		input=1;
-      lev1File.setName(locate("data",dataString));
-       if (!lev1File.exists()) //if the data files are not installed in the correct dir
+	input=1;
+	lev1File.setName(locate("data",dataString));
+	if (!lev1File.exists()) //if the data files are not installed in the correct dir
+	{
+		QString mString=i18n("File $KDEDIR/share/apps/%1 not found!\n"
+					       "Check your installation, please!").arg(dataString);
+		KMessageBox::sorry( this, mString, i18n("KLettres - Error") );
+		exit(1);
+	}
+	lev1File.open(IO_ReadOnly);
+	QTextStream namesStream( &lev1File);
+	QString nameString;
+	int count=0;
+	while (namesStream.atEnd()==0)
+	{
+		//read one line from the text
+		nameString=namesStream.readLine();
+		if (count==n)
+		 	st=nameString; //store the choosen word in variable st
+		count++ ;
+	}
+	lev1File.close();
+  	button1->setText(st);
+	length=st.length();
+	string1=locate("data",string2);
+	 if (!string1) //if the sound files are not installed  correctly
          {
-					QString mString=i18n("File $KDEDIR/share/apps/%1 not found!\n"
-                                                  "Check your installation, please!").arg(dataString);
-					KMessageBox::sorry( this, mString,
-		                    i18n("KLettres - Error") );
-					exit(1);
-			}
-		lev1File.open(IO_ReadOnly);
-		QTextStream namesStream( &lev1File);
-		QString nameString;
-		int count=0;
-		while (namesStream.atEnd()==0)
-		{
-			//read one line from the text
-			nameString=namesStream.readLine();
-			if (count==n)
-				st=nameString; //store the choosen word in variable st
-			count++ ;
-		}
-		lev1File.close();
-  		button1->setText(st);
-		length=st.length();
-		string1=locate("data",string2);
-		 if (!string1) //if the sound files are not installed  correctly
-         {
-					QString mString=i18n("File $KDEDIR/share/apps/%1 not found!\n"
-                                                  "Check your installation, please!").arg(string2);
-					KMessageBox::sorry( this, mString,
-		                    i18n("KLettres - Error") );
-					exit(1);
-			}
-		KAudioPlayer::play(string1);
+		QString mString=i18n("File $KDEDIR/share/apps/%1 not found!\n"
+                                                "Check your installation, please!").arg(string2);
+		KMessageBox::sorry( this, mString, i18n("KLettres - Error") );
+		exit(1);
+	}
+	KAudioPlayer::play(string1);
 }
 
 void KLettresView::slotChooseSound()

@@ -31,21 +31,21 @@ public:
 	/**
 	 * Default constructor
 	 */
-    KLettresView(QWidget *parent);
+    	KLettresView(QWidget *parent);
 
 	/**
 	 * Destructor
 	 */
-    virtual ~KLettresView();
+    	virtual ~KLettresView();
 
 	QLabel* button1;
-    QLineEdit* line1;
+        QLineEdit* line1;
 
 	QPixmap pm_k;
 	QPixmap pm_a;
 
 	QPalette pal;
-    QColorGroup cg;
+        QColorGroup cg;
 
 	QString s[30], sd[30], a1, t1, sb, s1, sj, st;
 	QString langLoc;
@@ -55,24 +55,22 @@ public:
 	QString style;
 	QFile lev1File;
 
-
-signals:
-
-  	void newText( const QString& );
-
-
-
 public slots:
-
+	///Set the Grown-up background, show menubar, show the Kid button
 	void slotGrownup();
+	///Set the Kid background pic, hide the menubar, show the Grownup button
 	void slotKid();
-
+	/**This begin the game or begin a new level: set button and lineedit sizes
+	 * set connections
+	 */
 	void game();
 	void treat1(const QString& );
 	void timer1();
 	void slotLet2(const QString& );
 	void timerDone();
+	///Play the sound
 	void play();
+	///Choose a sound in random and ensure that it's not the same than the previous one
 	void slotChooseSound();
 };
 

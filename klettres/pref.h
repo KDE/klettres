@@ -21,11 +21,14 @@ class KLettresPreferences : public KDialogBase
 {
     Q_OBJECT
 public:
+    //!constructor
     KLettresPreferences();
-
+    //!the current font
     QFont newFont;
+    //!holds the current language
     QString langString;
-    QString style;//kid or grownup
+    //! holds kid or grownup to define background style
+    QString style;
     int niveau;
     bool configChanged;
 
