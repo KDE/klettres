@@ -10,11 +10,11 @@
 #include "version.h"
 
 
-static const char *description =
+static const char description[] =
 	I18N_NOOP("KLettres helps a very young child or an adult learning \n"
-						"a new language by associating sounds and \n"
-                       	"letters in this language.\n"
-						"4 languages are available: Czech, Danish, Dutch and French.");
+		  "a new language by associating sounds and \n"
+		  "letters in this language.\n"
+		  "4 languages are available: Czech, Danish, Dutch and French.");
 
 static KCmdLineOptions options[] =
 {
