@@ -1,7 +1,23 @@
 /*
  * Copyright (C) 2001-2003 Anne-Marie Mahfouf <annma@kde.org>
- */
+ *
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of version 2 of the GNU General Public
+    License as published by the Free Software Foundation.
 
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+    */
+
+    /****************************************/
+    /* Please save as utf8 encoding */
+    /****************************************/
 #include <qtooltip.h>
 #include <qwhatsthis.h>
 //KDE headers
@@ -59,6 +75,8 @@ KLettres::KLettres()
     QWhatsThis::add(lev_comb, i18n( "Use this box to choose the level of difficulty" ));
     tb->insertSeparator(5, 5);
 
+    //toolbar for special characters
+    secondToolbar = toolBar("secondToolbar");
     //Set up StatusBar
     KStatusBar *st=statusBar();
     langLabel = new QLabel(st);
@@ -236,6 +254,7 @@ void KLettres::updateLanguage(int index)
             break;
     }
     langLabel->setText(i18n("Current language is %1").arg(langString));
+    loadLangToolBar();
 }
 
 void KLettres::saveProperties(KConfig *)
@@ -445,6 +464,151 @@ void KLettres::slotSetFont()
     //otherwise newFont=read from config
     m_view->button1->setFont(newFont);
     m_view->line1->setFont(newFont);
+}
+
+void KLettres::loadLangToolBar()
+{
+    secondToolbar->clear();
+    secondToolbar->show();
+    if (selectedLanguage == 0)//Czech
+    {
+	secondToolbar->insertButton ("C_caron.png", 10, SIGNAL( clicked() ), this, SLOT( slotPasteCcaron()), true, i18n("Try ") + QString::fromUtf8("Č", -1), 1 );
+	secondToolbar->insertButton ("D_caron.png", 20, SIGNAL( clicked() ), this, SLOT( slotPasteDcaron()), true, i18n("Try ")+ QString::fromUtf8("Ď", -1), 2 );
+	secondToolbar->insertButton ("R_caron.png", 30, SIGNAL( clicked() ), this, SLOT( slotPasteRcaron()), true, i18n("Try ") + QString::fromUtf8("Ř", -1), 3 );
+	secondToolbar->insertButton ("S_caron.png", 40, SIGNAL( clicked() ), this, SLOT( slotPasteScaron()), true, i18n("Try ") + QString::fromUtf8("Š", -1), 4 );
+	secondToolbar->insertButton ("T_caron.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteTcaron()), true, i18n("Try ")+ QString::fromUtf8("Ť", -1), 5);
+	secondToolbar->insertButton ("Z_caron.png", 60, SIGNAL( clicked() ), this, SLOT( slotPasteZcaron()), true, i18n("Try ") + QString::fromUtf8("Ž", -1), 6 );
+    }
+    else if (selectedLanguage == 1)//Danish
+    {
+	secondToolbar->insertButton ("A_circle.png", 10, SIGNAL( clicked() ), this, SLOT( slotPasteAcircle()), true, i18n("Try ") + QString::fromUtf8("Å", -1), 1 );
+        secondToolbar->insertButton ("A_withE.png", 20, SIGNAL( clicked() ), this, SLOT( slotPasteAwithE()), true, i18n("Try ") + QString::fromUtf8("Æ", -1), 2 );
+	secondToolbar->insertButton ("O_barre.png", 30, SIGNAL( clicked() ), this, SLOT( slotPasteObarre()), true, i18n("Try ")+ QString::fromUtf8("Ø", -1), 3 );
+
+    }
+    else if (selectedLanguage == 2 || selectedLanguage==3)//Dutch and French
+    {
+	secondToolbar->hide();
+	setMinimumSize( QSize( 640, 480 ) );
+        setMaximumSize( QSize( 640, 480 ) );
+    }
+    else if (selectedLanguage == 4)//Slovak
+    {
+	secondToolbar->insertButton ("A_acute.png", 10, SIGNAL( clicked() ), this, SLOT( slotPasteAacute()), true, i18n("Try ")+ QString::fromUtf8("Á", -1), 1 );
+        secondToolbar->insertButton ("A_umlaut.png", 20, SIGNAL( clicked() ), this, SLOT( slotPasteAumlaut()), true, i18n("Try ")+ QString::fromUtf8("Ä", -1), 2 );
+	secondToolbar->insertButton ("C_caron.png", 30, SIGNAL( clicked() ), this, SLOT( slotPasteCcaron()), true, i18n("Try ")+ QString::fromUtf8("Č", -1), 3 );
+	secondToolbar->insertButton ("D_caron.png", 40, SIGNAL( clicked() ), this, SLOT( slotPasteDcaron()), true, i18n("Try ") + QString::fromUtf8("Ď", -1) , 4 );
+	secondToolbar->insertButton ("E_acute.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteEacute()), true, i18n("Try ")+ QString::fromUtf8("É", -1) , 5 );
+	secondToolbar->insertButton ("I_acute.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteIacute()), true, i18n("Try ") + QString::fromUtf8("Í", -1), 6 );
+        secondToolbar->insertButton ("L_acute.png", 60, SIGNAL( clicked() ), this, SLOT( slotPasteLacute()), true, i18n("Try ") + QString::fromUtf8("Ĺ", -1), 7 );
+	secondToolbar->insertButton ("L_apos.png", 70, SIGNAL( clicked() ), this, SLOT( slotPasteLapos()), true, i18n("Try ") + QString::fromUtf8("Ľ", -1), 8 );
+	secondToolbar->insertButton ("N_caron.png", 40, SIGNAL( clicked() ), this, SLOT( slotPasteNcaron()), true, i18n("Try ") + QString::fromUtf8("Ň", -1), 9 );
+        secondToolbar->insertButton ("O_acute.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteOacute()), true, i18n("Try ") + QString::fromUtf8("Ó", -1), 10 );
+        secondToolbar->insertButton ("O_circ.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteOchap()), true, i18n("Try ") + QString::fromUtf8("Ô", -1), 11);
+        secondToolbar->insertButton ("R_acute.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteRacute()), true, i18n("Try ")+ QString::fromUtf8("Ŕ", -1), 12 );
+        secondToolbar->insertButton ("S_caron.png", 40, SIGNAL( clicked() ), this, SLOT( slotPasteScaron()), true, i18n("Try ")+ QString::fromUtf8("Š", -1), 13 );
+	secondToolbar->insertButton ("T_caron.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteTcaron()), true, i18n("Try ") + QString::fromUtf8("Ť", -1), 14);
+	secondToolbar->insertButton ("U_acute.png", 50, SIGNAL( clicked() ), this, SLOT( slotPasteRacute()), true, i18n("Try ")+ QString::fromUtf8("Ú", -1), 15 );
+	secondToolbar->insertButton ("Z_caron.png", 60, SIGNAL( clicked() ), this, SLOT( slotPasteZcaron()), true, i18n("Try ")+ QString::fromUtf8("Ž", -1), 16 );
+    }
+}
+
+void KLettres::slotPasteCcaron()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Č", -1));//not setText() but append to existing string
+}
+
+void KLettres::slotPasteDcaron()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ď", -1));
+}
+
+void KLettres::slotPasteRcaron()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ř", -1));
+}
+
+void KLettres::slotPasteScaron()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Š", -1));
+}
+
+void KLettres::slotPasteTcaron()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ť", -1));
+}
+
+void KLettres::slotPasteZcaron()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ž", -1));
+}
+
+void KLettres::slotPasteAcircle()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Å", -1));
+}
+void KLettres::slotPasteAwithE()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Æ", -1));
+}
+void KLettres::slotPasteObarre()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ø", -1));
+}
+
+void KLettres::slotPasteAacute()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Á", -1));
+}
+
+void KLettres::slotPasteAumlaut()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ä", -1));
+}
+
+void KLettres::slotPasteEacute()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("É", -1));
+}
+
+void KLettres::slotPasteIacute()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Í", -1));
+}
+
+void KLettres::slotPasteLacute()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ĺ", -1));
+}
+
+void KLettres::slotPasteLapos()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ľ", -1));
+}
+
+void KLettres::slotPasteNcaron()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ň", -1));
+}
+
+void KLettres::slotPasteOacute()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ó", -1));
+}
+
+void KLettres::slotPasteOchap()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ô", -1));
+}
+
+void KLettres::slotPasteRacute()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ŕ", -1));
+}
+
+void KLettres::slotPasteUacute()
+{
+	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ú", -1));
 }
 
 #include "klettres.moc"

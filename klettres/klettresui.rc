@@ -28,4 +28,6 @@
     	<Separator/>
     	<Action name="help_contents"/>
 </ToolBar>
+<ToolBar name="secondToolbar" position="bottom" noMerge="1"><text>Characters</text>
+</ToolBar>
 </kpartgui>

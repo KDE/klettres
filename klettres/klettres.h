@@ -1,5 +1,18 @@
 /*
  * Copyright (C) 2001-2003 Anne-Marie Mahfouf <annma@kde.org>
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of version 2 of the GNU General Public
+    License as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
 #ifndef _KLETTRES_H_
@@ -134,6 +147,27 @@ private slots:
     ///Switch to language #4 Slovak
     void language4();
 
+    void slotPasteCcaron();
+    void slotPasteDcaron();
+    void slotPasteRcaron();
+    void slotPasteScaron();
+    void slotPasteTcaron();
+    void slotPasteZcaron();
+    void slotPasteAcircle();
+    void slotPasteAwithE();
+    void slotPasteObarre();
+    void slotPasteAacute();
+    void slotPasteAumlaut();
+    void slotPasteEacute();
+    void slotPasteIacute();
+    void slotPasteLacute();
+    void slotPasteLapos();
+    void slotPasteOacute();
+    void slotPasteOchap();
+    void slotPasteRacute();
+    void slotPasteUacute();
+    void slotPasteNcaron();
+
 private:
     ///Enable accel keys
     void setupAccel();
@@ -154,6 +188,8 @@ private:
      *set the default language to that language if possible, to fr otherwise
      */
     void loadLanguages();
+    ///Set the correct buttons on the second toolbar according to the language
+    void loadLangToolBar();
 
 private:
 
@@ -175,6 +211,8 @@ private:
     QString userLanguage;
     ///the language that is set to default: either userLanguage or en if userLanguage is not available
     int defaultLang;
+    ///second toolbar with buttons of special characters per language
+    KToolBar *secondToolbar;
 };
 
 #endif // _KLETTRES_H_
