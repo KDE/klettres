@@ -114,7 +114,10 @@ private slots:
      *@param int - The id of the new level
      */
     void slotChangeLevel(int );
-    ///Update the level menu and combobox
+    /**
+      *Update the level menu and level combobox
+      * @param int - The id of the new level
+      */
     void updateLevMenu(int );
     ///Set current font in LineEdit line1 and PushButton button1 in KLettresView
     void slotSetFont();
@@ -130,7 +133,7 @@ private slots:
     void language3();
 
 private:
-    ////Enable accel keys
+    ///Enable accel keys
     void setupAccel();
     ///Setup our actins using klettresui.rc
     void setupActions();
@@ -150,7 +153,7 @@ private:
     KToggleAction *m_action;
     ///Action that sets up the Language menu
     KSelectAction *language_menu;
-
+    ///Action that calls the Font Chooser Dialog
     KAction *fontAct;
     ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is French (default), 3 is Dutch
     uint selectedLanguage;

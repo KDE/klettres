@@ -274,10 +274,11 @@ void KLettres::loadSettings()
     if (selectedLanguage > 3) selectedLanguage = 3;
     //if no style, default style is grownup
     style=config->readEntry("myStyle", "grownup");
-    //if no level, default level is 1
+    //if no level, default level is 1= easy
     m_view->niveau=config->readNumEntry("myLevel", 1);
     config->setGroup("Font");
-    newFont=QFont(config->readEntry("Family", "Charter"), config->readNumEntry("Size",48), config->readNumEntry("Weight",75), false);
+    //if no font, defalut font is Charter, size 48, bold
+    newFont=QFont(config->readEntry("Family", "Charter"), config->readNumEntry("Size", 48), config->readNumEntry("Weight", 75),  false);
 }
 
 void KLettres::optionsPreferences()

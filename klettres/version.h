@@ -1,3 +1,3 @@
 #ifndef KLETTRES_VERSION
-#define KLETTRES_VERSION "0.99"
+#define KLETTRES_VERSION "1.0"
 #endif
