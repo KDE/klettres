@@ -1,6 +1,6 @@
 ####### kdevelop will overwrite this part!!! (begin)##########
 
-SUBDIRS = klettres po doc
+SUBDIRS = klettres
 
 EXTRA_DIST = klettres.kdevprj AUTHORS COPYING ChangeLog INSTALL README TODO klettres.lsm 
 
