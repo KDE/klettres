@@ -126,11 +126,6 @@ void KLettres::setupActions()
 	m_action->setCheckedState(i18n("Hide &Menubar"));
 	m_action->setChecked(true);
 
-	createStandardStatusBarAction();
-	setStandardToolBarMenuEnabled(true);
-
-	KStdAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
-	KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
 	fontAct = new KAction(i18n("Change &Font..."), "fonts", CTRL+Key_F, this, SLOT(optionsPreferences()), actionCollection(), "font");
 	timerAct = new KAction(i18n("Set &Timer..."), "clock", CTRL+Key_T, this, SLOT(slotTimer()), actionCollection(), "timer");
 	m_languageAction = new KSelectAction(i18n("Language"), KShortcut(), actionCollection(), "languages");
@@ -140,8 +135,7 @@ void KLettres::setupActions()
 
 	connect(m_languageAction, SIGNAL(activated(int)), this, SLOT(changeLanguage(int)));
 
-	setAutoSaveSettings("General");
-	createGUI();
+	setupGUI();
 }
 
 void KLettres::registerLanguage(const QString &language, const QString &menuItem)
