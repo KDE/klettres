@@ -1,4 +1,0 @@
-#MIN_CONFIG
-
-AM_INIT_AUTOMAKE(klettres,0.2)
-
