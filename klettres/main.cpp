@@ -22,7 +22,7 @@
 #include "khsplash.h"
 
 static const char *description =
-	I18N_NOOP("Teaches the sounds of letters in French");
+	I18N_NOOP("Learn the sounds of letters in French");
 // INSERT A DESCRIPTION FOR YOUR APPLICATION HERE
 
 	

@@ -1,4 +1,4 @@
-# KDE Config File  
+# KDE Config File
 [Desktop Entry]
 Type=Application
 Exec=klettres -caption "%c" %i %m  
@@ -6,3 +6,4 @@ Icon=klettres.png
 DocPath=klettres/index.html
 Terminal=0
 Name=KLettres
+Comment=Learn the sounds of letters in French
