@@ -47,9 +47,9 @@ KLettres::KLettres(QWidget *parent, const char *name) : KMainWindow(parent, name
    connect(language_menu, SIGNAL(activated(int)), this, SLOT(updateLangMenu(int)));
    //Settings->Look & Feel menu
 	QStringList look_list;
-        look_list.append(i18n("&Grown-up"));
+        look_list.append(i18n("&Grown-Up"));
 	look_list.append(i18n("&Kids"));
-	look_menu = new KSelectAction(i18n("Look and &Feel"), 0, actionCollection(), "look_feel");
+	look_menu = new KSelectAction(i18n("Look && &Feel"), 0, actionCollection(), "look_feel");
         look_menu->setItems(look_list);
    connect(look_menu, SIGNAL(activated(int)), this, SLOT(changeLook(int)));
    connect(look_menu, SIGNAL(activated(int)), this, SLOT(updateLookMenu(int)));	
