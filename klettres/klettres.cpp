@@ -180,7 +180,7 @@ QObject::disconnect(line1, SIGNAL(textChanged(const QString&)),this,SLOT(slotLet
 line1->selectAll();
 QString tl1,al1;
 al1=line1->text();
-tl1.sprintf(al1.upper());
+tl1.sprintf(al1.upper().latin1());
 
 if ((button1->text())==tl1)
  {
@@ -226,9 +226,9 @@ QObject::disconnect(line1, SIGNAL(textChanged(const QString&)),this,SLOT(slotLet
 //test the first letter
 char c[1];
 a1=line1->text();
-t1.sprintf(a1.upper());
+t1.sprintf(a1.upper().latin1());
 sb=button1->text();
-strncpy(c,sb,1);
+strncpy(c,sb.latin1(),1);
 sj.sprintf("%c",c[0]);
 //line1->selectAll();
 QTimer *timer = new QTimer( this );
@@ -266,7 +266,7 @@ line1->clearFocus();
 QObject::disconnect(line1, SIGNAL(textChanged(const QString&)),this,SLOT(slotLet3(const QString&)) );
 
 a1=line1->text();
-t1.sprintf(a1.upper());
+t1.sprintf(a1.upper().latin1());
 s1=button1->text();
 QTimer *timer = new QTimer( this );
 connect( timer, SIGNAL(timeout()),
