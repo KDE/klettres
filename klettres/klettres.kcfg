@@ -7,7 +7,7 @@
       <label>Language</label>
       <default code="true">defaultLanguage()</default>
     </entry>
-    <entry name="Style" type="Enum" Key="myStyle">
+    <entry name="Style" type="Enum" key="myStyle">
       <label>Style</label>
       <choices>
         <choice name="kid"/>
@@ -15,11 +15,11 @@
       </choices>
       <default>grownup</default>
     </entry>
-    <entry name="Level" type="Int" Key="myLevel"> 
+    <entry name="Level" type="Int" key="myLevel"> 
       <label>Difficulty level.</label>
-      <min>1</min>
-      <max>4</max>
       <default>1</default>
+       <min>1</min>
+      <max>4</max>
     </entry>
     <entry name="KidTimer" type="Int">
       <label>Kid Timer</label>
@@ -31,7 +31,7 @@
     </entry>
   </group>
   <group name="mFont">
-    <entry name="Font" type="Font" Key="mFont">
+    <entry name="Font" type="Font" key="mFont">
       <label>Font</label>
       <code>QFont defaultFont = KGlobalSettings::largeFont();
     defaultFont.setPointSize(48);
