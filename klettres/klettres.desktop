@@ -1,0 +1,12 @@
+# KDE Config File  
+[Desktop Entry]
+Type=Application
+Exec=klettres -caption "%c" %i %m  
+Icon=klettres.png
+MiniIcon=klettres.png
+DocPath=klettres/index.html
+Comment=
+Comment[de]=
+Terminal=0
+Name=KLettres
+Name[de]=KLettres
