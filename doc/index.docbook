@@ -1,8 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1.2-Based Variant V1.1//EN"
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.1-Based Variant V1.0//EN"
  "dtd/kdex.dtd" [
+  <!ENTITY klettres '<application>KLettres</application>'>
   <!ENTITY kappname "&klettres;"><!-- replace klettres here -->
-  <!ENTITY package "kdeedu">
+  <!ENTITY package "kdeedu"> 
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
@@ -29,14 +30,17 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2001-09-10</date>
-<releaseinfo>0.2</releaseinfo>
+<date>2002-04-28</date>
+<releaseinfo>0.3</releaseinfo>
 
 <abstract>
 <para>
-&klettres; is an application specially designed to do help children from age 2
-1/2  to learn the french alphabet and then to learn to read french syllables.
-This should prepare the child for learning how to read in french.
+&klettres; is an application specially designed to do help the user
+to learn alphabet in a new language and then to learn to read simple syllables.
+The user can be a young child aged from two and a half or an adult that want to learn
+the basics of a foreign language. </para>
+<para>
+Two languages are available at the moment: Dutch and French.
 </para>
 </abstract>
 
@@ -54,14 +58,26 @@ This should prepare the child for learning how to read in french.
 <title>Introduction</title>
 
 <para>
-&klettres; is a program designed for children aged 2 1/2 to 6. It is a very
-simple application that helps the child to learn the french alphabet and then to
-learn some french sounds.  The child does not need to know how to use the
-mouse, the keyboard only is needed.</para> </chapter>
+&klettres; is a very simple application that helps a child or an adult
+to learn the alphabet and some simple sounds in his language or in another language.
+The program picks up a letter or a syllable in random, this letter is displayed and the sound is played.
+The user should then type this letter or syllable. Training is done in the levels where the letter/syllable is not
+displayed, only the sound is played. The user does not need to know how to use the
+mouse, the keyboard only is needed.</para>
+<para>
+There are two languages available at the moment: Dutch and French.
+</para>
+<para>
+Two different Look and Feel allow you to adapt KLettres to your need.
+For a child, the menuBar and the language button are not visible. A box allows him to
+choose the different levels. For an older user, the background is not so childish
+and the menuBar is present.
+</para>
+</chapter>
 
 <chapter id="using-klettres">
 <title>Using &klettres;</title>
-<para>&klettres; has 4 levels. Levels 1 and 2 deal with the french alphabet and
+<para>&klettres; has 4 levels. Levels 1 and 2 deal with the alphabet and
 levels 3 and 4 concern sounds. For a very young child (2 1/2 to 4), I would
 suggest that he/she is sitting on your lap in front of the computer and
 that you do the game together.</para>
@@ -82,34 +98,29 @@ that you do the game together.</para>
 	</mediaobject>
 </screenshot>
 </para>
+<para>This screenshot shows &klettres; on Level 1, language is Dutch and look-and-feel is "grown-up".
+</para>
 
 <para>
-In level 1, the child sees the letter and hears the sound. He then has to type
+In level 1, the user sees the letter and hears the sound. He then has to type
 in the letter in the box. If it is correct, the next letter appears (without
-having to press enter or whatever). If the child types the wrong letter,
-he hears the sound again. In this level, the child memorizes the letters and
+having to press enter or whatever). If the user types the wrong letter,
+he hears the sound again. In this level, the user memorizes the letters and
 recognizes them on the keyboard. </para> 
 <note>
-<para>The child can type in
-either lower or upper case letters. He can type only one letter at a
+<para>The user can type in either lower or upper case letters. The letters are automatically put in upper case so
+that a child will match them with the keyboard. He can type only one letter at a
 time.</para> 
 </note>
+<para>
+Default is Level 1 when you run KLettres.
+</para>
+<para>The first time KLettres is run, default is set to French and Level1.
+After the first time, the language setting is saved in a configuration file
+on closing of KLettres and loaded the next time, with Level 1.
+</para>
 
 <para>The letters appear in random order. </para>
-
-<para>Clicking in the Level combo-box and choosing <guilabel>Level
-2</guilabel> brings you to level 2. In that level, the child only
-hears the sound of the letter and has to type in the letter. If he/she
-is wrong, the letter appears to help him/her. When the child can type
-several times a sequence of letters, you can assume he knows the
-french alphabet! Clicking on Level 3 in the combo-box brings you to
-level 3 and pressing the <guibutton>Quit</guibutton> button allows you
-to close the program.</para>
-
-</sect1>
-
-<sect1 id="levels3-and4">
-<title>Levels 3 and 4</title>
 
 <para>
 <screenshot>
@@ -124,24 +135,63 @@ to close the program.</para>
 	</mediaobject>
 </screenshot>
 </para>
+<para>Here is a screenshot of Level 1 with the "kid" look and French language.</para>
+
+<para>Clicking in the Level combo-box and choosing <guilabel>Level
+2</guilabel> or using the Levels menu brings you to level 2. In that level, the user only
+hears the sound of the letter and has to type in the letter. If he
+is wrong, the letter appears to help him. </para>
+</sect1>
+
+<sect1 id="levels3-and4">
+<title>Levels 3 and 4</title>
 
 <para>
-In level 3, the child sees the syllable and hears the sound. He then
-has to type in the letters in the box. If the first letter of the
-sound is wrong, the child cannot type in the second one. The letter
-disappears and he has to try again.</para>
+<screenshot>
+<screeninfo>Screenshot of &klettres; Level 3</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase>&klettres; level3</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
 
-<note>
-<para>The child can type the letters in either lower or
-upper case letters. </para> 
-</note>
+<para>Here you can see &klettres; level 3, "grown-up" look-and-feel and Dutch language.
+</para>
+
+<para>
+In level 3, the user sees the syllable and hears the sound. He then
+has to type in the letters in the box. If the first letter of the
+sound is wrong, the user cannot type in the second one. The letter
+disappears and he has to try again. The number of letters is two or
+three, it depends of the language.</para>
+
+<para>
+<screenshot>
+<screeninfo>Screenshot of &klettres; Level 4</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres4.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase>&klettres; level4</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para>Here you can see &klettres; level 4, "kid" look-and-feel and French language.
+</para>
 
 <para>The sounds appear in random order. </para> <para>Clicking in the
-Level combo-box and choosing <guilabel>Level 4</guilabel> brings you
-to level 4. In that level, the child only hears the sound of the
+Level combo-box or using the Levels menu in the menuBar
+and choosing <guilabel>Level 4</guilabel> brings you
+to level 4. In that level, the user only hears the sound of the
 syllable and has to type in the letters. This level is quite difficult
-for a young child.  Pressing the <guibutton>Quit</guibutton> button
-allows you to close the program.</para>
+for a young child. </para>
 
 </sect1>
 </chapter>
@@ -150,19 +200,96 @@ allows you to close the program.</para>
 <title>Command Reference</title>
 
 <sect1 id="klettres-mainwindow">
-<title>The main &klettres; window</title> 
+<title>The main &klettres; window</title>
 
+<para></para>
 
-<para>The interface of &klettres; is very simple to allow young
-children to use the program. The different levels can be accessed with
-the Level combo-box or <keycombo
-action="simul">&Alt;<keycap>L</keycap></keycombo> , the
-<guibutton>Help</guibutton> button or <keycombo
-action="simul">&Alt;<keycap>H</keycap></keycombo> will bring this help
-and the <guibutton>Quit</guibutton> button or <keycombo
-action="simul">&Alt;<keycap>Q</keycap></keycombo> allows you to quit
-the program.</para>
+<sect2>
+<title>The File Menu</title>
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>q</keycap></keycombo>
+</shortcut>
+<guimenu>File</guimenu>
+<guimenuitem>Quit</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Quits</action> &klettres;</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+</sect2>
 
+<sect2>
+<title>The Levels Menu</title>
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Alt</keycap><keycap>l</keycap></keycombo>
+</shortcut>
+<guimenu>Levels</guimenu>
+<guimenuitem>Levels</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the level</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+</sect2>
+
+<sect2>
+<title>The Settings Menu</title>
+<para>
+<variablelist>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>M</keycap></keycombo>
+</shortcut>
+<guimenu>Settings</guimenu>
+<guimenuitem>Show MenuBar</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Toggle</action> the MenuBar</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Ctrl</keycap><keycap>T</keycap></keycombo>
+</shortcut>
+<guimenu>Settings</guimenu>
+<guimenuitem>Show ToolBar</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Toggle</action> the ToolBar</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Alt</keycap><keycap>a</keycap></keycombo>
+</shortcut>
+<guimenu>Settings</guimenu>
+<guimenuitem>Learning Language</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the language to learn between Dutch and
+French.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo><keycap>Alt</keycap><keycap>f</keycap></keycombo>
+</shortcut>
+<guimenu>Settings</guimenu>
+<guimenuitem>Look and Feel</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Choose</action> the style of &klettres;
+between "Grown-up" and "kid".</para></listitem>
+</varlistentry>
+</variablelist>
+</para>
+</sect2>
 </sect1>
 </chapter>
 
@@ -170,17 +297,8 @@ the program.</para>
 <title>Developer's Guide to &klettres;</title>
 
 <para>
-If you want to change the sounds or letters, it is quite easy. You
-need the source code of &klettres;. In the <filename
-class="directory">klettres/klettres</filename> directory, you'll find
-2 text files called <filename>level1.txt</filename> and
-<filename>level3.txt</filename>. You change the letters or sounds in
-these files, you save them. Then you record the corresponding sounds
-and put them in the <filename class="directory">sons</filename>
-(levels 1 and 2) and <filename class="directory">sons2</filename>
-(levels 3 and 4) folders, <filename>a-0.wav</filename> corresponding
-to the first line of <filename>level1.txt</filename> and so on. You
-then just recompile the program.</para>
+</para>
+
 </chapter>
 
 <chapter id="faq">
@@ -198,6 +316,18 @@ then just recompile the program.</para>
 <para>You need to configure with the prefix option set to your &kde; dir or
 to add this directory to your path.</para> </answer>
 </qandaentry>
+<qandaentry>
+<question>
+<para>Why are there only two langages?</para>
+</question>
+<answer>
+<para>In order for me to add a new language, I need the sounds
+for the alphabet and some basic syllables. Someone speaking natively the new language must
+record these sounds in ogg format. For levels 3 and 4, the syllables must be
+choosen by a teacher: these must be the syllables you have to learn just after the
+alphabet in order to learn well the basics of this language. Please
+send me a mail if you are able to do that.</para> </answer>
+</qandaentry>
 </qandaset>
 </chapter>
 
@@ -214,6 +344,8 @@ Program copyright 2001 Anne-Marie Mahfouf <email>annma@kde.org</email>
 <para>
 Contributors:
 <itemizedlist>
+<listitem><para>Dutch sounds: Geert Stams
+<email>geert@pa3csg.myweb.nl</email></para> </listitem>
 <listitem><para>Background picture: Renaud Blanchard
 <email>kisukuma@chez.com</email></para> </listitem>
 <listitem><para>Splashscreen:  Primoz Anzur
@@ -221,6 +353,8 @@ Contributors:
 <listitem><para>Splashscreen sound: Ludovic Grossard
 <email>ludovic.grossard@libertysurf.fr/email</email></para>
 </listitem>
+<listitem><para>Support and coding guidance: Robert Gogolok
+<email>mail@robert-gogolok.de</email></para></listitem>
 </itemizedlist>
 </para>
 
@@ -239,12 +373,7 @@ Documentation copyright 2001 Anne-Marie Mahfouf <email>annma@kde.org</email>
 <appendix id="installation">
 <title>Installation</title>
 
-<sect1 id="getting-klettres">
-<title>How to obtain &klettres;</title>
 
-&install.intro.documentation;
-
-</sect1>
 
 <sect1 id="requirements">
 <title>Requirements</title>
@@ -259,12 +388,6 @@ on <ulink url="http://edu.kde.org/klettres">The &klettres; home page</ulink>
 and is part of the KDE-Edu project. </para>
 </sect1>
 
-<sect1 id="compilation">
-<title>Compilation and Installation</title>
-
-&install.compile.documentation;
-
-</sect1>
 
 </appendix>
 
@@ -279,6 +402,7 @@ sgml-indent-step:0
 sgml-indent-data:nil
 End:
 -->
+
 
 
 
