@@ -116,7 +116,7 @@ void KLettres::setupActions()
 
     KStdAction::keyBindings(this, SLOT(optionsConfigureKeys()), actionCollection());
     KStdAction::configureToolbars(this, SLOT(optionsConfigureToolbars()), actionCollection());
-    fontAct = new KAction(i18n("Change &Font"), "fonts", CTRL+Key_F, this, SLOT(optionsPreferences()), actionCollection(), "font");
+    fontAct = new KAction(i18n("Change &Font..."), "fonts", CTRL+Key_F, this, SLOT(optionsPreferences()), actionCollection(), "font");
     setAutoSaveSettings("General");
     createGUI();
 }
