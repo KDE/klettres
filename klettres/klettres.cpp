@@ -330,7 +330,7 @@ void KLettres::updateLevMenu(int id)
 void KLettres::loadLangToolBar()
 {
 	secondToolbar->clear();
-	if (m_languages[selectedLanguage]== "cs" || m_languages[selectedLanguage]== "da" || m_languages[selectedLanguage]== "sk")//Dutch, French and Italian have no special characters
+	if (m_languages[selectedLanguage]== "cs" || m_languages[selectedLanguage]== "da" || m_languages[selectedLanguage]== "sk" || m_languages[selectedLanguage]== "es")//Dutch, English, French and Italian have no special characters
 	{
 		allData.clear();
 		QString myString=QString("klettres/%1.txt").arg(m_languages[selectedLanguage]);
