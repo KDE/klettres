@@ -109,7 +109,7 @@ void KLettresPreferences::slotDefault()
     style = "grownup";
     langString = "French";
     newFont = QFont(KGlobalSettings::largeFont());
-    newFont.setBold(true);
+    newFont.setWeight(75);
     slotSet();
     slotChanged();
 }

@@ -245,6 +245,11 @@ void KLettres::slotClickApply()
 	if (style=="grownup") slotGrownup();
 	else slotKid();
       }
+      if (langString!=dlg.langString)
+      {
+         langString = dlg.langString;
+	 setLang();
+      }
 }
 
 void KLettres::slotQuit()
