@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2001-2003 Anne-Marie Mahfouf <annma@kde.org>
+ * Copyright (C) 2001-2004 Anne-Marie Mahfouf <annma@kde.org>
  */
 /*****************************************************/
 /* Please save with utf8 encoding, thanks  */
@@ -36,9 +36,9 @@ int main(int argc, char **argv)
 	    I18N_NOOP("Dutch sounds"), "geert@pa3csg.myweb.nl");
     about.addCredit("Erik Kjaer Pedersen",
 	    I18N_NOOP("Danish sounds"), "erik@binghamton.edu");
-    about.addCredit("Eva Mikulčíková",
+    about.addCredit("Eva MikulÄÃ­kovÃ¡",
 	    I18N_NOOP("Czech sounds"), "evmi@seznam.cz");
-   about.addCredit("Silvia Motyčková & Jozef Říha",
+   about.addCredit("Silvia MotyÄkovÃ¡ & Jozef ÅÃ­ha",
 	    I18N_NOOP("Slovak sounds"), "silviamotycka@seznam.cz");
    about.addCredit("Alessandro Pasotti",
 	    I18N_NOOP("Italian sounds"), "alessandro@acqualba.it");
@@ -50,6 +50,8 @@ int main(int argc, char **argv)
 	    I18N_NOOP("Support and coding guidance"), "mail@robert-gogolok.de");
     about.addCredit("Chris Luetchford", 
     	    I18N_NOOP("svg icon"), "chris@os11.com");
+    about.addCredit("Peter Hedlund", 
+    	    I18N_NOOP("Code for generating special characters icons"), "peter@peterandlinda.com");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;

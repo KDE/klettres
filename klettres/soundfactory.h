@@ -3,7 +3,7 @@
    mailto:e.bischoff@noos.fr
  ------------------------------------------------------------- */
  /*
- * Copyright (C) 2001-2003 
+ * Copyright (C) 2001-2004 
    Eric Bischoff
    Anne-Marie Mahfouf <annma@kde.org>
 
