@@ -9,6 +9,7 @@
 #include <config.h>
 #endif
 
+#include <qfont.h>
 #include <qlabel.h>
 //KDE headers
 #include <kapplication.h>
@@ -37,6 +38,7 @@ public:
 
 	QLabel *langLabel;
 	QLabel *levLabel;
+	QFont newFont;
 
 	KToolBar *tb;
 	KComboBox *lev_comb;
@@ -86,6 +88,7 @@ private slots:
 
 	void setLang();
 	void slotChangeFont();
+	void slotSetFont();
 
 private:
     void setupAccel();

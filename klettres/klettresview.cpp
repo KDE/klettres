@@ -3,7 +3,6 @@
  */
 
 //Qt headers
-#include <qfont.h>
 #include <qlayout.h>
 #include <qtextstream.h>
 #include <qtimer.h>
@@ -11,7 +10,6 @@
 //KDE headers
 #include <kaudioplayer.h>
 #include <kdebug.h>
-#include <kglobalsettings.h>
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <klocale.h>
@@ -42,12 +40,6 @@ KLettresView::KLettresView(QWidget *parent)
     line1->setGeometry( QRect( 40, 310, 161, 160 ) );
     QToolTip::add( line1, i18n( "Type the letter that you just heard" ) );
 
-    //font for button and lineEdit
-    //use largeFont()
-    QFont f(KGlobalSettings::largeFont());
-    f.setBold(true);
-    button1->setFont( f );
-    line1->setFont(f);
     //load background pics
     pm_a.load(locate("data","klettres/pics/background1.png"));
     pm_k.load(locate("data","klettres/pics/klettres_back.jpeg"));

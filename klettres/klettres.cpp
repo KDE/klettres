@@ -23,6 +23,7 @@
 #include <kaction.h>
 #include <kstdaction.h>
 #include <kfontdialog.h>
+#include <kglobalsettings.h>
 //Project headers
 #include "klettres.h"
 
@@ -79,6 +80,7 @@ KLettres::KLettres()
     //Read config
     //if not, put default as French
     readConfig();
+    slotSetFont();//set the font from config
     if (!langString) //if there is no config file
     {
 	QString mString=i18n("This is the first time you have run KLettres.\n"
@@ -205,6 +207,8 @@ void KLettres::readConfig()
     config->setGroup(langString);
     m_view->l1 =config->readNumEntry("Alphabet");
     m_view->l2 =config->readNumEntry("Syllables");
+    config->setGroup("Font");
+    newFont=QFont(config->readEntry("Family"), config->readNumEntry("Size"), config->readNumEntry("Weight"), false);
 }
 
 void KLettres::writeConfig()
@@ -224,6 +228,10 @@ void KLettres::writeConfig()
     config->setGroup("Danish");
     config->writeEntry("Alphabet", 29);
     config->writeEntry("Syllables", 28);
+    config->setGroup("Font");
+    config->writeEntry("Family", newFont.family());
+    config->writeEntry("Size", newFont.pointSize());
+    config->writeEntry("Weight", newFont.weight());
 }
 
 void KLettres::slotQuit()
@@ -396,17 +404,32 @@ void KLettres::slotChangeFont()
 {
     KFontDialog fdlg (0L, 0L, false, true);
     fdlg.setCaption(i18n("Choose New Font"));
-    QFont newFont(KGlobalSettings::largeFont());
+    newFont = QFont(KGlobalSettings::largeFont());
     newFont.setBold(true);
+    //this fixes the default font when you open the font dialog
+    //maybe I should set a default settings somewhere and open with the actual font
     fdlg.setFont(newFont);
     if (fdlg.exec() == QDialog::Accepted ) {
       newFont = fdlg.font();
-      newFont.setWeight(QFont::Normal);
+      //newFont.setWeight(QFont::Normal);
       newFont.setStrikeOut(false);
       newFont.setUnderline(false);
       m_view->button1->setFont(newFont);
       m_view->line1->setFont(newFont);
 	}
 }
+
+void KLettres::slotSetFont()
+{
+     if (newFont.pointSize()==1)
+    {
+    	newFont=QFont(KGlobalSettings::largeFont());
+    	newFont.setBold(true);
+    }
+    //otherwise newFont=read from config
+    m_view->button1->setFont(newFont);
+    m_view->line1->setFont(newFont);
+}
+
 
 #include "klettres.moc"
