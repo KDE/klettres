@@ -59,9 +59,16 @@ KLettres::KLettres()
 	loadSettings();
 	// activate language
 	soundFactory->change(selectedLanguage);
+	//Set up StatusBar
+	KStatusBar *st=statusBar();
+	langLabel = new QLabel(st);
+	levLabel = new QLabel(st);
+	st->addWidget(levLabel);
+	st->insertFixedItem("", 1);//add a space
+	st->addWidget(langLabel);
+	statusBar();
 	// then, setup our actions, must be done after loading soundFactory as it has some actions too
 	setupActions();
-
 	menuBool=false; //false when menubar button is not shown
 	kidBool=false;//false when kid button not shown
 	grownBool=false;
@@ -82,14 +89,7 @@ KLettres::KLettres()
 
 	//toolbar for special characters
 	secondToolbar = toolBar("secondToolbar");
-	//Set up StatusBar
-	KStatusBar *st=statusBar();
-	langLabel = new QLabel(st);
-	levLabel = new QLabel(st);
-	st->addWidget(levLabel);
-	st->insertFixedItem("", 1);//add a space
-	st->addWidget(langLabel);
-	statusBar();
+	
 	//from the Read config, growup is set as default if no style
 	if (Prefs::style() == Prefs::EnumStyle::grownup)
 		slotGrownup();
