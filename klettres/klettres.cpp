@@ -148,8 +148,13 @@ void KLettres::registerLanguage(const QString &language, const QString &menuItem
 	kdDebug() << "m_languages :" << m_languages << endl;
 	//this is for translation of the languages
 	KConfig entry(locate("locale", "all_languages"));
-	entry.setGroup(language);
-	m_languageNames.append(entry.readEntry("Name"));
+	if (language == "hi-ro")
+	   m_languageNames.append(i18n("Romanized Hindi"));
+	else
+	{
+	   entry.setGroup(language);
+	   m_languageNames.append(entry.readEntry("Name"));
+	}
 	Prefs::setLanguages(m_languages);
 }
 

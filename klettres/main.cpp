@@ -17,7 +17,7 @@ static const char description[] =
 	I18N_NOOP("KLettres helps a very young child or an adult learning \n"
 		  "a new language by associating sounds and \n"
 		  "letters in this language.\n"
-		  "6 languages are available: Czech, Danish, Dutch, French, Italian and Slovak.");
+		  "8 languages are available: Czech, Danish, Dutch, French, Italian, Romanized Hindi, Spanish and Slovak.");
 
 static KCmdLineOptions options[] =
 {
@@ -31,17 +31,21 @@ int main(int argc, char **argv)
                      KAboutData::License_GPL, "(C) 2001-2003 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
     about.addAuthor( "Anne-Marie Mahfouf", 0, "annma@kde.org");
     about.addCredit("Ludovic Grossard",
-	    I18N_NOOP("French sounds"), "grossard@kde.org");
+            I18N_NOOP("French sounds"), "grossard@kde.org");
     about.addCredit("Geert Stams",
-	    I18N_NOOP("Dutch sounds"), "geert@pa3csg.myweb.nl");
+            I18N_NOOP("Dutch sounds"), "geert@pa3csg.myweb.nl");
     about.addCredit("Erik Kjaer Pedersen",
             I18N_NOOP("Danish sounds"), "erik@binghamton.edu");
     about.addCredit("Eva Mikulčíková",
             I18N_NOOP("Czech sounds"), "evmi@seznam.cz");
-   about.addCredit("Silvia Motyčková & Jozef Říha",
+    about.addCredit("Silvia Motyčková & Jozef Říha",
             I18N_NOOP("Slovak sounds"), "silviamotycka@seznam.cz");
-   about.addCredit("Pietro Pasotti",
-		   I18N_NOOP("Italian sounds"), "pietro@itopen.it");
+    about.addCredit("Pietro Pasotti",
+                I18N_NOOP("Italian sounds"), "pietro@itopen.it");
+    about.addCredit("Ana Belén Caballero and Juan Pedro Paredes",
+                I18N_NOOP("Spanish sounds"), "neneta@iquis.com");
+    about.addCredit("Vikas Kharat",
+            I18N_NOOP("Romanized Hindi sounds"), "kharat@sancharnet.in");
     about.addCredit("Primoz Anzur",
             I18N_NOOP("Icons"), "zerokode@yahoo.com");
     about.addCredit("Renaud Blanchard",
@@ -51,11 +55,11 @@ int main(int argc, char **argv)
     about.addCredit("Chris Luetchford", 
             I18N_NOOP("svg icon"), "chris@os11.com");
     about.addCredit("Peter Hedlund", 
-    	    I18N_NOOP("Code for generating special characters' icons"), "peter@peterandlinda.com");
-   about.addCredit("Waldo Bastian",
-   	   I18N_NOOP("Port to KConfig XT, coding help"), "bastian@kde.org");
-   about.addCredit("Danny Allen",
-		   I18N_NOOP("Kids and grownup svg icons"), "danny@dannyallen.co.uk");
+            I18N_NOOP("Code for generating special characters' icons"), "peter@peterandlinda.com");
+    about.addCredit("Waldo Bastian",
+        I18N_NOOP("Port to KConfig XT, coding help"), "bastian@kde.org");
+    about.addCredit("Danny Allen",
+                I18N_NOOP("Kids and grownup svg icons"), "danny@dannyallen.co.uk");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;
