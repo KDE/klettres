@@ -307,7 +307,7 @@
                 <property stdset="1">
                     <name>font</name>
                     <font>
-                        <family>Bitstream Charter</family>
+                        //<family>Bitstream Charter</family>
                         <pointsize>18</pointsize>
                         <bold>1</bold>
                     </font>
@@ -549,7 +549,7 @@
                 <property stdset="1">
                     <name>font</name>
                     <font>
-                        <family>Bitstream Charter</family>
+                        //<family>Bitstream Charter</family>
                         <pointsize>18</pointsize>
                         <bold>1</bold>
                     </font>
@@ -820,7 +820,7 @@
                 <property stdset="1">
                     <name>font</name>
                     <font>
-                        <family>Bitstream Charter</family>
+                        //<family>Bitstream Charter</family>
                         <pointsize>18</pointsize>
                         <bold>1</bold>
                     </font>
@@ -1071,7 +1071,7 @@
         <property stdset="1">
             <name>font</name>
             <font>
-                <family>Century Schoolbook L</family>
+                //<family>Century Schoolbook L</family>
                 <pointsize>140</pointsize>
                 <bold>1</bold>
             </font>
@@ -1330,7 +1330,7 @@
         <property stdset="1">
             <name>font</name>
             <font>
-                <family>Century Schoolbook L</family>
+                //<family>Century Schoolbook L</family>
                 <pointsize>140</pointsize>
                 <bold>1</bold>
             </font>
