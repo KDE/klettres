@@ -138,26 +138,7 @@ private slots:
 	void loadSettings();
 	
 	void slotPasteChar();
-	void slotPasteCcaron();
-	void slotPasteDcaron();
-	void slotPasteRcaron();
-	void slotPasteScaron();
-	void slotPasteTcaron();
-	void slotPasteZcaron();
-	void slotPasteAcircle();
-	void slotPasteAwithE();
-	void slotPasteObarre();
-	void slotPasteAacute();
-	void slotPasteAumlaut();
-	void slotPasteEacute();
-	void slotPasteIacute();
-	void slotPasteLacute();
-	void slotPasteLapos();
-	void slotPasteOacute();
-	void slotPasteOchap();
-	void slotPasteRacute();
-	void slotPasteUacute();
-	void slotPasteNcaron();
+
 	void downloadNewStuff();
 
 private:

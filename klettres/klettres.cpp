@@ -14,10 +14,6 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
     */
-
-    /****************************************/
-    /* Please save as utf8 encoding */
-    /****************************************/
     
 #include <qbitmap.h>
 #include <qpainter.h>
@@ -359,14 +355,12 @@ void KLettres::loadLangToolBar()
 	}
 	else {
 		allData.clear();
-		QString myString=QString("khangman/%1.txt").arg(m_languages[selectedLanguage]);
-		if (m_languages[selectedLanguage] =="pt_BR")
-			myString=QString("khangman/pt.txt");
+		QString myString=QString("klettres/%1.txt").arg(m_languages[selectedLanguage]);
 		QFile myFile;
 		myFile.setName(locate("data",myString));
 		if (!myFile.exists())
 		{
-			QString mString=i18n("File $KDEDIR/share/apps/khangman/%1.txt not found!\n"
+			QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found!\n"
 						"Check your installation, please!").arg(m_languages[selectedLanguage]);
 			KMessageBox::sorry( this, mString,
 						i18n("Error") );
@@ -398,104 +392,6 @@ void KLettres::slotPasteChar()
 	m_view->line1->setText(allData[charBut->id()]);
 }
 
-void KLettres::slotPasteCcaron()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ä", -1));//not setText() but append to existing string
-}
-
-void KLettres::slotPasteDcaron()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ä", -1));
-}
-
-void KLettres::slotPasteRcaron()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Å", -1));
-}
-
-void KLettres::slotPasteScaron()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Å ", -1));
-}
-
-void KLettres::slotPasteTcaron()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Å¤", -1));
-}
-
-void KLettres::slotPasteZcaron()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Å½", -1));
-}
-
-void KLettres::slotPasteAcircle()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-void KLettres::slotPasteAwithE()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-void KLettres::slotPasteObarre()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-
-void KLettres::slotPasteAacute()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-
-void KLettres::slotPasteAumlaut()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-
-void KLettres::slotPasteEacute()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-
-void KLettres::slotPasteIacute()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-
-void KLettres::slotPasteLacute()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ä¹", -1));
-}
-
-void KLettres::slotPasteLapos()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ä½", -1));
-}
-
-void KLettres::slotPasteNcaron()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Å", -1));
-}
-
-void KLettres::slotPasteOacute()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-
-void KLettres::slotPasteOchap()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-
-void KLettres::slotPasteRacute()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Å", -1));
-}
-
-void KLettres::slotPasteUacute()
-{
-	m_view->line1->setText(m_view->line1->text()+QString::fromUtf8("Ã", -1));
-}
-
 QString Prefs::defaultLanguage()
 {
 	//see what is the user language for KDE
@@ -514,47 +410,44 @@ void KLettres::downloadNewStuff()
 
 QString KLettres::charIcon(const QChar & c)
 {
-  ///Create a name and path for the icon
-  QString s = locateLocal("icon", "char" + QString::number(c.unicode()) + ".png");
-  
-  ///No need to redraw if it already exists
- // if (KStandardDirs::exists(s))
-   // return s;
-  
-  QRect r(4, 4, 120, 120);
-
-  ///A font to draw the character with
-  QFont font;
-  if (m_languages[selectedLanguage]=="cs")
-  	font.setFamily( "Arial" );
-  else
-   	font.setFamily( "URW Bookman" );
-  font.setPixelSize(120);
-  font.setWeight(QFont::DemiBold);
-  
-  ///Create the pixmap        
-  QPixmap pm(128, 128);
-  pm.fill(Qt::white);
-  QPainter p(&pm);
-  p.setFont(font);
-  p.setPen(Qt::black);
-  p.drawText(r, Qt::AlignCenter, (QString) c);
-  
-  ///Create transparency mask
-  QBitmap bm(128, 128);
-  bm.fill(Qt::color0);
-  QPainter b(&bm);
-  b.setFont(font);
-  b.setPen(Qt::color1);
-  b.drawText(r, Qt::AlignCenter, (QString) c);
-  
-  ///Mask the pixmap
-  pm.setMask(bm); 
-  
-  ///Save the icon to disk
-  pm.save(s, "PNG");
-  
-  return s;
+	///Create a name and path for the icon
+	QString s = locateLocal("icon", "char" + QString::number(c.unicode()) + ".png");
+	
+	///No need to redraw if it already exists
+	// if (KStandardDirs::exists(s))
+	// return s;
+	
+	QRect r(4, 4, 120, 120);
+	
+	///A font to draw the character with
+	QFont font;
+	font.setFamily( "Arial" );
+	font.setPixelSize(120);
+	font.setWeight(QFont::DemiBold);
+	
+	///Create the pixmap        
+	QPixmap pm(128, 128);
+	pm.fill(Qt::white);
+	QPainter p(&pm);
+	p.setFont(font);
+	p.setPen(Qt::black);
+	p.drawText(r, Qt::AlignCenter, (QString) c);
+	
+	///Create transparency mask
+	QBitmap bm(128, 128);
+	bm.fill(Qt::color0);
+	QPainter b(&bm);
+	b.setFont(font);
+	b.setPen(Qt::color1);
+	b.drawText(r, Qt::AlignCenter, (QString) c);
+	
+	///Mask the pixmap
+	pm.setMask(bm); 
+	
+	///Save the icon to disk
+	pm.save(s, "PNG");
+	
+	return s;
 }
 
 #include "klettres.moc"
