@@ -307,6 +307,8 @@
                 <property stdset="1">
                     <name>font</name>
                     <font>
+                    <family>arial, helvetica, sans-serif</family>
+                    <pointsize>20</pointsize>
                     </font>
                 </property>
             </widget>
