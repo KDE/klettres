@@ -90,7 +90,7 @@ KLettres::KLettres()
 	//toolbar for special characters
 	secondToolbar = toolBar("secondToolbar");
 	
-	changeLookAction = new KAction(i18n("Switch to the kid look"), "kids.png", this, SLOT(switchLook()), actionCollection());
+	changeLookAction = new KAction(i18n("Switch to Kid Look"), "kids.png", this, SLOT(switchLook()), actionCollection());
 	changeLookAction->plug(tb);
 	
 	//from the Read config, growup is set as default if no style
@@ -249,7 +249,7 @@ void KLettres::slotGrownup()
 	langLabel->setFont(f_lab);
 	m_action->setChecked(true);
 	slotMenubar();
-	changeLookAction->setText(i18n("Switch to the kid look"));
+	changeLookAction->setText(i18n("Switch to Kid Look"));
 	changeLookAction->setIcon("kids.png");
 	kidBool=true;
 	grownBool=false;
@@ -272,7 +272,7 @@ void KLettres::slotKid()
 	langLabel->setFont(f_lab);
 	m_action->setChecked(false);
 	slotMenubar();
-	changeLookAction->setText(i18n("Switch to the grown-up look"));
+	changeLookAction->setText(i18n("Switch to Grown-Up Look"));
 	changeLookAction->setIcon("grownup.png");
 	grownBool=true;
 	kidBool=false;
