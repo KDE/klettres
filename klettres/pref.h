@@ -50,7 +50,7 @@ private slots:
 
 signals:
       	void aClicked();
-	void fClicked();
+
 };
 
 class KLettresPrefPageOne : public pref1ui

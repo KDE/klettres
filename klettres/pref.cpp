@@ -42,7 +42,6 @@ KLettresPreferences::KLettresPreferences()
     m_pageTwo = new KLettresPrefPageTwo(frame);
 
     connect (m_pageTwo->fdlg, SIGNAL (fontSelected( const QFont & )), this, SLOT (slotSetNewFont( const QFont & )));
-    //connect (m_pageTwo->fdlg, SIGNAL (fontSelected( const QFont & )), this, SLOT (slotChanged( )));
 
     frame = addPage(i18n("Language"), i18n("Sounds & Letters Language"));
     m_pageThree = new KLettresPrefPageThree(frame);
@@ -180,14 +179,10 @@ void KLettresPreferences::slotSetNewFont(const QFont &font)
 {
 	if (font.family() != newFont.family() ||  newFont.pointSize() != font.pointSize() || newFont.weight() != font.weight())
 	{
-		emit fClicked();
-		connect (this, SIGNAL(fClicked()), this, SLOT(slotChanged()));
+		slotChanged();
 		newFont = font;
 		writeConfig();
-
 	}
-	//enableButton( Apply, false );
-        //configChanged = false;
 }
 
 //called whenever a change has been made in the settings

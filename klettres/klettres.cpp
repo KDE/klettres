@@ -217,9 +217,7 @@ void KLettres::optionsPreferences()
 {
     KLettresPreferences dlg;
     dlg.resize(530, 450);
-    //dlg.cancelBool=false;
     dlg.configChanged = false;
-    //dlg.langChanged = false;
     QObject::connect(&dlg, SIGNAL(aClicked()), this, SLOT(slotClickApply()));
     if (dlg.exec())
     {
