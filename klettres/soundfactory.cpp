@@ -181,7 +181,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, uint toLoad)
 		//namesList helds the names of the letter or syllable to display
 		namesList[sound] = nameAttribute.value();
 		fileAttribute = soundNameElement.attributeNode("file");
-		//filesList helds the names of the sound files (i.e the location of the sounds like fr/alpha/a-0.mp3
+		//filesList helds the names of the sound files (i.e the location of the sounds like fr/alpha/a-0.mp3)
 		filesList[sound] = fileAttribute.value();
 	}
 	return true;
