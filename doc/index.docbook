@@ -74,7 +74,7 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are six languages available at the moment: Czech, Danish, Dutch, French, Italian and Slovak. By default, only French plus your Czech, Danish, Dutch, Italian or Slovak if it is your KDE language are present in KLettres. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get A New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
+<para>There are six languages available at the moment: Czech, Danish, Dutch, French, Italian and Slovak. If your KDE language is Czech, Danish, Dutch, French, Italian or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get A New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
 
 <para>Two different Look and Feels allow you to adapt &klettres; to
 your need.  For a child, the menu bar and the language button are not
@@ -118,7 +118,7 @@ that you do the game together.</para>
 and look-and-feel is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
-If your KDE language is set to Czech, Danish, Dutch, French, Italian or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default.
+If your KDE language is set to Czech, Danish, Dutch, French, Italian or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default. KLettres comes with French and your default language if among those listed above and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get A New Language...</guimenuitem> provided you have an internet connection.
 </para>
 </note>
 <para>
@@ -137,8 +137,7 @@ time.</para>
 </para>
 </note>
 
-<para>The first time &klettres; is run, default is set to French and
-Level 1.
+<para>
 After the first time, the language setting is saved in a configuration file
 on closing of &klettres; and loaded the next time, with Level 1.
 </para>
@@ -435,14 +434,21 @@ You can choose the size you like the best.
 </sect1>
 </chapter>
 
-<chapter id="developers">
-<title>Developer's Guide to &klettres;</title>
+<chapter id="sounds">
+<title>Adding Sounds to &klettres;</title>
 
 <para>
 The English sounds are the most needed at the moment. They
 would be the default language if the user language is not available.
 </para>
 
+<para>
+If you would like to add sounds in your own language, it is very easy to do so. Record the alphabet sounds and place them in a folder named 'alpha'. Please write the letters (one per line) in a text file and save it with utf8 encoding in the 'alpha' folder. Then record the most current syllables and put them in a folder named 'syllab'. Write the syllables (one per line) in a text file and save it with utf8 encoding in the 'syllab' folder. The sounds should be in wav or ogg format and long enough for KAudioPlayer to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me. Additionally you can tell me about special letters in your language so I can easily generate the Special Characters Toolbar.  
+</para>
+
+<para>
+See <ulink url="http://edu.kde.org/klettres/add_language.php">the KLettres website</ulink> for more detailed instructions on how to add a new language.
+</para>
 </chapter>
 
 <chapter id="faq">
