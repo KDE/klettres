@@ -31,7 +31,7 @@ KhSplash::KhSplash(QWidget *parent, const char *name ) : QFrame(parent,name,QWid
 	painter.end();
 	setBackgroundPixmap(*pm);
 	QRect desk = KGlobalSettings::splashScreenDesktopGeometry();
-	setGeometry(desk.width()/2-200, desk.height()/2-124, 400, 248);
+	setGeometry(desk.center().x()-200, desk.center().y()-124, 400, 248);
 	setFrameStyle( QFrame::Box | QFrame::Raised );
 	setLineWidth(1);
 	show();
