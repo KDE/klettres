@@ -91,7 +91,7 @@ KLettres::KLettres()
 	//toolbar for special characters
 	secondToolbar = toolBar("secondToolbar");
 	
-	changeLookAction = new KAction(i18n("Switch to Kid Look"), "kids.png", this, SLOT(switchLook()), actionCollection());
+	changeLookAction = new KAction(i18n("Switch to Kid Look"), "klettres_kids.png", this, SLOT(switchLook()), actionCollection());
 	changeLookAction->plug(tb);
 	
 	//from the Read config, growup is set as default if no style
@@ -251,7 +251,7 @@ void KLettres::slotGrownup()
 	m_action->setChecked(true);
 	slotMenubar();
 	changeLookAction->setText(i18n("Switch to Kid Look"));
-	changeLookAction->setIcon("kids.png");
+	changeLookAction->setIcon("klettres_kids.png");
 	kidBool=true;
 	grownBool=false;
 	m_view->slotGrownup();
@@ -274,7 +274,7 @@ void KLettres::slotKid()
 	m_action->setChecked(false);
 	slotMenubar();
 	changeLookAction->setText(i18n("Switch to Grown-Up Look"));
-	changeLookAction->setIcon("grownup.png");
+	changeLookAction->setIcon("klettres_grownup.png");
 	grownBool=true;
 	kidBool=false;
 	m_view->slotKid();
@@ -431,8 +431,8 @@ void KLettres::slotTimer()
 	KConfigDialog *dialog = new KConfigDialog(this, "timer", Prefs::self());
 	timerdlg *m_timer = new timerdlg();
 	dialog->addPage(m_timer, i18n("Timer"), "clock");
-	m_timer->kidPixLabel -> setPixmap(KGlobal::iconLoader()->loadIcon("kids", KIcon::NoGroup));
-	m_timer->grownPixLabel -> setPixmap(KGlobal::iconLoader()->loadIcon("grownup", KIcon::NoGroup));
+	m_timer->kidPixLabel -> setPixmap(KGlobal::iconLoader()->loadIcon("klettres_kids", KIcon::NoGroup));
+	m_timer->grownPixLabel -> setPixmap(KGlobal::iconLoader()->loadIcon("klettres_grownup", KIcon::NoGroup));
 	m_timer->kcfg_KidTimer->setRange(0, 20, 2, true);
 	m_timer->kcfg_GrownTimer->setRange(0, 20, 2, true);
 	connect(dialog, SIGNAL(settingsChanged()), this, SLOT(loadSettings()));
