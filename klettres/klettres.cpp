@@ -119,7 +119,7 @@ KLettres::~KLettres()
 
 void KLettres::setupActions()
 {
-	new KAction( i18n("Get A New Language..."), "knewstuff", 0, this, SLOT( downloadNewStuff() ), actionCollection(), "downloadnewstuff" );
+	new KAction( i18n("Get New Language..."), "knewstuff", 0, this, SLOT( downloadNewStuff() ), actionCollection(), "downloadnewstuff" );
 	KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 
 	m_action = new KToggleAction(i18n("Show &Menubar"),CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
