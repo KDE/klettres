@@ -9,6 +9,7 @@
 #include <kdebug.h>
 #include <kfontdialog.h>
 #include <kglobalsettings.h>
+#include <kiconloader.h>
 #include <klocale.h>
 //Qt headers
 #include <qbuttongroup.h>
@@ -21,7 +22,7 @@
 
 
 KLettresPreferences::KLettresPreferences()
-    : KDialogBase(TreeList, i18n("KLettres Preferences"),
+    : KDialogBase(IconList, i18n("KLettres Preferences"),
                   Help|Default|Ok|Apply|Cancel, Ok)
 {
     //disable the Apply button before any changes are made
@@ -30,7 +31,7 @@ KLettresPreferences::KLettresPreferences()
     readConfig();
     //GUI
     QFrame *frame;
-    frame = addPage(i18n("General"), i18n("General"));
+    frame = addPage(i18n("General"), i18n("General"), BarIcon("gear", KIcon::SizeMedium));
     m_pageOne = new KLettresPrefPageOne(frame);
     connect(m_pageOne->levelBox, SIGNAL(activated(int)), this, SLOT(slotChangeLevel(int)));
     connect(m_pageOne->levelBox, SIGNAL(activated(int)), this, SLOT(slotChanged()));
@@ -38,12 +39,12 @@ KLettresPreferences::KLettresPreferences()
     QObject::connect(m_pageOne->lookGroup, SIGNAL(clicked(int)), this, SLOT(slotChangeLook(int)));
     QObject::connect(m_pageOne->lookGroup, SIGNAL(clicked(int)), this, SLOT(slotChanged()));
 
-    frame = addPage(i18n("Fonts"), i18n("Font settings"));
+    frame = addPage(i18n("Fonts"), i18n("Font settings"), BarIcon ("fonts", KIcon::SizeMedium));
     m_pageTwo = new KLettresPrefPageTwo(frame);
 
     connect (m_pageTwo->fdlg, SIGNAL (fontSelected( const QFont & )), this, SLOT (slotSetNewFont( const QFont & )));
 
-    frame = addPage(i18n("Language"), i18n("Sounds & Letters Language"));
+    frame = addPage(i18n("Language"), i18n("Sounds & Letters Language"), BarIcon ("locale", KIcon::SizeMedium));
     m_pageThree = new KLettresPrefPageThree(frame);
 
     QObject::connect(m_pageThree->langGroup, SIGNAL(clicked(int)), this, SLOT(slotLang(int)));
