@@ -126,6 +126,7 @@ void KLettres::setupActions()
     m_languageAction->setItems(m_languageNames);
     if (selectedLanguage < m_languageNames.count())
        m_languageAction->setCurrentItem(selectedLanguage);
+    
     connect(m_languageAction, SIGNAL(activated(int)), this, SLOT(changeLanguage(int)));
     
     setAutoSaveSettings("General");
@@ -136,7 +137,11 @@ void KLettres::setupActions()
 void KLettres::registerLanguage(const QString &language, const QString &menuItem)
 {
   m_languages.append(language);
-  m_languageNames.append(menuItem);
+  //this is for translation of the languages
+  KConfig entry(locate("locale", "all_languages"));
+  entry.setGroup(language);
+  m_languageNames.append(entry.readEntry("Name"));
+    
   Prefs::setLanguages(m_languages);
 }
 
