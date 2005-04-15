@@ -33,7 +33,7 @@ static const char description[] =
     I18N_NOOP("KLettres helps a very young child or an adult learning \n"
               "a new language by associating sounds and \n"
               "letters in this language.\n"
-              "9 languages are available: Czech, Danish, Dutch, English, French, Italian, Romanized Hindi, Spanish and Slovak.");
+              "10 languages are available: Czech, Danish, Dutch, English, French,\nItalian, Luganda, Romanized Hindi, Spanish and Slovak.");
 
 static const char version[] = "1.4";
 
@@ -66,6 +66,8 @@ int main(int argc, char **argv)
                     I18N_NOOP("Spanish sounds"), "neneta @iquis.com");
     about.addCredit("Vikas Kharat",
                     I18N_NOOP("Romanized Hindi sounds"), "kharat@sancharnet.in");
+    about.addCredit("John Magoye and Cormac Lynch",
+                     I18N_NOOP("Luganda sounds"), "cormaclynch@eircom.net");
     about.addCredit("Primoz Anzur",
                     I18N_NOOP("Icons"), "zerokode@yahoo.com");
     about.addCredit("Renaud Blanchard",
