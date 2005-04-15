@@ -39,7 +39,7 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Nine languages are available at the moment: Czech, Danish, Dutch, English, French, Italian, Romanized Hindi, Spanish and Slovak but only English, French and your language if it is among those are installed by default.
+Ten languages are available at the moment: Czech, Danish, Dutch, English, French, Italian, Luganda, Romanized Hindi, Spanish and Slovak but only English, French and your language if it is among those are installed by default.
 </para>
 <para>
 &klettres; is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar or via the Level menu. Themes (background and font color) can be changed in a drop down box or in the <guimenu>Look</guimenu> -&gt;<guimenuitem>Themes</guimenuitem> menu. Three themes are available: classroom, arctic and desert. Finally, the mode can be changed from kid to grown-up using the <guimenu>Look</guimenu> -&gt; <guimenuitem>Mode</guimenuitem> menu.
@@ -61,6 +61,7 @@ Nine languages are available at the moment: Czech, Danish, Dutch, English, Frenc
 <keyword>Romanized Hindi</keyword>
 <keyword>Spanish</keyword>
 <keyword>Slovak</keyword>
+<keyword>Luganda</keyword>
 <keyword>language</keyword>
 </keywordset>
 
@@ -78,7 +79,7 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are nine languages available at the moment: Czech, Danish, Dutch, English, French, Italian, Romanized Hindi, Spanish and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
+<para>There are ten languages available at the moment: Czech, Danish, Dutch, English, French, Italian, Luganda, Romanized Hindi, Spanish and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
 
 <note><para>&klettres; needs &arts; running for the sound</para></note>
 
@@ -561,7 +562,7 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only nine languages?</para>
+<para>Why are there only ten languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
@@ -606,6 +607,8 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>neneta @iquis.com</email></para></listitem>
 <listitem><para>Romanized Hindi sounds: Vikas Kharat
 <email>kharat@sancharnet.in</email></para></listitem>
+<listitem><para>Luganda sounds: John Magoye and Cormac Lynch
+<email>cormaclynch@eircom.net</email></para></listitem>
 <listitem><para>Classroom background picture: Renaud Blanchard
 <email>kisukuma@chez.com</email></para> </listitem>
 <listitem><para>Original icons:  Primoz Anzur
