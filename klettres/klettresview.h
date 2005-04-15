@@ -71,7 +71,7 @@ public:
 
 protected:
 
-    ///The pixmaps for the grown-up and  backgrounds
+    ///The pixmaps for the themes backgrounds
     QPixmap m_grownupPicture,
     m_kidPicture,
     m_desertPicture;
@@ -96,6 +96,7 @@ protected:
     void paintEvent( QPaintEvent * );
 
     protected slots:
+    
     void slotProcess(const QString &inputLetter);
 
     void slotTimerDone();

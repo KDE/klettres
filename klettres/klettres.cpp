@@ -124,6 +124,8 @@ void KLettres::findLanguages()
     for (QStringList::Iterator it = m_languages.begin(); it != m_languages.end(); ++it) {
         if (*it == "hi-ro")
             m_languageNames.append(i18n("Romanized Hindi"));
+        else if (*it =="lug_UG")
+            m_languageNames.append(i18n("Luganda"));
         else
         {
             entry.setGroup(*it);
