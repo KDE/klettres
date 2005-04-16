@@ -183,6 +183,9 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 void KLettres::setupActions()
 {
     new KAction( i18n("Get Alphabet in New Language..."), "knewstuff", 0, this, SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
+    KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),"player_play", CTRL+Key_P, m_view, SLOT(slotPlayAgain()), actionCollection(), "play_again");
+    m_playAgainAction->setToolTip(i18n("Play the same sound again"));
+    m_playAgainAction->setWhatsThis(i18n("You can rplay the same sound again by clicking this button or using the File menu, Replay Sound."));
     KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 
     m_menubarAction = new KToggleAction(i18n("Show &Menubar"),"editclear", CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");

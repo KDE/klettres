@@ -196,6 +196,11 @@ void KLettresView::slotTimerDone()
     }
 }
 
+void KLettresView::slotPlayAgain()
+{
+    //TODO wait for the previous sound to be payed before playing again as it won't play if the previous one was not finished
+    m_klettres->soundFactory->playSound(m_random);
+}
 
 void KLettresView::viewThemeArctic()
 {

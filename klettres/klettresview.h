@@ -96,6 +96,8 @@ protected:
     void paintEvent( QPaintEvent * );
 
     protected slots:
+    ///Play the same sound again
+    void slotPlayAgain();
     
     void slotProcess(const QString &inputLetter);
 

@@ -2,6 +2,7 @@
 <kpartgui name="klettres" version="5">
 	<MenuBar>
 		<Menu name="file" noMerge="1"><text>&amp;File</text>	
+                        <Action name="play_again"/>
 			<Action name="downloadnewstuff"/>
 			<Action name="file_quit"/>
 		</Menu>
@@ -38,6 +39,8 @@
 		<Separator/>
 		<Action name="menubar"/>
 		<Separator/>
+                <Action name="play_again"/>
+                <Separator />
 		<Action name="file_quit"/>
 	</ToolBar>
 	<ToolBar name="secondToolbar" position="bottom" noMerge="1"><text>Characters</text>
