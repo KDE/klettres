@@ -229,7 +229,7 @@ There is one more setting you can change: the font that displays the letters. In
 
 <warning>
 <para>
-Changing font is also nice as some fonts (helvetica for example) do not display correctly East-European languages as Czech and Slovak. If some letters or syllables are not displayed, please change the font and choose Arial for example.
+Changing font is also nice as some fonts (Helvetica for example) do not display correctly East-European languages as Czech and Slovak. If some letters or syllables are not displayed, please change the font and choose Arial for example.
 </para>
 </warning>
 
@@ -268,10 +268,21 @@ You can also choose here the size you like the best.
 <varlistentry>
 <term><menuchoice>
 <shortcut>
+<keycombo action="simul">&Ctrl;<keycap>P</keycap></keycombo>
+</shortcut>
+<guimenu>File</guimenu>
+<guimenuitem>Replay Sound</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Play</action> the same sound again</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
 <keycombo action="simul">&Alt;<keycap>G</keycap></keycombo>
 </shortcut>
 <guimenu>File</guimenu>
-<guimenuitem>Get Alphabet in New Langugage...</guimenuitem>
+<guimenuitem>Get Alphabet in New Language...</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Opens</action> the Get Alphabet in New Language dialog for &klettres;</para></listitem>
 </varlistentry>
