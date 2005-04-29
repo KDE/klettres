@@ -48,8 +48,6 @@ SoundFactory::SoundFactory(KLettres *parent, const char *name)
 
 SoundFactory::~SoundFactory()
 {
-    if (namesList) delete [] namesList;
-    if (filesList) delete [] filesList;
 }
 
 void SoundFactory::change(QString currentLanguage)
@@ -131,22 +129,21 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, QString currentLan
     if (sounds < 1)
         return false;
 
-    if (!(namesList = new QString[sounds]))
-        return false;
-    if (!(filesList = new QString[sounds]))
-        return false;
+   namesList.clear();
+   filesList.clear();
 
     for (uint sound = 0; sound < sounds; sound++)
     {
         soundNameElement = (const QDomElement &) soundNamesList.item(sound).toElement();
         nameAttribute = soundNameElement.attributeNode("name");
         //namesList helds the names of the letter or syllable to display
-        namesList[sound] = nameAttribute.value();
+        namesList.append(nameAttribute.value());
         fileAttribute = soundNameElement.attributeNode("file");
         //filesList helds the names of the sound files (i.e the location of the sounds like fr/alpha/a-0.mp3)
-        filesList[sound] = fileAttribute.value();
-        kdDebug() << "fileLists[sound] " << filesList[sound] << endl;
+        filesList.append(fileAttribute.value());
     }
+    if (namesList.isEmpty())   return false;
+    if (filesList.isEmpty())   return false;
     return true;
 }
 

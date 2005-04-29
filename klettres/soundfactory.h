@@ -56,9 +56,9 @@ public:
 	///Number of sounds corresponding to the current language and level (alphabet or syllables)
 	uint sounds;
 	///List of sound names
-	QString *namesList;
+	QStringList namesList;
 	///List of sound files associated with each sound name
-	QString *filesList;
+	QStringList filesList;
 	/**
 	* Load the sounds of one given language
 	* Call that when you read the language from Config and when the language changes
