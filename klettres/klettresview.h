@@ -58,8 +58,6 @@ public:
     void viewThemeClassroom();
     ///Set the Desert background pic, hide the menubar, show the Grownup button
     void viewThemeDesert();
-    ///Start playing displaying a new letter/syllable, playing the associated sound
-    void game();
 
     int selectedLanguage;
     ///The timer value i.e. the time for displaying the letters/syllables
@@ -88,12 +86,16 @@ protected:
     void chooseSound();
     ///Current letter or syllable stored
     QString m_currentLetter;
-
-    QString t1;
-
-    QString a1;
+    ///Current letter entered uppercase i.e. m_inputLetter.upper()
+    QString m_upperLetter;
+    ///Current letter entered
+    QString m_inputLetter;
     ///Paint the letter/syllable in levels 1 and 3
     void paintEvent( QPaintEvent * );
+
+    public slots:
+    ///Start playing displaying a new letter/syllable, playing the associated sound
+    void game();
 
     protected slots:
     ///Play the same sound again

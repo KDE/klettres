@@ -56,6 +56,7 @@ const int ID_MENUBARB  = 102;
 KLettres::KLettres()
         : KMainWindow( 0, "KLettres" )
 {
+    mNewStuff = 0;
     m_view = new KLettresView(this);
     // tell the KMainWindow that this is indeed the main widget
     setCentralWidget(m_view);
@@ -97,15 +98,27 @@ void KLettres::findLanguages()
     m_languages.remove(m_languages.find("data"));
     m_languages.remove(m_languages.find("icons"));
     m_languages.sort();
+    kdDebug() <<m_languages << endl;
     if (m_languages.isEmpty()) return;
     Prefs::setLanguages(m_languages);
     Prefs::writeConfig();
     //find duplicated entries in KDEDIR and KDEHOME
+    QStringList temp_languages;
     for (uint i=0;  i<m_languages.count(); i++)
     {
-        if (m_languages.contains(m_languages[i])>1)
+        if (m_languages.contains(m_languages[i])>1) {
+            temp_languages.append(m_languages[i]);
             m_languages.remove(m_languages[i]);
+        }
+	for (uint i=0;  i<temp_languages.count(); i++)
+	{
+		if (i%2==0)
+		m_languages.append(temp_languages[i]);//append 1 of the 2 instances found
+	}
+    temp_languages.clear();
     }
+//TODO TEST in FRENCH
+    m_languages.sort();
     //write the present languages in config so they cannot be downloaded
     KConfig *config=kapp->config();
     config->setGroup("KNewStuffStatus");
@@ -182,6 +195,9 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 
 void KLettres::setupActions()
 {
+    KAction *m_newAction = new KAction(i18n("New Sound"), "file_new", CTRL+Key_N, m_view, SLOT(game()), actionCollection(), "play_new");
+    m_newAction->setToolTip(i18n("Play a new sound"));
+    m_newAction->setWhatsThis(i18n("You can rplay a new sound by clicking this button or using the File menu, New Sound.")); 
     new KAction( i18n("Get Alphabet in New Language..."), "knewstuff", 0, this, SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
     KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),"player_play", CTRL+Key_P, m_view, SLOT(slotPlayAgain()), actionCollection(), "play_again");
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
@@ -351,10 +367,12 @@ void KLettres::updateLevMenu(int id)
 
 void KLettres::slotChangeLanguage(int newLanguage)
 {
+
+    kdDebug() << newLanguage << endl;
     // Change language
     selectedLanguage = newLanguage;
     // Write new language in config
-    Prefs::setLanguageNumber(newLanguage);
+    Prefs::setLanguage(m_languages[newLanguage]);
     Prefs::writeConfig();
     // Update the StatusBar
     QString langString = m_languageNames[newLanguage];
@@ -403,7 +421,7 @@ void KLettres::slotModeGrownup()
     m_kidAction->setToolTip(i18n("Switch to Kid mode"));
     m_menubarAction->setToolTip(i18n("Hide menubar"));
     slotMenubar();
-    m_secondToolbar->setIconSize(22);
+    //m_secondToolbar->setIconSize(22); //causes a crash when adding/removing actions in toolbar
     setMinimumSize( QSize( 640, 538 ) );
     setMaximumSize( QSize( 640, 538 ) );
     m_view->m_timer = Prefs::grownTimer();
@@ -429,7 +447,7 @@ void KLettres::slotModeKid()
     m_grownupAction->setToolTip(i18n("Switch to Grownup mode"));
     m_menubarAction->setToolTip(i18n("Show menubar"));
     m_grownupAction->setChecked(false);
-    m_secondToolbar->setIconSize(32);
+    //m_secondToolbar->setIconSize(32);
     setMinimumSize( QSize( 640, 480 ) );
     setMaximumSize( QSize( 640, 480 ) );
     m_view->m_timer = Prefs::kidTimer();

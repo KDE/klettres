@@ -136,19 +136,18 @@ void KLettresView::slotProcess(const QString &inputLetter)
 {
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
     kdDebug() << "Input: " << inputLetter << endl;
-    a1=m_letterEdit->text();
-    if (a1.at(0).isLetter()) //(a1.at(inputLetter.length()).lower().isLetter())
+    m_inputLetter=m_letterEdit->text();
+    if (m_inputLetter.at(0).isLetter()) //(a1.at(inputLetter.length()).lower().isLetter())
     {
-        t1 = a1.upper();    //put it in uppercase
+        m_upperLetter = m_inputLetter.upper();    //put it in uppercase
         m_letterEdit->selectAll();
         m_letterEdit->cut();
-        kdDebug() << "before uppercase" << endl;
-        m_letterEdit->setText(t1);
+        m_letterEdit->setText(m_upperLetter);
         QTimer *timer = new QTimer( this );
         connect( timer, SIGNAL(timeout()), this, SLOT(slotTimerDone()) );
         timer->start( m_timer*100, TRUE );
     }
-    else if (a1.length() < (uint) m_cursorPos)
+    else if (m_inputLetter.length() < (uint) m_cursorPos)
     {
         kdDebug() << "In backspace case !!! " << endl;
     }
@@ -165,7 +164,7 @@ void KLettresView::slotTimerDone()
 {
     kdDebug() << "in timer done" << endl;
     QString match = m_currentLetter.left(m_cursorPos );
-    if (match == t1)
+    if (match == m_upperLetter)
     {
         if (m_cursorPos!=m_length)  //if text in lineEdit not equal to text on button
         {            //i.e if you still have to allow input
