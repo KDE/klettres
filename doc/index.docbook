@@ -265,6 +265,18 @@ You can also choose here the size you like the best.
 <title>The <guimenu>File</guimenu> Menu</title>
 
 <variablelist>
+
+<varlistentry>
+<term><menuchoice>
+<shortcut>
+<keycombo action="simul">&Ctrl;<keycap>N</keycap></keycombo>
+</shortcut>
+<guimenu>File</guimenu>
+<guimenuitem>New Sound</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Play</action> a new sound</para></listitem>
+</varlistentry>
+
 <varlistentry>
 <term><menuchoice>
 <shortcut>
