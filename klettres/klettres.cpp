@@ -359,6 +359,7 @@ void KLettres::loadLangToolBar()
 		allData = QStringList::split("\n", readFileStr.read(), true);
 		openFileStream.close();
 		for (int i=0; i<(int) allData.count(); i++) {
+                     if (!allData[i].isEmpty())
 				secondToolbar->insertButton (charIcon(allData[i].at(0)), i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
 		}
 	}
