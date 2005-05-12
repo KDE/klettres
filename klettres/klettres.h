@@ -66,7 +66,7 @@ public:
     */
     bool loadLayout(QDomDocument &layoutDocument);
     ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is English (default), 3 is French, 4 is Dutch, 5 is Slovak
-    uint selectedLanguage;
+    //uint selectedLanguage;
     ///Action that sets up the Language menu
     KSelectAction *m_languageAction;
     ///Look for all languages available

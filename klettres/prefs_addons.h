@@ -29,6 +29,7 @@ static void setLanguageNumber(int i)
 {
     setLanguage(Prefs::self()->m_languages[i]);
 }
+
 static int languageNumber()
 {
     int i = Prefs::self()->m_languages.findIndex(language());

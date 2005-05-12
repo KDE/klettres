@@ -62,6 +62,8 @@ KLettres::KLettres()
     setCentralWidget(m_view);
     //Scan for existing languages -> m_languages
     findLanguages();
+    Prefs::setLanguage(Prefs::defaultLanguage());
+    Prefs::writeConfig();
     //MainWindow GUI: menus, tolbars and statusbar
     setupActions();
     setupStatusbar();
@@ -98,7 +100,6 @@ void KLettres::findLanguages()
     m_languages.remove(m_languages.find("data"));
     m_languages.remove(m_languages.find("icons"));
     m_languages.sort();
-    kdDebug() <<m_languages << endl;
     if (m_languages.isEmpty()) return;
     Prefs::setLanguages(m_languages);
     Prefs::writeConfig();
@@ -131,7 +132,6 @@ void KLettres::findLanguages()
     //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
     //to find the name of the country
     //corresponding to the code and the language the user set
-    kdDebug() << "m_languages :" << m_languages << endl;
     KConfig entry(locate("locale", "all_languages"));
     const QStringList::ConstIterator itEnd = m_languages.end();
     for (QStringList::Iterator it = m_languages.begin(); it != m_languages.end(); ++it) {
@@ -145,8 +145,6 @@ void KLettres::findLanguages()
             m_languageNames.append(entry.readEntry("Name"));
         }
     }
-    kdDebug() << "m_languageNames :" << m_languageNames << endl;
-    kdDebug() << "Index: " << m_languages.findIndex(Prefs::defaultLanguage()) << endl;
     //never sort m_languageNames as it's m_languages translated
     //m_sortedNames = m_languageNames;
 }
@@ -155,7 +153,6 @@ QString Prefs::defaultLanguage()
 {
     //see what is the user language for KDE
     QStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
-    kdDebug() << defaultLanguages << endl;
     if (!defaultLanguages.isEmpty()) {
         //scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
         int i = Prefs::self()->m_languages.findIndex(defaultLanguages[0]);
@@ -166,6 +163,7 @@ QString Prefs::defaultLanguage()
     }
     return QString::null;
 }
+
 
 bool KLettres::loadLayout(QDomDocument &layoutDocument)
 {
@@ -282,16 +280,14 @@ void KLettres::optionsPreferences()
 void KLettres::loadSettings()
 {
     //TODO load default language
-    selectedLanguage = Prefs::languageNumber();
-    m_view->selectedLanguage = selectedLanguage;
-    m_languageAction->setCurrentItem(selectedLanguage);
-    QString langString = m_languageNames[selectedLanguage];
+    //selectedLanguage = Prefs::languageNumber();
+    //m_view->selectedLanguage = selectedLanguage;
+    m_languageAction->setCurrentItem(Prefs::languageNumber());
+    QString langString = m_languageNames[Prefs::languageNumber()];
     langString.replace("&", QString::null);
     m_langLabel->setText(i18n("Current language is %1").arg(langString));
     loadLangToolBar();
     // load default level
-    kdDebug() << "Level ---- : " << Prefs::level() << endl;
-    //m_levelCombo->setCurrentItem(Prefs::level()-1);
     m_levelAction->setCurrentItem(Prefs::level()-1);
     m_levLabel->setText(i18n("Current level is %1").arg(Prefs::level()));
 
@@ -367,10 +363,6 @@ void KLettres::updateLevMenu(int id)
 
 void KLettres::slotChangeLanguage(int newLanguage)
 {
-
-    kdDebug() << newLanguage << endl;
-    // Change language
-    selectedLanguage = newLanguage;
     // Write new language in config
     Prefs::setLanguage(m_languages[newLanguage]);
     Prefs::writeConfig();
@@ -380,7 +372,6 @@ void KLettres::slotChangeLanguage(int newLanguage)
     m_langLabel->setText(i18n("Current language is %1").arg(langString));
     loadLangToolBar();
     // Change language effectively
-    kdDebug() << "In change language " << Prefs::language() << endl;
     bool ok = loadLayout(soundFactory->m_layoutsDocument);
     if (ok)
         soundFactory->change(Prefs::language());
@@ -458,17 +449,17 @@ void KLettres::slotModeKid()
 void KLettres::loadLangToolBar()
 {
     m_secondToolbar->clear();
-    if (m_languages[selectedLanguage]== "cs" || m_languages[selectedLanguage]== "da" || m_languages[selectedLanguage]== "sk" || m_languages[selectedLanguage]== "es")//Dutch, English, French and Italian have no special characters
+    if (m_languages[Prefs::languageNumber()]== "cs" || m_languages[Prefs::languageNumber()]== "da" || m_languages[Prefs::languageNumber()]== "sk" || m_languages[Prefs::languageNumber()]== "es")//Dutch, English, French and Italian have no special characters
     {
         allData.clear();
-        QString myString=QString("klettres/%1.txt").arg(m_languages[selectedLanguage]);
+        QString myString=QString("klettres/%1.txt").arg(m_languages[Prefs::languageNumber()]);
         QFile myFile;
         myFile.setName(locate("data",myString));
         if (!myFile.exists())
         {
         
             QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
-                                    "please check your installation.").arg(m_languages[selectedLanguage]);
+                                    "please check your installation.").arg(m_languages[Prefs::languageNumber()]);
             KMessageBox::sorry( this, mString,
                                     i18n("Error") );
             kapp->quit();
@@ -483,7 +474,8 @@ void KLettres::loadLangToolBar()
         allData = QStringList::split("\n", readFileStr.read(), true);
         openFileStream.close();
         for (int i=0; i<(int) allData.count(); i++) {
-            m_secondToolbar->insertButton (charIcon(allData[i].at(0)), i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
+            if (!allData[i].isEmpty())
+                m_secondToolbar->insertButton (charIcon(allData[i].at(0)), i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
         }
     }
 }

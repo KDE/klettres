@@ -58,8 +58,6 @@ public:
     void viewThemeClassroom();
     ///Set the Desert background pic, hide the menubar, show the Grownup button
     void viewThemeDesert();
-
-    int selectedLanguage;
     ///The timer value i.e. the time for displaying the letters/syllables
     int m_timer;
     ///A Klettres object

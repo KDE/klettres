@@ -71,7 +71,6 @@ void SoundFactory::playSound(int mySound)
     if (soundFile == 0) return;
     
     KAudioPlayer::play(soundFile);
-    kdDebug() << "-------- after playing " << endl;
 }
 
 void SoundFactory::loadFailure()

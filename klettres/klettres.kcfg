@@ -7,7 +7,6 @@
   <group name="General">
     <entry name="Language" type="String">
       <label>Language</label>
-      <default code="true">defaultLanguage()</default>
     </entry>
     <entry name="Theme" type="Enum" key="myTheme">
       <label>Theme</label>
