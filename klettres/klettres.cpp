@@ -195,7 +195,7 @@ void KLettres::setupActions()
 {
     KAction *m_newAction = new KAction(i18n("New Sound"), "file_new", CTRL+Key_N, m_view, SLOT(game()), actionCollection(), "play_new");
     m_newAction->setToolTip(i18n("Play a new sound"));
-    m_newAction->setWhatsThis(i18n("You can rplay a new sound by clicking this button or using the File menu, New Sound.")); 
+    m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound.")); 
     new KAction( i18n("Get Alphabet in New Language..."), "knewstuff", 0, this, SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
     KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),"player_play", CTRL+Key_P, m_view, SLOT(slotPlayAgain()), actionCollection(), "play_again");
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
