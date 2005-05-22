@@ -1,8 +1,8 @@
-# KDE Config File  
+# KDE Config File
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
-Exec=klettres -caption "%c" %i %m  
+Exec=klettres -caption "%c" %i %m
 Icon=klettres
 DocPath=klettres/index.html
 Comment=
@@ -27,6 +27,7 @@ GenericName[ar]=تعلّم الحروف
 GenericName[bg]=Изучаване на азбуката
 GenericName[bs]=Naučite abecedu
 GenericName[ca]=Aprenent l'alfabet
+GenericName[cs]=Výuka abecedy
 GenericName[cy]=Dysgu'r Wyddor
 GenericName[da]=Lær alfabetet
 GenericName[de]=Lerne das Alphabet
@@ -41,6 +42,7 @@ GenericName[hu]=Ábécétanító
 GenericName[is]=Læra stafrófið
 GenericName[it]=Impara l'alfabeto
 GenericName[ja]=アルファベットの学習
+GenericName[mk]=Учете азбука
 GenericName[nb]=Lær alfabetet
 GenericName[nds]=Alfabeet lehren
 GenericName[nl]=Leer het alfabet
