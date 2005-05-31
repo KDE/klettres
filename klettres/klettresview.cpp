@@ -150,6 +150,8 @@ void KLettresView::slotProcess(const QString &inputLetter)
     else if (m_inputLetter.length() < (uint) m_cursorPos)
     {
         kdDebug() << "In backspace case !!! " << endl;
+        m_cursorPos--;
+        QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
     }
     else
     {
