@@ -82,6 +82,8 @@ int main(int argc, char **argv)
                     I18N_NOOP("Port to KConfig XT, coding help"), "bastian@kde.org");
     about.addCredit("Danny Allen",
                     I18N_NOOP("Kids and grown-up SVG icons"), "danny@dannyallen.co.uk");
+    about.addCredit("Michael Goettsche",
+                    I18N_NOOP("Timer setting widgets"), "michael.goettsche@kdemail.net");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;

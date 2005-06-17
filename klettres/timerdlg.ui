@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>350</width>
-            <height>224</height>
+            <width>434</width>
+            <height>260</height>
         </rect>
     </property>
     <property name="minimumSize">
@@ -18,238 +18,224 @@
             <height>0</height>
         </size>
     </property>
+    <property name="caption">
+        <string>timerdlg</string>
+    </property>
     <grid>
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
-        <widget class="QLayoutWidget" row="0" column="0">
+        <widget class="KActiveLabel" row="0" column="0" rowspan="1" colspan="4">
             <property name="name">
-                <cstring>layout6</cstring>
+                <cstring>kActiveLabel1</cstring>
             </property>
-            <vbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
-                </property>
-                <widget class="KActiveLabel">
-                    <property name="name">
-                        <cstring>kActiveLabel1</cstring>
-                    </property>
-                    <property name="text">
-                        <string>Set the time between 2 letters.</string>
-                    </property>
-                </widget>
-                <widget class="QFrame">
-                    <property name="name">
-                        <cstring>frame5</cstring>
-                    </property>
-                    <property name="frameShape">
-                        <enum>StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                        <enum>Raised</enum>
-                    </property>
-                    <vbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="QLayoutWidget">
-                            <property name="name">
-                                <cstring>layout21</cstring>
-                            </property>
-                            <vbox>
-                                <property name="name">
-                                    <cstring>unnamed</cstring>
-                                </property>
-                                <widget class="QLayoutWidget">
-                                    <property name="name">
-                                        <cstring>layout7</cstring>
-                                    </property>
-                                    <hbox>
-                                        <property name="name">
-                                            <cstring>unnamed</cstring>
-                                        </property>
-                                        <widget class="QLabel">
-                                            <property name="name">
-                                                <cstring>textLabel2</cstring>
-                                            </property>
-                                            <property name="sizePolicy">
-                                                <sizepolicy>
-                                                    <hsizetype>4</hsizetype>
-                                                    <vsizetype>4</vsizetype>
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>&lt;p align="center"&gt;&lt;b&gt;Kid Mode&lt;/b&gt;&lt;/p&gt;</string>
-                                            </property>
-                                        </widget>
-                                        <spacer>
-                                            <property name="name">
-                                                <cstring>spacer2</cstring>
-                                            </property>
-                                            <property name="orientation">
-                                                <enum>Horizontal</enum>
-                                            </property>
-                                            <property name="sizeType">
-                                                <enum>Minimum</enum>
-                                            </property>
-                                            <property name="sizeHint">
-                                                <size>
-                                                    <width>90</width>
-                                                    <height>20</height>
-                                                </size>
-                                            </property>
-                                        </spacer>
-                                    </hbox>
-                                </widget>
-                                <widget class="QLayoutWidget">
-                                    <property name="name">
-                                        <cstring>layout19</cstring>
-                                    </property>
-                                    <hbox>
-                                        <property name="name">
-                                            <cstring>unnamed</cstring>
-                                        </property>
-                                        <widget class="KIntNumInput">
-                                            <property name="name">
-                                                <cstring>kcfg_KidTimer</cstring>
-                                            </property>
-                                            <property name="sizePolicy">
-                                                <sizepolicy>
-                                                    <hsizetype>1</hsizetype>
-                                                    <vsizetype>0</vsizetype>
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="cursor">
-                                                <cursor>13</cursor>
-                                            </property>
-                                            <property name="label">
-                                                <string></string>
-                                            </property>
-                                            <property name="value">
-                                                <number>4</number>
-                                            </property>
-                                            <property name="minValue">
-                                                <number>0</number>
-                                            </property>
-                                            <property name="maxValue">
-                                                <number>20</number>
-                                            </property>
-                                            <property name="referencePoint">
-                                                <number>20</number>
-                                            </property>
-                                            <property name="suffix">
-                                                <string> sec/10</string>
-                                            </property>
-                                            <property name="toolTip" stdset="0">
-                                                <string>Set the time for displaying the letter/syllable</string>
-                                            </property>
-                                            <property name="whatsThis" stdset="0">
-                                                <string>This is the time before the next letter is displayed. A child will need longer time than an adult. You can set a different time for each mode to help you</string>
-                                            </property>
-                                        </widget>
-                                    </hbox>
-                                </widget>
-                            </vbox>
-                        </widget>
-                    </vbox>
-                </widget>
-                <widget class="QFrame">
-                    <property name="name">
-                        <cstring>frame5_2</cstring>
-                    </property>
-                    <property name="frameShape">
-                        <enum>StyledPanel</enum>
-                    </property>
-                    <property name="frameShadow">
-                        <enum>Raised</enum>
-                    </property>
-                    <vbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="QLayoutWidget">
-                            <property name="name">
-                                <cstring>layout24</cstring>
-                            </property>
-                            <vbox>
-                                <property name="name">
-                                    <cstring>unnamed</cstring>
-                                </property>
-                                <widget class="QLayoutWidget">
-                                    <property name="name">
-                                        <cstring>layout23</cstring>
-                                    </property>
-                                    <hbox>
-                                        <property name="name">
-                                            <cstring>unnamed</cstring>
-                                        </property>
-                                        <widget class="QLabel">
-                                            <property name="name">
-                                                <cstring>textLabel2_2</cstring>
-                                            </property>
-                                            <property name="sizePolicy">
-                                                <sizepolicy>
-                                                    <hsizetype>7</hsizetype>
-                                                    <vsizetype>4</vsizetype>
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>&lt;p align="left"&gt;&lt;/p&gt;&lt;b&gt;Grown-Up Mode&lt;/b&gt;</string>
-                                            </property>
-                                        </widget>
-                                        <spacer>
-                                            <property name="name">
-                                                <cstring>spacer2_2</cstring>
-                                            </property>
-                                            <property name="orientation">
-                                                <enum>Horizontal</enum>
-                                            </property>
-                                            <property name="sizeType">
-                                                <enum>Maximum</enum>
-                                            </property>
-                                            <property name="sizeHint">
-                                                <size>
-                                                    <width>200</width>
-                                                    <height>20</height>
-                                                </size>
-                                            </property>
-                                        </spacer>
-                                    </hbox>
-                                </widget>
-                                <widget class="KIntNumInput">
-                                    <property name="name">
-                                        <cstring>kcfg_GrownTimer</cstring>
-                                    </property>
-                                    <property name="label">
-                                        <string>Set the time for displaying the letter/syllable</string>
-                                    </property>
-                                    <property name="value">
-                                        <number>2</number>
-                                    </property>
-                                    <property name="minValue">
-                                        <number>0</number>
-                                    </property>
-                                    <property name="maxValue">
-                                        <number>20</number>
-                                    </property>
-                                    <property name="referencePoint">
-                                        <number>2</number>
-                                    </property>
-                                    <property name="suffix">
-                                        <string> sec/10</string>
-                                    </property>
-                                </widget>
-                            </vbox>
-                        </widget>
-                    </vbox>
-                </widget>
-            </vbox>
+            <property name="text">
+                <string>Set the time between 2 letters.</string>
+            </property>
+        </widget>
+        <widget class="QSlider" row="2" column="0" rowspan="1" colspan="4">
+            <property name="name">
+                <cstring>kcfg_KidTimer</cstring>
+            </property>
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="maxValue">
+                <number>10</number>
+            </property>
+            <property name="pageStep">
+                <number>1</number>
+            </property>
+            <property name="value">
+                <number>2</number>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="tickmarks">
+                <enum>Below</enum>
+            </property>
+            <property name="tickInterval">
+                <number>1</number>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Set the timer (in minutes)</string>
+            </property>
+            <property name="whatsThis" stdset="0">
+                <string>Only used if Use a timer is checked</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="1" column="0">
+            <property name="name">
+                <cstring>textLabel1</cstring>
+            </property>
+            <property name="text">
+                <string>Kid Mode</string>
+            </property>
+        </widget>
+        <spacer row="1" column="1" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>spacer8</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>264</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <spacer row="8" column="3">
+            <property name="name">
+                <cstring>spacer26_2</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>25</width>
+                    <height>16</height>
+                </size>
+            </property>
+        </spacer>
+        <spacer row="7" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>spacer24_2</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>270</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QSlider" row="6" column="0" rowspan="1" colspan="4">
+            <property name="name">
+                <cstring>kcfg_GrownTimer</cstring>
+            </property>
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="maxValue">
+                <number>10</number>
+            </property>
+            <property name="pageStep">
+                <number>1</number>
+            </property>
+            <property name="value">
+                <number>2</number>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="tickmarks">
+                <enum>Below</enum>
+            </property>
+            <property name="tickInterval">
+                <number>1</number>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string>Set the timer (in minutes)</string>
+            </property>
+            <property name="whatsThis" stdset="0">
+                <string>Only used if Use a timer is checked</string>
+            </property>
+        </widget>
+        <spacer row="5" column="2" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>spacer8_2</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>228</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QLabel" row="5" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>textLabel1_2</cstring>
+            </property>
+            <property name="text">
+                <string>Grown-up Mode</string>
+            </property>
+        </widget>
+        <widget class="QLabel" row="7" column="3">
+            <property name="name">
+                <cstring>timeGrownLabel</cstring>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring></cstring>
+            </property>
+        </widget>
+        <spacer row="3" column="0" rowspan="1" colspan="3">
+            <property name="name">
+                <cstring>spacer24_2_2</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>226</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <spacer row="4" column="3">
+            <property name="name">
+                <cstring>spacer26_2_2</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>25</width>
+                    <height>16</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="QLabel" row="3" column="3">
+            <property name="name">
+                <cstring>timeKidLabel</cstring>
+            </property>
+            <property name="text">
+                <string></string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring></cstring>
+            </property>
         </widget>
     </grid>
 </widget>
@@ -258,9 +244,5 @@
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
     <includehint>kactivelabel.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
 </includehints>
 </UI>

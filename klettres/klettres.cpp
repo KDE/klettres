@@ -46,7 +46,7 @@
 #include "klnewstuff.h"
 #include "klettres.h"
 #include "fontsdlg.h"
-#include "timerdlg.h"
+#include "timer.h"
 #include "prefs.h"
 
 const int ID_KIDB      = 100;
@@ -269,10 +269,10 @@ void KLettres::optionsPreferences()
     dialog->addPage(new fontsdlg(0, "mFont"), i18n("Font Settings"), "fonts");
     //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
     //fonts is the icon
-    timerdlg *m_timer = new timerdlg();
+    Timer *m_timer = new Timer();
     dialog->addPage(m_timer, i18n("Timer"), "clock");
-    m_timer->kcfg_KidTimer->setRange(0, 20, 2, true);
-    m_timer->kcfg_GrownTimer->setRange(0, 20, 2, true);
+    //m_timer->kcfg_KidTimer->setRange(0, 20, 2, true);
+    //m_timer->kcfg_GrownTimer->setRange(0, 20, 2, true);
     connect(dialog, SIGNAL(settingsChanged()), this, SLOT(slotUpdateSettings()));
     dialog->show();
 }
