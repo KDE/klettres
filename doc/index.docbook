@@ -29,7 +29,7 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-03-15</date>
+<date>2005-06-17</date>
 <releaseinfo>1.5</releaseinfo>
 
 <abstract>
@@ -220,11 +220,15 @@ for a young child. </para>
 
 </sect1>
 
-<sect1 id="about-font">
+<sect1 id ="configuring">
+<title>Configuration dialog</title>
+<para>The configuration dialog has two tabs: one for fonts and one for the timers.</para>
+
+<sect2 id="about-font">
 <title>About fonts</title>
 
 <para>
-There is one more setting you can change: the font that displays the letters. In some distribution, the default font used from the system is really ugly. In grown-up mode, in the <guimenu>Settings</guimenu> menu, in <guimenuitem>Configure &klettres;...</guimenuitem> you will find a Fonts tab with a font chooser dialog. The new font will be applied to both the displayed letter/syllable and the user field.
+You can easily change the font that displays the letters. In some distribution, the default font used from the system is really ugly. In grown-up mode, in the <guimenu>Settings</guimenu> menu, in <guimenuitem>Configure &klettres;...</guimenuitem> you will find a Fonts tab with a font chooser dialog. The new font will be applied to both the displayed letter/syllable and the user field.
 </para>
 
 <warning>
@@ -234,7 +238,7 @@ Changing font is also nice as some fonts (Helvetica for example) do not display 
 </warning>
 
 <para>
-You can also choose here the size you like the best.
+You can also choose here the size you like the best. This size will be kept in configuration.
 </para>
 
 <screenshot>
@@ -251,7 +255,30 @@ You can also choose here the size you like the best.
 
 <para>Here you can see &klettres; Font Chooser Dialog.
 </para>
+</sect2>
 
+<sect2 id="timers">
+<title>Timers</title>
+
+<para>The timers set the time between two letters &ie; the time during wich a letter is displayed. The units are tens of seconds. 
+</para>
+
+<para>
+The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure &klettres;...</guimenuitem> dialog has two timers settings: one for the kid mode and one for the grown-up mode. Defaults are 2 tens of seconds for Kid mode and 4 tens of seconds for grown-up mode. Increasing the time leaves you more time to see your errors.</para>
+
+<screenshot>
+<screeninfo>Screenshot of &klettres; Timers Settings</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres6.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase>Screenshot of &klettres; Timers Settings</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+
+</sect2>
 </sect1>
 </chapter>
 
