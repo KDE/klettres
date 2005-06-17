@@ -271,8 +271,6 @@ void KLettres::optionsPreferences()
     //fonts is the icon
     Timer *m_timer = new Timer();
     dialog->addPage(m_timer, i18n("Timer"), "clock");
-    //m_timer->kcfg_KidTimer->setRange(0, 20, 2, true);
-    //m_timer->kcfg_GrownTimer->setRange(0, 20, 2, true);
     connect(dialog, SIGNAL(settingsChanged()), this, SLOT(slotUpdateSettings()));
     dialog->show();
 }

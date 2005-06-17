@@ -24,15 +24,22 @@
 
 #include "timerdlg.h"
 
+/**
+ * @short Timer widget in Settings dialog
+ * @author Michael Goettsche <michael.goettsche@kdemail.net >
+ * @version 0.1
+ */
 
 class Timer : public timerdlg
 {
 Q_OBJECT
 
 public:
+     ///Constructor
     Timer();
 
 protected slots:
+    ///When the QSlider value changes
     void sliderValueChanged();
 };
 
