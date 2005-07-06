@@ -61,8 +61,8 @@ public:
     QStringList m_languageNames;
     /**
     *Load the xml file
-    *@param - the xml file
-    *@return - bool true if the xml document is found and well formed, false otherwise
+    *@param layoutDocument the xml file
+    *@return bool true if the xml document is found and well formed, false otherwise
     */
     bool loadLayout(QDomDocument &layoutDocument);
     ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is English (default), 3 is French, 4 is Dutch, 5 is Slovak
@@ -110,14 +110,14 @@ protected:
     ///Create main and second toolbars
     void setupToolbars();
     /**generates icons for the special characters toolbar
-        	 * @param c the character that will be painted on the icon
-            */
-    QString charIcon(const QChar &);
+     * @param c the character that will be painted on the icon
+     */
+    QString charIcon(const QChar &c);
     /**
      *Update the level menu and level combobox
-     * @param int - The id of the new level
+     * @param id The id of the new level
      */
-    void updateLevMenu(int );
+    void updateLevMenu(int id);
     ///Create a KNewStuff instance
     KLNewStuff *mNewStuff;
     ///Set the correct buttons on the second toolbar according to the language
