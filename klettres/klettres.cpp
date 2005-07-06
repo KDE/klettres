@@ -400,7 +400,7 @@ void KLettres::slotModeGrownup()
     cg.setColor( QColorGroup::Background, white);
     pal.setActive( cg );
     statusBar()->setPalette( pal );
-    QFont f_lab( "times" , 12);  //font for statusBar
+    QFont f_lab( "Serif" , 10);  //font for statusBar
     m_levLabel->setFont(f_lab);
     m_langLabel->setFont(f_lab);
     m_menubarAction->setChecked(true);
@@ -425,7 +425,7 @@ void KLettres::slotModeKid()
     cg.setColor( QColorGroup::Background, white);
     pal.setActive( cg );
     statusBar()->setPalette( pal );
-    QFont f_lab( "times" , 14);  //font for statusBar
+    QFont f_lab( "Serif" , 12);  //font for statusBar
     f_lab.setBold(true);
     m_levLabel->setFont(f_lab);
     m_langLabel->setFont(f_lab);
