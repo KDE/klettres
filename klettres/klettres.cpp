@@ -193,16 +193,16 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 
 void KLettres::setupActions()
 {
-    KAction *m_newAction = new KAction(i18n("New Sound"), "file_new", CTRL+Key_N, m_view, SLOT(game()), actionCollection(), "play_new");
+    KAction *m_newAction = new KAction(i18n("New Sound"), "file_new", Qt::CTRL+Qt::Key_N, m_view, SLOT(game()), actionCollection(), "play_new");
     m_newAction->setToolTip(i18n("Play a new sound"));
     m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound.")); 
     new KAction( i18n("Get Alphabet in New Language..."), "knewstuff", 0, this, SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
-    KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),"player_play", CTRL+Key_P, m_view, SLOT(slotPlayAgain()), actionCollection(), "play_again");
+    KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),"player_play", Qt::CTRL+Qt::Key_P, m_view, SLOT(slotPlayAgain()), actionCollection(), "play_again");
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
     KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 
-    m_menubarAction = new KToggleAction(i18n("Show &Menubar"),"editclear", CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
+    m_menubarAction = new KToggleAction(i18n("Show &Menubar"),"editclear", Qt::CTRL+Qt::Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
     m_menubarAction->setCheckedState(i18n("Hide &Menubar"));
     m_menubarAction->setChecked(true);
     m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
@@ -228,9 +228,9 @@ void KLettres::setupActions()
     m_themeAction->setToolTip(i18n("Select the theme"));
     m_themeAction->setWhatsThis(i18n("Here you can change the theme for KLettres. A theme consists in the background picture and the font color for the letter displayed."));
 
-    m_kidAction = new KToggleAction(i18n("Mode Kid"), "klettres_kids", CTRL+Key_K, this, SLOT(slotModeKid()), actionCollection(), "mode_kid");
+    m_kidAction = new KToggleAction(i18n("Mode Kid"), "klettres_kids", Qt::CTRL+Qt::Key_K, this, SLOT(slotModeKid()), actionCollection(), "mode_kid");
     m_kidAction->setWhatsThis(i18n("If you are in the Grownup mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
-    m_grownupAction = new KToggleAction(i18n("Mode Grownup"), "klettres_grownup", CTRL+Key_G, this, SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
+    m_grownupAction = new KToggleAction(i18n("Mode Grownup"), "klettres_grownup", Qt::CTRL+Qt::Key_G, this, SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
     m_grownupAction->setWhatsThis(i18n("The Grownup mode is the normal mode where you can see the menubar."));
 
     connect(m_levelAction, SIGNAL(activated(int)), this, SLOT(slotChangeLevel(int)));
@@ -397,7 +397,7 @@ void KLettres::slotModeGrownup()
 {
     QPalette pal;
     QColorGroup cg;
-    cg.setColor( QColorGroup::Background, white);
+    cg.setColor( QColorGroup::Background, Qt::white);
     pal.setActive( cg );
     statusBar()->setPalette( pal );
     QFont f_lab( "Serif" , 10);  //font for statusBar
@@ -422,7 +422,7 @@ void KLettres::slotModeKid()
 {
     QPalette pal;
     QColorGroup cg;
-    cg.setColor( QColorGroup::Background, white);
+    cg.setColor( QColorGroup::Background, Qt::white);
     pal.setActive( cg );
     statusBar()->setPalette( pal );
     QFont f_lab( "Serif" , 12);  //font for statusBar
