@@ -15,17 +15,17 @@
 <authorgroup>
 <author>
 <firstname>Anne-Marie</firstname>
-<othername></othername>
 <surname>Mahfouf</surname>
 <affiliation>
-<address><email>annma@kde.org</email></address>
+<address>&Anne-Marie.Mahfouf.mail;</address>
 </affiliation>
 </author>
+<!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
 <copyright>
 <year>2001</year><year>2005</year>
-<holder>Anne-Marie Mahfouf</holder>
+<holder>&Anne-Marie.Mahfouf;</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
@@ -42,7 +42,7 @@ the basics of a foreign language. </para>
 Ten languages are available at the moment: Czech, Danish, Dutch, English, French, Italian, Luganda, Romanized Hindi, Spanish and Slovak but only English, French and your language if it is among those are installed by default.
 </para>
 <para>
-&klettres; is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar or via the Level menu. Themes (background and font color) can be changed in a drop down box or in the <guimenu>Look</guimenu> -&gt;<guimenuitem>Themes</guimenuitem> menu. Three themes are available: classroom, arctic and desert. Finally, the mode can be changed from kid to grown-up using the <guimenu>Look</guimenu> -&gt; <guimenuitem>Mode</guimenuitem> menu.
+&klettres; is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a combo box in the toolbar or via the Level menu. Themes (background and font color) can be changed in a combo box or in the <guimenu>Look</guimenu> -&gt;<guimenuitem>Themes</guimenuitem> menu. Three themes are available: classroom, arctic and desert. Finally, the mode can be changed from kid to grown-up using the <guimenu>Look</guimenu> -&gt; <guimenuitem>Mode</guimenuitem> menu.
 </para>
 
 </abstract>
@@ -79,21 +79,21 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are ten languages available at the moment: Czech, Danish, Dutch, English, French, Italian, Luganda, Romanized Hindi, Spanish and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New Language...</guimenuitem> menu item, provided that your computer is connected to the internet.</para>
+<para>There are ten languages available at the moment: Czech, Danish, Dutch, English, French, Italian, Luganda, Romanized Hindi, Spanish and Slovak. If your KDE language is Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak then your language is taken as default, optherwise French is the default. You can easily get any additional available language by using the <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New Language...</guimenuitem> menu item, provided that your computer is connected to the Internet.</para>
 
 <note><para>&klettres; needs &arts; running for the sound</para></note>
 
 <para>Two different modes allow you to adapt &klettres; to
 your need and have the full usual interface or a stripped interface. For a child, the menu bar is no longer
 visible. We assume that a child will not want to set the language
-himself.  A drop-down box allows him to choose the different levels. For an
+himself.  A combo box allows him to choose the different levels. For an
 older user, the background is not so childish and the menuBar is
 present in the Grown-Up style. Three different themes (classroom, arctic and desert) set up a different background with different fonts.</para>
 
 <note>
 <para>You do not need the language keyboard layout anymore as you can use the Special Characters Toolbar to type any special character in each language. In the <guimenu>Settings</guimenu> menu, <guimenuitem>Toolbars</guimenuitem>, select Show Characters and the toolbar will appear at the bottom of &klettres;. Click on the letter you want and it will be shown in the input field. This toolbar can be dragged anywhere on your screen.</para>
 <para>
-If you prefer having the language keyboard layout, please use &kcontrol;, in the
+If you prefer having the language keyboard layout, please use &kcontrolcenter;, in the
 section <guimenu>Peripherals</guimenu> and submenu
 <guimenuitem>Keyboard</guimenuitem> in order to set the correct keyboard layout.</para>
 </note>
@@ -125,7 +125,7 @@ that you do the game together.</para>
 and mode is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
-If your KDE language is set to Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default. &klettres; comes with French and your default language if among those listed above and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get A New Language...</guimenuitem> provided you have an internet connection.
+If your KDE language is set to Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default. &klettres; comes with French and your default language if among those listed above and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get A New Language...</guimenuitem> provided you have an Internet connection.
 </para>
 </note>
 <para>
@@ -589,8 +589,8 @@ path.</para> </answer>
 <para>I do not hear any sounds</para>
 </question>
 <answer>
-<para>You need to have &arts; support and the &arts; daemon needs to be running. Make sure you compiled kdelibs with arts if you compiled KDE. In any doubt, ask your distribution. You can also check if &arts; is running in &kcontrol; -&gt; Sound &amp; Multimedia in the <guilabel>Sound System</guilabel> tab. There you must make sure that <guilabel>Enable the Sound System</guilabel> is checked.</para>
-<para>For KDE 3.4 users, you must also be sure that the player used to play KDE sounds is the default KDE sound system player. See in &kcontrol; the <guilabel>System Notifications</guilabel> tab, click on the Player Settings button on the bottom right and in the dialog please check <guilabel>Use the KDE sound system</guilabel>.
+<para>You need to have &arts; support and the &arts; daemon needs to be running. Make sure you compiled kdelibs with arts if you compiled KDE. In any doubt, ask your distribution. You can also check if &arts; is running in &kcontrolcenter; -&gt; Sound &amp; Multimedia in the <guilabel>Sound System</guilabel> tab. There you must make sure that <guilabel>Enable the Sound System</guilabel> is checked.</para>
+<para>For KDE 3.4 users, you must also be sure that the player used to play KDE sounds is the default KDE sound system player. See in &kcontrolcenter; the <guilabel>System Notifications</guilabel> tab, click on the Player Settings button on the bottom right and in the dialog please check <guilabel>Use the KDE sound system</guilabel>.
 </para>
  </answer>
 </qandaentry>
@@ -600,7 +600,7 @@ path.</para> </answer>
 </question>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
-<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -&gt; <guilabel>System Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on <guilabel>Administrator mode</guilabel> and add the Windows Font folder).</para></answer>
+<para>If you have &Windows; on your machine, you can use the TTF fonts from &Windows; (Arial is in those) via &kcontrolcenter; -&gt; <guilabel>System Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on <guilabel>Administrator mode</guilabel> and add the Windows Font folder).</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
@@ -608,7 +608,7 @@ path.</para> </answer>
 </question>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
-<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -&gt; <guilabel>System Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on <guilabel>Administrator mode</guilabel> and add the Windows Font folder).</para></answer>
+<para>If you have &Windows; on your machine, you can use the TTF fonts from &Windows; (Arial is in those) via &kcontrolcenter; -&gt; <guilabel>System Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on <guilabel>Administrator mode</guilabel> and add the Windows Font folder).</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
@@ -634,7 +634,7 @@ able to do that. See <ulink url="http://edu.kde.org/klettres/add_language.php">t
 &klettres;
 </para>
 <para>
-Program copyright 2001-2005 Anne-Marie Mahfouf <email>annma@kde.org</email>
+Program copyright 2001-2005 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;
 </para>
 <para>
 I am very grateful to the following people whose contribution has been greatly valuable:
@@ -669,7 +669,7 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>chris@os11.com</email></para></listitem>
 <listitem><para>Code for generating special characters icons: Peter Hedlund
 <email>peter@peterandlinda.com</email></para></listitem>
-<listitem><para>Port to KConfig XT, coding help: Waldo Bastian
+<listitem><para>Port to KConfig XT, coding help: &Waldo.Bastian;
 <email>bastian@kde.org</email></para></listitem>
 <listitem><para>Kids and grownup SVG icons, desert theme: Danny Allen
     <email>dannya40uk@yahoo.co.uk</email></para></listitem>
