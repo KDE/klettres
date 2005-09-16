@@ -77,7 +77,7 @@ int main(int argc, char **argv)
     about.addCredit("Chris Luetchford",
                     I18N_NOOP("SVG icon"), "chris@os11.com");
     about.addCredit("Peter Hedlund",
-                    I18N_NOOP("Code for generating special characters' icons"), "peter@peterandlinda.com");
+                    I18N_NOOP("Code for generating special characters' icons"), "peter.hedlund@kdemail.net");
     about.addCredit("Waldo Bastian",
                     I18N_NOOP("Port to KConfig XT, coding help"), "bastian@kde.org");
     about.addCredit("Danny Allen",
