@@ -28,6 +28,7 @@
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kdebug.h>
+#include <krandom.h>
 //Project headers
 #include "klettres.h"
 #include "klettresview.h"
@@ -64,7 +65,7 @@ void KLettresView::chooseSound()
     if (m_klettres->soundFactory->sounds ==0)
         return;
     //get a random sound
-    m_random=kapp->random()%(m_klettres->soundFactory->sounds);
+    m_random=KRandom::random()%(m_klettres->soundFactory->sounds);
     //have not 2 same sounds consecutively
     int temp = 0;
     if (temp<0)
@@ -72,7 +73,7 @@ void KLettresView::chooseSound()
     else
     {
         while (m_random==temp)
-            m_random=kapp->random()%(m_klettres->soundFactory->sounds);
+            m_random=KRandom::random()%(m_klettres->soundFactory->sounds);
         temp=m_random;
     }
 
