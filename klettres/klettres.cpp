@@ -42,6 +42,7 @@
 #include <kstatusbar.h>
 #include <ktoolbar.h>
 #include <ktoolbarbutton.h>
+#include <kglobal.h>
 //Project includes
 #include "klnewstuff.h"
 #include "klettres.h"
@@ -121,7 +122,7 @@ void KLettres::findLanguages()
 //TODO TEST in FRENCH
     m_languages.sort();
     //write the present languages in config so they cannot be downloaded
-    KConfig *config=kapp->config();
+    KConfig *config=KGlobal::config();
     config->setGroup("KNewStuffStatus");
     for (uint i=0;  i<m_languages.count(); i++)
     {
