@@ -179,7 +179,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
         KMessageBox::information( this, mString,"KLettres - Error" );
         kapp->quit();//exit(1);
     }
-    if (!layoutFile.open(IO_ReadOnly))
+    if (!layoutFile.open(QIODevice::ReadOnly))
         return false;
     //Check if document is well-formed
     if (!layoutDocument.setContent(&layoutFile))
@@ -466,7 +466,7 @@ void KLettres::loadLangToolBar()
         update();
         //we open the file and store info into the stream...
         QFile openFileStream(myFile.name());
-        openFileStream.open(IO_ReadOnly);
+        openFileStream.open(QIODevice::ReadOnly);
         QTextStream readFileStr(&openFileStream);
         readFileStr.setEncoding(QTextStream::UnicodeUTF8);
         //allData contains all the words from the file
