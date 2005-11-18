@@ -24,7 +24,7 @@
 #include <qwidget.h>
 #include <qpalette.h>
 #include <klineedit.h>
-
+#include <QPixmap>
 class QLabel;
 class KLettres;
 
