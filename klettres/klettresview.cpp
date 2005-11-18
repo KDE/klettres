@@ -43,7 +43,7 @@ KLettresView::KLettresView(KLettres *parent)
     setMaximumSize( QSize( 640, 480 ) );
 
     //lineEdit for user input
-    m_letterEdit = new KLineEdit( this, "line1" );
+    m_letterEdit = new KLineEdit( this );
     m_letterEdit->setGeometry( QRect( 40, 310, 161, 160 ) );
     QToolTip::add( m_letterEdit, i18n( "Type the letter or syllable that you just heard" ) );
 

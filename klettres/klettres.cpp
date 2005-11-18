@@ -106,13 +106,13 @@ void KLettres::findLanguages()
     Prefs::writeConfig();
     //find duplicated entries in KDEDIR and KDEHOME
     QStringList temp_languages;
-    for (uint i=0;  i<m_languages.count(); i++)
+    for (int i=0;  i<m_languages.count(); i++)
     {
-        if (m_languages.contains(m_languages[i])>1) {
+        if (m_languages.count(m_languages[i])>1) {
             temp_languages.append(m_languages[i]);
             m_languages.remove(m_languages[i]);
         }
-	for (uint i=0;  i<temp_languages.count(); i++)
+	for (int i=0;  i<temp_languages.count(); i++)
 	{
 		if (i%2==0)
 		m_languages.append(temp_languages[i]);//append 1 of the 2 instances found
@@ -124,10 +124,10 @@ void KLettres::findLanguages()
     //write the present languages in config so they cannot be downloaded
     KConfig *config=KGlobal::config();
     config->setGroup("KNewStuffStatus");
-    for (uint i=0;  i<m_languages.count(); i++)
+    for (int i=0;  i<m_languages.count(); i++)
     {
         QString tmp = m_languages[i];
-        if (!config->readEntry(tmp))
+        if (!config->readEntry(tmp).isEmpty())
             config->writeEntry(tmp, QDate::currentDate().toString());
     }
     //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages

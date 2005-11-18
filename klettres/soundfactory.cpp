@@ -38,7 +38,8 @@ SoundFactory::SoundFactory(KLettres *parent, const char *name)
 {
     klettres = parent;
 
-    namesList = filesList = 0;
+    namesList.clear();
+	filesList.clear();
     sounds = 0;
 
     bool ok = klettres->loadLayout(m_layoutsDocument);
