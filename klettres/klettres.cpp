@@ -272,7 +272,7 @@ void KLettres::optionsPreferences()
     //fonts is the icon
     Timer *m_timer = new Timer();
     dialog->addPage(m_timer, i18n("Timer"), "clock");
-    connect(dialog, SIGNAL(settingsChanged()), this, SLOT(slotUpdateSettings()));
+    connect(dialog, SIGNAL(settingsChanged( const QString &)), this, SLOT(slotUpdateSettings()));
     dialog->show();
 }
 
