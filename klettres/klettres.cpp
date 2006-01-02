@@ -127,7 +127,7 @@ void KLettres::findLanguages()
     for (int i=0;  i<m_languages.count(); i++)
     {
         QString tmp = m_languages[i];
-        if (!config->readEntry(tmp).isEmpty())
+        if (!config->readEntry(tmp, QString::null).isEmpty())
             config->writeEntry(tmp, QDate::currentDate().toString());
     }
     //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
