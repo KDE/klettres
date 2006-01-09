@@ -52,7 +52,7 @@ KLettresView::KLettresView(KLettres *parent)
     m_grownupPicture.load(locate("data","klettres/pics/klettres_grownup.png"));
     m_kidPicture.load(locate("data","klettres/pics/klettres_kids.jpeg"));
     m_desertPicture.load(locate("data","klettres/pics/klettres_desert.png"));
-
+    setAutoFillBackground(true);
 }
 
 KLettresView::~KLettresView()
