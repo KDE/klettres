@@ -321,12 +321,14 @@ void KLettres::slotMenubar()
     switch (m_menubarAction->isChecked()){
     case false:
         m_menubarAction->setChecked(false);
-        m_menubarAction->setToolTip(i18n("Show menubar"));
+        m_menubarAction->setText(i18n("Show Menubar"));
+	m_menubarAction->setToolTip(i18n("Show Menubar"));
         menuBar()->hide();
         break;
     case true:
         m_menubarAction->setChecked(true);
-        m_menubarAction->setToolTip(i18n("Hide menubar"));
+	m_menubarAction->setText(i18n("Hide Menubar"));
+	m_menubarAction->setToolTip(i18n("Hide Menubar"));
         menuBar()->show();
         break;
     }
@@ -409,7 +411,8 @@ void KLettres::slotModeGrownup()
     m_kidAction->setChecked(false);
     m_grownupAction->setToolTip(i18n("Grownup mode is currently active"));
     m_kidAction->setToolTip(i18n("Switch to Kid mode"));
-    m_menubarAction->setToolTip(i18n("Hide menubar"));
+    m_menubarAction->setText(i18n("Hide Menubar"));
+    m_menubarAction->setToolTip(i18n("Hide Menubar"));
     slotMenubar();
     //m_secondToolbar->setIconSize(22); //causes a crash when adding/removing actions in toolbar
     setMinimumSize( QSize( 640, 538 ) );
@@ -435,7 +438,8 @@ void KLettres::slotModeKid()
     m_kidAction->setChecked(true);
     m_kidAction->setToolTip(i18n("Kid mode is currently active"));
     m_grownupAction->setToolTip(i18n("Switch to Grownup mode"));
-    m_menubarAction->setToolTip(i18n("Show menubar"));
+    m_menubarAction->setText(i18n("Show Menubar"));
+    m_menubarAction->setToolTip(i18n("Show Menubar"));
     m_grownupAction->setChecked(false);
     //m_secondToolbar->setIconSize(32);
     setMinimumSize( QSize( 640, 480 ) );
