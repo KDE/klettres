@@ -1,6 +1,8 @@
 /***************************************************************************
  *   Copyright (C) 2005 by Michael Goettsche                               *
  *   michael.goettsche@kdemail.net                                         *
+ *   Copyright (C) 2006 by Anne-Marie Mahfouf                               *
+ *   annemarie.mahfouf@free.fr   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -21,8 +23,8 @@
 #ifndef TIMER_H_
 #define TIMER_H_
 
-
-#include "timerdlg.h"
+#include <QWidget>
+#include "timerui.h"
 
 /**
  * @short Timer widget in Settings dialog
@@ -30,13 +32,16 @@
  * @version 0.1
  */
 
-class Timer : public timerdlg
+class Timer : public QWidget
 {
 Q_OBJECT
 
 public:
      ///Constructor
     Timer();
+
+protected:
+    Ui::timerui ui_timer;
 
 protected slots:
     ///When the QSlider value changes

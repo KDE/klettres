@@ -3,7 +3,7 @@ bin_PROGRAMS = klettres
 
 ## INCLUDES were found outside kdevelop specific part
 
-klettres_SOURCES = fontsdlg.ui klettres.cpp klnewstuff.cpp main.cpp klettresview.cpp soundfactory.cpp prefs.kcfgc timerdlg.ui timer.cpp
+klettres_SOURCES = fontsdlg.ui klettres.cpp klnewstuff.cpp main.cpp klettresview.cpp soundfactory.cpp prefs.kcfgc timerui.ui timer.cpp
 klettres_LDADD   = $(LIB_KDEUI) -lknewstuff
 
 SUBDIRS = pics data icons

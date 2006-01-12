@@ -1,6 +1,8 @@
 /***************************************************************************
  *   Copyright (C) 2005 by Michael Goettsche                               *
  *   michael.goettsche@kdemail.net                                         *
+ *   Copyright (C) 2006 by Anne-Marie Mahfouf                               *
+ *   annemarie.mahfouf@free.fr   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -28,19 +30,20 @@
 
 
 Timer::Timer()
-    :timerdlg()
+    :QWidget()
 {
-    timeGrownLabel->setText(QString::number(Prefs::grownTimer()) + " " + i18n("tens of seconds"));
-    timeKidLabel->setText(QString::number(Prefs::kidTimer()) + " " + i18n("tens of seconds"));
-    connect(kcfg_GrownTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
-    connect(kcfg_KidTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
+    ui_timer.setupUi(this);
+    ui_timer.timeGrownLabel->setText(QString::number(Prefs::grownTimer()) + " " + i18n("tens of seconds"));
+    ui_timer.timeKidLabel->setText(QString::number(Prefs::kidTimer()) + " " + i18n("tens of seconds"));
+    connect(ui_timer.kcfg_GrownTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
+    connect(ui_timer.kcfg_KidTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
 }
 
 
 void Timer::sliderValueChanged()
 {
-    timeKidLabel->setText(QString::number(kcfg_KidTimer->value()) + " " + i18n("tens of seconds"));
-    timeGrownLabel->setText(QString::number(kcfg_GrownTimer->value()) + " " + i18n("tens of seconds"));
+    ui_timer.timeKidLabel->setText(QString::number(ui_timer.kcfg_KidTimer->value()) + " " + i18n("tens of seconds"));
+    ui_timer.timeGrownLabel->setText(QString::number(ui_timer.kcfg_GrownTimer->value()) + " " + i18n("tens of seconds"));
 }
 
 
