@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2002 Cornelius Schumacher <schumacher@kde.org>
- * Copyright (C) 2001-2004 Anne-Marie Mahfouf <annma@kde.org>
+ * Copyright (C) 2001-2006 Anne-Marie Mahfouf <annma@kde.org>
  *
     This program is free software; you can redistribute it and/or
     modify it under the terms of version 2 of the GNU General Public
@@ -24,6 +24,7 @@
 #include <kstandarddirs.h>
 #include "klnewstuff.h"
 #include "prefs.h"
+#include "klettres.h"
 
 KLNewStuff::KLNewStuff( KLettresView *view ) :
         KNewStuff( "klettres", view ),

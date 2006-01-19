@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2001-2005 by Anne-Marie Mahfouf                              *
+ *   Copyright (C) 2001-2006 by Anne-Marie Mahfouf                              *
  *   annemarie.mahfouf@free.fr                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,11 +18,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.             *
  ***************************************************************************/
 
-#include <qlabel.h>
-#include <qtimer.h>
-#include <qtooltip.h>
-#include <qwhatsthis.h>
-#include <qpainter.h>
+#include <QLabel>
+#include <QTimer>
+#include <QToolTip>
+#include <QWhatsThis>
+#include <QPainter>
 
 #include <kapplication.h>
 #include <klocale.h>
@@ -45,7 +45,7 @@ KLettresView::KLettresView(KLettres *parent)
     //lineEdit for user input
     m_letterEdit = new KLineEdit( this );
     m_letterEdit->setGeometry( QRect( 40, 310, 161, 160 ) );
-    QToolTip::add( m_letterEdit, i18n( "Type the letter or syllable that you just heard" ) );
+    m_letterEdit->setToolTip(i18n("Type the letter or syllable that you just heard" ) );
 
     setFont(Prefs::font());
     //load background pics
@@ -148,7 +148,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
         connect( timer, SIGNAL(timeout()), this, SLOT(slotTimerDone()) );
         timer->start( m_timer*100, TRUE );
     }
-    else if (m_inputLetter.length() < (uint) m_cursorPos)
+    else if (m_inputLetter.length() < m_cursorPos)
     {
         kdDebug() << "In backspace case !!! " << endl;
         m_cursorPos--;

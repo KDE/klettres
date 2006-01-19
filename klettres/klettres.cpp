@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2001-2005 by Anne-Marie Mahfouf                              *
+ *   Copyright (C) 2001-2006 by Anne-Marie Mahfouf                              *
  *   annemarie.mahfouf@free.fr                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,14 +19,14 @@
  ***************************************************************************/
 
 //Qt includes
-#include <qbitmap.h>
-#include <qdir.h>
-#include <qfile.h>
-#include <qlabel.h>
-#include <qpainter.h>
-#include <qstring.h>
-#include <qtooltip.h>
-#include <qwhatsthis.h>
+#include <QBitmap>
+#include <QDir>
+#include <QFile>
+#include <QLabel>
+#include <QPainter>
+#include <QString>
+#include <QToolTip>
+#include <QWhatsThis>
 
 //KDE includes
 #include <kaction.h>

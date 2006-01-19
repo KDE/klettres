@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2001-2004 Anne-Marie Mahfouf <annma@kde.org>
+ * Copyright (C) 2001-2006 Anne-Marie Mahfouf <annma@kde.org>
  *  Copyright (c) 2002 Cornelius Schumacher <schumacher@kde.org>
  *
     This program is free software; you can redistribute it and/or
@@ -20,9 +20,10 @@
 #define KLNEWSTUFF_H
 
 #include "knewstuff/knewstuff.h"
-#include "klettres.h"
+
 
 class KLettres;
+class KLettresView;
 
 class KLNewStuff : public KNewStuff
 {
