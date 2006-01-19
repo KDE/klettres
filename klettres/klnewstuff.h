@@ -21,8 +21,6 @@
 
 #include "knewstuff/knewstuff.h"
 
-
-class KLettres;
 class KLettresView;
 
 class KLNewStuff : public KNewStuff

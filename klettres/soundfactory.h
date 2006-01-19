@@ -25,7 +25,7 @@
 #ifndef _SOUNDFACTORY_H_
 #define _SOUNDFACTORY_H_
 
-#include <qdom.h>
+#include <QDomAttr>
 
 class KLettres;
 

@@ -22,8 +22,8 @@
 
 #include <klocale.h>
 
-#include <qlabel.h>
-#include <qslider.h>
+#include <QLabel>
+#include <QSlider>
 
 #include "timer.h"
 #include "prefs.h"
