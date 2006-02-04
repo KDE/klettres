@@ -230,8 +230,8 @@ void KLettres::setupActions()
     m_themeAction->setWhatsThis(i18n("Here you can change the theme for KLettres. A theme consists in the background picture and the font color for the letter displayed."));
 
     m_kidAction = new KToggleAction(i18n("Mode Kid"), "klettres_kids", Qt::CTRL+Qt::Key_K, this, SLOT(slotModeKid()), actionCollection(), "mode_kid");
-    m_kidAction->setWhatsThis(i18n("If you are in the Grownup mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
-    m_grownupAction = new KToggleAction(i18n("Mode Grownup"), "klettres_grownup", Qt::CTRL+Qt::Key_G, this, SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
+    m_kidAction->setWhatsThis(i18n("If you are in the Grown-up mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
+    m_grownupAction = new KToggleAction(i18n("Mode Grown-up"), "klettres_grownup", Qt::CTRL+Qt::Key_G, this, SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
     m_grownupAction->setWhatsThis(i18n("The Grownup mode is the normal mode where you can see the menubar."));
 
     connect(m_levelAction, SIGNAL(activated(int)), this, SLOT(slotChangeLevel(int)));
@@ -409,7 +409,7 @@ void KLettres::slotModeGrownup()
     m_menubarAction->setChecked(true);
     m_grownupAction->setChecked(true);
     m_kidAction->setChecked(false);
-    m_grownupAction->setToolTip(i18n("Grownup mode is currently active"));
+    m_grownupAction->setToolTip(i18n("Grown-up mode is currently active"));
     m_kidAction->setToolTip(i18n("Switch to Kid mode"));
     m_menubarAction->setText(i18n("Hide Menubar"));
     m_menubarAction->setToolTip(i18n("Hide Menubar"));
@@ -437,7 +437,7 @@ void KLettres::slotModeKid()
     slotMenubar();
     m_kidAction->setChecked(true);
     m_kidAction->setToolTip(i18n("Kid mode is currently active"));
-    m_grownupAction->setToolTip(i18n("Switch to Grownup mode"));
+    m_grownupAction->setToolTip(i18n("Switch to Grown-up mode"));
     m_menubarAction->setText(i18n("Show Menubar"));
     m_menubarAction->setToolTip(i18n("Show Menubar"));
     m_grownupAction->setChecked(false);
