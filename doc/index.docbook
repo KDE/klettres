@@ -29,7 +29,7 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-06-17</date>
+<date>2006-02-04</date>
 <releaseinfo>1.5</releaseinfo>
 
 <abstract>
@@ -39,10 +39,21 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Ten languages are available at the moment: Czech, Danish, Dutch, English, French, Italian, Luganda, Romanized Hindi, Spanish and Slovak but only English, French and your language if it is among those are installed by default.
+Ten languages are available at the moment: Czech, Danish, Dutch, English, 
+French, Italian, Luganda, Romanized Hindi, Spanish and Slovak but only 
+English, French and your language if it is among those are installed by default.
 </para>
 <para>
-&klettres; is really easy to use. The language can be changed using the Languages menu. The user can also choose the Level from 1 to 4 in a drop-down box in the toolbar or via the Level menu. Themes (background and font color) can be changed in a drop down box or in the <guimenu>Look</guimenu> -&gt;<guimenuitem>Themes</guimenuitem> menu. Three themes are available: classroom, arctic and desert. Finally, the mode can be changed from kid to grown-up using the <guimenu>Look</guimenu> -&gt; <guimenuitem>Mode</guimenuitem> menu.
+ &klettres; is really easy to use. The language can be changed using the 
+<guimenu>Language</guimenu> menu. The user can also choose the Level from 
+1 to 4 in a combo box in the toolbar or via the <guimenu>Level</guimenu> 
+menu. <guimenuitem>Themes</guimenuitem> (background and font color) can be 
+changed in a combo box or in the <menuchoice><guimenu>Look</guimenu> 
+<guimenuitem>Themes</guimenuitem></menuchoice> menu. Three themes are 
+available: <guimenuitem>Classroom</guimenuitem>, 
+<guimenuitem>Arctic</guimenuitem> and <guimenuitem>Desert</guimenuitem>. 
+Finally, the mode can be changed from kid to grown-up using the 
+<menuchoice><guimenu>Look</guimenu> <guimenuitem>Mode</guimenuitem></menuchoice> menu.
 </para>
 
 </abstract>
@@ -86,12 +97,21 @@ keyboard only is needed.</para>
 <para>Two different modes allow you to adapt &klettres; to
 your need and have the full usual interface or a stripped interface. For a child, the menu bar is no longer
 visible. We assume that a child will not want to set the language
-himself.  A drop-down box allows him to choose the different levels. For an
-older user, the background is not so childish and the menuBar is
-present in the Grown-Up style. Three different themes (classroom, arctic and desert) set up a different background with different fonts.</para>
+himself.  A drop-down box allows him to choose the different levels. older user, the background is not so childish and the menubar is
+present in the Grown-Up style. Three different themes 
+(<guimenuitem>Classroom</guimenuitem>, 
+<guimenuitem>Arctic</guimenuitem> and 
+<guimenuitem>Desert</guimenuitem>) set up a different background with 
+different fonts.</para>
 
 <note>
-<para>You do not need the language keyboard layout anymore as you can use the Special Characters Toolbar to type any special character in each language. In the <guimenu>Settings</guimenu> menu, <guimenuitem>Toolbars</guimenuitem>, select Show Characters and the toolbar will appear at the bottom of &klettres;. Click on the letter you want and it will be shown in the input field. This toolbar can be dragged anywhere on your screen.</para>
+<para>You do not need the language keyboard layout anymore as you can use the 
+special <guimenuitem>Characters</guimenuitem> toolbar to type any special 
+character in each language. In the <guimenu>Settings</guimenu> menu, 
+<guimenuitem>Toolbars</guimenuitem>, select <guimenuitem>Characters</guimenuitem> 
+and the toolbar will appear at the bottom of &klettres;. Click on the letter 
+you want and it will be shown in the input field. This toolbar can be dragged 
+anywhere on your screen.</para>
 <para>
 If you prefer having the language keyboard layout, please use &kcontrol;, in the
 section <guimenu>Peripherals</guimenu> and submenu
@@ -125,18 +145,28 @@ that you do the game together.</para>
 and mode is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
-If your KDE language is set to Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default. &klettres; comes with French and your default language if among those listed above and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get A New Language...</guimenuitem> provided you have an internet connection.
+If your KDE language is set to Czech, Danish, Dutch, English, French, Italian, Spanish or Slovak, then this will be the default language the first time you run KLetttres. For other languages, French is the default. &klettres; comes with French and your default language if among those listed above and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get Alphabet in New Language...</guimenuitem> provided you have an internet connection.
 </para>
 </note>
 <para>
-In level 1, the user sees the letter and hears the sound. He then has to type in the letter in the box. If it is correct, the next letter appears (without having to press <keycap>Enter</keycap> or whatever). If the user types the wrong letter, he hears the sound again. In this level, the user memorizes the letters, associates them with their sound and recognizes them on the keyboard.
+In level 1, the user sees the letter and hears the sound. He then has to type in 
+the letter in the box. If it is correct, the next letter appears (without having 
+to press <keycap>Enter</keycap> or whatever). If the user types the wrong letter, 
+he hears the sound again. In this level, the user memorizes the letters, associates 
+them with their sound and recognizes them on the keyboard.
 </para>
 
 <note>
-<para>The user can type in either lower or upper case letters. The letters are automatically put in upper case so
-that a child will match them with the keyboard. He can type only one letter at a
-time.</para>
-<para>When you type a letter in the input field, there is no need to press <keycap>Enter</keycap> and the program waits for a short while before testing if the letter is right. This short wait is to leave time to a young child to understand what he/she just typed, especially if this is the wrong letter. You can change this time by using the <guimenu>Settings</guimenu> menu, <guimenuitem>Configure &klettres;...</guimenuitem>and the Timer tab which will bring you a dialog where you can set two different times: one for the kid mode and one for the grown-up mode.
+<para>The user can type in either lower or upper case letters. The letters automatically put in uppercase so that a child will match them with the keyboard. 
+ He can type only one letter at atime.</para>
+<para>When you type a letter in the input field, there is no need to press 
+<keycap>Enter</keycap> and the program waits for a short while before testing if 
+the letter is right. This short wait is to leave time to a young child to understand 
+what he/she just typed, especially if this is the wrong letter. You can change this 
+time by using the <guimenu>Settings</guimenu> menu, <guimenuitem>Configure &klettres;...</guimenuitem> 
+and the <guilabel>Timer</guilabel> page which will bring you a dialog where you can 
+set two different times: one for the <guilabel>Kid Mode</guilabel> and one for the 
+<guilabel>Grown-up Mode</guilabel>.
 </para>
 </note>
 
@@ -164,7 +194,7 @@ is kept until you change.</para>
 <para>Here is a screenshot of Level 2 with the <emphasis>kid</emphasis> mode, <emphasis>classroom</emphasis> theme and Danish language.</para>
 
 <para>Clicking in the <guilabel>Level</guilabel> combo-box and choosing <guilabel>Level
-2</guilabel> or using the <guimenu>Levels</guimenu> menu brings you to level 2. In that level, the user only
+2</guilabel> or using the <guimenu>Level</guimenu> menu brings you to level 2. In that level, the user only
 hears the sound of the letter and has to type in the letter. If he
 is wrong, the letter appears to help him. </para>
 </sect1>
@@ -212,7 +242,7 @@ three, it depends of the language.</para>
 </para>
 
 <para>The sounds appear in random order. </para> <para>Clicking in the
-<guilabel>Level</guilabel> combo-box or using the <guimenu>Level</guimenu> menu in the menuBar
+<guilabel>Level</guilabel> combo-box or using the <guimenu>Level</guimenu> menu in the menubar
 and choosing <guilabel>Level 4</guilabel> brings you
 to level 4. In that level, the user only hears the sound of the
 syllable and has to type in the letters. This level is quite difficult
@@ -222,13 +252,14 @@ for a young child. </para>
 
 <sect1 id ="configuring">
 <title>Configuration dialog</title>
-<para>The configuration dialog has two tabs: one for fonts and one for the timers.</para>
+<para>The configuration dialog has two pages: one for <guilabel>Font Settings</guilabel> 
+and one for the <guilabel>Timer</guilabel>.</para>
 
 <sect2 id="about-font">
 <title>About fonts</title>
 
 <para>
-You can easily change the font that displays the letters. In some distribution, the default font used from the system is really ugly. In grown-up mode, in the <guimenu>Settings</guimenu> menu, in <guimenuitem>Configure &klettres;...</guimenuitem> you will find a Fonts tab with a font chooser dialog. The new font will be applied to both the displayed letter/syllable and the user field.
+You can easily change the font that displays the letters. In some distribution, the default font used from the system is really ugly. In grown-up mode, in the <guimenu>Settings</guimenu> menu, in <guimenuitem>Configure &klettres;...</guimenuitem> you will find a <guilabel>Font Settings</guilabel> page with a font chooser dialog. The new font will be applied to both the displayed letter/syllable and the user field.
 </para>
 
 <warning>
@@ -260,11 +291,11 @@ You can also choose here the size you like the best. This size will be kept in c
 <sect2 id="timers">
 <title>Timers</title>
 
-<para>The timers set the time between two letters &ie; the time during wich a letter is displayed. The units are tens of seconds. 
+<para>The timers set the time between two letters &ie; the time during wich a letter is displayed. The units are tenth of seconds. 
 </para>
 
 <para>
-The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure &klettres;...</guimenuitem> dialog has two timers settings: one for the kid mode and one for the grown-up mode. Defaults are 2 tens of seconds for Kid mode and 4 tens of seconds for grown-up mode. Increasing the time leaves you more time to see your errors.</para>
+The <guilabel>Timer</guilabel> page in the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &klettres;...</guimenuitem></menuchoice> dialog has two timers settings: one for the <guilabel>Kid Mode</guilabel> and one for the <guilabel>Grown-up Mode</guilabel>. Defaults are 2 tenth of seconds for <guilabel>Kid Mode</guilabel> and 4 tenth of seconds for <guilabel>Grown-up Mode</guilabel>. Increasing the time leaves you more time to see your errors.</para>
 
 <screenshot>
 <screeninfo>Screenshot of &klettres; Timers Settings</screeninfo>
@@ -286,7 +317,7 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 <title>Command Reference</title>
 
 <sect1 id="klettres-mainwindow">
-<title>The main &klettres; window</title>
+<title>The Main &klettres; Window</title>
 
 <sect2>
 <title>The <guimenu>File</guimenu> Menu</title>
@@ -317,9 +348,6 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>G</keycap></keycombo>
-</shortcut>
 <guimenu>File</guimenu>
 <guimenuitem>Get Alphabet in New Language...</guimenuitem>
 </menuchoice></term>
@@ -347,9 +375,6 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>L</keycap></keycombo>
-</shortcut>
 <guimenu>Level</guimenu>
 <guimenuitem>Level 1</guimenuitem>
 </menuchoice></term>
@@ -358,9 +383,6 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>2</keycap></keycombo>
-</shortcut>
 <guimenu>Level</guimenu>
 <guimenuitem>Level 2</guimenuitem>
 </menuchoice></term>
@@ -369,9 +391,6 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>3</keycap></keycombo>
-</shortcut>
 <guimenu>Level</guimenu>
 <guimenuitem>Level 3</guimenuitem>
 </menuchoice></term>
@@ -380,9 +399,6 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>4</keycap></keycombo>
-</shortcut>
 <guimenu>Level</guimenu>
 <guimenuitem>Level 4</guimenuitem>
 </menuchoice></term>
@@ -393,16 +409,13 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 
 </sect2>
 <sect2>
-<title>The <guimenu>Languages</guimenu> Menu</title>
+<title>The <guimenu>Language</guimenu> Menu</title>
 
 <variablelist>
 
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>E</keycap></keycombo>
-</shortcut>
-<guimenu>Languages</guimenu>
+<guimenu>Language</guimenu>
 <guimenuitem>English</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the English language</para></listitem>
@@ -410,10 +423,7 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>F</keycap></keycombo>
-</shortcut>
-<guimenu>Languages</guimenu>
+<guimenu>Language</guimenu>
 <guimenuitem>French</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Choose</action> the French language</para></listitem>
@@ -429,9 +439,6 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 <variablelist>
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>C</keycap></keycombo>
-</shortcut>
 <guimenu>Look</guimenu>
 <guisubmenu>Theme</guisubmenu>
 <guimenuitem>Classroom</guimenuitem>
@@ -441,9 +448,6 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>A</keycap></keycombo>
-</shortcut>
 <guimenu>Look</guimenu>
 <guisubmenu>Theme</guisubmenu>
 <guimenuitem>Arctic</guimenuitem>
@@ -453,9 +457,6 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>D</keycap></keycombo>
-</shortcut>
 <guimenu>Look</guimenu>
 <guisubmenu>Theme</guisubmenu>
 <guimenuitem>Desert</guimenuitem>
@@ -497,57 +498,43 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 <keycombo action="simul">&Ctrl;<keycap>M</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
-<guimenuitem>Show MenuBar</guimenuitem>
+<guimenuitem>Show Menubar</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Toggle</action> the MenuBar</para></listitem>
+<listitem><para><action>Toggle</action> the menubar</para></listitem>
 </varlistentry>
+
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>T</keycap></keycombo>
-</shortcut>
 <guimenu>Settings</guimenu>
-<guimenuitem>Show ToolBar</guimenuitem>
+<guimenuitem>Toolbars</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Toggle</action> the ToolBar</para></listitem>
+<listitem><para><action>Toggle</action> the <guimenuitem>Main</guimenuitem> and the 
+<guimenuitem>Characters</guimenuitem> toolbar</para></listitem>
 </varlistentry>
+
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>A</keycap></keycombo>
-</shortcut>
-<guimenu>Settings</guimenu>
-<guimenuitem>Show Statusbar</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Toggle</action> the StatusBar</para>
-</listitem>
-</varlistentry>
-<varlistentry>
-<term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>h</keycap></keycombo>
-</shortcut>
 <guimenu>Settings</guimenu>
 <guimenuitem>Configure Shortcuts...</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Configure</action> &klettres; shortcuts</para></listitem>
 </varlistentry>
+
 <varlistentry>
 <term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Alt;<keycap>b</keycap></keycombo>
-</shortcut>
 <guimenu>Settings</guimenu>
 <guimenuitem>Configure Toolbars...</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Configure</action> &klettres; toolbars</para></listitem>
 </varlistentry>
+
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
 <guimenuitem>Configure &klettres;...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Configure</action> &klettres;: display a dialog with the Font configuration tab and the timers configuration tab.</para></listitem>
+<listitem><para><action>Configure</action> &klettres;: display a dialog with the <guilabel>Font 
+Settings</guilabel> page and the <guilabel>Timer</guilabel> configuration page.</para></listitem>
 </varlistentry>
 
 </variablelist>
@@ -560,7 +547,7 @@ The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure 
 <title>Adding Sounds to &klettres;</title>
 
 <para>
-If you would like to add sounds in your own language, it is very easy to do so. Record the alphabet sounds and place them in a folder named 'alpha'. Please write the letters (one per line) in a text file and save it with utf8 encoding in the 'alpha' folder. Then record the most current syllables and put them in a folder named 'syllab'. Write the syllables (one per line) in a text file and save it with utf8 encoding in the 'syllab' folder. The sounds should be in wav or ogg format and long enough for KAudioPlayer to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me. Additionally you can tell me about special letters in your language so I can easily generate the Special Characters Toolbar.  
+If you would like to add sounds in your own language, it is very easy to do so. Record the alphabet sounds and place them in a folder named 'alpha'. Please write the letters (one per line) in a text file and save it with utf8 encoding in the 'alpha' folder. Then record the most current syllables and put them in a folder named 'syllab'. Write the syllables (one per line) in a text file and save it with utf8 encoding in the 'syllab' folder. The sounds should be in wav or ogg format and long enough for KAudioPlayer to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me. Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Characters</guimenuitem> toolbar.  
 </para>
 
 <para>
@@ -589,22 +576,28 @@ path.</para> </answer>
 <para>I do not hear any sounds</para>
 </question>
 <answer>
-<para>You need to have &arts; support and the &arts; daemon needs to be running. Make sure you compiled kdelibs with arts if you compiled KDE. In any doubt, ask your distribution. You can also check if &arts; is running in &kcontrol; -&gt; Sound &amp; Multimedia in the <guilabel>Sound System</guilabel> tab. There you must make sure that <guilabel>Enable the Sound System</guilabel> is checked.</para>
-<para>For KDE 3.4 users, you must also be sure that the player used to play KDE sounds is the default KDE sound system player. See in &kcontrol; the <guilabel>System Notifications</guilabel> tab, click on the Player Settings button on the bottom right and in the dialog please check <guilabel>Use the KDE sound system</guilabel>.
+<para>You need to have &arts; support and the &arts; daemon needs to be running. Make sure you compiled kdelibs with arts if you compiled KDE. In any doubt, ask your distribution. You can also check if &arts; is running in &kcontrolcenter; -&gt; <guilabel>Sound &amp; Multimedia</guilabel> in the <guilabel>Sound
+System</guilabel> tab. There you must make sure that <guilabel>Enable the sound
+system</guilabel> is checked.</para>
+<para>For KDE 3.4 users, you must also be sure that the player used to play &kde; sounds is the default &kde; sound system player. See in &kcontrolcenter; 
+-&gt; <guilabel>Sound &amp; Multimedia</guilabel> 
+the <guilabel>System Notifications</guilabel> tab, click on the <guibutton>Player Settings</guibutton>
+button on the bottom right and in the dialog please check <guilabel>Use the KDE sound system</guilabel>.
 </para>
  </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>I do not see  some letters on the icons on the Special Characters Toolbar. I see rectangles instead for some languages.</para>
+<para>I do not see  some letters on the icons on the special <guimenuitem>Characters</guimenuitem> toolbar. I see rectangles instead for some languages.</para>
 </question>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
-<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -&gt; <guilabel>System Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on <guilabel>Administrator mode</guilabel> and add the Windows Font folder).</para></answer>
+<para>If you have Windows on your machine, you can use the TTF fonts from Windows (Arial is in those) via &kcontrol; -&gt; <guilabel>System Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on <guibutton>Administrator Mode</guibutton> and add the &Windows; Font
+  folder).</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>The letters on the icons on the Special Characters Toolbar are too small for some languages.</para>
+<para>The letters on the icons on the special <guimenuitem>Characters</guimenuitem> toolbar are too small for some languages.</para>
 </question>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
