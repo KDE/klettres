@@ -34,7 +34,7 @@ KLNewStuff::KLNewStuff( KLettresView *view ) :
 
 bool KLNewStuff::install( const QString &fileName )
 {
-    kdDebug(5850) << "KLNewStuff::install(): " << fileName << endl;
+    kDebug(5850) << "KLNewStuff::install(): " << fileName << endl;
 
     KTar archive( fileName );
     if ( !archive.open( QIODevice::ReadOnly ) )

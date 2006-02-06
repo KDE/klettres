@@ -172,7 +172,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
     //if xml file is not found, program exits
     if (!layoutFile.exists())
     {
-        kdWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/"+Prefs::language() << endl;
+        kWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/"+Prefs::language() << endl;
         QString mString=i18n("The file sounds.xml was not found in\n"
                              "$KDEDIR/share/apps/klettres/\n\n"
                              "Please install this file and start KLettres again.\n\n");
