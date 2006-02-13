@@ -24,12 +24,12 @@
 </authorgroup>
 
 <copyright>
-<year>2001</year><year>2005</year>
+<year>2001</year><year>2006</year>
 <holder>&Anne-Marie.Mahfouf;</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2005-06-17</date>
+<date>2006-02-08</date>
 <releaseinfo>1.5</releaseinfo>
 
 <abstract>
@@ -274,11 +274,11 @@ You can also choose here the size you like the best. This size will be kept in c
 <sect2 id="timers">
 <title>Timers</title>
 
-<para>The timers set the time between two letters &ie; the time during wich a letter is displayed. The units are tens of seconds. 
+<para>The timers set the time between two letters &ie; the time during wich a letter is displayed. The units are tenths of seconds. 
 </para>
 
 <para>
-The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure &klettres;...</guimenuitem> dialog has two timers settings: one for the kid mode and one for the grown-up mode. Defaults are 2 tens of seconds for Kid mode and 4 tens of seconds for grown-up mode. Increasing the time leaves you more time to see your errors.</para>
+The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure &klettres;...</guimenuitem> dialog has two timers settings: one for the kid mode and one for the grown-up mode. Defaults are 2 tenths of seconds for Kid mode and 4 tenths of seconds for grown-up mode. Increasing the time leaves you more time to see your errors.</para>
 
 <screenshot>
 <screeninfo>Screenshot of &klettres; Timers Settings</screeninfo>
@@ -710,7 +710,7 @@ I am very grateful to the following people whose contribution has been greatly v
 </para>
 
 <para>
-Documentation copyright 2001-2005
+Documentation copyright 2001-2006
 &Anne-Marie.Mahfouf;<email>&Anne-Marie.Mahfouf.mail;</email>
 </para>
 
