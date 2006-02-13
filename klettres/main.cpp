@@ -35,7 +35,7 @@ static const char description[] =
               "letters in this language.\n"
               "10 languages are available: Czech, Danish, Dutch, English, French,\nItalian, Luganda, Romanized Hindi, Spanish and Slovak.");
 
-static const char version[] = "1.4";
+static const char version[] = "1.5";
 
 static KCmdLineOptions options[] =
     {
@@ -46,7 +46,7 @@ static KCmdLineOptions options[] =
 int main(int argc, char **argv)
 {
     KAboutData about("klettres", I18N_NOOP("KLettres"), KLETTRES_VERSION, description,
-                     KAboutData::License_GPL, "(C) 2001-2005 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
+                     KAboutData::License_GPL, "(C) 2001-2006 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
     about.addAuthor( "Anne-Marie Mahfouf", 0, "annma@kde.org");
     about.addCredit("Ludovic Grossard",
                     I18N_NOOP("French sounds"), "grossard@kde.org");

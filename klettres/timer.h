@@ -1,6 +1,8 @@
 /***************************************************************************
  *   Copyright (C) 2005 by Michael Goettsche                               *
- *   michael.goettsche@kdemail.net                                         *
+ *   michael.goettsche@kdemail.net          
+ *   Copyright (C) 2006 by Anne-Marie Mahfouf                              *
+ *   annma@kde.org                                  *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *

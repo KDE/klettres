@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2001-2005 by Anne-Marie Mahfouf                              *
+ *   Copyright (C) 2001-2006 by Anne-Marie Mahfouf                              *
  *   annemarie.mahfouf@free.fr                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -229,9 +229,9 @@ void KLettres::setupActions()
     m_themeAction->setWhatsThis(i18n("Here you can change the theme for KLettres. A theme consists in the background picture and the font color for the letter displayed."));
 
     m_kidAction = new KToggleAction(i18n("Mode Kid"), "klettres_kids", CTRL+Key_K, this, SLOT(slotModeKid()), actionCollection(), "mode_kid");
-    m_kidAction->setWhatsThis(i18n("If you are in the Grownup mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
-    m_grownupAction = new KToggleAction(i18n("Mode Grownup"), "klettres_grownup", CTRL+Key_G, this, SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
-    m_grownupAction->setWhatsThis(i18n("The Grownup mode is the normal mode where you can see the menubar."));
+    m_kidAction->setWhatsThis(i18n("If you are in the Grown-up mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
+    m_grownupAction = new KToggleAction(i18n("Mode Grown-up"), "klettres_grownup", CTRL+Key_G, this, SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
+    m_grownupAction->setWhatsThis(i18n("The Grown-up mode is the normal mode where you can see the menubar."));
 
     connect(m_levelAction, SIGNAL(activated(int)), this, SLOT(slotChangeLevel(int)));
     connect(m_languageAction, SIGNAL(activated(int)), this, SLOT(slotChangeLanguage(int)));
@@ -320,12 +320,12 @@ void KLettres::slotMenubar()
     switch (m_menubarAction->isChecked()){
     case false:
         m_menubarAction->setChecked(false);
-        m_menubarAction->setToolTip(i18n("Show menubar"));
+        m_menubarAction->setToolTip(i18n("Show Menubar"));
         menuBar()->hide();
         break;
     case true:
         m_menubarAction->setChecked(true);
-        m_menubarAction->setToolTip(i18n("Hide menubar"));
+        m_menubarAction->setToolTip(i18n("Hide Menubar"));
         menuBar()->show();
         break;
     }
@@ -406,9 +406,9 @@ void KLettres::slotModeGrownup()
     m_menubarAction->setChecked(true);
     m_grownupAction->setChecked(true);
     m_kidAction->setChecked(false);
-    m_grownupAction->setToolTip(i18n("Grownup mode is currently active"));
+    m_grownupAction->setToolTip(i18n("Grown-up mode is currently active"));
     m_kidAction->setToolTip(i18n("Switch to Kid mode"));
-    m_menubarAction->setToolTip(i18n("Hide menubar"));
+    m_menubarAction->setToolTip(i18n("Hide Menubar"));
     slotMenubar();
     //m_secondToolbar->setIconSize(22); //causes a crash when adding/removing actions in toolbar
     setMinimumSize( QSize( 640, 538 ) );
@@ -433,8 +433,8 @@ void KLettres::slotModeKid()
     slotMenubar();
     m_kidAction->setChecked(true);
     m_kidAction->setToolTip(i18n("Kid mode is currently active"));
-    m_grownupAction->setToolTip(i18n("Switch to Grownup mode"));
-    m_menubarAction->setToolTip(i18n("Show menubar"));
+    m_grownupAction->setToolTip(i18n("Switch to Grown-up mode"));
+    m_menubarAction->setToolTip(i18n("Show Menubar"));
     m_grownupAction->setChecked(false);
     //m_secondToolbar->setIconSize(32);
     setMinimumSize( QSize( 640, 480 ) );
