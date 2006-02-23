@@ -309,8 +309,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <para>The timers set the time between two letters &ie; the time during wich a letter is displayed. The units are tenths of seconds. 
 </para>
 
-<para>
-The Timers page in the <guimenu>Settings</guimenu> -&gt; <guimenuitem>Configure &klettres;...</guimenuitem> dialog has two timers settings: one for the kid mode and one for the grown-up mode. Defaults are 2 tenths of seconds for Kid mode and 4 tenths of seconds for grown-up mode. Increasing the time leaves you more time to see your errors.</para>
+<para>The <guilabel>Timer</guilabel> page in the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &klettres;...</guimenuitem></menuchoice> dialog has two timers settings: one for the <guilabel>Kid Mode</guilabel> and one for the <guilabel>Grown-up Mode</guilabel>. Defaults are 2 tenths of seconds for <guilabel>Kid Mode</guilabel> and 4 tenths of seconds for <guilabel>Grown-up Mode</guilabel>. Increasing the time leaves you more time to see your errors.</para>
 
 <screenshot>
 <screeninfo>Screenshot of &klettres; Timers Settings</screeninfo>
