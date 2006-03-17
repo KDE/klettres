@@ -1,4 +1,5 @@
 kde4_header()
+project(klettres)
 
 add_subdirectory( klettres ) 
 
