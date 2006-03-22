@@ -41,7 +41,7 @@
 #include <kstandarddirs.h>
 #include <kstatusbar.h>
 #include <ktoolbar.h>
-#include <ktoolbarbutton.h>
+
 #include <kglobal.h>
 //Project includes
 #include "klnewstuff.h"
