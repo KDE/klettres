@@ -27,7 +27,7 @@
 #include <QString>
 #include <QToolTip>
 #include <QWhatsThis>
-
+#include <QTextStream>
 //KDE includes
 #include <kaction.h>
 #include <kapplication.h>
@@ -258,7 +258,7 @@ void KLettres::setupToolbars()
 {
     //toolbar for special characters
     m_secondToolbar = toolBar("secondToolbar");
-    m_secondToolbar->setBarPos(KToolBar::Bottom);
+	addToolBar ( Qt::BottomToolBarArea, m_secondToolbar);
 }
 
 void KLettres::optionsPreferences()
@@ -485,8 +485,11 @@ void KLettres::loadLangToolBar()
 
 void KLettres::slotPasteChar()
 {
-        KToolBarButton *charBut = (KToolBarButton* ) sender();
+#warning "kde4: port it";
+#if 0		
+        QToolButton *charBut = (QToolButton* ) sender();
         m_view->m_letterEdit->setText(allData[charBut->id()]);
+#endif		
 }
 
 QString KLettres::charIcon(const QChar & c)
