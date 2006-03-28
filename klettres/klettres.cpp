@@ -478,7 +478,8 @@ void KLettres::loadLangToolBar()
         openFileStream.close();
         for (int i=0; i<(int) allData.count(); i++) {
             if (!allData[i].isEmpty())
-                m_secondToolbar->insertButton (charIcon(allData[i].at(0)), i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
+                m_secondToolbar->addAction (charIcon(allData[i].at(0)));//, i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
+		//TODO fix by creating a new KAction, see KAction API doc
         }
     }
 }
