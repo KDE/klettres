@@ -234,9 +234,9 @@ void KLettres::setupActions()
     m_grownupAction = new KToggleAction(i18n("Mode Grown-up"), "klettres_grownup", Qt::CTRL+Qt::Key_G, this, SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
     m_grownupAction->setWhatsThis(i18n("The Grownup mode is the normal mode where you can see the menubar."));
 
-    connect(m_levelAction, SIGNAL(activated(int)), this, SLOT(slotChangeLevel(int)));
-    connect(m_languageAction, SIGNAL(activated(int)), this, SLOT(slotChangeLanguage(int)));
-    connect(m_themeAction, SIGNAL(activated(int)), this, SLOT(slotChangeTheme(int)));
+    connect(m_levelAction, SIGNAL(triggered(int)), this, SLOT(slotChangeLevel(int)));
+    connect(m_languageAction, SIGNAL(triggered(int)), this, SLOT(slotChangeLanguage(int)));
+    connect(m_themeAction, SIGNAL(triggered(int)), this, SLOT(slotChangeTheme(int)));
 
     KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 
