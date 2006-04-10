@@ -284,11 +284,11 @@ void KLettres::loadSettings()
     m_languageAction->setCurrentItem(Prefs::languageNumber());
     QString langString = m_languageNames[Prefs::languageNumber()];
     langString.replace("&", QString());
-    m_langLabel->setText(i18n("Current language is %1").arg(langString));
+    m_langLabel->setText(i18n("Current language is %1", langString));
     loadLangToolBar();
     // load default level
     m_levelAction->setCurrentItem(Prefs::level()-1);
-    m_levLabel->setText(i18n("Current level is %1").arg(Prefs::level()));
+    m_levLabel->setText(i18n("Current level is %1", Prefs::level()));
 
     if (Prefs::theme() == Prefs::EnumTheme::classroom) {
         m_themeAction->setCurrentItem(0);
@@ -359,7 +359,7 @@ void KLettres::updateLevMenu(int id)
 {
     //m_levelCombo->setCurrentItem(id);
     m_levelAction->setCurrentItem(id);
-    m_levLabel->setText(i18n("Current level is %1").arg(Prefs::level()));
+    m_levLabel->setText(i18n("Current level is %1", Prefs::level()));
 }
 
 void KLettres::slotChangeLanguage(int newLanguage)
@@ -370,7 +370,7 @@ void KLettres::slotChangeLanguage(int newLanguage)
     // Update the StatusBar
     QString langString = m_languageNames[newLanguage];
     langString.replace("&", QString());
-    m_langLabel->setText(i18n("Current language is %1").arg(langString));
+    m_langLabel->setText(i18n("Current language is %1", langString));
     loadLangToolBar();
     // Change language effectively
     bool ok = loadLayout(soundFactory->m_layoutsDocument);
@@ -462,7 +462,7 @@ void KLettres::loadLangToolBar()
         {
         
             QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
-                                    "please check your installation.").arg(m_languages[Prefs::languageNumber()]);
+                                    "please check your installation.", m_languages[Prefs::languageNumber()]);
             KMessageBox::sorry( this, mString,
                                     i18n("Error") );
             kapp->quit();
