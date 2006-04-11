@@ -24,7 +24,7 @@
 #define TIMER_H_
 
 #include <QWidget>
-#include "timerui.h"
+#include "ui_timerui.h"
 
 /**
  * @short Timer widget in Settings dialog
