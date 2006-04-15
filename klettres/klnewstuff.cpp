@@ -50,8 +50,8 @@ bool KLNewStuff::install( const QString &fileName )
     //refresh Languages menu
     //kDebug() << "---- selected language : " << m_view->m_klettres->selectedLanguage << endl;
     m_view->m_klettres->m_languageAction->setItems(m_view->m_klettres->m_languageNames);
-    m_view->m_klettres->slotChangeLanguage(m_view->m_klettres->m_languages.findIndex(Prefs::defaultLanguage()));
-    m_view->m_klettres->m_languageAction->setCurrentItem(m_view->m_klettres->m_languages.findIndex(Prefs::defaultLanguage()));
+    m_view->m_klettres->slotChangeLanguage(m_view->m_klettres->m_languages.indexOf(Prefs::defaultLanguage()));
+    m_view->m_klettres->m_languageAction->setCurrentItem(m_view->m_klettres->m_languages.indexOf(Prefs::defaultLanguage()));
     return true;
 }
 

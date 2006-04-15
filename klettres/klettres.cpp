@@ -97,9 +97,9 @@ void KLettres::findLanguages()
         m_languages.removeAll(".");
         m_languages.removeAll("..");
     }
-    m_languages.remove(m_languages.find("pics"));
-    m_languages.remove(m_languages.find("data"));
-    m_languages.remove(m_languages.find("icons"));
+    m_languages.removeAll("pics");
+    m_languages.removeAll("data");
+    m_languages.removeAll("icons");
     m_languages.sort();
     if (m_languages.isEmpty()) return;
     Prefs::setLanguages(m_languages);
@@ -201,12 +201,18 @@ void KLettres::setupActions()
     m_newAction->setToolTip(i18n("Play a new sound"));
     m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound.")); 
     new KAction( i18n("Get Alphabet in New Language..."), "knewstuff",  0, this, SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
-    KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),"player_play", Qt::CTRL+Qt::Key_P, m_view, SLOT(slotPlayAgain()), actionCollection(), "play_again");
+    KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),  actionCollection(), "play_again");
+    m_playAgainAction->setShortcut(Qt::CTRL+Qt::Key_P);
+    m_playAgainAction->setIcon(KIcon("player_play"));	
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
+    connect(m_playAgainAction, SIGNAL(triggered(bool)), m_view, SLOT(slotPlayAgain()));
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
     KStdAction::quit(kapp, SLOT(quit()), actionCollection());
 
-    m_menubarAction = new KToggleAction(i18n("Show &Menubar"),"editclear", Qt::CTRL+Qt::Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
+    m_menubarAction = new KToggleAction(i18n("Show &Menubar"),  actionCollection(), "menubar");
+    m_menubarAction->setIcon(KIcon("editclear"));
+    m_playAgainAction->setShortcut(Qt::CTRL+Qt::Key_M);
+    connect(m_playAgainAction, SIGNAL(triggered(bool)), this, SLOT(slotMenubar()));
     m_menubarAction->setCheckedState(i18n("Hide &Menubar"));
     m_menubarAction->setChecked(true);
     m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
@@ -215,7 +221,7 @@ void KLettres::setupActions()
     m_levelAction->setToolTip(i18n("Select the level"));
     m_levelAction->setWhatsThis(i18n("You can select the level: level 1 displays a letter and you hear it; level 2 does not display the letter, you only hear it; level 3 displays a syllable and you hear it; level 4 does not display the syllable, you only hear it."));
 
-    m_languageAction = new KSelectAction(i18n("&Language"), KShortcut(), actionCollection(), "languages");
+    m_languageAction = new KSelectAction(i18n("&Language"), actionCollection(), "languages");
     m_languageAction->setItems(m_languageNames);
 
     m_levelsNames.append(i18n( "Level 1" ));
@@ -224,7 +230,7 @@ void KLettres::setupActions()
     m_levelsNames.append(i18n( "Level 4" ));
     m_levelAction->setItems(m_levelsNames);
 
-    m_themeAction =  new KSelectAction(i18n("Themes"), KShortcut(), actionCollection(), "looks");
+    m_themeAction =  new KSelectAction(i18n("Themes"), actionCollection(), "looks");
     m_themesNames.append(i18n("Classroom"));
     m_themesNames.append(i18n("Arctic"));
     m_themesNames.append(i18n("Desert"));
