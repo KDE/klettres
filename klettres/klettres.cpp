@@ -200,7 +200,10 @@ void KLettres::setupActions()
     connect(m_newAction, SIGNAL(triggered(bool)), m_view, SLOT(game()));
     m_newAction->setToolTip(i18n("Play a new sound"));
     m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound.")); 
-    new KAction( i18n("Get Alphabet in New Language..."), "knewstuff",  0, this, SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
+
+    KAction *m_stuffAction = new KAction(i18n("Get Alphabet in New Language..."), actionCollection(), "downloadnewstuff");
+    connect(m_stuffAction, SIGNAL(triggered(bool)),  this, SLOT( slotDownloadNewStuff() ));
+
     KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),  actionCollection(), "play_again");
     m_playAgainAction->setShortcut(Qt::CTRL+Qt::Key_P);
     m_playAgainAction->setIcon(KIcon("player_play"));	
@@ -212,7 +215,7 @@ void KLettres::setupActions()
     m_menubarAction = new KToggleAction(i18n("Show &Menubar"),  actionCollection(), "menubar");
     m_menubarAction->setIcon(KIcon("editclear"));
     m_playAgainAction->setShortcut(Qt::CTRL+Qt::Key_M);
-    connect(m_playAgainAction, SIGNAL(triggered(bool)), this, SLOT(slotMenubar()));
+    connect(m_menubarAction, SIGNAL(triggered(bool)), this, SLOT(slotMenubar()));
     m_menubarAction->setCheckedState(i18n("Hide &Menubar"));
     m_menubarAction->setChecked(true);
     m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
@@ -238,9 +241,16 @@ void KLettres::setupActions()
     m_themeAction->setToolTip(i18n("Select the theme"));
     m_themeAction->setWhatsThis(i18n("Here you can change the theme for KLettres. A theme consists in the background picture and the font color for the letter displayed."));
 
-    m_kidAction = new KToggleAction(i18n("Mode Kid"), "klettres_kids", Qt::CTRL+Qt::Key_K, this, SLOT(slotModeKid()), actionCollection(), "mode_kid");
+    m_kidAction = new KToggleAction(i18n("Mode Kid"), actionCollection(), "mode_kid");
+    m_kidAction->setShortcut(Qt::CTRL+Qt::Key_K);
+    m_kidAction->setIcon(KIcon("klettres_kids"));
+    connect(m_kidAction, SIGNAL(triggered(bool)), this, SLOT(slotModeKid()));
     m_kidAction->setWhatsThis(i18n("If you are in the Grown-up mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
-    m_grownupAction = new KToggleAction(i18n("Mode Grown-up"), "klettres_grownup", Qt::CTRL+Qt::Key_G, this, SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
+
+    m_grownupAction = new KToggleAction(i18n("Mode Grown-up"), actionCollection(), "mode_grownup");
+    m_grownupAction->setShortcut(Qt::CTRL+Qt::Key_G);
+    m_grownupAction->setIcon(KIcon("klettres_grownup"));
+    connect(m_grownupAction, SIGNAL(triggered(bool)), this, SLOT(slotModeGrownup()));
     m_grownupAction->setWhatsThis(i18n("The Grownup mode is the normal mode where you can see the menubar."));
 
     connect(m_levelAction, SIGNAL(triggered(int)), this, SLOT(slotChangeLevel(int)));
