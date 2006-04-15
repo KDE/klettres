@@ -33,8 +33,8 @@
 #include "prefs.h"
 
 
-SoundFactory::SoundFactory(KLettres *parent, const char *name)
-        : QObject(parent, name)
+SoundFactory::SoundFactory(KLettres *parent, const char *)
+        : QObject(parent)
 {
     klettres = parent;
 

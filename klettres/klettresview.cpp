@@ -208,21 +208,24 @@ void KLettresView::viewThemeArctic()
 {
     Prefs::setTheme(Prefs::EnumTheme::arctic);
     Prefs::writeConfig();
-    setPaletteBackgroundPixmap(m_grownupPicture);
+    pal.setBrush(QPalette::Window, m_grownupPicture);
+    setPalette(pal);
 }
 
 void KLettresView::viewThemeClassroom()
 {
     Prefs::setTheme(Prefs::EnumTheme::classroom);
     Prefs::writeConfig();
-    setPaletteBackgroundPixmap(m_kidPicture);
+    pal.setBrush(QPalette::Window, m_kidPicture);
+    setPalette(pal);
 }
 
 void KLettresView::viewThemeDesert()
 {
     Prefs::setTheme(Prefs::EnumTheme::desert);
     Prefs::writeConfig();
-    setPaletteBackgroundPixmap(m_desertPicture);
+    pal.setBrush(QPalette::Window, m_desertPicture);
+    setPalette(pal);
 }
 
 #include "klettresview.moc"

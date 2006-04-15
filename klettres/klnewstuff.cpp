@@ -55,7 +55,7 @@ bool KLNewStuff::install( const QString &fileName )
     return true;
 }
 
-bool KLNewStuff::createUploadFile( const QString &fileName )
+bool KLNewStuff::createUploadFile( const QString &)
 {
     //return mView->saveCalendar( fileName );
     return true;
