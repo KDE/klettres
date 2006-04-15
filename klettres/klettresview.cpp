@@ -140,7 +140,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
     m_inputLetter=m_letterEdit->text();
     if (m_inputLetter.at(0).isLetter()) //(a1.at(inputLetter.length()).lower().isLetter())
     {
-        m_upperLetter = m_inputLetter.upper();    //put it in uppercase
+        m_upperLetter = m_inputLetter.toUpper();    //put it in uppercase
         m_letterEdit->selectAll();
         m_letterEdit->cut();
         m_letterEdit->setText(m_upperLetter);

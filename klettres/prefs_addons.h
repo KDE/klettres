@@ -32,13 +32,13 @@ static void setLanguageNumber(int i)
 
 static int languageNumber()
 {
-    int i = Prefs::self()->m_languages.findIndex(language());
+    int i = Prefs::self()->m_languages.indexOf(language());
     if (i != -1)
         return i;
-    i = Prefs::self()->m_languages.findIndex(defaultLanguage());
+    i = Prefs::self()->m_languages.indexOf(defaultLanguage());
     if (i != -1)
         return i;
-    i = Prefs::self()->m_languages.findIndex("en");
+    i = Prefs::self()->m_languages.indexOf("en");
     if (i != -1)
         return i;
 

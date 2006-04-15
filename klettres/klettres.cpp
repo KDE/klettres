@@ -94,8 +94,8 @@ void KLettres::findLanguages()
     for (QStringList::Iterator it =mdirs.begin(); it !=mdirs.end(); ++it ) {
         QDir dir(*it);
         m_languages += dir.entryList(QDir::Dirs, QDir::Name);
-        m_languages.remove(m_languages.find("."));
-        m_languages.remove(m_languages.find(".."));
+        m_languages.removeAll(".");
+        m_languages.removeAll("..");
     }
     m_languages.remove(m_languages.find("pics"));
     m_languages.remove(m_languages.find("data"));
@@ -110,7 +110,7 @@ void KLettres::findLanguages()
     {
         if (m_languages.count(m_languages[i])>1) {
             temp_languages.append(m_languages[i]);
-            m_languages.remove(m_languages[i]);
+            m_languages.removeAll(m_languages[i]);
         }
 	for (int i=0;  i<temp_languages.count(); i++)
 	{
@@ -156,7 +156,7 @@ QString Prefs::defaultLanguage()
     QStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
     if (!defaultLanguages.isEmpty()) {
         //scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
-        int i = Prefs::self()->m_languages.findIndex(defaultLanguages[0]);
+        int i = Prefs::self()->m_languages.indexOf(defaultLanguages[0]);
         if (i<1)
             return "en";
         else
@@ -194,10 +194,13 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 
 void KLettres::setupActions()
 {
-    KAction *m_newAction = new KAction(i18n("New Sound"), "file_new", Qt::CTRL+Qt::Key_N, m_view, SLOT(game()), actionCollection(), "play_new");
+    KAction *m_newAction = new KAction(i18n("New Sound"), actionCollection(), "play_new");
+    m_newAction->setShortcut(Qt::CTRL+Qt::Key_N);
+    m_newAction->setIcon(KIcon("file_new"));
+    connect(m_newAction, SIGNAL(triggered(bool)), m_view, SLOT(game()));
     m_newAction->setToolTip(i18n("Play a new sound"));
     m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound.")); 
-    new KAction( i18n("Get Alphabet in New Language..."), "knewstuff", 0, this, SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
+    new KAction( i18n("Get Alphabet in New Language..."), "knewstuff",  0, this, SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
     KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),"player_play", Qt::CTRL+Qt::Key_P, m_view, SLOT(slotPlayAgain()), actionCollection(), "play_again");
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
@@ -208,7 +211,7 @@ void KLettres::setupActions()
     m_menubarAction->setChecked(true);
     m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
 
-    m_levelAction = new KSelectAction(i18n("L&evel"), KShortcut(), actionCollection(), "levels");
+    m_levelAction = new KSelectAction(i18n("L&evel"), actionCollection(), "levels");
     m_levelAction->setToolTip(i18n("Select the level"));
     m_levelAction->setWhatsThis(i18n("You can select the level: level 1 displays a letter and you hear it; level 2 does not display the letter, you only hear it; level 3 displays a syllable and you hear it; level 4 does not display the syllable, you only hear it."));
 
@@ -457,7 +460,7 @@ void KLettres::loadLangToolBar()
         allData.clear();
         QString myString=QString("klettres/%1.txt").arg(m_languages[Prefs::languageNumber()]);
         QFile myFile;
-        myFile.setName(locate("data",myString));
+        myFile.setFileName(locate("data",myString));
         if (!myFile.exists())
         {
         
@@ -469,12 +472,12 @@ void KLettres::loadLangToolBar()
         }
         update();
         //we open the file and store info into the stream...
-        QFile openFileStream(myFile.name());
+        QFile openFileStream(myFile.fileName());
         openFileStream.open(QIODevice::ReadOnly);
         QTextStream readFileStr(&openFileStream);
-        readFileStr.setEncoding(QTextStream::UnicodeUTF8);
+        readFileStr.setCodec("UTF-8");
         //allData contains all the words from the file
-        allData = QStringList::split("\n", readFileStr.read(), true);
+        allData = readFileStr.readAll().split("\n");
         openFileStream.close();
         for (int i=0; i<(int) allData.count(); i++) {
             if (!allData[i].isEmpty())
