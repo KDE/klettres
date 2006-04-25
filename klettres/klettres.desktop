@@ -6,6 +6,7 @@ Exec=klettres -caption "%c" %i %m
 Icon=klettres
 DocPath=klettres/index.html
 Comment= a KDE program to learn the alphabet
+Comment[bn]=বর্ণমালা শেখার জন্য একটি কে.ডি.ই. প্রোগ্রাম
 Comment[ca]=Un programa per a KDE per ajudar l'aprenentatge de l'alfabet
 Comment[cs]=KDE program pro výuku abecedy
 Comment[da]=Et program til at hjælpe med at lære alfabetet
