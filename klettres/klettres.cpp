@@ -419,7 +419,7 @@ void KLettres::slotModeGrownup()
 {
     QPalette pal;
     QColorGroup cg;
-    cg.setColor( QColorGroup::Background, Qt::white);
+    cg.setColor( QPalette::Background, Qt::white);
     //pal.setActive( cg );
     statusBar()->setPalette( pal );
     QFont f_lab( "Serif" , 10);  //font for statusBar
@@ -445,7 +445,7 @@ void KLettres::slotModeKid()
 {
     QPalette pal;
     QColorGroup cg;
-    cg.setColor( QColorGroup::Background, Qt::white);
+    cg.setColor( QPalette::Background, Qt::white);
     //pal.setActive( cg );
     statusBar()->setPalette( pal );
     QFont f_lab( "Serif" , 12);  //font for statusBar
