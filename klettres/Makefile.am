@@ -26,8 +26,6 @@ KDE_ICON = AUTO
 # the library search path.
 klettres_LDFLAGS = $(all_libraries) $(KDE_RPATH)
 
-messages: rc.cpp
-	$(XGETTEXT) *.cpp -o $(podir)/klettres.pot;
 
 LANGS = fr en
 SUBS = alpha syllab
