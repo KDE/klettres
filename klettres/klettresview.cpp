@@ -68,6 +68,7 @@ void KLettresView::chooseSound()
     m_random=KRandom::random()%(m_klettres->soundFactory->sounds);
     //have not 2 same sounds consecutively
     int temp = 0;
+#warning this is dead code!
     if (temp<0)
         temp=m_random;
     else
