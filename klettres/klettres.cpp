@@ -38,8 +38,11 @@
 #include <kmenubar.h>
 #include <kmessagebox.h>
 #include <knuminput.h>
+#include <kselectaction.h>
+#include <kstdaction.h>
 #include <kstandarddirs.h>
 #include <kstatusbar.h>
+#include <ktoggleaction.h>
 #include <ktoolbar.h>
 
 #include <kglobal.h>

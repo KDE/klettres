@@ -23,9 +23,10 @@
 
 #include <kmessagebox.h>
 #include <klocale.h>
-#include <kaudioplayer.h>
 #include <kdebug.h>
 #include <kstandarddirs.h>
+#include <kurl.h>
+#include <phonon/simpleplayer.h>
 
 #include "soundfactory.h"
 #include "soundfactory.moc"
@@ -34,7 +35,7 @@
 
 
 SoundFactory::SoundFactory(KLettres *parent, const char *)
-        : QObject(parent)
+        : QObject(parent), m_player(0)
 {
     klettres = parent;
 
@@ -69,9 +70,13 @@ void SoundFactory::playSound(int mySound)
     soundFile = locate("data", "klettres/" + filesList[mySound]);
     kDebug() << "soundFile " << soundFile << endl;
     
-    if (soundFile == 0) return;
-    
-    KAudioPlayer::play(soundFile);
+    if (soundFile.isEmpty()) return;
+
+    if (!m_player)
+    {
+        m_player = new Phonon::SimplePlayer(this);
+    }
+    m_player->play(KUrl::fromPath(soundFile));
 }
 
 void SoundFactory::loadFailure()
