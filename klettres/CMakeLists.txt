@@ -1,4 +1,3 @@
-kde4_header()
 
 add_subdirectory( pics ) 
 add_subdirectory( data ) 
@@ -42,7 +41,6 @@ install_files( ${DATA_INSTALL_DIR}/klettres/fr FILES fr/sounds.xml )
 
 kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
 
-kde4_footer()
 
 
 

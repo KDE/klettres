@@ -1,4 +1,3 @@
-kde4_header()
 project(klettres)
 
 add_subdirectory( klettres ) 
@@ -9,7 +8,6 @@ add_subdirectory( klettres )
 ########### install files ###############
 
 
-kde4_footer()
 
 
 

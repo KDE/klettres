@@ -1,4 +1,3 @@
-kde4_header()
 
 
 
@@ -7,7 +6,6 @@ kde4_header()
 
 install_files( ${DATA_INSTALL_DIR}/klettres FILES cs.txt da.txt sk.txt es.txt )
 
-kde4_footer()
 
 
 

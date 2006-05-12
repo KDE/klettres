@@ -1,4 +1,3 @@
-kde4_header()
 
 
 add_subdirectory(langs)
@@ -7,7 +6,6 @@ add_subdirectory(langs)
 
 install_files( ${DATA_INSTALL_DIR}/klettres/data FILES sounds.xml )
 
-kde4_footer()
 
 
 
