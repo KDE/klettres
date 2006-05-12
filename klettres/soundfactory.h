@@ -31,7 +31,7 @@ class KLettres;
 namespace Phonon
 {
 	class SimplePlayer;
-};
+}
 
 /**
  * This class manages the sounds toplay in KLettres, reading the data about the sounds
