@@ -74,7 +74,7 @@ void SoundFactory::playSound(int mySound)
 
     if (!m_player)
     {
-        m_player = new Phonon::SimplePlayer(this);
+        m_player = new Phonon::SimplePlayer(Phonon::GameCategory, this);
     }
     m_player->play(KUrl::fromPath(soundFile));
 }
