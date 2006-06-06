@@ -25,7 +25,7 @@ kde4_add_kcfg_files(klettres_SRCS prefs.kcfgc )
 
 kde4_add_executable(klettres ${klettres_SRCS})
 
-target_link_libraries(klettres  ${KDE4_KDEUI_LIBS} knewstuff ${KDE4_PHONONCORE_LIBS} )
+target_link_libraries(klettres  ${KDE4_KDEUI_LIBS} knewstuff ${KDE4_PHONONCORE_LIBRARY} )
 
 install_targets(/bin klettres )
 
