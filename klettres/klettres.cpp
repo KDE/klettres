@@ -508,7 +508,9 @@ void KLettres::loadLangToolBar()
 
 void KLettres::slotPasteChar()
 {
+#ifdef __GNUC__
 #warning "kde4: port it";
+#endif		
 #if 0		
         QToolButton *charBut = (QToolButton* ) sender();
         m_view->m_letterEdit->setText(allData[charBut->id()]);
