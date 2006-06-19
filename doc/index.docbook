@@ -93,7 +93,7 @@ keyboard only is needed.</para>
 <para>There are ten languages available at the moment: Czech, Danish, Dutch,
 English, French, Italian, Luganda, Romanized Hindi, Spanish and Slovak. If your
 &kde; language is Czech, Danish, Dutch, English, French, Italian, Spanish or
-Slovak then your language is taken as default, optherwise French is the default.
+Slovak then your language is taken as default, otherwise French is the default.
 You can easily get any additional available language by using the
 <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New
 Language...</guimenuitem> menu item, provided that your computer is connected to
