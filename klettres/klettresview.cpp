@@ -51,7 +51,7 @@ KLettresView::KLettresView(KLettres *parent)
     //load background pics
     m_grownupPicture.load(KStandardDirs::locate("data","klettres/pics/klettres_grownup.png"));
     m_kidPicture.load(KStandardDirs::locate("data","klettres/pics/klettres_kids.jpeg"));
-    m_desertPicture.load(locate("data","klettres/pics/klettres_desert.png"));
+    m_desertPicture.load(KStandardDirs::locate("data","klettres/pics/klettres_desert.png"));
     setAutoFillBackground(true);
 }
 
