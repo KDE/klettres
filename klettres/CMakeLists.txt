@@ -32,12 +32,12 @@ install_targets(/bin klettres )
 
 ########### install files ###############
 
-install_files( ${XDG_APPS_DIR} FILES klettres.desktop )
-install_files( ${DATA_INSTALL_DIR}/klettres FILES klettresui.rc )
-install_files( ${KCFG_INSTALL_DIR} FILES klettres.kcfg )
-install_files( ${DATA_INSTALL_DIR}/klettres/en FILES en/sounds.xml )
-install_files( ${CONFIG_INSTALL_DIR} FILES klettresrc )
-install_files( ${DATA_INSTALL_DIR}/klettres/fr FILES fr/sounds.xml )
+install( FILES klettres.desktop  DESTINATION  ${XDG_APPS_DIR} )
+install( FILES klettresui.rc  DESTINATION  ${DATA_INSTALL_DIR}/klettres )
+install( FILES klettres.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
+install( FILES en/sounds.xml  DESTINATION  ${DATA_INSTALL_DIR}/klettres/en )
+install( FILES klettresrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
+install( FILES fr/sounds.xml  DESTINATION  ${DATA_INSTALL_DIR}/klettres/fr )
 
 kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
 

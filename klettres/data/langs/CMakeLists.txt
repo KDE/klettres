@@ -4,7 +4,7 @@
 
 ########### install files ###############
 
-install_files( ${DATA_INSTALL_DIR}/klettres FILES cs.txt da.txt sk.txt es.txt )
+install( FILES cs.txt da.txt sk.txt es.txt  DESTINATION  ${DATA_INSTALL_DIR}/klettres )
 
 
 

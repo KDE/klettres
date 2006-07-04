@@ -4,7 +4,7 @@ add_subdirectory(langs)
 
 ########### install files ###############
 
-install_files( ${DATA_INSTALL_DIR}/klettres/data FILES sounds.xml )
+install( FILES sounds.xml  DESTINATION  ${DATA_INSTALL_DIR}/klettres/data )
 
 
 
