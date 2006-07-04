@@ -67,7 +67,7 @@ void SoundFactory::playSound(int mySound)
 
     if ((uint) mySound >= sounds) return;
 
-    soundFile = locate("data", "klettres/" + filesList[mySound]);
+    soundFile = KStandardDirs::locate("data", "klettres/" + filesList[mySound]);
     kDebug() << "soundFile " << soundFile << endl;
     
     if (soundFile.isEmpty()) return;

@@ -136,7 +136,7 @@ void KLettres::findLanguages()
     //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
     //to find the name of the country
     //corresponding to the code and the language the user set
-    KConfig entry(locate("locale", "all_languages"));
+    KConfig entry(KStandardDirs::locate("locale", "all_languages"));
     const QStringList::ConstIterator itEnd = m_languages.end();
     for (QStringList::Iterator it = m_languages.begin(); it != m_languages.end(); ++it) {
         if (*it == "hi-ro")
@@ -171,7 +171,7 @@ QString Prefs::defaultLanguage()
 
 bool KLettres::loadLayout(QDomDocument &layoutDocument)
 {
-    QFile layoutFile(locate("data", "klettres/"+Prefs::language()+"/sounds.xml"));
+    QFile layoutFile(KStandardDirs::locate("data", "klettres/"+Prefs::language()+"/sounds.xml"));
     //if xml file is not found, program exits
     if (!layoutFile.exists())
     {
@@ -479,7 +479,7 @@ void KLettres::loadLangToolBar()
         allData.clear();
         QString myString=QString("klettres/%1.txt").arg(m_languages[Prefs::languageNumber()]);
         QFile myFile;
-        myFile.setFileName(locate("data",myString));
+        myFile.setFileName(KStandardDirs::locate("data",myString));
         if (!myFile.exists())
         {
         

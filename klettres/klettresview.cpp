@@ -49,7 +49,7 @@ KLettresView::KLettresView(KLettres *parent)
 
     setFont(Prefs::font());
     //load background pics
-    m_grownupPicture.load(locate("data","klettres/pics/klettres_grownup.png"));
+    m_grownupPicture.load(KStandardDirs::locate("data","klettres/pics/klettres_grownup.png"));
     m_kidPicture.load(locate("data","klettres/pics/klettres_kids.jpeg"));
     m_desertPicture.load(locate("data","klettres/pics/klettres_desert.png"));
     setAutoFillBackground(true);
