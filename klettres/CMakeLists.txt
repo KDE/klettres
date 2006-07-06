@@ -27,7 +27,7 @@ kde4_add_executable(klettres ${klettres_SRCS})
 
 target_link_libraries(klettres  ${KDE4_KDEUI_LIBS} knewstuff ${KDE4_PHONONCORE_LIBRARY} )
 
-install_targets(/bin klettres )
+install(TARGETS klettres  DESTINATION ${BIN_INSTALL_DIR} )
 
 
 ########### install files ###############
