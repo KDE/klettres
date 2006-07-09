@@ -93,7 +93,7 @@ keyboard only is needed.</para>
 <para>There are ten languages available at the moment: Czech, Danish, Dutch,
 English, French, Italian, Luganda, Romanized Hindi, Spanish and Slovak. If your
 &kde; language is Czech, Danish, Dutch, English, French, Italian, Spanish or
-Slovak then your language is taken as default, optherwise French is the default.
+Slovak then your language is taken as default, otherwise French is the default.
 You can easily get any additional available language by using the
 <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New
 Language...</guimenuitem> menu item, provided that your computer is connected to
@@ -309,7 +309,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <para>The timers set the time between two letters &ie; the time during wich a letter is displayed. The units are tenths of seconds. 
 </para>
 
-<para>The <guilabel>Timer</guilabel> page in the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &klettres;...</guimenuitem></menuchoice> dialog has two timers settings: one for the <guilabel>Kid Mode</guilabel> and one for the <guilabel>Grown-up Mode</guilabel>. Defaults are 2 tenths of seconds for <guilabel>Kid Mode</guilabel> and 4 tenths of seconds for <guilabel>Grown-up Mode</guilabel>. Increasing the time leaves you more time to see your errors.</para>
+<para>The <guilabel>Timer</guilabel> page in the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &klettres;...</guimenuitem></menuchoice> dialog has two timers settings: one for the <guilabel>Kid Mode</guilabel> and one for the <guilabel>Grown-up Mode</guilabel>. Defaults are 4 tenths of seconds for <guilabel>Kid Mode</guilabel> and 2 tenths of seconds for <guilabel>Grown-up Mode</guilabel>. Increasing the time leaves you more time to see your errors.</para>
 
 <screenshot>
 <screeninfo>Screenshot of &klettres; Timers Settings</screeninfo>
@@ -365,7 +365,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>File</guimenu>
 <guimenuitem>Get Alphabet in New Language...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Opens</action> the Get Alphabet in New Language dialog for &klettres;</para></listitem>
+<listitem><para><action>Opens</action> the <guilabel>Get Hot New Stuff</guilabel> dialog for &klettres; to download a new language</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -561,11 +561,33 @@ Settings</guilabel> page and the <guilabel>Timer</guilabel> configuration page.<
 <title>Adding Sounds to &klettres;</title>
 
 <para>
-If you would like to add sounds in your own language, it is very easy to do so. Record the alphabet sounds and place them in a folder named 'alpha'. Please write the letters (one per line) in a text file and save it with utf8 encoding in the 'alpha' folder. Then record the most current syllables and put them in a folder named 'syllab'. Write the syllables (one per line) in a text file and save it with utf8 encoding in the 'syllab' folder. The sounds should be in wav or ogg format and long enough for KAudioPlayer to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me. Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Characters</guimenuitem> toolbar.  
+If you would like to add sounds in your own language, it is very easy to do so. Record the alphabet sounds and place them in a folder named 'alpha'. Then record the most current syllables and put them in a folder named 'syllab'.</para> 
+<para>Create a text file <filename>sounds.xml</filename>, preferably using Kate as editor or another editor capable of different encoding. In this file, write all the alphabet sounds and syllable sounds you recorded, like this example for the czech language:</para>
+<programlisting>&lt;klettres&gt;
+&lt;language code="cs"&gt;
+    &lt;menuitem&gt;
+      &lt;label&gt;&amp;Czech&lt;/label&gt;
+    &lt;/menuitem&gt;
+    &lt;alphabet&gt;
+        &lt;sound name="A" file="cs/alpha/a.ogg" /&gt;
+	...
+    &lt;/alphabet&gt;
+    &lt;syllables&gt;
+        &lt;sound name="BA" file="cs/syllab/ba.ogg" /&gt;
+	...
+    &lt;/syllables&gt;
+  &lt;/language&gt;
+&lt;/klettres&gt;</programlisting>
+<para>Replace "cs" with the two letter code and "Czech" with the name of your language. Write the sound names with the special characters of your language in upper case in utf8.</para>
+
+<para>Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in upper case on one line.
+And save both text files with <quote>utf8</quote> encoding (upper right dropbox in &kate; allows that)</para>
+
+<para>The sounds should be in wav or ogg format and long enough for KAudioPlayer to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me.   
 </para>
 
 <para>
-See <ulink url="http://edu.kde.org/klettres/add_language.php">the &klettres; website</ulink> for more detailed instructions on how to add a new language.
+See the <ulink url="http://edu.kde.org/klettres/add_language.php">&klettres; website</ulink> for more up to date instructions on how to add a new language.
 </para>
 </chapter>
 
