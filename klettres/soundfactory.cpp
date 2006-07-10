@@ -26,7 +26,7 @@
 #include <kdebug.h>
 #include <kstandarddirs.h>
 #include <kurl.h>
-#include <phonon/simpleplayer.h>
+#include <phonon/audioplayer.h>
 
 #include "soundfactory.h"
 #include "soundfactory.moc"
@@ -69,12 +69,12 @@ void SoundFactory::playSound(int mySound)
 
     soundFile = KStandardDirs::locate("data", "klettres/" + filesList[mySound]);
     kDebug() << "soundFile " << soundFile << endl;
-    
+
     if (soundFile.isEmpty()) return;
 
     if (!m_player)
     {
-        m_player = new Phonon::SimplePlayer(Phonon::GameCategory, this);
+        m_player = new Phonon::AudioPlayer(Phonon::GameCategory, this);
     }
     m_player->play(KUrl::fromPath(soundFile));
 }

@@ -58,8 +58,9 @@ const int ID_GROWNB    = 101;
 const int ID_MENUBARB  = 102;
 
 KLettres::KLettres()
-        : KMainWindow( 0, "KLettres" )
+        : KMainWindow( 0)
 {
+    setObjectName( "KLettres" );
     mNewStuff = 0;
     m_view = new KLettresView(this);
     // tell the KMainWindow that this is indeed the main widget
@@ -202,14 +203,14 @@ void KLettres::setupActions()
     m_newAction->setIcon(KIcon("file_new"));
     connect(m_newAction, SIGNAL(triggered(bool)), m_view, SLOT(game()));
     m_newAction->setToolTip(i18n("Play a new sound"));
-    m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound.")); 
+    m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound."));
 
     KAction *m_stuffAction = new KAction(i18n("Get Alphabet in New Language..."), actionCollection(), "downloadnewstuff");
     connect(m_stuffAction, SIGNAL(triggered(bool)),  this, SLOT( slotDownloadNewStuff() ));
 
     KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),  actionCollection(), "play_again");
     m_playAgainAction->setShortcut(Qt::CTRL+Qt::Key_P);
-    m_playAgainAction->setIcon(KIcon("player_play"));	
+    m_playAgainAction->setIcon(KIcon("player_play"));
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
     connect(m_playAgainAction, SIGNAL(triggered(bool)), m_view, SLOT(slotPlayAgain()));
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
@@ -482,7 +483,7 @@ void KLettres::loadLangToolBar()
         myFile.setFileName(KStandardDirs::locate("data",myString));
         if (!myFile.exists())
         {
-        
+
             QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
                                     "please check your installation.", m_languages[Prefs::languageNumber()]);
             KMessageBox::sorry( this, mString,
@@ -510,11 +511,11 @@ void KLettres::slotPasteChar()
 {
 #ifdef __GNUC__
 #warning "kde4: port it";
-#endif		
-#if 0		
+#endif
+#if 0
         QToolButton *charBut = (QToolButton* ) sender();
         m_view->m_letterEdit->setText(allData[charBut->id()]);
-#endif		
+#endif
 }
 
 QString KLettres::charIcon(const QChar & c)

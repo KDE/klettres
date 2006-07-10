@@ -30,7 +30,7 @@
 class KLettres;
 namespace Phonon
 {
-	class SimplePlayer;
+	class AudioPlayer;
 }
 
 /**
@@ -76,7 +76,7 @@ private:
 	///Report a load failure
 	void loadFailure();
 
-	Phonon::SimplePlayer *m_player;
+	Phonon::AudioPlayer *m_player;
 };
 
 #endif
