@@ -35,7 +35,7 @@ static const char description[] =
               "letters in this language.\n"
               "10 languages are available: Czech, Danish, Dutch, English, French,\nItalian, Luganda, Romanized Hindi, Spanish and Slovak.");
 
-static const char version[] = "1.5";
+static const char version[] = "1.5.1";
 
 static KCmdLineOptions options[] =
     {
