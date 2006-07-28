@@ -74,7 +74,6 @@ protected:
     m_desertPicture;
     ///Palette changes wether it's kid or grown-up
     QPalette pal;
-    QColorGroup cg;
     ///cursor position in the line edit
     int m_cursorPos;
     ///Random number that decides on the letter/syllable and sound

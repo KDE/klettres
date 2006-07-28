@@ -1,47 +1,51 @@
-<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
-<class>fontsdlg</class>
-<widget class="QDialog">
-    <property name="name">
-        <cstring>fontsdlg</cstring>
-    </property>
-    <property name="geometry">
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>484</width>
-            <height>330</height>
-        </rect>
-    </property>
-    <grid>
-        <property name="name">
-            <cstring>unnamed</cstring>
-        </property>
-        <widget class="KFontChooser" row="0" column="0">
-            <property name="name">
-                <cstring>kcfg_Font</cstring>
-            </property>
-            <property name="font">
-                <font>
-                    <pointsize>48</pointsize>
-                    <bold>1</bold>
-                </font>
-            </property>
-        </widget>
-    </grid>
-</widget>
-<customwidgets>
-    <customwidget>
-        <class>KFontChooser</class>
-        <header location="global">kfontdialog.h</header>
-        <container>0</container>
-    </customwidget>
-</customwidgets>
-<layoutdefaults spacing="6" margin="11"/>
-<includes>
-    <include location="global" impldecl="in declaration">kfontdialog.h</include>
-</includes>
-
-<includehints>
-    <includehint>kfontdialog.h</includehint>
-</includehints>
-</UI>
+<ui version="4.0" >
+ <class>fontsdlg</class>
+ <widget class="QDialog" name="fontsdlg" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>484</width>
+    <height>330</height>
+   </rect>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>11</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item row="0" column="0" >
+    <widget class="KFontChooser" name="kcfg_Font" >
+     <property name="font" >
+      <font>
+       <family>Sans Serif</family>
+       <pointsize>48</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>KFontChooser</class>
+   <extends>QWidget</extends>
+   <header>kfontdialog.h</header>
+  </customwidget>
+ </customwidgets>
+ <includes>
+  <include location="global" >kfontdialog.h</include>
+  <include location="local" >kfontdialog.h</include>
+ </includes>
+ <resources/>
+ <connections/>
+</ui>

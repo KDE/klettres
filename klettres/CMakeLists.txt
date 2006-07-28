@@ -1,9 +1,10 @@
 
+remove_definitions(-DQT3_SUPPORT_WARNINGS)
+remove_definitions(-DQT3_SUPPORT)
+
 add_subdirectory( pics ) 
 add_subdirectory( data ) 
 add_subdirectory( icons ) 
-
-
 
 
 ########### next target ###############
@@ -18,8 +19,9 @@ set(klettres_SRCS
 
 kde4_automoc(${klettres_SRCS})
 
-kde4_add_ui3_files(klettres_SRCS fontsdlg.ui  )
-kde4_add_ui_files(klettres_SRCS timerui.ui )
+kde4_add_ui_files(klettres_SRCS
+    timerui.ui
+    fontsdlg.ui )
 
 kde4_add_kcfg_files(klettres_SRCS prefs.kcfgc )
 

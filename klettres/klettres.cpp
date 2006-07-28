@@ -49,9 +49,16 @@
 //Project includes
 #include "klnewstuff.h"
 #include "klettres.h"
-#include "fontsdlg.h"
+#include "ui_fontsdlg.h"
 #include "timer.h"
 #include "prefs.h"
+
+class fontsdlg : public QDialog, public Ui::fontsdlg
+{
+    public:
+        fontsdlg( QWidget * parent ) : QDialog(parent)
+        { setupUi(this); }
+};
 
 const int ID_KIDB      = 100;
 const int ID_GROWNB    = 101;
@@ -290,7 +297,7 @@ void KLettres::optionsPreferences()
         return;
 
     KConfigDialog *dialog = new KConfigDialog(this, "settings", Prefs::self());
-    dialog->addPage(new fontsdlg(0, "mFont"), i18n("Font Settings"), "fonts");
+    dialog->addPage(new fontsdlg(0), i18n("Font Settings"), "fonts");
     //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
     //fonts is the icon
     Timer *m_timer = new Timer();
@@ -422,9 +429,7 @@ void KLettres::slotChangeTheme(int index)
 void KLettres::slotModeGrownup()
 {
     QPalette pal;
-    QColorGroup cg;
-    cg.setColor( QPalette::Background, Qt::white);
-    //pal.setActive( cg );
+    pal.setColor( QPalette::Background, Qt::white);
     statusBar()->setPalette( pal );
     QFont f_lab( "Serif" , 10);  //font for statusBar
     m_levLabel->setFont(f_lab);
@@ -448,9 +453,7 @@ void KLettres::slotModeGrownup()
 void KLettres::slotModeKid()
 {
     QPalette pal;
-    QColorGroup cg;
-    cg.setColor( QPalette::Background, Qt::white);
-    //pal.setActive( cg );
+    pal.setColor( QPalette::Background, Qt::white);
     statusBar()->setPalette( pal );
     QFont f_lab( "Serif" , 12);  //font for statusBar
     f_lab.setBold(true);
