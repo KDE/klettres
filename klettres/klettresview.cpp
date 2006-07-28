@@ -149,6 +149,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
         m_letterEdit->setText(m_upperLetter);
         QTimer *timer = new QTimer( this );
         connect( timer, SIGNAL(timeout()), this, SLOT(slotTimerDone()) );
+        timer->setSingleShot(true);
         timer->start( m_timer*100);
     }
     else if (m_inputLetter.length() < m_cursorPos)
