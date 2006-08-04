@@ -44,6 +44,7 @@
 #include <kstatusbar.h>
 #include <ktoggleaction.h>
 #include <ktoolbar.h>
+#include <kicon.h>
 
 #include <kglobal.h>
 //Project includes
