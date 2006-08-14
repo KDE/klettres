@@ -39,7 +39,7 @@ install( FILES klettresui.rc  DESTINATION  ${DATA_INSTALL_DIR}/klettres )
 install( FILES klettres.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES klettresrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
 
-kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
+kde4_install_icons( ${ICON_INSTALL_DIR}   )
 
 set(langdir fr en )
 set(sublangdir alpha syllab )
