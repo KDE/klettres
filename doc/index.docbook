@@ -562,7 +562,7 @@ Settings</guilabel> page and the <guilabel>Timer</guilabel> configuration page.<
 
 <para>
 If you would like to add sounds in your own language, it is very easy to do so. Record the alphabet sounds and place them in a folder named 'alpha'. Then record the most current syllables and put them in a folder named 'syllab'.</para> 
-<para>Create a text file <filename>sounds.xml</filename>, preferably using Kate as editor or another editor capable of different encoding. In this file, write all the alphabet sounds and syllable sounds you recorded, like this example for the czech language:</para>
+<para>Create a text file <filename>sounds.xml</filename>, preferably using &Kate; as editor or another editor capable of different encoding. In this file, write all the alphabet sounds and syllable sounds you recorded, like this example for the czech language:</para>
 <programlisting>&lt;klettres&gt;
 &lt;language code="cs"&gt;
     &lt;menuitem&gt;
@@ -578,9 +578,9 @@ If you would like to add sounds in your own language, it is very easy to do so. 
     &lt;/syllables&gt;
   &lt;/language&gt;
 &lt;/klettres&gt;</programlisting>
-<para>Replace "cs" with the two letter code and "Czech" with the name of your language. Write the sound names with the special characters of your language in upper case in utf8.</para>
+<para>Replace "cs" with the two letter code and "Czech" with the name of your language. Write the sound names with the special characters of your language in uppercase in utf8.</para>
 
-<para>Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in upper case on one line.
+<para>Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in uppercase on one line.
 And save both text files with <quote>utf8</quote> encoding (upper right dropbox in &kate; allows that)</para>
 
 <para>The sounds should be in wav or ogg format and long enough for KAudioPlayer to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me.   
