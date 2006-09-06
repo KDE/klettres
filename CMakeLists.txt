@@ -3,26 +3,3 @@ project(klettres)
 add_subdirectory( klettres ) 
 
 
-
-
-########### install files ###############
-
-
-
-
-
-#original Makefile.am contents follow:
-
-######## kdevelop will overwrite this part!!! (begin)##########
-#
-#SUBDIRS = klettres
-#
-#EXTRA_DIST = klettres.kdevprj AUTHORS COPYING ChangeLog INSTALL README TODO klettres.lsm 
-#
-######## kdevelop will overwrite this part!!! (end)############
-## not a GNU package. You can remove this line, if 
-## have all needed files, that a GNU package needs
-#AUTOMAKE_OPTIONS = foreign 
-#
-#
-#include ../admin/Doxyfile.am
