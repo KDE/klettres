@@ -228,7 +228,7 @@ void KLettres::setupActions()
     m_menubarAction->setIcon(KIcon("editclear"));
     m_playAgainAction->setShortcut(Qt::CTRL+Qt::Key_M);
     connect(m_menubarAction, SIGNAL(triggered(bool)), this, SLOT(slotMenubar()));
-    m_menubarAction->setCheckedState(i18n("Hide &Menubar"));
+    m_menubarAction->setCheckedState(KGuiItem(i18n("Hide &Menubar")));
     m_menubarAction->setChecked(true);
     m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
 
