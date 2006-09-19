@@ -562,7 +562,7 @@ Settings</guilabel> page and the <guilabel>Timer</guilabel> configuration page.<
 
 <para>
 If you would like to add sounds in your own language, it is very easy to do so. Record the alphabet sounds and place them in a folder named 'alpha'. Then record the most current syllables and put them in a folder named 'syllab'.</para> 
-<para>Create a text file <filename>sounds.xml</filename>, preferably using Kate as editor or another editor capable of different encoding. In this file, write all the alphabet sounds and syllable sounds you recorded, like this example for the czech language:</para>
+<para>Create a text file <filename>sounds.xml</filename>, preferably using &kate; as editor or another editor capable of different encoding. In this file, write all the alphabet sounds and syllable sounds you recorded, like this example for the czech language:</para>
 <programlisting>&lt;klettres&gt;
 &lt;language code="cs"&gt;
     &lt;menuitem&gt;
@@ -712,7 +712,7 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>peter@peterandlinda.com</email></para></listitem>
 <listitem><para>Port to KConfig XT, coding help: &Waldo.Bastian;
 <email>&Waldo.Bastian.mail;</email></para></listitem>
-<listitem><para>Kids and grownup SVG icons, desert theme: Danny Allen
+<listitem><para>Kids and grownup SVG icons, desert theme: &Danny.Allen;
     <email>dannya40uk@yahoo.co.uk</email></para></listitem>
 <listitem><para>Timer setting widget: Michael Goettsche
     <email>michael.goettsche@kdemail.net</email></para></listitem>
