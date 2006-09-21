@@ -33,8 +33,8 @@ Timer::Timer()
     :QWidget()
 {
     ui_timer.setupUi(this);
-    ui_timer.timeGrownLabel->setText(QString::number(Prefs::grownTimer()) + " " + i18n("tenths of second"));
-    ui_timer.timeKidLabel->setText(QString::number(Prefs::kidTimer()) + " " + i18n("tenths of second"));
+    ui_timer.timeGrownLabel->setText(QString::number(Prefs::grownTimer()) + ' ' + i18n("tenths of second"));
+    ui_timer.timeKidLabel->setText(QString::number(Prefs::kidTimer()) + ' ' + i18n("tenths of second"));
     connect(ui_timer.kcfg_GrownTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
     connect(ui_timer.kcfg_KidTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
 }
@@ -42,8 +42,8 @@ Timer::Timer()
 
 void Timer::sliderValueChanged()
 {
-    ui_timer.timeKidLabel->setText(QString::number(ui_timer.kcfg_KidTimer->value()) + " " + i18n("tenths of second"));
-    ui_timer.timeGrownLabel->setText(QString::number(ui_timer.kcfg_GrownTimer->value()) + " " + i18n("tenths of second"));
+    ui_timer.timeKidLabel->setText(QString::number(ui_timer.kcfg_KidTimer->value()) + ' ' + i18n("tenths of second"));
+    ui_timer.timeGrownLabel->setText(QString::number(ui_timer.kcfg_GrownTimer->value()) + ' ' + i18n("tenths of second"));
 }
 
 
