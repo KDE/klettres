@@ -26,7 +26,7 @@ class KLettresView;
 class KLNewStuff : public KNewStuff
 {
 public:
-    KLNewStuff( KLettresView * );
+    explicit KLNewStuff( KLettresView * );
 
     bool install( const QString &fileName );
     bool createUploadFile( const QString &fileName );

@@ -52,7 +52,7 @@ SoundFactory::~SoundFactory()
 {
 }
 
-void SoundFactory::change(QString currentLanguage)
+void SoundFactory::change(const QString &currentLanguage)
 {
     //go load the sounds for the current language
     bool ok = loadLanguage(m_layoutsDocument, currentLanguage);
@@ -84,7 +84,7 @@ void SoundFactory::loadFailure()
     KMessageBox::error(klettres, i18n("Error while loading the sound names."));
 }
 
-bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, QString currentLanguage)
+bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &currentLanguage)
 {
     QDomNodeList languagesList,
     alphabetList,

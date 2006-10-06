@@ -3,8 +3,7 @@
    mailto:e.bischoff@noos.fr
  ------------------------------------------------------------- */
  /*
- * Copyright (C) 2001 
-   Eric Bischoff
+ * Copyright (C) 2001 Eric Bischoff <e.bischoff@noos.fr>
    2004-2006 Anne-Marie Mahfouf <annma@kde.org>
 
     This program is free software; you can redistribute it and/or
@@ -54,7 +53,7 @@ public:
 	///Call the main instance of the program
 	KLettres *klettres;
 	///Change the language when the user changes the language in the Languages menu
-	void change(QString currentLanguage);
+	void change(const QString &currentLanguage);
 	///Play the sound associated to int soundRef
 	void playSound(int ) ;
 	///Number of sounds corresponding to the current language and level (alphabet or syllables)
@@ -68,7 +67,7 @@ public:
 	* Call that when you read the language from Config and when the language changes
 	* or when the level changes
 	*/
-	bool loadLanguage(QDomDocument &layoutDocument, QString currentLanguage);
+	bool loadLanguage(QDomDocument &layoutDocument, const QString &currentLanguage);
 	///The language document
   	QDomDocument m_layoutsDocument;
 

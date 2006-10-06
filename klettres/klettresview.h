@@ -46,7 +46,7 @@ public:
     /**
      * Default constructor
      */
-    KLettresView(KLettres *parent);
+    explicit KLettresView(KLettres *parent);
 
     /**
      * Destructor
