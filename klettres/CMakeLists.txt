@@ -23,7 +23,7 @@ kde4_add_ui_files(klettres_SRCS
     timerui.ui
     fontsdlg.ui )
 
-kde4_add_kcfg_files(klettres_SRCS prefs.kcfgc )
+kde4_add_kcfg_files(klettres klettres_SRCS prefs.kcfgc )
 
 kde4_add_executable(klettres ${klettres_SRCS})
 
