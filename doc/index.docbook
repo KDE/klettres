@@ -39,8 +39,8 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Ten languages are available at the moment: Czech, Danish, Dutch, English, 
-French, Italian, Luganda, Romanized Hindi, Spanish and Slovak but only 
+Eleven languages are available at the moment: Czech, Danish, Dutch, English, 
+French, Italian, Luganda, Romanized Hindi, Spanish, Slovak and German but only 
 English, French and your language if it is among those are installed by default.
 </para>
 <para>
@@ -90,10 +90,10 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are ten languages available at the moment: Czech, Danish, Dutch,
-English, French, Italian, Luganda, Romanized Hindi, Spanish and Slovak. If your
-&kde; language is Czech, Danish, Dutch, English, French, Italian, Spanish or
-Slovak then your language is taken as default, otherwise French is the default.
+<para>There are eleven languages available at the moment: Czech, Danish, Dutch,
+English, French, Italian, Luganda, Romanized Hindi, Spanish, Slovak and German. If your
+&kde; language is Czech, Danish, Dutch, English, French, Italian, Luganda, Romanized Hindi, Spanish,
+Slovak or German, then your language is taken as default, otherwise French is the default.
 You can easily get any additional available language by using the
 <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New
 Language...</guimenuitem> menu item, provided that your computer is connected to
@@ -155,11 +155,11 @@ and mode is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
 If your &kde; language is set to Czech, Danish, Dutch, English, French, Italian,
-Spanish or Slovak, then this will be the default language the first time you run
-&klettres;. For other languages, French is the default. &klettres; comes with
-French and your default language if among those listed above and you can get
-additional languages via <guimenu>File</guimenu> <guimenuitem>Get Alphabet in New
-Language...</guimenuitem> provided you have an Internet connection.
+Luganda, Romanized Hindi, Spanish, Slovak or German, then this will be the default 
+language the first time you run &klettres;. For other languages, French is the default. 
+&klettres; comes with French and your default language if among those listed above 
+and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get Alphabet 
+in New Language...</guimenuitem> provided you have an Internet connection.
 </para>
 </note>
 <para>
@@ -578,9 +578,9 @@ If you would like to add sounds in your own language, it is very easy to do so. 
     &lt;/syllables&gt;
   &lt;/language&gt;
 &lt;/klettres&gt;</programlisting>
-<para>Replace "cs" with the two letter code and "Czech" with the name of your language. Write the sound names with the special characters of your language in upper case in utf8.</para>
+<para>Replace "cs" with the two letter code and "Czech" with the name of your language. Write the sound names with the special characters of your language in uppercase in utf8.</para>
 
-<para>Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in upper case on one line.
+<para>Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in uppercase on one line.
 And save both text files with <quote>utf8</quote> encoding (upper right dropbox in &kate; allows that)</para>
 
 <para>The sounds should be in wav or ogg format and long enough for KAudioPlayer to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me.   
@@ -613,7 +613,7 @@ path.</para> </answer>
 </question>
 <answer>
 <para>You need to have &arts; support and the &arts; daemon needs to be running.
-Make sure you compiled kdelibs with arts if you compiled &kde;. In any doubt,
+Make sure you compiled kdelibs with &arts; if you compiled &kde;. In any doubt,
 ask your distribution. You can also check if &arts; is running in
 &kcontrolcenter; -&gt; <guilabel>Sound &amp; Multimedia</guilabel> in the <guilabel>Sound
 System</guilabel> tab. There you must make sure that <guilabel>Enable the sound
@@ -700,6 +700,8 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>kharat@sancharnet.in</email></para></listitem>
 <listitem><para>Luganda sounds: John Magoye and Cormac Lynch
 <email>cormaclynch@eircom.net</email></para></listitem>
+<listitem><para>German sounds: Helmut Kriege
+<email>h.kriege@freenet.de</email></para></listitem>
 <listitem><para>Classroom background picture: Renaud Blanchard
 <email>kisukuma@chez.com</email></para> </listitem>
 <listitem><para>Original icons:  &Primoz.Anzur;
