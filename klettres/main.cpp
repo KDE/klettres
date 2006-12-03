@@ -68,6 +68,8 @@ int main(int argc, char **argv)
                     I18N_NOOP("Romanized Hindi sounds"), "kharat@sancharnet.in");
     about.addCredit("John Magoye and Cormac Lynch",
                      I18N_NOOP("Luganda sounds"), "cormaclynch@eircom.net");
+    about.addCredit("Lisa Kriege",
+                     I18N_NOOP("British English sounds"), "h.kriege@freenet.de");
     about.addCredit("Primoz Anzur",
                     I18N_NOOP("Icons"), "zerokode@yahoo.com");
     about.addCredit("Renaud Blanchard",
