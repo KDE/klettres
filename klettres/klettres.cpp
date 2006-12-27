@@ -39,7 +39,7 @@
 #include <kmessagebox.h>
 #include <knuminput.h>
 #include <kselectaction.h>
-#include <kstdaction.h>
+#include <kstandardaction.h>
 #include <kstandarddirs.h>
 #include <kstatusbar.h>
 #include <ktoggleaction.h>
@@ -222,7 +222,7 @@ void KLettres::setupActions()
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
     connect(m_playAgainAction, SIGNAL(triggered(bool)), m_view, SLOT(slotPlayAgain()));
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
-    KStdAction::quit(kapp, SLOT(quit()), actionCollection());
+    KStandardAction::quit(kapp, SLOT(quit()), actionCollection());
 
     m_menubarAction = new KToggleAction(i18n("Show &Menubar"),  actionCollection(), "menubar");
     m_menubarAction->setIcon(KIcon("editclear"));
@@ -269,7 +269,7 @@ void KLettres::setupActions()
     connect(m_languageAction, SIGNAL(triggered(int)), this, SLOT(slotChangeLanguage(int)));
     connect(m_themeAction, SIGNAL(triggered(int)), this, SLOT(slotChangeTheme(int)));
 
-    KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
+    KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 
     setupGUI();
 }
