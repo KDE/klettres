@@ -30,6 +30,7 @@
 #include <QTextStream>
 //KDE includes
 #include <kaction.h>
+#include <kactioncollection.h>
 #include <kapplication.h>
 #include <kcombobox.h>
 #include <kconfigdialog.h>
@@ -206,17 +207,20 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 
 void KLettres::setupActions()
 {
-    KAction *m_newAction = new KAction(i18n("New Sound"), actionCollection(), "play_new");
+    QAction *m_newAction = actionCollection()->addAction("play_new");
+    m_newAction->setText(i18n("New Sound"));
     m_newAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_N));
     m_newAction->setIcon(KIcon("file_new"));
     connect(m_newAction, SIGNAL(triggered(bool)), m_view, SLOT(game()));
     m_newAction->setToolTip(i18n("Play a new sound"));
     m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound."));
 
-    KAction *m_stuffAction = new KAction(i18n("Get Alphabet in New Language..."), actionCollection(), "downloadnewstuff");
+    QAction *m_stuffAction = actionCollection()->addAction("downloadnewstuff");
+    m_stuffAction->setText(i18n("Get Alphabet in New Language..."));
     connect(m_stuffAction, SIGNAL(triggered(bool)),  this, SLOT( slotDownloadNewStuff() ));
 
-    KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),  actionCollection(), "play_again");
+    QAction *m_playAgainAction = actionCollection()->addAction("play_again");
+    m_playAgainAction->setText(i18n("Replay Sound"));
     m_playAgainAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_P));
     m_playAgainAction->setIcon(KIcon("player_play"));
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
@@ -224,7 +228,8 @@ void KLettres::setupActions()
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
     KStandardAction::quit(kapp, SLOT(quit()), actionCollection());
 
-    m_menubarAction = new KToggleAction(i18n("Show &Menubar"),  actionCollection(), "menubar");
+    m_menubarAction = actionCollection()->add<KToggleAction>("menubar");
+    m_menubarAction->setText(i18n("Show &Menubar"));
     m_menubarAction->setIcon(KIcon("editclear"));
     m_playAgainAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_M));
     connect(m_menubarAction, SIGNAL(triggered(bool)), this, SLOT(slotMenubar()));
@@ -232,11 +237,13 @@ void KLettres::setupActions()
     m_menubarAction->setChecked(true);
     m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
 
-    m_levelAction = new KSelectAction(i18n("L&evel"), actionCollection(), "levels");
+    m_levelAction = actionCollection()->add<KSelectAction>("levels");
+    m_levelAction->setText(i18n("L&evel"));
     m_levelAction->setToolTip(i18n("Select the level"));
     m_levelAction->setWhatsThis(i18n("You can select the level: level 1 displays a letter and you hear it; level 2 does not display the letter, you only hear it; level 3 displays a syllable and you hear it; level 4 does not display the syllable, you only hear it."));
 
-    m_languageAction = new KSelectAction(i18n("&Language"), actionCollection(), "languages");
+    m_languageAction = actionCollection()->add<KSelectAction>("languages");
+    m_languageAction->setText(i18n("&Language"));
     m_languageAction->setItems(m_languageNames);
 
     m_levelsNames.append(i18n( "Level 1" ));
@@ -245,7 +252,8 @@ void KLettres::setupActions()
     m_levelsNames.append(i18n( "Level 4" ));
     m_levelAction->setItems(m_levelsNames);
 
-    m_themeAction =  new KSelectAction(i18n("Themes"), actionCollection(), "looks");
+    m_themeAction = actionCollection()->add<KSelectAction>("looks");
+    m_themeAction->setText(i18n("Themes"));
     m_themesNames.append(i18n("Classroom"));
     m_themesNames.append(i18n("Arctic"));
     m_themesNames.append(i18n("Desert"));
@@ -253,13 +261,15 @@ void KLettres::setupActions()
     m_themeAction->setToolTip(i18n("Select the theme"));
     m_themeAction->setWhatsThis(i18n("Here you can change the theme for KLettres. A theme consists in the background picture and the font color for the letter displayed."));
 
-    m_kidAction = new KToggleAction(i18n("Mode Kid"), actionCollection(), "mode_kid");
+    m_kidAction = actionCollection()->add<KToggleAction>("mode_kid");
+    m_kidAction->setText(i18n("Mode Kid"));
     m_kidAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_K));
     m_kidAction->setIcon(KIcon("klettres_kids"));
     connect(m_kidAction, SIGNAL(triggered(bool)), this, SLOT(slotModeKid()));
     m_kidAction->setWhatsThis(i18n("If you are in the Grown-up mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
 
-    m_grownupAction = new KToggleAction(i18n("Mode Grown-up"), actionCollection(), "mode_grownup");
+    m_grownupAction = actionCollection()->add<KToggleAction>("mode_grownup");
+    m_grownupAction->setText(i18n("Mode Grown-up"));
     m_grownupAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_G));
     m_grownupAction->setIcon(KIcon("klettres_grownup"));
     connect(m_grownupAction, SIGNAL(triggered(bool)), this, SLOT(slotModeGrownup()));
