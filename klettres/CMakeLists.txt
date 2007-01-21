@@ -1,7 +1,4 @@
 
-remove_definitions(-DQT3_SUPPORT_WARNINGS)
-remove_definitions(-DQT3_SUPPORT)
-
 add_subdirectory( pics ) 
 add_subdirectory( data ) 
 add_subdirectory( icons ) 
