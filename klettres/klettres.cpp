@@ -135,7 +135,7 @@ void KLettres::findLanguages()
 //TODO TEST in FRENCH
     m_languages.sort();
     //write the present languages in config so they cannot be downloaded
-    KConfig *config=KGlobal::config();
+    KSharedConfig::Ptr config = KGlobal::config();
     config->setGroup("KNewStuffStatus");
     for (int i=0;  i<m_languages.count(); i++)
     {
