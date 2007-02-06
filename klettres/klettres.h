@@ -22,10 +22,6 @@
 #ifndef KLETTRES_H
 #define KLETTRES_H
 
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
-
 #include <kmainwindow.h>
 
 #include "klettresview.h"
