@@ -69,7 +69,7 @@ const int ID_MENUBARB  = 102;
 KLettres::KLettres()
         : KMainWindow( 0)
 {
-    setObjectName( "KLettres" );
+    setObjectName( QLatin1String("KLettres") );
     mNewStuff = 0;
     m_view = new KLettresView(this);
     // tell the KMainWindow that this is indeed the main widget
@@ -523,13 +523,16 @@ void KLettres::loadLangToolBar()
 
 void KLettres::slotPasteChar()
 {
-#ifdef __GNUC__
-#warning "kde4: port it";
-#endif
-#if 0
-        QToolButton *charBut = (QToolButton* ) sender();
-        m_view->m_letterEdit->insert(allData[charBut->id()]);
-#endif
+    QAction *act = qobject_cast<QAction*>(sender());
+    if (!act)
+        return;
+
+    bool ok = true;
+    int id = act->data().toInt(&ok);
+    if (!ok || id < 0 || id >= allData.count())
+        return;
+
+    m_view->enterLetter(allData.at(id));
 }
 
 QString KLettres::charIcon(const QChar & c)
