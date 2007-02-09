@@ -489,7 +489,7 @@ void KLettres::slotModeKid()
 void KLettres::loadLangToolBar()
 {
     m_secondToolbar->clear();
-    if (m_languages[Prefs::languageNumber()]== "cs" || m_languages[Prefs::languageNumber()]== "da" || m_languages[Prefs::languageNumber()]== "sk" || m_languages[Prefs::languageNumber()]== "es" || m_languages[Prefs::languageNumber()]== "de")//Dutch, English, French and Italian have no special characters
+    if (m_languages[Prefs::languageNumber()]== "cs" || m_languages[Prefs::languageNumber()]== "da" || m_languages[Prefs::languageNumber()]== "sk" || m_languages[Prefs::languageNumber()]== "es" || m_languages[Prefs::languageNumber()]== "de" || m_languages[Prefs::languageNumber()]== "nds")//Dutch, English, French and Italian have no special characters
     {
         allData.clear();
         QString myString=QString("klettres/%1.txt").arg(m_languages[Prefs::languageNumber()]);
