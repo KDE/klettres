@@ -1,9 +1,4 @@
 
-add_subdirectory( pics ) 
-add_subdirectory( data ) 
-add_subdirectory( icons ) 
-
-
 ########### next target ###############
 
 set(klettres_SRCS 
@@ -37,15 +32,3 @@ install( FILES klettres.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES klettresrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
 
 kde4_install_icons( ${ICON_INSTALL_DIR}   )
-
-set(langdir fr en )
-set(sublangdir alpha syllab )
-foreach (_langcurrentdir ${langdir})
-	FILE(GLOB _xmlfile "${_langcurrentdir}/*.xml" )
-	install(FILES ${_xmlfile} DESTINATION ${DATA_INSTALL_DIR}/klettres/${_langcurrentdir})
-	foreach(_sublangcurrentdir ${sublangdir})
-		FILE(GLOB _oggfile "${_langcurrentdir}/${_sublangcurrentdir}/*.ogg" )
-		install(FILES ${_oggfile} DESTINATION ${DATA_INSTALL_DIR}/klettres/${_langcurrentdir}/${_sublangcurrentdir})
-	endforeach(_sublangcurrentdir ${sublangdir} )
-endforeach(_langcurrentdir ${langdir})
-

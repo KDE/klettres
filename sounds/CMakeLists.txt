@@ -1,0 +1,11 @@
+set(langdir fr en )
+set(sublangdir alpha syllab )
+foreach (_langcurrentdir ${langdir})
+    file(GLOB _xmlfile "${_langcurrentdir}/*.xml" )
+    install(FILES ${_xmlfile} DESTINATION ${DATA_INSTALL_DIR}/klettres/${_langcurrentdir})
+    foreach(_sublangcurrentdir ${sublangdir})
+        file(GLOB _oggfile "${_langcurrentdir}/${_sublangcurrentdir}/*.ogg" )
+        install(FILES ${_oggfile} DESTINATION ${DATA_INSTALL_DIR}/klettres/${_langcurrentdir}/${_sublangcurrentdir})
+    endforeach(_sublangcurrentdir ${sublangdir} )
+endforeach(_langcurrentdir ${langdir})
+
