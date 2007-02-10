@@ -363,13 +363,13 @@ void KLettres::slotMenubar()
     case false:
         m_menubarAction->setChecked(false);
         m_menubarAction->setText(i18n("Show Menubar"));
-	m_menubarAction->setToolTip(i18n("Show Menubar"));
+        m_menubarAction->setToolTip(i18n("Show Menubar"));
         menuBar()->hide();
         break;
     case true:
         m_menubarAction->setChecked(true);
-	m_menubarAction->setText(i18n("Hide Menubar"));
-	m_menubarAction->setToolTip(i18n("Hide Menubar"));
+        m_menubarAction->setText(i18n("Hide Menubar"));
+        m_menubarAction->setToolTip(i18n("Hide Menubar"));
         menuBar()->show();
         break;
     }

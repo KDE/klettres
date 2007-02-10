@@ -61,8 +61,11 @@ public:
     void viewThemeDesert();
     /// Enter a letter into the input widget.
     void  enterLetter(QString letter) { m_letterEdit->setText(letter); }
+
     ///The timer value i.e. the time for displaying the letters/syllables
     int m_timer;
+    ///The index to the random sequence
+    int randomInt;
     ///A Klettres object
     KLettres *m_klettres;
     ///The line where the user enters his/her input

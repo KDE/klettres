@@ -70,11 +70,14 @@ public:
 	bool loadLanguage(QDomDocument &layoutDocument, const QString &currentLanguage);
 	///The language document
   	QDomDocument m_layoutsDocument;
+    ///The random sequence of integers
+    QList<int> randomList;
 
 private:
 	///Report a load failure
 	void loadFailure();
-
+    ///Shuffle the index in random to get random sounds. The sequence of random sounds will take 1 random sound after another, then restart when all sounds have been played
+    void setSoundSequence();
 	Phonon::AudioPlayer *m_player;
 };
 

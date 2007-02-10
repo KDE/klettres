@@ -24,6 +24,7 @@
 #include <kmessagebox.h>
 #include <klocale.h>
 #include <kdebug.h>
+#include <krandomsequence.h>
 #include <kstandarddirs.h>
 #include <kurl.h>
 #include <phonon/audioplayer.h>
@@ -46,6 +47,7 @@ SoundFactory::SoundFactory(KLettres *parent, const char *)
     bool ok = klettres->loadLayout(m_layoutsDocument);
     if (ok) change(Prefs::language());
     if (!ok) loadFailure();
+        else setSoundSequence();
 }
 
 SoundFactory::~SoundFactory()
@@ -152,3 +154,18 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     return true;
 }
 
+void SoundFactory::setSoundSequence()
+{
+    //If there are no sounds loaded
+    if (sounds ==0)
+        return;
+ 
+    // Seed the random number generator
+    KRandomSequence randomSequence;
+
+    //get the number of sounds then shuffle it: each number will be taken once then the sequence will come back
+    for (uint j = 0; j < sounds; j++) 
+        randomList.append(j);
+    
+    randomSequence.randomize(randomList);
+}

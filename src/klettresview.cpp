@@ -28,7 +28,6 @@
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kdebug.h>
-#include <krandom.h>
 //Project headers
 #include "klettres.h"
 #include "klettresview.h"
@@ -53,6 +52,8 @@ KLettresView::KLettresView(KLettres *parent)
     m_kidPicture.load(KStandardDirs::locate("data","klettres/pics/klettres_kids.jpeg"));
     m_desertPicture.load(KStandardDirs::locate("data","klettres/pics/klettres_desert.png"));
     setAutoFillBackground(true);
+
+    randomInt = 0;
 }
 
 KLettresView::~KLettresView()
@@ -61,25 +62,8 @@ KLettresView::~KLettresView()
 
 void KLettresView::chooseSound()
 {
-    //If there are no sounds loaded
-    if (m_klettres->soundFactory->sounds ==0)
-        return;
-    //get a random sound
-    m_random=KRandom::random()%(m_klettres->soundFactory->sounds);
-    //have not 2 same sounds consecutively
-    int temp = 0;
-#ifdef __GNUC__
-#warning this is dead code!
-#endif	
-    if (temp<0)
-        temp=m_random;
-    else
-    {
-        while (m_random==temp)
-            m_random=KRandom::random()%(m_klettres->soundFactory->sounds);
-        temp=m_random;
-    }
-
+    //get the next random sound
+    m_random=m_klettres->soundFactory->randomList[randomInt%m_klettres->soundFactory->sounds];
     //The sound is played
     kDebug() << "m_random " << m_random << endl;
     m_klettres->soundFactory->playSound(m_random);
@@ -133,6 +117,7 @@ void KLettresView::game()
     m_letterEdit->setCursorPosition(0);
     m_letterEdit->setFocus();
     chooseSound();
+    randomInt++;
     QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
 }
 
