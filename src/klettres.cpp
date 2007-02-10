@@ -393,6 +393,7 @@ void KLettres::slotChangeLevel(int newLevel)
     //this is duplicated in changeLanguage()
     soundFactory->change(Prefs::language());
     //update game effectively
+    m_view->randomInt = 0;
     m_view->game();
 }
 
@@ -417,6 +418,7 @@ void KLettres::slotChangeLanguage(int newLanguage)
     bool ok = loadLayout(soundFactory->m_layoutsDocument);
     if (ok)
         soundFactory->change(Prefs::language());
+    m_view->randomInt = 0;
     m_view->game();
 }
 
