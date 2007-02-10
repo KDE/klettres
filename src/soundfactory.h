@@ -4,7 +4,7 @@
  ------------------------------------------------------------- */
  /*
  * Copyright (C) 2001 Eric Bischoff <e.bischoff@noos.fr>
-   2004-2006 Anne-Marie Mahfouf <annma@kde.org>
+   2004-2007 Anne-Marie Mahfouf <annma@kde.org>
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of version 2 of the GNU General Public
@@ -38,7 +38,7 @@ namespace Phonon
  *
  * @short Sounds factory class: find and play the right sound.
  * @author Anne-Marie Mahfouf <annma@kde.org>
- * @version 1.1
+ * @version 1.80
  */
  
 class SoundFactory : public QObject

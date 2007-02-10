@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2004-2005 by Anne-Marie Mahfouf                              *
+ *   Copyright (C) 2004-2007 by Anne-Marie Mahfouf                              *
  *   annemarie.mahfouf@free.fr                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -24,5 +24,5 @@
  * @version 1.1
  */
  #ifndef KLETTRES_VERSION
-#define KLETTRES_VERSION "1.5"
+#define KLETTRES_VERSION "1.80"
 #endif

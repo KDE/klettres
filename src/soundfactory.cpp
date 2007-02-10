@@ -4,7 +4,7 @@
  ------------------------------------------------------------- */
 /*
  * Copyright (C) 2001 Eric Bischoff
-   2004-2006 Anne-Marie Mahfouf <annma@kde.org>
+   2004-2007 Anne-Marie Mahfouf <annma@kde.org>
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of version 2 of the GNU General Public

@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2001-2006 by Anne-Marie Mahfouf                              *
+ *   Copyright (C) 2001-2007 by Anne-Marie Mahfouf                              *
  *   annemarie.mahfouf@free.fr                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -54,6 +54,7 @@
 #include "ui_fontsdlg.h"
 #include "timer.h"
 #include "prefs.h"
+#include "langutils.h"
 
 class fontsdlg : public QDialog, public Ui::fontsdlg
 {
@@ -75,6 +76,9 @@ KLettres::KLettres()
     // tell the KMainWindow that this is indeed the main widget
     setCentralWidget(m_view);
     //Scan for existing languages -> m_languages
+    LangUtils langUtils;
+    m_languages = langUtils.getLanguages();
+    kDebug() << "m_languages  " << m_languages << endl;
     findLanguages();
     Prefs::setLanguage(Prefs::defaultLanguage());
     Prefs::writeConfig();
@@ -98,51 +102,10 @@ KLettres::~KLettres()
 
 void KLettres::findLanguages()
 {
-    m_languages.clear();
     m_languageNames.clear();
     //m_sortedNames.clear();
     //the program scans in khangman/data/ to see what languages data is found
-    QStringList mdirs = KGlobal::dirs()->findDirs("data", "klettres/");
-    if (mdirs.isEmpty()) return;
-    for (QStringList::Iterator it =mdirs.begin(); it !=mdirs.end(); ++it ) {
-        QDir dir(*it);
-        m_languages += dir.entryList(QDir::Dirs, QDir::Name);
-        m_languages.removeAll(".");
-        m_languages.removeAll("..");
-    }
-    m_languages.removeAll("pics");
-    m_languages.removeAll("data");
-    m_languages.removeAll("icons");
-    m_languages.sort();
-    if (m_languages.isEmpty()) return;
-    Prefs::setLanguages(m_languages);
-    Prefs::writeConfig();
-    //find duplicated entries in KDEDIR and KDEHOME
-    QStringList temp_languages;
-    for (int i=0;  i<m_languages.count(); i++)
-    {
-        if (m_languages.count(m_languages[i])>1) {
-            temp_languages.append(m_languages[i]);
-            m_languages.removeAll(m_languages[i]);
-        }
-	for (int i=0;  i<temp_languages.count(); i++)
-	{
-		if (i%2==0)
-		m_languages.append(temp_languages[i]);//append 1 of the 2 instances found
-	}
-    temp_languages.clear();
-    }
-//TODO TEST in FRENCH
-    m_languages.sort();
-    //write the present languages in config so they cannot be downloaded
-    KSharedConfig::Ptr config = KGlobal::config();
-    config->setGroup("KNewStuffStatus");
-    for (int i=0;  i<m_languages.count(); i++)
-    {
-        QString tmp = m_languages[i];
-        if (!config->readEntry(tmp, QString()).isEmpty())
-            config->writeEntry(tmp, QDate::currentDate().toString());
-    }
+    
     //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
     //to find the name of the country
     //corresponding to the code and the language the user set
@@ -491,7 +454,8 @@ void KLettres::slotModeKid()
 void KLettres::loadLangToolBar()
 {
     m_secondToolbar->clear();
-    if (m_languages[Prefs::languageNumber()]== "cs" || m_languages[Prefs::languageNumber()]== "da" || m_languages[Prefs::languageNumber()]== "sk" || m_languages[Prefs::languageNumber()]== "es" || m_languages[Prefs::languageNumber()]== "de" || m_languages[Prefs::languageNumber()]== "nds")//Dutch, English, French and Italian have no special characters
+   QString lang = m_languages[Prefs::languageNumber()];
+    if (LangUtils::hasSpecialChars(lang))//Dutch, English, French and Italian have no special characters
     {
         allData.clear();
         QString myString=QString("klettres/%1.txt").arg(m_languages[Prefs::languageNumber()]);

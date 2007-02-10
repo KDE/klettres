@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2001-2006 by Anne-Marie Mahfouf                              *
+ *   Copyright (C) 2001-2007 by Anne-Marie Mahfouf                              *
  *   annemarie.mahfouf@free.fr                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -37,7 +37,7 @@ class KLNewStuff;
 /**
  * @short Application Main Window
  * @author Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>
- * @version 1.4
+ * @version 1.80
  */
 class KLettres : public KMainWindow
 {

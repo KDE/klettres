@@ -7,6 +7,7 @@ set(klettres_SRCS
    main.cpp 
    klettresview.cpp 
    soundfactory.cpp 
+   langutils.cpp
    timer.cpp )
 
 kde4_automoc(${klettres_SRCS})

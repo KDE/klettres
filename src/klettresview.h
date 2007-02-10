@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2001-2006 by Anne-Marie Mahfouf                              *
+ *   Copyright (C) 2001-2007 by Anne-Marie Mahfouf                              *
  *   annemarie.mahfouf@free.fr                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,7 +35,7 @@ class KLettres;
  *
  * @short KLettres View class
  * @author Anne-Marie Mahfouf <annma@kde.org>
- * @version 1.1
+ * @version 1.80
  */
 
 
