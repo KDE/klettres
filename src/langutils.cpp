@@ -1,6 +1,6 @@
 /*
    Copyright (C) 2007      Pino Toscano <pino@kde.org>
-                                        Anne-Marie Mahfouf <annma@kde.org>     
+                                        Anne-Marie Mahfouf <annma@kde.org>
     This program is free software; you can redistribute it and/or
     modify it under the terms of version 2 of the GNU General Public
     License as published by the Free Software Foundation.
@@ -27,11 +27,11 @@
 
 bool LangUtils::hasSpecialChars(const QString& lang)
 {
-    if (lang== "cs" 
-        || lang== "da" 
-        || lang== "sk" 
-        || lang== "es" 
-        || lang== "de" 
+    if (lang== "cs"
+        || lang== "da"
+        || lang== "sk"
+        || lang== "es"
+        || lang== "de"
         || lang== "nds")
         return true;
     return false;
@@ -75,13 +75,12 @@ QStringList LangUtils::getLanguages()
 //TODO TEST in FRENCH
     m_languages.sort();
     //write the present languages in config so they cannot be downloaded
-    KSharedConfig::Ptr config = KGlobal::config();
-    config->setGroup("KNewStuffStatus");
+    KConfigGroup config(KGlobal::config(), "KNewStuffStatus");
     for (int i=0;  i<m_languages.count(); i++)
     {
         QString tmp = m_languages[i];
-        if (!config->readEntry(tmp, QString()).isEmpty())
-            config->writeEntry(tmp, QDate::currentDate().toString());
+        if (!config.readEntry(tmp, QString()).isEmpty())
+            config.writeEntry(tmp, QDate::currentDate().toString());
     }
     kDebug() <<m_languages << endl;
     return m_languages;
