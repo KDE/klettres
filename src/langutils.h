@@ -25,7 +25,7 @@ class LangUtils
 {
 public:
     static bool hasSpecialChars(const QString& lang);
-    QStringList getLanguages();
+    static QStringList getLanguages();
 
     //QStringList m_languages;
 };
