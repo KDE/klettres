@@ -57,7 +57,7 @@
 #include "langutils.h"
 
 class fontsdlg : public QDialog, public Ui::fontsdlg
-{
+{    
     public:
         fontsdlg( QWidget * parent ) : QDialog(parent)
         { setupUi(this); }
@@ -76,8 +76,7 @@ KLettres::KLettres()
     // tell the KMainWindow that this is indeed the main widget
     setCentralWidget(m_view);
     //Scan for existing languages -> m_languages
-    LangUtils langUtils;
-    m_languages = langUtils.getLanguages();
+    m_languages = LangUtils::getLanguages();
     kDebug() << "m_languages  " << m_languages << endl;
     findLanguages();
     Prefs::setLanguage(Prefs::defaultLanguage());
@@ -277,6 +276,7 @@ void KLettres::optionsPreferences()
     Timer *m_timer = new Timer();
     dialog->addPage(m_timer, i18n("Timer"), "clock");
     connect(dialog, SIGNAL(settingsChanged( const QString &)), this, SLOT(slotUpdateSettings()));
+    dialog->setAttribute( Qt::WA_DeleteOnClose );
     dialog->show();
 }
 
