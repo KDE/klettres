@@ -54,37 +54,40 @@ QStringList LangUtils::getLanguages()
     m_languages.removeAll("data");
     m_languages.removeAll("icons");
     m_languages.sort();
-    //if (m_languages.isEmpty()) return;
-    Prefs::setLanguages(m_languages);
-    Prefs::writeConfig();
+
+    //Prefs::setLanguages(m_languages);
+    //Prefs::writeConfig();
     //find duplicated entries in KDEDIR and KDEHOME
     QStringList temp_languages;
-    for (int i=0;  i<m_languages.count(); i++)
-    {
-        if (m_languages.count(m_languages[i])>1) {
+    for (int i=0;  i<m_languages.count(); i++)  {
+        if (m_languages.count(m_languages[i])>1)  {
             temp_languages.append(m_languages[i]);
             m_languages.removeAll(m_languages[i]);
         }
-    for (int i=0;  i<temp_languages.count(); i++)
-    {
-        if (i%2==0)
-        m_languages.append(temp_languages[i]);//append 1 of the 2 instances found
+        for (int i=0;  i<temp_languages.count(); i++)  {
+            if (i%2==0)
+            m_languages.append(temp_languages[i]);//append 1 of the 2 instances found
+        }
+        temp_languages.clear();
     }
-    temp_languages.clear();
-    }
-//TODO TEST in FRENCH
+    //TODO TEST in FRENCH
     m_languages.sort();
+    kDebug() <<m_languages << endl;
+    return m_languages;
+}
+
+void LangUtils::writeLangConfig()
+{
     //write the present languages in config so they cannot be downloaded
     KSharedConfig::Ptr config = KGlobal::config();
     config->setGroup("KNewStuffStatus");
-    for (int i=0;  i<m_languages.count(); i++)
-    {
+    QStringList m_languages = getLanguages();
+    for (int i=0;  i<m_languages.count(); i++)  {
         QString tmp = m_languages[i];
         if (!config->readEntry(tmp, QString()).isEmpty())
             config->writeEntry(tmp, QDate::currentDate().toString());
     }
-    kDebug() <<m_languages << endl;
-    return m_languages;
+    config->sync();
 }
 
 
