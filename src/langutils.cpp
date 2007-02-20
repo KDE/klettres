@@ -86,7 +86,7 @@ void LangUtils::writeLangConfig()
         if (!config.readEntry(tmp, QString()).isEmpty())
             config.writeEntry(tmp, QDate::currentDate().toString());
     }
-    config->sync();
+    config.sync();
 }
 
 
