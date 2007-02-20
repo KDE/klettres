@@ -117,8 +117,8 @@ void KLettres::findLanguages()
             m_languageNames.append(i18n("Luganda"));
         else
         {
-            entry.setGroup(*it);
-            m_languageNames.append(entry.readEntry("Name"));
+            KConfigGroup group = entry.group(*it);
+            m_languageNames.append(group.readEntry("Name"));
         }
     }
     //never sort m_languageNames as it's m_languages translated
