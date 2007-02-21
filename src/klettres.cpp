@@ -129,14 +129,16 @@ QString Prefs::defaultLanguage()
 {
     //see what is the user language for KDE
     QStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
-    if (!defaultLanguages.isEmpty()) {
-        //scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
-        int i = Prefs::self()->m_languages.indexOf(defaultLanguages[0]);
-        if (i<1)
-            return "en";
-        else
-            return defaultLanguages[0];
-    }
+	if (!defaultLanguages.isEmpty()) {
+	//scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
+	int i = Prefs::self()->m_languages.indexOf(defaultLanguages[0]);
+	if (Prefs::self()->m_languages.contains(Prefs::language()))
+		return Prefs::language(); //the last language played
+	else if (i<1)
+		return "en"; //if no other
+	else
+		return Prefs::self()->m_languages[i]; //KDE default if exists
+	}
     return QString();
 }
 
