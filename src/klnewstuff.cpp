@@ -20,7 +20,7 @@
 #include <ktar.h>
 #include <qdir.h>
 #include <kaction.h>
-#include <kapplication.h>
+#include <kcomponentdata.h>
 #include <kselectaction.h>
 #include <kstandarddirs.h>
 #include "klnewstuff.h"

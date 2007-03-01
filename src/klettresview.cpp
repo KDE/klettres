@@ -24,7 +24,6 @@
 #include <QWhatsThis>
 #include <QPainter>
 
-#include <kapplication.h>
 #include <klocale.h>
 #include <kstandarddirs.h>
 #include <kdebug.h>
