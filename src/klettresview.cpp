@@ -20,7 +20,6 @@
 
 #include <QLabel>
 #include <QTimer>
-#include <QToolTip>
 #include <QPainter>
 
 #include <klocale.h>

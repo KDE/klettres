@@ -25,7 +25,6 @@
 #include <QLabel>
 #include <QPainter>
 #include <QString>
-#include <QToolTip>
 #include <QTextStream>
 //KDE includes
 #include <kaction.h>
