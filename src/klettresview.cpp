@@ -21,7 +21,6 @@
 #include <QLabel>
 #include <QTimer>
 #include <QToolTip>
-#include <QWhatsThis>
 #include <QPainter>
 
 #include <klocale.h>
