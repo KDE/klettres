@@ -44,10 +44,10 @@
 #include <ktoggleaction.h>
 #include <ktoolbar.h>
 #include <kicon.h>
+#include <knewstuff2/engine.h>
 
 #include <kglobal.h>
 //Project includes
-#include "klnewstuff.h"
 #include "klettres.h"
 #include "ui_fontsdlg.h"
 #include "timer.h"
@@ -315,9 +315,7 @@ void KLettres::loadSettings()
 
 void KLettres::slotDownloadNewStuff()
 {
-    if ( !mNewStuff )
-        mNewStuff = new KLNewStuff( m_view );
-    mNewStuff->download();
+    KNS::Entry::List entries = KNS::Engine::download();
 }
 
 void KLettres::slotMenubar()
