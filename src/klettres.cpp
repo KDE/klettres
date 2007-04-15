@@ -261,7 +261,7 @@ void KLettres::setupToolbars()
 {
     //toolbar for special characters
     m_secondToolbar = toolBar("secondToolbar");
-	addToolBar ( Qt::BottomToolBarArea, m_secondToolbar);
+    addToolBar ( Qt::BottomToolBarArea, m_secondToolbar);
 }
 
 void KLettres::optionsPreferences()

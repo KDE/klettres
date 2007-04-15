@@ -21,11 +21,11 @@
 #ifndef KLETTRESVIEW_H
 #define KLETTRESVIEW_H
 
-#include <QWidget>
-#include <QPalette>
-#include <QPixmap>
 #include <klineedit.h>
 
+class QWidget;
+class QPalette;
+class QPixmap;
 class QLabel;
 class KLettres;
 
