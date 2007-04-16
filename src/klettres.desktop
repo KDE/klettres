@@ -7,6 +7,7 @@ Icon=klettres
 DocPath=klettres/index.html
 Comment=a KDE program to learn the alphabet
 Comment[el]=Μία εφαρμογή του KDE για την εκμάθηση του αλφάβητου
+Comment[sv]=Ett KDE program för att lära sig alfabetet
 Comment[x-test]=xxa KDE program to learn the alphabetxx
 Terminal=false
 Name=KLettres
