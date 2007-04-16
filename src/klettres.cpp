@@ -66,12 +66,12 @@ const int ID_GROWNB    = 101;
 const int ID_MENUBARB  = 102;
 
 KLettres::KLettres()
-        : KMainWindow( 0)
+        : KXmlGuiWindow( 0)
 {
     setObjectName( QLatin1String("KLettres") );
     mNewStuff = 0;
     m_view = new KLettresView(this);
-    // tell the KMainWindow that this is indeed the main widget
+    // tell the KXmlGuiWindow that this is indeed the main widget
     setCentralWidget(m_view);
     //Scan for existing languages -> m_languages
     m_languages = LangUtils::getLanguages();

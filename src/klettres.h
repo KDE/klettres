@@ -22,7 +22,7 @@
 #ifndef KLETTRES_H
 #define KLETTRES_H
 
-#include <kmainwindow.h>
+#include <kxmlguiwindow.h>
 
 #include "klettresview.h"
 #include "soundfactory.h"
@@ -39,7 +39,7 @@ class KLNewStuff;
  * @author Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>
  * @version 1.80
  */
-class KLettres : public KMainWindow
+class KLettres : public KXmlGuiWindow
 {
     Q_OBJECT
 public:
