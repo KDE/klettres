@@ -24,8 +24,8 @@
 
 #include <kaboutdata.h>
 #include <kcmdlineargs.h>
-#include <kapplication.h>
 #include <klocale.h>
+#include <kapplication.h>
 #include "klettres.h"
 #include "version.h"
 

@@ -29,7 +29,6 @@
 //KDE includes
 #include <kaction.h>
 #include <kactioncollection.h>
-#include <kapplication.h>
 #include <kcombobox.h>
 #include <kconfigdialog.h>
 #include <kdebug.h>
@@ -45,6 +44,7 @@
 #include <ktoolbar.h>
 #include <kicon.h>
 #include <knewstuff2/engine.h>
+#include <kapplication.h>
 
 #include <kglobal.h>
 //Project includes
@@ -152,7 +152,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
                              "$KDEDIR/share/apps/klettres/\n\n"
                              "Please install this file and start KLettres again.\n\n");
         KMessageBox::information( this, mString,"KLettres - Error" );
-        kapp->quit();//exit(1);
+        qApp->quit();//exit(1);
     }
     if (!layoutFile.open(QIODevice::ReadOnly))
         return false;
@@ -466,7 +466,7 @@ void KLettres::loadLangToolBar()
                                     "please check your installation.", m_languages[Prefs::languageNumber()]);
             KMessageBox::sorry( this, mString,
                                     i18n("Error") );
-            kapp->quit();
+            qApp->quit();
         }
         update();
         //we open the file and store info into the stream...
