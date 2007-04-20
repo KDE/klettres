@@ -56,7 +56,7 @@ public:
 
     virtual QColor letterColor() const
     {
-        return QColor(Qt::black); 
+        return QColor(215, 215, 215); 
     }
 
 };

@@ -46,50 +46,46 @@ static KCmdLineOptions options[] =
 int main(int argc, char **argv)
 {
     KAboutData about("klettres", I18N_NOOP("KLettres"), KLETTRES_VERSION, description,
-                     KAboutData::License_GPL, "(C) 2001-2005 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
-    about.addAuthor( "Anne-Marie Mahfouf", 0, "annma AT kde.org");
+                     KAboutData::License_GPL, "(C) 2001-2007 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
+    about.addAuthor( "Anne-Marie Mahfouf", 0, "annma AT kde DOT org");
     about.addCredit("Ludovic Grossard",
-                    I18N_NOOP("French sounds"), "grossard AT kde.org");
+                    I18N_NOOP("French sounds"), "grossard AT kde DOT org");
     about.addCredit("Geert Stams",
-                    I18N_NOOP("Dutch sounds"), "geert AT pa3csg.myweb.nl");
+                    I18N_NOOP("Dutch sounds"), "geert AT pa3csg DOT myweb DOT nl");
     about.addCredit("Erik Kjaer Pedersen",
-                    I18N_NOOP("Danish sounds"), "erik AT binghamton.edu");
+                    I18N_NOOP("Danish sounds"), "erik AT binghamton DOT edu");
     about.addCredit("Eva Mikulčíková",
-                    I18N_NOOP("Czech sounds"), "evmi AT seznam.cz");
+                    I18N_NOOP("Czech sounds"), "evmi AT seznam DOT cz");
     about.addCredit("Silvia Motyčková & Jozef Říha",
-                    I18N_NOOP("Slovak sounds"), "silviamotycka AT seznam.cz");
+                    I18N_NOOP("Slovak sounds"), "silviamotycka AT seznam DOT cz");
     about.addCredit("Robert Wadley",
                     I18N_NOOP("English sounds"), "robntina AT juno DOT com");               
     about.addCredit("Pietro Pasotti",
-                    I18N_NOOP("Italian sounds"), "pietro AT itopen.it");
+                    I18N_NOOP("Italian sounds"), "pietro AT itopen DOT it");
     about.addCredit("Ana Belén Caballero and Juan Pedro Paredes",
-                    I18N_NOOP("Spanish sounds"), "neneta  AT iquis.com");
+                    I18N_NOOP("Spanish sounds"), "neneta  AT iquis DOT com");
     about.addCredit("Vikas Kharat",
-                    I18N_NOOP("Romanized Hindi sounds"), "kharat AT sancharnet.in");
+                    I18N_NOOP("Romanized Hindi sounds"), "kharat AT sancharnet DOT in");
     about.addCredit("John Magoye and Cormac Lynch",
-                     I18N_NOOP("Luganda sounds"), "cormaclynch AT eircom.net");
+                     I18N_NOOP("Luganda sounds"), "cormaclynch AT eircom DOT net");
     about.addCredit("Helmut Kriege",
-                     I18N_NOOP("German sounds"), "h.kriege AT freenet.de");
+                     I18N_NOOP("German sounds"), "h.kriege AT freenet DOT de");
     about.addCredit("Assaf Gorgon and Diego Iastrubni",
-                     I18N_NOOP("Hebrew sounds"), "elcuco AT kde.org");
+                     I18N_NOOP("Hebrew sounds"), "elcuco AT kde DOT org");
     about.addCredit("Lisa Kriege",
-                     I18N_NOOP("British English sounds"), "h.kriege AT freenet.de");
-    about.addCredit("Primoz Anzur",
-                    I18N_NOOP("Icons"), "zerokode AT yahoo.com");
-    about.addCredit("Renaud Blanchard",
-                    I18N_NOOP("Background picture"), "kisukuma AT chez.com");
-    about.addCredit("Robert Gogolok",
-                    I18N_NOOP("Support and coding guidance"), "mail AT robert-gogolok.de");
-    about.addCredit("Chris Luetchford",
-                    I18N_NOOP("SVG icon"), "chris AT os11.com");
-    about.addCredit("Peter Hedlund",
-                    I18N_NOOP("Code for generating special characters' icons"), "peter.hedlund AT kdemail.net");
-    about.addCredit("Waldo Bastian",
-                    I18N_NOOP("Port to KConfig XT, coding help"), "bastian AT kde.org");
+                     I18N_NOOP("British English sounds"), "h.kriege AT freenet DOT de");
     about.addCredit("Danny Allen",
-                    I18N_NOOP("Kids and grown-up SVG icons"), "danny AT dannyallen.co.uk");
+                    I18N_NOOP("SVG background pictures, kids and grown-up SVG icons"), "dannya40uk AT yahoo DOT co DOT uk");
+    about.addCredit("Robert Gogolok",
+                    I18N_NOOP("Support and coding guidance"), "mail AT robert-gogolok DOT de");
+    about.addCredit("Peter Hedlund",
+                    I18N_NOOP("Code for generating special characters' icons"), "peter DOT hedlund AT kdemail DOT net");
+    about.addCredit("Waldo Bastian",
+                    I18N_NOOP("Port to KConfig XT, coding help"), "bastian AT kde DOT org");
+    about.addCredit("Pino Toscano",
+                    I18N_NOOP("Code cleaning, Theme class"), "toscano DOT pino AT tiscali DOT it");
     about.addCredit("Michael Goettsche",
-                    I18N_NOOP("Timer setting widgets"), "michael.goettsche AT kdemail.net");
+                    I18N_NOOP("Timer setting widgets"), "michael.goettsche AT kdemail DOT net");
     KCmdLineArgs::init(argc, argv, &about);
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;
