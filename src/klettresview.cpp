@@ -23,6 +23,7 @@
 #include <QPainter>
 #include <QSvgRenderer>
 #include <QFile>
+#include <QPaintEvent>
 
 #include <klocale.h>
 #include <kstandarddirs.h>
@@ -101,39 +102,41 @@ void KLettresView::setTheme(KLTheme *theme)
     //update();
 }
 
-//TODO put QRect in method
-void KLettresView::paintEvent( QPaintEvent * )
+void KLettresView::paintEvent( QPaintEvent * e )
 {
-    QRect drawRect;
+    // Repaint the contents of the klettres view
     QPainter p(this);
-    QRect rect;
+    paintBackground(p, e->rect());
+    paintLetter(p, e->rect());
+}
+
+void KLettresView::paintBackground(QPainter &p, const QRect& rect)
+{
     // Draw the background
     if (m_backgroundCache.size() != size()) {
         m_backgroundCache = QPixmap(size());
         QPainter aux(&m_backgroundCache);
         m_renderer->render(&aux, "background");
     }
-    p.drawPixmap(rect.topLeft(), m_backgroundCache, rect);
-
-    if (Prefs::level()%2==1) {
-        QPainter paint(this);
-        paint.setFont(Prefs::font());
-        QString start = i18n("Start");
-
-        paint.setFont(Prefs::font());
-        if (Prefs::theme() == Prefs::EnumTheme::desert) {
-            paint.setPen( m_theme->letterColor()); //brown
-        }
-        else if (Prefs::theme() == Prefs::EnumTheme::arctic) {
-            paint.setPen( Qt::white );
-        }
-        else {
-            paint.setPen( Qt::white );
-        }
-        paint.drawText(50, 230, m_currentLetter);
-    }
+     p.drawPixmap(rect.topLeft(), m_backgroundCache, rect);
 }
 
+void KLettresView::paintLetter(QPainter &p, const QRect& rect)
+{
+    if (Prefs::level()%2==1) {
+        p.setFont(Prefs::font());
+        if (Prefs::theme() == Prefs::EnumTheme::desert) {
+            p.setPen( m_theme->letterColor()); //brown
+        }
+        else if (Prefs::theme() == Prefs::EnumTheme::arctic) {
+            p.setPen( Qt::white );
+        }
+        else {
+            p.setPen( Qt::white );
+        }
+        p.drawText(50, 230, m_currentLetter);
+    }
+}
 
 void KLettresView::game()
 {

@@ -23,7 +23,6 @@
 
 #include <klineedit.h>
 
-class QWidget;
 class QPalette;
 class QPixmap;
 class QLabel;
@@ -98,8 +97,12 @@ protected:
     QString m_upperLetter;
     ///Current letter entered
     QString m_inputLetter;
-    ///Paint the letter/syllable in levels 1 and 3
+    ///Paint the letter/syllable in levels 1 and 3 and the background
     void paintEvent( QPaintEvent * );
+    //Paint the background picture
+    void paintBackground(QPainter &p, const QRect& rect);
+
+    void paintLetter(QPainter &p, const QRect& rect);
     ///Current theme
     KLTheme *m_theme;
 
