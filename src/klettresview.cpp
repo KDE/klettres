@@ -21,6 +21,8 @@
 #include <QLabel>
 #include <QTimer>
 #include <QPainter>
+#include <QSvgRenderer>
+#include <QFile>
 
 #include <klocale.h>
 #include <kstandarddirs.h>
@@ -29,14 +31,12 @@
 #include "klettres.h"
 #include "klettresview.h"
 #include "prefs.h"
+#include "kltheme.h"
 
 KLettresView::KLettresView(KLettres *parent)
         : QWidget(parent)
 {
     m_klettres = parent;
-
-    setMinimumSize( QSize( 640, 480 ) );
-    setMaximumSize( QSize( 640, 480 ) );
 
     //lineEdit for user input
     m_letterEdit = new KLineEdit( this );
@@ -51,6 +51,8 @@ KLettresView::KLettresView(KLettres *parent)
     setAutoFillBackground(true);
 
     randomInt = 0;
+    m_renderer = new QSvgRenderer();
+    setTheme(KLThemeFactory::instance()->buildTheme(0));
 }
 
 KLettresView::~KLettresView()
@@ -79,8 +81,40 @@ void KLettresView::chooseSound()
     m_letterEdit->setMaximumSize( QSize( width, 160 ) );
 }
 
+void KLettresView::setTheme(KLTheme *theme)
+{
+    // we don't allow null themes
+    if (!theme)
+        return;
+
+    QString svgpath = KStandardDirs::locate("data", QString("klettres/pics/%1/%2").arg(theme->name(), theme->svgFileName()));
+    // we don't allow themes with no svg installed
+    if (!QFile::exists(svgpath))
+        return;
+
+    delete m_theme;
+    m_theme = theme;
+
+    m_renderer->load(svgpath);
+
+    m_backgroundCache = QPixmap();
+    //update();
+}
+
+//TODO put QRect in method
 void KLettresView::paintEvent( QPaintEvent * )
 {
+    QRect drawRect;
+    QPainter p(this);
+    QRect rect;
+    // Draw the background
+    if (m_backgroundCache.size() != size()) {
+        m_backgroundCache = QPixmap(size());
+        QPainter aux(&m_backgroundCache);
+        m_renderer->render(&aux, "background");
+    }
+    p.drawPixmap(rect.topLeft(), m_backgroundCache, rect);
+
     if (Prefs::level()%2==1) {
         QPainter paint(this);
         paint.setFont(Prefs::font());
@@ -88,16 +122,13 @@ void KLettresView::paintEvent( QPaintEvent * )
 
         paint.setFont(Prefs::font());
         if (Prefs::theme() == Prefs::EnumTheme::desert) {
-            paint.setPen( QColor(115, 50, 95)); //brown
-            //m_letterEdit->setPaletteForegroundColor(QColor(115, 50, 95));
+            paint.setPen( m_theme->letterColor()); //brown
         }
         else if (Prefs::theme() == Prefs::EnumTheme::arctic) {
             paint.setPen( Qt::white );
-            //m_letterEdit->setPaletteForegroundColor(QColor(48, 75, 137));
         }
         else {
             paint.setPen( Qt::white );
-            //m_letterEdit->setPaletteForegroundColor(Qt::black);
         }
         paint.drawText(50, 230, m_currentLetter);
     }
@@ -210,8 +241,6 @@ void KLettresView::viewThemeDesert()
 {
     Prefs::setTheme(Prefs::EnumTheme::desert);
     Prefs::writeConfig();
-    pal.setBrush(QPalette::Window, m_desertPicture);
-    setPalette(pal);
 }
 
 #include "klettresview.moc"

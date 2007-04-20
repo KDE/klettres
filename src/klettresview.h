@@ -27,7 +27,10 @@ class QWidget;
 class QPalette;
 class QPixmap;
 class QLabel;
+class QRect;
+class QSvgRenderer;
 class KLettres;
+class KLTheme;
 
 /**
  * This class serves as the view for KLettres.  It holds the GUI for the kid and grown-up looks
@@ -70,6 +73,8 @@ public:
     KLettres *m_klettres;
     ///The line where the user enters his/her input
     KLineEdit *m_letterEdit;
+    ///set the chosen theme
+    void setTheme(KLTheme *theme);
 
 protected:
 
@@ -95,6 +100,12 @@ protected:
     QString m_inputLetter;
     ///Paint the letter/syllable in levels 1 and 3
     void paintEvent( QPaintEvent * );
+    ///Current theme
+    KLTheme *m_theme;
+
+    // Graphics  ----------------
+    QSvgRenderer *m_renderer;
+    QPixmap       m_backgroundCache;
 
     public slots:
     ///Start playing displaying a new letter/syllable, playing the associated sound

@@ -87,8 +87,6 @@ KLettres::KLettres()
     loadSettings();
     //Setup current language sounds
     soundFactory = new SoundFactory(this, "sounds");
-    setMinimumSize( QSize( 640, 550 ) );
-    setMaximumSize( QSize( 640, 550 ) );
     //Start game
     m_view->game();
 }
@@ -417,8 +415,6 @@ void KLettres::slotModeGrownup()
     m_menubarAction->setToolTip(i18n("Hide Menubar"));
     slotMenubar();
     //m_secondToolbar->setIconSize(22); //causes a crash when adding/removing actions in toolbar
-    setMinimumSize( QSize( 640, 538 ) );
-    setMaximumSize( QSize( 640, 538 ) );
     m_view->m_timer = Prefs::grownTimer();
     Prefs::setMode(Prefs::EnumMode::grownup);
     Prefs::writeConfig();
@@ -442,8 +438,6 @@ void KLettres::slotModeKid()
     m_menubarAction->setToolTip(i18n("Show Menubar"));
     m_grownupAction->setChecked(false);
     //m_secondToolbar->setIconSize(32);
-    setMinimumSize( QSize( 640, 480 ) );
-    setMaximumSize( QSize( 640, 480 ) );
     m_view->m_timer = Prefs::kidTimer();
     Prefs::setMode(Prefs::EnumMode::kid);
     Prefs::writeConfig();
