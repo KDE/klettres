@@ -53,6 +53,7 @@
 #include "timer.h"
 #include "prefs.h"
 #include "langutils.h"
+#include "kltheme.h"
 
 class fontsdlg : public QDialog, public Ui::fontsdlg
 {    
@@ -214,10 +215,8 @@ void KLettres::setupActions()
 
     m_themeAction = actionCollection()->add<KSelectAction>("looks");
     m_themeAction->setText(i18n("Themes"));
-    m_themesNames.append(i18n("Classroom"));
-    m_themesNames.append(i18n("Arctic"));
-    m_themesNames.append(i18n("Desert"));
-    m_themeAction->setItems(m_themesNames);
+    m_themeAction->setItems(KLThemeFactory::instance()->themeList());
+    kDebug() << "m_list " << KLThemeFactory::instance()->themeList() << endl;
     m_themeAction->setToolTip(i18n("Select the theme"));
     m_themeAction->setWhatsThis(i18n("Here you can change the theme for KLettres. A theme consists in the background picture and the font color for the letter displayed."));
 
@@ -292,18 +291,19 @@ void KLettres::loadSettings()
     m_levelAction->setCurrentItem(Prefs::level()-1);
     m_levLabel->setText(i18n("Current level is %1", Prefs::level()));
 
-    if (Prefs::theme() == Prefs::EnumTheme::classroom) {
+    //TODO =========================================
+    /*if (Prefs::theme() == Prefs::EnumTheme::kid) {
         m_themeAction->setCurrentItem(0);
         m_view->viewThemeClassroom();
     }
-    else if (Prefs::theme() == Prefs::EnumTheme::arctic) {
+    else if (Prefs::theme() == Prefs::EnumTheme::savannah) {
         m_themeAction->setCurrentItem(1);
         m_view->viewThemeArctic();
     }
     else {
         m_themeAction->setCurrentItem(2);
         m_view->viewThemeDesert();
-    }
+    }*/
 
     if (Prefs::mode() == Prefs::EnumMode::grownup)
         slotModeGrownup();
@@ -383,19 +383,9 @@ void KLettres::slotChangeLanguage(int newLanguage)
 
 void KLettres::slotChangeTheme(int index)
 {
-    switch (index) {
-    case 0:
-        m_view->viewThemeClassroom();
-        break;
-
-    case 1:
-        m_view->viewThemeArctic();
-        break;
-
-    case 2:
-        m_view->viewThemeDesert();
-        break;
-    }
+    Prefs::setMode(index);
+    Prefs::writeConfig();
+    m_view->setTheme(KLThemeFactory::instance()->buildTheme(index));
 }
 
 void KLettres::slotModeGrownup()

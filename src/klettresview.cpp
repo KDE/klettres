@@ -45,19 +45,18 @@ KLettresView::KLettresView(KLettres *parent)
     m_letterEdit->setToolTip(i18n("Type the letter or syllable that you just heard" ) );
 
     setFont(Prefs::font());
-    //load background pics
-    m_grownupPicture.load(KStandardDirs::locate("data","klettres/pics/klettres_grownup.png"));
-    m_kidPicture.load(KStandardDirs::locate("data","klettres/pics/klettres_kids.jpeg"));
-    m_desertPicture.load(KStandardDirs::locate("data","klettres/pics/klettres_desert.png"));
-    setAutoFillBackground(true);
+    //setAutoFillBackground(true);
 
-    randomInt = 0;
+    randomInt          = 0;
+    m_theme            = 0; // essential
     m_renderer = new QSvgRenderer();
     setTheme(KLThemeFactory::instance()->buildTheme(0));
 }
 
 KLettresView::~KLettresView()
 {
+    delete m_renderer;
+    delete m_theme;
 }
 
 void KLettresView::chooseSound()
@@ -99,12 +98,11 @@ void KLettresView::setTheme(KLTheme *theme)
     m_renderer->load(svgpath);
 
     m_backgroundCache = QPixmap();
-    //update();
+    update();
 }
 
 void KLettresView::paintEvent( QPaintEvent * e )
 {
-    // Repaint the contents of the klettres view
     QPainter p(this);
     paintBackground(p, e->rect());
     paintLetter(p, e->rect());
@@ -116,7 +114,7 @@ void KLettresView::paintBackground(QPainter &p, const QRect& rect)
     if (m_backgroundCache.size() != size()) {
         m_backgroundCache = QPixmap(size());
         QPainter aux(&m_backgroundCache);
-        m_renderer->render(&aux, "background");
+        m_renderer->render(&aux);
     }
      p.drawPixmap(rect.topLeft(), m_backgroundCache, rect);
 }
@@ -125,15 +123,7 @@ void KLettresView::paintLetter(QPainter &p, const QRect& rect)
 {
     if (Prefs::level()%2==1) {
         p.setFont(Prefs::font());
-        if (Prefs::theme() == Prefs::EnumTheme::desert) {
-            p.setPen( m_theme->letterColor()); //brown
-        }
-        else if (Prefs::theme() == Prefs::EnumTheme::arctic) {
-            p.setPen( Qt::white );
-        }
-        else {
-            p.setPen( Qt::white );
-        }
+        p.setPen( m_theme->letterColor());//TODO move to paintEvent()
         p.drawText(50, 230, m_currentLetter);
     }
 }
@@ -222,28 +212,6 @@ void KLettresView::slotPlayAgain()
 {
     //TODO wait for the previous sound to be payed before playing again as it won't play if the previous one was not finished
     m_klettres->soundFactory->playSound(m_random);
-}
-
-void KLettresView::viewThemeArctic()
-{
-    Prefs::setTheme(Prefs::EnumTheme::arctic);
-    Prefs::writeConfig();
-    pal.setBrush(QPalette::Window, m_grownupPicture);
-    setPalette(pal);
-}
-
-void KLettresView::viewThemeClassroom()
-{
-    Prefs::setTheme(Prefs::EnumTheme::classroom);
-    Prefs::writeConfig();
-    pal.setBrush(QPalette::Window, m_kidPicture);
-    setPalette(pal);
-}
-
-void KLettresView::viewThemeDesert()
-{
-    Prefs::setTheme(Prefs::EnumTheme::desert);
-    Prefs::writeConfig();
 }
 
 #include "klettresview.moc"

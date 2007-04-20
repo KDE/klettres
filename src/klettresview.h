@@ -54,13 +54,6 @@ public:
      * Destructor
      */
     virtual ~KLettresView();
-
-    ///Set the Grown-up background, show menubar, show the Kid button
-    void viewThemeArctic();
-    ///Set the Kid background pic, hide the menubar, show the Grownup button
-    void viewThemeClassroom();
-    ///Set the Desert background pic, hide the menubar, show the Grownup button
-    void viewThemeDesert();
     /// Enter a letter into the input widget.
     void  enterLetter(QString letter) { m_letterEdit->setText(letter); }
 
@@ -76,13 +69,6 @@ public:
     void setTheme(KLTheme *theme);
 
 protected:
-
-    ///The pixmaps for the themes backgrounds
-    QPixmap m_grownupPicture,
-    m_kidPicture,
-    m_desertPicture;
-    ///Palette changes wether it's kid or grown-up
-    QPalette pal;
     ///cursor position in the line edit
     int m_cursorPos;
     ///Random number that decides on the letter/syllable and sound
@@ -100,8 +86,8 @@ protected:
     ///Paint the letter/syllable in levels 1 and 3 and the background
     void paintEvent( QPaintEvent * );
     //Paint the background picture
-    void paintBackground(QPainter &p, const QRect& rect);
-
+    void paintBackground(QPainter &p, const QRect& rect);    
+    ///Paint the letter/syllable in levels 1 and 3 
     void paintLetter(QPainter &p, const QRect& rect);
     ///Current theme
     KLTheme *m_theme;

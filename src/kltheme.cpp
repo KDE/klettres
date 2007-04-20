@@ -30,6 +30,37 @@ KLTheme::~KLTheme()
 {
 }
 
+/// The 'kids' theme
+class KLThemeKid : public KLTheme
+{
+public:
+    KLThemeKid()
+        : KLTheme()
+    {
+    }
+
+    virtual QString name() const
+    {
+        return "kids";
+    }
+
+    virtual QString uiName() const
+    {
+        return i18n("Kid");
+    }
+
+    virtual QString svgFileName() const
+    {
+        return "klettres_kids.svg";
+    }
+
+    virtual QColor letterColor() const
+    {
+        return QColor(Qt::black); 
+    }
+
+};
+
 /// The 'desert' theme
 class KLThemeDesert : public KLTheme
 {
@@ -46,7 +77,7 @@ public:
 
     virtual QString uiName() const
     {
-        return i18n("Desert Theme");
+        return i18n("Desert");
     }
 
     virtual QString svgFileName() const
@@ -61,6 +92,36 @@ public:
 
 };
 
+/// The 'savannah' theme
+class KLThemeSavannah : public KLTheme
+{
+public:
+    KLThemeSavannah()
+        : KLTheme()
+    {
+    }
+
+    virtual QString name() const
+    {
+        return "savannah";
+    }
+
+    virtual QString uiName() const
+    {
+        return i18n("Savannah");
+    }
+
+    virtual QString svgFileName() const
+    {
+        return "klettres_savannah.svg";
+    }
+
+    virtual QColor letterColor() const
+    {
+        return QColor(141, 80, 17); 
+    }
+
+};
 
 KLThemeFactory* KLThemeFactory::instance()
 {
@@ -81,7 +142,11 @@ KLTheme* KLThemeFactory::buildTheme(int id) const
     switch (id)
     {
         case 0:
+            return new KLThemeKid();
+	case 1:
             return new KLThemeDesert();
+	case 2:
+            return new KLThemeSavannah();
     }
     return 0;
 }
@@ -94,7 +159,9 @@ KLTheme* KLThemeFactory::buildTheme(int id) const
 QStringList KLThemeFactory::themeList() const
 {
     QStringList ret;
+    ADD_THEME_NAME( KLThemeKid, ret )
     ADD_THEME_NAME( KLThemeDesert, ret )
+    ADD_THEME_NAME( KLThemeSavannah, ret )
     return ret;
 }
 

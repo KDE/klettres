@@ -12,11 +12,11 @@
     <entry name="Theme" type="Enum" key="myTheme">
       <label>Theme</label>
       <choices>
-        <choice name="classroom"/>
-        <choice name="arctic"/>
-	<choice name="desert"/>
+        <choice name="kid"/>
+        <choice name="desert"/>
+	<choice name="savannah"/>
       </choices>
-      <default>arctic</default>
+      <default>kid</default>
     </entry>
     <entry name="Mode" type="Enum" key="myMode">
       <label>Mode</label>
