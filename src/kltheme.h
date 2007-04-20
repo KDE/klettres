@@ -1,0 +1,51 @@
+/*
+   Copyright (C) 2007      Pino Toscano <pino@kde.org>
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of version 2 of the GNU General Public
+    License as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+#ifndef KLETTRESTHEME_H
+#define KLETTRESTHEME_H
+
+#include <QPalette>
+#include <QStringList>
+
+class KLTheme
+{
+public:
+    KLTheme();
+    virtual ~KLTheme();
+
+
+    virtual QString name() const = 0;
+    virtual QString uiName() const = 0;
+    virtual QString svgFileName() const = 0;
+    ///returns the color for displaying the letter/syllable
+    virtual QColor letterColor() const = 0;
+};
+
+class KLThemeFactory
+{
+public:
+    static KLThemeFactory* instance();
+    ~KLThemeFactory();
+
+    KLTheme* buildTheme(int id) const;
+    QStringList themeList() const;
+
+private:
+    KLThemeFactory();
+};
+
+#endif
