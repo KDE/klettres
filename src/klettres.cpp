@@ -79,8 +79,8 @@ KLettres::KLettres()
     m_languages = LangUtils::getLanguages();
     kDebug() << "m_languages  " << m_languages << endl;
     findLanguages();
-    Prefs::setLanguage(Prefs::defaultLanguage());
-    Prefs::writeConfig();
+    //Prefs::setLanguage(Prefs::defaultLanguage());
+    //Prefs::writeConfig();
     //MainWindow GUI: menus, tolbars and statusbar
     setupActions();
     setupStatusbar();
@@ -207,7 +207,7 @@ void KLettres::setupActions()
     m_languageAction = actionCollection()->add<KSelectAction>("languages");
     m_languageAction->setText(i18n("&Language"));
     m_languageAction->setItems(m_languageNames);
-    m_languageAction->setCurrentItem(Prefs::languageNumber());
+    m_languageAction->setCurrentItem(m_languages.indexOf(Prefs::language()));
 
     m_levelsNames.append(i18n( "Level 1" ));
     m_levelsNames.append(i18n( "Level 2" ));
@@ -285,7 +285,7 @@ void KLettres::loadSettings()
     //TODO load default language
     //selectedLanguage = Prefs::languageNumber();
     //m_view->selectedLanguage = selectedLanguage;
-    QString langString = m_languageNames[Prefs::languageNumber()];
+    QString langString = m_languageNames[m_languages.indexOf(Prefs::language())];
     langString.replace("&", QString());
     m_langLabel->setText(langString);
     loadLangToolBar();
