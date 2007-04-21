@@ -59,6 +59,15 @@ public:
         return QColor(215, 215, 215); 
     }
 
+    virtual QRect wordRect(const QSize& windowsize) const
+    {
+        return QRect(windowsize.width()*200/800, windowsize.height()*200/600, 500, 700);
+    }
+
+    virtual QRect inputRect(const QSize& windowsize) const
+    {
+        return QRect(windowsize.width()*200/800, windowsize.height()*480/600, 25, 100);
+    }
 };
 
 /// The 'desert' theme
@@ -90,6 +99,18 @@ public:
         return QColor(115, 50, 95); //purple
     }
 
+    virtual QRect wordRect(const QSize& windowsize) const
+    {
+        //return QRect(0, windowsize.height()-windowsize.height()*240/600,
+                    // windowsize.width()*267/800, windowsize.height()*240/600);
+	return QRect(windowsize.width()*267/800, windowsize.height()*240/600, 50, 230);
+    }
+
+    virtual QRect inputRect(const QSize& windowsize) const
+    {
+        return QRect(windowsize.width()*40/800, windowsize.height()*310/600, 160, 160);
+	//QRect( 40, 310, 161, 160 ) 
+    }
 };
 
 /// The 'savannah' theme
@@ -121,6 +142,17 @@ public:
         return QColor(141, 80, 17); 
     }
 
+    virtual QRect wordRect(const QSize& windowsize) const
+    {
+        return QRect(0, windowsize.height()-windowsize.height()*240/600,
+                     windowsize.width()*267/800, windowsize.height()*240/600);
+    }
+
+    virtual QRect inputRect(const QSize& windowsize) const
+    {
+        return QRect(windowsize.width()*40/800, windowsize.height()*310/600, 160, 160);
+	//QRect( 40, 310, 161, 160 ) 
+    }
 };
 
 KLThemeFactory* KLThemeFactory::instance()

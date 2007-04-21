@@ -41,11 +41,9 @@ KLettresView::KLettresView(KLettres *parent)
 
     //lineEdit for user input
     m_letterEdit = new KLineEdit( this );
-    m_letterEdit->setGeometry( QRect( 40, 310, 161, 160 ) );
     m_letterEdit->setToolTip(i18n("Type the letter or syllable that you just heard" ) );
-
-    setFont(Prefs::font());
-    //setAutoFillBackground(true);
+    m_letterEdit->setFont(Prefs::font());
+    m_letterEdit->setAutoFillBackground(true);
 
     randomInt          = 0;
     m_theme            = 0; // essential
@@ -77,8 +75,8 @@ void KLettresView::chooseSound()
     else
         width = 200+(20*(m_length-2));
     update();
-    m_letterEdit->setMinimumSize( QSize( width, 160 ) );
-    m_letterEdit->setMaximumSize( QSize( width, 160 ) );
+    m_letterEdit->setMinimumSize( QSize( width, 100 ) );
+    m_letterEdit->setMaximumSize( QSize( width, 100 ) );
 }
 
 void KLettresView::setTheme(KLTheme *theme)
@@ -122,10 +120,15 @@ void KLettresView::paintBackground(QPainter &p, const QRect& rect)
 void KLettresView::paintLetter(QPainter &p, const QRect& rect)
 {
     if (Prefs::level()%2==1) {
-        p.setFont(Prefs::font());
-        p.setPen( m_theme->letterColor());//TODO move to paintEvent()
-        p.drawText(50, 230, m_currentLetter);
+    QRect myRect = m_theme->wordRect(size());
+    if (!myRect.intersects(rect))
+        return;
+
+    p.setPen( m_theme->letterColor());
+    p.setFont(Prefs::font());
+    p.drawText(myRect, m_currentLetter);
     }
+    m_letterEdit->setGeometry( m_theme->inputRect(size()));
 }
 
 void KLettresView::game()

@@ -35,6 +35,8 @@ public:
     virtual QString svgFileName() const = 0;
     ///returns the color for displaying the letter/syllable
     virtual QColor letterColor() const = 0;
+    virtual QRect wordRect(const QSize& windowsize) const = 0;
+    virtual QRect inputRect(const QSize& windowsize) const = 0;
 };
 
 class KLThemeFactory
