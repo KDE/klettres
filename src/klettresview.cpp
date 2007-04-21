@@ -43,7 +43,7 @@ KLettresView::KLettresView(KLettres *parent)
     m_letterEdit = new KLineEdit( this );
     m_letterEdit->setToolTip(i18n("Type the letter or syllable that you just heard" ) );
     m_letterEdit->setFont(Prefs::font());
-    m_letterEdit->setAutoFillBackground(true);
+    setAutoFillBackground(true);
 
     randomInt          = 0;
     m_theme            = 0; // essential
@@ -74,9 +74,9 @@ void KLettresView::chooseSound()
         width = 200;
     else
         width = 200+(20*(m_length-2));
-    update();
     m_letterEdit->setMinimumSize( QSize( width, 100 ) );
     m_letterEdit->setMaximumSize( QSize( width, 100 ) );
+    update();
 }
 
 void KLettresView::setTheme(KLTheme *theme)
@@ -96,6 +96,13 @@ void KLettresView::setTheme(KLTheme *theme)
     m_renderer->load(svgpath);
 
     m_backgroundCache = QPixmap();
+    QPalette pal;
+    pal.setBrush( QPalette::Base, m_theme->backgroundInputColor());
+    pal.setBrush( QPalette::Window, m_theme->letterInputColor());
+    pal.setBrush( QPalette::WindowText, m_theme->letterInputColor());
+    m_letterEdit->setAutoFillBackground(true);
+    m_letterEdit->setPalette(pal);
+    m_letterEdit->setFocus();
     update();
 }
 

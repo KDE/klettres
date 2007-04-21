@@ -206,17 +206,19 @@ void KLettres::setupActions()
     m_languageAction = actionCollection()->add<KSelectAction>("languages");
     m_languageAction->setText(i18n("&Language"));
     m_languageAction->setItems(m_languageNames);
+    m_languageAction->setCurrentItem(Prefs::languageNumber());
 
     m_levelsNames.append(i18n( "Level 1" ));
     m_levelsNames.append(i18n( "Level 2" ));
     m_levelsNames.append(i18n( "Level 3" ));
     m_levelsNames.append(i18n( "Level 4" ));
     m_levelAction->setItems(m_levelsNames);
+    m_levelAction->setCurrentItem(Prefs::level()-1);
 
     m_themeAction = actionCollection()->add<KSelectAction>("looks");
     m_themeAction->setText(i18n("Themes"));
     m_themeAction->setItems(KLThemeFactory::instance()->themeList());
-    kDebug() << "m_list " << KLThemeFactory::instance()->themeList() << endl;
+    m_themeAction->setCurrentItem(Prefs::theme());
     m_themeAction->setToolTip(i18n("Select the theme"));
     m_themeAction->setWhatsThis(i18n("Here you can change the theme for KLettres. A theme consists in the background picture and the font color for the letter displayed."));
 
@@ -282,28 +284,14 @@ void KLettres::loadSettings()
     //TODO load default language
     //selectedLanguage = Prefs::languageNumber();
     //m_view->selectedLanguage = selectedLanguage;
-    m_languageAction->setCurrentItem(Prefs::languageNumber());
     QString langString = m_languageNames[Prefs::languageNumber()];
     langString.replace("&", QString());
     m_langLabel->setText(i18n("Current language is %1", langString));
     loadLangToolBar();
     // load default level
-    m_levelAction->setCurrentItem(Prefs::level()-1);
     m_levLabel->setText(i18n("Current level is %1", Prefs::level()));
 
-    //TODO =========================================
-    /*if (Prefs::theme() == Prefs::EnumTheme::kid) {
-        m_themeAction->setCurrentItem(0);
-        m_view->viewThemeClassroom();
-    }
-    else if (Prefs::theme() == Prefs::EnumTheme::savannah) {
-        m_themeAction->setCurrentItem(1);
-        m_view->viewThemeArctic();
-    }
-    else {
-        m_themeAction->setCurrentItem(2);
-        m_view->viewThemeDesert();
-    }*/
+    m_view->setTheme(KLThemeFactory::instance()->buildTheme(Prefs::theme()));
 
     if (Prefs::mode() == Prefs::EnumMode::grownup)
         slotModeGrownup();
@@ -383,8 +371,9 @@ void KLettres::slotChangeLanguage(int newLanguage)
 
 void KLettres::slotChangeTheme(int index)
 {
-    Prefs::setMode(index);
+    Prefs::setTheme(index);
     Prefs::writeConfig();
+    kDebug()<<"index------ " << index << endl;
     m_view->setTheme(KLThemeFactory::instance()->buildTheme(index));
 }
 
