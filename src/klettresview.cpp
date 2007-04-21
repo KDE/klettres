@@ -98,9 +98,8 @@ void KLettresView::setTheme(KLTheme *theme)
     m_backgroundCache = QPixmap();
     QPalette pal;
     pal.setBrush( QPalette::Base, m_theme->backgroundInputColor());
-    pal.setBrush( QPalette::Window, m_theme->letterInputColor());
-    pal.setBrush( QPalette::WindowText, m_theme->letterInputColor());
-    m_letterEdit->setAutoFillBackground(true);
+    pal.setBrush( QPalette::Active, QPalette::Window, m_theme->letterInputColor());
+    pal.setBrush( QPalette::Text, m_theme->letterInputColor());
     m_letterEdit->setPalette(pal);
     m_letterEdit->setFocus();
     update();

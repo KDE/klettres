@@ -72,6 +72,7 @@ KLettres::KLettres()
     setObjectName( QLatin1String("KLettres") );
     mNewStuff = 0;
     m_view = new KLettresView(this);
+    setMinimumSize( QSize( 800, 600 ) );
     // tell the KXmlGuiWindow that this is indeed the main widget
     setCentralWidget(m_view);
     //Scan for existing languages -> m_languages
@@ -250,9 +251,9 @@ void KLettres::setupStatusbar()
     KStatusBar *st=statusBar();
     m_langLabel = new QLabel(st);
     m_levLabel = new QLabel(st);
-    st->addWidget(m_levLabel);
-    st->insertFixedItem("", 1);//add a space
     st->addWidget(m_langLabel);
+    st->insertFixedItem("", 1);//add a space
+    st->addWidget(m_levLabel);
     statusBar();
 }
 
@@ -286,10 +287,10 @@ void KLettres::loadSettings()
     //m_view->selectedLanguage = selectedLanguage;
     QString langString = m_languageNames[Prefs::languageNumber()];
     langString.replace("&", QString());
-    m_langLabel->setText(i18n("Current language is %1", langString));
+    m_langLabel->setText(langString);
     loadLangToolBar();
     // load default level
-    m_levLabel->setText(i18n("Current level is %1", Prefs::level()));
+    m_levLabel->setText(i18n("(Level %1)", Prefs::level()));
 
     m_view->setTheme(KLThemeFactory::instance()->buildTheme(Prefs::theme()));
 
@@ -348,7 +349,7 @@ void KLettres::updateLevMenu(int id)
 {
     //m_levelCombo->setCurrentItem(id);
     m_levelAction->setCurrentItem(id);
-    m_levLabel->setText(i18n("Current level is %1", Prefs::level()));
+    m_levLabel->setText(i18n("(Level %1)", Prefs::level()));
 }
 
 void KLettres::slotChangeLanguage(int newLanguage)
@@ -359,7 +360,7 @@ void KLettres::slotChangeLanguage(int newLanguage)
     // Update the StatusBar
     QString langString = m_languageNames[newLanguage];
     langString.replace("&", QString());
-    m_langLabel->setText(i18n("Current language is %1", langString));
+    m_langLabel->setText(langString);
     loadLangToolBar();
     // Change language effectively
     bool ok = loadLayout(soundFactory->m_layoutsDocument);
@@ -373,7 +374,6 @@ void KLettres::slotChangeTheme(int index)
 {
     Prefs::setTheme(index);
     Prefs::writeConfig();
-    kDebug()<<"index------ " << index << endl;
     m_view->setTheme(KLThemeFactory::instance()->buildTheme(index));
 }
 

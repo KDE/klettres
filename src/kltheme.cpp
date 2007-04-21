@@ -71,7 +71,7 @@ public:
 
     virtual QRect wordRect(const QSize& windowsize) const
     {
-        return QRect(windowsize.width()*200/800, windowsize.height()*200/600, 500, 700);
+        return QRect(windowsize.width()*200/800, windowsize.height()*200/600, 250, 160);
     }
 
     virtual QRect inputRect(const QSize& windowsize) const
@@ -121,7 +121,7 @@ public:
 
     virtual QRect wordRect(const QSize& windowsize) const
     {
-	return QRect(windowsize.width()*230/800, windowsize.height()*140/600, 160, 160);
+	return QRect(windowsize.width()*230/800, windowsize.height()*140/600, 250, 160);
     }
 
     virtual QRect inputRect(const QSize& windowsize) const
