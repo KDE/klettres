@@ -106,7 +106,7 @@ public:
 
     virtual QColor letterColor() const
     {
-        return QColor(115, 50, 95); //purple
+        return QColor(115, 50, 95); 
     }
 
     virtual QColor backgroundInputColor() const
