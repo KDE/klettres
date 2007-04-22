@@ -18,7 +18,7 @@
 #ifndef LANGUTILS_H
 #define LANGUTILS_H
 
-#include <QString>
+
 #include <QStringList>
 
 class LangUtils
