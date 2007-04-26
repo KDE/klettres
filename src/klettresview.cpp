@@ -43,7 +43,7 @@ KLettresView::KLettresView(KLettres *parent)
     m_letterEdit = new KLineEdit( this );
     m_letterEdit->setToolTip(i18n("Type the letter or syllable that you just heard" ) );
     m_letterEdit->setFont(Prefs::font());
-    //setAutoFillBackground(true);
+    m_letterEdit->setAutoFillBackground(true);
 
     randomInt          = 0;
     m_theme            = 0; // essential
@@ -86,6 +86,7 @@ void KLettresView::setTheme(KLTheme *theme)
         return;
 
     QString svgpath = KStandardDirs::locate("data", QString("klettres/pics/%1/%2").arg(theme->name(), theme->svgFileName()));
+
     // we don't allow themes with no svg installed
     if (!QFile::exists(svgpath))
         return;
@@ -93,8 +94,17 @@ void KLettresView::setTheme(KLTheme *theme)
     delete m_theme;
     m_theme = theme;
 
-    m_renderer->load(svgpath);
+    QVariant v(m_theme->letterInputColor());
+    QString s=v.toString();
 
+    // stylesheet   
+    int r1, g1, b1;
+    m_theme->backgroundInputColor().getRgb(&r1, &g1, &b1);
+    int r2, g2, b2;
+    m_theme->letterInputColor().getRgb(&r2, &g2, &b2);
+    m_letterEdit->setStyleSheet(QString("border-style: solid; background-color: rgb(%1, %2, %3); color: rgb(%4, %5, %6) ; border-color: rgb(%4, %5, %6); border-bottom-right-radius:10; border-radius: 15px; border-width: 3px").arg(r1).arg(g1).arg(b1).arg(r2).arg(g2).arg(b2));
+
+    m_renderer->load(svgpath);
     m_backgroundCache = QPixmap();
     update();
 }
@@ -128,13 +138,7 @@ void KLettresView::paintLetter(QPainter &p, const QRect& rect)
     p.setFont(Prefs::font());
     p.drawText(myRect, m_currentLetter);
     }
-    m_letterEdit->setGeometry( m_theme->inputRect(size()));
-    QPalette pal;
-    pal.setBrush( QPalette::Active, QPalette::Base, m_theme->backgroundInputColor());
-    pal.setBrush( QPalette::Active, QPalette::Text, m_theme->letterInputColor());
-    pal.setBrush( QPalette::Highlight, m_theme->letterInputColor());
-    pal.setBrush( QPalette::Window, m_theme->letterInputColor());
-    m_letterEdit->setPalette(pal);
+    m_letterEdit->setGeometry( m_theme->inputRect(size()));  
     m_letterEdit->setFocus();
 }
 
