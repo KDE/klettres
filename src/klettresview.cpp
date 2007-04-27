@@ -94,9 +94,6 @@ void KLettresView::setTheme(KLTheme *theme)
     delete m_theme;
     m_theme = theme;
 
-    QVariant v(m_theme->letterInputColor());
-    QString s=v.toString();
-
     // stylesheet   
     int r1, g1, b1;
     m_theme->backgroundInputColor().getRgb(&r1, &g1, &b1);
