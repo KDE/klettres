@@ -24,12 +24,12 @@
 </authorgroup>
 
 <copyright>
-<year>2001</year><year>2006</year>
+<year>2001</year><year>2007</year>
 <holder>&Anne-Marie.Mahfouf;</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2006-02-08</date>
+<date>2007-04-27</date>
 <releaseinfo>1.5</releaseinfo>
 
 <abstract>
@@ -50,8 +50,8 @@ English, French and your language if it is among those are installed by default.
 menu. <guimenuitem>Themes</guimenuitem> (background and font color) can be 
 changed in a combo box or in the <menuchoice><guimenu>Look</guimenu> 
 <guimenuitem>Themes</guimenuitem></menuchoice> menu. Three themes are 
-available: <guimenuitem>Classroom</guimenuitem>, 
-<guimenuitem>Arctic</guimenuitem> and <guimenuitem>Desert</guimenuitem>. 
+available: <guimenuitem>Kid</guimenuitem>, 
+<guimenuitem>Desert</guimenuitem> and <guimenuitem>Savannah</guimenuitem>. 
 Finally, the mode can be changed from kid to grown-up using the 
 <menuchoice><guimenu>Look</guimenu> <guimenuitem>Mode</guimenuitem></menuchoice> menu.
 </para>
@@ -90,28 +90,28 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are eleven languages available at the moment: Czech, Danish, Dutch,
-English, French, Italian, Luganda, Romanized Hindi, Spanish, Slovak and German. If your
-&kde; language is Czech, Danish, Dutch, English, French, Italian, Luganda, Romanized Hindi, Spanish,
-Slovak or German, then your language is taken as default, otherwise French is the default.
+<para>There are fourteen languages available at the moment: Czech, British
+English, Danish, Dutch, English, French, German, Hebrew, Italian, Low Saxon,
+Luganda, Romanized Hindi, Spanish and Slovak. If your
+&kde; language is among those, then it is taken as default, otherwise
+French is the default.
 You can easily get any additional available language by using the
 <guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New
 Language...</guimenuitem> menu item, provided that your computer is connected to
 the Internet.</para>
 
-<note><para>&klettres; needs &arts; running for the sound</para></note>
+<!-- add a note for the sound, what does KLettres needs -->
 
 <para>Two different modes allow you to adapt &klettres; to
 your need and have the full usual interface or a stripped interface. For a
-child, the menubar is no longer
-visible. We assume that a child will not want to set the language
-himself.  A combo box allows him to choose the different levels. For an
-older user, the background is not so childish and the menubar is
+child, the menubar is no longer visible. We assume that a child will not want to
+set the language himself.  A combo box allows him to choose the different
+levels. For an older user, the background is not so childish and the menubar is
 present in the Grown-Up style. Three different themes 
-(<guimenuitem>Classroom</guimenuitem>, 
-<guimenuitem>Arctic</guimenuitem> and 
-<guimenuitem>Desert</guimenuitem>) set up a different background with 
-different fonts.</para>
+(<guimenuitem>Kid</guimenuitem>, 
+<guimenuitem>Desert</guimenuitem> and 
+<guimenuitem>Savannah</guimenuitem>) set up a different background with 
+different fonts and colors.</para>
 
 <note>
 <para>You do not need the language keyboard layout anymore as you can use the 
@@ -154,12 +154,13 @@ that you do the game together.</para>
 and mode is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
-If your &kde; language is set to Czech, Danish, Dutch, English, French, Italian,
-Luganda, Romanized Hindi, Spanish, Slovak or German, then this will be the default 
-language the first time you run &klettres;. For other languages, French is the default. 
-&klettres; comes with French and your default language if among those listed above 
-and you can get additional languages via <guimenu>File</guimenu> <guimenuitem>Get Alphabet 
-in New Language...</guimenuitem> provided you have an Internet connection.
+If your &kde; language is among the supported languages then this will be the
+default language the first time you run &klettres;. For other languages, French
+is the default. 
+&klettres; comes with French and your default language if among those listed
+above and you can get additional languages via <guimenu>File</guimenu>
+<guimenuitem>Get Alphabet in New Language...</guimenuitem> provided you have an
+Internet connection.
 </para>
 </note>
 <para>
@@ -455,18 +456,9 @@ You can also choose here the size you like the best. This size will be kept in c
 <term><menuchoice>
 <guimenu>Look</guimenu>
 <guisubmenu>Theme</guisubmenu>
-<guimenuitem>Classroom</guimenuitem>
+<guimenuitem>Kid</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Switch</action> to the classroom theme</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Look</guimenu>
-<guisubmenu>Theme</guisubmenu>
-<guimenuitem>Arctic</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Switch</action> to the arctic theme</para></listitem>
+<listitem><para><action>Switch</action> to the Kid theme</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -475,7 +467,16 @@ You can also choose here the size you like the best. This size will be kept in c
 <guisubmenu>Theme</guisubmenu>
 <guimenuitem>Desert</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Switch</action> to the desert theme</para></listitem>
+<listitem><para><action>Switch</action> to the Desert theme</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Look</guimenu>
+<guisubmenu>Theme</guisubmenu>
+<guimenuitem>Savannah</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Switch</action> to the Savannah theme</para></listitem>
 </varlistentry>
 
 <varlistentry>
