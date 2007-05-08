@@ -18,6 +18,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.             *
  ***************************************************************************/
 
+#include "klettresview.h"
+
 #include <QLabel>
 #include <QTimer>
 #include <QPainter>
@@ -25,12 +27,12 @@
 #include <QFile>
 #include <QPaintEvent>
 
-#include <klocale.h>
-#include <kstandarddirs.h>
-#include <kdebug.h>
+#include <KLocale>
+#include <KStandardDirs>
+#include <KDebug>
+
 //Project headers
 #include "klettres.h"
-#include "klettresview.h"
 #include "prefs.h"
 #include "kltheme.h"
 

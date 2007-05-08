@@ -19,21 +19,19 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-#include <stdlib.h>
-
-#include <kmessagebox.h>
-#include <klocale.h>
-#include <kdebug.h>
-#include <krandomsequence.h>
-#include <kstandarddirs.h>
-#include <kurl.h>
-#include <phonon/audioplayer.h>
 
 #include "soundfactory.h"
-#include "soundfactory.moc"
+
+#include <KMessageBox>
+#include <KLocale>
+#include <KDebug>
+#include <KRandomSequence>
+#include <KStandardDirs>
+#include <KUrl>
+#include <Phonon/AudioPlayer>
+
 #include "klettres.h"
 #include "prefs.h"
-
 
 SoundFactory::SoundFactory(KLettres *parent, const char *)
         : QObject(parent), m_player(0)
@@ -165,3 +163,5 @@ void SoundFactory::setSoundSequence()
     
     randomSequence.randomize(randomList);
 }
+
+#include "soundfactory.moc"

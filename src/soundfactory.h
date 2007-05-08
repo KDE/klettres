@@ -24,7 +24,9 @@
 #ifndef _SOUNDFACTORY_H_
 #define _SOUNDFACTORY_H_
 
-#include <QDomAttr>
+#include <QObject>
+#include <QStringList>
+#include <QtXml/QDomDocument>
 
 class KLettres;
 namespace Phonon

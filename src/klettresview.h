@@ -21,7 +21,7 @@
 #ifndef KLETTRESVIEW_H
 #define KLETTRESVIEW_H
 
-#include <klineedit.h>
+#include <KLineEdit>
 
 class QPalette;
 class QPixmap;
@@ -103,7 +103,7 @@ protected:
     protected slots:
     ///Play the same sound again
     void slotPlayAgain();
-    
+
     void slotProcess(const QString &inputLetter);
 
     void slotTimerDone();

@@ -22,7 +22,7 @@
 #ifndef KLETTRES_H
 #define KLETTRES_H
 
-#include <kxmlguiwindow.h>
+#include <KXmlGuiWindow>
 
 #include "klettresview.h"
 #include "soundfactory.h"

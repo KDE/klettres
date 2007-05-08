@@ -20,14 +20,14 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.             *
  ***************************************************************************/
 
-#include <klocale.h>
+#include "timer.h"
 
 #include <QLabel>
 #include <QSlider>
 
-#include "timer.h"
-#include "prefs.h"
+#include <KLocale>
 
+#include "prefs.h"
 
 Timer::Timer()
     :QWidget()

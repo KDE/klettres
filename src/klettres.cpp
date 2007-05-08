@@ -18,37 +18,38 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.             *
  ***************************************************************************/
 
+#include "klettres.h"
+
 //Qt includes
 #include <QBitmap>
 #include <QDir>
 #include <QFile>
 #include <QLabel>
 #include <QPainter>
-
 #include <QTextStream>
-//KDE includes
-#include <kaction.h>
-#include <kactioncollection.h>
-#include <kcombobox.h>
-#include <kconfigdialog.h>
-#include <kdebug.h>
-#include <klocale.h>
-#include <kmenubar.h>
-#include <kmessagebox.h>
-#include <knuminput.h>
-#include <kselectaction.h>
-#include <kstandardaction.h>
-#include <kstandarddirs.h>
-#include <kstatusbar.h>
-#include <ktoggleaction.h>
-#include <ktoolbar.h>
-#include <kicon.h>
-#include <knewstuff2/engine.h>
-#include <kapplication.h>
 
-#include <kglobal.h>
+//KDE includes
+#include <KAction>
+#include <KActionCollection>
+#include <KComboBox>
+#include <KConfigDialog>
+#include <KDebug>
+#include <KLocale>
+#include <KMenuBar>
+#include <KMessageBox>
+#include <KNumInput>
+#include <KSelectAction>
+#include <KStandardAction>
+#include <KStandardDirs>
+#include <KStatusBar>
+#include <KToggleAction>
+#include <KToolBar>
+#include <KIcon>
+#include <KNS/Engine>
+#include <KApplication>
+#include <KGlobal>
+
 //Project includes
-#include "klettres.h"
 #include "ui_fontsdlg.h"
 #include "timer.h"
 #include "prefs.h"

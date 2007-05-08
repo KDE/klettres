@@ -21,9 +21,9 @@
 
 #include <QDir>
 
-#include <kdebug.h>
-#include <kglobal.h>
-#include <kstandarddirs.h>
+#include <KDebug>
+#include <KGlobal>
+#include <KStandardDirs>
 
 bool LangUtils::hasSpecialChars(const QString& lang)
 {
