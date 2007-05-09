@@ -8,13 +8,14 @@
   <group name="General">
     <entry name="Language" type="String">
       <label>Language</label>
+      <default>en</default>
     </entry>
     <entry name="Theme" type="Enum" key="myTheme">
       <label>Theme</label>
       <choices>
         <choice name="kid"/>
         <choice name="desert"/>
-	<choice name="savannah"/>
+        <choice name="savannah"/>
       </choices>
       <default>kid</default>
     </entry>
@@ -45,8 +46,8 @@
     <entry name="Font" type="Font" key="mFont">
       <label>Font</label>
       <code>QFont defaultFont = KGlobalSettings::largeFont();
-    	defaultFont.setPointSize(48);
-    	defaultFont.setBold(true);
+            defaultFont.setPointSize(48);
+            defaultFont.setBold(true);
       </code>
       <default code="true">defaultFont</default>
     </entry>

@@ -200,9 +200,9 @@ KLTheme* KLThemeFactory::buildTheme(int id) const
     {
         case 0:
             return new KLThemeKid();
-	case 1:
+        case 1:
             return new KLThemeDesert();
-	case 2:
+        case 2:
             return new KLThemeSavannah();
     }
     return 0;

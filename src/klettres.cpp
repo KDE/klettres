@@ -103,20 +103,20 @@ void KLettres::findLanguages()
     m_languageNames.clear();
     //m_sortedNames.clear();
     //the program scans in khangman/data/ to see what languages data is found
-    
+
     //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
     //to find the name of the country
     //corresponding to the code and the language the user set
     KConfig entry(KStandardDirs::locate("locale", "all_languages"));
-    const QStringList::ConstIterator itEnd = m_languages.end();
-    for (QStringList::Iterator it = m_languages.begin(); it != m_languages.end(); ++it) {
-        if (*it == "hi-ro")
+
+    foreach(QString language, m_languages) {
+        if (language == "hi-ro")
             m_languageNames.append(i18n("Romanized Hindi"));
-        else if (*it =="lug_UG")
+        else if (language == "lug_UG")
             m_languageNames.append(i18n("Luganda"));
         else
         {
-            KConfigGroup group = entry.group(*it);
+            KConfigGroup group = entry.group(language);
             m_languageNames.append(group.readEntry("Name"));
         }
     }
@@ -128,16 +128,16 @@ QString Prefs::defaultLanguage()
 {
     //see what is the user language for KDE
     QStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
-	if (!defaultLanguages.isEmpty()) {
-	//scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
-	int i = Prefs::self()->m_languages.indexOf(defaultLanguages[0]);
-	if (Prefs::self()->m_languages.contains(Prefs::language()))
-		return Prefs::language(); //the last language played
-	else if (i<1)
-		return "en"; //if no other
-	else
-		return Prefs::self()->m_languages[i]; //KDE default if exists
-	}
+    if (!defaultLanguages.isEmpty()) {
+    //scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
+    int i = Prefs::self()->m_languages.indexOf(defaultLanguages[0]);
+    if (Prefs::self()->m_languages.contains(Prefs::language()))
+        return Prefs::language(); //the last language played
+    else if (i<1)
+        return "en"; //if no other
+    else
+        return Prefs::self()->m_languages[i]; //KDE default if exists
+    }
     return QString();
 }
 

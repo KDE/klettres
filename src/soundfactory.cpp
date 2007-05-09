@@ -39,7 +39,7 @@ SoundFactory::SoundFactory(KLettres *parent, const char *)
     klettres = parent;
 
     namesList.clear();
-	filesList.clear();
+    filesList.clear();
     sounds = 0;
 
     bool ok = klettres->loadLayout(m_layoutsDocument);
@@ -160,7 +160,7 @@ void SoundFactory::setSoundSequence()
     //get the number of sounds then shuffle it: each number will be taken once then the sequence will come back
     for (uint j = 0; j < sounds; j++) 
         randomList.append(j);
-    
+
     randomSequence.randomize(randomList);
 }
 
