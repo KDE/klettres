@@ -109,7 +109,7 @@ void KLettres::findLanguages()
     //corresponding to the code and the language the user set
     KConfig entry(KStandardDirs::locate("locale", "all_languages"));
 
-    foreach(QString language, m_languages) {
+    foreach(const QString &language, m_languages) {
         if (language == "hi-ro")
             m_languageNames.append(i18n("Romanized Hindi"));
         else if (language == "lug_UG")
