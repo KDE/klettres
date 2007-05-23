@@ -81,7 +81,7 @@ KLettres::KLettres()
     kDebug() << "m_languages  " << m_languages << endl;
     findLanguages();
     //Prefs::setLanguage(Prefs::defaultLanguage());
-    //Prefs::writeConfig();
+    //Prefs::self()->writeConfig();
     //MainWindow GUI: menus, tolbars and statusbar
     setupActions();
     setupStatusbar();
@@ -335,7 +335,7 @@ void KLettres::slotUpdateSettings()
 void KLettres::slotChangeLevel(int newLevel)
 {
     Prefs::setLevel(newLevel+1);
-    Prefs::writeConfig();
+    Prefs::self()->writeConfig();
     updateLevMenu(newLevel);
     //TODO is that necessary? Change level effectively by reloading sounds
 
@@ -357,7 +357,7 @@ void KLettres::slotChangeLanguage(int newLanguage)
 {
     // Write new language in config
     Prefs::setLanguage(m_languages[newLanguage]);
-    Prefs::writeConfig();
+    Prefs::self()->writeConfig();
     // Update the StatusBar
     QString langString = m_languageNames[newLanguage];
     langString.replace("&", QString());
@@ -374,7 +374,7 @@ void KLettres::slotChangeLanguage(int newLanguage)
 void KLettres::slotChangeTheme(int index)
 {
     Prefs::setTheme(index);
-    Prefs::writeConfig();
+    Prefs::self()->writeConfig();
     m_view->setTheme(KLThemeFactory::instance()->buildTheme(index));
 }
 
@@ -397,7 +397,7 @@ void KLettres::slotModeGrownup()
     //m_secondToolbar->setIconSize(22); //causes a crash when adding/removing actions in toolbar
     m_view->m_timer = Prefs::grownTimer();
     Prefs::setMode(Prefs::EnumMode::grownup);
-    Prefs::writeConfig();
+    Prefs::self()->writeConfig();
 }
 
 void KLettres::slotModeKid()
@@ -420,7 +420,7 @@ void KLettres::slotModeKid()
     //m_secondToolbar->setIconSize(32);
     m_view->m_timer = Prefs::kidTimer();
     Prefs::setMode(Prefs::EnumMode::kid);
-    Prefs::writeConfig();
+    Prefs::self()->writeConfig();
 }
 
 void KLettres::loadLangToolBar()

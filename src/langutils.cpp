@@ -56,7 +56,7 @@ QStringList LangUtils::getLanguages()
 	m_languages.sort();
 	
 	//Prefs::setLanguages(m_languages);
-	//Prefs::writeConfig();
+	//Prefs::self()->writeConfig();
 	//find duplicated entries in KDEDIR and KDEHOME
 	QStringList temp_languages;
 	for (int i=0;  i<m_languages.count(); i++)  {
