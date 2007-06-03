@@ -113,6 +113,7 @@ void KLettresView::paintEvent( QPaintEvent * e )
     QPainter p(this);
     paintBackground(p, e->rect());
     paintLetter(p, e->rect());
+    m_letterEdit->setFont(Prefs::font());
 }
 
 void KLettresView::paintBackground(QPainter &p, const QRect& rect)
