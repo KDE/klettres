@@ -127,7 +127,7 @@ void KLettres::findLanguages()
 QString Prefs::defaultLanguage()
 {
     //see what is the user language for KDE
-    QStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
+    QStringList defaultLanguages = KGlobal::locale()->languageList();
     if (!defaultLanguages.isEmpty()) {
     //scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
     int i = Prefs::self()->m_languages.indexOf(defaultLanguages[0]);
