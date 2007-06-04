@@ -30,7 +30,6 @@
 class QLabel;
 class KToggleAction;
 class KSelectAction;
-class KComboBox;
 class KToolBar;
 class KLNewStuff;
 

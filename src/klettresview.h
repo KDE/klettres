@@ -23,9 +23,7 @@
 
 #include <KLineEdit>
 
-class QPalette;
 class QPixmap;
-class QLabel;
 class QRect;
 class QSvgRenderer;
 class KLettres;
