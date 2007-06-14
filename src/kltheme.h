@@ -21,7 +21,6 @@
 #define KLETTRESTHEME_H
 
 #include <QPalette>
-#include <QStringList>
 
 class KLTheme
 {
