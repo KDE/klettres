@@ -11,6 +11,7 @@ Comment[es]=Un programa de KDE para aprender el alfabeto
 Comment[ja]=アルファベットを学習するための KDE プログラム
 Comment[sv]=Ett KDE program för att lära sig alfabetet
 Comment[x-test]=xxa KDE program to learn the alphabetxx
+Comment[zh_TW]= 學習字母的 KDE 程式
 Terminal=false
 Name=KLettres
 Name[af]=K-letters
