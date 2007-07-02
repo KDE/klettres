@@ -37,56 +37,52 @@ static const char description[] =
 
 static const char version[] = "1.4";
 
-static KCmdLineOptions options[] =
-    {
-        //    { "+[URL]", I18N_NOOP( "Document to open" ), 0 },
-        KCmdLineLastOption
-    };
-
 int main(int argc, char **argv)
 {
-    KAboutData about("klettres", I18N_NOOP("KLettres"), KLETTRES_VERSION, description,
-                     KAboutData::License_GPL, "(C) 2001-2007 Anne-Marie Mahfouf",0, "http://edu.kde.org/klettres", "submit@bugs.kde.org");
-    about.addAuthor( "Anne-Marie Mahfouf", 0, "annma AT kde DOT org");
-    about.addCredit("Ludovic Grossard",
-                    I18N_NOOP("French sounds"), "grossard AT kde DOT org");
-    about.addCredit("Geert Stams",
-                    I18N_NOOP("Dutch sounds"), "geert AT pa3csg DOT myweb DOT nl");
-    about.addCredit("Erik Kjaer Pedersen",
-                    I18N_NOOP("Danish sounds"), "erik AT binghamton DOT edu");
-    about.addCredit("Eva Mikulčíková",
-                    I18N_NOOP("Czech sounds"), "evmi AT seznam DOT cz");
-    about.addCredit("Silvia Motyčková & Jozef Říha",
-                    I18N_NOOP("Slovak sounds"), "silviamotycka AT seznam DOT cz");
-    about.addCredit("Robert Wadley",
-                    I18N_NOOP("English sounds"), "robntina AT juno DOT com");               
-    about.addCredit("Pietro Pasotti",
-                    I18N_NOOP("Italian sounds"), "pietro AT itopen DOT it");
-    about.addCredit("Ana Belén Caballero and Juan Pedro Paredes",
-                    I18N_NOOP("Spanish sounds"), "neneta  AT iquis DOT com");
-    about.addCredit("Vikas Kharat",
-                    I18N_NOOP("Romanized Hindi sounds"), "kharat AT sancharnet DOT in");
-    about.addCredit("John Magoye and Cormac Lynch",
-                     I18N_NOOP("Luganda sounds"), "cormaclynch AT eircom DOT net");
-    about.addCredit("Helmut Kriege",
-                     I18N_NOOP("German sounds"), "h.kriege AT freenet DOT de");
-    about.addCredit("Assaf Gorgon and Diego Iastrubni",
-                     I18N_NOOP("Hebrew sounds"), "elcuco AT kde DOT org");
-    about.addCredit("Lisa Kriege",
-                     I18N_NOOP("British English sounds"), "h.kriege AT freenet DOT de");
-    about.addCredit("Danny Allen",
-                    I18N_NOOP("SVG background pictures, kids and grown-up SVG icons"), "dannya40uk AT yahoo DOT co DOT uk");
-    about.addCredit("Robert Gogolok",
-                    I18N_NOOP("Support and coding guidance"), "mail AT robert-gogolok DOT de");
-    about.addCredit("Peter Hedlund",
-                    I18N_NOOP("Code for generating special characters' icons"), "peter DOT hedlund AT kdemail DOT net");
-    about.addCredit("Waldo Bastian",
-                    I18N_NOOP("Port to KConfig XT, coding help"), "bastian AT kde DOT org");
-    about.addCredit("Pino Toscano",
-                    I18N_NOOP("Code cleaning, Theme class"), "toscano DOT pino AT tiscali DOT it");
-    about.addCredit("Michael Goettsche",
-                    I18N_NOOP("Timer setting widgets"), "michael.goettsche AT kdemail DOT net");
+    KAboutData about("klettres", 0, ki18n("KLettres"), KLETTRES_VERSION, ki18n(description),
+                     KAboutData::License_GPL, ki18n("(C) 2001-2007 Anne-Marie Mahfouf"),KLocalizedString(), "http://edu.kde.org/klettres", "submit@bugs.kde.org");
+    about.addAuthor( ki18n("Anne-Marie Mahfouf"), KLocalizedString(), "annma AT kde DOT org");
+    about.addCredit(ki18n("Ludovic Grossard"),
+                    ki18n("French sounds"), "grossard AT kde DOT org");
+    about.addCredit(ki18n("Geert Stams"),
+                    ki18n("Dutch sounds"), "geert AT pa3csg DOT myweb DOT nl");
+    about.addCredit(ki18n("Erik Kjaer Pedersen"),
+                    ki18n("Danish sounds"), "erik AT binghamton DOT edu");
+    about.addCredit(ki18n("Eva Mikulčíková"),
+                    ki18n("Czech sounds"), "evmi AT seznam DOT cz");
+    about.addCredit(ki18n("Silvia Motyčková & Jozef Říha"),
+                    ki18n("Slovak sounds"), "silviamotycka AT seznam DOT cz");
+    about.addCredit(ki18n("Robert Wadley"),
+                    ki18n("English sounds"), "robntina AT juno DOT com");               
+    about.addCredit(ki18n("Pietro Pasotti"),
+                    ki18n("Italian sounds"), "pietro AT itopen DOT it");
+    about.addCredit(ki18n("Ana Belén Caballero and Juan Pedro Paredes"),
+                    ki18n("Spanish sounds"), "neneta  AT iquis DOT com");
+    about.addCredit(ki18n("Vikas Kharat"),
+                    ki18n("Romanized Hindi sounds"), "kharat AT sancharnet DOT in");
+    about.addCredit(ki18n("John Magoye and Cormac Lynch"),
+                     ki18n("Luganda sounds"), "cormaclynch AT eircom DOT net");
+    about.addCredit(ki18n("Helmut Kriege"),
+                     ki18n("German sounds"), "h.kriege AT freenet DOT de");
+    about.addCredit(ki18n("Assaf Gorgon and Diego Iastrubni"),
+                     ki18n("Hebrew sounds"), "elcuco AT kde DOT org");
+    about.addCredit(ki18n("Lisa Kriege"),
+                     ki18n("British English sounds"), "h.kriege AT freenet DOT de");
+    about.addCredit(ki18n("Danny Allen"),
+                    ki18n("SVG background pictures, kids and grown-up SVG icons"), "dannya40uk AT yahoo DOT co DOT uk");
+    about.addCredit(ki18n("Robert Gogolok"),
+                    ki18n("Support and coding guidance"), "mail AT robert-gogolok DOT de");
+    about.addCredit(ki18n("Peter Hedlund"),
+                    ki18n("Code for generating special characters' icons"), "peter DOT hedlund AT kdemail DOT net");
+    about.addCredit(ki18n("Waldo Bastian"),
+                    ki18n("Port to KConfig XT, coding help"), "bastian AT kde DOT org");
+    about.addCredit(ki18n("Pino Toscano"),
+                    ki18n("Code cleaning, Theme class"), "toscano DOT pino AT tiscali DOT it");
+    about.addCredit(ki18n("Michael Goettsche"),
+                    ki18n("Timer setting widgets"), "michael.goettsche AT kdemail DOT net");
     KCmdLineArgs::init(argc, argv, &about);
+
+    KCmdLineOptions options;
     KCmdLineArgs::addCmdLineOptions(options);
     KApplication app;
 
