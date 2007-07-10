@@ -10,7 +10,6 @@ set(klettres_SRCS
    kltheme.cpp
    timer.cpp )
 
-kde4_automoc(${klettres_SRCS})
 
 kde4_add_ui_files(klettres_SRCS
     timerui.ui
