@@ -17,8 +17,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.             *
  ***************************************************************************/
 
-#ifndef KLETTRESTHEME_H
-#define KLETTRESTHEME_H
+#ifndef KLTHEME_H
+#define KLTHEME_H
 
 #include <QPalette>
 

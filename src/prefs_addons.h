@@ -18,6 +18,9 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.             *
  ***************************************************************************/
  
+#ifndef PREFS_ADDONS_H
+#define PREFS_ADDONS_H
+
  public:
 static QString defaultLanguage();
 static void setLanguages(const QStringList &languages)
@@ -45,3 +48,6 @@ static int languageNumber()
     return 0;
 }
 QStringList m_languages;
+
+#endif
+
