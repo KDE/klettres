@@ -64,13 +64,13 @@ void KLettresView::chooseSound()
     //get the next random sound
     m_random=m_klettres->soundFactory->randomList[randomInt%m_klettres->soundFactory->sounds];
     //The sound is played
-    kDebug() << "m_random " << m_random << endl;
+    kDebug() << "m_random " << m_random;
     m_klettres->soundFactory->playSound(m_random);
     //store letter or syllable in m_currentLetter
     m_currentLetter = m_klettres->soundFactory->namesList[m_random];
     //Find the length of the syllable
     m_length=m_klettres->soundFactory->namesList[m_random].length();
-    kDebug() << "syllable length " << m_length << endl;
+    kDebug() << "syllable length " << m_length;
     int width;
     if (m_length<3)
         width = 200;
@@ -159,7 +159,7 @@ void KLettresView::game()
 void KLettresView::slotProcess(const QString &inputLetter)
 {
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
-    kDebug() << "Input: " << inputLetter << endl;
+    kDebug() << "Input: " << inputLetter;
     m_inputLetter=m_letterEdit->text();
     if (m_inputLetter.at(0).isLetter()) //(a1.at(inputLetter.length()).lower().isLetter())
     {
@@ -174,14 +174,14 @@ void KLettresView::slotProcess(const QString &inputLetter)
     }
     else if (m_inputLetter.length() < m_cursorPos)
     {
-        kDebug() << "In backspace case !!! " << endl;
+        kDebug() << "In backspace case !!! ";
         m_cursorPos--;
         QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
     }
     else
     {
-        kDebug() << "in no char loop" << endl;
-        kDebug() << "cursor " << m_cursorPos << endl;
+        kDebug() << "in no char loop";
+        kDebug() << "cursor " << m_cursorPos;
         m_letterEdit->backspace();
         QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
     }
@@ -189,7 +189,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
 
 void KLettresView::slotTimerDone()
 {
-    kDebug() << "in timer done" << endl;
+    kDebug() << "in timer done";
     QString match = m_currentLetter.left(m_cursorPos );
     if (match == m_upperLetter)
     {

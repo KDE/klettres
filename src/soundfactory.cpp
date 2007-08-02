@@ -55,7 +55,7 @@ void SoundFactory::change(const QString &currentLanguage)
 {
     //go load the sounds for the current language
     bool ok = loadLanguage(m_layoutsDocument, currentLanguage);
-    kDebug() << "ok " << ok << endl;
+    kDebug() << "ok " << ok;
     //tell the user if there are no sounds or get the random sounds
     if (!ok) loadFailure();
         else setSoundSequence();
@@ -68,7 +68,7 @@ void SoundFactory::playSound(int mySound)
     if ((uint) mySound >= sounds) return;
 
     soundFile = KStandardDirs::locate("data", "klettres/" + filesList[mySound]);
-    kDebug() << "soundFile " << soundFile << endl;
+    kDebug() << "soundFile " << soundFile;
 
     if (soundFile.isEmpty()) return;
 
@@ -102,10 +102,10 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     languageElement = (const QDomElement &) languagesList.item(0).toElement();
     codeAttribute = languageElement.attributeNode("code");
     if (currentLanguage != codeAttribute.value()) {
-        kDebug() << "Fail reading language !!! " << endl;
+        kDebug() << "Fail reading language !!! ";
         return false;
     }
-    else kDebug() << "current language " << currentLanguage << endl;
+    else kDebug() << "current language " << currentLanguage;
     //load the sounds for level 1 and 2 (alphabet)
     if ((Prefs::level() == 1) || (Prefs::level() == 2))
     {

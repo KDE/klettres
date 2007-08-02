@@ -72,7 +72,7 @@ QStringList LangUtils::getLanguages()
 	}
 	//TODO TEST in FRENCH
 	m_languages.sort();
-	kDebug() <<m_languages << endl;
+	kDebug() <<m_languages;
 	return m_languages;
 }
 
