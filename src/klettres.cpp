@@ -201,19 +201,19 @@ void KLettres::setupActions()
     m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
 
     m_levelAction = actionCollection()->add<KSelectAction>("levels");
-    m_levelAction->setText(i18n("L&evel"));
+    m_levelAction->setText(i18nc("@label:listbox", "L&evel"));
     m_levelAction->setToolTip(i18n("Select the level"));
     m_levelAction->setWhatsThis(i18n("You can select the level: level 1 displays a letter and you hear it; level 2 does not display the letter, you only hear it; level 3 displays a syllable and you hear it; level 4 does not display the syllable, you only hear it."));
 
     m_languageAction = actionCollection()->add<KSelectAction>("languages");
-    m_languageAction->setText(i18n("&Language"));
+    m_languageAction->setText(i18nc("@label:listbox", "&Language"));
     m_languageAction->setItems(m_languageNames);
     m_languageAction->setCurrentItem(m_languages.indexOf(Prefs::language()));
 
-    m_levelsNames.append(i18n( "Level 1" ));
-    m_levelsNames.append(i18n( "Level 2" ));
-    m_levelsNames.append(i18n( "Level 3" ));
-    m_levelsNames.append(i18n( "Level 4" ));
+    m_levelsNames.append(i18nc("@item:inlistbox choose level 1", "Level 1" ));
+    m_levelsNames.append(i18nc("@item:inlistbox choose level 2",  "Level 2" ));
+    m_levelsNames.append(i18nc("@item:inlistbox choose level 3",  "Level 3" ));
+    m_levelsNames.append(i18nc("@item:inlistbox choose level 4",  "Level 4" ));
     m_levelAction->setItems(m_levelsNames);
     m_levelAction->setCurrentItem(Prefs::level()-1);
 
@@ -291,7 +291,7 @@ void KLettres::loadSettings()
     m_langLabel->setText(langString);
     loadLangToolBar();
     // load default level
-    m_levLabel->setText(i18n("(Level %1)", Prefs::level()));
+    m_levLabel->setText(i18nc("@info:status the current level chosen", "(Level %1)", Prefs::level()));
 
     m_view->setTheme(KLThemeFactory::instance()->buildTheme(Prefs::theme()));
 
@@ -350,7 +350,7 @@ void KLettres::updateLevMenu(int id)
 {
     //m_levelCombo->setCurrentItem(id);
     m_levelAction->setCurrentItem(id);
-    m_levLabel->setText(i18n("(Level %1)", Prefs::level()));
+    m_levLabel->setText(i18nc("@info:status the current level chosen", "(Level %1)", Prefs::level()));
 }
 
 void KLettres::slotChangeLanguage(int newLanguage)

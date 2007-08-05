@@ -46,7 +46,7 @@ public:
 
     virtual QString uiName() const
     {
-        return i18n("Kid");
+        return i18nc("@item:inlistbox", "Kid");
     }
 
     virtual QString svgFileName() const
@@ -96,7 +96,7 @@ public:
 
     virtual QString uiName() const
     {
-        return i18n("Desert");
+        return i18nc("@item:inlistbox desert theme for the interface", "Desert");
     }
 
     virtual QString svgFileName() const
@@ -146,7 +146,7 @@ public:
 
     virtual QString uiName() const
     {
-        return i18n("Savannah");
+        return i18nc("@item:inlistbox", "Savannah");
     }
 
     virtual QString svgFileName() const
