@@ -201,7 +201,7 @@ void KLettres::setupActions()
     m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
 
     m_levelAction = actionCollection()->add<KSelectAction>("levels");
-    m_levelAction->setText(i18nc("@label:listbox", "L&evel"));
+    m_levelAction->setText(i18nc("@label:listbox which difficulty level to use", "L&evel"));
     m_levelAction->setToolTip(i18n("Select the level"));
     m_levelAction->setWhatsThis(i18n("You can select the level: level 1 displays a letter and you hear it; level 2 does not display the letter, you only hear it; level 3 displays a syllable and you hear it; level 4 does not display the syllable, you only hear it."));
 
