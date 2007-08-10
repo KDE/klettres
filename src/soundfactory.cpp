@@ -28,7 +28,7 @@
 #include <KRandomSequence>
 #include <KStandardDirs>
 #include <KUrl>
-#include <Phonon/AudioPlayer>
+#include <Phonon/MediaObject>
 
 #include "klettres.h"
 #include "prefs.h"
@@ -74,9 +74,14 @@ void SoundFactory::playSound(int mySound)
 
     if (!m_player)
     {
-        m_player = new Phonon::AudioPlayer(Phonon::GameCategory, this);
+        m_player = Phonon::createPlayer(Phonon::GameCategory, soundFile);
+        m_player->setParent(this);
     }
-    m_player->play(KUrl::fromPath(soundFile));
+    else
+    {
+        m_player->setCurrentSource(soundFile);
+    }
+    m_player->play();
 }
 
 void SoundFactory::loadFailure()

@@ -31,7 +31,7 @@
 class KLettres;
 namespace Phonon
 {
-	class AudioPlayer;
+	class MediaObject;
 }
 
 /**
@@ -80,7 +80,7 @@ private:
 	void loadFailure();
     ///Shuffle the index in random to get random sounds. The sequence of random sounds will take 1 random sound after another, then restart when all sounds have been played
     void setSoundSequence();
-	Phonon::AudioPlayer *m_player;
+	Phonon::MediaObject *m_player;
 };
 
 #endif
