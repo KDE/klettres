@@ -304,6 +304,13 @@ void KLettres::loadSettings()
 void KLettres::slotDownloadNewStuff()
 {
     KNS::Entry::List entries = KNS::Engine::download();
+    //look for languages dirs installed
+    m_languages = LangUtils::getLanguages();
+    findLanguages();
+    //refresh Languages menu
+    m_languageAction->setItems(m_languageNames);
+    slotChangeLanguage(m_languages.indexOf(Prefs::defaultLanguage()));
+    m_languageAction->setCurrentItem(m_languages.indexOf(Prefs::defaultLanguage()));
 }
 
 void KLettres::slotMenubar()
