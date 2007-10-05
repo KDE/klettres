@@ -150,6 +150,7 @@ void KLettresView::game()
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
     m_letterEdit->clear();
     m_letterEdit->setCursorPosition(0);
+    m_letterEdit->setMaxLength( 1 );
     m_letterEdit->setFocus();
     chooseSound();
     randomInt++;
