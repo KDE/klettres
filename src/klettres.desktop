@@ -50,5 +50,6 @@ GenericName[pt]=Aprender o Alfabeto
 GenericName[pt_BR]=Aprender o Alfabeto
 GenericName[sv]=Inlärning av alfabetet
 GenericName[x-test]=xxLearn The Alphabetxx
+GenericName[zh_CN]=学习字母
 GenericName[zh_TW]=學習字母
 Categories=Qt;KDE;Education;Languages;
