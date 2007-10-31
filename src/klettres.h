@@ -95,7 +95,7 @@ protected:
     ///Create an instance of a KToolBar
     KToolBar *m_mainToolbar;
     ///Second toolbar with buttons of special characters per language
-    KToolBar *m_secondToolbar;
+    KToolBar *specialCharToolbar;
     ///is false when menubar button is not shown
     bool menuBool;
     ///Build the main window menus
@@ -107,7 +107,7 @@ protected:
     /**generates icons for the special characters toolbar
      * @param c the character that will be painted on the icon
      */
-    QString charIcon(const QChar &c);
+    QIcon charIcon(const QChar &c);
     /**
      *Update the level menu and level combobox
      * @param id The id of the new level

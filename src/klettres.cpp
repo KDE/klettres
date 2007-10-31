@@ -80,8 +80,6 @@ KLettres::KLettres()
     m_languages = LangUtils::getLanguages();
     kDebug() << "m_languages  " << m_languages;
     findLanguages();
-    //Prefs::setLanguage(Prefs::defaultLanguage());
-    //Prefs::self()->writeConfig();
     //MainWindow GUI: menus, tolbars and statusbar
     setupActions();
     setupStatusbar();
@@ -101,7 +99,6 @@ KLettres::~KLettres()
 void KLettres::findLanguages()
 {
     m_languageNames.clear();
-    //m_sortedNames.clear();
     //the program scans in khangman/data/ to see what languages data is found
 
     //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
@@ -121,7 +118,6 @@ void KLettres::findLanguages()
         }
     }
     //never sort m_languageNames as it's m_languages translated
-    //m_sortedNames = m_languageNames;
 }
 
 QString Prefs::defaultLanguage()
@@ -254,15 +250,15 @@ void KLettres::setupStatusbar()
     m_levLabel = new QLabel(st);
     st->addWidget(m_langLabel);
     st->insertFixedItem("", 1);//add a space
-    st->addWidget(m_levLabel);
+    st->addWidget(m_levLabel);   
     statusBar();
 }
 
 void KLettres::setupToolbars()
 {
-    //toolbar for special characters
-    m_secondToolbar = toolBar("secondToolbar");
-    addToolBar ( Qt::BottomToolBarArea, m_secondToolbar);
+    // Toolbar for special characters
+    specialCharToolbar = toolBar("specialCharToolbar");
+    addToolBar ( Qt::BottomToolBarArea, specialCharToolbar);
 }
 
 void KLettres::optionsPreferences()
@@ -279,6 +275,8 @@ void KLettres::optionsPreferences()
     connect(dialog, SIGNAL(settingsChanged( const QString &)), this, SLOT(slotUpdateSettings()));
     dialog->setAttribute( Qt::WA_DeleteOnClose );
     dialog->show();
+    
+    
 }
 
 void KLettres::loadSettings()
@@ -432,7 +430,6 @@ void KLettres::slotModeKid()
 
 void KLettres::loadLangToolBar()
 {
-    m_secondToolbar->clear();
    QString lang = m_languages[Prefs::languageNumber()];
     if (LangUtils::hasSpecialChars(lang))//Dutch, English, French and Italian have no special characters
     {
@@ -458,10 +455,13 @@ void KLettres::loadLangToolBar()
         //allData contains all the words from the file
         allData = readFileStr.readAll().split("\n");
         openFileStream.close();
-        for (int i=0; i<(int) allData.count(); i++) {
-            if (!allData[i].isEmpty())
-                m_secondToolbar->addAction (charIcon(allData[i].at(0)));//, i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
-		//TODO fix by creating a new KAction, see KAction API doc
+        for (int i=0; i<(int) allData.count(); ++i) {
+            if (!allData[i].isEmpty()) {
+                QAction *act = specialCharToolbar->addAction(allData.at(i));
+                act->setIcon(charIcon(allData.at(i).at(0)));
+                // used to carry the id
+                act->setData(i);
+	    }
         }
     }
 }
@@ -480,7 +480,7 @@ void KLettres::slotPasteChar()
     m_view->enterLetter(allData.at(id));
 }
 
-QString KLettres::charIcon(const QChar & c)
+QIcon KLettres::charIcon(const QChar & c)
 {
     ///Create a name and path for the icon
     QString s = KStandardDirs::locateLocal("icon", "char" + QString::number(c.unicode()) + ".png");
@@ -515,7 +515,7 @@ QString KLettres::charIcon(const QChar & c)
     ///Save the icon to disk
     pm.save(s, "PNG");
 
-    return s;
+    return QIcon(pm);
 }
 
 #include "klettres.moc"
