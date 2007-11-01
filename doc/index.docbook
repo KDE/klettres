@@ -207,7 +207,7 @@ is kept until you change.</para>
 	</mediaobject>
 </screenshot>
 </para>
-<para>Here is a screenshot of Level 2 with the <emphasis>kid</emphasis> mode, <emphasis>classroom</emphasis> theme and Danish language.</para>
+<para>Here is a screenshot of Level 2 with the <emphasis>kid</emphasis> mode, <emphasis>kid</emphasis> theme and Danish language.</para>
 
 <para>Clicking in the <guilabel>Level</guilabel> combo-box and choosing <guilabel>Level
 2</guilabel> or using the <guimenu>Level</guimenu> menu brings you to level 2. In that level, the user only
@@ -232,7 +232,7 @@ is wrong, the letter appears to help him. </para>
 </screenshot>
 </para>
 
-<para>Here you can see &klettres; level 3, <emphasis>grown-up</emphasis> mode, <emphasis>arctic</emphasis> theme and Czech language.
+<para>Here you can see &klettres; level 3, <emphasis>grown-up</emphasis> mode, <emphasis>savannah</emphasis> theme and Czech language.
 </para>
 
 <para>
@@ -703,8 +703,6 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>cormaclynch@eircom.net</email></para></listitem>
 <listitem><para>German sounds: Helmut Kriege
 <email>h.kriege@freenet.de</email></para></listitem>
-<listitem><para>Classroom background picture: Renaud Blanchard
-<email>kisukuma@chez.com</email></para> </listitem>
 <listitem><para>Original icons:  &Primoz.Anzur;
 <email>zerokode@yahoo.com</email></para></listitem>
 <listitem><para>Support and coding guidance: &Robert.Gogolok;
