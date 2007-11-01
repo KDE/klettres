@@ -430,18 +430,22 @@ void KLettres::slotModeKid()
 
 void KLettres::loadLangToolBar()
 {
-   QString lang = m_languages[Prefs::languageNumber()];
+    QString lang = Prefs::language();//m_languages[Prefs::languageNumber()];
+    kDebug() << "Prefs::language()  " << Prefs::language() << endl;
+
+    specialCharToolbar->clear();
+
     if (LangUtils::hasSpecialChars(lang))//Dutch, English, French and Italian have no special characters
     {
         allData.clear();
-        QString myString=QString("klettres/%1.txt").arg(m_languages[Prefs::languageNumber()]);
+        QString myString=QString("klettres/%1.txt").arg(lang);
         QFile myFile;
         myFile.setFileName(KStandardDirs::locate("data",myString));
         if (!myFile.exists())
         {
 
             QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
-                                    "please check your installation.", m_languages[Prefs::languageNumber()]);
+                                    "please check your installation.", lang);
             KMessageBox::sorry( this, mString,
                                     i18n("Error") );
             qApp->quit();
@@ -463,6 +467,9 @@ void KLettres::loadLangToolBar()
                 act->setData(i);
 	    }
         }
+    }
+    else {
+      specialCharToolbar->hide();
     }
 }
 
