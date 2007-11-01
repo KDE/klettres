@@ -294,6 +294,9 @@ void KLettres::loadSettings()
         slotModeGrownup();
     else
         slotModeKid();
+
+    m_menubarAction->setChecked(Prefs::menuBarBool());
+    slotMenubar();
 }
 
 void KLettres::slotDownloadNewStuff()
@@ -312,7 +315,7 @@ void KLettres::slotMenubar()
 {
     switch (m_menubarAction->isChecked()){
     case false:
-        m_menubarAction->setChecked(false);
+	m_menubarAction->setChecked(false);
         m_menubarAction->setText(i18n("Show Menubar"));
         m_menubarAction->setToolTip(i18n("Show Menubar"));
         menuBar()->hide();
@@ -324,6 +327,8 @@ void KLettres::slotMenubar()
         menuBar()->show();
         break;
     }
+    Prefs::setMenuBarBool(m_menubarAction->isChecked());
+    Prefs::self()->writeConfig();
 }
 
 void KLettres::slotUpdateSettings()
@@ -395,8 +400,7 @@ void KLettres::slotModeGrownup()
     m_kidAction->setToolTip(i18n("Switch to Kid mode"));
     m_menubarAction->setText(i18n("Hide Menubar"));
     m_menubarAction->setToolTip(i18n("Hide Menubar"));
-    slotMenubar();
-    //m_secondToolbar->setIconSize(22); //causes a crash when adding/removing actions in toolbar
+    menuBar()->show();
     m_view->m_timer = Prefs::grownTimer();
     Prefs::setMode(Prefs::EnumMode::grownup);
     Prefs::self()->writeConfig();
@@ -412,14 +416,13 @@ void KLettres::slotModeKid()
     m_levLabel->setFont(f_lab);
     m_langLabel->setFont(f_lab);
     m_menubarAction->setChecked(false);
-    slotMenubar();
     m_kidAction->setChecked(true);
     m_kidAction->setToolTip(i18n("Kid mode is currently active"));
     m_grownupAction->setToolTip(i18n("Switch to Grown-up mode"));
     m_menubarAction->setText(i18n("Show Menubar"));
     m_menubarAction->setToolTip(i18n("Show Menubar"));
     m_grownupAction->setChecked(false);
-    //m_secondToolbar->setIconSize(32);
+    menuBar()->hide();
     m_view->m_timer = Prefs::kidTimer();
     Prefs::setMode(Prefs::EnumMode::kid);
     Prefs::self()->writeConfig();
