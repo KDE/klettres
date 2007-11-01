@@ -281,9 +281,6 @@ void KLettres::optionsPreferences()
 
 void KLettres::loadSettings()
 {
-    //TODO load default language
-    //selectedLanguage = Prefs::languageNumber();
-    //m_view->selectedLanguage = selectedLanguage;
     QString langString = m_languageNames[m_languages.indexOf(Prefs::language())];
     langString.replace("&", QString());
     m_langLabel->setText(langString);
@@ -430,8 +427,7 @@ void KLettres::slotModeKid()
 
 void KLettres::loadLangToolBar()
 {
-    QString lang = Prefs::language();//m_languages[Prefs::languageNumber()];
-    kDebug() << "Prefs::language()  " << Prefs::language() << endl;
+    QString lang = Prefs::language();
 
     specialCharToolbar->clear();
 
@@ -450,7 +446,6 @@ void KLettres::loadLangToolBar()
                                     i18n("Error") );
             qApp->quit();
         }
-        update();
         //we open the file and store info into the stream...
         QFile openFileStream(myFile.fileName());
         openFileStream.open(QIODevice::ReadOnly);
@@ -467,6 +462,8 @@ void KLettres::loadLangToolBar()
                 act->setData(i);
 	    }
         }
+	specialCharToolbar->show();
+	update();
     }
     else {
       specialCharToolbar->hide();
