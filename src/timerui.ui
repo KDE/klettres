@@ -88,10 +88,10 @@
        <item row="1" column="0" colspan="2" >
         <widget class="QSlider" name="kcfg_KidTimer" >
          <property name="toolTip" >
-          <string>Set the timer (in tens of seconds)</string>
+          <string>Set the timer (in tenths of seconds)</string>
          </property>
          <property name="whatsThis" >
-          <string>You can set the time between two letters in Kid mode. Default is 4 tens of seconds but younger children might need longer time.</string>
+          <string>You can set the time between two letters in Kid mode. Default is 4 tenths of seconds but younger children might need longer time.</string>
          </property>
          <property name="maximum" >
           <number>10</number>
@@ -181,10 +181,10 @@
        <item row="1" column="0" colspan="2" >
         <widget class="QSlider" name="kcfg_GrownTimer" >
          <property name="toolTip" >
-          <string>Set the timer (in tens of seconds)</string>
+          <string>Set the timer (in tenths of seconds)</string>
          </property>
          <property name="whatsThis" >
-          <string>You can set the time between two letters in Grown-up mode. Default is 2 tens of seconds.</string>
+          <string>You can set the time between two letters in Grown-up mode. Default is 2 tenths of seconds.</string>
          </property>
          <property name="maximum" >
           <number>10</number>
