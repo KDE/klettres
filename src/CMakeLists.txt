@@ -17,6 +17,14 @@ kde4_add_ui_files(klettres_SRCS
 
 kde4_add_kcfg_files(klettres_SRCS prefs.kcfgc )
 
+if(MSVC)
+  set(klettres_SRCS ${klettres_SRCS} klettres.rc)
+endif(MSVC)
+
+if(MINGW)
+   KDE_ADD_RESOURCES2(klettres_SRCS klettres.rc)
+endif(MINGW)
+
 kde4_add_executable(klettres ${klettres_SRCS})
 
 target_link_libraries(klettres  ${KDE4_KNEWSTUFF2_LIBS} ${KDE4_PHONON_LIBS} )
