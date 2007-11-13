@@ -24,7 +24,7 @@ set(klettres_icons
     ${CMAKE_INSTALL_PREFIX}/share/icons/oxygen/64x64/apps/klettres.png
     ${CMAKE_INSTALL_PREFIX}/share/icons/oxygen/128x128/apps/klettres.png
 )
-kde4_add_win32_app_icon(klettres klettres_SRCS ${klettres_icons})
+kde4_add_win32_app_icon(klettres_SRCS ${klettres_icons})
 kde4_add_executable(klettres ${klettres_SRCS})
 
 target_link_libraries(klettres  ${KDE4_KNEWSTUFF2_LIBS} ${KDE4_PHONON_LIBS} )
