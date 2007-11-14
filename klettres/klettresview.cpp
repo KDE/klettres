@@ -121,12 +121,13 @@ void KLettresView::paintEvent( QPaintEvent * )
 
 void KLettresView::game()
 {
-    m_cursorPos =1;
+    m_cursorPos = 1;
     //reset everything so when you change language or levels
     //it all restarts nicely
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
     m_letterEdit->clear();
     m_letterEdit->setCursorPosition(0);
+    m_letterEdit->setMaxLength(1); //fix that's in trunk
     m_letterEdit->setFocus();
     chooseSound();
     QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
@@ -135,23 +136,24 @@ void KLettresView::game()
 void KLettresView::slotProcess(const QString &inputLetter)
 {
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
-    kdDebug() << "Input: " << inputLetter << endl;
-    m_inputLetter=m_letterEdit->text();
-    if (m_inputLetter.at(0).isLetter()) //(a1.at(inputLetter.length()).lower().isLetter())
+    //check if backspace
+    if(inputLetter.length() != m_cursorPos)
     {
-        m_upperLetter = m_inputLetter.upper();    //put it in uppercase
+        m_cursorPos--;
+        m_letterEdit->setMaxLength( m_cursorPos );
+        QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
+        return;
+    }
+
+    QChar input_character = inputLetter.at(inputLetter.length()-1);
+
+    if (input_character.isLetter()) //(a1.at(inputLetter.length()).lower().isLetter())
+    {
+        m_upperLetter = inputLetter.upper();    //put it in uppercase
         m_letterEdit->selectAll();
         m_letterEdit->cut();
         m_letterEdit->setText(m_upperLetter);
-        QTimer *timer = new QTimer( this );
-        connect( timer, SIGNAL(timeout()), this, SLOT(slotTimerDone()) );
-        timer->start( m_timer*100, true );
-    }
-    else if (m_inputLetter.length() < (uint) m_cursorPos)
-    {
-        kdDebug() << "In backspace case !!! " << endl;
-        m_cursorPos--;
-        QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
+        QTimer::singleShot(m_timer*100, this, SLOT(slotTimerDone()));
     }
     else
     {
@@ -166,6 +168,7 @@ void KLettresView::slotTimerDone()
 {
     kdDebug() << "in timer done" << endl;
     QString match = m_currentLetter.left(m_cursorPos );
+
     if (match == m_upperLetter)
     {
         if (m_cursorPos!=m_length)  //if text in lineEdit not equal to text on button
@@ -178,11 +181,6 @@ void KLettresView::slotTimerDone()
         }
         else
         {
-            m_letterEdit->selectAll();
-            m_letterEdit->cut();
-            m_letterEdit->setCursorPosition(0 );
-            m_letterEdit->setFocus();
-            m_letterEdit->setMaxLength( 1 );
             game();  //another syllable
         }
     }

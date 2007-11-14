@@ -87,7 +87,7 @@ protected:
     ///Current letter entered uppercase i.e. m_inputLetter.upper()
     QString m_upperLetter;
     ///Current letter entered
-    QString m_inputLetter;
+    //QString m_inputLetter; NOTE: not used
     ///Paint the letter/syllable in levels 1 and 3
     void paintEvent( QPaintEvent * );
 
@@ -102,7 +102,6 @@ protected:
     void slotProcess(const QString &inputLetter);
 
     void slotTimerDone();
-
 };
 
 #endif // KLETTRESVIEW_H
