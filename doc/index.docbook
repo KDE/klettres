@@ -29,8 +29,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2007-04-27</date>
-<releaseinfo>1.5</releaseinfo>
+<date>2007-10-14</date>
+<releaseinfo>1.8</releaseinfo>
 
 <abstract>
 <para>
@@ -39,9 +39,9 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Eleven languages are available at the moment: Czech, Danish, Dutch, English, 
-French, Italian, Luganda, Romanized Hindi, Spanish, Slovak and German but only 
-English, French and your language if it is among those are installed by default.
+Sixteen languages are available at the moment: Brazilian Portuguese, Czech, Danish, Dutch, English, 
+French, German, Hebrew, Italian, Kannada, Low Saxon, Luganda, Romanized Hindi, Spanish, Slovak and Telugu 
+and  but only English, French and your language if it is among those are installed by default.
 </para>
 <para>
 &klettres; is really easy to use. The language can be changed using the 
@@ -90,9 +90,9 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are fourteen languages available at the moment: Czech, British
-English, Danish, Dutch, English, French, German, Hebrew, Italian, Low Saxon,
-Luganda, Romanized Hindi, Spanish and Slovak. If your
+<para>There are sixteen languages available at the moment: Czech, British
+English, Danish, Dutch, English, French, German, Hebrew, Italian, Kannada, Low Saxon,
+Luganda, Romanized Hindi, Spanish, Slovak and Telugu. If your
 &kde; language is among those, then it is taken as default, otherwise
 French is the default.
 You can easily get any additional available language by using the
@@ -150,7 +150,7 @@ that you do the game together.</para>
 	</mediaobject>
 </screenshot>
 
-<para>Level is Level 1, language is French, theme is desert
+<para>Level is Level 1, language is French, theme is Desert
 and mode is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
@@ -207,7 +207,7 @@ is kept until you change.</para>
 	</mediaobject>
 </screenshot>
 </para>
-<para>Here is a screenshot of Level 2 with the <emphasis>kid</emphasis> mode, <emphasis>kid</emphasis> theme and Danish language.</para>
+<para>Here is a screenshot of Level 2 with the <emphasis>kid</emphasis> mode, <emphasis>Kid</emphasis> theme and Danish language.</para>
 
 <para>Clicking in the <guilabel>Level</guilabel> combo-box and choosing <guilabel>Level
 2</guilabel> or using the <guimenu>Level</guimenu> menu brings you to level 2. In that level, the user only
@@ -232,7 +232,7 @@ is wrong, the letter appears to help him. </para>
 </screenshot>
 </para>
 
-<para>Here you can see &klettres; level 3, <emphasis>grown-up</emphasis> mode, <emphasis>savannah</emphasis> theme and Czech language.
+<para>Here you can see &klettres; level 3, <emphasis>grown-up</emphasis> mode, <emphasis>Savannah</emphasis> theme and Czech language.
 </para>
 
 <para>
@@ -254,7 +254,7 @@ three, it depends of the language.</para>
 	</mediaobject>
 </screenshot>
 
-<para>Here you can see &klettres; level 4, <emphasis>kid</emphasis> mode, <emphasis>desert</emphasis> theme and Slovak language.
+<para>Here you can see &klettres; level 4, <emphasis>kid</emphasis> mode, <emphasis>Desert</emphasis> theme and Slovak language.
 </para>
 
 <para>The sounds appear in random order. </para> <para>Clicking in the
@@ -325,6 +325,49 @@ You can also choose here the size you like the best. This size will be kept in c
 </screenshot>
 
 </sect2>
+</sect1>
+<sect1 id="Get-new-stuff">
+<title>Getting a new language</title>
+<para>You might want to use KLettres to help you learn a new language. By using <guimenu>File</guimenu>
+<guimenuitem>Get Alphabet in New Language...</guimenuitem>, you will see a new dialog with the list of available languages (you need to be connected to the Internet to use that feature).</para>
+<screenshot>
+<screeninfo>Get a New Language Dialog</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase>Get a New Language Dialog</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para>Click on the <guilabel>Install</guilabel> button on the left of the language you want to install. You'll see the progress bar indicating how the download is progressing. The next screenshot shows Brazilian Portuguese being downloaded.</para>
+<para>Please note that some files have several MB so it might be slow depending on your connection.</para>
+<para>After the file is downloaded, it is automatically installed and when you close the <guilabel>Get Hot New Stuff</guilabel> dialog you'll see the new language in the <guimenu>Languages</guimenu> menu and you can use it immediately.</para>
+<screenshot>
+<screeninfo>Downloading</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff1.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase>Downloading</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para>When a language is downloaded, you then can see the <guilabel>Install</guilabel> button turning to <guilabel>Uninstall</guilabel> and a green tick appears next to the language name to tell you that this language is available in &klettres;.</para>
+<para>The next screenshot shows Brazilian Portuguese installed.</para>
+<screenshot>
+<screeninfo>Brazilian Portuguese is installed</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase>Brazilian Portuguese is installed</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
 </sect1>
 </chapter>
 
@@ -654,12 +697,12 @@ folder).</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only ten languages?</para>
+<para>Why are there only sisteen languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
 for the alphabet and some basic syllables. Someone speaking natively
-the new language must record these sounds in wav, mp3 or preferably, ogg format. For levels 3
+the new language must record these sounds in ogg format. For levels 3
 and 4, the syllables must be chosen by a teacher or someone who knows how children learn: these must be the
 syllables you have to learn just after the alphabet in order to learn
 well the basics of this language. Please send me a mail if you are
@@ -681,28 +724,38 @@ Program copyright 2001-2005 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;
 <para>
 I am very grateful to the following people whose contribution has been greatly valuable:
 <itemizedlist>
+<listitem><para>Brazilian Portuguese sounds: Lindonjohnson Monte (Father) and Michelle Monte 09 years (Son)
+<email>lindon_johnson@brturbo.com.br</email></para> </listitem>
 <listitem><para>Czech sounds: Eva Mikulčíková
 <email>evmi@seznam.cz</email></para> </listitem>
-<listitem><para>Dutch sounds: Geert Stams
-<email>geert@pa3csg.myweb.nl</email></para> </listitem>
 <listitem><para>Danish sounds: Erik Kjaer Pedersen
 <email>erik@binghamton.edu</email></para> </listitem>
-<listitem><para>French sounds: Ludovic Grossard
-<email>grossard@kde.org</email></para></listitem>
-<listitem><para>Slovak sounds: Silvia Motyčková and Jozef Říha
-<email>silviamotycka@seznam.cz</email></para></listitem>
-<listitem><para>Italian sounds: Pietro Pasotti
-<email>pietro@itopen.it</email></para></listitem>
+<listitem><para>Dutch sounds: Geert Stams
+<email>geert@pa3csg.myweb.nl</email></para> </listitem>
 <listitem><para>English sounds: Robert Wadley
 <email>robntina@juno.com</email></para></listitem>
-<listitem><para>Spanish sounds: Ana Belén Caballero and Juan Pedro Paredes
-<email>neneta @iquis.com</email></para></listitem>
-<listitem><para>Romanized Hindi sounds: Vikas Kharat
-<email>kharat@sancharnet.in</email></para></listitem>
-<listitem><para>Luganda sounds: John Magoye and Cormac Lynch
-<email>cormaclynch@eircom.net</email></para></listitem>
+<listitem><para>French sounds: Ludovic Grossard
+<email>grossard@kde.org</email></para></listitem>
 <listitem><para>German sounds: Helmut Kriege
 <email>h.kriege@freenet.de</email></para></listitem>
+<listitem><para>Hebrew sounds: Assaf Gorgon
+<email>assafgordon@gmail.com</email></para></listitem>
+<listitem><para>Italian sounds: Pietro Pasotti
+<email>pietro@itopen.it</email></para></listitem>
+<listitem><para>Kannada sounds: Vincent Vikram
+<email>vincentvikram@gmail.com</email></para></listitem>
+<listitem><para>Low Saxon sounds: Manfred Wiese and Sönke Dibbern
+<email>s_dibbern@web.de</email></para></listitem>
+<listitem><para>Luganda sounds: John Magoye and Cormac Lynch
+<email>cormaclynch@eircom.net</email></para></listitem>
+<listitem><para>Romanized Hindi sounds: Vikas Kharat
+<email>kharat@sancharnet.in</email></para></listitem>
+<listitem><para>Spanish sounds: Ana Belén Caballero and Juan Pedro Paredes
+<email>neneta @iquis.com</email></para></listitem>
+<listitem><para>Slovak sounds: Silvia Motyčková and Jozef Říha
+<email>silviamotycka@seznam.cz</email></para></listitem>
+<listitem><para>Telugu sounds: Pavithran Shakamuri
+<email>pavithran.s@gmail.com</email></para></listitem>
 <listitem><para>Original icons:  &Primoz.Anzur;
 <email>zerokode@yahoo.com</email></para></listitem>
 <listitem><para>Support and coding guidance: &Robert.Gogolok;
@@ -713,7 +766,7 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>peter@peterandlinda.com</email></para></listitem>
 <listitem><para>Port to KConfig XT, coding help: &Waldo.Bastian;
 <email>&Waldo.Bastian.mail;</email></para></listitem>
-<listitem><para>Kids and grownup SVG icons, desert theme: &Danny.Allen;
+<listitem><para>Kids and grownup SVG icons, Desert theme: &Danny.Allen;
     <email>dannya40uk@yahoo.co.uk</email></para></listitem>
 <listitem><para>Timer setting widget: Michael Goettsche
     <email>michael.goettsche@kdemail.net</email></para></listitem>
