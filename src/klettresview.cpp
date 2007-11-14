@@ -144,7 +144,7 @@ void KLettresView::paintLetter(QPainter &p, const QRect& rect)
 
 void KLettresView::game()
 {
-    m_cursorPos =1;
+    m_cursorPos = 1;
     //reset everything so when you change language or levels
     //it all restarts nicely
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
@@ -160,29 +160,28 @@ void KLettresView::game()
 void KLettresView::slotProcess(const QString &inputLetter)
 {
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
-    kDebug() << "Input: " << inputLetter;
-    m_inputLetter=m_letterEdit->text();
-    if (m_inputLetter.at(0).isLetter()) //(a1.at(inputLetter.length()).lower().isLetter())
+    //check if backspace
+    if(inputLetter.length() != m_cursorPos)
     {
-        m_upperLetter = m_inputLetter.toUpper();    //put it in uppercase
+        m_cursorPos--;
+        m_letterEdit->setMaxLength( m_cursorPos );
+        QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
+        return;
+    }
+    QChar input_character = inputLetter.at(inputLetter.length()-1);
+
+    if (input_character.isLetter()) //(a1.at(inputLetter.length()).lower().isLetter())
+    {
+        m_upperLetter = inputLetter.toUpper();    //put it in uppercase
         m_letterEdit->selectAll();
         m_letterEdit->cut();
         m_letterEdit->setText(m_upperLetter);
-        QTimer *timer = new QTimer( this );
-        connect( timer, SIGNAL(timeout()), this, SLOT(slotTimerDone()) );
-        timer->setSingleShot(true);
-        timer->start( m_timer*100);
-    }
-    else if (m_inputLetter.length() < m_cursorPos)
-    {
-        kDebug() << "In backspace case !!! ";
-        m_cursorPos--;
-        QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
+        QTimer::singleShot(m_timer*100, this, SLOT(slotTimerDone()));
     }
     else
     {
-        kDebug() << "in no char loop";
-        kDebug() << "cursor " << m_cursorPos;
+        kdDebug() << "in no char loop" << endl;
+        kdDebug() << "cursor " << m_cursorPos << endl;
         m_letterEdit->backspace();
         QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
     }
@@ -204,11 +203,6 @@ void KLettresView::slotTimerDone()
         }
         else
         {
-            m_letterEdit->selectAll();
-            m_letterEdit->cut();
-            m_letterEdit->setCursorPosition(0 );
-            m_letterEdit->setFocus();
-            m_letterEdit->setMaxLength( 1 );
             game();  //another syllable
         }
     }
