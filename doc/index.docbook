@@ -122,8 +122,8 @@ and the toolbar will appear at the bottom of &klettres;. Click on the letter
 you want and it will be shown in the input field. This toolbar can be dragged 
 anywhere on your screen.</para>
 <para>
-If you prefer having the language keyboard layout, please use &kcontrolcenter;, in the
-section <guimenu>Regional &amp; Accessibility</guimenu> and submenu
+If you prefer having the language keyboard layout, please use &systemsettings;, in the
+section <guilabel>Personal</guilabel>, <guimenu>Regional &amp; Language</guimenu> and submenu
 <guimenuitem>Keyboard Layout</guimenuitem> in order to set the correct keyboard layout.</para>
 </note>
 </chapter>
@@ -343,7 +343,7 @@ You can also choose here the size you like the best. This size will be kept in c
 </screenshot>
 <para>Click on the <guilabel>Install</guilabel> button on the left of the language you want to install. You'll see the progress bar indicating how the download is progressing. The next screenshot shows Brazilian Portuguese being downloaded.</para>
 <para>Please note that some files have several MB so it might be slow depending on your connection.</para>
-<para>After the file is downloaded, it is automatically installed and when you close the <guilabel>Get Hot New Stuff</guilabel> dialog you'll see the new language in the <guimenu>Languages</guimenu> menu and you can use it immediately.</para>
+<para>After the file is downloaded, it is automatically installed and when you close the <guilabel>Get Hot New Stuff</guilabel> dialog you'll see the new language in the <guimenu>Language</guimenu> menu and you can use it immediately.</para>
 <screenshot>
 <screeninfo>Downloading</screeninfo>
     <mediaobject>
@@ -627,7 +627,7 @@ If you would like to add sounds in your own language, it is very easy to do so. 
 <para>Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in uppercase on one line.
 And save both text files with <quote>utf8</quote> encoding (upper right dropbox in &kate; allows that)</para>
 
-<para>The sounds should be in wav or ogg format and long enough for KAudioPlayer to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me.   
+<para>The sounds should be in ogg format and long enough for the audio player to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me.   
 </para>
 
 <para>
@@ -647,7 +647,7 @@ See the <ulink url="http://edu.kde.org/klettres/add_language.php">&klettres; web
 <para>The background picture does not appear.</para>
 </question>
 <answer>
-<para>You need to configure with the <option>--prefix</option> option
+<para>If you build &klettres; yourself, you need to configure with the <option>--prefix</option> option
 set to your &kde; folder or to add this folder to your
 path.</para> </answer>
 </qandaentry>
@@ -656,18 +656,7 @@ path.</para> </answer>
 <para>I do not hear any sounds</para>
 </question>
 <answer>
-<para>You need to have &arts; support and the &arts; daemon needs to be running.
-Make sure you compiled kdelibs with &arts; if you compiled &kde;. In any doubt,
-ask your distribution. You can also check if &arts; is running in
-&kcontrolcenter; -&gt; <guilabel>Sound &amp; Multimedia</guilabel> in the <guilabel>Sound
-System</guilabel> tab. There you must make sure that <guilabel>Enable the sound
-system</guilabel> is checked.</para>
-<para>For &kde; 3.4 users, you must also be sure that the player used to play
-&kde; sounds is the default &kde; sound system player. See in &kcontrolcenter; 
--&gt; <guilabel>Sound &amp; Multimedia</guilabel> 
-the <guilabel>System Notifications</guilabel> tab, click on the <guibutton>Player Settings</guibutton>
-button on the bottom right and in the dialog please check <guilabel>Use the
-&kde; sound system</guilabel>.
+<para>Make sure that &phonon; is working on your system. To do so, open &systemsettings; and in <guilabel>General</guilabel>, <guilabel>Computer Administration</guilabel> click on <guilabel>Sound</guilabel>.
 </para>
  </answer>
 </qandaentry>
@@ -678,7 +667,7 @@ button on the bottom right and in the dialog please check <guilabel>Use the
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
 <para>If you have &Windows; on your machine, you can use the TTF fonts from
-&Windows; (Arial is in those) via &kcontrolcenter; -&gt; <guilabel>System
+&Windows; (Arial is in those) via &systemsettings; -&gt; <guilabel>Computer
 Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on
 <guibutton>Administrator Mode</guibutton> and add the &Windows; Font
 folder).</para></answer>
@@ -690,14 +679,14 @@ folder).</para></answer>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
 <para>If you have &Windows; on your machine, you can use the TTF fonts from
-&Windows; (Arial is in those) via &kcontrolcenter; -&gt; <guilabel>System
+&Windows; (Arial is in those) via &systemsettings; -&gt; <guilabel>Computer
 Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on
 <guilabel>Administrator mode</guilabel> and add the &Windows; Font
 folder).</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only sisteen languages?</para>
+<para>Why are there only sixteen languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
@@ -719,7 +708,7 @@ able to do that. See <ulink url="http://edu.kde.org/klettres/add_language.php">t
 &klettres;
 </para>
 <para>
-Program copyright 2001-2005 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;
+Program copyright 2001-2007 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;
 </para>
 <para>
 I am very grateful to the following people whose contribution has been greatly valuable:
