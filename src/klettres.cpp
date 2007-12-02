@@ -302,9 +302,13 @@ void KLettres::loadSettings()
 void KLettres::slotDownloadNewStuff()
 {
     KNS::Entry::List entries = KNS::Engine::download();
-    //look for languages dirs installed
+    // we need to delete the entry* items in the returned list
+	qDeleteAll(entries);
+
+	//look for languages dirs installed
     m_languages = LangUtils::getLanguages();
     findLanguages();
+
     //refresh Languages menu
     m_languageAction->setItems(m_languageNames);
     slotChangeLanguage(m_languages.indexOf(Prefs::defaultLanguage()));
