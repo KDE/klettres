@@ -169,13 +169,14 @@ void KLettres::setupActions()
     QAction *m_newAction = actionCollection()->addAction("play_new");
     m_newAction->setText(i18n("New Sound"));
     m_newAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_N));
-    m_newAction->setIcon(KIcon("file_new"));
+    m_newAction->setIcon(KIcon("document-new")); // ### better icon for this?
     connect(m_newAction, SIGNAL(triggered(bool)), m_view, SLOT(game()));
     m_newAction->setToolTip(i18n("Play a new sound"));
     m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound."));
 
     QAction *m_stuffAction = actionCollection()->addAction("downloadnewstuff");
     m_stuffAction->setText(i18n("Get Alphabet in New Language..."));
+    m_stuffAction->setIcon(KIcon("get-hot-new-stuff"));
     connect(m_stuffAction, SIGNAL(triggered(bool)),  this, SLOT( slotDownloadNewStuff() ));
 
     QAction *m_playAgainAction = actionCollection()->addAction("play_again");
@@ -267,7 +268,7 @@ void KLettres::optionsPreferences()
         return;
 
     KConfigDialog *dialog = new KConfigDialog(this, "settings", Prefs::self());
-    dialog->addPage(new fontsdlg(0), i18n("Font Settings"), "fonts");
+    dialog->addPage(new fontsdlg(0), i18n("Font Settings"), "preferences-desktop-font");
     //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
     //fonts is the icon
     Timer *m_timer = new Timer();
