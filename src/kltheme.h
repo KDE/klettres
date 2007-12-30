@@ -19,8 +19,9 @@
 
 #ifndef KLTHEME_H
 #define KLTHEME_H
-
-#include <QPalette>
+#include <QSize>
+#include <QColor>
+#include <QRect>
 
 class KLTheme
 {

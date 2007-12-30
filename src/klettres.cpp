@@ -27,6 +27,7 @@
 #include <QLabel>
 #include <QPainter>
 #include <QTextStream>
+#include <QDomDocument>
 
 //KDE includes
 #include <KAction>

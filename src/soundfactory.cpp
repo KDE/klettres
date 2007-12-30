@@ -28,7 +28,6 @@
 #include <KDebug>
 #include <KRandomSequence>
 #include <KStandardDirs>
-#include <KUrl>
 #include <Phonon/MediaObject>
 
 #include "klettres.h"

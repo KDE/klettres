@@ -27,7 +27,7 @@
 
 #include <QObject>
 #include <QStringList>
-#include <QtXml/QDomDocument>
+#include <QDomDocument>
 
 class KLettres;
 namespace Phonon

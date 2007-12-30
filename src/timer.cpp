@@ -22,8 +22,6 @@
 
 #include "timer.h"
 
-#include <QLabel>
-#include <QSlider>
 
 #include <KLocale>
 

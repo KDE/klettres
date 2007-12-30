@@ -20,7 +20,6 @@
 
 #include "klettresview.h"
 
-#include <QLabel>
 #include <QTimer>
 #include <QPainter>
 #include <QSvgRenderer>
