@@ -16,7 +16,7 @@ kde4_add_ui_files(klettres_SRCS
     fontsdlg.ui )
 
 kde4_add_kcfg_files(klettres_SRCS prefs.kcfgc )
-kde4_add_app_icon(klettres_SRCS "${KDE4_ICON_DIR}/oxygen/*/apps/klettres.png")
+kde4_add_app_icon(klettres_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/ox*-apps-klettres.png")
 kde4_add_executable(klettres ${klettres_SRCS})
 
 target_link_libraries(klettres  ${KDE4_KNEWSTUFF2_LIBS} ${KDE4_PHONON_LIBS} )
