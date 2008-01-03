@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2001-2005 by Anne-Marie Mahfouf                              *
+ *   Copyright (C) 2001-2008 by Anne-Marie Mahfouf                              *
  *   annemarie.mahfouf@free.fr                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -35,7 +35,7 @@ static const char description[] =
               "letters in this language.\n"
               "13 languages are available: British, Czech, Danish, Dutch, English, French,\nGerman, Hebrew, Italian, Luganda, Romanized Hindi, Spanish and Slovak.");
 
-static const char version[] = "1.4";
+static const char version[] = "2.0";
 
 int main(int argc, char **argv)
 {
