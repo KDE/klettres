@@ -276,6 +276,7 @@ void KLettres::optionsPreferences()
     dialog->addPage(m_timer, i18n("Timer"), "clock");
     connect(dialog, SIGNAL(settingsChanged( const QString &)), this, SLOT(slotUpdateSettings()));
     dialog->setAttribute( Qt::WA_DeleteOnClose );
+    dialog->setHelp(QString(), "klettres");
     dialog->show();
     
     
