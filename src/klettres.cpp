@@ -182,7 +182,7 @@ void KLettres::setupActions()
 
     QAction *m_playAgainAction = actionCollection()->addAction("play_again");
     m_playAgainAction->setText(i18n("Replay Sound"));
-    m_playAgainAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_P));
+    m_playAgainAction->setShortcut(QKeySequence(Qt::Key_F5));
     m_playAgainAction->setIcon(KIcon("media-playback-start"));
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
     connect(m_playAgainAction, SIGNAL(triggered(bool)), m_view, SLOT(slotPlayAgain()));
@@ -192,7 +192,7 @@ void KLettres::setupActions()
     m_menubarAction = actionCollection()->add<KToggleAction>("menubar");
     m_menubarAction->setText(i18n("Show &Menubar"));
     m_menubarAction->setIcon(KIcon("edit-clear"));
-    m_playAgainAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_M));
+    m_menubarAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_M));
     connect(m_menubarAction, SIGNAL(triggered(bool)), this, SLOT(slotMenubar()));
     m_menubarAction->setCheckedState(KGuiItem(i18n("Hide &Menubar")));
     m_menubarAction->setChecked(true);
