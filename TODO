@@ -1,3 +1,5 @@
-APRIL 2005
+FEBRUARY 2008
 
-- fix backspace key problem
+- Show/Hide Menubar: should it be left as it is as a Kid mode or be consistent with other KDE apps where it's only "Show Menubar", checked or not.
+
+- Toolbars -> Special Characters: show that toolbar only if there are special chars
