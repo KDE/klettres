@@ -39,7 +39,7 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Sixteen languages are available at the moment: Brazilian Portuguese, Czech, Danish, Dutch, English, 
+Seventeen languages are available at the moment: Arabic, Brazilian Portuguese, Czech, Danish, Dutch, English, 
 French, German, Hebrew, Italian, Kannada, Low Saxon, Luganda, Romanized Hindi, Spanish, Slovak and Telugu 
 and  but only English, French and your language if it is among those are installed by default.
 </para>
@@ -90,7 +90,7 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are sixteen languages available at the moment: Czech, British
+<para>There are seventeen languages available at the moment: Arabic, Czech, British
 English, Danish, Dutch, English, French, German, Hebrew, Italian, Kannada, Low Saxon,
 Luganda, Romanized Hindi, Spanish, Slovak and Telugu. If your
 &kde; language is among those, then it is taken as default, otherwise
@@ -155,9 +155,9 @@ and mode is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
 If your &kde; language is among the supported languages then this will be the
-default language the first time you run &klettres;. For other languages, French
+default language the first time you run &klettres;. For other languages, English
 is the default. 
-&klettres; comes with French and your default language if among those listed
+&klettres; comes with English, French and your default language if among those listed
 above and you can get additional languages via <guimenu>File</guimenu>
 <guimenuitem>Get Alphabet in New Language...</guimenuitem> provided you have an
 Internet connection.
@@ -692,7 +692,7 @@ folder.</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only sixteen languages?</para>
+<para>Why are there only seventeen languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
