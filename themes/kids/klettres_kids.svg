@@ -13,12 +13,13 @@
    height="480.00000pt"
    id="svg1"
    sodipodi:version="0.32"
-   inkscape:version="0.44"
-   sodipodi:docbase="/home/annma"
+   inkscape:version="0.45.1"
+   sodipodi:docbase="/usr/local/kde4-src/kdeedu/klettres/themes/kids"
    sodipodi:docname="klettres_kids.svg"
    inkscape:export-filename="/home/danny/work/kde/EDU/klettres/themes/NEW/kids/klettres_kids_mockup.png"
    inkscape:export-xdpi="72.000000"
-   inkscape:export-ydpi="72.000000">
+   inkscape:export-ydpi="72.000000"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs3">
     <linearGradient
@@ -109,8 +110,8 @@
      inkscape:current-layer="svg1"
      inkscape:window-width="1024"
      inkscape:window-height="712"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-x="246"
+     inkscape:window-y="3"
      showguides="true"
      inkscape:guide-bbox="true" />
   <metadata
@@ -319,7 +320,8 @@
     </g>
   </g>
   <g
-     id="bear">
+     id="bear"
+     transform="translate(23.43003,1.9525024)">
     <g
        id="g30666">
       <path
