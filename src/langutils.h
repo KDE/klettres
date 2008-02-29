@@ -1,6 +1,6 @@
 /*
     Copyright 2007 Pino Toscano <pino@kde.org>
-    Copyright 2007 Anne-Marie Mahfouf <annma@kde.org>     
+    Copyright 2007-2008 Anne-Marie Mahfouf <annma@kde.org>     
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public
@@ -27,6 +27,7 @@ class LangUtils
 {
 public:
     static bool hasSpecialChars(const QString& lang);
+    ///Avalibale languages ISO names
     static QStringList getLanguages();
     static void writeLangConfig();
     ///All available languages translated names

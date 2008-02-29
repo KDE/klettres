@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2001-2007 by Anne-Marie Mahfouf                              *
- *   annemarie.mahfouf@free.fr                                             *
+ *   Copyright (C) 2001-2008 by Anne-Marie Mahfouf                              *
+ *   annma@kde.org                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -35,7 +35,7 @@ class KLTheme;
  *
  * @short KLettres View class
  * @author Anne-Marie Mahfouf <annma@kde.org>
- * @version 1.80
+ * @version 2.00
  */
 
 
