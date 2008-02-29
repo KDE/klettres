@@ -25,6 +25,7 @@
 
 #include <KDebug>
 #include <KGlobal>
+#include <KLocale>
 #include <KStandardDirs>
 
 bool LangUtils::hasSpecialChars(const QString& lang)
@@ -76,6 +77,29 @@ QStringList LangUtils::getLanguages()
 	m_languages.sort();
 	kDebug() <<m_languages;
 	return m_languages;
+}
+
+QStringList LangUtils::getLanguagesNames(QStringList languagesList)
+{
+    //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
+    //to find the name of the country
+    //corresponding to the code and the language the user set
+    QStringList languagesNames;
+    KConfig entry(KStandardDirs::locate("locale", "all_languages"));
+
+    foreach(QString language, languagesList) {
+        if (language == "hi-ro")
+            languagesNames.append(i18n("Romanized Hindi"));
+        else if (language == "lug_UG")
+            languagesNames.append(i18n("Luganda"));
+        else
+        {
+            KConfigGroup group = entry.group(language);
+            languagesNames.append(group.readEntry("Name"));
+        }
+    }
+    //never sort m_languageNames as it's m_languages translated
+    return languagesNames;
 }
 
 void LangUtils::writeLangConfig()

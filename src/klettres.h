@@ -50,8 +50,6 @@ public:
 
     ///Sound class
     SoundFactory *soundFactory;
-    ///All available language codes
-    QStringList m_languages;
     ///All available language names
     QStringList m_languageNames;
     /**
@@ -64,8 +62,6 @@ public:
     //uint selectedLanguage;
     ///Action that sets up the Language menu
     KSelectAction *m_languageAction;
-    ///Look for all languages available
-    void findLanguages();
 
     public slots:
     ///Set the new language

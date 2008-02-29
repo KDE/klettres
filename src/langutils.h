@@ -29,6 +29,8 @@ public:
     static bool hasSpecialChars(const QString& lang);
     static QStringList getLanguages();
     static void writeLangConfig();
+    ///All available languages translated names
+    static QStringList getLanguagesNames(QStringList languagesList);
 };
 
 #endif

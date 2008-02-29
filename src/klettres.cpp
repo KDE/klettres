@@ -75,12 +75,10 @@ KLettres::KLettres()
     mNewStuff = 0;
     m_view = new KLettresView(this);
     setMinimumSize( QSize( 800, 600 ) );
-    // tell the KXmlGuiWindow that this is indeed the main widget
+    //Tell the KXmlGuiWindow that this is indeed the main widget
     setCentralWidget(m_view);
-    //Scan for existing languages -> m_languages
-    m_languages = LangUtils::getLanguages();
-    kDebug() << "m_languages  " << m_languages;
-    findLanguages();
+    //Populate Languages menu with m_languageNames
+    m_languageNames = LangUtils::getLanguagesNames(LangUtils::getLanguages());
     //MainWindow GUI: menus, tolbars and statusbar
     setupActions();
     setupStatusbar();
@@ -96,48 +94,6 @@ KLettres::KLettres()
 KLettres::~KLettres()
 {
 }
-
-void KLettres::findLanguages()
-{
-    m_languageNames.clear();
-    //the program scans in khangman/data/ to see what languages data is found
-
-    //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
-    //to find the name of the country
-    //corresponding to the code and the language the user set
-    KConfig entry(KStandardDirs::locate("locale", "all_languages"));
-
-    foreach(const QString &language, m_languages) {
-        if (language == "hi-ro")
-            m_languageNames.append(i18n("Romanized Hindi"));
-        else if (language == "lug_UG")
-            m_languageNames.append(i18n("Luganda"));
-        else
-        {
-            KConfigGroup group = entry.group(language);
-            m_languageNames.append(group.readEntry("Name"));
-        }
-    }
-    //never sort m_languageNames as it's m_languages translated
-}
-
-QString Prefs::defaultLanguage()
-{
-    //see what is the user language for KDE
-    QStringList defaultLanguages = KGlobal::locale()->languageList();
-    if (!defaultLanguages.isEmpty()) {
-    //scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
-    int i = Prefs::self()->m_languages.indexOf(defaultLanguages[0]);
-    if (Prefs::self()->m_languages.contains(Prefs::language()))
-        return Prefs::language(); //the last language played
-    else if (i<1)
-        return "en"; //if no other
-    else
-        return Prefs::self()->m_languages[i]; //KDE default if exists
-    }
-    return QString();
-}
-
 
 bool KLettres::loadLayout(QDomDocument &layoutDocument)
 {
@@ -206,7 +162,6 @@ void KLettres::setupActions()
     m_languageAction = actionCollection()->add<KSelectAction>("languages");
     m_languageAction->setText(i18nc("@label:listbox", "&Language"));
     m_languageAction->setItems(m_languageNames);
-    m_languageAction->setCurrentItem(m_languages.indexOf(Prefs::language()));
 
     m_levelsNames.append(i18nc("@item:inlistbox choose level 1", "Level 1" ));
     m_levelsNames.append(i18nc("@item:inlistbox choose level 2",  "Level 2" ));
@@ -284,7 +239,11 @@ void KLettres::optionsPreferences()
 
 void KLettres::loadSettings()
 {
-    QString langString = m_languageNames[m_languages.indexOf(Prefs::language())];
+    if (LangUtils::getLanguages().indexOf(Prefs::language()) <0)  {
+	Prefs::setLanguage("en");
+    }
+    QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[LangUtils::getLanguages().indexOf(Prefs::language())];
+    m_languageAction->setCurrentItem(LangUtils::getLanguages().indexOf(Prefs::language()));
     langString.replace("&", QString());
     m_langLabel->setText(langString);
     loadLangToolBar();
@@ -306,16 +265,16 @@ void KLettres::slotDownloadNewStuff()
 {
     KNS::Entry::List entries = KNS::Engine::download();
     // we need to delete the entry* items in the returned list
-	qDeleteAll(entries);
+    qDeleteAll(entries);
 
-	//look for languages dirs installed
-    m_languages = LangUtils::getLanguages();
-    findLanguages();
+    //look for languages dirs installed
+    QStringList languages = LangUtils::getLanguages();
+    m_languageNames = LangUtils::getLanguagesNames(languages);
 
     //refresh Languages menu
     m_languageAction->setItems(m_languageNames);
-    slotChangeLanguage(m_languages.indexOf(Prefs::defaultLanguage()));
-    m_languageAction->setCurrentItem(m_languages.indexOf(Prefs::defaultLanguage()));
+    slotChangeLanguage(languages.indexOf(Prefs::language()));
+    m_languageAction->setCurrentItem(languages.indexOf(Prefs::language()));
 }
 
 void KLettres::slotMenubar()
@@ -367,13 +326,14 @@ void KLettres::updateLevMenu(int id)
     m_levLabel->setText(i18nc("@info:status the current level chosen", "(Level %1)", Prefs::level()));
 }
 
-void KLettres::slotChangeLanguage(int newLanguage)
+void KLettres::slotChangeLanguage(int newIndex)
 {
-    // Write new language in config
-    Prefs::setLanguage(m_languages[newLanguage]);
+    // Write new language ISO in config
+    QString newLanguage = LangUtils::getLanguages()[newIndex];
+    Prefs::setLanguage(newLanguage);
     Prefs::self()->writeConfig();
     // Update the StatusBar
-    QString langString = m_languageNames[newLanguage];
+    QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[newIndex];
     langString.replace("&", QString());
     m_langLabel->setText(langString);
     loadLangToolBar();

@@ -3,6 +3,6 @@ File=klettres.kcfg
 IncludeFiles=kdebug.h
 ClassName=Prefs
 Singleton=true
-CustomAdditions=true
+CustomAdditions=false
 Mutators=true
 
