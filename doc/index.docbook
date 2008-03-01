@@ -29,8 +29,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2007-10-14</date>
-<releaseinfo>1.8</releaseinfo>
+<date>2008-02-13</date>
+<releaseinfo>2.0</releaseinfo>
 
 <abstract>
 <para>
@@ -39,7 +39,7 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Sixteen languages are available at the moment: Brazilian Portuguese, Czech, Danish, Dutch, English, 
+Seventeen languages are available at the moment: Arabic, Brazilian Portuguese, Czech, Danish, Dutch, English, 
 French, German, Hebrew, Italian, Kannada, Low Saxon, Luganda, Romanized Hindi, Spanish, Slovak and Telugu 
 and  but only English, French and your language if it is among those are installed by default.
 </para>
@@ -90,7 +90,7 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are sixteen languages available at the moment: Czech, British
+<para>There are seventeen languages available at the moment: Arabic, Czech, British
 English, Danish, Dutch, English, French, German, Hebrew, Italian, Kannada, Low Saxon,
 Luganda, Romanized Hindi, Spanish, Slovak and Telugu. If your
 &kde; language is among those, then it is taken as default, otherwise
@@ -115,9 +115,9 @@ different fonts and colors.</para>
 
 <note>
 <para>You do not need the language keyboard layout anymore as you can use the 
-special <guimenuitem>Characters</guimenuitem> toolbar to type any special 
+special <guimenuitem>Special Characters</guimenuitem> toolbar to type any special 
 character in each language. In the <guimenu>Settings</guimenu> menu, 
-<guimenuitem>Toolbars</guimenuitem>, select <guimenuitem>Characters</guimenuitem> 
+<guisubmenu>Toolbars</guisubmenu>, select <guimenuitem>Special Characters</guimenuitem> 
 and the toolbar will appear at the bottom of &klettres;. Click on the letter 
 you want and it will be shown in the input field. This toolbar can be dragged 
 anywhere on your screen.</para>
@@ -155,9 +155,9 @@ and mode is <emphasis>grown-up</emphasis>.</para>
 <note>
 <para>
 If your &kde; language is among the supported languages then this will be the
-default language the first time you run &klettres;. For other languages, French
+default language the first time you run &klettres;. For other languages, English
 is the default. 
-&klettres; comes with French and your default language if among those listed
+&klettres; comes with English, French and your default language if among those listed
 above and you can get additional languages via <guimenu>File</guimenu>
 <guimenuitem>Get Alphabet in New Language...</guimenuitem> provided you have an
 Internet connection.
@@ -328,7 +328,7 @@ You can also choose here the size you like the best. This size will be kept in c
 </sect1>
 <sect1 id="Get-new-stuff">
 <title>Getting a new language</title>
-<para>You might want to use KLettres to help you learn a new language. By using <guimenu>File</guimenu>
+<para>You might want to use &klettres; to help you learn a new language. By using <guimenu>File</guimenu>
 <guimenuitem>Get Alphabet in New Language...</guimenuitem>, you will see a new dialog with the list of available languages (you need to be connected to the Internet to use that feature).</para>
 <screenshot>
 <screeninfo>Get a New Language Dialog</screeninfo>
@@ -396,7 +396,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <varlistentry>
 <term><menuchoice>
 <shortcut>
-<keycombo action="simul">&Ctrl;<keycap>P</keycap></keycombo>
+<keycap>F5</keycap>
 </shortcut>
 <guimenu>File</guimenu>
 <guimenuitem>Replay Sound</guimenuitem>
@@ -556,18 +556,26 @@ You can also choose here the size you like the best. This size will be kept in c
 <keycombo action="simul">&Ctrl;<keycap>M</keycap></keycombo>
 </shortcut>
 <guimenu>Settings</guimenu>
-<guimenuitem>Show Menubar</guimenuitem>
+<guimenuitem>Hide Menubar</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Toggle</action> the menubar</para></listitem>
+<listitem><para><action>Hide</action> the menubar. To show the menubar again, click on the <guibutton>Show Menubar</guibutton> button in the toolbar.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guimenuitem>Toolbars</guimenuitem>
+<guisubmenu>Toolbars</guisubmenu>
 </menuchoice></term>
 <listitem><para><action>Toggle</action> the <guimenuitem>Main</guimenuitem> and the 
-<guimenuitem>Characters</guimenuitem> toolbar</para></listitem>
+<guimenuitem>Special Characters</guimenuitem> toolbar</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Settings</guimenu>
+<guimenuitem>Show Statusbar</guimenuitem>
+</menuchoice></term>
+<listitem><para><action>Toggle</action> the display of the statusbar</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -624,7 +632,7 @@ If you would like to add sounds in your own language, it is very easy to do so. 
 &lt;/klettres&gt;</programlisting>
 <para>Replace "cs" with the two letter code and "Czech" with the name of your language. Write the sound names with the special characters of your language in uppercase in utf8.</para>
 
-<para>Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in uppercase on one line.
+<para>Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Special Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in uppercase on one line.
 And save both text files with <quote>utf8</quote> encoding (upper right dropbox in &kate; allows that)</para>
 
 <para>The sounds should be in ogg format and long enough for the audio player to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me.   
@@ -668,25 +676,23 @@ path.</para> </answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
 <para>If you have &Windows; on your machine, you can use the TTF fonts from
 &Windows; (Arial is in those) via &systemsettings; -&gt; <guilabel>Computer
-Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on
-<guibutton>Administrator Mode</guibutton> and add the &Windows; Font
-folder).</para></answer>
+Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> and add the &Windows; Font
+folder.</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>The letters on the icons on the special <guimenuitem>Characters</guimenuitem> toolbar are too small for some languages.</para>
+<para>The letters on the icons on the <guimenuitem>Special Characters</guimenuitem> toolbar are too small for some languages.</para>
 </question>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
 <para>If you have &Windows; on your machine, you can use the TTF fonts from
 &Windows; (Arial is in those) via &systemsettings; -&gt; <guilabel>Computer
-Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> (click on
-<guilabel>Administrator mode</guilabel> and add the &Windows; Font
-folder).</para></answer>
+Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> and add the &Windows; Font
+folder.</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only sixteen languages?</para>
+<para>Why are there only seventeen languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
@@ -748,13 +754,13 @@ I am very grateful to the following people whose contribution has been greatly v
 <listitem><para>Original icons:  &Primoz.Anzur;
 <email>zerokode@yahoo.com</email></para></listitem>
 <listitem><para>Support and coding guidance: &Robert.Gogolok;
-<email>&Robert.Gogolok.mail;</email></para></listitem>
+&Robert.Gogolok.mail;</para></listitem>
 <listitem><para>SVG icon: Chris Luetchford
 <email>chris@os11.com</email></para></listitem>
 <listitem><para>Code for generating special characters icons: Peter Hedlund
 <email>peter@peterandlinda.com</email></para></listitem>
 <listitem><para>Port to KConfig XT, coding help: &Waldo.Bastian;
-<email>&Waldo.Bastian.mail;</email></para></listitem>
+&Waldo.Bastian.mail;</para></listitem>
 <listitem><para>Kids and grownup SVG icons, Desert theme: &Danny.Allen;
     <email>dannya40uk@yahoo.co.uk</email></para></listitem>
 <listitem><para>Timer setting widget: Michael Goettsche
@@ -764,7 +770,7 @@ I am very grateful to the following people whose contribution has been greatly v
 
 <para>
 Documentation copyright 2001-2006
-&Anne-Marie.Mahfouf;<email>&Anne-Marie.Mahfouf.mail;</email>
+&Anne-Marie.Mahfouf;&Anne-Marie.Mahfouf.mail;
 </para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
