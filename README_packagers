@@ -1,0 +1,24 @@
+in the scripts/ folder you will find a Ruby script which will extract all
+KLettres svn data frol l10n-kde4 in KDE svn, using anonsvn.
+
+The data will be tarred for each language and a tarball
+klettres-<iso>.tar.bz2
+will be made, where <iso> is the language ISO code used by KDE.
+
+You can use this script for producing additional data for KLettres if you want.
+In a custom folder, simply copy the script and run:
+
+ruby klettresl10n.rb
+
+A sub-folder klettres-data/ will be created and the tarballs will be in it.
+
+You only need to be connected to the internet!
+
+Have fun,
+
+Anne-Marie
+
+Anne-Marie MAHFOUF
+<annma@kde.org>
+
+22 March 2008
