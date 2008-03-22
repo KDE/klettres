@@ -17,9 +17,7 @@
 # Locally, these tarballs should be unpacked under
 # $KDEHOME/share/apps/klettres
 
-require 'getoptlong'
-
-puts "Start looking in l10n-kde4".center(40, " - ")
+puts "Connecting to l10n-kde4".center(40, " - ")
 
 Dir.mkdir( "klettres-data")
 Dir.chdir( "klettres-data" )
