@@ -1,5 +1,7 @@
-in the scripts/ folder you will find a Ruby script which will extract all
-KLettres svn data frol l10n-kde4 in KDE svn, using anonsvn.
+****** At the attention of packagers *******
+
+In the scripts/ folder you will find a Ruby script which will extract all
+KLettres svn data from l10n-kde4 in KDE svn, using anonsvn.
 
 The data will be tarred for each language and a tarball
 klettres-<iso>.tar.bz2
@@ -18,6 +20,7 @@ Have fun,
 
 Anne-Marie
 
+------------------
 Anne-Marie MAHFOUF
 <annma@kde.org>
 
