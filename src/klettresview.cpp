@@ -151,6 +151,7 @@ void KLettresView::game()
     m_letterEdit->setCursorPosition(0);
     m_letterEdit->setMaxLength( 1 );
     m_letterEdit->setFocus();
+    m_upperLetter.clear();
     chooseSound();
     randomInt++;
     QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
@@ -160,26 +161,27 @@ void KLettresView::slotProcess(const QString &inputLetter)
 {
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
     //check if backspace
-    if(inputLetter.length() != m_cursorPos)
-    {
+    if(inputLetter.length() != m_cursorPos)  {
         m_cursorPos--;
         m_letterEdit->setMaxLength( m_cursorPos );
         QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
         return;
     }
     QChar input_character = inputLetter.at(inputLetter.length()-1);
-
-    if (input_character.isLetter()) //(a1.at(inputLetter.length()).lower().isLetter())
-    {
-        m_upperLetter = inputLetter.toUpper();    //put it in uppercase
+    QChar input_character_u;
+    if (input_character.isLetter()) 
+    { 
+	if (input_character.unicode() == 0x00DF) { //everything in upper except the ß
+	    input_character_u = input_character.toLower();
+	}  else  {
+	    input_character_u = input_character.toUpper();    
+	}
+	m_upperLetter.append(input_character_u);
         m_letterEdit->selectAll();
         m_letterEdit->cut();
         m_letterEdit->setText(m_upperLetter);
         QTimer::singleShot(m_timer*100, this, SLOT(slotTimerDone()));
-    }
-    else
-    {
-        kDebug() << "in no char loop" << endl;
+    }  else  {
         kDebug() << "cursor " << m_cursorPos << endl;
         m_letterEdit->backspace();
         QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
@@ -192,22 +194,19 @@ void KLettresView::slotTimerDone()
     QString match = m_currentLetter.left(m_cursorPos );
     if (match == m_upperLetter)
     {
-        if (m_cursorPos!=m_length)  //if text in lineEdit not equal to text on button
-        {            //i.e if you still have to allow input
+        if (m_cursorPos!=m_length)  {//if text in lineEdit not equal to text on button
+            //i.e if you still have to allow input
             m_letterEdit->setMaxLength( m_cursorPos +1 );
             m_letterEdit->setCursorPosition( m_cursorPos );
             m_letterEdit->setFocus();
             m_cursorPos ++;
             QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
-        }
-        else
-        {
+        } else  {
             game();  //another syllable
         }
-    }
-    else   //if not, cut it
-    {
+    }  else  { //if not, cut it
         m_letterEdit->backspace();  //delete the char to the left  and position curseur accordingly
+	m_upperLetter.remove(m_upperLetter.size()-1, 1);
         m_letterEdit->setFocus();
         //play sound again
         m_klettres->soundFactory->playSound(m_random);
