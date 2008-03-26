@@ -470,6 +470,7 @@ void KLettres::loadLangToolBar()
                 act->setIcon(charIcon(allData.at(i).at(0)));
                 // used to carry the id
                 act->setData(i);
+		connect(act, SIGNAL(triggered(bool)), this, SLOT(slotPasteChar()));
 	    }
         }
 	specialCharToolbar->show();
