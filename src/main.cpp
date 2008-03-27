@@ -42,6 +42,8 @@ int main(int argc, char **argv)
     KAboutData about("klettres", 0, ki18n("KLettres"), KLETTRES_VERSION, ki18n(description),
                      KAboutData::License_GPL, ki18n("(C) 2001-2007 Anne-Marie Mahfouf"),KLocalizedString(), "http://edu.kde.org/klettres", "submit@bugs.kde.org");
     about.addAuthor( ki18n("Anne-Marie Mahfouf"), KLocalizedString(), "annma AT kde DOT org");
+    about.addCredit(ki18n("Marc Cheng"),
+                    ki18n("Kids and grown-up oxygen icons"), "bdgraue AT web DOT de");
     about.addCredit(ki18n("Ludovic Grossard"),
                     ki18n("French sounds"), "grossard AT kde DOT org");
     about.addCredit(ki18n("Geert Stams"),
@@ -69,7 +71,7 @@ int main(int argc, char **argv)
     about.addCredit(ki18n("Lisa Kriege"),
                      ki18n("British English sounds"), "h.kriege AT freenet DOT de");
     about.addCredit(ki18n("Danny Allen"),
-                    ki18n("SVG background pictures, kids and grown-up SVG icons"), "dannya40uk AT yahoo DOT co DOT uk");
+                    ki18n("SVG background pictures"), "dannya40uk AT yahoo DOT co DOT uk");
     about.addCredit(ki18n("Robert Gogolok"),
                     ki18n("Support and coding guidance"), "mail AT robert-gogolok DOT de");
     about.addCredit(ki18n("Peter Hedlund"),
