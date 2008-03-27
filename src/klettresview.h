@@ -35,7 +35,7 @@ class KLTheme;
  *
  * @short KLettres View class
  * @author Anne-Marie Mahfouf <annma@kde.org>
- * @version 2.00
+ * @version 2.1
  */
 
 

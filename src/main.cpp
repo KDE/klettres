@@ -32,15 +32,15 @@
 static const char description[] =
     I18N_NOOP("KLettres helps a very young child or an adult learning \n"
               "a new language by associating sounds and \n"
-              "letters in this language.\n"
-              "13 languages are available: British, Czech, Danish, Dutch, English, French,\nGerman, Hebrew, Italian, Luganda, Romanized Hindi, Spanish and Slovak.");
+              "letters in this language.\n\n"
+              "18 languages are available: Arabian, Brazilian Portuguese, British, Czech, Danish, Dutch, English, French, German, Hebrew, Italian, Kannada, Low Saxon, Luganda, Romanized Hindi, Spanish, Slovak and Telugu.");
 
-static const char version[] = "2.0";
+static const char version[] = "2.1";
 
 int main(int argc, char **argv)
 {
     KAboutData about("klettres", 0, ki18n("KLettres"), KLETTRES_VERSION, ki18n(description),
-                     KAboutData::License_GPL, ki18n("(C) 2001-2007 Anne-Marie Mahfouf"),KLocalizedString(), "http://edu.kde.org/klettres", "submit@bugs.kde.org");
+                     KAboutData::License_GPL, ki18n("(C) 2001-2008 Anne-Marie Mahfouf"),KLocalizedString(), "http://edu.kde.org/klettres", "submit@bugs.kde.org");
     about.addAuthor( ki18n("Anne-Marie Mahfouf"), KLocalizedString(), "annma AT kde DOT org");
     about.addCredit(ki18n("Marc Cheng"),
                     ki18n("Kids and grown-up oxygen icons"), "bdgraue AT web DOT de");

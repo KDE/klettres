@@ -21,8 +21,8 @@
  /**
  * This file serves holds the version number of KLettres
  * @author Anne-Marie Mahfouf <annma@kde.org>
- * @version 1.1
+ * @version 2.1
  */
  #ifndef KLETTRES_VERSION
-#define KLETTRES_VERSION "2.0"
+#define KLETTRES_VERSION "2.1"
 #endif

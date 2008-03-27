@@ -35,8 +35,8 @@ class KLNewStuff;
 
 /**
  * @short Application Main Window
- * @author Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>
- * @version 1.80
+ * @author Anne-Marie Mahfouf <annma@kde.org>
+ * @version 2.1
  */
 class KLettres : public KXmlGuiWindow
 {
