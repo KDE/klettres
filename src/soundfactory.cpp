@@ -43,8 +43,14 @@ SoundFactory::SoundFactory(KLettres *parent, const char *)
     sounds = 0;
 
     bool ok = klettres->loadLayout(m_layoutsDocument);
-    if (ok) change(Prefs::language());
-    if (!ok) loadFailure();
+    if (ok)  {
+	change(Prefs::language());
+    }
+    if (!ok)  {
+	loadFailure();
+    }  else  {
+	setSoundSequence();
+    }
 }
 
 SoundFactory::~SoundFactory()
@@ -55,30 +61,33 @@ void SoundFactory::change(const QString &currentLanguage)
 {
     //go load the sounds for the current language
     bool ok = loadLanguage(m_layoutsDocument, currentLanguage);
-    kDebug() << "ok " << ok;
     //tell the user if there are no sounds or get the random sounds
-    if (!ok) loadFailure();
-        else setSoundSequence();
+    if (!ok)  {
+	loadFailure();
+    }  else  {
+	setSoundSequence();
+    }
 }
 
 void SoundFactory::playSound(int mySound)
 {
     QString soundFile;
 
-    if ((uint) mySound >= sounds) return;
+    if ((uint) mySound >= sounds) {
+	return;
+    }
 
     soundFile = KStandardDirs::locate("data", "klettres/" + filesList[mySound]);
     kDebug() << "soundFile " << soundFile;
 
-    if (soundFile.isEmpty()) return;
+    if (soundFile.isEmpty()) {
+	return;
+    }
 
-    if (!m_player)
-    {
+    if (!m_player)  {
         m_player = Phonon::createPlayer(Phonon::GameCategory, soundFile);
         m_player->setParent(this);
-    }
-    else
-    {
+    }  else  {
         m_player->setCurrentSource(soundFile);
     }
     m_player->play();
@@ -106,26 +115,25 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     //check if the sound files match current language
     languageElement = (const QDomElement &) languagesList.item(0).toElement();
     codeAttribute = languageElement.attributeNode("code");
+
     if (currentLanguage != codeAttribute.value()) {
         kDebug() << "Fail reading language !!! ";
         return false;
+    } else {
+	kDebug() << "current language " << currentLanguage;
     }
-    else kDebug() << "current language " << currentLanguage;
     //load the sounds for level 1 and 2 (alphabet)
-    if ((Prefs::level() == 1) || (Prefs::level() == 2))
-    {
+    if ((Prefs::level() == 1) || (Prefs::level() == 2))  {
         alphabetList = languageElement.elementsByTagName("alphabet");
-        if (alphabetList.count() != 1)
+        if (alphabetList.count() != 1) {
             return false;
-
+	}
         alphabetElement = (const QDomElement &) alphabetList.item(0).toElement();
-
         soundNamesList = alphabetElement.elementsByTagName("sound");
     }
 
     //load the sounds for level 3 and 4 (syllables)
-    if ((Prefs::level() == 3) || (Prefs::level() == 4))
-    {
+    if ((Prefs::level() == 3) || (Prefs::level() == 4))  {
         syllablesList = languageElement.elementsByTagName("syllables");
         if (syllablesList.count() != 1)
             return false;
@@ -136,14 +144,14 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     }
     //Counts the number of sounds
     sounds = soundNamesList.count();
-    if (sounds < 1)
+    kDebug() << "number of sounds" << sounds << endl;
+    if (sounds < 1)  {
         return false;
+    }
+    namesList.clear();
+    filesList.clear();
 
-   namesList.clear();
-   filesList.clear();
-
-    for (uint sound = 0; sound < sounds; sound++)
-    {
+    for (uint sound = 0; sound < sounds; sound++)  {
         soundNameElement = (const QDomElement &) soundNamesList.item(sound).toElement();
         nameAttribute = soundNameElement.attributeNode("name");
         //namesList helds the names of the letter or syllable to display
@@ -152,8 +160,12 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
         //filesList helds the names of the sound files (i.e the location of the sounds like fr/alpha/a-0.mp3)
         filesList.append(fileAttribute.value());
     }
-    if (namesList.isEmpty())   return false;
-    if (filesList.isEmpty())   return false;
+    if (namesList.isEmpty()) {
+	return false;
+    }
+    if (filesList.isEmpty())  {
+	return false;
+    }
     return true;
 }
 
