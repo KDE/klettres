@@ -70,6 +70,8 @@ int main(int argc, char **argv)
                      ki18n("Hebrew sounds"), "elcuco AT kde DOT org");
     about.addCredit(ki18n("Lisa Kriege"),
                      ki18n("British English sounds"), "h.kriege AT freenet DOT de");
+    about.addCredit(ki18n("Vikram Vincent"),
+                     ki18n("Kannada sounds"), "vincentvikram AT gmail DOT com");
     about.addCredit(ki18n("Danny Allen"),
                     ki18n("SVG background pictures"), "dannya40uk AT yahoo DOT co DOT uk");
     about.addCredit(ki18n("Robert Gogolok"),
