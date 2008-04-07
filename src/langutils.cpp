@@ -58,8 +58,6 @@ QStringList LangUtils::getLanguages()
 	m_languages.removeAll("icons");
 	m_languages.sort();
 	
-	//Prefs::setLanguages(m_languages);
-	//Prefs::self()->writeConfig();
 	//find duplicated entries in KDEDIR and KDEHOME
 	QStringList temp_languages;
 	for (int i=0;  i<m_languages.count(); i++)  {
@@ -95,7 +93,11 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
         else
         {
             KConfigGroup group = entry.group(language);
-            languagesNames.append(group.readEntry("Name"));
+	    QString languageName = group.readEntry("Name");
+	    if (languageName.isEmpty()) {
+		languageName = i18n("None");
+	    }
+	    languagesNames.append(languageName);
         }
     }
     //never sort m_languageNames as it's m_languages translated
