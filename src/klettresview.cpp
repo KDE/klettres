@@ -169,6 +169,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
     }
     QChar input_character = inputLetter.at(inputLetter.length()-1);
     QChar input_character_u;
+    kDebug() << "input_character " << input_character << endl;
     if (input_character.isLetter()) 
     { 
 	if (input_character.unicode() == 0x00DF) { //everything in upper except the ß
@@ -177,6 +178,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
 	    input_character_u = input_character.toUpper();    
 	}
 	m_upperLetter.append(input_character_u);
+	kDebug() << "input_character_u " << input_character_u << endl;
         m_letterEdit->selectAll();
         m_letterEdit->cut();
         m_letterEdit->setText(m_upperLetter);
@@ -192,6 +194,8 @@ void KLettresView::slotTimerDone()
 {
     kDebug() << "in timer done";
     QString match = m_currentLetter.left(m_cursorPos );
+    kDebug() << "match " << match.toUpper().data() << endl;
+    kDebug() << "m_upperLetter " << m_upperLetter.data()<< endl;
     if (match == m_upperLetter)
     {
         if (m_cursorPos!=m_length)  {//if text in lineEdit not equal to text on button
@@ -205,6 +209,7 @@ void KLettresView::slotTimerDone()
             game();  //another syllable
         }
     }  else  { //if not, cut it
+	kDebug() << "wrong letter "<< endl;
         m_letterEdit->backspace();  //delete the char to the left  and position curseur accordingly
 	m_upperLetter.remove(m_upperLetter.size()-1, 1);
         m_letterEdit->setFocus();

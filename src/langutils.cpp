@@ -35,6 +35,7 @@ bool LangUtils::hasSpecialChars(const QString& lang)
 		|| lang== "sk"
 		|| lang== "es"
 		|| lang== "de"
+		|| lang== "hu"
 		|| lang== "nds")
 		return true;
 	return false;
