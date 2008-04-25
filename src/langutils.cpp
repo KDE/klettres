@@ -86,7 +86,7 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
     QStringList languagesNames;
     KConfig entry(KStandardDirs::locate("locale", "all_languages"));
 
-    foreach(QString language, languagesList) {
+    foreach(const QString &language, languagesList) {
         if (language == "hi-ro")
             languagesNames.append(i18n("Romanized Hindi"));
         else if (language == "lug_UG")
