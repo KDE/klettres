@@ -25,7 +25,7 @@ kde4_add_executable(klettres ${klettres_SRCS})
 
 target_link_libraries(klettres  ${KDE4_KNEWSTUFF2_LIBS} ${KDE4_PHONON_LIBS} )
 
-install(TARGETS klettres  DESTINATION ${BIN_INSTALL_DIR} )
+install(TARGETS klettres  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
