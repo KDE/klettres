@@ -44,6 +44,7 @@ KLettresView::KLettresView(KLettres *parent)
     m_letterEdit = new KLineEdit( this );
     m_letterEdit->setToolTip(i18n("Type the letter or syllable that you just heard" ) );
     m_letterEdit->setFont(Prefs::font());
+    m_letterEdit->setContextMenuPolicy(Qt::NoContextMenu);
     m_letterEdit->setAutoFillBackground(true);
 
     randomInt          = 0;
