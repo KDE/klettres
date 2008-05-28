@@ -341,7 +341,7 @@ You can also choose here the size you like the best. This size will be kept in c
       </textobject>
     </mediaobject>
 </screenshot>
-<para>Click on the <guilabel>Install</guilabel> button on the left of the language you want to install. You'll see the progress bar indicating how the download is progressing. The next screenshot shows Brazilian Portuguese being downloaded.</para>
+<para>Click on the <guilabel>Install</guilabel> button on the left of the language you want to install. You'll see the progress bar indicating how the download is progressing. The next screenshot shows Danish being downloaded.</para>
 <para>Please note that some files have several MB so it might be slow depending on your connection.</para>
 <para>After the file is downloaded, it is automatically installed and when you close the <guilabel>Get Hot New Stuff</guilabel> dialog you'll see the new language in the <guimenu>Language</guimenu> menu and you can use it immediately.</para>
 <screenshot>
@@ -356,15 +356,15 @@ You can also choose here the size you like the best. This size will be kept in c
     </mediaobject>
 </screenshot>
 <para>When a language is downloaded, you then can see the <guilabel>Install</guilabel> button turning to <guilabel>Uninstall</guilabel> and a green tick appears next to the language name to tell you that this language is available in &klettres;.</para>
-<para>The next screenshot shows Brazilian Portuguese installed.</para>
+<para>The next screenshot shows Danish installed.</para>
 <screenshot>
-<screeninfo>Brazilian Portuguese is installed</screeninfo>
+<screeninfo>Danish is installed</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
       </imageobject>
        <textobject>
-        <phrase>Brazilian Portuguese is installed</phrase>
+        <phrase>Danish is installed</phrase>
       </textobject>
     </mediaobject>
 </screenshot>
@@ -737,7 +737,7 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>assafgordon@gmail.com</email></para></listitem>
 <listitem><para>Italian sounds: Pietro Pasotti
 <email>pietro@itopen.it</email></para></listitem>
-<listitem><para>Kannada sounds: Vincent Vikram
+<listitem><para>Kannada sounds: Vikram Vincent 
 <email>vincentvikram@gmail.com</email></para></listitem>
 <listitem><para>Low Saxon sounds: Manfred Wiese and Sönke Dibbern
 <email>s_dibbern@web.de</email></para></listitem>
