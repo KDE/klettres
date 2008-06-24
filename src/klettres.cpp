@@ -105,7 +105,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
         QString mString=i18n("The file sounds.xml was not found in\n"
                              "$KDEDIR/share/apps/klettres/\n\n"
                              "Please install this file and start KLettres again.\n\n");
-        KMessageBox::information( this, mString,"KLettres - Error" );
+        KMessageBox::information( this, mString,i18n("KLettres - Error") );
         qApp->quit();//exit(1);
     }
     if (!layoutFile.open(QIODevice::ReadOnly))
