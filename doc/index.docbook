@@ -29,8 +29,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2008-02-13</date>
-<releaseinfo>2.0</releaseinfo>
+<date>2008-08-23</date>
+<releaseinfo>2.1</releaseinfo>
 
 <abstract>
 <para>
@@ -605,6 +605,10 @@ Settings</guilabel> page and the <guilabel>Timer</guilabel> configuration page.<
 
 </variablelist>
 
+</sect2>
+<sect2>
+<title>The <guimenu>Help</guimenu> Menu</title>
+&help.menu.documentation;
 </sect2>
 </sect1>
 </chapter>
