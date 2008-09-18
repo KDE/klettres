@@ -55,6 +55,7 @@ KLettresView::KLettresView(KLettres *parent)
 
 KLettresView::~KLettresView()
 {
+    kDebug()<<" DELETE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
     delete m_renderer;
     delete m_theme;
 }
