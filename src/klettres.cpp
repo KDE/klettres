@@ -244,7 +244,7 @@ void KLettres::loadSettings()
     }
     QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[LangUtils::getLanguages().indexOf(Prefs::language())];
     m_languageAction->setCurrentItem(LangUtils::getLanguages().indexOf(Prefs::language()));
-    langString.replace("&", QString());
+    langString.remove('&');
     m_langLabel->setText(langString);
     loadLangToolBar();
     // load default level
@@ -334,7 +334,7 @@ void KLettres::slotChangeLanguage(int newIndex)
     Prefs::self()->writeConfig();
     // Update the StatusBar
     QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[newIndex];
-    langString.replace("&", QString());
+    langString.remove('&');
     m_langLabel->setText(langString);
     loadLangToolBar();
     // Change language effectively
@@ -422,7 +422,7 @@ void KLettres::loadLangToolBar()
         QTextStream readFileStr(&openFileStream);
         readFileStr.setCodec("UTF-8");
         //allData contains all the words from the file
-        allData = readFileStr.readAll().split("\n");
+        allData = readFileStr.readAll().split('\n');
         openFileStream.close();
         for (int i=0; i<(int) allData.count(); ++i) {
             if (!allData[i].isEmpty()) {
