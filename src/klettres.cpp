@@ -28,6 +28,7 @@
 #include <QPainter>
 #include <QTextStream>
 #include <QDomDocument>
+#include <QWidget>
 
 //KDE includes
 #include <KAction>
@@ -57,11 +58,13 @@
 #include "langutils.h"
 #include "kltheme.h"
 
-class fontsdlg : public QDialog, public Ui::fontsdlg
+class fontsdlg : public QWidget, public Ui::fontsdlg
 {    
     public:
-        fontsdlg( QWidget * parent ) : QDialog(parent)
-        { setupUi(this); }
+        fontsdlg( QWidget * parent ) : QWidget(parent)
+        {
+            setupUi(this);
+        }
 };
 
 const int ID_KIDB      = 100;

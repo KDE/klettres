@@ -1,6 +1,6 @@
 <ui version="4.0" >
  <class>fontsdlg</class>
- <widget class="QDialog" name="fontsdlg" >
+ <widget class="QWidget" name="fontsdlg" >
   <property name="geometry" >
    <rect>
     <x>0</x>
