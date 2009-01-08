@@ -39,9 +39,9 @@ to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
 the basics of a foreign language. </para>
 <para>
-Seventeen languages are available at the moment: Arabic, Brazilian Portuguese, Czech, Danish, Dutch, English, 
-French, German, Hebrew, Italian, Kannada, Low Saxon, Luganda, Romanized Hindi, Spanish, Slovak and Telugu 
-and  but only English, French and your language if it is among those are installed by default.
+Twenty languages are available at the moment: Arabic, Czech, Brazilian Portuguese, 
+British English, Danish, Dutch, English, French, German, Hebrew, Hugarian, Italian, Kannada, Low Saxon,
+Luganda, Malayalam, Romanized Hindi, Spanish, Slovak and Telugu but only English, French and your language if it is among those are installed by default.
 </para>
 <para>
 &klettres; is really easy to use. The language can be changed using the 
@@ -63,17 +63,9 @@ Finally, the mode can be changed from kid to grown-up using the
 <keyword>kdeedu</keyword>
 <keyword>klettres</keyword>
 <keyword>alphabet</keyword>
-<keyword>Czech</keyword>
-<keyword>Danish</keyword>
-<keyword>Dutch</keyword>
-<keyword>English</keyword>
-<keyword>French</keyword>
-<keyword>Italian</keyword>
-<keyword>Romanized Hindi</keyword>
-<keyword>Spanish</keyword>
-<keyword>Slovak</keyword>
-<keyword>Luganda</keyword>
+<keyword>sounds</keyword>
 <keyword>language</keyword>
+<keyword>keyboard</keyword>
 </keywordset>
 
 </bookinfo>
@@ -90,9 +82,9 @@ the levels where the letter/syllable is not displayed, only the sound
 is played. The user does not need to know how to use the mouse, the
 keyboard only is needed.</para>
 
-<para>There are seventeen languages available at the moment: Arabic, Czech, British
-English, Danish, Dutch, English, French, German, Hebrew, Italian, Kannada, Low Saxon,
-Luganda, Romanized Hindi, Spanish, Slovak and Telugu. If your
+<para>There are twenty languages available at the moment: Arabic, Czech, Brazilian Portuguese, 
+British English, Danish, Dutch, English, French, German, Hebrew, Hugarian, Italian, Kannada, Low Saxon,
+Luganda, Malayalam, Romanized Hindi, Spanish, Slovak and Telugu. If your
 &kde; language is among those, then it is taken as default, otherwise
 French is the default.
 You can easily get any additional available language by using the
