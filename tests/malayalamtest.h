@@ -28,6 +28,7 @@ class MalayalamTest : public QObject
 
 private Q_SLOTS:
     void matchChar();
+    void decomposeConsonant();
 
 };
 

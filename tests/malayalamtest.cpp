@@ -9,14 +9,28 @@ void MalayalamTest::matchChar()
     // You need to have Malayalam fonts installed
     QString string = QString::fromUtf8("യേ");
 
-    QString match2(QString::fromUtf8("യ"));
-    QString match3(QString::fromUtf8("േ"));
     //get first char and compare
     QCOMPARE(QString::fromUtf8("യ"), string.left(1));
     //get second char and compare    
     QCOMPARE(QString::fromUtf8("േ"), string.right(1));
 
 }
+
+void MalayalamTest::decomposeConsonant()
+{
+    // Initial consonant that we want to separate into letters
+    // You need to have Malayalam fonts installed
+    QString string = QString::fromUtf8("ഘൊ");
+
+    //first letter
+    QCOMPARE(QString::fromUtf8("ഘ"), string.mid(0,1));
+    //second letter    
+    QCOMPARE(QString::fromUtf8("െ"), string.mid(1,1));
+    //third letter    
+    QCOMPARE(QString::fromUtf8("ാ"), string.mid(2,1));
+    
+}
+
 
 QTEST_KDEMAIN_CORE( MalayalamTest )
 
