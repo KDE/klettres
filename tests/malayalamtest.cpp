@@ -19,9 +19,9 @@ void MalayalamTest::matchChar()
 void MalayalamTest::decomposeConsonant()
 {
     // Initial consonant that we want to separate into letters
-    // You need to have Malayalam fonts installed
     QString string = QString::fromUtf8("ഘൊ");
 
+    QCOMPARE(string.length(), 3);
     //first letter
     QCOMPARE(QString::fromUtf8("ഘ"), string.mid(0,1));
     //second letter    
