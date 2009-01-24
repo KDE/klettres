@@ -1,6 +1,6 @@
 /***************************************************************************
- *   Copyright (C) 2004-2008 by Anne-Marie Mahfouf                              *
- *   annemarie.mahfouf@free.fr                                             *
+ *   Copyright (C) 2004-2009 by Anne-Marie Mahfouf                              *
+ *   annma@kde.org                                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -21,8 +21,8 @@
  /**
  * This file serves holds the version number of KLettres
  * @author Anne-Marie Mahfouf <annma@kde.org>
- * @version 2.1
+ * @version 2.3
  */
  #ifndef KLETTRES_VERSION
-#define KLETTRES_VERSION "2.1"
+#define KLETTRES_VERSION "2.3"
 #endif
