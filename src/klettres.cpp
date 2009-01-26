@@ -126,7 +126,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 
 void KLettres::setupActions()
 {
-    QAction *m_newAction = actionCollection()->addAction("play_new");
+    KAction *m_newAction = actionCollection()->addAction("play_new");
     m_newAction->setText(i18n("New Sound"));
     m_newAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_N));
     m_newAction->setIcon(KIcon("document-new")); // ### better icon for this?
@@ -139,7 +139,7 @@ void KLettres::setupActions()
     m_stuffAction->setIcon(KIcon("get-hot-new-stuff"));
     connect(m_stuffAction, SIGNAL(triggered(bool)),  this, SLOT( slotDownloadNewStuff() ));
 
-    QAction *m_playAgainAction = actionCollection()->addAction("play_again");
+    KAction *m_playAgainAction = actionCollection()->addAction("play_again");
     m_playAgainAction->setText(i18n("Replay Sound"));
     m_playAgainAction->setShortcut(QKeySequence(Qt::Key_F5));
     m_playAgainAction->setIcon(KIcon("media-playback-start"));
