@@ -166,10 +166,10 @@ void KLettres::setupActions()
     m_languageAction->setText(i18nc("@label:listbox", "&Language"));
     m_languageAction->setItems(m_languageNames);
 
-    m_levelsNames.append(i18nc("@item:inlistbox choose level 1", "Level 1" ));
-    m_levelsNames.append(i18nc("@item:inlistbox choose level 2",  "Level 2" ));
-    m_levelsNames.append(i18nc("@item:inlistbox choose level 3",  "Level 3" ));
-    m_levelsNames.append(i18nc("@item:inlistbox choose level 4",  "Level 4" ));
+    m_levelsNames.append(i18ncp("@item:inlistbox choose level", "Level %1" , "Level %1", 1));
+    m_levelsNames.append(i18ncp("@item:inlistbox choose level", "Level %1" , "Level %1", 2));
+    m_levelsNames.append(i18ncp("@item:inlistbox choose level", "Level %1" , "Level %1", 3));
+    m_levelsNames.append(i18ncp("@item:inlistbox choose level", "Level %1" , "Level %1", 4));
     m_levelAction->setItems(m_levelsNames);
     m_levelAction->setCurrentItem(Prefs::level()-1);
 
