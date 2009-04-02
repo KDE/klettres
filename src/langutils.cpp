@@ -41,6 +41,16 @@ bool LangUtils::hasSpecialChars(const QString& lang)
 	return false;
 }
 
+bool LangUtils::isIndian(const QString& lang)
+{
+	if (lang == "kn"
+		|| lang == "ml"
+		|| lang == "te"
+		|| lang == "pa")
+		return true;
+	return false;
+}
+
 QStringList LangUtils::getLanguages()
 {
 	QStringList m_languages;

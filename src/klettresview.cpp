@@ -34,6 +34,7 @@
 #include "klettres.h"
 #include "prefs.h"
 #include "kltheme.h"
+#include "langutils.h"
 
 KLettresView::KLettresView(KLettres *parent)
         : QWidget(parent)
@@ -160,6 +161,7 @@ void KLettresView::game()
 
 void KLettresView::slotProcess(const QString &inputLetter)
 {
+    QString lang = Prefs::language();
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
     //check if backspace
     if(inputLetter.length() != m_cursorPos)  {
@@ -171,8 +173,8 @@ void KLettresView::slotProcess(const QString &inputLetter)
     QChar input_character = inputLetter.at(inputLetter.length()-1);
     QChar input_character_u;
     kDebug() << "input_character " << input_character << endl;
-    if (input_character.isLetter()) 
-    { 
+    if ((!LangUtils::isIndian(lang) && (input_character.isLetter())) || (LangUtils::isIndian(lang)))                               
+    {
 	if (input_character.unicode() == 0x00DF) { //everything in upper except the ß
 	    input_character_u = input_character.toLower();
 	}  else  {
