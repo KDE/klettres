@@ -27,7 +27,9 @@ class LangUtils
 {
 public:
     static bool hasSpecialChars(const QString& lang);
-    ///Avalibale languages ISO names
+    ///Indian languages cannot have isLetter()
+    static bool isIndian(const QString& lang);
+    ///Available languages ISO names
     static QStringList getLanguages();
     static void writeLangConfig();
     ///All available languages translated names
