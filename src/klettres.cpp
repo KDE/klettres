@@ -231,7 +231,7 @@ void KLettres::optionsPreferences()
     //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
     //fonts is the icon
     Timer *m_timer = new Timer();
-    dialog->addPage(m_timer, i18n("Timer"), "clock");
+    dialog->addPage(m_timer, i18n("Timer"), "chronometer");
     connect(dialog, SIGNAL(settingsChanged( const QString &)), this, SLOT(slotUpdateSettings()));
     dialog->setAttribute( Qt::WA_DeleteOnClose );
     dialog->setHelp(QString(), "klettres");
