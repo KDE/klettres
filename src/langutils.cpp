@@ -43,10 +43,10 @@ bool LangUtils::hasSpecialChars(const QString& lang)
 
 bool LangUtils::isIndian(const QString& lang)
 {
-	if (lang== "kn"
-		|| lang== "ml"
-		|| lang== "te"
-		|| lang== "pa")
+	if (lang == "kn"
+		|| lang == "ml"
+		|| lang == "te"
+		|| lang == "pa")
 		return true;
 	return false;
 }
@@ -106,7 +106,7 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
             KConfigGroup group = entry.group(language);
 	    QString languageName = group.readEntry("Name");
 	    if (languageName.isEmpty()) {
-		languageName = i18n("None");
+		languageName = i18nc("@item:inlistbox no language for that locale", "None");
 	    }
 	    languagesNames.append(languageName);
         }
