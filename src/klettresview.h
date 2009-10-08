@@ -67,6 +67,8 @@ public:
     void setTheme(KLTheme *theme);
 
 protected:
+    ///If the user hits backpace
+    void keyReleaseEvent(QKeyEvent * e);
     ///cursor position in the line edit
     int m_cursorPos;
     ///Random number that decides on the letter/syllable and sound

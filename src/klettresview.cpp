@@ -229,4 +229,11 @@ void KLettresView::slotPlayAgain()
     m_klettres->soundFactory->playSound(m_random);
 }
 
+void KLettresView::keyReleaseEvent(QKeyEvent * e)
+{
+       if (e->key() == Qt::Key_Backspace) {
+            m_upperLetter.remove(m_cursorPos-1, 1);
+       }
+}
+
 #include "klettresview.moc"
