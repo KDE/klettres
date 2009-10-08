@@ -195,10 +195,9 @@ void KLettresView::slotProcess(const QString &inputLetter)
 
 void KLettresView::slotTimerDone()
 {
-    kDebug() << "in timer done";
     QString match = m_currentLetter.left(m_cursorPos );
-    kDebug() << "match " << match.toUpper().data() << endl;
-    kDebug() << "m_upperLetter " << m_upperLetter.data()<< endl;
+    kDebug() << "match " << match.toUpper() << endl;
+    kDebug() << "m_upperLetter " << m_upperLetter << endl;
     if (match == m_upperLetter)
     {
         if (m_cursorPos!=m_length)  {//if text in lineEdit not equal to text on button
@@ -227,6 +226,13 @@ void KLettresView::slotPlayAgain()
 {
     //TODO wait for the previous sound to be payed before playing again as it won't play if the previous one was not finished
     m_klettres->soundFactory->playSound(m_random);
+}
+
+void KLettresView::keyReleaseEvent(QKeyEvent * e)
+{
+       if (e->key() == Qt::Key_Backspace) {
+            m_upperLetter.remove(m_cursorPos-1, 1);
+       }
 }
 
 #include "klettresview.moc"

@@ -67,7 +67,10 @@ public:
     void setTheme(KLTheme *theme);
 
 protected:
-    ///cursor position in the line edit
+
+    ///If the user hits backpace
+    void keyReleaseEvent(QKeyEvent * e);
+    ///Cursor position in the line edit
     int m_cursorPos;
     ///Random number that decides on the letter/syllable and sound
     int m_random;
@@ -92,11 +95,11 @@ protected:
     QSvgRenderer *m_renderer;
     QPixmap       m_backgroundCache;
 
-    public slots:
+public slots:
     ///Start playing displaying a new letter/syllable, playing the associated sound
     void game();
 
-    protected slots:
+protected slots:
     ///Play the same sound again
     void slotPlayAgain();
 
