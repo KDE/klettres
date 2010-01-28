@@ -47,10 +47,10 @@
 #include <KToggleAction>
 #include <KToolBar>
 #include <KIcon>
-#include <KNS/Engine>
 #include <KApplication>
 #include <KGlobal>
 
+#include <knewstuff3/downloaddialog.h>
 //Project includes
 #include "ui_fontsdlg.h"
 #include "timer.h"
@@ -266,9 +266,8 @@ void KLettres::loadSettings()
 
 void KLettres::slotDownloadNewStuff()
 {
-    KNS::Entry::List entries = KNS::Engine::download();
-    // we need to delete the entry* items in the returned list
-    qDeleteAll(entries);
+    KNS3::DownloadDialog dialog("klettres.knsrc", this);
+    dialog.exec();
 
     //look for languages dirs installed
     QStringList languages = LangUtils::getLanguages();

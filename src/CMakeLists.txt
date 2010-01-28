@@ -23,7 +23,7 @@ kde4_add_app_icon(klettres_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-apps-klettres.p
 
 kde4_add_executable(klettres ${klettres_SRCS})
 
-target_link_libraries(klettres  ${KDE4_KNEWSTUFF2_LIBS} ${KDE4_PHONON_LIBS} ${QT_QTXML_LIBRARY})
+target_link_libraries(klettres  ${KDE4_KNEWSTUFF3_LIBS} ${KDE4_PHONON_LIBS} ${QT_QTXML_LIBRARY})
 
 install(TARGETS klettres  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
