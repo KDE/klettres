@@ -29,8 +29,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2008-08-23</date>
-<releaseinfo>2.1</releaseinfo>
+<date>2010-04-21</date>
+<releaseinfo>2.3</releaseinfo>
 
 <abstract>
 <para>
@@ -53,7 +53,7 @@ changed in a combo box or in the <menuchoice><guimenu>Look</guimenu>
 available: <guimenuitem>Kid</guimenuitem>, 
 <guimenuitem>Desert</guimenuitem> and <guimenuitem>Savannah</guimenuitem>. 
 Finally, the mode can be changed from kid to grown-up using the 
-<menuchoice><guimenu>Look</guimenu> <guimenuitem>Mode</guimenuitem></menuchoice> menu.
+<guimenu>Look</guimenu> menu.
 </para>
 
 </abstract>
@@ -109,13 +109,13 @@ different fonts and colors.</para>
 <para>You do not need the language keyboard layout anymore as you can use the 
 special <guimenuitem>Special Characters</guimenuitem> toolbar to type any special 
 character in each language. In the <guimenu>Settings</guimenu> menu, 
-<guisubmenu>Toolbars</guisubmenu>, select <guimenuitem>Special Characters</guimenuitem> 
+<guisubmenu>Toolbars Shown</guisubmenu>, select <guimenuitem>Special Characters</guimenuitem> 
 and the toolbar will appear at the bottom of &klettres;. Click on the letter 
 you want and it will be shown in the input field. This toolbar can be dragged 
 anywhere on your screen.</para>
 <para>
 If you prefer having the language keyboard layout, please use &systemsettings;, in the
-section <guilabel>Personal</guilabel>, <guimenu>Regional &amp; Language</guimenu> and submenu
+section <guilabel>Hardware</guilabel>, <guimenu>Main Input Devices</guimenu> on the page
 <guimenuitem>Keyboard Layout</guimenuitem> in order to set the correct keyboard layout.</para>
 </note>
 </chapter>
@@ -158,7 +158,7 @@ Internet connection.
 <para>
 In level 1, the user sees the letter and hears the sound. He then has to type in 
 the letter in the box. If it is correct, the next letter appears (without having 
-to press <keycap>Enter</keycap> or whatever). If the user types the wrong letter, 
+to press &Enter; or whatever). If the user types the wrong letter, 
 he hears the sound again. In this level, the user memorizes the letters, associates 
 them with their sound and recognizes them on the keyboard.
 </para>
@@ -168,7 +168,7 @@ them with their sound and recognizes them on the keyboard.
 automatically put in uppercase so that a child will match them with the keyboard. 
 He can type only one letter at atime.</para>
 <para>When you type a letter in the input field, there is no need to press 
-<keycap>Enter</keycap> and the program waits for a short while before testing if 
+&Enter; and the program waits for a short while before testing if 
 the letter is right. This short wait is to leave time to a young child to understand 
 what he/she just typed, especially if this is the wrong letter. You can change this 
 time by using the <guimenu>Settings</guimenu> menu, <guimenuitem>Configure &klettres;...</guimenuitem> 
@@ -299,7 +299,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <sect2 id="timers">
 <title>Timers</title>
 
-<para>The timers set the time between two letters &ie; the time during wich a letter is displayed. The units are tenths of seconds. 
+<para>The timers set the time between two letters &ie; the time during which a letter is displayed. The units are tenths of seconds. 
 </para>
 
 <para>The <guilabel>Timer</guilabel> page in the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &klettres;...</guimenuitem></menuchoice> dialog has two timers settings: one for the <guilabel>Kid Mode</guilabel> and one for the <guilabel>Grown-up Mode</guilabel>. Defaults are 4 tenths of seconds for <guilabel>Kid Mode</guilabel> and 2 tenths of seconds for <guilabel>Grown-up Mode</guilabel>. Increasing the time leaves you more time to see your errors.</para>
@@ -333,7 +333,7 @@ You can also choose here the size you like the best. This size will be kept in c
       </textobject>
     </mediaobject>
 </screenshot>
-<para>Click on the <guilabel>Install</guilabel> button on the left of the language you want to install. You'll see the progress bar indicating how the download is progressing. The next screenshot shows Danish being downloaded.</para>
+<para>Click on the <guilabel>Install</guilabel> button on the right of the language you want to install. You'll see the progress bar indicating how the download is progressing. The next screenshot shows Danish being downloaded.</para>
 <para>Please note that some files have several MB so it might be slow depending on your connection.</para>
 <para>After the file is downloaded, it is automatically installed and when you close the <guilabel>Get Hot New Stuff</guilabel> dialog you'll see the new language in the <guimenu>Language</guimenu> menu and you can use it immediately.</para>
 <screenshot>
@@ -490,7 +490,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <varlistentry>
 <term><menuchoice>
 <guimenu>Look</guimenu>
-<guisubmenu>Theme</guisubmenu>
+<guisubmenu>Themes</guisubmenu>
 <guimenuitem>Kid</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Switch</action> to the Kid theme</para></listitem>
@@ -499,7 +499,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <varlistentry>
 <term><menuchoice>
 <guimenu>Look</guimenu>
-<guisubmenu>Theme</guisubmenu>
+<guisubmenu>Themes</guisubmenu>
 <guimenuitem>Desert</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Switch</action> to the Desert theme</para></listitem>
@@ -508,7 +508,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <varlistentry>
 <term><menuchoice>
 <guimenu>Look</guimenu>
-<guisubmenu>Theme</guisubmenu>
+<guisubmenu>Themes</guisubmenu>
 <guimenuitem>Savannah</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Switch</action> to the Savannah theme</para></listitem>
@@ -531,7 +531,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <keycombo action="simul">&Ctrl;<keycap>G</keycap></keycombo>
 </shortcut>
 <guimenu>Look</guimenu>
-<guimenuitem>Mode Grownup</guimenuitem>
+<guimenuitem>Mode Grown-up</guimenuitem>
 </menuchoice></term>
 <listitem><para><action>Toggle</action> the grown-up mode: normal interface</para></listitem>
 </varlistentry>
@@ -556,7 +556,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <varlistentry>
 <term><menuchoice>
 <guimenu>Settings</guimenu>
-<guisubmenu>Toolbars</guisubmenu>
+<guisubmenu>Toolbars Shown</guisubmenu>
 </menuchoice></term>
 <listitem><para><action>Toggle</action> the <guimenuitem>Main</guimenuitem> and the 
 <guimenuitem>Special Characters</guimenuitem> toolbar</para></listitem>
@@ -660,7 +660,7 @@ path.</para> </answer>
 <para>I do not hear any sounds</para>
 </question>
 <answer>
-<para>Make sure that &phonon; is working on your system. To do so, open &systemsettings; and in <guilabel>General</guilabel>, <guilabel>Computer Administration</guilabel> click on <guilabel>Sound</guilabel>.
+<para>Make sure that &phonon; is working on your system. To do so, open &systemsettings; and in <guilabel>General</guilabel>, <guilabel>Hardware</guilabel> click on <guilabel>Multimedia</guilabel>.
 </para>
  </answer>
 </qandaentry>
@@ -688,7 +688,7 @@ folder.</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only seventeen languages?</para>
+<para>Why are there only twenty languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
