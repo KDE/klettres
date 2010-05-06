@@ -115,7 +115,7 @@ you want and it will be shown in the input field. This toolbar can be dragged
 anywhere on your screen.</para>
 <para>
 If you prefer having the language keyboard layout, please use &systemsettings;, in the
-section <guilabel>Hardware</guilabel>, <guimenu>Main Input Devices</guimenu> on the page
+section <guilabel>Hardware</guilabel>, <guimenu>Input Devices</guimenu> on the page
 <guimenuitem>Keyboard Layout</guimenuitem> in order to set the correct keyboard layout.</para>
 </note>
 </chapter>
@@ -660,7 +660,7 @@ path.</para> </answer>
 <para>I do not hear any sounds</para>
 </question>
 <answer>
-<para>Make sure that &phonon; is working on your system. To do so, open &systemsettings; and in <guilabel>General</guilabel>, <guilabel>Hardware</guilabel> click on <guilabel>Multimedia</guilabel>.
+<para>Make sure that &phonon; is working on your system. To do so, open &systemsettings; and in <guilabel>Hardware</guilabel> click on <guilabel>Audio and Video</guilabel>.
 </para>
  </answer>
 </qandaentry>
@@ -682,7 +682,7 @@ folder.</para></answer>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
 <para>If you have &Windows; on your machine, you can use the TTF fonts from
-&Windows; (Arial is in those) via &systemsettings; -&gt; <guilabel>Computer
+&Windows; (Arial is in those) via &systemsettings; -&gt; <guilabel>System 
 Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> and add the &Windows; Font
 folder.</para></answer>
 </qandaentry>
