@@ -660,7 +660,7 @@ path.</para> </answer>
 <para>I do not hear any sounds</para>
 </question>
 <answer>
-<para>Make sure that &phonon; is working on your system. To do so, open &systemsettings; and in the <guilabel>Hardware</guilabel> category click on <guilabel>Audio and Video</guilabel>.
+<para>Make sure that &phonon; is working on your system. To do so, open &systemsettings; and in the <guilabel>Hardware</guilabel> category click on <guilabel>Multimedia</guilabel>.
 </para>
  </answer>
 </qandaentry>
