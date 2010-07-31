@@ -18,7 +18,7 @@
 
 #include <kdebug.h>
 #include <ktar.h>
-#include <qdir.h>
+#include <tqdir.h>
 #include <kaction.h>
 #include <kapplication.h>
 #include <kstandarddirs.h>
@@ -31,7 +31,7 @@ KLNewStuff::KLNewStuff( KLettresView *view ) :
 {
 }
 
-bool KLNewStuff::install( const QString &fileName )
+bool KLNewStuff::install( const TQString &fileName )
 {
     kdDebug(5850) << "KLNewStuff::install(): " << fileName << endl;
 
@@ -40,7 +40,7 @@ bool KLNewStuff::install( const QString &fileName )
         return false;
     const KArchiveDirectory *archiveDir = archive.directory();
     KStandardDirs myStdDir;
-    const QString destDir =myStdDir.saveLocation("data", kapp->instanceName() + "/", true);
+    const TQString destDir =myStdDir.saveLocation("data", kapp->instanceName() + "/", true);
     KStandardDirs::makeDir( destDir );
     archiveDir->copyTo(destDir);
     archive.close();
@@ -54,7 +54,7 @@ bool KLNewStuff::install( const QString &fileName )
     return true;
 }
 
-bool KLNewStuff::createUploadFile( const QString &fileName )
+bool KLNewStuff::createUploadFile( const TQString &fileName )
 {
     //return mView->saveCalendar( fileName );
     return true;

@@ -34,7 +34,7 @@
 
 
 SoundFactory::SoundFactory(KLettres *parent, const char *name)
-        : QObject(parent, name)
+        : TQObject(parent, name)
 {
     klettres = parent;
 
@@ -50,7 +50,7 @@ SoundFactory::~SoundFactory()
 {
 }
 
-void SoundFactory::change(QString currentLanguage)
+void SoundFactory::change(TQString currentLanguage)
 {
     //go load the sounds for the current language
     bool ok = loadLanguage(m_layoutsDocument, currentLanguage);
@@ -61,7 +61,7 @@ void SoundFactory::change(QString currentLanguage)
 
 void SoundFactory::playSound(int mySound)
 {
-    QString soundFile;
+    TQString soundFile;
 
     if ((uint) mySound >= sounds) return;
 
@@ -78,22 +78,22 @@ void SoundFactory::loadFailure()
     KMessageBox::error(klettres, i18n("Error while loading the sound names."));
 }
 
-bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, QString currentLanguage)
+bool SoundFactory::loadLanguage(TQDomDocument &layoutDocument, TQString currentLanguage)
 {
-    QDomNodeList languagesList,
+    TQDomNodeList languagesList,
     alphabetList,
     syllablesList,
     soundNamesList;
-    QDomElement languageElement,
+    TQDomElement languageElement,
     alphabetElement,
     syllableElement,
     soundNameElement;
-    QDomAttr nameAttribute, fileAttribute;
+    TQDomAttr nameAttribute, fileAttribute;
 
     languagesList = layoutDocument.elementsByTagName("language");
-    QDomAttr codeAttribute;
+    TQDomAttr codeAttribute;
     //check if the sound files match current language
-    languageElement = (const QDomElement &) languagesList.item(0).toElement();
+    languageElement = (const TQDomElement &) languagesList.item(0).toElement();
     codeAttribute = languageElement.attributeNode("code");
     if (currentLanguage != codeAttribute.value()) {
         kdDebug() << "Fail reading language !!! " << endl;
@@ -107,7 +107,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, QString currentLan
         if (alphabetList.count() != 1)
             return false;
 
-        alphabetElement = (const QDomElement &) alphabetList.item(0).toElement();
+        alphabetElement = (const TQDomElement &) alphabetList.item(0).toElement();
 
         soundNamesList = alphabetElement.elementsByTagName("sound");
     }
@@ -119,7 +119,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, QString currentLan
         if (syllablesList.count() != 1)
             return false;
 
-        syllableElement = (const QDomElement &) syllablesList.item(0).toElement();
+        syllableElement = (const TQDomElement &) syllablesList.item(0).toElement();
 
         soundNamesList = syllableElement.elementsByTagName("sound");
     }
@@ -133,7 +133,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, QString currentLan
 
     for (uint sound = 0; sound < sounds; sound++)
     {
-        soundNameElement = (const QDomElement &) soundNamesList.item(sound).toElement();
+        soundNameElement = (const TQDomElement &) soundNamesList.item(sound).toElement();
         nameAttribute = soundNameElement.attributeNode("name");
         //namesList helds the names of the letter or syllable to display
         namesList.append(nameAttribute.value());

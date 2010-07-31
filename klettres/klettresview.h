@@ -21,8 +21,8 @@
 #ifndef KLETTRESVIEW_H
 #define KLETTRESVIEW_H
 
-#include <qwidget.h>
-#include <qpalette.h>
+#include <tqwidget.h>
+#include <tqpalette.h>
 #include <klineedit.h>
 
 class QLabel;
@@ -68,12 +68,12 @@ public:
 protected:
 
     ///The pixmaps for the themes backgrounds
-    QPixmap m_grownupPicture,
+    TQPixmap m_grownupPicture,
     m_kidPicture,
     m_desertPicture;
     ///Palette changes wether it's kid or grown-up
-    QPalette pal;
-    QColorGroup cg;
+    TQPalette pal;
+    TQColorGroup cg;
     ///cursor position in the line edit
     int m_cursorPos;
     ///Random number that decides on the letter/syllable and sound
@@ -83,13 +83,13 @@ protected:
     ///Choose a sound in random and ensure that it's not the same than the previous one
     void chooseSound();
     ///Current letter or syllable stored
-    QString m_currentLetter;
+    TQString m_currentLetter;
     ///Current letter entered uppercase i.e. m_inputLetter.upper()
-    QString m_upperLetter;
+    TQString m_upperLetter;
     ///Current letter entered
-    //QString m_inputLetter; NOTE: not used
+    //TQString m_inputLetter; NOTE: not used
     ///Paint the letter/syllable in levels 1 and 3
-    void paintEvent( QPaintEvent * );
+    void paintEvent( TQPaintEvent * );
 
     public slots:
     ///Start playing displaying a new letter/syllable, playing the associated sound
@@ -99,7 +99,7 @@ protected:
     ///Play the same sound again
     void slotPlayAgain();
     
-    void slotProcess(const QString &inputLetter);
+    void slotProcess(const TQString &inputLetter);
 
     void slotTimerDone();
 };

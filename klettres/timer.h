@@ -41,7 +41,7 @@ public:
     Timer();
 
 protected slots:
-    ///When the QSlider value changes
+    ///When the TQSlider value changes
     void sliderValueChanged();
 };
 

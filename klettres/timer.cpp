@@ -22,8 +22,8 @@
 
 #include <klocale.h>
 
-#include <qlabel.h>
-#include <qslider.h>
+#include <tqlabel.h>
+#include <tqslider.h>
 
 #include "timer.h"
 #include "prefs.h"
@@ -32,17 +32,17 @@
 Timer::Timer()
     :timerdlg()
 {
-    timeGrownLabel->setText(QString::number(Prefs::grownTimer()) + " " + i18n("tenths of second"));
-    timeKidLabel->setText(QString::number(Prefs::kidTimer()) + " " + i18n("tenths of second"));
-    connect(kcfg_GrownTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
-    connect(kcfg_KidTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
+    timeGrownLabel->setText(TQString::number(Prefs::grownTimer()) + " " + i18n("tenths of second"));
+    timeKidLabel->setText(TQString::number(Prefs::kidTimer()) + " " + i18n("tenths of second"));
+    connect(kcfg_GrownTimer, TQT_SIGNAL(valueChanged(int)), this, TQT_SLOT(sliderValueChanged()));
+    connect(kcfg_KidTimer, TQT_SIGNAL(valueChanged(int)), this, TQT_SLOT(sliderValueChanged()));
 }
 
 
 void Timer::sliderValueChanged()
 {
-    timeKidLabel->setText(QString::number(kcfg_KidTimer->value()) + " " + i18n("tenths of second"));
-    timeGrownLabel->setText(QString::number(kcfg_GrownTimer->value()) + " " + i18n("tenths of second"));
+    timeKidLabel->setText(TQString::number(kcfg_KidTimer->value()) + " " + i18n("tenths of second"));
+    timeGrownLabel->setText(TQString::number(kcfg_GrownTimer->value()) + " " + i18n("tenths of second"));
 }
 
 

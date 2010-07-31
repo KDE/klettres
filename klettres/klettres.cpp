@@ -19,14 +19,14 @@
  ***************************************************************************/
 
 //Qt includes
-#include <qbitmap.h>
-#include <qdir.h>
-#include <qfile.h>
-#include <qlabel.h>
-#include <qpainter.h>
-#include <qstring.h>
-#include <qtooltip.h>
-#include <qwhatsthis.h>
+#include <tqbitmap.h>
+#include <tqdir.h>
+#include <tqfile.h>
+#include <tqlabel.h>
+#include <tqpainter.h>
+#include <tqstring.h>
+#include <tqtooltip.h>
+#include <tqwhatsthis.h>
 
 //KDE includes
 #include <kaction.h>
@@ -72,8 +72,8 @@ KLettres::KLettres()
     loadSettings();
     //Setup current language sounds
     soundFactory = new SoundFactory(this, "sounds");
-    setMinimumSize( QSize( 640, 550 ) );
-    setMaximumSize( QSize( 640, 550 ) );
+    setMinimumSize( TQSize( 640, 550 ) );
+    setMaximumSize( TQSize( 640, 550 ) );
     //Start game
     m_view->game();
 }
@@ -88,11 +88,11 @@ void KLettres::findLanguages()
     m_languageNames.clear();
     //m_sortedNames.clear();
     //the program scans in khangman/data/ to see what languages data is found
-    QStringList mdirs = KGlobal::dirs()->findDirs("data", "klettres/");
+    TQStringList mdirs = KGlobal::dirs()->findDirs("data", "klettres/");
     if (mdirs.isEmpty()) return;
-    for (QStringList::Iterator it =mdirs.begin(); it !=mdirs.end(); ++it ) {
-        QDir dir(*it);
-        m_languages += dir.entryList(QDir::Dirs, QDir::Name);
+    for (TQStringList::Iterator it =mdirs.begin(); it !=mdirs.end(); ++it ) {
+        TQDir dir(*it);
+        m_languages += dir.entryList(TQDir::Dirs, TQDir::Name);
         m_languages.remove(m_languages.find("."));
         m_languages.remove(m_languages.find(".."));
     }
@@ -104,7 +104,7 @@ void KLettres::findLanguages()
     Prefs::setLanguages(m_languages);
     Prefs::writeConfig();
     //find duplicated entries in KDEDIR and KDEHOME
-    QStringList temp_languages;
+    TQStringList temp_languages;
     for (uint i=0;  i<m_languages.count(); i++)
     {
         if (m_languages.contains(m_languages[i])>1) {
@@ -125,16 +125,16 @@ void KLettres::findLanguages()
     config->setGroup("KNewStuffStatus");
     for (uint i=0;  i<m_languages.count(); i++)
     {
-        QString tmp = m_languages[i];
+        TQString tmp = m_languages[i];
         if (!config->readEntry(tmp))
-            config->writeEntry(tmp, QDate::currentDate().toString());
+            config->writeEntry(tmp, TQDate::currentDate().toString());
     }
     //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
     //to find the name of the country
     //corresponding to the code and the language the user set
     KConfig entry(locate("locale", "all_languages"));
-    const QStringList::ConstIterator itEnd = m_languages.end();
-    for (QStringList::Iterator it = m_languages.begin(); it != m_languages.end(); ++it) {
+    const TQStringList::ConstIterator itEnd = m_languages.end();
+    for (TQStringList::Iterator it = m_languages.begin(); it != m_languages.end(); ++it) {
         if (*it == "hi-ro")
             m_languageNames.append(i18n("Romanized Hindi"));
         else if (*it =="lug_UG")
@@ -149,10 +149,10 @@ void KLettres::findLanguages()
     //m_sortedNames = m_languageNames;
 }
 
-QString Prefs::defaultLanguage()
+TQString Prefs::defaultLanguage()
 {
 	//see what is the user language for KDE
-	QStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
+	TQStringList defaultLanguages = KGlobal::locale()->languagesTwoAlpha();
 	if (!defaultLanguages.isEmpty()) {
 	//scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
 	int i = Prefs::self()->m_languages.findIndex(defaultLanguages[0]);
@@ -163,18 +163,18 @@ QString Prefs::defaultLanguage()
 		else
 			return Prefs::self()->m_languages[i]; //KDE default if exists
 	}
-	return QString::null;
+	return TQString::null;
 }
 
 
-bool KLettres::loadLayout(QDomDocument &layoutDocument)
+bool KLettres::loadLayout(TQDomDocument &layoutDocument)
 {
-    QFile layoutFile(locate("data", "klettres/"+Prefs::language()+"/sounds.xml"));
+    TQFile layoutFile(locate("data", "klettres/"+Prefs::language()+"/sounds.xml"));
     //if xml file is not found, program exits
     if (!layoutFile.exists())
     {
         kdWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/"+Prefs::language() << endl;
-        QString mString=i18n("The file sounds.xml was not found in\n"
+        TQString mString=i18n("The file sounds.xml was not found in\n"
                              "$KDEDIR/share/apps/klettres/\n\n"
                              "Please install this file and start KLettres again.\n\n");
         KMessageBox::information( this, mString,"KLettres - Error" );
@@ -195,16 +195,16 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 
 void KLettres::setupActions()
 {
-    KAction *m_newAction = new KAction(i18n("New Sound"), "file_new", CTRL+Key_N, m_view, SLOT(game()), actionCollection(), "play_new");
+    KAction *m_newAction = new KAction(i18n("New Sound"), "file_new", CTRL+Key_N, m_view, TQT_SLOT(game()), actionCollection(), "play_new");
     m_newAction->setToolTip(i18n("Play a new sound"));
     m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound.")); 
-    new KAction( i18n("Get Alphabet in New Language..."), "knewstuff", 0, this, SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
-    KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),"player_play", CTRL+Key_P, m_view, SLOT(slotPlayAgain()), actionCollection(), "play_again");
+    new KAction( i18n("Get Alphabet in New Language..."), "knewstuff", 0, this, TQT_SLOT( slotDownloadNewStuff() ), actionCollection(), "downloadnewstuff" );
+    KAction *m_playAgainAction = new KAction(i18n("Replay Sound"),"player_play", CTRL+Key_P, m_view, TQT_SLOT(slotPlayAgain()), actionCollection(), "play_again");
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
-    KStdAction::quit(kapp, SLOT(quit()), actionCollection());
+    KStdAction::quit(kapp, TQT_SLOT(quit()), actionCollection());
 
-    m_menubarAction = new KToggleAction(i18n("Show &Menubar"),"editclear", CTRL+Key_M, this, SLOT(slotMenubar()), actionCollection(), "menubar");
+    m_menubarAction = new KToggleAction(i18n("Show &Menubar"),"editclear", CTRL+Key_M, this, TQT_SLOT(slotMenubar()), actionCollection(), "menubar");
     m_menubarAction->setCheckedState(i18n("Hide &Menubar"));
     m_menubarAction->setChecked(true);
     m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
@@ -230,16 +230,16 @@ void KLettres::setupActions()
     m_themeAction->setToolTip(i18n("Select the theme"));
     m_themeAction->setWhatsThis(i18n("Here you can change the theme for KLettres. A theme consists in the background picture and the font color for the letter displayed."));
 
-    m_kidAction = new KToggleAction(i18n("Mode Kid"), "klettres_kids", CTRL+Key_K, this, SLOT(slotModeKid()), actionCollection(), "mode_kid");
+    m_kidAction = new KToggleAction(i18n("Mode Kid"), "klettres_kids", CTRL+Key_K, this, TQT_SLOT(slotModeKid()), actionCollection(), "mode_kid");
     m_kidAction->setWhatsThis(i18n("If you are in the Grown-up mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
-    m_grownupAction = new KToggleAction(i18n("Mode Grown-up"), "klettres_grownup", CTRL+Key_G, this, SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
+    m_grownupAction = new KToggleAction(i18n("Mode Grown-up"), "klettres_grownup", CTRL+Key_G, this, TQT_SLOT(slotModeGrownup()), actionCollection(), "mode_grownup");
     m_grownupAction->setWhatsThis(i18n("The Grown-up mode is the normal mode where you can see the menubar."));
 
-    connect(m_levelAction, SIGNAL(activated(int)), this, SLOT(slotChangeLevel(int)));
-    connect(m_languageAction, SIGNAL(activated(int)), this, SLOT(slotChangeLanguage(int)));
-    connect(m_themeAction, SIGNAL(activated(int)), this, SLOT(slotChangeTheme(int)));
+    connect(m_levelAction, TQT_SIGNAL(activated(int)), this, TQT_SLOT(slotChangeLevel(int)));
+    connect(m_languageAction, TQT_SIGNAL(activated(int)), this, TQT_SLOT(slotChangeLanguage(int)));
+    connect(m_themeAction, TQT_SIGNAL(activated(int)), this, TQT_SLOT(slotChangeTheme(int)));
 
-    KStdAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
+    KStdAction::preferences(this, TQT_SLOT(optionsPreferences()), actionCollection());
 
     setupGUI();
 }
@@ -247,8 +247,8 @@ void KLettres::setupActions()
 void KLettres::setupStatusbar()
 {
     KStatusBar *st=statusBar();
-    m_langLabel = new QLabel(st);
-    m_levLabel = new QLabel(st);
+    m_langLabel = new TQLabel(st);
+    m_levLabel = new TQLabel(st);
     st->addWidget(m_levLabel);
     st->insertFixedItem("", 1);//add a space
     st->addWidget(m_langLabel);
@@ -273,7 +273,7 @@ void KLettres::optionsPreferences()
     //fonts is the icon
     Timer *m_timer = new Timer();
     dialog->addPage(m_timer, i18n("Timer"), "clock");
-    connect(dialog, SIGNAL(settingsChanged()), this, SLOT(slotUpdateSettings()));
+    connect(dialog, TQT_SIGNAL(settingsChanged()), this, TQT_SLOT(slotUpdateSettings()));
     dialog->show();
 }
 
@@ -283,8 +283,8 @@ void KLettres::loadSettings()
     //selectedLanguage = Prefs::languageNumber();
     //m_view->selectedLanguage = selectedLanguage;
     m_languageAction->setCurrentItem(Prefs::languageNumber());
-    QString langString = m_languageNames[Prefs::languageNumber()];
-    langString.replace("&", QString::null);
+    TQString langString = m_languageNames[Prefs::languageNumber()];
+    langString.replace("&", TQString::null);
     m_langLabel->setText(i18n("Current language is %1").arg(langString));
     loadLangToolBar();
     // load default level
@@ -367,8 +367,8 @@ void KLettres::slotChangeLanguage(int newLanguage)
     Prefs::setLanguage(m_languages[newLanguage]);
     Prefs::writeConfig();
     // Update the StatusBar
-    QString langString = m_languageNames[newLanguage];
-    langString.replace("&", QString::null);
+    TQString langString = m_languageNames[newLanguage];
+    langString.replace("&", TQString::null);
     m_langLabel->setText(i18n("Current language is %1").arg(langString));
     loadLangToolBar();
     // Change language effectively
@@ -397,12 +397,12 @@ void KLettres::slotChangeTheme(int index)
 
 void KLettres::slotModeGrownup()
 {
-    QPalette pal;
-    QColorGroup cg;
-    cg.setColor( QColorGroup::Background, white);
+    TQPalette pal;
+    TQColorGroup cg;
+    cg.setColor( TQColorGroup::Background, white);
     pal.setActive( cg );
     statusBar()->setPalette( pal );
-    QFont f_lab( "Serif" , 10);  //font for statusBar
+    TQFont f_lab( "Serif" , 10);  //font for statusBar
     m_levLabel->setFont(f_lab);
     m_langLabel->setFont(f_lab);
     m_menubarAction->setChecked(true);
@@ -413,8 +413,8 @@ void KLettres::slotModeGrownup()
     m_menubarAction->setToolTip(i18n("Hide Menubar"));
     slotMenubar();
     //m_secondToolbar->setIconSize(22); //causes a crash when adding/removing actions in toolbar
-    setMinimumSize( QSize( 640, 538 ) );
-    setMaximumSize( QSize( 640, 538 ) );
+    setMinimumSize( TQSize( 640, 538 ) );
+    setMaximumSize( TQSize( 640, 538 ) );
     m_view->m_timer = Prefs::grownTimer();
     Prefs::setMode(Prefs::EnumMode::grownup);
     Prefs::writeConfig();
@@ -422,12 +422,12 @@ void KLettres::slotModeGrownup()
 
 void KLettres::slotModeKid()
 {
-    QPalette pal;
-    QColorGroup cg;
-    cg.setColor( QColorGroup::Background, white);
+    TQPalette pal;
+    TQColorGroup cg;
+    cg.setColor( TQColorGroup::Background, white);
     pal.setActive( cg );
     statusBar()->setPalette( pal );
-    QFont f_lab( "Serif" , 12);  //font for statusBar
+    TQFont f_lab( "Serif" , 12);  //font for statusBar
     f_lab.setBold(true);
     m_levLabel->setFont(f_lab);
     m_langLabel->setFont(f_lab);
@@ -439,8 +439,8 @@ void KLettres::slotModeKid()
     m_menubarAction->setToolTip(i18n("Show Menubar"));
     m_grownupAction->setChecked(false);
     //m_secondToolbar->setIconSize(32);
-    setMinimumSize( QSize( 640, 480 ) );
-    setMaximumSize( QSize( 640, 480 ) );
+    setMinimumSize( TQSize( 640, 480 ) );
+    setMaximumSize( TQSize( 640, 480 ) );
     m_view->m_timer = Prefs::kidTimer();
     Prefs::setMode(Prefs::EnumMode::kid);
     Prefs::writeConfig();
@@ -452,13 +452,13 @@ void KLettres::loadLangToolBar()
     if (m_languages[Prefs::languageNumber()]== "cs" || m_languages[Prefs::languageNumber()]== "da" || m_languages[Prefs::languageNumber()]== "sk" || m_languages[Prefs::languageNumber()]== "es" || m_languages[Prefs::languageNumber()]== "de" || m_languages[Prefs::languageNumber()]== "nds")//Dutch, English, French and Italian have no special characters
     {
         allData.clear();
-        QString myString=QString("klettres/%1.txt").arg(m_languages[Prefs::languageNumber()]);
-        QFile myFile;
+        TQString myString=TQString("klettres/%1.txt").arg(m_languages[Prefs::languageNumber()]);
+        TQFile myFile;
         myFile.setName(locate("data",myString));
         if (!myFile.exists())
         {
         
-            QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
+            TQString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
                                     "please check your installation.").arg(m_languages[Prefs::languageNumber()]);
             KMessageBox::sorry( this, mString,
                                     i18n("Error") );
@@ -466,16 +466,16 @@ void KLettres::loadLangToolBar()
         }
         update();
         //we open the file and store info into the stream...
-        QFile openFileStream(myFile.name());
+        TQFile openFileStream(myFile.name());
         openFileStream.open(IO_ReadOnly);
-        QTextStream readFileStr(&openFileStream);
-        readFileStr.setEncoding(QTextStream::UnicodeUTF8);
+        TQTextStream readFileStr(&openFileStream);
+        readFileStr.setEncoding(TQTextStream::UnicodeUTF8);
         //allData contains all the words from the file
-        allData = QStringList::split("\n", readFileStr.read(), true);
+        allData = TQStringList::split("\n", readFileStr.read(), true);
         openFileStream.close();
         for (int i=0; i<(int) allData.count(); i++) {
             if (!allData[i].isEmpty())
-                m_secondToolbar->insertButton (charIcon(allData[i].at(0)), i, SIGNAL( clicked() ), this, SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
+                m_secondToolbar->insertButton (charIcon(allData[i].at(0)), i, TQT_SIGNAL( clicked() ), this, TQT_SLOT( slotPasteChar()), true,  i18n("Inserts the character %1").arg(allData[i]), i+1 );
         }
     }
 }
@@ -486,34 +486,34 @@ void KLettres::slotPasteChar()
         m_view->m_letterEdit->insert(allData[charBut->id()]);
 }
 
-QString KLettres::charIcon(const QChar & c)
+TQString KLettres::charIcon(const TQChar & c)
 {
     ///Create a name and path for the icon
-    QString s = locateLocal("icon", "char" + QString::number(c.unicode()) + ".png");
+    TQString s = locateLocal("icon", "char" + TQString::number(c.unicode()) + ".png");
 
-    QRect r(4, 4, 120, 120);
+    TQRect r(4, 4, 120, 120);
 
     ///A font to draw the character with
-    QFont font;
+    TQFont font;
     font.setFamily( "Arial" );
     font.setPixelSize(120);
-    font.setWeight(QFont::Normal);
+    font.setWeight(TQFont::Normal);
 
     ///Create the pixmap
-    QPixmap pm(128, 128);
+    TQPixmap pm(128, 128);
     pm.fill(Qt::white);
-    QPainter p(&pm);
+    TQPainter p(&pm);
     p.setFont(font);
     p.setPen(Qt::black);
-    p.drawText(r, Qt::AlignCenter, (QString) c);
+    p.drawText(r, Qt::AlignCenter, (TQString) c);
 
     ///Create transparency mask
-    QBitmap bm(128, 128);
+    TQBitmap bm(128, 128);
     bm.fill(Qt::color0);
-    QPainter b(&bm);
+    TQPainter b(&bm);
     b.setFont(font);
     b.setPen(Qt::color1);
-    b.drawText(r, Qt::AlignCenter, (QString) c);
+    b.drawText(r, Qt::AlignCenter, (TQString) c);
 
     ///Mask the pixmap
     pm.setMask(bm);

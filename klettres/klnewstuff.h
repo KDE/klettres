@@ -29,8 +29,8 @@ class KLNewStuff : public KNewStuff
 public:
     KLNewStuff( KLettresView * );
 
-    bool install( const QString &fileName );
-    bool createUploadFile( const QString &fileName );
+    bool install( const TQString &fileName );
+    bool createUploadFile( const TQString &fileName );
 
     //private:
     KLettresView *m_view;

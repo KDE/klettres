@@ -25,7 +25,7 @@
 #ifndef _SOUNDFACTORY_H_
 #define _SOUNDFACTORY_H_
 
-#include <qdom.h>
+#include <tqdom.h>
 
 class KLettres;
 
@@ -50,23 +50,23 @@ public:
 	///Call the main instance of the program
 	KLettres *klettres;
 	///Change the language when the user changes the language in the Languages menu
-	void change(QString currentLanguage);
+	void change(TQString currentLanguage);
 	///Play the sound associated to int soundRef
 	void playSound(int ) ;
 	///Number of sounds corresponding to the current language and level (alphabet or syllables)
 	uint sounds;
 	///List of sound names
-	QStringList namesList;
+	TQStringList namesList;
 	///List of sound files associated with each sound name
-	QStringList filesList;
+	TQStringList filesList;
 	/**
 	* Load the sounds of one given language
 	* Call that when you read the language from Config and when the language changes
 	* or when the level changes
 	*/
-	bool loadLanguage(QDomDocument &layoutDocument, QString currentLanguage);
+	bool loadLanguage(TQDomDocument &layoutDocument, TQString currentLanguage);
 	///The language document
-  	QDomDocument m_layoutsDocument;
+  	TQDomDocument m_layoutsDocument;
 
 private:
 	///Report a load failure

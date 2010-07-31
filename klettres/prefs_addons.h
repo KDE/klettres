@@ -20,8 +20,8 @@
  ***************************************************************************/
  
  public:
-static QString defaultLanguage();
-static void setLanguages(const QStringList &languages)
+static TQString defaultLanguage();
+static void setLanguages(const TQStringList &languages)
 {
     Prefs::self()->m_languages = languages;
 }
@@ -45,4 +45,4 @@ static int languageNumber()
 
     return 0;
 }
-QStringList m_languages;
+TQStringList m_languages;

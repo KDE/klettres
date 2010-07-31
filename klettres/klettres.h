@@ -56,15 +56,15 @@ public:
     ///Sound class
     SoundFactory *soundFactory;
     ///All available language codes
-    QStringList m_languages;
+    TQStringList m_languages;
     ///All available language names
-    QStringList m_languageNames;
+    TQStringList m_languageNames;
     /**
     *Load the xml file
     *@param layoutDocument the xml file
     *@return bool true if the xml document is found and well formed, false otherwise
     */
-    bool loadLayout(QDomDocument &layoutDocument);
+    bool loadLayout(TQDomDocument &layoutDocument);
     ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is English (default), 3 is French, 4 is Dutch, 5 is Slovak
     //uint selectedLanguage;
     ///Action that sets up the Language menu
@@ -90,13 +90,13 @@ protected:
     ///Action allow the Grownup mode
     KToggleAction *m_grownupAction;
     ///Label stating the language in the statusbar
-    QLabel *m_langLabel;
+    TQLabel *m_langLabel;
     ///Label stating the level in the statusbar
-    QLabel *m_levLabel;
+    TQLabel *m_levLabel;
     ///Holds the levels
-    QStringList m_levelsNames;
+    TQStringList m_levelsNames;
     ///Holds the looks
-    QStringList m_themesNames;
+    TQStringList m_themesNames;
     ///Create an instance of a KToolBar
     KToolBar *m_mainToolbar;
     ///Second toolbar with buttons of special characters per language
@@ -112,7 +112,7 @@ protected:
     /**generates icons for the special characters toolbar
      * @param c the character that will be painted on the icon
      */
-    QString charIcon(const QChar &c);
+    TQString charIcon(const TQChar &c);
     /**
      *Update the level menu and level combobox
      * @param id The id of the new level
@@ -123,7 +123,7 @@ protected:
     ///Set the correct buttons on the second toolbar according to the language
     void loadLangToolBar();
     ///All the special characters from a language file, these characters will be as buttons on the Special Characters Toolbar
-    QStringList allData;
+    TQStringList allData;
 
     protected slots:
     ///Call the Get New Stuff dialog
