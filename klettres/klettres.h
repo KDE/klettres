@@ -31,7 +31,7 @@
 #include "klettresview.h"
 #include "soundfactory.h"
 
-class QLabel;
+class TQLabel;
 class KToggleAction;
 class KSelectAction;
 class KComboBox;

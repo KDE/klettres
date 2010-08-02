@@ -25,7 +25,7 @@
 #include <tqpalette.h>
 #include <klineedit.h>
 
-class QLabel;
+class TQLabel;
 class KLettres;
 
 /**
