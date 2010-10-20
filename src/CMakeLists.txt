@@ -30,7 +30,7 @@ install(TARGETS klettres  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 ########### install files ###############
 
-install( FILES klettres.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( PROGRAMS klettres.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
 install( FILES klettresui.rc  DESTINATION  ${DATA_INSTALL_DIR}/klettres )
 install( FILES klettres.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES klettres.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
