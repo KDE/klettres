@@ -148,14 +148,7 @@ void KLettres::setupActions()
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
     KStandardAction::quit(kapp, SLOT(quit()), actionCollection());
 
-    m_menubarAction = actionCollection()->add<KToggleAction>("menubar");
-    m_menubarAction->setText(i18n("Show &Menubar"));
-    m_menubarAction->setIcon(KIcon("edit-clear"));
-    m_menubarAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_M));
-    connect(m_menubarAction, SIGNAL(triggered(bool)), this, SLOT(slotMenubar()));
-    m_menubarAction->setCheckedState(KGuiItem(i18n("Hide &Menubar")));
-    m_menubarAction->setChecked(true);
-    m_menubarAction->setWhatsThis(i18n("You can show or hide the menubar as you wish by clicking this button."));
+    m_menubarAction = KStandardAction::showMenubar(this, SLOT(slotMenubar()), actionCollection());
 
     m_levelAction = actionCollection()->add<KSelectAction>("levels");
     m_levelAction->setText(i18nc("@label:listbox which difficulty level to use", "L&evel"));
@@ -281,20 +274,7 @@ void KLettres::slotDownloadNewStuff()
 
 void KLettres::slotMenubar()
 {
-    switch (m_menubarAction->isChecked()){
-    case false:
-	m_menubarAction->setChecked(false);
-        m_menubarAction->setText(i18n("Show Menubar"));
-        m_menubarAction->setToolTip(i18n("Show Menubar"));
-        menuBar()->hide();
-        break;
-    case true:
-        m_menubarAction->setChecked(true);
-        m_menubarAction->setText(i18n("Hide Menubar"));
-        m_menubarAction->setToolTip(i18n("Hide Menubar"));
-        menuBar()->show();
-        break;
-    }
+    menuBar()->setVisible(m_menubarAction->isChecked());
     Prefs::setMenuBarBool(m_menubarAction->isChecked());
     Prefs::self()->writeConfig();
 }
@@ -367,8 +347,6 @@ void KLettres::slotModeGrownup()
     m_kidAction->setChecked(false);
     m_grownupAction->setToolTip(i18n("Grown-up mode is currently active"));
     m_kidAction->setToolTip(i18n("Switch to Kid mode"));
-    m_menubarAction->setText(i18n("Hide Menubar"));
-    m_menubarAction->setToolTip(i18n("Hide Menubar"));
     menuBar()->show();
     m_view->m_timer = Prefs::grownTimer();
     Prefs::setMode(Prefs::EnumMode::grownup);
@@ -388,8 +366,6 @@ void KLettres::slotModeKid()
     m_kidAction->setChecked(true);
     m_kidAction->setToolTip(i18n("Kid mode is currently active"));
     m_grownupAction->setToolTip(i18n("Switch to Grown-up mode"));
-    m_menubarAction->setText(i18n("Show Menubar"));
-    m_menubarAction->setToolTip(i18n("Show Menubar"));
     m_grownupAction->setChecked(false);
     menuBar()->hide();
     m_view->m_timer = Prefs::kidTimer();
