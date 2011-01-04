@@ -41,7 +41,7 @@ SoundFactory::SoundFactory(KLettres *parent, const char *name)
     namesList = filesList = 0;
     sounds = 0;
 
-    bool ok = klettres->loadLayout(m_layoutsDocument);
+    bool ok = klettres->loadLayout(m_tqlayoutsDocument);
     if (ok) change(Prefs::language());
     if (!ok) loadFailure();
 }
@@ -53,7 +53,7 @@ SoundFactory::~SoundFactory()
 void SoundFactory::change(TQString currentLanguage)
 {
     //go load the sounds for the current language
-    bool ok = loadLanguage(m_layoutsDocument, currentLanguage);
+    bool ok = loadLanguage(m_tqlayoutsDocument, currentLanguage);
     kdDebug() << "ok " << ok << endl;
     //tell the user if there are no sounds
     if (!ok) loadFailure();
@@ -78,7 +78,7 @@ void SoundFactory::loadFailure()
     KMessageBox::error(klettres, i18n("Error while loading the sound names."));
 }
 
-bool SoundFactory::loadLanguage(TQDomDocument &layoutDocument, TQString currentLanguage)
+bool SoundFactory::loadLanguage(TQDomDocument &tqlayoutDocument, TQString currentLanguage)
 {
     TQDomNodeList languagesList,
     alphabetList,
@@ -90,7 +90,7 @@ bool SoundFactory::loadLanguage(TQDomDocument &layoutDocument, TQString currentL
     soundNameElement;
     TQDomAttr nameAttribute, fileAttribute;
 
-    languagesList = layoutDocument.elementsByTagName("language");
+    languagesList = tqlayoutDocument.elementsByTagName("language");
     TQDomAttr codeAttribute;
     //check if the sound files match current language
     languageElement = (const TQDomElement &) languagesList.item(0).toElement();

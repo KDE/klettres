@@ -61,10 +61,10 @@ public:
     TQStringList m_languageNames;
     /**
     *Load the xml file
-    *@param layoutDocument the xml file
+    *@param tqlayoutDocument the xml file
     *@return bool true if the xml document is found and well formed, false otherwise
     */
-    bool loadLayout(TQDomDocument &layoutDocument);
+    bool loadLayout(TQDomDocument &tqlayoutDocument);
     ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is English (default), 3 is French, 4 is Dutch, 5 is Slovak
     //uint selectedLanguage;
     ///Action that sets up the Language menu
@@ -106,7 +106,7 @@ protected:
     ///Build the main window menus
     void setupActions();
     ///Create and setup statusbar
-    void setupStatusbar();
+    void setuptqStatusbar();
     ///Create main and second toolbars
     void setupToolbars();
     /**generates icons for the special characters toolbar

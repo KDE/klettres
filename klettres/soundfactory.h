@@ -64,9 +64,9 @@ public:
 	* Call that when you read the language from Config and when the language changes
 	* or when the level changes
 	*/
-	bool loadLanguage(TQDomDocument &layoutDocument, TQString currentLanguage);
+	bool loadLanguage(TQDomDocument &tqlayoutDocument, TQString currentLanguage);
 	///The language document
-  	TQDomDocument m_layoutsDocument;
+  	TQDomDocument m_tqlayoutsDocument;
 
 private:
 	///Report a load failure
