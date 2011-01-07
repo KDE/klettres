@@ -66,7 +66,7 @@ KLettres::KLettres()
     Prefs::writeConfig();
     //MainWindow GUI: menus, tolbars and statusbar
     setupActions();
-    setuptqStatusbar();
+    setupStatusbar();
     setupToolbars();
     //Load Settings
     loadSettings();
@@ -107,7 +107,7 @@ void KLettres::findLanguages()
     TQStringList temp_languages;
     for (uint i=0;  i<m_languages.count(); i++)
     {
-        if (m_languages.tqcontains(m_languages[i])>1) {
+        if (m_languages.contains(m_languages[i])>1) {
             temp_languages.append(m_languages[i]);
             m_languages.remove(m_languages[i]);
         }
@@ -122,12 +122,12 @@ void KLettres::findLanguages()
     m_languages.sort();
     //write the present languages in config so they cannot be downloaded
     KConfig *config=kapp->config();
-    config->setGroup("KNewStufftqStatus");
+    config->setGroup("KNewStuffStatus");
     for (uint i=0;  i<m_languages.count(); i++)
     {
         TQString tmp = m_languages[i];
         if (!config->readEntry(tmp))
-            config->writeEntry(tmp, TQDate::tqcurrentDate().toString());
+            config->writeEntry(tmp, TQDate::currentDate().toString());
     }
     //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
     //to find the name of the country
@@ -156,7 +156,7 @@ TQString Prefs::defaultLanguage()
 	if (!defaultLanguages.isEmpty()) {
 	//scan to see if defaultLanguages[0] belongs to m_languages. If not, en is default.
 	int i = Prefs::self()->m_languages.findIndex(defaultLanguages[0]);
-		if (Prefs::self()->m_languages.tqcontains(Prefs::language()))
+		if (Prefs::self()->m_languages.contains(Prefs::language()))
 			return Prefs::language(); //the last language played
 		else if (i<1)
 			return "en"; //if no other
@@ -167,11 +167,11 @@ TQString Prefs::defaultLanguage()
 }
 
 
-bool KLettres::loadLayout(TQDomDocument &tqlayoutDocument)
+bool KLettres::loadLayout(TQDomDocument &layoutDocument)
 {
-    TQFile tqlayoutFile(locate("data", "klettres/"+Prefs::language()+"/sounds.xml"));
+    TQFile layoutFile(locate("data", "klettres/"+Prefs::language()+"/sounds.xml"));
     //if xml file is not found, program exits
-    if (!tqlayoutFile.exists())
+    if (!layoutFile.exists())
     {
         kdWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/"+Prefs::language() << endl;
         TQString mString=i18n("The file sounds.xml was not found in\n"
@@ -180,15 +180,15 @@ bool KLettres::loadLayout(TQDomDocument &tqlayoutDocument)
         KMessageBox::information( this, mString,"KLettres - Error" );
         kapp->quit();//exit(1);
     }
-    if (!tqlayoutFile.open(IO_ReadOnly))
+    if (!layoutFile.open(IO_ReadOnly))
         return false;
     //Check if document is well-formed
-    if (!tqlayoutDocument.setContent(&tqlayoutFile))
+    if (!layoutDocument.setContent(&layoutFile))
     {
-        tqlayoutFile.close();
+        layoutFile.close();
         return false;
     }
-    tqlayoutFile.close();
+    layoutFile.close();
 
     return true;
 }
@@ -244,7 +244,7 @@ void KLettres::setupActions()
     setupGUI();
 }
 
-void KLettres::setuptqStatusbar()
+void KLettres::setupStatusbar()
 {
     KStatusBar *st=statusBar();
     m_langLabel = new TQLabel(st);
@@ -284,7 +284,7 @@ void KLettres::loadSettings()
     //m_view->selectedLanguage = selectedLanguage;
     m_languageAction->setCurrentItem(Prefs::languageNumber());
     TQString langString = m_languageNames[Prefs::languageNumber()];
-    langString.tqreplace("&", TQString::null);
+    langString.replace("&", TQString::null);
     m_langLabel->setText(i18n("Current language is %1").arg(langString));
     loadLangToolBar();
     // load default level
@@ -368,11 +368,11 @@ void KLettres::slotChangeLanguage(int newLanguage)
     Prefs::writeConfig();
     // Update the StatusBar
     TQString langString = m_languageNames[newLanguage];
-    langString.tqreplace("&", TQString::null);
+    langString.replace("&", TQString::null);
     m_langLabel->setText(i18n("Current language is %1").arg(langString));
     loadLangToolBar();
     // Change language effectively
-    bool ok = loadLayout(soundFactory->m_tqlayoutsDocument);
+    bool ok = loadLayout(soundFactory->m_layoutsDocument);
     if (ok)
         soundFactory->change(Prefs::language());
     m_view->game();
@@ -470,7 +470,7 @@ void KLettres::loadLangToolBar()
         openFileStream.open(IO_ReadOnly);
         TQTextStream readFileStr(&openFileStream);
         readFileStr.setEncoding(TQTextStream::UnicodeUTF8);
-        //allData tqcontains all the words from the file
+        //allData contains all the words from the file
         allData = TQStringList::split("\n", readFileStr.read(), true);
         openFileStream.close();
         for (int i=0; i<(int) allData.count(); i++) {
@@ -489,7 +489,7 @@ void KLettres::slotPasteChar()
 TQString KLettres::charIcon(const TQChar & c)
 {
     ///Create a name and path for the icon
-    TQString s = locateLocal("icon", "char" + TQString::number(c.tqunicode()) + ".png");
+    TQString s = locateLocal("icon", "char" + TQString::number(c.unicode()) + ".png");
 
     TQRect r(4, 4, 120, 120);
 
@@ -507,7 +507,7 @@ TQString KLettres::charIcon(const TQChar & c)
     p.setPen(Qt::black);
     p.drawText(r, Qt::AlignCenter, (TQString) c);
 
-    ///Create transparency tqmask
+    ///Create transparency mask
     TQBitmap bm(128, 128);
     bm.fill(Qt::color0);
     TQPainter b(&bm);
