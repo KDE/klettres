@@ -101,6 +101,8 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
             languagesNames.append(i18n("Romanized Hindi"));
         else if (language == "lug_UG")
             languagesNames.append(i18n("Luganda"));
+	else if (language == "ep")
+	    languagesNames.append(i18n("English Phonics"));
         else
         {
             KConfigGroup group = entry.group(language);
