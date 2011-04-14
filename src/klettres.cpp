@@ -102,8 +102,7 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 {
     QFile layoutFile(KStandardDirs::locate("data", "klettres/"+Prefs::language()+"/sounds.xml"));
     //if xml file is not found, program exits
-    if (!layoutFile.exists())
-    {
+    if (!layoutFile.exists()) {
         kWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/"+Prefs::language() ;
         QString mString=i18n("The file sounds.xml was not found in\n"
                              "$KDEDIR/share/apps/klettres/\n\n"
@@ -111,14 +110,17 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
         KMessageBox::information( this, mString,i18n("KLettres - Error") );
         qApp->quit();//exit(1);
     }
-    if (!layoutFile.open(QIODevice::ReadOnly))
+    
+    if (!layoutFile.open(QIODevice::ReadOnly)) {
         return false;
+    }
+    
     //Check if document is well-formed
-    if (!layoutDocument.setContent(&layoutFile))
-    {
+    if (!layoutDocument.setContent(&layoutFile)) {
         layoutFile.close();
         return false;
     }
+    
     layoutFile.close();
 
     return true;
@@ -216,9 +218,10 @@ void KLettres::setupToolbars()
 
 void KLettres::optionsPreferences()
 {
-    if(KConfigDialog::showDialog("settings"))
+    if(KConfigDialog::showDialog("settings")) {
         return;
-
+    }
+    
     KConfigDialog *dialog = new KConfigDialog(this, "settings", Prefs::self());
     dialog->addPage(new fontsdlg(0), i18n("Font Settings"), "preferences-desktop-font");
     //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
@@ -229,8 +232,6 @@ void KLettres::optionsPreferences()
     dialog->setAttribute( Qt::WA_DeleteOnClose );
     dialog->setHelp(QString(), "klettres");
     dialog->show();
-    
-    
 }
 
 void KLettres::loadSettings()
@@ -248,11 +249,12 @@ void KLettres::loadSettings()
 
     m_view->setTheme(KLThemeFactory::instance()->buildTheme(Prefs::theme()));
 
-    if (Prefs::mode() == Prefs::EnumMode::grownup)
+    if (Prefs::mode() == Prefs::EnumMode::grownup) {
         slotModeGrownup();
-    else
+    } else {
         slotModeKid();
-
+    }
+    
     m_menubarAction->setChecked(Prefs::menuBarBool());
     slotMenubar();
 }
@@ -321,8 +323,11 @@ void KLettres::slotChangeLanguage(int newIndex)
     loadLangToolBar();
     // Change language effectively
     bool ok = loadLayout(soundFactory->m_layoutsDocument);
-    if (ok)
+    
+    if (ok) {
         soundFactory->change(Prefs::language());
+    }
+    
     m_view->randomInt = 0;
     m_view->game();
 }
@@ -379,21 +384,20 @@ void KLettres::loadLangToolBar()
 
     specialCharToolbar->clear();
 
-    if (LangUtils::hasSpecialChars(lang))//Dutch, English, French and Italian have no special characters
-    {
+    if (LangUtils::hasSpecialChars(lang)) {//Dutch, English, French and Italian have no special characters
         allData.clear();
         QString myString=QString("klettres/%1.txt").arg(lang);
         QFile myFile;
         myFile.setFileName(KStandardDirs::locate("data",myString));
-        if (!myFile.exists())
-        {
-
+        
+        if (!myFile.exists()) {
             QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
                                     "please check your installation.", lang);
             KMessageBox::sorry( this, mString,
                                     i18n("Error") );
             qApp->quit();
         }
+        
         //we open the file and store info into the stream...
         QFile openFileStream(myFile.fileName());
         openFileStream.open(QIODevice::ReadOnly);
@@ -402,19 +406,20 @@ void KLettres::loadLangToolBar()
         //allData contains all the words from the file
         allData = readFileStr.readAll().split('\n');
         openFileStream.close();
+        
         for (int i=0; i<(int) allData.count(); ++i) {
             if (!allData[i].isEmpty()) {
                 QAction *act = specialCharToolbar->addAction(allData.at(i));
                 act->setIcon(charIcon(allData.at(i).at(0)));
                 // used to carry the id
                 act->setData(i);
-		connect(act, SIGNAL(triggered(bool)), this, SLOT(slotPasteChar()));
-	    }
+                connect(act, SIGNAL(triggered(bool)), this, SLOT(slotPasteChar()));
+            }
         }
-	specialCharToolbar->show();
-	update();
-    }
-    else {
+        
+        specialCharToolbar->show();
+        update();
+    } else {
       specialCharToolbar->hide();
     }
 }
@@ -422,15 +427,17 @@ void KLettres::loadLangToolBar()
 void KLettres::slotPasteChar()
 {
     QAction *act = qobject_cast<QAction*>(sender());
-    if (!act)  {
+    if (!act) {
         return;
     }
 
     bool ok = true;
     int id = act->data().toInt(&ok);
-    if (!ok || id < 0 || id >= allData.count())
+    
+    if (!ok || id < 0 || id >= allData.count()) {
         return;
-
+    }
+    
     m_view->m_letterEdit->insert(allData.at(id));
 }
 
