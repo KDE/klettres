@@ -53,39 +53,39 @@ bool LangUtils::isIndian(const QString& lang)
 
 QStringList LangUtils::getLanguages()
 {
-	QStringList m_languages;
-	m_languages.clear();
-	//the program scans in klettres/data/ to see what languages data is found
-	const QStringList mdirs = KGlobal::dirs()->findDirs("data", "klettres/");
-	//if (mdirs.isEmpty()) return NULL;
-	for (QStringList::const_iterator it =mdirs.constBegin(); it !=mdirs.constEnd(); ++it ) {
-		QDir dir(*it);
-		m_languages += dir.entryList(QDir::Dirs, QDir::Name);
-		m_languages.removeAll(".");
-		m_languages.removeAll("..");
-	}
-	m_languages.removeAll("pics");
-	m_languages.removeAll("data");
-	m_languages.removeAll("icons");
-	m_languages.sort();
-	
-	//find duplicated entries in KDEDIR and KDEHOME
-	QStringList temp_languages;
-	for (int i=0;  i<m_languages.count(); i++)  {
-		if (m_languages.count(m_languages[i])>1)  {
-			temp_languages.append(m_languages[i]);
-			m_languages.removeAll(m_languages[i]);
-		}
-		for (int i=0;  i<temp_languages.count(); i++)  {
-			if (i%2==0)
-			m_languages.append(temp_languages[i]);//append 1 of the 2 instances found
-		}
-		temp_languages.clear();
-	}
-	//TODO TEST in FRENCH
-	m_languages.sort();
-	kDebug() <<m_languages;
-	return m_languages;
+    QStringList m_languages;
+    m_languages.clear();
+    //the program scans in klettres/data/ to see what languages data is found
+    const QStringList mdirs = KGlobal::dirs()->findDirs("data", "klettres/");
+    //if (mdirs.isEmpty()) return NULL;
+    for (QStringList::const_iterator it =mdirs.constBegin(); it !=mdirs.constEnd(); ++it ) {
+        QDir dir(*it);
+        m_languages += dir.entryList(QDir::Dirs, QDir::Name);
+        m_languages.removeAll(".");
+        m_languages.removeAll("..");
+    }
+    m_languages.removeAll("pics");
+    m_languages.removeAll("data");
+    m_languages.removeAll("icons");
+    m_languages.sort();
+
+    //find duplicated entries in KDEDIR and KDEHOME
+    QStringList temp_languages;
+    for (int i=0;  i<m_languages.count(); i++)  {
+        if (m_languages.count(m_languages[i])>1)  {
+            temp_languages.append(m_languages[i]);
+            m_languages.removeAll(m_languages[i]);
+        }
+        for (int i=0;  i<temp_languages.count(); i++)  {
+            if (i%2==0)
+            m_languages.append(temp_languages[i]);//append 1 of the 2 instances found
+        }
+        temp_languages.clear();
+    }
+    //TODO TEST in FRENCH
+    m_languages.sort();
+    kDebug() <<m_languages;
+    return m_languages;
 }
 
 QStringList LangUtils::getLanguagesNames(QStringList languagesList)
@@ -97,20 +97,19 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
     KConfig entry(KStandardDirs::locate("locale", "all_languages"));
 
     foreach(const QString &language, languagesList) {
-        if (language == "hi-ro")
+        if (language == "hi-ro") {
             languagesNames.append(i18n("Romanized Hindi"));
-        else if (language == "lug_UG")
+        } else if (language == "lug_UG") {
             languagesNames.append(i18n("Luganda"));
-	else if (language == "ep")
-	    languagesNames.append(i18n("English Phonics"));
-        else
-        {
+        } else if (language == "ep") {
+            languagesNames.append(i18n("English Phonics"));
+        } else {
             KConfigGroup group = entry.group(language);
-	    QString languageName = group.readEntry("Name");
-	    if (languageName.isEmpty()) {
-		languageName = i18nc("@item:inlistbox no language for that locale", "None");
-	    }
-	    languagesNames.append(languageName);
+            QString languageName = group.readEntry("Name");
+            if (languageName.isEmpty()) {
+                languageName = i18nc("@item:inlistbox no language for that locale", "None");
+            }
+            languagesNames.append(languageName);
         }
     }
     //never sort m_languageNames as it's m_languages translated
@@ -119,15 +118,16 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
 
 void LangUtils::writeLangConfig()
 {
-	//write the present languages in config so they cannot be downloaded
-	KConfigGroup config(KGlobal::config(), "KNewStuffStatus");
-	QStringList m_languages = getLanguages();
-	for (int i=0;  i<m_languages.count(); i++)  {
-		QString tmp = m_languages[i];
-		if (!config.readEntry(tmp, QString()).isEmpty())
-			config.writeEntry(tmp, QDate::currentDate().toString());
-	}
-	config.sync();
+    //write the present languages in config so they cannot be downloaded
+    KConfigGroup config(KGlobal::config(), "KNewStuffStatus");
+    QStringList m_languages = getLanguages();
+    for (int i=0;  i<m_languages.count(); i++)  {
+        QString tmp = m_languages[i];
+        if (!config.readEntry(tmp, QString()).isEmpty()) {
+            config.writeEntry(tmp, QDate::currentDate().toString());
+        }
+    }
+    config.sync();
 }
 
 
