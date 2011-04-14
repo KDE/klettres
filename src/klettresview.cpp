@@ -73,10 +73,13 @@ void KLettresView::chooseSound()
     m_length=m_klettres->soundFactory->namesList[m_random].length();
     kDebug() << "syllable length " << m_length;
     int width;
-    if (m_length<3)
+    
+    if (m_length<3) {
         width = 200;
-    else
+    } else {
         width = 200+(20*(m_length-2));
+    }
+    
     m_letterEdit->setMinimumSize( QSize( width, 100 ) );
     m_letterEdit->setMaximumSize( QSize( width, 100 ) );
     update();
@@ -91,9 +94,9 @@ void KLettresView::setTheme(KLTheme *theme)
     QString svgpath = KStandardDirs::locate("data", QString("klettres/pics/%1/%2").arg(theme->name(), theme->svgFileName()));
 
     // we don't allow themes with no svg installed
-    if (!QFile::exists(svgpath))
+    if (!QFile::exists(svgpath)) {
         return;
-
+    }
     delete m_theme;
     m_theme = theme;
 
@@ -125,19 +128,19 @@ void KLettresView::paintBackground(QPainter &p, const QRect& rect)
         QPainter aux(&m_backgroundCache);
         m_renderer->render(&aux);
     }
-     p.drawPixmap(rect.topLeft(), m_backgroundCache, rect);
+    p.drawPixmap(rect.topLeft(), m_backgroundCache, rect);
 }
 
 void KLettresView::paintLetter(QPainter &p, const QRect& rect)
 {
     if (Prefs::level()%2==1) {
-    QRect myRect = m_theme->wordRect(size());
-    if (!myRect.intersects(rect))
-        return;
-
-    p.setPen( m_theme->letterColor());
-    p.setFont(Prefs::font());
-    p.drawText(myRect, m_currentLetter);
+        QRect myRect = m_theme->wordRect(size());
+        if (!myRect.intersects(rect)) {
+            return;
+        }
+        p.setPen( m_theme->letterColor());
+        p.setFont(Prefs::font());
+        p.drawText(myRect, m_currentLetter);
     }
     m_letterEdit->setGeometry( m_theme->inputRect(size()));  
     m_letterEdit->setFocus();
@@ -163,8 +166,9 @@ void KLettresView::slotProcess(const QString &inputLetter)
 {
     QString lang = Prefs::language();
     QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
+
     //check if backspace
-    if(inputLetter.length() != m_cursorPos)  {
+    if (inputLetter.length() != m_cursorPos) {
         m_cursorPos--;
         m_letterEdit->setMaxLength( m_cursorPos );
         QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
@@ -173,19 +177,20 @@ void KLettresView::slotProcess(const QString &inputLetter)
     QChar input_character = inputLetter.at(inputLetter.length()-1);
     QChar input_character_u; 
     kDebug() << "input_character " << input_character << endl;
+    
     if ((!LangUtils::isIndian(lang) && (input_character.isLetter())) || (LangUtils::isIndian(lang)))                               
     {
-	if (input_character.unicode() == 0x00DF) { //everything in upper except the ß
-	    input_character_u = input_character.toLower();
-	} else {
-	    input_character_u = input_character.toUpper();    
-	}
-	m_upperLetter.append(input_character_u);
-	m_letterEdit->selectAll();
-	m_letterEdit->cut();
-	m_letterEdit->setText(m_upperLetter);
-	QTimer::singleShot(m_timer*100, this, SLOT(slotTimerDone()));
-    }  else  {
+        if (input_character.unicode() == 0x00DF) { //everything in upper except the ß
+            input_character_u = input_character.toLower();
+        } else {
+            input_character_u = input_character.toUpper();
+        }
+        m_upperLetter.append(input_character_u);
+        m_letterEdit->selectAll();
+        m_letterEdit->cut();
+        m_letterEdit->setText(m_upperLetter);
+        QTimer::singleShot(m_timer*100, this, SLOT(slotTimerDone()));
+    }  else {
         kDebug() << "cursor " << m_cursorPos << endl;
         m_letterEdit->backspace();
         QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
@@ -198,26 +203,25 @@ void KLettresView::slotTimerDone()
     QString match = m_currentLetter.left(m_cursorPos );
     kDebug() << "match " << match.toUpper() << endl;
     kDebug() << "m_upperLetter " << m_upperLetter << endl;
-    if (match == m_upperLetter)
-    {
-        if (m_cursorPos!=m_length)  {//if text in lineEdit not equal to text on button
+    
+    if (match == m_upperLetter) {
+        if (m_cursorPos!=m_length) {//if text in lineEdit not equal to text on button
             //i.e if you still have to allow input
             m_letterEdit->setMaxLength( m_cursorPos +1 );
             m_letterEdit->setCursorPosition( m_cursorPos );
             m_letterEdit->setFocus();
             m_cursorPos ++;
             QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
-        } else  {
+        } else {
             game();  //another syllable
         }
-    }  else  { //if not, cut it
-	kDebug() << "wrong letter "<< endl;
+    } else { //if not, cut it
+        kDebug() << "wrong letter "<< endl;
         m_letterEdit->backspace();  //delete the char to the left  and position curseur accordingly
-	m_upperLetter.remove(m_upperLetter.size()-1, 1);
+        m_upperLetter.remove(m_upperLetter.size()-1, 1);
         m_letterEdit->setFocus();
         //play sound again
         m_klettres->soundFactory->playSound(m_random);
-
         QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
     }
 }
