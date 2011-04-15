@@ -33,7 +33,7 @@ static const char description[] =
     I18N_NOOP("KLettres helps a very young child or an adult learning \n"
               "a new language by associating sounds and \n"
               "letters in this language.\n\n"
-              "18 languages are available: Arabian, Brazilian Portuguese, British, Czech, Danish, Dutch, English, French, German, Hebrew, Italian, Kannada, Low Saxon, Luganda, Romanized Hindi, Spanish, Slovak and Telugu.");
+              "25 languages are available.");
 
 static const char version[] = "2.1";
 
