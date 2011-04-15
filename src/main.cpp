@@ -40,7 +40,7 @@ static const char version[] = "2.1";
 int main(int argc, char **argv)
 {
     KAboutData about("klettres", 0, ki18n("KLettres"), KLETTRES_VERSION, ki18n(description),
-                     KAboutData::License_GPL, ki18n("(C) 2001-2008 Anne-Marie Mahfouf"),KLocalizedString(), "http://edu.kde.org/klettres", "submit@bugs.kde.org");
+                     KAboutData::License_GPL, ki18n("(C) 2001-2011 Anne-Marie Mahfouf"),KLocalizedString(), "http://edu.kde.org/klettres", "submit@bugs.kde.org");
     about.addAuthor( ki18n("Anne-Marie Mahfouf"), KLocalizedString(), "annma AT kde DOT org", "http://annma.blogspot.com", "annma");
     about.addCredit(ki18n("Marc Cheng"),
                     ki18n("Kids and grown-up oxygen icons"), "bdgraue AT web DOT de");
@@ -63,28 +63,23 @@ int main(int argc, char **argv)
     KApplication app;
 
     // see if we are starting with session management
-    if (app.isSessionRestored())
+    if (app.isSessionRestored()) {
         RESTORE(KLettres)
-        else
-        {
-            // no session.. just start up normally
-            KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-            if (args->count() == 0)
-            {
+    } else {
+        // no session.. just start up normally
+        KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
+        if (args->count() == 0) {
+            KLettres *widget = new KLettres;
+            widget->show();
+        } else {
+            int i = 0;
+            for (; i < args->count(); i++) {
                 KLettres *widget = new KLettres;
                 widget->show();
             }
-            else
-            {
-                int i = 0;
-                for (; i < args->count(); i++)
-                {
-                    KLettres *widget = new KLettres;
-                    widget->show();
-                }
-            }
-            args->clear();
         }
+        args->clear();
+    }
 
     return app.exec();
 }
