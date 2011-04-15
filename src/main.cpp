@@ -44,34 +44,6 @@ int main(int argc, char **argv)
     about.addAuthor( ki18n("Anne-Marie Mahfouf"), KLocalizedString(), "annma AT kde DOT org", "http://annma.blogspot.com", "annma");
     about.addCredit(ki18n("Marc Cheng"),
                     ki18n("Kids and grown-up oxygen icons"), "bdgraue AT web DOT de");
-    about.addCredit(ki18n("Ludovic Grossard"),
-                    ki18n("French sounds"), "grossard AT kde DOT org");
-    about.addCredit(ki18n("Geert Stams"),
-                    ki18n("Dutch sounds"), "geert AT pa3csg DOT myweb DOT nl");
-    about.addCredit(ki18n("Erik Kjaer Pedersen"),
-                    ki18n("Danish sounds"), "erik AT binghamton DOT edu");
-    about.addCredit(ki18n("Eva Mikulčíková"),
-                    ki18n("Czech sounds"), "evmi AT seznam DOT cz");
-    about.addCredit(ki18n("Silvia Motyčková & Jozef Říha"),
-                    ki18n("Slovak sounds"), "silviamotycka AT seznam DOT cz");
-    about.addCredit(ki18n("Robert Wadley"),
-                    ki18n("English sounds"), "robntina AT juno DOT com");               
-    about.addCredit(ki18n("Pietro Pasotti"),
-                    ki18n("Italian sounds"), "pietro AT itopen DOT it");
-    about.addCredit(ki18n("Ana Belén Caballero and Juan Pedro Paredes"),
-                    ki18n("Spanish sounds"), "neneta  AT iquis DOT com");
-    about.addCredit(ki18n("Vikas Kharat"),
-                    ki18n("Romanized Hindi sounds"), "kharat AT sancharnet DOT in");
-    about.addCredit(ki18n("John Magoye and Cormac Lynch"),
-                     ki18n("Luganda sounds"), "cormaclynch AT eircom DOT net");
-    about.addCredit(ki18n("Helmut Kriege"),
-                     ki18n("German sounds"), "h.kriege AT freenet DOT de");
-    about.addCredit(ki18n("Assaf Gorgon and Diego Iastrubni"),
-                     ki18n("Hebrew sounds"), "elcuco AT kde DOT org");
-    about.addCredit(ki18n("Lisa Kriege"),
-                     ki18n("British English sounds"), "h.kriege AT freenet DOT de");
-    about.addCredit(ki18n("Vikram Vincent"),
-                     ki18n("Kannada sounds"), "vincentvikram AT gmail DOT com");
     about.addCredit(ki18n("Danny Allen"),
                     ki18n("SVG background pictures"), "dannya40uk AT yahoo DOT co DOT uk");
     about.addCredit(ki18n("Robert Gogolok"),
