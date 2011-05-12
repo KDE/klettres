@@ -84,7 +84,7 @@ protected:
     QString m_upperLetter;
     ///Paint the letter/syllable in levels 1 and 3 and the background
     void paintEvent( QPaintEvent * );
-    //Paint the background picture
+    ///Paint the background picture
     void paintBackground(QPainter &p, const QRect& rect);    
     ///Paint the letter/syllable in levels 1 and 3 
     void paintLetter(QPainter &p, const QRect& rect);
