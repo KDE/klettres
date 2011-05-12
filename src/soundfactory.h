@@ -36,7 +36,7 @@ namespace Phonon
 }
 
 /**
- * This class manages the sounds toplay in KLettres, reading the data about the sounds
+ * This class manages the sounds to play in KLettres, reading the data about the sounds
  * in the sounds.xml file which is in /data.
  *
  * @short Sounds factory class: find and play the right sound.
