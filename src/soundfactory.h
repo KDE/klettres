@@ -32,7 +32,7 @@
 class KLettres;
 namespace Phonon
 {
-	class MediaObject;
+    class MediaObject;
 }
 
 /**
@@ -50,38 +50,38 @@ class SoundFactory : public QObject
 
 public:
 
-	SoundFactory(KLettres *parent, const char *name);
-	~SoundFactory();
-	
-	///Call the main instance of the program
-	KLettres *klettres;
-	///Change the language when the user changes the language in the Languages menu
-	void change(const QString &currentLanguage);
-	///Play the sound associated to int soundRef
-	void playSound(int ) ;
-	///Number of sounds corresponding to the current language and level (alphabet or syllables)
-	uint sounds;
-	///List of sound names
-	QStringList namesList;
-	///List of sound files associated with each sound name
-	QStringList filesList;
-	/**
-	* Load the sounds of one given language
-	* Call that when you read the language from Config and when the language changes
-	* or when the level changes
-	*/
-	bool loadLanguage(QDomDocument &layoutDocument, const QString &currentLanguage);
-	///The language document
-  	QDomDocument m_layoutsDocument;
+    SoundFactory(KLettres *parent, const char *name);
+    ~SoundFactory();
+
+    ///Call the main instance of the program
+    KLettres *klettres;
+    ///Change the language when the user changes the language in the Languages menu
+    void change(const QString &currentLanguage);
+    ///Play the sound associated to int soundRef
+    void playSound(int ) ;
+    ///Number of sounds corresponding to the current language and level (alphabet or syllables)
+    uint sounds;
+    ///List of sound names
+    QStringList namesList;
+    ///List of sound files associated with each sound name
+    QStringList filesList;
+    /**
+    * Load the sounds of one given language
+    * Call that when you read the language from Config and when the language changes
+    * or when the level changes
+    */
+    bool loadLanguage(QDomDocument &layoutDocument, const QString &currentLanguage);
+    ///The language document
+    QDomDocument m_layoutsDocument;
     ///The random sequence of integers
     QList<int> randomList;
 
 private:
-	///Report a load failure
-	void loadFailure();
+    ///Report a load failure
+    void loadFailure();
     ///Shuffle the index in random to get random sounds. The sequence of random sounds will take 1 random sound after another, then restart when all sounds have been played
     void setSoundSequence();
-	Phonon::MediaObject *m_player;
+    Phonon::MediaObject *m_player;
 };
 
 #endif

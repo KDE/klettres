@@ -237,7 +237,7 @@ void KLettres::optionsPreferences()
 void KLettres::loadSettings()
 {
     if (LangUtils::getLanguages().indexOf(Prefs::language()) <0)  {
-	Prefs::setLanguage("en");
+        Prefs::setLanguage("en");
     }
     QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[LangUtils::getLanguages().indexOf(Prefs::language())];
     m_languageAction->setCurrentItem(LangUtils::getLanguages().indexOf(Prefs::language()));

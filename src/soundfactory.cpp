@@ -44,12 +44,12 @@ SoundFactory::SoundFactory(KLettres *parent, const char *)
 
     bool ok = klettres->loadLayout(m_layoutsDocument);
     if (ok)  {
-	change(Prefs::language());
+        change(Prefs::language());
     }
     if (!ok)  {
-	loadFailure();
+        loadFailure();
     }  else  {
-	setSoundSequence();
+        setSoundSequence();
     }
 }
 
@@ -63,9 +63,9 @@ void SoundFactory::change(const QString &currentLanguage)
     bool ok = loadLanguage(m_layoutsDocument, currentLanguage);
     //tell the user if there are no sounds or get the random sounds
     if (!ok)  {
-	loadFailure();
+        loadFailure();
     }  else  {
-	setSoundSequence();
+        setSoundSequence();
     }
 }
 
@@ -74,14 +74,14 @@ void SoundFactory::playSound(int mySound)
     QString soundFile;
 
     if ((uint) mySound >= sounds) {
-	return;
+        return;
     }
 
     soundFile = KStandardDirs::locate("data", "klettres/" + filesList[mySound]);
     kDebug() << "soundFile " << soundFile;
 
     if (soundFile.isEmpty()) {
-	return;
+        return;
     }
 
     if (!m_player)  {
@@ -120,14 +120,14 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
         kDebug() << "Fail reading language !!! ";
         return false;
     } else {
-	kDebug() << "current language " << currentLanguage;
+        kDebug() << "current language " << currentLanguage;
     }
     //load the sounds for level 1 and 2 (alphabet)
     if ((Prefs::level() == 1) || (Prefs::level() == 2))  {
         alphabetList = languageElement.elementsByTagName("alphabet");
         if (alphabetList.count() != 1) {
             return false;
-	}
+        }
         alphabetElement = (const QDomElement &) alphabetList.item(0).toElement();
         soundNamesList = alphabetElement.elementsByTagName("sound");
     }
@@ -161,10 +161,10 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
         filesList.append(fileAttribute.value());
     }
     if (namesList.isEmpty()) {
-	return false;
+        return false;
     }
     if (filesList.isEmpty())  {
-	return false;
+        return false;
     }
     return true;
 }

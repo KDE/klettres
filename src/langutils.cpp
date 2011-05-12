@@ -30,25 +30,25 @@
 
 bool LangUtils::hasSpecialChars(const QString& lang)
 {
-	if (lang== "cs"
-		|| lang== "da"
-		|| lang== "sk"
-		|| lang== "es"
-		|| lang== "de"
-		|| lang== "hu"
-		|| lang== "nds")
-		return true;
-	return false;
+    if (lang== "cs"
+        || lang== "da"
+        || lang== "sk"
+        || lang== "es"
+        || lang== "de"
+        || lang== "hu"
+        || lang== "nds")
+        return true;
+    return false;
 }
 
 bool LangUtils::isIndian(const QString& lang)
 {
-	if (lang == "kn"
-		|| lang == "ml"
-		|| lang == "te"
-		|| lang == "pa")
-		return true;
-	return false;
+    if (lang == "kn"
+        || lang == "ml"
+        || lang == "te"
+        || lang == "pa")
+        return true;
+    return false;
 }
 
 QStringList LangUtils::getLanguages()
