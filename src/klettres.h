@@ -64,6 +64,8 @@ public:
     public slots:
     ///Set the new language
     void slotChangeLanguage(int);
+    ///Set the new level
+    void slotChangeLevel(int);
 
 protected:
     ///Call an instance of the KLettresView widget
@@ -121,8 +123,6 @@ protected:
     void slotMenubar();
     ///Set the new font and the new timers
     void slotUpdateSettings();
-    ///Set the new level
-    void slotChangeLevel(int);
     ///Switch to the grown-up look, menubar is shown
     void slotModeGrownup();
     ///Switch to the kid look, menubar is hidden

@@ -96,6 +96,16 @@ void SoundFactory::playSound(int mySound)
 void SoundFactory::loadFailure()
 {
     KMessageBox::error(klettres, i18n("Error while loading the sound names."));
+    klettres->slotChangeLevel(Prefs::level());
+    bool ok = loadLanguage(m_layoutsDocument, Prefs::language());
+    if (ok)  {
+        change(Prefs::language());
+    }
+    if (!ok)  {
+        loadFailure();
+    }  else  {
+        setSoundSequence();
+    }
 }
 
 bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &currentLanguage)
@@ -122,9 +132,12 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     } else {
         kDebug() << "current language " << currentLanguage;
     }
+    //check here if alphabet and syllables both exist
+    alphabetList = languageElement.elementsByTagName("alphabet");
+    syllablesList = languageElement.elementsByTagName("syllables");
+
     //load the sounds for level 1 and 2 (alphabet)
     if ((Prefs::level() == 1) || (Prefs::level() == 2))  {
-        alphabetList = languageElement.elementsByTagName("alphabet");
         if (alphabetList.count() != 1) {
             return false;
         }
@@ -134,9 +147,11 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
 
     //load the sounds for level 3 and 4 (syllables)
     if ((Prefs::level() == 3) || (Prefs::level() == 4))  {
-        syllablesList = languageElement.elementsByTagName("syllables");
-        if (syllablesList.count() != 1)
+        if (syllablesList.count() != 1) {
+            Prefs::setLevel(1);
+            Prefs::self()->writeConfig();
             return false;
+        }
 
         syllableElement = (const QDomElement &) syllablesList.item(0).toElement();
 
