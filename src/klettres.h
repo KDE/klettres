@@ -58,14 +58,14 @@ public:
     *@return bool true if the xml document is found and well formed, false otherwise
     */
     bool loadLayout(QDomDocument &layoutDocument);
-    ///Number corresponding to the selected language: 0 is Czech, 1 is Danish, 2 is English (default), 3 is French, 4 is Dutch, 5 is Slovak
-    //uint selectedLanguage;
     ///Action that sets up the Language menu
     KSelectAction *m_languageAction;
 
     public slots:
     ///Set the new language
     void slotChangeLanguage(int);
+    ///Set the new level
+    void slotChangeLevel(int);
 
 protected:
     ///Call an instance of the KLettresView widget
@@ -76,9 +76,9 @@ protected:
     KSelectAction *m_levelAction;
     ///Action that sets up the Look menu
     KSelectAction *m_themeAction;
-    ///Action allow the Kid mode
+    ///Action allowing the Kid mode
     KToggleAction *m_kidAction;
-    ///Action allow the Grownup mode
+    ///Action allowing the Grownup mode
     KToggleAction *m_grownupAction;
     ///Label stating the language in the statusbar
     QLabel *m_langLabel;
@@ -123,8 +123,6 @@ protected:
     void slotMenubar();
     ///Set the new font and the new timers
     void slotUpdateSettings();
-    ///Set the new level
-    void slotChangeLevel(int);
     ///Switch to the grown-up look, menubar is shown
     void slotModeGrownup();
     ///Switch to the kid look, menubar is hidden
