@@ -102,12 +102,6 @@ void SoundFactory::loadFailure()
     if (ok)  {
         change(Prefs::language());
     }
-
-    if (!ok)  {
-        loadFailure();
-    }  else  {
-        setSoundSequence();
-    }
 }
 
 bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &currentLanguage)
