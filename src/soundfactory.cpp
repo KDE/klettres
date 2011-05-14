@@ -96,7 +96,7 @@ void SoundFactory::playSound(int mySound)
 void SoundFactory::loadFailure()
 {
     KMessageBox::error(klettres, i18n("Error while loading the sound names."));
-    klettres->slotChangeLevel(Prefs::level());
+    klettres->slotChangeLevel(Prefs::level()-1);
     bool ok = loadLanguage(m_layoutsDocument, Prefs::language());
     if (ok)  {
         change(Prefs::language());
