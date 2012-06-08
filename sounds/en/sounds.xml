@@ -47,9 +47,9 @@
     </alphabet>
 
       <syllables>
-	<sound name="AR" file="en/syllab/ar.ogg" />
 	<sound name="AW" file="en/syllab/aw.ogg" />
 	<sound name="CAR" file="en/syllab/car.ogg" />
+	<sound name="CH" file="en/syllab/ch.ogg" />
 	<sound name="DOG" file="en/syllab/dog.ogg" />
 	<sound name="FIX" file="en/syllab/fix.ogg" />
 	<sound name="GAS" file="en/syllab/gas.ogg" />
