@@ -139,7 +139,7 @@ void KLettres::setupActions()
     QAction *m_stuffAction = actionCollection()->addAction("downloadnewstuff");
     m_stuffAction->setText(i18n("Get Alphabet in New Language..."));
     m_stuffAction->setIcon(KIcon("get-hot-new-stuff"));
-    connect(m_stuffAction, SIGNAL(triggered(bool)),  this, SLOT( slotDownloadNewStuff() ));
+    connect(m_stuffAction, SIGNAL(triggered(bool)), this, SLOT(slotDownloadNewStuff()));
 
     KAction *m_playAgainAction = actionCollection()->addAction("play_again");
     m_playAgainAction->setText(i18n("Replay Sound"));
@@ -228,7 +228,7 @@ void KLettres::optionsPreferences()
     //fonts is the icon
     Timer *m_timer = new Timer();
     dialog->addPage(m_timer, i18n("Timer"), "chronometer");
-    connect(dialog, SIGNAL(settingsChanged( const QString &)), this, SLOT(slotUpdateSettings()));
+    connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(slotUpdateSettings()));
     dialog->setAttribute( Qt::WA_DeleteOnClose );
     dialog->setHelp(QString(), "klettres");
     dialog->show();
@@ -261,8 +261,12 @@ void KLettres::loadSettings()
 
 void KLettres::slotDownloadNewStuff()
 {
-    KNS3::DownloadDialog dialog("klettres.knsrc", this);
-    dialog.exec();
+    QPointer<KNS3::DownloadDialog> dialog(new KNS3::DownloadDialog("klettres.knsrc", this)); 
+    if ( dialog->exec() == QDialog::Accepted ) {
+        // do nothing
+    }
+
+    delete dialog;
 
     //look for languages dirs installed
     QStringList languages = LangUtils::getLanguages();

@@ -151,7 +151,7 @@ void KLettresView::game()
     m_cursorPos = 1;
     //reset everything so when you change language or levels
     //it all restarts nicely
-    QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
+    QObject::disconnect(m_letterEdit, SIGNAL(textChanged(QString)),this,SLOT(slotProcess(QString)));
     m_letterEdit->clear();
     m_letterEdit->setCursorPosition(0);
     m_letterEdit->setMaxLength( 1 );
@@ -159,19 +159,19 @@ void KLettresView::game()
     m_upperLetter.clear();
     chooseSound();
     randomInt++;
-    QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
+    QObject::connect(m_letterEdit, SIGNAL(textChanged(QString)), this, SLOT(slotProcess(QString)));
 }
 
 void KLettresView::slotProcess(const QString &inputLetter)
 {
     QString lang = Prefs::language();
-    QObject::disconnect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
+    QObject::disconnect(m_letterEdit, SIGNAL(textChanged(QString)), this, SLOT(slotProcess(QString)));
 
     //check if backspace
     if (inputLetter.length() != m_cursorPos) {
         m_cursorPos--;
         m_letterEdit->setMaxLength( m_cursorPos );
-        QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)),this,SLOT(slotProcess(const QString&)) );
+        QObject::connect(m_letterEdit, SIGNAL(textChanged(QString)),this,SLOT(slotProcess(QString)));
         return;
     }
     QChar input_character = inputLetter.at(inputLetter.length()-1);
@@ -211,7 +211,7 @@ void KLettresView::slotTimerDone()
             m_letterEdit->setCursorPosition( m_cursorPos );
             m_letterEdit->setFocus();
             m_cursorPos ++;
-            QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
+            QObject::connect(m_letterEdit, SIGNAL(textChanged(QString)), this, SLOT(slotProcess(QString)));
         } else {
             game();  //another syllable
         }
@@ -222,7 +222,7 @@ void KLettresView::slotTimerDone()
         m_letterEdit->setFocus();
         //play sound again
         m_klettres->soundFactory->playSound(m_random);
-        QObject::connect(m_letterEdit, SIGNAL(textChanged(const QString&)), this, SLOT(slotProcess(const QString&)) );
+        QObject::connect(m_letterEdit, SIGNAL(textChanged(QString)), this, SLOT(slotProcess(QString)));
     }
 }
 
