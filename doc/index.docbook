@@ -29,8 +29,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2010-04-21</date>
-<releaseinfo>2.3</releaseinfo>
+<date>2013-05-31</date>
+<releaseinfo>2.3 (&kde; 4.11)</releaseinfo>
 
 <abstract>
 <para>
@@ -150,8 +150,8 @@ If your &kde; language is among the supported languages then this will be the
 default language the first time you run &klettres;. For other languages, English
 is the default. 
 &klettres; comes with English, French and your default language if among those listed
-above and you can get additional languages via <guimenu>File</guimenu>
-<guimenuitem>Get Alphabet in New Language...</guimenuitem> provided you have an
+above and you can get additional languages via <menuchoice><guimenu>File</guimenu>
+<guimenuitem>Get Alphabet in New Language...</guimenuitem></menuchoice> provided you have an
 Internet connection.
 </para>
 </note>
@@ -320,8 +320,8 @@ You can also choose here the size you like the best. This size will be kept in c
 </sect1>
 <sect1 id="Get-new-stuff">
 <title>Getting a new language</title>
-<para>You might want to use &klettres; to help you learn a new language. By using <guimenu>File</guimenu>
-<guimenuitem>Get Alphabet in New Language...</guimenuitem>, you will see a new dialog with the list of available languages (you need to be connected to the Internet to use that feature).</para>
+<para>You might want to use &klettres; to help you learn a new language. By using <menuchoice><guimenu>File</guimenu>
+<guimenuitem>Get Alphabet in New Language...</guimenuitem></menuchoice>, you will see a new dialog with the list of available languages (you need to be connected to the Internet to use that feature).</para>
 <screenshot>
 <screeninfo>Get a New Language Dialog</screeninfo>
     <mediaobject>
@@ -333,21 +333,11 @@ You can also choose here the size you like the best. This size will be kept in c
       </textobject>
     </mediaobject>
 </screenshot>
-<para>Click on the <guilabel>Install</guilabel> button on the right of the language you want to install. You'll see the progress bar indicating how the download is progressing. The next screenshot shows Danish being downloaded.</para>
+<para>Click on the <guilabel>Install</guilabel> button on the right of the language you want to install.</para>
 <para>Please note that some files have several MB so it might be slow depending on your connection.</para>
 <para>After the file is downloaded, it is automatically installed and when you close the <guilabel>Get Hot New Stuff</guilabel> dialog you'll see the new language in the <guimenu>Language</guimenu> menu and you can use it immediately.</para>
-<screenshot>
-<screeninfo>Downloading</screeninfo>
-    <mediaobject>
-      <imageobject>
-        <imagedata fileref="klettres-newstuff1.png" format="PNG"/>
-      </imageobject>
-       <textobject>
-        <phrase>Downloading</phrase>
-      </textobject>
-    </mediaobject>
-</screenshot>
-<para>When a language is downloaded, you then can see the <guilabel>Install</guilabel> button turning to <guilabel>Uninstall</guilabel> and a green tick appears next to the language name to tell you that this language is available in &klettres;.</para>
+
+<para>When a language is downloaded, you then can see the <guilabel>Install</guilabel> button turning to <guilabel>Uninstall</guilabel>.</para>
 <para>The next screenshot shows Danish installed.</para>
 <screenshot>
 <screeninfo>Danish is installed</screeninfo>
@@ -370,7 +360,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <title>The Main &klettres; Window</title>
 
 <sect2>
-<title>The <guimenu>File</guimenu> Menu</title>
+<title>The File Menu</title>
 
 <variablelist>
 
@@ -419,7 +409,7 @@ You can also choose here the size you like the best. This size will be kept in c
 </sect2>
 
 <sect2>
-<title>The <guimenu>Level</guimenu> Menu</title>
+<title>The Level Menu</title>
 
 <variablelist>
 
@@ -459,7 +449,7 @@ You can also choose here the size you like the best. This size will be kept in c
 
 </sect2>
 <sect2>
-<title>The <guimenu>Language</guimenu> Menu</title>
+<title>The Language Menu</title>
 
 <variablelist>
 
@@ -484,7 +474,7 @@ You can also choose here the size you like the best. This size will be kept in c
 </sect2>
 
 <sect2>
-<title>The <guimenu>Look</guimenu> Menu</title>
+<title>The Look Menu</title>
 
 <variablelist>
 <varlistentry>
@@ -536,72 +526,16 @@ You can also choose here the size you like the best. This size will be kept in c
 <listitem><para><action>Toggle</action> the grown-up mode: normal interface</para></listitem>
 </varlistentry>
 </variablelist>
-</sect2>
 
-<sect2>
-<title>The <guimenu>Settings</guimenu> Menu</title>
-
-<variablelist>
-<varlistentry>
-<term><menuchoice>
-<shortcut>
-<keycombo action="simul">&Ctrl;<keycap>M</keycap></keycombo>
-</shortcut>
-<guimenu>Settings</guimenu>
-<guimenuitem>Hide Menubar</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Hide</action> the menubar. To show the menubar again, click on the <guibutton>Show Menubar</guibutton> button in the toolbar.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guisubmenu>Toolbars Shown</guisubmenu>
-</menuchoice></term>
-<listitem><para><action>Toggle</action> the <guimenuitem>Main</guimenuitem> and the 
-<guimenuitem>Special Characters</guimenuitem> toolbar</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Show Statusbar</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Toggle</action> the display of the statusbar</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure Shortcuts...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Configure</action> &klettres; shortcuts</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure Toolbars...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Configure</action> &klettres; toolbars</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Settings</guimenu>
-<guimenuitem>Configure &klettres;...</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Configure</action> &klettres;: display a dialog with the <guilabel>Font 
-Settings</guilabel> page and the <guilabel>Timer</guilabel> configuration page.</para></listitem>
-</varlistentry>
-
-</variablelist>
+<para>
+Additionally &klettres; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+menu items, for more information read the sections about the <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Settings Menu</ulink> and <ulink url="help:/fundamentals/ui.html#menus-help">Help Menu</ulink>
+of the &kde; Fundamentals.
+</para>
 
 </sect2>
-<sect2>
-<title>The <guimenu>Help</guimenu> Menu</title>
-&help.menu.documentation;
-</sect2>
+
 </sect1>
 </chapter>
 
@@ -688,7 +622,7 @@ folder.</para></answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>Why are there only twenty languages?</para>
+<para>Why are there only twenty five languages?</para>
 </question>
 <answer>
 <para>In order for me to add a new language, I need the sounds
