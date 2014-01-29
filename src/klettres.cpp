@@ -35,7 +35,6 @@
 #include <KActionCollection>
 #include <KComboBox>
 #include <KConfigDialog>
-#include <KDebug>
 #include <KLocale>
 #include <KMenuBar>
 #include <KMessageBox>

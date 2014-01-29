@@ -25,7 +25,6 @@
 
 #include <KMessageBox>
 #include <KLocale>
-#include <KDebug>
 #include <KRandomSequence>
 #include <KStandardDirs>
 #include <Phonon/MediaObject>

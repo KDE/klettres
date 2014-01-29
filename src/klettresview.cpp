@@ -28,7 +28,6 @@
 
 #include <KLocale>
 #include <KStandardDirs>
-#include <KDebug>
 
 //Project headers
 #include "klettres.h"

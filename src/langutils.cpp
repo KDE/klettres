@@ -23,7 +23,6 @@
 
 #include <QDir>
 
-#include <KDebug>
 #include <KGlobal>
 #include <KLocale>
 #include <KStandardDirs>
