@@ -180,6 +180,57 @@ public:
     }
 };
 
+///The 'Aqua' theme
+
+class KLThemeAqua : public KLTheme
+{
+public:
+    KLThemeAqua()
+        : KLTheme()
+    {
+    }
+
+    virtual QString name() const
+    {
+        return "aqua";
+    }
+
+    virtual QString uiName() const
+    {
+        return i18nc("@item:inlistbox", "Aqua");
+    }
+
+    virtual QString svgFileName() const
+    {
+        return "klettres_aqua.svg";
+    }
+
+    virtual QColor letterColor() const
+    {
+        return QColor(215, 215, 215); 
+    }
+
+    virtual QColor backgroundInputColor() const
+    {
+        return QColor(0, 0, 100); 
+    }
+
+    virtual QColor letterInputColor() const
+    {
+        return QColor(0, 0, 215); 
+    }
+
+    virtual QRect wordRect(const QSize& windowsize) const
+    {
+        return QRect(windowsize.width()*150/800, windowsize.height()*180/600, 250, 160);
+    }
+
+    virtual QRect inputRect(const QSize& windowsize) const
+    {
+	return QRect(windowsize.width()*600/800, windowsize.height()*480/600, 250, 160);
+    }
+};
+
 KLThemeFactory* KLThemeFactory::instance()
 {
     static KLThemeFactory factory;
@@ -204,6 +255,8 @@ KLTheme* KLThemeFactory::buildTheme(int id) const
             return new KLThemeDesert();
         case 2:
             return new KLThemeSavannah();
+	case 3:
+	    return new KLThemeAqua();
     }
     return 0;
 }
@@ -219,6 +272,7 @@ QStringList KLThemeFactory::themeList() const
     ADD_THEME_NAME( KLThemeKid, ret )
     ADD_THEME_NAME( KLThemeDesert, ret )
     ADD_THEME_NAME( KLThemeSavannah, ret )
+    ADD_THEME_NAME( KLThemeAqua, ret)
     return ret;
 }
 
