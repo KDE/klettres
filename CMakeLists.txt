@@ -14,3 +14,5 @@ add_subdirectory( sounds )
 add_subdirectory( icons )
 add_subdirectory( themes )
 add_subdirectory( tests )
+
+install(FILES klettres.appdata.xml DESTINATION ${SHARE_INSTALL_PREFIX}/appdata/)
