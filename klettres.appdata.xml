@@ -5,8 +5,10 @@
   <project_license>GPL-2.0+</project_license>
   <name>KLettres</name>
   <name xml:lang="cs">KLettres</name>
+  <name xml:lang="es">KLettres</name>
   <name xml:lang="fi">KLettres</name>
   <name xml:lang="hu">KLettres</name>
+  <name xml:lang="lt">KLettres</name>
   <name xml:lang="nds">KLettres</name>
   <name xml:lang="nl">KLettres</name>
   <name xml:lang="pl">KLettres</name>
@@ -18,8 +20,10 @@
   <name xml:lang="x-test">xxKLettresxx</name>
   <summary>Learn The Alphabet</summary>
   <summary xml:lang="cs">Výuka abecedy</summary>
+  <summary xml:lang="es">Aprende el alfabeto</summary>
   <summary xml:lang="fi">Opi aakkoset</summary>
   <summary xml:lang="hu">Tanulja meg az ABC-t</summary>
+  <summary xml:lang="lt">Išmokite abėcėlę</summary>
   <summary xml:lang="nds">Dat Alfabeet lehren</summary>
   <summary xml:lang="nl">Leer het alfabet</summary>
   <summary xml:lang="pl">Nauka alfabetu</summary>
