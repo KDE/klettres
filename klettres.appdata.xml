@@ -5,6 +5,8 @@
   <project_license>GPL-2.0+</project_license>
   <name>KLettres</name>
   <name xml:lang="cs">KLettres</name>
+  <name xml:lang="de">KLettres</name>
+  <name xml:lang="en-GB">KLettres</name>
   <name xml:lang="es">KLettres</name>
   <name xml:lang="fi">KLettres</name>
   <name xml:lang="hu">KLettres</name>
@@ -20,6 +22,7 @@
   <name xml:lang="x-test">xxKLettresxx</name>
   <summary>Learn The Alphabet</summary>
   <summary xml:lang="cs">Výuka abecedy</summary>
+  <summary xml:lang="en-GB">Learn The Alphabet</summary>
   <summary xml:lang="es">Aprende el alfabeto</summary>
   <summary xml:lang="fi">Opi aakkoset</summary>
   <summary xml:lang="hu">Tanulja meg az ABC-t</summary>
@@ -35,6 +38,7 @@
   <summary xml:lang="x-test">xxLearn The Alphabetxx</summary>
   <description>
     <p>KLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hugarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.</p>
+    <p xml:lang="en-GB">KLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hugarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.</p>
     <p xml:lang="fi">KLettres on sovellus, joka on suunniteltu erityisesti auttamaan käyttäjää oppimaan uuden kielen aakkoset ja oppimaan sitten lukemaan yksinkertaisia tavuja. Käyttäjä voi olla kaksi ja puoli -vuotiaasta lapsesta aikuiseen, joka haluaa oppia vieraan kielen perusteet. Tällä hetkellä on saatavilla 25 kieltä: alasaksa, amerikanenglanti, arabia, brasilianportugali, brittienglanti, englannin äänteet, espanja, ganda, heprea, hollanti, italia, kannada, latinaistettu hindi, malajalam, norjan bokmål, pandžabi, ranska, saksa, slovakki, tanska, telugu, tšekki, ukraina, unkari ja venäjä. KLettresissä on nuorempia käyttäjiä varten oma käyttöliittymä ja teemoja.</p>
     <p xml:lang="nds">KLettres is en Programm, dat Brukers hölpt, dat Alfabet in en nieg Spraak to lehren un denn ok eenfach Sülven in disse Spraak to lesen. De Bruker kann en lütt Blaag vun tweeenhalf Johr oder en Opwussen wesen, de dat Grundweten vun en nieg Spraak lehren will. Opstunns sünd 25 Spraken verföögbor: Araabsch, Brasiliaansch Portugeesch, Tschechsch, Däänsch, Nedderlannsch, Britsch Engelsch, US Engelsch, Foneetsch Engelsch, Franzöösch, Hoochdüütsch, Hebrääsch, Ungaarsch, Italieensch, Kannadaansch, Plattdüütsch, Malayalaamsch, Norweegsch (Bokmål), Pandschaabsch, Lugandsch, Romaniseert Hindi, Russ'sch, Spaansch, Slowaaksch, Telugu un Ukrainsch. KLetrres hett en besünner Böversiet un Mustern för jünger Brukers.</p>
     <p xml:lang="nl">KLettres is een toepassing speciaal ontworpen om de gebruiker te helpen bij het leren van het alfabet van een nieuwe taal en daarna het leren lezen van eenvoudige zinnen. De gebruiker kan een jong kind zijn ij de leeftijd van twee en een half of een volwassene die de basis van een vreemde taal wil leren. Er zijn nu 25 talen beschikbaar: Arabisch, Braziliaans Portugees, Tsjechisch, Deens, Nederlands, Brits Engels, VS Engels, Fonetisch Engels, Frans, Duits, Hebreeuws, Hongaars, Italiaans, Kannada, Nedersaksisch, Malayalam, Noors Bokmål, Punjabi, Luganda, Geromaniseerd Hindi, Russisch, Spaans, Slowaaks, Telugu en Oekraïens. KLettres biedt een speciaal gebruikersinterface en thema's voor jonge gebruikers.</p>
