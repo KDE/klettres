@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KLettres</name>
+  <name xml:lang="ca">KLettres</name>
   <name xml:lang="cs">KLettres</name>
   <name xml:lang="de">KLettres</name>
   <name xml:lang="en-GB">KLettres</name>
@@ -23,6 +24,7 @@
   <name xml:lang="uk">KLettres</name>
   <name xml:lang="x-test">xxKLettresxx</name>
   <summary>Learn The Alphabet</summary>
+  <summary xml:lang="ca">Apreneu l'alfabet</summary>
   <summary xml:lang="cs">Výuka abecedy</summary>
   <summary xml:lang="de">Lerne das Alphabet</summary>
   <summary xml:lang="en-GB">Learn The Alphabet</summary>
@@ -43,6 +45,7 @@
   <summary xml:lang="x-test">xxLearn The Alphabetxx</summary>
   <description>
     <p>KLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hungarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.</p>
+    <p xml:lang="ca">El KLettres és una aplicació especialment dissenyada per ajudar a l'usuari a aprendre un alfabet en un idioma nou i després a prendre a llegir síl·labes senzilles. L'usuari pot ser des d'un nen de dos anys i mig a un adult que vol aprendre les bases d'un idioma estranger. Actualment hi ha 25 idiomes disponibles: àrab, portuguès de Brasil, txec, danès, holandès, anglès britànic, anglès d'EEUU, anglès fònic, francès, alemany, hebreu, hongarès, italià, kanarès, baix saxó, malaiàlam, noruec Bokmal, panjabi, luganda, hindi romanitzat, rus, espanyol, eslovac, telugu i ucraïnès. El KLettres proporciona una interfície d'usuari espacial i temes per usuaris joves.</p>
     <p xml:lang="en-GB">KLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hungarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.</p>
     <p xml:lang="et">KLettres on rakendus, mille eesmärk on aidata õppuril omandada uue keele tähestik ja seejärel lugeda lihtsamaid silpe. Õppur võib olla väike laps (alates umbes 2.5-aastastest) või ka täiskasvanu, kes soovib tundma õppida mõne võõrkeele põhitõdesid. Praegu on välja pakkuda 25 keelt: alamsaksa, araabia, Brasiilia portugali, Briti inglise, foneetiline inglise, heebrea, hispaania, hollandi, itaalia, kannada, latiniseeritud hindi, luganda, malajalami, Norra Bokmåli, pandžaabi, prantsuse, saksa, slovaki, taani, telugu, tšehhi, ukraina, ungari, USA inglise ja vene keel. KLettres pakub eriti noortele õppuritele spetsiaalset kasutajaliidest ja teemasid.</p>
     <p xml:lang="fi">KLettres on sovellus, joka on suunniteltu erityisesti auttamaan käyttäjää oppimaan uuden kielen aakkoset ja oppimaan sitten lukemaan yksinkertaisia tavuja. Käyttäjä voi olla kaksi ja puoli -vuotiaasta lapsesta aikuiseen, joka haluaa oppia vieraan kielen perusteet. Tällä hetkellä on saatavilla 25 kieltä: alasaksa, amerikanenglanti, arabia, brasilianportugali, brittienglanti, englannin äänteet, espanja, ganda, heprea, hollanti, italia, kannada, latinaistettu hindi, malajalam, norjan bokmål, pandžabi, ranska, saksa, slovakki, tanska, telugu, tšekki, ukraina, unkari ja venäjä. KLettresissä on nuorempia käyttäjiä varten oma käyttöliittymä ja teemoja.</p>
