@@ -23,6 +23,7 @@
   <name xml:lang="sv">Klettres</name>
   <name xml:lang="uk">KLettres</name>
   <name xml:lang="x-test">xxKLettresxx</name>
+  <name xml:lang="zh-TW">語言_KLetters</name>
   <summary>Learn The Alphabet</summary>
   <summary xml:lang="ca">Apreneu l'alfabet</summary>
   <summary xml:lang="cs">Výuka abecedy</summary>
@@ -43,6 +44,7 @@
   <summary xml:lang="sv">Inlärning av alfabetet</summary>
   <summary xml:lang="uk">Вивчення абетки</summary>
   <summary xml:lang="x-test">xxLearn The Alphabetxx</summary>
+  <summary xml:lang="zh-TW">語言_KLetters</summary>
   <description>
     <p>KLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hungarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.</p>
     <p xml:lang="ca">El KLettres és una aplicació especialment dissenyada per ajudar a l'usuari a aprendre un alfabet en un idioma nou i després a prendre a llegir síl·labes senzilles. L'usuari pot ser des d'un nen de dos anys i mig a un adult que vol aprendre les bases d'un idioma estranger. Actualment hi ha 25 idiomes disponibles: àrab, portuguès de Brasil, txec, danès, holandès, anglès britànic, anglès d'EEUU, anglès fònic, francès, alemany, hebreu, hongarès, italià, kanarès, baix saxó, malaiàlam, noruec Bokmal, panjabi, luganda, hindi romanitzat, rus, espanyol, eslovac, telugu i ucraïnès. El KLettres proporciona una interfície d'usuari espacial i temes per usuaris joves.</p>
@@ -59,6 +61,7 @@
     <p xml:lang="sv">Klettres är ett program som är särskilt framtaget för att hjälpa användaren att lära sig alfabetet på ett nytt språk och sedan lära sig läsa enkla stavelser. Användaren kan vara ett litet barn från två och ett halvt år, eller en vuxen som vill lära sig grunderna i ett främmande språk. För närvarande är 25 språk är tillgängliga: amerikansk engelska, arabiska, brasiliansk portugisiska, brittisk engelska, danska, franska, hebreiska, holländska, italienska, kanaresiska, luganda, lågsaxiska, malayalam, norskt bokmål, phonics engelska, punjabi, romansk hindi, ryska, slovakiska, spanska, telugu, tjeckiska, tyska, ukrainska och ungerska.</p>
     <p xml:lang="uk">KLettres — це програма, спеціально розроблена для того, щоб допомогти користувачеві вивчити абетку нової мови, а потім навчитися читати прості склади. Користувачем може бути як дитина віком від двох з половиною років, так і доросла людина, яка бажає вивчити основи іноземної мови. У поточній версії ви можете скористатися такими двадцятьма п’ятьма мовами: арабська, бразильська португальська, чеська, данська, голландська, британська англійська, американська англійська, фонетична англійська, французька, німецька, іврит, угорська, італійська, каннада, нижньосаксонська, луганда, малаялам, латинізована гінді, іспанська, російська,словацька, телугу та українська.</p>
     <p xml:lang="x-test">xxKLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hungarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.xx</p>
+    <p xml:lang="zh-TW">KLettres 是一套特別設計協助使用者學習新語言的字母，並且學會讀簡單音節的應用程式。使用者可以是兩歲半的孩子，或是想學新外語的成人。目前有包括阿拉伯語、巴西葡萄牙語、捷克語、丹麥語、荷蘭語、英式英語、美式英語等等 25 種語言。KLettres 針對小小孩也提供了一套特別的使用者介面。</p>
   </description>
   <url type="homepage">http://edu.kde.org/klettres/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klettres</url>
