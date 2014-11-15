@@ -23,7 +23,7 @@
 #include "timer.h"
 
 
-#include <KLocale>
+#include <KLocalizedString>
 
 #include "prefs.h"
 
@@ -33,8 +33,8 @@ Timer::Timer()
     ui_timer.setupUi(this);
     ui_timer.timeGrownLabel->setText(QString::number(Prefs::grownTimer()) + ' ' + i18n("tenths of second"));
     ui_timer.timeKidLabel->setText(QString::number(Prefs::kidTimer()) + ' ' + i18n("tenths of second"));
-    connect(ui_timer.kcfg_GrownTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
-    connect(ui_timer.kcfg_KidTimer, SIGNAL(valueChanged(int)), this, SLOT(sliderValueChanged()));
+    connect(ui_timer.kcfg_GrownTimer, &QSlider::valueChanged, this, &Timer::sliderValueChanged);
+    connect(ui_timer.kcfg_KidTimer, &QSlider::valueChanged, this, &Timer::sliderValueChanged);
 }
 
 
@@ -45,4 +45,4 @@ void Timer::sliderValueChanged()
 }
 
 
-#include "timer.moc"
+

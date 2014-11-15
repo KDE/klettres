@@ -20,7 +20,7 @@
 //project headers
 #include "kltheme.h"
 
-#include <KLocale>
+#include <KLocalizedString>
 
 KLTheme::KLTheme()
 {

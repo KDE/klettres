@@ -20,11 +20,12 @@
 //project headers
 #include "langutils.h"
 #include "prefs.h"
+#include "klettres_debug.h"
 
 #include <QDir>
 
 #include <KGlobal>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KStandardDirs>
 
 bool LangUtils::hasSpecialChars(const QString& lang)
@@ -84,7 +85,7 @@ QStringList LangUtils::getLanguages()
     }
     //TODO TEST in FRENCH
     m_languages.sort();
-    kDebug() <<m_languages;
+    qCDebug(KLETTRES_LOG) <<m_languages;
     return m_languages;
 }
 
@@ -119,7 +120,7 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
 void LangUtils::writeLangConfig()
 {
     //write the present languages in config so they cannot be downloaded
-    KConfigGroup config(KGlobal::config(), "KNewStuffStatus");
+    KConfigGroup config(KSharedConfig::openConfig(), "KNewStuffStatus");
     QStringList m_languages = getLanguages();
     for (int i=0;  i<m_languages.count(); i++)  {
         QString tmp = m_languages[i];

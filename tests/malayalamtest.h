@@ -19,8 +19,7 @@
 #ifndef MALAYALAMTEST_H
 #define MALAYALAMTEST_H
 
-#include <qtest_kde.h>
-#include <QtCore/QObject>
+#include <QObject>
 
 class MalayalamTest : public QObject
 {

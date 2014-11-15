@@ -99,7 +99,7 @@ public slots:
     ///Start playing displaying a new letter/syllable, playing the associated sound
     void game();
 
-protected slots:
+public slots:
     ///Play the same sound again
     void slotPlayAgain();
 

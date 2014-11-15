@@ -21,33 +21,28 @@
 #include "klettres.h"
 
 //Qt includes
+#include <QAction>
 #include <QBitmap>
-#include <QDir>
 #include <QFile>
 #include <QLabel>
 #include <QPainter>
+#include <QStatusBar>
 #include <QTextStream>
 #include <QDomDocument>
 #include <QWidget>
 
 //KDE includes
-#include <KAction>
 #include <KActionCollection>
-#include <KComboBox>
 #include <KConfigDialog>
-#include <KLocale>
-#include <KMenuBar>
+#include <KLocalizedString>
+#include <QMenuBar>
 #include <KMessageBox>
-#include <KNumInput>
 #include <KSelectAction>
 #include <KStandardAction>
 #include <KStandardDirs>
-#include <KStatusBar>
-#include <KToggleAction>
 #include <KToolBar>
-#include <KIcon>
-#include <KApplication>
-#include <KGlobal>
+#include <KToggleAction>
+#include <QIcon>
 
 #include <knewstuff3/downloaddialog.h>
 //Project includes
@@ -58,7 +53,7 @@
 #include "kltheme.h"
 
 class fontsdlg : public QWidget, public Ui::fontsdlg
-{    
+{
     public:
         fontsdlg( QWidget * parent ) : QWidget(parent)
         {
@@ -109,17 +104,17 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
         KMessageBox::information( this, mString,i18n("KLettres - Error") );
         qApp->quit();//exit(1);
     }
-    
+
     if (!layoutFile.open(QIODevice::ReadOnly)) {
         return false;
     }
-    
+
     //Check if document is well-formed
     if (!layoutDocument.setContent(&layoutFile)) {
         layoutFile.close();
         return false;
     }
-    
+
     layoutFile.close();
 
     return true;
@@ -127,27 +122,27 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 
 void KLettres::setupActions()
 {
-    KAction *m_newAction = actionCollection()->addAction("play_new");
+    QAction *m_newAction = actionCollection()->addAction("play_new");
     m_newAction->setText(i18n("New Sound"));
-    m_newAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_N));
-    m_newAction->setIcon(KIcon("document-new")); // ### better icon for this?
-    connect(m_newAction, SIGNAL(triggered(bool)), m_view, SLOT(game()));
+    actionCollection()->setDefaultShortcut(m_newAction,QKeySequence(Qt::CTRL+Qt::Key_N));
+    m_newAction->setIcon(QIcon::fromTheme("document-new")); // ### better icon for this?
+    connect(m_newAction, &QAction::triggered, m_view, &KLettresView::game);
     m_newAction->setToolTip(i18n("Play a new sound"));
     m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound."));
 
     QAction *m_stuffAction = actionCollection()->addAction("downloadnewstuff");
     m_stuffAction->setText(i18n("Get Alphabet in New Language..."));
-    m_stuffAction->setIcon(KIcon("get-hot-new-stuff"));
-    connect(m_stuffAction, SIGNAL(triggered(bool)), this, SLOT(slotDownloadNewStuff()));
+    m_stuffAction->setIcon(QIcon::fromTheme("get-hot-new-stuff"));
+    connect(m_stuffAction, &QAction::triggered, this, &KLettres::slotDownloadNewStuff);
 
-    KAction *m_playAgainAction = actionCollection()->addAction("play_again");
+    QAction *m_playAgainAction = actionCollection()->addAction("play_again");
     m_playAgainAction->setText(i18n("Replay Sound"));
-    m_playAgainAction->setShortcut(QKeySequence(Qt::Key_F5));
-    m_playAgainAction->setIcon(KIcon("media-playback-start"));
+    actionCollection()->setDefaultShortcut(m_playAgainAction,QKeySequence(Qt::Key_F5));
+    m_playAgainAction->setIcon(QIcon::fromTheme("media-playback-start"));
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
-    connect(m_playAgainAction, SIGNAL(triggered(bool)), m_view, SLOT(slotPlayAgain()));
+    connect(m_playAgainAction, &QAction::triggered, m_view, &KLettresView::slotPlayAgain);
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
-    KStandardAction::quit(kapp, SLOT(quit()), actionCollection());
+    KStandardAction::quit(qApp, SLOT(quit()), actionCollection());
 
     m_menubarAction = KStandardAction::showMenubar(this, SLOT(slotMenubar()), actionCollection());
 
@@ -176,21 +171,21 @@ void KLettres::setupActions()
 
     m_kidAction = actionCollection()->add<KToggleAction>("mode_kid");
     m_kidAction->setText(i18n("Mode Kid"));
-    m_kidAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_K));
-    m_kidAction->setIcon(KIcon("klettres_kids"));
-    connect(m_kidAction, SIGNAL(triggered(bool)), this, SLOT(slotModeKid()));
+    actionCollection()->setDefaultShortcut(m_kidAction,QKeySequence(Qt::CTRL+Qt::Key_K));
+    m_kidAction->setIcon(QIcon::fromTheme("klettres_kids"));
+    connect(m_kidAction, &KToggleAction::triggered, this, &KLettres::slotModeKid);
     m_kidAction->setWhatsThis(i18n("If you are in the Grown-up mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
 
     m_grownupAction = actionCollection()->add<KToggleAction>("mode_grownup");
     m_grownupAction->setText(i18n("Mode Grown-up"));
-    m_grownupAction->setShortcut(QKeySequence(Qt::CTRL+Qt::Key_G));
-    m_grownupAction->setIcon(KIcon("klettres_grownup"));
-    connect(m_grownupAction, SIGNAL(triggered(bool)), this, SLOT(slotModeGrownup()));
+    actionCollection()->setDefaultShortcut(m_grownupAction,QKeySequence(Qt::CTRL+Qt::Key_G));
+    m_grownupAction->setIcon(QIcon::fromTheme("klettres_grownup"));
+    connect(m_grownupAction, &KToggleAction::triggered, this, &KLettres::slotModeGrownup);
     m_grownupAction->setWhatsThis(i18n("The Grownup mode is the normal mode where you can see the menubar."));
 
-    connect(m_levelAction, SIGNAL(triggered(int)), this, SLOT(slotChangeLevel(int)));
-    connect(m_languageAction, SIGNAL(triggered(int)), this, SLOT(slotChangeLanguage(int)));
-    connect(m_themeAction, SIGNAL(triggered(int)), this, SLOT(slotChangeTheme(int)));
+    connect(m_levelAction, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &KLettres::slotChangeLevel);
+    connect(m_languageAction, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &KLettres::slotChangeLanguage);
+    connect(m_themeAction, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &KLettres::slotChangeTheme);
 
     KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 
@@ -199,12 +194,12 @@ void KLettres::setupActions()
 
 void KLettres::setupStatusbar()
 {
-    KStatusBar *st=statusBar();
+    QStatusBar *st=statusBar();
     m_langLabel = new QLabel(st);
     m_levLabel = new QLabel(st);
     st->addWidget(m_langLabel);
-    st->insertFixedItem("", 1);//add a space
-    st->addWidget(m_levLabel);   
+//    st->insertFixedItem("", 1);//add a space
+    st->addWidget(m_levLabel);
     statusBar();
 }
 
@@ -220,22 +215,22 @@ void KLettres::optionsPreferences()
     if(KConfigDialog::showDialog("settings")) {
         return;
     }
-    
+
     KConfigDialog *dialog = new KConfigDialog(this, "settings", Prefs::self());
     dialog->addPage(new fontsdlg(0), i18n("Font Settings"), "preferences-desktop-font");
     //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
     //fonts is the icon
     Timer *m_timer = new Timer();
     dialog->addPage(m_timer, i18n("Timer"), "chronometer");
-    connect(dialog, SIGNAL(settingsChanged(const QString &)), this, SLOT(slotUpdateSettings()));
+    connect(dialog, &KConfigDialog::settingsChanged, this, &KLettres::slotUpdateSettings);
     dialog->setAttribute( Qt::WA_DeleteOnClose );
-    dialog->setHelp(QString(), "klettres");
+    // dialog->setHelp(QString(), "klettres");
     dialog->show();
 }
 
 void KLettres::loadSettings()
 {
-    if (LangUtils::getLanguages().indexOf(Prefs::language()) <0)  {
+    if (LangUtils::getLanguages().indexOf(Prefs::language()) < 0)  {
         Prefs::setLanguage("en");
     }
     QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[LangUtils::getLanguages().indexOf(Prefs::language())];
@@ -253,14 +248,14 @@ void KLettres::loadSettings()
     } else {
         slotModeKid();
     }
-    
+
     m_menubarAction->setChecked(Prefs::menuBarBool());
     slotMenubar();
 }
 
 void KLettres::slotDownloadNewStuff()
 {
-    QPointer<KNS3::DownloadDialog> dialog(new KNS3::DownloadDialog("klettres.knsrc", this)); 
+    QPointer<KNS3::DownloadDialog> dialog(new KNS3::DownloadDialog("klettres.knsrc", this));
     if ( dialog->exec() == QDialog::Accepted ) {
         // do nothing
     }
@@ -281,7 +276,7 @@ void KLettres::slotMenubar()
 {
     menuBar()->setVisible(m_menubarAction->isChecked());
     Prefs::setMenuBarBool(m_menubarAction->isChecked());
-    Prefs::self()->writeConfig();
+    Prefs::self()->save();
 }
 
 void KLettres::slotUpdateSettings()
@@ -295,7 +290,7 @@ void KLettres::slotUpdateSettings()
 void KLettres::slotChangeLevel(int newLevel)
 {
     Prefs::setLevel(newLevel+1);
-    Prefs::self()->writeConfig();
+    Prefs::self()->save();
     updateLevMenu(newLevel);
     //TODO is that necessary? Change level effectively by reloading sounds
 
@@ -318,7 +313,7 @@ void KLettres::slotChangeLanguage(int newIndex)
     // Write new language ISO in config
     QString newLanguage = LangUtils::getLanguages()[newIndex];
     Prefs::setLanguage(newLanguage);
-    Prefs::self()->writeConfig();
+    Prefs::self()->save();
     // Update the StatusBar
     QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[newIndex];
     langString.remove('&');
@@ -326,11 +321,11 @@ void KLettres::slotChangeLanguage(int newIndex)
     loadLangToolBar();
     // Change language effectively
     bool ok = loadLayout(soundFactory->m_layoutsDocument);
-    
+
     if (ok) {
         soundFactory->change(Prefs::language());
     }
-    
+
     m_view->randomInt = 0;
     m_view->game();
 }
@@ -338,7 +333,7 @@ void KLettres::slotChangeLanguage(int newIndex)
 void KLettres::slotChangeTheme(int index)
 {
     Prefs::setTheme(index);
-    Prefs::self()->writeConfig();
+    Prefs::self()->save();
     m_view->setTheme(KLThemeFactory::instance()->buildTheme(index));
 }
 
@@ -358,7 +353,7 @@ void KLettres::slotModeGrownup()
     menuBar()->show();
     m_view->m_timer = Prefs::grownTimer();
     Prefs::setMode(Prefs::EnumMode::grownup);
-    Prefs::self()->writeConfig();
+    Prefs::self()->save();
 }
 
 void KLettres::slotModeKid()
@@ -378,7 +373,7 @@ void KLettres::slotModeKid()
     menuBar()->hide();
     m_view->m_timer = Prefs::kidTimer();
     Prefs::setMode(Prefs::EnumMode::kid);
-    Prefs::self()->writeConfig();
+    Prefs::self()->save();
 }
 
 void KLettres::loadLangToolBar()
@@ -392,7 +387,7 @@ void KLettres::loadLangToolBar()
         QString myString=QString("klettres/%1.txt").arg(lang);
         QFile myFile;
         myFile.setFileName(KStandardDirs::locate("data",myString));
-        
+
         if (!myFile.exists()) {
             QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
                                     "please check your installation.", lang);
@@ -400,7 +395,7 @@ void KLettres::loadLangToolBar()
                                     i18n("Error") );
             qApp->quit();
         }
-        
+
         //we open the file and store info into the stream...
         QFile openFileStream(myFile.fileName());
         openFileStream.open(QIODevice::ReadOnly);
@@ -409,17 +404,17 @@ void KLettres::loadLangToolBar()
         //allData contains all the words from the file
         allData = readFileStr.readAll().split('\n');
         openFileStream.close();
-        
+
         for (int i=0; i<(int) allData.count(); ++i) {
             if (!allData[i].isEmpty()) {
                 QAction *act = specialCharToolbar->addAction(allData.at(i));
                 act->setIcon(charIcon(allData.at(i).at(0)));
                 // used to carry the id
                 act->setData(i);
-                connect(act, SIGNAL(triggered(bool)), this, SLOT(slotPasteChar()));
+                connect(act, &QAction::triggered, this, &KLettres::slotPasteChar);
             }
         }
-        
+
         specialCharToolbar->show();
         update();
     } else {
@@ -436,11 +431,11 @@ void KLettres::slotPasteChar()
 
     bool ok = true;
     int id = act->data().toInt(&ok);
-    
+
     if (!ok || id < 0 || id >= allData.count()) {
         return;
     }
-    
+
     m_view->m_letterEdit->insert(allData.at(id));
 }
 
@@ -482,4 +477,4 @@ QIcon KLettres::charIcon(const QChar & c)
     return QIcon(pm);
 }
 
-#include "klettres.moc"
+

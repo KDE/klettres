@@ -18,7 +18,7 @@
 
 #include "malayalamtest.h"
 
-#include <QtTest/QtTest>
+#include <QTest>
 #include <QString>
 
 void MalayalamTest::matchChar()
@@ -49,7 +49,5 @@ void MalayalamTest::decomposeConsonant()
     
 }
 
+QTEST_MAIN(MalayalamTest)
 
-QTEST_KDEMAIN_CORE( MalayalamTest )
-
-#include "malayalamtest.moc"

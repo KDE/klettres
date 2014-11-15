@@ -23,12 +23,14 @@
 
 #include "soundfactory.h"
 
+
 #include <KMessageBox>
-#include <KLocale>
+#include <KLocalizedString>
 #include <KRandomSequence>
 #include <KStandardDirs>
-#include <Phonon/MediaObject>
+#include <phonon/MediaObject>
 
+#include "klettres_debug.h"
 #include "klettres.h"
 #include "prefs.h"
 
@@ -77,7 +79,7 @@ void SoundFactory::playSound(int mySound)
     }
 
     soundFile = KStandardDirs::locate("data", "klettres/" + filesList[mySound]);
-    kDebug() << "soundFile " << soundFile;
+    qCDebug(KLETTRES_LOG) << "soundFile " << soundFile;
 
     if (soundFile.isEmpty()) {
         return;
@@ -121,10 +123,10 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     codeAttribute = languageElement.attributeNode("code");
 
     if (currentLanguage != codeAttribute.value()) {
-        kDebug() << "Fail reading language !!! ";
+        qCDebug(KLETTRES_LOG) << "Fail reading language !!! ";
         return false;
     } else {
-        kDebug() << "current language " << currentLanguage;
+        qCDebug(KLETTRES_LOG) << "current language " << currentLanguage;
     }
     //check here if alphabet and syllables both exist
     alphabetList = languageElement.elementsByTagName("alphabet");
@@ -143,7 +145,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     if ((Prefs::level() == 3) || (Prefs::level() == 4))  {
         if (syllablesList.count() != 1) {
             Prefs::setLevel(1);
-            Prefs::self()->writeConfig();
+            Prefs::self()->save();
             return false;
         }
 
@@ -153,7 +155,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     }
     //Counts the number of sounds
     sounds = soundNamesList.count();
-    kDebug() << "number of sounds" << sounds << endl;
+    qCDebug(KLETTRES_LOG) << "number of sounds" << sounds << endl;
     if (sounds < 1)  {
         return false;
     }
@@ -190,4 +192,4 @@ void SoundFactory::setSoundSequence()
     randomSequence.randomize(randomList);
 }
 
-#include "soundfactory.moc"
+

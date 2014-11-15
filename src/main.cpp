@@ -21,11 +21,12 @@
 /*****************************************************/
 /* Please save with utf8 encoding, thanks  */
 /*****************************************************/
+#include <QApplication>
 
 #include <kaboutdata.h>
-#include <kcmdlineargs.h>
-#include <klocale.h>
-#include <kapplication.h>
+
+#include <KLocalizedString>
+#include <QCommandLineParser>
 #include "klettres.h"
 #include "version.h"
 
@@ -39,46 +40,53 @@ static const char version[] = "2.1";
 
 int main(int argc, char **argv)
 {
-    KAboutData about("klettres", 0, ki18n("KLettres"), KLETTRES_VERSION, ki18n(description),
-                     KAboutData::License_GPL, ki18n("(C) 2001-2011 Anne-Marie Mahfouf"),KLocalizedString(), "http://edu.kde.org/klettres", "submit@bugs.kde.org");
-    about.addAuthor( ki18n("Anne-Marie Mahfouf"), KLocalizedString(), "annma AT kde DOT org", "http://annma.blogspot.com", "annma");
-    about.addCredit(ki18n("Marc Cheng"),
-                    ki18n("Kids and grown-up oxygen icons"), "bdgraue AT web DOT de");
-    about.addCredit(ki18n("Danny Allen"),
-                    ki18n("SVG background pictures"), "dannya40uk AT yahoo DOT co DOT uk");
-    about.addCredit(ki18n("Robert Gogolok"),
-                    ki18n("Support and coding guidance"), "mail AT robert-gogolok DOT de");
-    about.addCredit(ki18n("Peter Hedlund"),
-                    ki18n("Code for generating special characters' icons"), "peter DOT hedlund AT kdemail DOT net");
-    about.addCredit(ki18n("Waldo Bastian"),
-                    ki18n("Port to KConfig XT, coding help"), "bastian AT kde DOT org");
-    about.addCredit(ki18n("Pino Toscano"),
-                    ki18n("Code cleaning, Theme class"), "toscano DOT pino AT tiscali DOT it");
-    about.addCredit(ki18n("Michael Goettsche"),
-                    ki18n("Timer setting widgets"), "michael.goettsche AT kdemail DOT net");
-    KCmdLineArgs::init(argc, argv, &about);
+    KAboutData about("klettres", i18n("KLettres"), QLatin1String(KLETTRES_VERSION), i18n(description),
+                     KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QLatin1String("http://edu.kde.org/klettres"), QLatin1String("submit@bugs.kde.org"));
+    about.addAuthor( i18n("Anne-Marie Mahfouf"), QString(), "annma AT kde DOT org", "http://annma.blogspot.com", "annma");
+    about.addCredit(i18n("Marc Cheng"),
+                    i18n("Kids and grown-up oxygen icons"), "bdgraue AT web DOT de");
+    about.addCredit(i18n("Danny Allen"),
+                    i18n("SVG background pictures"), "dannya40uk AT yahoo DOT co DOT uk");
+    about.addCredit(i18n("Robert Gogolok"),
+                    i18n("Support and coding guidance"), "mail AT robert-gogolok DOT de");
+    about.addCredit(i18n("Peter Hedlund"),
+                    i18n("Code for generating special characters' icons"), "peter DOT hedlund AT kdemail DOT net");
+    about.addCredit(i18n("Waldo Bastian"),
+                    i18n("Port to KConfig XT, coding help"), "bastian AT kde DOT org");
+    about.addCredit(i18n("Pino Toscano"),
+                    i18n("Code cleaning, Theme class"), "toscano DOT pino AT tiscali DOT it");
+    about.addCredit(i18n("Michael Goettsche"),
+                    i18n("Timer setting widgets"), "michael.goettsche AT kdemail DOT net");
+    QApplication app(argc, argv);
+    QCommandLineParser parser;
+    KAboutData::setApplicationData(about);
+    parser.addVersionOption();
+    parser.addHelpOption();
+    about.setupCommandLine(&parser);
+    parser.process(app);
+    about.processCommandLine(&parser);
 
-    KCmdLineOptions options;
-    KCmdLineArgs::addCmdLineOptions(options);
-    KApplication app;
+    app.setApplicationName("klettres");
+    app.setApplicationVersion(version);
+    app.setOrganizationDomain("kde.org");
+    app.setApplicationDisplayName(i18n("Klettres"));
 
     // see if we are starting with session management
     if (app.isSessionRestored()) {
         RESTORE(KLettres)
     } else {
         // no session.. just start up normally
-        KCmdLineArgs *args = KCmdLineArgs::parsedArgs();
-        if (args->count() == 0) {
+        if (parser.positionalArguments().count() == 0) {
             KLettres *widget = new KLettres;
             widget->show();
         } else {
             int i = 0;
-            for (; i < args->count(); i++) {
+            for (; i < parser.positionalArguments().count(); i++) {
                 KLettres *widget = new KLettres;
                 widget->show();
             }
         }
-        args->clear();
+        
     }
 
     return app.exec();

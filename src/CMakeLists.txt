@@ -1,38 +1,50 @@
 
 ########### next target ###############
 
-set(klettres_SRCS 
-   klettres.cpp 
-   main.cpp 
-   klettresview.cpp 
-   soundfactory.cpp 
+add_definitions(-DTRANSLATION_DOMAIN=\"kletters\")
+
+set(klettres_SRCS
+   klettres.cpp
+   main.cpp
+   klettresview.cpp
+   soundfactory.cpp
    langutils.cpp
    kltheme.cpp
-   timer.cpp )
+   timer.cpp
+   klettres_debug.cpp )
 
 
-kde4_add_ui_files(klettres_SRCS
+ki18n_wrap_ui(klettres_SRCS
     timerui.ui
     fontsdlg.ui )
 
-kde4_add_kcfg_files(klettres_SRCS prefs.kcfgc )
+kconfig_add_kcfg_files(klettres_SRCS prefs.kcfgc )
 
 #kde4_add_app_icon(klettres_SRCS "${KDE4_ICON_DIR}/oxygen/*/apps/klettres.png")
 #kde4_add_app_icon(klettres_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/ox*-apps-klettres.png")
 kde4_add_app_icon(klettres_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-apps-klettres.png")
 
-kde4_add_executable(klettres ${klettres_SRCS})
+add_executable(klettres ${klettres_SRCS})
 
-target_link_libraries(klettres  ${KDE4_KNEWSTUFF3_LIBS} ${KDE4_PHONON_LIBS} ${QT_QTXML_LIBRARY})
+target_link_libraries(klettres
+  KF5::Completion
+  KF5::Emoticons
+  KF5::NewStuff
+  KF5::I18n
+  KF5::ItemModels
+  KF5::KDELibs4Support
+  Qt5::Svg
+  ${PHONON_LIBRARY}
+  Qt5::Xml)
 
 install(TARGETS klettres  ${INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
 
-install( PROGRAMS klettres.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install( FILES klettresui.rc  DESTINATION  ${DATA_INSTALL_DIR}/klettres )
+install( PROGRAMS org.kde.klettres.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
+install( FILES klettresui.rc  DESTINATION  ${KXMLGUI_INSTALL_DIR}/klettres )
 install( FILES klettres.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
 install( FILES klettres.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
 
-kde4_install_icons( ${ICON_INSTALL_DIR}   )
+ecm_install_icons( ICONS hi128-apps-klettres.png  hi16-apps-klettres.png  hi22-apps-klettres.png  hi32-apps-klettres.png  hi48-apps-klettres.png  hi64-apps-klettres.png DESTINATION ${ICON_INSTALL_DIR}   )
