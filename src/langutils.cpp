@@ -91,11 +91,7 @@ QStringList LangUtils::getLanguages()
 
 QStringList LangUtils::getLanguagesNames(QStringList languagesList)
 {
-    //we look in $KDEDIR/share/locale/all_languages from /kdelibs/kdecore/all_languages
-    //to find the name of the country
-    //corresponding to the code and the language the user set
     QStringList languagesNames;
-    KConfig entry(KStandardDirs::locate("locale", "all_languages"));
 
     foreach(const QString &language, languagesList) {
         if (language == "hi-ro") {
@@ -105,11 +101,10 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
         } else if (language == "ep") {
             languagesNames.append(i18n("English Phonics"));
         } else {
-            KConfigGroup group = entry.group(language);
-            QString languageName = group.readEntry("Name");
-            if (languageName.isEmpty()) {
+            QLocale locale(language);
+            QString languageName = locale.nativeLanguageName();
+            if (locale == QLocale::c())
                 languageName = i18nc("@item:inlistbox no language for that locale", "None");
-            }
             languagesNames.append(languageName);
         }
     }
