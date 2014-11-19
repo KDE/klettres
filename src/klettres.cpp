@@ -30,6 +30,7 @@
 #include <QTextStream>
 #include <QDomDocument>
 #include <QWidget>
+#include <QStandardPaths>
 
 //KDE includes
 #include <KActionCollection>
@@ -39,7 +40,6 @@
 #include <KMessageBox>
 #include <KSelectAction>
 #include <KStandardAction>
-#include <KStandardDirs>
 #include <KToolBar>
 #include <KToggleAction>
 #include <QIcon>
@@ -94,7 +94,9 @@ KLettres::~KLettres()
 
 bool KLettres::loadLayout(QDomDocument &layoutDocument)
 {
-    QFile layoutFile(KStandardDirs::locate("data", "klettres/"+Prefs::language()+"/sounds.xml"));
+    QFile layoutFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+					    "klettres/"+Prefs::language()+"/sounds.xml"));
+
     //if xml file is not found, program exits
     if (!layoutFile.exists()) {
         kWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/"+Prefs::language() ;
@@ -386,7 +388,7 @@ void KLettres::loadLangToolBar()
         allData.clear();
         QString myString=QString("klettres/%1.txt").arg(lang);
         QFile myFile;
-        myFile.setFileName(KStandardDirs::locate("data",myString));
+        myFile.setFileName(QStandardPaths::locate(QStandardPaths::GenericDataLocation, myString));
 
         if (!myFile.exists()) {
             QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -442,7 +444,14 @@ void KLettres::slotPasteChar()
 QIcon KLettres::charIcon(const QChar & c)
 {
     ///Create a name and path for the icon
-    QString s = KStandardDirs::locateLocal("icon", "char" + QString::number(c.unicode()) + ".png");
+    // 
+    // FIXME: This code used KStandardDirs::locateLocal("icon", ...) before
+    //        and I am not sure if GenericCacheLocation is what we are aiming
+    //        for.  So best would be if somebody experienced in QStandardPaths
+    //        could confirm or change it.
+
+    QString s = QStandardPaths::locate(QStandardPaths::GenericCacheLocation,
+                                       "char" + QString::number(c.unicode()) + ".png");
 
     QRect r(4, 4, 120, 120);
 

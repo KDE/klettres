@@ -23,11 +23,11 @@
 
 #include "soundfactory.h"
 
+#include <QStandardPaths>
 
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <KRandomSequence>
-#include <KStandardDirs>
 #include <phonon/MediaObject>
 
 #include "klettres_debug.h"
@@ -78,7 +78,8 @@ void SoundFactory::playSound(int mySound)
         return;
     }
 
-    soundFile = KStandardDirs::locate("data", "klettres/" + filesList[mySound]);
+    soundFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+				       "klettres/" + filesList[mySound]);
     qCDebug(KLETTRES_LOG) << "soundFile " << soundFile;
 
     if (soundFile.isEmpty()) {

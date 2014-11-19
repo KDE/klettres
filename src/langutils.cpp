@@ -26,7 +26,6 @@
 
 #include <KGlobal>
 #include <KLocalizedString>
-#include <KStandardDirs>
 
 bool LangUtils::hasSpecialChars(const QString& lang)
 {

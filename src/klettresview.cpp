@@ -25,9 +25,10 @@
 #include <QSvgRenderer>
 #include <QFile>
 #include <QPaintEvent>
+#include <QStandardPaths>
 
-#include <KStandardDirs>
 #include <KLocalizedString>
+
 //Project headers
 #include "klettres.h"
 #include "prefs.h"
@@ -90,7 +91,8 @@ void KLettresView::setTheme(KLTheme *theme)
     if (!theme)
         return;
 
-    QString svgpath = KStandardDirs::locate("data", QString("klettres/pics/%1/%2").arg(theme->name(), theme->svgFileName()));
+    QString svgpath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+					       QString("klettres/pics/%1/%2").arg(theme->name(), theme->svgFileName()));
 
     // we don't allow themes with no svg installed
     if (!QFile::exists(svgpath)) {
