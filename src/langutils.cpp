@@ -57,7 +57,11 @@ QStringList LangUtils::getLanguages()
     QStringList m_languages;
     m_languages.clear();
     //the program scans in klettres/data/ to see what languages data is found
-    const QStringList mdirs = KGlobal::dirs()->findDirs("data", "klettres/");
+    const QStringList mdirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+							"klettres/",
+							QStandardPaths::LocateDirectory);
+    //qDebug() << mdirs;
+
     //if (mdirs.isEmpty()) return NULL;
     for (QStringList::const_iterator it =mdirs.constBegin(); it !=mdirs.constEnd(); ++it ) {
         QDir dir(*it);
