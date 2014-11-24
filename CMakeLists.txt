@@ -41,7 +41,7 @@ find_package(KF5 REQUIRED COMPONENTS
 
 include(KDE4Defaults)
 
-include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} ${QT4_INCLUDES} ${PHONON_INCLUDE_DIR})
+include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 
 ecm_optional_add_subdirectory( doc )
