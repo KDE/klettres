@@ -37,12 +37,12 @@
   <customwidget>
    <class>KFontChooser</class>
    <extends>QWidget</extends>
-   <header>kfontdialog.h</header>
+   <header>kfontchooser.h</header>
   </customwidget>
  </customwidgets>
  <includes>
-  <include location="global" >kfontdialog.h</include>
-  <include location="local" >kfontdialog.h</include>
+  <include location="global" >kfontchooser.h</include>
+  <include location="local" >kfontchooser.h</include>
  </includes>
  <resources/>
  <connections/>
