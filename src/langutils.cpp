@@ -24,7 +24,6 @@
 
 #include <QDir>
 
-#include <KGlobal>
 #include <KLocalizedString>
 
 bool LangUtils::hasSpecialChars(const QString& lang)
