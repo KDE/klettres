@@ -3,7 +3,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <include>kglobalsettings.h</include>
+  <include>QFontDatabase</include>
   <kcfgfile name="klettresrc"/>
   <group name="General">
     <entry name="Language" type="String">
@@ -49,7 +49,7 @@
   <group name="mFont">
     <entry name="Font" type="Font" key="mFont">
       <label>Font</label>
-      <code>QFont defaultFont = KGlobalSettings::largeFont();
+      <code>QFont defaultFont = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
             defaultFont.setPointSize(48);
             defaultFont.setBold(true);
       </code>
