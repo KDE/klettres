@@ -44,7 +44,7 @@
 #include <KToggleAction>
 #include <QIcon>
 
-#include <knewstuff3/downloaddialog.h>
+#include <kns3/downloaddialog.h>
 //Project includes
 #include "ui_fontsdlg.h"
 #include "timer.h"
