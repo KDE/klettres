@@ -57,6 +57,8 @@ int main(int argc, char **argv)
                     i18n("Code cleaning, Theme class"), "toscano DOT pino AT tiscali DOT it");
     about.addCredit(i18n("Michael Goettsche"),
                     i18n("Timer setting widgets"), "michael.goettsche AT kdemail DOT net");
+    about.addCredit(i18n("Laurent Navet"),
+                    i18n("Port to KDE Frameworks 5"), "laurent DOT navet+klettres AT gmail DOT com");
     QApplication app(argc, argv);
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
