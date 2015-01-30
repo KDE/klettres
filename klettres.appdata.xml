@@ -24,6 +24,7 @@
   <name xml:lang="sv">Klettres</name>
   <name xml:lang="uk">KLettres</name>
   <name xml:lang="x-test">xxKLettresxx</name>
+  <name xml:lang="zh-CN">KLettres</name>
   <name xml:lang="zh-TW">語言_KLetters</name>
   <summary>Learn The Alphabet</summary>
   <summary xml:lang="ca">Apreneu l'alfabet</summary>
@@ -45,6 +46,7 @@
   <summary xml:lang="sv">Inlärning av alfabetet</summary>
   <summary xml:lang="uk">Вивчення абетки</summary>
   <summary xml:lang="x-test">xxLearn The Alphabetxx</summary>
+  <summary xml:lang="zh-CN">学习字母</summary>
   <summary xml:lang="zh-TW">語言_KLetters</summary>
   <description>
     <p>KLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hungarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.</p>
