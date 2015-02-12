@@ -25,6 +25,7 @@
 #include <QCommandLineParser>
 
 #include <KLocalizedString>
+#include <Kdelibs4ConfigMigrator>
 #include <kaboutdata.h>
 #include "klettres.h"
 #include "version.h"
@@ -39,6 +40,12 @@ static const char version[] = "2.1";
 
 int main(int argc, char **argv)
 {
+    QStringList configFiles;
+    configFiles << QLatin1String("klettresrc");
+    Kdelibs4ConfigMigrator migrator(QLatin1String("klettres"));
+    migrator.setConfigFiles(configFiles);
+    migrator.migrate();
+
     KAboutData about("klettres", i18n("KLettres"), QLatin1String(KLETTRES_VERSION), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QLatin1String("http://edu.kde.org/klettres"), QLatin1String("submit@bugs.kde.org"));
     about.addAuthor( i18n("Anne-Marie Mahfouf"), QString(), "annma AT kde DOT org", "http://annma.blogspot.com", "annma");
