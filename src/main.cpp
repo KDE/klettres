@@ -22,11 +22,10 @@
 /* Please save with utf8 encoding, thanks  */
 /*****************************************************/
 #include <QApplication>
-
-#include <kaboutdata.h>
+#include <QCommandLineParser>
 
 #include <KLocalizedString>
-#include <QCommandLineParser>
+#include <kaboutdata.h>
 #include "klettres.h"
 #include "version.h"
 

@@ -27,7 +27,9 @@
 #include <QLabel>
 #include <QPainter>
 #include <QStatusBar>
+#include <QIcon>
 #include <QTextStream>
+#include <QMenuBar>
 #include <QDomDocument>
 #include <QWidget>
 #include <QStandardPaths>
@@ -36,13 +38,11 @@
 #include <KActionCollection>
 #include <KConfigDialog>
 #include <KLocalizedString>
-#include <QMenuBar>
 #include <KMessageBox>
 #include <KSelectAction>
 #include <KStandardAction>
 #include <KToolBar>
 #include <KToggleAction>
-#include <QIcon>
 
 #include <kns3/downloaddialog.h>
 //Project includes
