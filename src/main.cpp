@@ -41,9 +41,12 @@ static const char version[] = "2.1";
 int main(int argc, char **argv)
 {
     QStringList configFiles;
+    QStringList rcFiles;
     configFiles << QLatin1String("klettresrc");
+    rcFiles << QLatin1String("klettresui.rc");
     Kdelibs4ConfigMigrator migrator(QLatin1String("klettres"));
     migrator.setConfigFiles(configFiles);
+    migrator.setUiFiles(rcFiles);
     migrator.migrate();
 
     KAboutData about("klettres", i18n("KLettres"), QLatin1String(KLETTRES_VERSION), i18n(description),
