@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KLettres</name>
+  <name xml:lang="ast">KLettres</name>
   <name xml:lang="bs">KLettres</name>
   <name xml:lang="ca">KLettres</name>
   <name xml:lang="cs">KLettres</name>
@@ -28,6 +29,7 @@
   <name xml:lang="zh-CN">KLettres</name>
   <name xml:lang="zh-TW">語言_KLetters</name>
   <summary>Learn The Alphabet</summary>
+  <summary xml:lang="ast">Deprendi l'alfabetu</summary>
   <summary xml:lang="bs">Naučite abecedu</summary>
   <summary xml:lang="ca">Apreneu l'alfabet</summary>
   <summary xml:lang="cs">Výuka abecedy</summary>
