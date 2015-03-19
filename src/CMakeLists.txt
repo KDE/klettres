@@ -38,14 +38,14 @@ target_link_libraries(klettres
   ${PHONON_LIBRARY}
   Qt5::Xml)
 
-install(TARGETS klettres  ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS klettres  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 
 ########### install files ###############
 
-install( PROGRAMS org.kde.klettres.desktop  DESTINATION  ${XDG_APPS_INSTALL_DIR} )
-install( FILES klettresui.rc  DESTINATION  ${KXMLGUI_INSTALL_DIR}/klettres )
-install( FILES klettres.kcfg  DESTINATION  ${KCFG_INSTALL_DIR} )
-install( FILES klettres.knsrc  DESTINATION  ${CONFIG_INSTALL_DIR} )
+install( PROGRAMS org.kde.klettres.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
+install( FILES klettresui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/klettres )
+install( FILES klettres.kcfg  DESTINATION  ${KDE_INSTALL_KCFGDIR} )
+install( FILES klettres.knsrc  DESTINATION  ${KDE_INSTALL_CONFDIR} )
 
-ecm_install_icons( ICONS 128-apps-klettres.png  16-apps-klettres.png  22-apps-klettres.png  32-apps-klettres.png  48-apps-klettres.png  64-apps-klettres.png DESTINATION ${ICON_INSTALL_DIR}   )
+ecm_install_icons( ICONS 128-apps-klettres.png  16-apps-klettres.png  22-apps-klettres.png  32-apps-klettres.png  48-apps-klettres.png  64-apps-klettres.png DESTINATION ${KDE_INSTALL_ICONDIR}   )

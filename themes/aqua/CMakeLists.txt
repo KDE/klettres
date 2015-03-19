@@ -1,4 +1,4 @@
 
-install( FILES klettres_aqua.svg   DESTINATION  ${DATA_INSTALL_DIR}/klettres/pics/aqua )
+install( FILES klettres_aqua.svg   DESTINATION  ${KDE_INSTALL_DATADIR}/klettres/pics/aqua )
 
 

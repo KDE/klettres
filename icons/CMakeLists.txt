@@ -18,4 +18,4 @@ hi64-actions-klettres_desert.png
 hi64-actions-klettres_grownup.png
 hi64-actions-klettres_kids.png
 DESTINATION
-${DATA_INSTALL_DIR}/klettres/icons  )
+${KDE_INSTALL_DATADIR}/klettres/icons  )

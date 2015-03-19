@@ -54,7 +54,7 @@ ecm_optional_add_subdirectory( icons )
 ecm_optional_add_subdirectory( themes )
 ecm_optional_add_subdirectory( tests )
 
-install(FILES klettres.appdata.xml DESTINATION ${SHARE_INSTALL_PREFIX}/appdata/)
+install(FILES klettres.appdata.xml DESTINATION ${KDE_INSTALL_DATAROOTDIR}/appdata/)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
