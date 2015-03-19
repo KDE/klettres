@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 set(QT_MIN_VERSION "5.2.0")
 
 # we need some parts of the ECM CMake helpers
-find_package (ECM 1.3.0 REQUIRED NO_MODULE)
+find_package (ECM 1.7.0 REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(ECMOptionalAddSubdirectory)
 include(CMakePackageConfigHelpers)
@@ -15,6 +15,7 @@ include(KDEInstallDirs)
 include(KDECompilerSettings)
 include(KDECMakeSettings)
 include(ECMAddTests)
+include(ECMAddAppIcon)
 
 # Load the frameworks we need
 
