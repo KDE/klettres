@@ -40,6 +40,8 @@ static const char version[] = "2.1";
 
 int main(int argc, char **argv)
 {
+    KLocalizedString::setApplicationDomain("klettres");
+
     QStringList configFiles;
     QStringList rcFiles;
     configFiles << QLatin1String("klettresrc");
