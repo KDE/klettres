@@ -40,6 +40,7 @@ static const char version[] = "2.1";
 
 int main(int argc, char **argv)
 {
+    QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("klettres");
 
     QStringList configFiles;
@@ -70,7 +71,6 @@ int main(int argc, char **argv)
                     i18n("Timer setting widgets"), "michael.goettsche AT kdemail DOT net");
     about.addCredit(i18n("Laurent Navet"),
                     i18n("Port to KDE Frameworks 5"), "laurent DOT navet+klettres AT gmail DOT com");
-    QApplication app(argc, argv);
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
     parser.addVersionOption();
