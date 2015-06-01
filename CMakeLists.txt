@@ -22,6 +22,7 @@ include(ECMAddAppIcon)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED
   Core
   Svg
+  Network
   Test
   Widgets
 )
@@ -33,14 +34,11 @@ find_package(KF5 REQUIRED COMPONENTS
   Emoticons
   ItemModels
   I18n
-  KDELibs4Support
   NewStuff
   WidgetsAddons
   ConfigWidgets
   CoreAddons
 )
-
-include(KDE4Defaults)
 
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)

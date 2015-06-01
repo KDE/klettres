@@ -20,8 +20,6 @@ ki18n_wrap_ui(klettres_SRCS
 
 kconfig_add_kcfg_files(klettres_SRCS prefs.kcfgc )
 
-#kde4_add_app_icon(klettres_SRCS "${KDE4_ICON_DIR}/oxygen/*/apps/klettres.png")
-#kde4_add_app_icon(klettres_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/ox*-apps-klettres.png")
 file(GLOB ICONS_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*-apps-klettres.png")
 ecm_add_app_icon(klettres_SRCS ICONS ${ICONS_SRCS})
 
@@ -33,7 +31,6 @@ target_link_libraries(klettres
   KF5::NewStuff
   KF5::I18n
   KF5::ItemModels
-  KF5::KDELibs4Support
   Qt5::Svg
   ${PHONON_LIBRARY}
   Qt5::Xml)
