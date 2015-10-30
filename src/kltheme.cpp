@@ -41,7 +41,7 @@ public:
 
     virtual QString name() const
     {
-        return "kids";
+        return QStringLiteral("kids");
     }
 
     virtual QString uiName() const
@@ -51,7 +51,7 @@ public:
 
     virtual QString svgFileName() const
     {
-        return "klettres_kids.svg";
+        return QStringLiteral("klettres_kids.svg");
     }
 
     virtual QColor letterColor() const
@@ -91,7 +91,7 @@ public:
 
     virtual QString name() const
     {
-        return "desert";
+        return QStringLiteral("desert");
     }
 
     virtual QString uiName() const
@@ -101,7 +101,7 @@ public:
 
     virtual QString svgFileName() const
     {
-        return "klettres_desert.svg";
+        return QStringLiteral("klettres_desert.svg");
     }
 
     virtual QColor letterColor() const
@@ -141,7 +141,7 @@ public:
 
     virtual QString name() const
     {
-        return "savannah";
+        return QStringLiteral("savannah");
     }
 
     virtual QString uiName() const
@@ -151,7 +151,7 @@ public:
 
     virtual QString svgFileName() const
     {
-        return "klettres_savannah.svg";
+        return QStringLiteral("klettres_savannah.svg");
     }
 
     virtual QColor letterColor() const
@@ -192,7 +192,7 @@ public:
 
     virtual QString name() const
     {
-        return "aqua";
+        return QStringLiteral("aqua");
     }
 
     virtual QString uiName() const
@@ -202,7 +202,7 @@ public:
 
     virtual QString svgFileName() const
     {
-        return "klettres_aqua.svg";
+        return QStringLiteral("klettres_aqua.svg");
     }
 
     virtual QColor letterColor() const

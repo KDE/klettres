@@ -117,11 +117,11 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     soundNameElement;
     QDomAttr nameAttribute, fileAttribute;
 
-    languagesList = layoutDocument.elementsByTagName("language");
+    languagesList = layoutDocument.elementsByTagName(QStringLiteral("language"));
     QDomAttr codeAttribute;
     //check if the sound files match current language
     languageElement = (const QDomElement &) languagesList.item(0).toElement();
-    codeAttribute = languageElement.attributeNode("code");
+    codeAttribute = languageElement.attributeNode(QStringLiteral("code"));
 
     if (currentLanguage != codeAttribute.value()) {
         qCDebug(KLETTRES_LOG) << "Fail reading language !!! ";
@@ -130,8 +130,8 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
         qCDebug(KLETTRES_LOG) << "current language " << currentLanguage;
     }
     //check here if alphabet and syllables both exist
-    alphabetList = languageElement.elementsByTagName("alphabet");
-    syllablesList = languageElement.elementsByTagName("syllables");
+    alphabetList = languageElement.elementsByTagName(QStringLiteral("alphabet"));
+    syllablesList = languageElement.elementsByTagName(QStringLiteral("syllables"));
 
     //load the sounds for level 1 and 2 (alphabet)
     if ((Prefs::level() == 1) || (Prefs::level() == 2))  {
@@ -139,7 +139,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
             return false;
         }
         alphabetElement = (const QDomElement &) alphabetList.item(0).toElement();
-        soundNamesList = alphabetElement.elementsByTagName("sound");
+        soundNamesList = alphabetElement.elementsByTagName(QStringLiteral("sound"));
     }
 
     //load the sounds for level 3 and 4 (syllables)
@@ -152,7 +152,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
 
         syllableElement = (const QDomElement &) syllablesList.item(0).toElement();
 
-        soundNamesList = syllableElement.elementsByTagName("sound");
+        soundNamesList = syllableElement.elementsByTagName(QStringLiteral("sound"));
     }
     //Counts the number of sounds
     sounds = soundNamesList.count();
@@ -165,10 +165,10 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
 
     for (uint sound = 0; sound < sounds; sound++)  {
         soundNameElement = (const QDomElement &) soundNamesList.item(sound).toElement();
-        nameAttribute = soundNameElement.attributeNode("name");
+        nameAttribute = soundNameElement.attributeNode(QStringLiteral("name"));
         //namesList helds the names of the letter or syllable to display
         namesList.append(nameAttribute.value());
-        fileAttribute = soundNameElement.attributeNode("file");
+        fileAttribute = soundNameElement.attributeNode(QStringLiteral("file"));
         //filesList helds the names of the sound files (i.e the location of the sounds like fr/alpha/a-0.mp3)
         filesList.append(fileAttribute.value());
     }

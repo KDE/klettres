@@ -92,7 +92,7 @@ void KLettresView::setTheme(KLTheme *theme)
         return;
 
     QString svgpath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-					       QString("klettres/pics/%1/%2").arg(theme->name(), theme->svgFileName()));
+					       QStringLiteral("klettres/pics/%1/%2").arg(theme->name(), theme->svgFileName()));
 
     // we don't allow themes with no svg installed
     if (!QFile::exists(svgpath)) {
@@ -106,7 +106,7 @@ void KLettresView::setTheme(KLTheme *theme)
     m_theme->backgroundInputColor().getRgb(&r1, &g1, &b1);
     int r2, g2, b2;
     m_theme->letterInputColor().getRgb(&r2, &g2, &b2);
-    m_letterEdit->setStyleSheet(QString("border-style: solid; background-color: rgb(%1, %2, %3); color: rgb(%4, %5, %6) ; border-color: rgb(%4, %5, %6); border-bottom-right-radius:10; border-radius: 15px; border-width: 3px").arg(r1).arg(g1).arg(b1).arg(r2).arg(g2).arg(b2));
+    m_letterEdit->setStyleSheet(QStringLiteral("border-style: solid; background-color: rgb(%1, %2, %3); color: rgb(%4, %5, %6) ; border-color: rgb(%4, %5, %6); border-bottom-right-radius:10; border-radius: 15px; border-width: 3px").arg(r1).arg(g1).arg(b1).arg(r2).arg(g2).arg(b2));
 
     m_renderer->load(svgpath);
     m_backgroundCache = QPixmap();
@@ -190,7 +190,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
         m_letterEdit->selectAll();
         m_letterEdit->cut();
         m_letterEdit->setText(m_upperLetter);
-        QTimer::singleShot(m_timer*100, this, SLOT(slotTimerDone()));
+        QTimer::singleShot(m_timer*100, this, &KLettresView::slotTimerDone);
     }  else {
         qCDebug(KLETTRES_LOG) << "cursor " << m_cursorPos << endl;
         m_letterEdit->backspace();

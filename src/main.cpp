@@ -45,32 +45,32 @@ int main(int argc, char **argv)
 
     QStringList configFiles;
     QStringList rcFiles;
-    configFiles << QLatin1String("klettresrc");
-    rcFiles << QLatin1String("klettresui.rc");
-    Kdelibs4ConfigMigrator migrator(QLatin1String("klettres"));
+    configFiles << QStringLiteral("klettresrc");
+    rcFiles << QStringLiteral("klettresui.rc");
+    Kdelibs4ConfigMigrator migrator(QStringLiteral("klettres"));
     migrator.setConfigFiles(configFiles);
     migrator.setUiFiles(rcFiles);
     migrator.migrate();
 
-    KAboutData about("klettres", i18n("KLettres"), QLatin1String(KLETTRES_VERSION), i18n(description),
-                     KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QLatin1String("http://edu.kde.org/klettres"), QLatin1String("submit@bugs.kde.org"));
-    about.addAuthor( i18n("Anne-Marie Mahfouf"), QString(), "annma AT kde DOT org", "http://annma.blogspot.com", "annma");
+    KAboutData about(QStringLiteral("klettres"), i18n("KLettres"), QStringLiteral(KLETTRES_VERSION), i18n(description),
+                     KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QStringLiteral("http://edu.kde.org/klettres"), QStringLiteral("submit@bugs.kde.org"));
+    about.addAuthor( i18n("Anne-Marie Mahfouf"), QString(), QStringLiteral("annma AT kde DOT org"), QStringLiteral("http://annma.blogspot.com"), QStringLiteral("annma"));
     about.addCredit(i18n("Marc Cheng"),
-                    i18n("Kids and grown-up oxygen icons"), "bdgraue AT web DOT de");
+                    i18n("Kids and grown-up oxygen icons"), QStringLiteral("bdgraue AT web DOT de"));
     about.addCredit(i18n("Danny Allen"),
-                    i18n("SVG background pictures"), "dannya40uk AT yahoo DOT co DOT uk");
+                    i18n("SVG background pictures"), QStringLiteral("dannya40uk AT yahoo DOT co DOT uk"));
     about.addCredit(i18n("Robert Gogolok"),
-                    i18n("Support and coding guidance"), "mail AT robert-gogolok DOT de");
+                    i18n("Support and coding guidance"), QStringLiteral("mail AT robert-gogolok DOT de"));
     about.addCredit(i18n("Peter Hedlund"),
-                    i18n("Code for generating special characters' icons"), "peter DOT hedlund AT kdemail DOT net");
+                    i18n("Code for generating special characters' icons"), QStringLiteral("peter DOT hedlund AT kdemail DOT net"));
     about.addCredit(i18n("Waldo Bastian"),
-                    i18n("Port to KConfig XT, coding help"), "bastian AT kde DOT org");
+                    i18n("Port to KConfig XT, coding help"), QStringLiteral("bastian AT kde DOT org"));
     about.addCredit(i18n("Pino Toscano"),
-                    i18n("Code cleaning, Theme class"), "toscano DOT pino AT tiscali DOT it");
+                    i18n("Code cleaning, Theme class"), QStringLiteral("toscano DOT pino AT tiscali DOT it"));
     about.addCredit(i18n("Michael Goettsche"),
-                    i18n("Timer setting widgets"), "michael.goettsche AT kdemail DOT net");
+                    i18n("Timer setting widgets"), QStringLiteral("michael.goettsche AT kdemail DOT net"));
     about.addCredit(i18n("Laurent Navet"),
-                    i18n("Port to KDE Frameworks 5"), "laurent DOT navet+klettres AT gmail DOT com");
+                    i18n("Port to KDE Frameworks 5"), QStringLiteral("laurent DOT navet+klettres AT gmail DOT com"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
     parser.addVersionOption();
@@ -79,9 +79,9 @@ int main(int argc, char **argv)
     parser.process(app);
     about.processCommandLine(&parser);
 
-    app.setApplicationName("klettres");
+    app.setApplicationName(QStringLiteral("klettres"));
     app.setApplicationVersion(version);
-    app.setOrganizationDomain("kde.org");
+    app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setApplicationDisplayName(i18n("Klettres"));
 
     // see if we are starting with session management

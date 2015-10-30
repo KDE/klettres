@@ -68,7 +68,7 @@ const int ID_MENUBARB  = 102;
 KLettres::KLettres()
         : KXmlGuiWindow( 0)
 {
-    setObjectName( QLatin1String("KLettres") );
+    setObjectName( QStringLiteral("KLettres") );
     mNewStuff = 0;
     m_view = new KLettresView(this);
     setMinimumSize( QSize( 800, 600 ) );
@@ -124,23 +124,23 @@ bool KLettres::loadLayout(QDomDocument &layoutDocument)
 
 void KLettres::setupActions()
 {
-    QAction *m_newAction = actionCollection()->addAction("play_new");
+    QAction *m_newAction = actionCollection()->addAction(QStringLiteral("play_new"));
     m_newAction->setText(i18n("New Sound"));
     actionCollection()->setDefaultShortcut(m_newAction,QKeySequence(Qt::CTRL+Qt::Key_N));
-    m_newAction->setIcon(QIcon::fromTheme("document-new")); // ### better icon for this?
+    m_newAction->setIcon(QIcon::fromTheme(QStringLiteral("document-new"))); // ### better icon for this?
     connect(m_newAction, &QAction::triggered, m_view, &KLettresView::game);
     m_newAction->setToolTip(i18n("Play a new sound"));
     m_newAction->setWhatsThis(i18n("You can play a new sound by clicking this button or using the File menu, New Sound."));
 
-    QAction *m_stuffAction = actionCollection()->addAction("downloadnewstuff");
+    QAction *m_stuffAction = actionCollection()->addAction(QStringLiteral("downloadnewstuff"));
     m_stuffAction->setText(i18n("Get Alphabet in New Language..."));
-    m_stuffAction->setIcon(QIcon::fromTheme("get-hot-new-stuff"));
+    m_stuffAction->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
     connect(m_stuffAction, &QAction::triggered, this, &KLettres::slotDownloadNewStuff);
 
-    QAction *m_playAgainAction = actionCollection()->addAction("play_again");
+    QAction *m_playAgainAction = actionCollection()->addAction(QStringLiteral("play_again"));
     m_playAgainAction->setText(i18n("Replay Sound"));
     actionCollection()->setDefaultShortcut(m_playAgainAction,QKeySequence(Qt::Key_F5));
-    m_playAgainAction->setIcon(QIcon::fromTheme("media-playback-start"));
+    m_playAgainAction->setIcon(QIcon::fromTheme(QStringLiteral("media-playback-start")));
     m_playAgainAction->setToolTip(i18n("Play the same sound again"));
     connect(m_playAgainAction, &QAction::triggered, m_view, &KLettresView::slotPlayAgain);
     m_playAgainAction->setWhatsThis(i18n("You can replay the same sound again by clicking this button or using the File menu, Replay Sound."));
@@ -148,12 +148,12 @@ void KLettres::setupActions()
 
     m_menubarAction = KStandardAction::showMenubar(this, SLOT(slotMenubar()), actionCollection());
 
-    m_levelAction = actionCollection()->add<KSelectAction>("levels");
+    m_levelAction = actionCollection()->add<KSelectAction>(QStringLiteral("levels"));
     m_levelAction->setText(i18nc("@label:listbox which difficulty level to use", "L&evel"));
     m_levelAction->setToolTip(i18n("Select the level"));
     m_levelAction->setWhatsThis(i18n("You can select the level: level 1 displays a letter and you hear it; level 2 does not display the letter, you only hear it; level 3 displays a syllable and you hear it; level 4 does not display the syllable, you only hear it."));
 
-    m_languageAction = actionCollection()->add<KSelectAction>("languages");
+    m_languageAction = actionCollection()->add<KSelectAction>(QStringLiteral("languages"));
     m_languageAction->setText(i18nc("@label:listbox", "&Language"));
     m_languageAction->setItems(m_languageNames);
 
@@ -164,24 +164,24 @@ void KLettres::setupActions()
     m_levelAction->setItems(m_levelsNames);
     m_levelAction->setCurrentItem(Prefs::level()-1);
 
-    m_themeAction = actionCollection()->add<KSelectAction>("looks");
+    m_themeAction = actionCollection()->add<KSelectAction>(QStringLiteral("looks"));
     m_themeAction->setText(i18n("Themes"));
     m_themeAction->setItems(KLThemeFactory::instance()->themeList());
     m_themeAction->setCurrentItem(Prefs::theme());
     m_themeAction->setToolTip(i18n("Select the theme"));
     m_themeAction->setWhatsThis(i18n("Here you can change the theme for KLettres. A theme consists in the background picture and the font color for the letter displayed."));
 
-    m_kidAction = actionCollection()->add<KToggleAction>("mode_kid");
+    m_kidAction = actionCollection()->add<KToggleAction>(QStringLiteral("mode_kid"));
     m_kidAction->setText(i18n("Mode Kid"));
     actionCollection()->setDefaultShortcut(m_kidAction,QKeySequence(Qt::CTRL+Qt::Key_K));
-    m_kidAction->setIcon(QIcon::fromTheme("klettres_kids"));
+    m_kidAction->setIcon(QIcon::fromTheme(QStringLiteral("klettres_kids")));
     connect(m_kidAction, &KToggleAction::triggered, this, &KLettres::slotModeKid);
     m_kidAction->setWhatsThis(i18n("If you are in the Grown-up mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
 
-    m_grownupAction = actionCollection()->add<KToggleAction>("mode_grownup");
+    m_grownupAction = actionCollection()->add<KToggleAction>(QStringLiteral("mode_grownup"));
     m_grownupAction->setText(i18n("Mode Grown-up"));
     actionCollection()->setDefaultShortcut(m_grownupAction,QKeySequence(Qt::CTRL+Qt::Key_G));
-    m_grownupAction->setIcon(QIcon::fromTheme("klettres_grownup"));
+    m_grownupAction->setIcon(QIcon::fromTheme(QStringLiteral("klettres_grownup")));
     connect(m_grownupAction, &KToggleAction::triggered, this, &KLettres::slotModeGrownup);
     m_grownupAction->setWhatsThis(i18n("The Grownup mode is the normal mode where you can see the menubar."));
 
@@ -208,22 +208,22 @@ void KLettres::setupStatusbar()
 void KLettres::setupToolbars()
 {
     // Toolbar for special characters
-    specialCharToolbar = toolBar("specialCharToolbar");
+    specialCharToolbar = toolBar(QStringLiteral("specialCharToolbar"));
     addToolBar ( Qt::BottomToolBarArea, specialCharToolbar);
 }
 
 void KLettres::optionsPreferences()
 {
-    if(KConfigDialog::showDialog("settings")) {
+    if(KConfigDialog::showDialog(QStringLiteral("settings"))) {
         return;
     }
 
-    KConfigDialog *dialog = new KConfigDialog(this, "settings", Prefs::self());
-    dialog->addPage(new fontsdlg(0), i18n("Font Settings"), "preferences-desktop-font");
+    KConfigDialog *dialog = new KConfigDialog(this, QStringLiteral("settings"), Prefs::self());
+    dialog->addPage(new fontsdlg(0), i18n("Font Settings"), QStringLiteral("preferences-desktop-font"));
     //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
     //fonts is the icon
     Timer *m_timer = new Timer();
-    dialog->addPage(m_timer, i18n("Timer"), "chronometer");
+    dialog->addPage(m_timer, i18n("Timer"), QStringLiteral("chronometer"));
     connect(dialog, &KConfigDialog::settingsChanged, this, &KLettres::slotUpdateSettings);
     dialog->setAttribute( Qt::WA_DeleteOnClose );
     // dialog->setHelp(QString(), "klettres");
@@ -233,7 +233,7 @@ void KLettres::optionsPreferences()
 void KLettres::loadSettings()
 {
     if (LangUtils::getLanguages().indexOf(Prefs::language()) < 0)  {
-        Prefs::setLanguage("en");
+        Prefs::setLanguage(QStringLiteral("en"));
     }
     QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[LangUtils::getLanguages().indexOf(Prefs::language())];
     m_languageAction->setCurrentItem(LangUtils::getLanguages().indexOf(Prefs::language()));
@@ -257,7 +257,7 @@ void KLettres::loadSettings()
 
 void KLettres::slotDownloadNewStuff()
 {
-    QPointer<KNS3::DownloadDialog> dialog(new KNS3::DownloadDialog("klettres.knsrc", this));
+    QPointer<KNS3::DownloadDialog> dialog(new KNS3::DownloadDialog(QStringLiteral("klettres.knsrc"), this));
     if ( dialog->exec() == QDialog::Accepted ) {
         // do nothing
     }
@@ -344,7 +344,7 @@ void KLettres::slotModeGrownup()
     QPalette pal;
     pal.setColor( QPalette::Background, Qt::white);
     statusBar()->setPalette( pal );
-    QFont f_lab( "Serif" , 10);  //font for statusBar
+    QFont f_lab( QStringLiteral("Serif") , 10);  //font for statusBar
     m_levLabel->setFont(f_lab);
     m_langLabel->setFont(f_lab);
     m_menubarAction->setChecked(true);
@@ -363,7 +363,7 @@ void KLettres::slotModeKid()
     QPalette pal;
     pal.setColor( QPalette::Background, Qt::white);
     statusBar()->setPalette( pal );
-    QFont f_lab( "Serif" , 12);  //font for statusBar
+    QFont f_lab( QStringLiteral("Serif") , 12);  //font for statusBar
     f_lab.setBold(true);
     m_levLabel->setFont(f_lab);
     m_langLabel->setFont(f_lab);
@@ -386,7 +386,7 @@ void KLettres::loadLangToolBar()
 
     if (LangUtils::hasSpecialChars(lang)) {//Dutch, English, French and Italian have no special characters
         allData.clear();
-        QString myString=QString("klettres/%1.txt").arg(lang);
+        QString myString=QStringLiteral("klettres/%1.txt").arg(lang);
         QFile myFile;
         myFile.setFileName(QStandardPaths::locate(QStandardPaths::GenericDataLocation, myString));
 
@@ -457,7 +457,7 @@ QIcon KLettres::charIcon(const QChar & c)
 
     ///A font to draw the character with
     QFont font;
-    font.setFamily( "Arial" );
+    font.setFamily( QStringLiteral("Arial") );
     font.setPixelSize(120);
     font.setWeight(QFont::Normal);
 

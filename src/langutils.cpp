@@ -28,24 +28,24 @@
 
 bool LangUtils::hasSpecialChars(const QString& lang)
 {
-    if (lang== "cs"
-        || lang== "da"
-        || lang== "sk"
-        || lang== "es"
-        || lang== "de"
-        || lang== "hu"
-        || lang== "nds"
-        || lang== "lt")
+    if (lang== QLatin1String("cs")
+        || lang== QLatin1String("da")
+        || lang== QLatin1String("sk")
+        || lang== QLatin1String("es")
+        || lang== QLatin1String("de")
+        || lang== QLatin1String("hu")
+        || lang== QLatin1String("nds")
+        || lang== QLatin1String("lt"))
         return true;
     return false;
 }
 
 bool LangUtils::isIndian(const QString& lang)
 {
-    if (lang == "kn"
-        || lang == "ml"
-        || lang == "te"
-        || lang == "pa")
+    if (lang == QLatin1String("kn")
+        || lang == QLatin1String("ml")
+        || lang == QLatin1String("te")
+        || lang == QLatin1String("pa"))
         return true;
     return false;
 }
@@ -56,7 +56,7 @@ QStringList LangUtils::getLanguages()
     m_languages.clear();
     //the program scans in klettres/data/ to see what languages data is found
     const QStringList mdirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-							"klettres/",
+							QStringLiteral("klettres/"),
 							QStandardPaths::LocateDirectory);
     //qDebug() << mdirs;
 
@@ -64,12 +64,12 @@ QStringList LangUtils::getLanguages()
     for (QStringList::const_iterator it =mdirs.constBegin(); it !=mdirs.constEnd(); ++it ) {
         QDir dir(*it);
         m_languages += dir.entryList(QDir::Dirs, QDir::Name);
-        m_languages.removeAll(".");
-        m_languages.removeAll("..");
+        m_languages.removeAll(QStringLiteral("."));
+        m_languages.removeAll(QStringLiteral(".."));
     }
-    m_languages.removeAll("pics");
-    m_languages.removeAll("data");
-    m_languages.removeAll("icons");
+    m_languages.removeAll(QStringLiteral("pics"));
+    m_languages.removeAll(QStringLiteral("data"));
+    m_languages.removeAll(QStringLiteral("icons"));
     m_languages.sort();
 
     //find duplicated entries in KDEDIR and KDEHOME
@@ -96,11 +96,11 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
     QStringList languagesNames;
 
     foreach(const QString &language, languagesList) {
-        if (language == "hi-ro") {
+        if (language == QLatin1String("hi-ro")) {
             languagesNames.append(i18n("Romanized Hindi"));
-        } else if (language == "lug_UG") {
+        } else if (language == QLatin1String("lug_UG")) {
             languagesNames.append(i18n("Luganda"));
-        } else if (language == "ep") {
+        } else if (language == QLatin1String("ep")) {
             languagesNames.append(i18n("English Phonics"));
         } else {
             QLocale locale(language);
