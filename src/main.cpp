@@ -41,6 +41,8 @@ static const char version[] = "2.1";
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     KLocalizedString::setApplicationDomain("klettres");
 
     QStringList configFiles;

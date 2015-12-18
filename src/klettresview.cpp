@@ -116,6 +116,7 @@ void KLettresView::setTheme(KLTheme *theme)
 void KLettresView::paintEvent( QPaintEvent * e )
 {
     QPainter p(this);
+    p.setRenderHint(QPainter::SmoothPixmapTransform);
     paintBackground(p, e->rect());
     paintLetter(p, e->rect());
     m_letterEdit->setFont(Prefs::font());
