@@ -30,6 +30,7 @@ find_package(Phonon4Qt5)
 
 find_package(KF5 REQUIRED COMPONENTS
   Completion
+  Crash
   DocTools
   Emoticons
   ItemModels

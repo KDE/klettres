@@ -26,6 +26,7 @@
 
 #include <KLocalizedString>
 #include <Kdelibs4ConfigMigrator>
+#include <KCrash>
 #include <kaboutdata.h>
 #include "klettres.h"
 #include "version.h"
@@ -86,6 +87,8 @@ int main(int argc, char **argv)
     app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setApplicationDisplayName(i18n("Klettres"));
 
+    KCrash::initialize();
+
     // see if we are starting with session management
     if (app.isSessionRestored()) {
         RESTORE(KLettres)
@@ -101,7 +104,6 @@ int main(int argc, char **argv)
                 widget->show();
             }
         }
-        
     }
 
     return app.exec();
