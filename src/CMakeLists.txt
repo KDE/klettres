@@ -1,8 +1,6 @@
 
 ########### next target ###############
 
-add_definitions(-DTRANSLATION_DOMAIN=\"kletters\")
-
 set(klettres_SRCS
    klettres.cpp
    main.cpp
