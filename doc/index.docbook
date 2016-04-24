@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
   <!ENTITY kappname "&klettres;"><!-- replace klettres here -->
-  <!ENTITY package "kdeedu">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
@@ -28,8 +27,8 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2013-05-31</date>
-<releaseinfo>2.3 (&kde; 4.11)</releaseinfo>
+<date>2016-04-20</date>
+<releaseinfo>2.3 (Applications 16.04)</releaseinfo>
 
 <abstract>
 <para>
@@ -200,7 +199,7 @@ is kept until you change.</para>
 </para>
 <para>Here is a screenshot of Level 2 with the <emphasis>kid</emphasis> mode, <emphasis>Kid</emphasis> theme and Danish language.</para>
 
-<para>Clicking in the <guilabel>Level</guilabel> combo-box and choosing <guilabel>Level
+<para>Clicking in the level combo-box and choosing <guilabel>Level
 2</guilabel> or using the <guimenu>Level</guimenu> menu brings you to level 2. In that level, the user only
 hears the sound of the letter and has to type in the letter. If he
 is wrong, the letter appears to help him. </para>
@@ -249,7 +248,7 @@ three, it depends of the language.</para>
 </para>
 
 <para>The sounds appear in random order. </para> <para>Clicking in the
-<guilabel>Level</guilabel> combo-box or using the <guimenu>Level</guimenu> menu in the menubar
+level combo-box or using the <guimenu>Level</guimenu> menu in the menubar
 and choosing <guilabel>Level 4</guilabel> brings you
 to level 4. In that level, the user only hears the sound of the
 syllable and has to type in the letters. This level is quite difficult
@@ -480,27 +479,8 @@ You can also choose here the size you like the best. This size will be kept in c
 <term><menuchoice>
 <guimenu>Look</guimenu>
 <guisubmenu>Themes</guisubmenu>
-<guimenuitem>Kid</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Switch</action> to the Kid theme</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Look</guimenu>
-<guisubmenu>Themes</guisubmenu>
-<guimenuitem>Desert</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Switch</action> to the Desert theme</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><menuchoice>
-<guimenu>Look</guimenu>
-<guisubmenu>Themes</guisubmenu>
-<guimenuitem>Savannah</guimenuitem>
-</menuchoice></term>
-<listitem><para><action>Switch</action> to the Savannah theme</para></listitem>
+<listitem><para><action>Switch</action> to the Kid, Desert,Savannah or Aqua theme</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -599,24 +579,12 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>I do not see  some letters on the icons on the special <guimenuitem>Characters</guimenuitem> toolbar. I see rectangles instead for some languages.</para>
+<para>I do not see  some letters on the icons on the special <guimenuitem>Special Characters</guimenuitem> toolbar. I see rectangles instead or the icons are too small for some languages.</para>
 </question>
 <answer>
 <para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
 <para>If you have &Windows; on your machine, you can use the TTF fonts from
-&Windows; (Arial is in those) via &systemsettings; -&gt; <guilabel>System 
-Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> and add the &Windows; Font
-folder.</para></answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para>The letters on the icons on the <guimenuitem>Special Characters</guimenuitem> toolbar are too small for some languages.</para>
-</question>
-<answer>
-<para>&klettres; in Czech and Slovak needs Arial and if you do not have this font installed, please ask your distribution support how to install it.</para> 
-<para>If you have &Windows; on your machine, you can use the TTF fonts from
-&Windows; (Arial is in those) via &systemsettings; -&gt; <guilabel>System 
-Administration</guilabel> -&gt; <guilabel>Font Installer</guilabel> and add the &Windows; Font
+&Windows; (Arial is in those) via <guilabel>Font Management</guilabel> in the <guilabel>Appearance</guilabel> category of the &systemsettings; and add the &Windows; Font
 folder.</para></answer>
 </qandaentry>
 <qandaentry>
