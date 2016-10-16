@@ -22,6 +22,7 @@
   <name xml:lang="ko">KLettres</name>
   <name xml:lang="nds">KLettres</name>
   <name xml:lang="nl">KLettres</name>
+  <name xml:lang="nn">KBokstavar</name>
   <name xml:lang="pl">KLettres</name>
   <name xml:lang="pt">KLettres</name>
   <name xml:lang="pt-BR">KLettres</name>
@@ -51,6 +52,7 @@
   <summary xml:lang="ko">알파벳 익히기</summary>
   <summary xml:lang="nds">Dat Alfabeet lehren</summary>
   <summary xml:lang="nl">Leer het alfabet</summary>
+  <summary xml:lang="nn">Lær alfabetet</summary>
   <summary xml:lang="pl">Nauka alfabetu</summary>
   <summary xml:lang="pt">Aprender o Alfabeto</summary>
   <summary xml:lang="pt-BR">Aprenda o alfabeto</summary>
