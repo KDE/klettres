@@ -29,7 +29,6 @@ target_link_libraries(klettres
   KF5::Emoticons
   KF5::NewStuff
   KF5::I18n
-  KF5::ItemModels
   Qt5::Svg
   ${PHONON_LIBRARY}
   Qt5::Xml)
