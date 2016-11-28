@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-  <!ENTITY kappname "&klettres;"><!-- replace klettres here -->
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
@@ -541,10 +540,10 @@ If you would like to add sounds in your own language, it is very easy to do so. 
 &lt;/klettres&gt;</programlisting>
 <para>Replace "cs" with the two letter code and "Czech" with the name of your language. Write the sound names with the special characters of your language in uppercase in utf8.</para>
 
-<para>Additionally you can tell me about special letters in your language so I can easily generate the special <guimenuitem>Special Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in uppercase on one line.
+<para>Additionally you can tell about special letters in your language so we can easily generate the special <guimenuitem>Special Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in uppercase on one line.
 And save both text files with <quote>utf8</quote> encoding (upper right dropbox in &kate; allows that)</para>
 
-<para>The sounds should be in ogg format and long enough for the audio player to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to me.   
+<para>The sounds should be in ogg format and long enough for the audio player to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to the mailinglist <email>kde-edu@kde.org</email>.
 </para>
 
 <para>
@@ -554,9 +553,6 @@ See the <ulink url="http://edu.kde.org/klettres/add_language.php">&klettres; web
 
 <chapter id="faq">
 <title>Questions and Answers</title>
-
-&reporting.bugs;
-&updating.documentation;
 
 <qandaset id="faqlist">
 <qandaentry>
@@ -592,12 +588,12 @@ folder.</para></answer>
 <para>Why are there only twenty five languages?</para>
 </question>
 <answer>
-<para>In order for me to add a new language, I need the sounds
+<para>In order to add a new language, we need the sounds
 for the alphabet and some basic syllables. Someone speaking natively
 the new language must record these sounds in ogg format. For levels 3
 and 4, the syllables must be chosen by a teacher or someone who knows how children learn: these must be the
 syllables you have to learn just after the alphabet in order to learn
-well the basics of this language. Please send me a mail if you are
+well the basics of this language. Please send a mail to <email>kde-edu@kde.org</email> if you are
 able to do that. See <ulink url="http://edu.kde.org/klettres/add_language.php">the &klettres; website</ulink> for detailed instructions on how to add a new language.</para> </answer>
 </qandaentry>
 </qandaset>
@@ -678,15 +674,6 @@ Documentation copyright 2001-2006
 &underGPL;        	 <!-- GPL License -->
 </chapter>
 
-<!-- <appendix id="installation">
-<title>Installation</title>
-
-&install.intro.documentation;
-
-&install.compile.documentation;
-
-</appendix>
--->
 &documentation.index;
 </book>
 <!--
