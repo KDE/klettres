@@ -69,7 +69,7 @@ public:
 protected:
 
     ///If the user hits backpace
-    void keyReleaseEvent(QKeyEvent * e);
+    void keyReleaseEvent(QKeyEvent * e) Q_DECL_OVERRIDE;
     ///Cursor position in the line edit
     int m_cursorPos;
     ///Random number that decides on the letter/syllable and sound
@@ -83,7 +83,7 @@ protected:
     ///Current letter entered uppercase i.e. m_inputLetter.upper()
     QString m_upperLetter;
     ///Paint the letter/syllable in levels 1 and 3 and the background
-    void paintEvent( QPaintEvent * );
+    void paintEvent( QPaintEvent * ) Q_DECL_OVERRIDE;
     ///Paint the background picture
     void paintBackground(QPainter &p, const QRect& rect);    
     ///Paint the letter/syllable in levels 1 and 3 

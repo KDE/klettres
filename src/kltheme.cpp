@@ -39,42 +39,42 @@ public:
     {
     }
 
-    virtual QString name() const
+    QString name() const Q_DECL_OVERRIDE
     {
         return QStringLiteral("kids");
     }
 
-    virtual QString uiName() const
+    QString uiName() const Q_DECL_OVERRIDE
     {
         return i18nc("@item:inlistbox", "Kid");
     }
 
-    virtual QString svgFileName() const
+    QString svgFileName() const Q_DECL_OVERRIDE
     {
         return QStringLiteral("klettres_kids.svg");
     }
 
-    virtual QColor letterColor() const
+    QColor letterColor() const Q_DECL_OVERRIDE
     {
         return QColor(215, 215, 215); 
     }
 
-    virtual QColor backgroundInputColor() const
+    QColor backgroundInputColor() const Q_DECL_OVERRIDE
     {
         return QColor(187, 76, 58); 
     }
 
-    virtual QColor letterInputColor() const
+    QColor letterInputColor() const Q_DECL_OVERRIDE
     {
         return QColor(215, 215, 215); 
     }
 
-    virtual QRect wordRect(const QSize& windowsize) const
+    QRect wordRect(const QSize& windowsize) const Q_DECL_OVERRIDE
     {
         return QRect(windowsize.width()*200/800, windowsize.height()*200/600, 250, 160);
     }
 
-    virtual QRect inputRect(const QSize& windowsize) const
+    QRect inputRect(const QSize& windowsize) const Q_DECL_OVERRIDE
     {
         return QRect(windowsize.width()*188/800, windowsize.height()*468/600, 25, 90);
     }
@@ -89,42 +89,42 @@ public:
     {
     }
 
-    virtual QString name() const
+    QString name() const Q_DECL_OVERRIDE
     {
         return QStringLiteral("desert");
     }
 
-    virtual QString uiName() const
+    QString uiName() const Q_DECL_OVERRIDE
     {
         return i18nc("@item:inlistbox desert theme for the interface", "Desert");
     }
 
-    virtual QString svgFileName() const
+    QString svgFileName() const Q_DECL_OVERRIDE
     {
         return QStringLiteral("klettres_desert.svg");
     }
 
-    virtual QColor letterColor() const
+    QColor letterColor() const Q_DECL_OVERRIDE
     {
         return QColor(115, 50, 95); 
     }
 
-    virtual QColor backgroundInputColor() const
+    QColor backgroundInputColor() const Q_DECL_OVERRIDE
     {
         return QColor(202, 217, 84); 
     }
 
-    virtual QColor letterInputColor() const
+    QColor letterInputColor() const Q_DECL_OVERRIDE
     {
         return QColor(141, 80, 17); 
     }
 
-    virtual QRect wordRect(const QSize& windowsize) const
+    QRect wordRect(const QSize& windowsize) const Q_DECL_OVERRIDE
     {
 	return QRect(windowsize.width()*230/800, windowsize.height()*140/600, 250, 160);
     }
 
-    virtual QRect inputRect(const QSize& windowsize) const
+    QRect inputRect(const QSize& windowsize) const Q_DECL_OVERRIDE
     {
         return QRect(windowsize.width()*380/800, windowsize.height()*480/600, 250, 160);
     }
@@ -139,42 +139,42 @@ public:
     {
     }
 
-    virtual QString name() const
+    QString name() const Q_DECL_OVERRIDE
     {
         return QStringLiteral("savannah");
     }
 
-    virtual QString uiName() const
+    QString uiName() const Q_DECL_OVERRIDE
     {
         return i18nc("@item:inlistbox", "Savannah");
     }
 
-    virtual QString svgFileName() const
+    QString svgFileName() const Q_DECL_OVERRIDE
     {
         return QStringLiteral("klettres_savannah.svg");
     }
 
-    virtual QColor letterColor() const
+    QColor letterColor() const Q_DECL_OVERRIDE
     {
         return QColor(215, 215, 215); 
     }
 
-    virtual QColor backgroundInputColor() const
+    QColor backgroundInputColor() const Q_DECL_OVERRIDE
     {
         return QColor(196, 189, 94); 
     }
 
-    virtual QColor letterInputColor() const
+    QColor letterInputColor() const Q_DECL_OVERRIDE
     {
         return QColor(141, 80, 17); 
     }
 
-    virtual QRect wordRect(const QSize& windowsize) const
+    QRect wordRect(const QSize& windowsize) const Q_DECL_OVERRIDE
     {
         return QRect(windowsize.width()*230/800, windowsize.height()*80/600, 250, 160);
     }
 
-    virtual QRect inputRect(const QSize& windowsize) const
+    QRect inputRect(const QSize& windowsize) const Q_DECL_OVERRIDE
     {
         return QRect(windowsize.width()*540/800, windowsize.height()*480/600, 250, 160);
     }
@@ -190,42 +190,42 @@ public:
     {
     }
 
-    virtual QString name() const
+    QString name() const Q_DECL_OVERRIDE
     {
         return QStringLiteral("aqua");
     }
 
-    virtual QString uiName() const
+    QString uiName() const Q_DECL_OVERRIDE
     {
         return i18nc("@item:inlistbox", "Aqua");
     }
 
-    virtual QString svgFileName() const
+    QString svgFileName() const Q_DECL_OVERRIDE
     {
         return QStringLiteral("klettres_aqua.svg");
     }
 
-    virtual QColor letterColor() const
+    QColor letterColor() const Q_DECL_OVERRIDE
     {
         return QColor(215, 215, 215); 
     }
 
-    virtual QColor backgroundInputColor() const
+    QColor backgroundInputColor() const Q_DECL_OVERRIDE
     {
         return QColor(0, 0, 100); 
     }
 
-    virtual QColor letterInputColor() const
+    QColor letterInputColor() const Q_DECL_OVERRIDE
     {
         return QColor(0, 0, 215); 
     }
 
-    virtual QRect wordRect(const QSize& windowsize) const
+    QRect wordRect(const QSize& windowsize) const Q_DECL_OVERRIDE
     {
         return QRect(windowsize.width()*150/800, windowsize.height()*180/600, 250, 160);
     }
 
-    virtual QRect inputRect(const QSize& windowsize) const
+    QRect inputRect(const QSize& windowsize) const Q_DECL_OVERRIDE
     {
 	return QRect(windowsize.width()*600/800, windowsize.height()*480/600, 250, 160);
     }
