@@ -37,8 +37,6 @@ static const char description[] =
               "letters in this language.\n\n"
               "25 languages are available.");
 
-static const char version[] = "2.1";
-
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
@@ -83,9 +81,8 @@ int main(int argc, char **argv)
     about.processCommandLine(&parser);
 
     app.setApplicationName(QStringLiteral("klettres"));
-    app.setApplicationVersion(version);
+    app.setApplicationVersion(KLETTRES_VERSION);
     app.setOrganizationDomain(QStringLiteral("kde.org"));
-    app.setApplicationDisplayName(i18n("Klettres"));
 
     KCrash::initialize();
 
