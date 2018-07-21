@@ -32,7 +32,6 @@ find_package(KF5 REQUIRED COMPONENTS
   Completion
   Crash
   DocTools
-  Emoticons
   I18n
   NewStuff
   WidgetsAddons
