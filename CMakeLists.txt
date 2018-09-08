@@ -26,7 +26,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED
   Test
   Widgets
 )
-find_package(Phonon4Qt5)
+find_package(Phonon4Qt5 REQUIRED)
 
 find_package(KF5 REQUIRED COMPONENTS
   Completion
