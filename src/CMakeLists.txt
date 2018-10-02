@@ -9,8 +9,9 @@ set(klettres_SRCS
    langutils.cpp
    kltheme.cpp
    timer.cpp
-   klettres_debug.cpp )
+    )
 
+ecm_qt_declare_logging_category(klettres_SRCS HEADER klettres_debug.h IDENTIFIER KLETTRES_LOG CATEGORY_NAME log_klettres)
 
 ki18n_wrap_ui(klettres_SRCS
     timerui.ui

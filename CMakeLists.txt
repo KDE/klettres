@@ -16,6 +16,7 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(ECMAddTests)
 include(ECMAddAppIcon)
+include(ECMQtDeclareLoggingCategory)
 
 # Load the frameworks we need
 
@@ -51,6 +52,9 @@ ecm_optional_add_subdirectory( themes )
 ecm_optional_add_subdirectory( tests )
 
 install(FILES org.kde.klettres.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+
+install( FILES klettres.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
