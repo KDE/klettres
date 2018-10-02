@@ -50,7 +50,7 @@ class SoundFactory : public QObject
 
 public:
 
-    SoundFactory(KLettres *parent, const char *name);
+    explicit SoundFactory(KLettres *parent, const QString &name);
     ~SoundFactory();
 
     ///Call the main instance of the program

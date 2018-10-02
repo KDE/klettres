@@ -49,7 +49,7 @@ public:
     virtual ~KLettres();
 
     ///Sound class
-    SoundFactory *soundFactory;
+    SoundFactory *soundFactory = nullptr;
     ///All available language names
     QStringList m_languageNames;
     /**
@@ -59,9 +59,9 @@ public:
     */
     bool loadLayout(QDomDocument &layoutDocument);
     ///Action that sets up the Language menu
-    KSelectAction *m_languageAction;
+    KSelectAction *m_languageAction = nullptr;
 
-    public slots:
+    public Q_SLOTS:
     ///Set the new language
     void slotChangeLanguage(int);
     ///Set the new level
@@ -103,20 +103,20 @@ protected:
     /**generates icons for the special characters toolbar
      * @param c the character that will be painted on the icon
      */
-    QIcon charIcon(const QChar &c);
+    QIcon charIcon(QChar c);
     /**
      *Update the level menu and level combobox
      * @param id The id of the new level
      */
     void updateLevMenu(int id);
     ///Create a KNewStuff instance
-    KLNewStuff *mNewStuff;
+    KLNewStuff *mNewStuff = nullptr;
     ///Set the correct buttons on the second toolbar according to the language
     void loadLangToolBar();
     ///All the special characters from a language file, these characters will be as buttons on the Special Characters Toolbar
     QStringList allData;
 
-    protected slots:
+    protected Q_SLOTS:
     ///Call the Get New Stuff dialog
     void slotDownloadNewStuff();
     ///Hide/Show the menubar

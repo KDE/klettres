@@ -89,17 +89,17 @@ protected:
     ///Paint the letter/syllable in levels 1 and 3 
     void paintLetter(QPainter &p, const QRect& rect);
     ///Current theme
-    KLTheme *m_theme;
+    KLTheme *m_theme = nullptr;
 
     // Graphics  ----------------
-    QSvgRenderer *m_renderer;
+    QSvgRenderer *m_renderer = nullptr;
     QPixmap       m_backgroundCache;
 
-public slots:
+public Q_SLOTS:
     ///Start playing displaying a new letter/syllable, playing the associated sound
     void game();
 
-public slots:
+public Q_SLOTS:
     ///Play the same sound again
     void slotPlayAgain();
 

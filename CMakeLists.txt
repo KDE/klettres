@@ -12,7 +12,7 @@ include(CMakePackageConfigHelpers)
 include(ECMInstallIcons)
 
 include(KDEInstallDirs)
-include(KDECompilerSettings NO_POLICY_SCOPE)
+include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(ECMAddTests)
 include(ECMAddAppIcon)
@@ -40,7 +40,6 @@ find_package(KF5 REQUIRED COMPONENTS
 )
 
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
-add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
 
 ecm_optional_add_subdirectory( doc )
 ecm_optional_add_subdirectory( src )

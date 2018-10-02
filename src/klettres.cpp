@@ -66,10 +66,10 @@ const int ID_GROWNB    = 101;
 const int ID_MENUBARB  = 102;
 
 KLettres::KLettres()
-        : KXmlGuiWindow( 0)
+        : KXmlGuiWindow( nullptr )
 {
     setObjectName( QStringLiteral("KLettres") );
-    mNewStuff = 0;
+    mNewStuff = nullptr;
     m_view = new KLettresView(this);
     setMinimumSize( QSize( 800, 600 ) );
     //Tell the KXmlGuiWindow that this is indeed the main widget
@@ -83,7 +83,7 @@ KLettres::KLettres()
     //Load Settings
     loadSettings();
     //Setup current language sounds
-    soundFactory = new SoundFactory(this, "sounds");
+    soundFactory = new SoundFactory(this, QStringLiteral("sounds"));
     //Start game
     m_view->game();
 }
@@ -95,11 +95,11 @@ KLettres::~KLettres()
 bool KLettres::loadLayout(QDomDocument &layoutDocument)
 {
     QFile layoutFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-					    "klettres/"+Prefs::language()+"/sounds.xml"));
+                        QStringLiteral("klettres/")+Prefs::language()+QStringLiteral("/sounds.xml")));
 
     //if xml file is not found, program exits
     if (!layoutFile.exists()) {
-        qWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/"+Prefs::language() ;
+        qWarning() << "sounds.xml file not found in $KDEDIR/share/apps/klettres/" << Prefs::language() ;
         QString mString=i18n("The file sounds.xml was not found in\n"
                              "$KDEDIR/share/apps/klettres/\n\n"
                              "Please install this file and start KLettres again.\n\n");
@@ -219,7 +219,7 @@ void KLettres::optionsPreferences()
     }
 
     KConfigDialog *dialog = new KConfigDialog(this, QStringLiteral("settings"), Prefs::self());
-    dialog->addPage(new fontsdlg(0), i18n("Font Settings"), QStringLiteral("preferences-desktop-font"));
+    dialog->addPage(new fontsdlg(nullptr), i18n("Font Settings"), QStringLiteral("preferences-desktop-font"));
     //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
     //fonts is the icon
     Timer *m_timer = new Timer();
@@ -237,7 +237,7 @@ void KLettres::loadSettings()
     }
     QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[LangUtils::getLanguages().indexOf(Prefs::language())];
     m_languageAction->setCurrentItem(LangUtils::getLanguages().indexOf(Prefs::language()));
-    langString.remove('&');
+    langString.remove(QLatin1Char('&'));
     m_langLabel->setText(langString);
     loadLangToolBar();
     // load default level
@@ -318,7 +318,7 @@ void KLettres::slotChangeLanguage(int newIndex)
     Prefs::self()->save();
     // Update the StatusBar
     QString langString = LangUtils::getLanguagesNames(LangUtils::getLanguages())[newIndex];
-    langString.remove('&');
+    langString.remove(QLatin1Char('&'));
     m_langLabel->setText(langString);
     loadLangToolBar();
     // Change language effectively
@@ -404,7 +404,7 @@ void KLettres::loadLangToolBar()
         QTextStream readFileStr(&openFileStream);
         readFileStr.setCodec("UTF-8");
         //allData contains all the words from the file
-        allData = readFileStr.readAll().split('\n');
+        allData = readFileStr.readAll().split(QLatin1Char('\n'));
         openFileStream.close();
 
         for (int i=0; i<(int) allData.count(); ++i) {
@@ -441,7 +441,7 @@ void KLettres::slotPasteChar()
     m_view->m_letterEdit->insert(allData.at(id));
 }
 
-QIcon KLettres::charIcon(const QChar & c)
+QIcon KLettres::charIcon(QChar c)
 {
     ///Create a name and path for the icon
     // 
@@ -451,7 +451,7 @@ QIcon KLettres::charIcon(const QChar & c)
     //        could confirm or change it.
 
     QString s = QStandardPaths::locate(QStandardPaths::GenericCacheLocation,
-                                       "char" + QString::number(c.unicode()) + ".png");
+                                       QStringLiteral("char") + QString::number(c.unicode()) + QStringLiteral(".png"));
 
     QRect r(4, 4, 120, 120);
 

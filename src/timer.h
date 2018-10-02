@@ -43,7 +43,7 @@ public:
 protected:
     Ui::timerui ui_timer;
 
-protected slots:
+protected Q_SLOTS:
     ///When the QSlider value changes
     void sliderValueChanged();
 };

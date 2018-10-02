@@ -49,7 +49,6 @@ KLettresView::KLettresView(KLettres *parent)
     m_letterEdit->setAutoFillBackground(true);
 
     randomInt          = 0;
-    m_theme            = 0; // essential
     m_renderer = new QSvgRenderer();
     setTheme(KLThemeFactory::instance()->buildTheme(0));
 }

@@ -81,7 +81,7 @@ int main(int argc, char **argv)
     about.processCommandLine(&parser);
 
     app.setApplicationName(QStringLiteral("klettres"));
-    app.setApplicationVersion(KLETTRES_VERSION);
+    app.setApplicationVersion(QLatin1String(KLETTRES_VERSION));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
 
     KCrash::initialize();

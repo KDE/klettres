@@ -34,9 +34,10 @@
 #include "klettres.h"
 #include "prefs.h"
 
-SoundFactory::SoundFactory(KLettres *parent, const char *)
-        : QObject(parent), m_player(0)
+SoundFactory::SoundFactory(KLettres *parent, const QString &name)
+        : QObject(parent), m_player(nullptr)
 {
+    setObjectName(name);
     klettres = parent;
 
     namesList.clear();
@@ -79,7 +80,7 @@ void SoundFactory::playSound(int mySound)
     }
 
     soundFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-				       "klettres/" + filesList[mySound]);
+                       QStringLiteral("klettres/") + filesList[mySound]);
     qCDebug(KLETTRES_LOG) << "soundFile " << soundFile;
 
     if (soundFile.isEmpty()) {
