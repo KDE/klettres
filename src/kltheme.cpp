@@ -258,7 +258,7 @@ KLTheme* KLThemeFactory::buildTheme(int id) const
 	case 3:
 	    return new KLThemeAqua();
     }
-    return 0;
+    return nullptr;
 }
 
 #define ADD_THEME_NAME( themeclass, list ) \
