@@ -88,10 +88,10 @@ void SoundFactory::playSound(int mySound)
     }
 
     if (!m_player)  {
-        m_player = Phonon::createPlayer(Phonon::GameCategory, soundFile);
+        m_player = Phonon::createPlayer(Phonon::GameCategory, QUrl::fromLocalFile(soundFile));
         m_player->setParent(this);
     }  else  {
-        m_player->setCurrentSource(soundFile);
+        m_player->setCurrentSource(QUrl::fromLocalFile(soundFile));
     }
     m_player->play();
 }
