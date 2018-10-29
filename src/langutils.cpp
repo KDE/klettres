@@ -102,6 +102,8 @@ QStringList LangUtils::getLanguagesNames(QStringList languagesList)
             languagesNames.append(i18n("Luganda"));
         } else if (language == QLatin1String("ep")) {
             languagesNames.append(i18n("English Phonics"));
+        } else if (language == QLatin1String("tn")) {
+            languagesNames.append(i18n("Tswana"));
         } else {
             QLocale locale(language);
             QString languageName = locale.nativeLanguageName();
