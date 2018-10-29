@@ -95,6 +95,7 @@
   <url type="help">http://docs.kde.org/stable/en/kdeedu/klettres/index.html</url>
   <screenshots>
     <screenshot type="default">
+      <caption>KLettres training session</caption>
       <image>http://kde.org/images/screenshots/klettres.png</image>
     </screenshot>
   </screenshots>
