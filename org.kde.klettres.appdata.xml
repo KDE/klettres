@@ -93,6 +93,7 @@
   <url type="homepage">http://edu.kde.org/klettres/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klettres</url>
   <url type="help">http://docs.kde.org/stable/en/kdeedu/klettres/index.html</url>
+  <url type="donation">https://www.kde.org/community/donations/?app=klettres&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
       <caption>KLettres training session</caption>
