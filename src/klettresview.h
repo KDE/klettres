@@ -53,7 +53,7 @@ public:
      */
     virtual ~KLettresView();
     /// Enter a letter into the input widget.
-    void  enterLetter(QString letter) { m_letterEdit->setText(letter); }
+    void  enterLetter(const QString &letter) { m_letterEdit->setText(letter); }
 
     ///The timer value i.e. the time for displaying the letters/syllables
     int m_timer;
