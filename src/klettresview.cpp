@@ -139,9 +139,13 @@ void KLettresView::paintLetter(QPainter &p, const QRect& rect)
         if (!myRect.intersects(rect)) {
             return;
         }
+
+        const QString letterInLower = m_currentLetter.toLower();
+        const QString prompt = (letterInLower == m_currentLetter) ? m_currentLetter
+                                                                  : i18nc("%1 is uppercase letter, %2 is the same in lowercase", "%1 / %2", m_currentLetter, letterInLower);
         p.setPen( m_theme->letterColor());
         p.setFont(Prefs::font());
-        p.drawText(myRect, m_currentLetter);
+        p.drawText(myRect, prompt);
     }
     m_letterEdit->setGeometry( m_theme->inputRect(size()));  
     m_letterEdit->setFocus();
