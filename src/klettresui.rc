@@ -1,5 +1,5 @@
-<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
-<kpartgui name="klettres" version="6">
+<!DOCTYPE gui SYSTEM "kpartgui.dtd">
+<gui name="klettres" version="6">
 	<MenuBar>
 		<Menu name="file" noMerge="1"><text>&amp;File</text>	
 			<Action name ="play_new"/>
@@ -46,4 +46,4 @@
 	</ToolBar>
 	<ToolBar name="specialCharToolbar" position="bottom" noMerge="1" iconText="icononly"><text>Special Characters</text>
 	</ToolBar>
-</kpartgui>
+</gui>
