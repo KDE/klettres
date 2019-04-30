@@ -7,7 +7,7 @@ set(malayalamtest_SRCS
 )
 
 add_executable(MalayalamTest ${malayalamtest_SRCS})
-add_test(MalayalamTest MalayalamTest)
+add_test(NAME MalayalamTest COMMAND MalayalamTest)
 ecm_mark_as_test(MalayalamTest)
 target_link_libraries(MalayalamTest
   Qt5::Test
