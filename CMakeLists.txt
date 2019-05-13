@@ -1,7 +1,7 @@
 project(klettres)
 
 #minimum requirements
-cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 set(QT_MIN_VERSION "5.2.0")
 
 # we need some parts of the ECM CMake helpers
