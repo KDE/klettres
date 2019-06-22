@@ -29,7 +29,7 @@
 #include <KCrash>
 #include <kaboutdata.h>
 #include "klettres.h"
-#include "version.h"
+#include "klettres_version.h"
 
 static const char description[] =
     I18N_NOOP("KLettres helps a very young child or an adult learning \n"
@@ -53,7 +53,7 @@ int main(int argc, char **argv)
     migrator.setUiFiles(rcFiles);
     migrator.migrate();
 
-    KAboutData about(QStringLiteral("klettres"), i18n("KLettres"), QStringLiteral(KLETTRES_VERSION), i18n(description),
+    KAboutData about(QStringLiteral("klettres"), i18n("KLettres"), QStringLiteral(KLETTRES_VERSION_STRING), i18n(description),
                      KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QStringLiteral("http://edu.kde.org/klettres"), QStringLiteral("submit@bugs.kde.org"));
     about.addAuthor( i18n("Anne-Marie Mahfouf"), QString(), QStringLiteral("annma AT kde DOT org"), QStringLiteral("http://annma.blogspot.com"), QStringLiteral("annma"));
     about.addCredit(i18n("Marc Cheng"),
@@ -81,7 +81,7 @@ int main(int argc, char **argv)
     about.processCommandLine(&parser);
 
     app.setApplicationName(QStringLiteral("klettres"));
-    app.setApplicationVersion(QStringLiteral(KLETTRES_VERSION));
+    app.setApplicationVersion(QStringLiteral(KLETTRES_VERSION_STRING));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
 
     KCrash::initialize();

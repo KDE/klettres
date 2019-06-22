@@ -1,6 +1,8 @@
 
 ########### next target ###############
 
+ecm_setup_version(${KDE_APPLICATIONS_VERSION} VARIABLE_PREFIX KLETTRES VERSION_HEADER klettres_version.h)
+
 set(klettres_SRCS
    klettres.cpp
    main.cpp

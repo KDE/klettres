@@ -1,7 +1,14 @@
-project(klettres)
-
 #minimum requirements
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+
+# KDE Application Version, managed by release script
+set(KDE_APPLICATIONS_VERSION_MAJOR "19")
+set(KDE_APPLICATIONS_VERSION_MINOR "07")
+set(KDE_APPLICATIONS_VERSION_MICRO "70")
+set(KDE_APPLICATIONS_VERSION "${KDE_APPLICATIONS_VERSION_MAJOR}.${KDE_APPLICATIONS_VERSION_MINOR}.${KDE_APPLICATIONS_VERSION_MICRO}")
+
+project(klettres VERSION ${KDE_APPLICATIONS_VERSION})
+
 set(QT_MIN_VERSION "5.2.0")
 
 # we need some parts of the ECM CMake helpers
@@ -17,6 +24,7 @@ include(KDECMakeSettings)
 include(ECMAddTests)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
+include(ECMSetupVersion)
 
 # Load the frameworks we need
 
