@@ -91,7 +91,7 @@ int main(int argc, char **argv)
         RESTORE(KLettres)
     } else {
         // no session.. just start up normally
-        if (parser.positionalArguments().count() == 0) {
+        if (parser.positionalArguments().isEmpty()) {
             KLettres *widget = new KLettres;
             widget->show();
         } else {
