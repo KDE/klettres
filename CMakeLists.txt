@@ -51,6 +51,9 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
+if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
+   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+endif()
 
 ecm_optional_add_subdirectory( doc )
 ecm_optional_add_subdirectory( src )
