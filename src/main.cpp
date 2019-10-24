@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 
     // see if we are starting with session management
     if (app.isSessionRestored()) {
-        RESTORE(KLettres)
+        kRestoreMainWindows<KLettres>();
     } else {
         // no session.. just start up normally
         if (parser.positionalArguments().isEmpty()) {
