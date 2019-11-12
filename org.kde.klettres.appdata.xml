@@ -93,9 +93,9 @@
     <p xml:lang="x-test">xxKLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hungarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.xx</p>
     <p xml:lang="zh-TW">KLettres 是一套特別設計協助使用者學習新語言的字母，並且學會讀簡單音節的應用程式。使用者可以是兩歲半的孩子，或是想學新外語的成人。目前有包括阿拉伯語、巴西葡萄牙語、捷克語、丹麥語、荷蘭語、英式英語、美式英語等等 25 種語言。KLettres 針對小小孩也提供了一套特別的使用者介面。</p>
   </description>
-  <url type="homepage">http://edu.kde.org/klettres/</url>
+  <url type="homepage">https://edu.kde.org/klettres/</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klettres</url>
-  <url type="help">http://docs.kde.org/stable/en/kdeedu/klettres/index.html</url>
+  <url type="help">https://docs.kde.org/stable/en/kdeedu/klettres/index.html</url>
   <url type="donation">https://www.kde.org/community/donations/?app=klettres&amp;source=appdata</url>
   <screenshots>
     <screenshot type="default">
@@ -119,7 +119,7 @@
       <caption xml:lang="x-test">xxKLettres training sessionxx</caption>
       <caption xml:lang="zh-CN">KLettres 培训课程</caption>
       <caption xml:lang="zh-TW">KLettres 訓練階段</caption>
-      <image>http://kde.org/images/screenshots/klettres.png</image>
+      <image>https://kde.org/images/screenshots/klettres.png</image>
     </screenshot>
   </screenshots>
   <project_group>KDE</project_group>

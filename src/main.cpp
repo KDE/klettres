@@ -54,8 +54,8 @@ int main(int argc, char **argv)
     migrator.migrate();
 
     KAboutData about(QStringLiteral("klettres"), i18n("KLettres"), QStringLiteral(KLETTRES_VERSION_STRING), i18n(description),
-                     KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QStringLiteral("http://edu.kde.org/klettres"), QStringLiteral("submit@bugs.kde.org"));
-    about.addAuthor( i18n("Anne-Marie Mahfouf"), QString(), QStringLiteral("annma AT kde DOT org"), QStringLiteral("http://annma.blogspot.com"), QStringLiteral("annma"));
+                     KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QStringLiteral("https://edu.kde.org/klettres"), QStringLiteral("submit@bugs.kde.org"));
+    about.addAuthor( i18n("Anne-Marie Mahfouf"), QString(), QStringLiteral("annma AT kde DOT org"), QStringLiteral("https://annma.blogspot.com"), QStringLiteral("annma"));
     about.addCredit(i18n("Marc Cheng"),
                     i18n("Kids and grown-up oxygen icons"), QStringLiteral("bdgraue AT web DOT de"));
     about.addCredit(i18n("Danny Allen"),

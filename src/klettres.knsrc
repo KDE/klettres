@@ -1,9 +1,9 @@
 [KNewStuff2]
-ProvidersUrl=http://edu.kde.org/klettres/downloads/providers.xml
+ProvidersUrl=https://edu.kde.org/klettres/downloads/providers.xml
 TargetDir=klettres/
 Uncompress=true
 
 [KNewStuff3]
-ProvidersUrl=http://edu.kde.org/klettres/downloads/providers.xml
+ProvidersUrl=https://edu.kde.org/klettres/downloads/providers.xml
 TargetDir=klettres
 Uncompress=true
