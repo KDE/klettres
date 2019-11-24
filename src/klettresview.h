@@ -21,7 +21,7 @@
 #ifndef KLETTRESVIEW_H
 #define KLETTRESVIEW_H
 
-#include <KLineEdit>
+#include <QLineEdit>
 
 class QPixmap;
 class QRect;
@@ -62,7 +62,7 @@ public:
     ///A Klettres object
     KLettres *m_klettres;
     ///The line where the user enters his/her input
-    KLineEdit *m_letterEdit;
+    QLineEdit *m_letterEdit;
     ///set the chosen theme
     void setTheme(KLTheme *theme);
 

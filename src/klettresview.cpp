@@ -42,7 +42,7 @@ KLettresView::KLettresView(KLettres *parent)
     m_klettres = parent;
 
     //lineEdit for user input
-    m_letterEdit = new KLineEdit( this );
+    m_letterEdit = new QLineEdit( this );
     m_letterEdit->setToolTip(i18n("Type the letter or syllable that you just heard" ) );
     m_letterEdit->setFont(Prefs::font());
     m_letterEdit->setContextMenuPolicy(Qt::NoContextMenu);
@@ -156,7 +156,7 @@ void KLettresView::game()
     m_cursorPos = 1;
     //reset everything so when you change language or levels
     //it all restarts nicely
-    QObject::disconnect(m_letterEdit, &KLineEdit::textChanged, this, &KLettresView::slotProcess);
+    QObject::disconnect(m_letterEdit, &QLineEdit::textChanged, this, &KLettresView::slotProcess);
     m_letterEdit->clear();
     m_letterEdit->setCursorPosition(0);
     m_letterEdit->setMaxLength( 1 );
@@ -164,19 +164,19 @@ void KLettresView::game()
     m_upperLetter.clear();
     chooseSound();
     randomInt++;
-    QObject::connect(m_letterEdit, &KLineEdit::textChanged, this, &KLettresView::slotProcess);
+    QObject::connect(m_letterEdit, &QLineEdit::textChanged, this, &KLettresView::slotProcess);
 }
 
 void KLettresView::slotProcess(const QString &inputLetter)
 {
     QString lang = Prefs::language();
-    QObject::disconnect(m_letterEdit, &KLineEdit::textChanged, this, &KLettresView::slotProcess);
+    QObject::disconnect(m_letterEdit, &QLineEdit::textChanged, this, &KLettresView::slotProcess);
 
     //check if backspace
     if (inputLetter.length() != m_cursorPos) {
         m_cursorPos--;
         m_letterEdit->setMaxLength( m_cursorPos );
-        QObject::connect(m_letterEdit, &KLineEdit::textChanged, this, &KLettresView::slotProcess);
+        QObject::connect(m_letterEdit, &QLineEdit::textChanged, this, &KLettresView::slotProcess);
         return;
     }
     QChar input_character = inputLetter.at(inputLetter.length()-1);
@@ -198,7 +198,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
     }  else {
         qCDebug(KLETTRES_LOG) << "cursor " << m_cursorPos << endl;
         m_letterEdit->backspace();
-        QObject::connect(m_letterEdit, &KLineEdit::textChanged, this, &KLettresView::slotProcess);
+        QObject::connect(m_letterEdit, &QLineEdit::textChanged, this, &KLettresView::slotProcess);
     }
     
 }
@@ -216,7 +216,7 @@ void KLettresView::slotTimerDone()
             m_letterEdit->setCursorPosition( m_cursorPos );
             m_letterEdit->setFocus();
             m_cursorPos ++;
-            QObject::connect(m_letterEdit, &KLineEdit::textChanged, this, &KLettresView::slotProcess);
+            QObject::connect(m_letterEdit, &QLineEdit::textChanged, this, &KLettresView::slotProcess);
         } else {
             game();  //another syllable
         }
@@ -227,7 +227,7 @@ void KLettresView::slotTimerDone()
         m_letterEdit->setFocus();
         //play sound again
         m_klettres->soundFactory->playSound(m_random);
-        QObject::connect(m_letterEdit, &KLineEdit::textChanged, this, &KLettresView::slotProcess);
+        QObject::connect(m_letterEdit, &QLineEdit::textChanged, this, &KLettresView::slotProcess);
     }
 }
 

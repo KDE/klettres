@@ -40,7 +40,6 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED
 find_package(Phonon4Qt5 REQUIRED)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-  Completion
   Crash
   DocTools
   I18n

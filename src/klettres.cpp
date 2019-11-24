@@ -33,6 +33,7 @@
 #include <QDomDocument>
 #include <QWidget>
 #include <QStandardPaths>
+#include <QPointer>
 
 //KDE includes
 #include <KActionCollection>
@@ -444,7 +445,7 @@ void KLettres::slotPasteChar()
 QIcon KLettres::charIcon(QChar c)
 {
     ///Create a name and path for the icon
-    // 
+    //
     // FIXME: This code used KStandardDirs::locateLocal("icon", ...) before
     //        and I am not sure if GenericCacheLocation is what we are aiming
     //        for.  So best would be if somebody experienced in QStandardPaths

@@ -27,7 +27,6 @@ ecm_add_app_icon(klettres_SRCS ICONS ${ICONS_SRCS})
 add_executable(klettres ${klettres_SRCS})
 
 target_link_libraries(klettres
-  KF5::Completion
   KF5::Crash
   KF5::NewStuff
   KF5::I18n
