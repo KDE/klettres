@@ -181,7 +181,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
     }
     QChar input_character = inputLetter.at(inputLetter.length()-1);
     QChar input_character_u; 
-    qCDebug(KLETTRES_LOG) << "input_character " << input_character << endl;
+    qCDebug(KLETTRES_LOG) << "input_character " << input_character;
     
     if ((!LangUtils::isIndian(lang) && (input_character.isLetter())) || (LangUtils::isIndian(lang)))                               
     {
@@ -196,7 +196,7 @@ void KLettresView::slotProcess(const QString &inputLetter)
         m_letterEdit->setText(m_upperLetter);
         QTimer::singleShot(m_timer*100, this, &KLettresView::slotTimerDone);
     }  else {
-        qCDebug(KLETTRES_LOG) << "cursor " << m_cursorPos << endl;
+        qCDebug(KLETTRES_LOG) << "cursor " << m_cursorPos;
         m_letterEdit->backspace();
         QObject::connect(m_letterEdit, &QLineEdit::textChanged, this, &KLettresView::slotProcess);
     }
@@ -206,8 +206,8 @@ void KLettresView::slotProcess(const QString &inputLetter)
 void KLettresView::slotTimerDone()
 {
     QString match = m_currentLetter.left(m_cursorPos );
-    qCDebug(KLETTRES_LOG) << "match " << match.toUpper() << endl;
-    qCDebug(KLETTRES_LOG) << "m_upperLetter " << m_upperLetter << endl;
+    qCDebug(KLETTRES_LOG) << "match " << match.toUpper();
+    qCDebug(KLETTRES_LOG) << "m_upperLetter " << m_upperLetter;
     
     if (match == m_upperLetter) {
         if (m_cursorPos!=m_length) {//if text in lineEdit not equal to text on button
@@ -221,7 +221,7 @@ void KLettresView::slotTimerDone()
             game();  //another syllable
         }
     } else { //if not, cut it
-        qCDebug(KLETTRES_LOG) << "wrong letter "<< endl;
+        qCDebug(KLETTRES_LOG) << "wrong letter ";
         m_letterEdit->backspace();  //delete the char to the left  and position curseur accordingly
         m_upperLetter.remove(m_upperLetter.size()-1, 1);
         m_letterEdit->setFocus();

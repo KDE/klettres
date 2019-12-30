@@ -157,7 +157,7 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
     }
     //Counts the number of sounds
     sounds = soundNamesList.count();
-    qCDebug(KLETTRES_LOG) << "number of sounds" << sounds << endl;
+    qCDebug(KLETTRES_LOG) << "number of sounds" << sounds;
     if (sounds < 1)  {
         return false;
     }
