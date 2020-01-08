@@ -74,8 +74,6 @@ int main(int argc, char **argv)
                     i18n("Port to KDE Frameworks 5"), QStringLiteral("laurent DOT navet+klettres AT gmail DOT com"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(about);
-    parser.addVersionOption();
-    parser.addHelpOption();
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
