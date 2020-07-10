@@ -27,7 +27,7 @@
 #include <KLocalizedString>
 #include <Kdelibs4ConfigMigrator>
 #include <KCrash>
-#include <kaboutdata.h>
+#include <KAboutData>
 #include "klettres.h"
 #include "klettres_version.h"
 
