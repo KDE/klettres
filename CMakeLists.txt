@@ -61,6 +61,7 @@ ecm_optional_add_subdirectory( icons )
 ecm_optional_add_subdirectory( themes )
 ecm_optional_add_subdirectory( tests )
 
+ki18n_install(po)
 install(FILES org.kde.klettres.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 if (${ECM_VERSION} STRGREATER "5.58.0")
