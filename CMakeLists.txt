@@ -62,6 +62,9 @@ ecm_optional_add_subdirectory( themes )
 ecm_optional_add_subdirectory( tests )
 
 ki18n_install(po)
+if (KF5DocTools_FOUND)
+    kdoctools_install(po)
+endif()
 install(FILES org.kde.klettres.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 if (${ECM_VERSION} STRGREATER "5.58.0")
