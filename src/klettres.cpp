@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include "klettres.h"
+#include <kwidgetsaddons_version.h>
 
 //Qt includes
 #include <QAction>
@@ -186,9 +187,21 @@ void KLettres::setupActions()
     connect(m_grownupAction, &KToggleAction::triggered, this, &KLettres::slotModeGrownup);
     m_grownupAction->setWhatsThis(i18n("The Grownup mode is the normal mode where you can see the menubar."));
 
+#if KWIDGETSADDONS_VERSION < QT_VERSION_CHECK(5, 78, 0)
     connect(m_levelAction, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &KLettres::slotChangeLevel);
+#else
+    connect(m_levelAction, &KSelectAction::indexTriggered, this, &KLettres::slotChangeLevel);
+#endif
+#if KWIDGETSADDONS_VERSION < QT_VERSION_CHECK(5, 78, 0)
     connect(m_languageAction, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &KLettres::slotChangeLanguage);
+#else
+    connect(m_languageAction, &KSelectAction::indexTriggered, this, &KLettres::slotChangeLanguage);
+#endif
+#if KWIDGETSADDONS_VERSION < QT_VERSION_CHECK(5, 78, 0)
     connect(m_themeAction, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &KLettres::slotChangeTheme);
+#else
+    connect(m_themeAction, &KSelectAction::indexTriggered, this, &KLettres::slotChangeTheme);
+#endif
 
     KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 
