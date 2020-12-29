@@ -233,11 +233,11 @@ void KLettres::optionsPreferences()
     }
 
     KConfigDialog *dialog = new KConfigDialog(this, QStringLiteral("settings"), Prefs::self());
-    dialog->addPage(new fontsdlg(nullptr), i18n("Font Settings"), QStringLiteral("preferences-desktop-font"));
+    dialog->addPage(new fontsdlg(nullptr), i18n("Font"), QStringLiteral("preferences-desktop-font"), i18n("Font Settings"));
     //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
     //fonts is the icon
     Timer *m_timer = new Timer();
-    dialog->addPage(m_timer, i18n("Timer"), QStringLiteral("chronometer"));
+    dialog->addPage(m_timer, i18n("Timer"), QStringLiteral("chronometer"), i18n("Timer Settings"));
     connect(dialog, &KConfigDialog::settingsChanged, this, &KLettres::slotUpdateSettings);
     dialog->setAttribute( Qt::WA_DeleteOnClose );
     // dialog->setHelp(QString(), "klettres");

@@ -26,15 +26,15 @@
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2016-04-20</date>
-<releaseinfo>2.3 (Applications 16.04)</releaseinfo>
+<date>2020-12-29</date>
+<releaseinfo>Applications 20.12</releaseinfo>
 
 <abstract>
 <para>
 &klettres; is an application specially designed to do help the user
 to learn alphabet in a new language and then to learn to read simple syllables.
 The user can be a young child aged from two and a half or an adult that wants to learn
-the basics of a foreign language. </para>
+the basics of a foreign language.</para>
 <para>
 Twenty five languages are available at the moment:  Arabian, Brazilian Portuguese, Czech, Danish,
 Dutch, British English, US English, Phonics English, French, German, Hebrew, Hungarian,
@@ -45,12 +45,11 @@ if it is among those are installed by default.
 <para>
 &klettres; is really easy to use. The language can be changed using the 
 <guimenu>Language</guimenu> menu. The user can also choose the Level from 
-1 to 4 in a combo box in the toolbar or via the <guimenu>Level</guimenu> 
-menu. <guimenuitem>Themes</guimenuitem> (background and font color) can be 
-changed in a combo box or in the <menuchoice><guimenu>Look</guimenu> 
-<guimenuitem>Themes</guimenuitem></menuchoice> menu. Three themes are 
-available: <guimenuitem>Kid</guimenuitem>, 
-<guimenuitem>Desert</guimenuitem> and <guimenuitem>Savannah</guimenuitem>. 
+1 to 4 in a combo box in the toolbar or via the <guimenu>Level</guimenu> menu. Themes
+(background and font color) can be changed in a combo box or in the
+<menuchoice><guimenu>Look</guimenu> <guimenuitem>Themes</guimenuitem></menuchoice> menu.
+Four themes are available: <guimenuitem>Kid</guimenuitem>, <guimenuitem>Desert</guimenuitem>,
+<guimenuitem>Savannah</guimenuitem> and <guimenuitem>Aqua</guimenuitem>.
 Finally, the mode can be changed from kid to grown-up using the 
 <guimenu>Look</guimenu> menu.
 </para>
@@ -85,8 +84,8 @@ keyboard only is needed.</para>
 &kde; language is among those, then it is taken as default, otherwise
 French is the default.
 You can easily get any additional available language by using the
-<guimenu>File</guimenu> menu and <guimenuitem>Get Alphabet in New
-Language...</guimenuitem> menu item, provided that your computer is connected to
+<menuchoice><guimenu>File</guimenu><guimenuitem>Get Alphabet in New
+Language...</guimenuitem></menuchoice> menu item, provided that your computer is connected to
 the Internet.</para>
 
 <!-- add a note for the sound, what does KLettres needs -->
@@ -96,18 +95,17 @@ your need and have the full usual interface or a stripped interface. For a
 child, the menubar is no longer visible. We assume that a child will not want to
 set the language himself.  A combo box allows him to choose the different
 levels. For an older user, the background is not so childish and the menubar is
-present in the Grown-Up style. Three different themes 
-(<guimenuitem>Kid</guimenuitem>, 
-<guimenuitem>Desert</guimenuitem> and 
-<guimenuitem>Savannah</guimenuitem>) set up a different background with 
-different fonts and colors.</para>
+present in the Grown-Up style. Four different themes
+(<guimenuitem>Kid</guimenuitem>, <guimenuitem>Desert</guimenuitem>,
+<guimenuitem>Savannah</guimenuitem> and <guimenuitem>Aqua</guimenuitem>) set
+up a different background with different fonts and colors.</para>
 
 <note>
 <para>You do not need the language keyboard layout anymore as you can use the 
-special <guimenuitem>Special Characters</guimenuitem> toolbar to type any special 
-character in each language. In the <guimenu>Settings</guimenu> menu, 
-<guisubmenu>Toolbars Shown</guisubmenu>, select <guimenuitem>Special Characters</guimenuitem> 
-and the toolbar will appear at the bottom of &klettres;. Click on the letter 
+special <guilabel>Special Characters</guilabel> toolbar to type any special
+character in each language. Select the <menuchoice><guimenu>Settings</guimenu>
+<guisubmenu>Toolbars Shown</guisubmenu><guimenuitem>Special Characters</guimenuitem></menuchoice>
+menu item and the toolbar will appear at the bottom of &klettres;. Click on the letter
 you want and it will be shown in the input field. This toolbar can be dragged 
 anywhere on your screen.</para>
 <para>
@@ -148,8 +146,8 @@ default language the first time you run &klettres;. For other languages, English
 is the default. 
 &klettres; comes with English, French and your default language if among those listed
 above and you can get additional languages via <menuchoice><guimenu>File</guimenu>
-<guimenuitem>Get Alphabet in New Language...</guimenuitem></menuchoice> provided you have an
-Internet connection.
+<guimenuitem>Get Alphabet in New Language...</guimenuitem></menuchoice> menu item
+provided you have an Internet connection.
 </para>
 </note>
 <para>
@@ -168,10 +166,10 @@ He can type only one letter at atime.</para>
 &Enter; and the program waits for a short while before testing if 
 the letter is right. This short wait is to leave time to a young child to understand 
 what he/she just typed, especially if this is the wrong letter. You can change this 
-time by using the <guimenu>Settings</guimenu> menu, <guimenuitem>Configure &klettres;...</guimenuitem> 
-and the <guilabel>Timer</guilabel> page which will bring you a dialog where you can 
-set two different times: one for the <guilabel>Kid Mode</guilabel> and one for the 
-<guilabel>Grown-up Mode</guilabel>.
+time by using the <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure
+&klettres;...</guimenuitem></menuchoice> menu item and the <guilabel>Timer</guilabel>
+page which will bring you a dialog where you can set two different times: one for
+the <guilabel>Kid Mode</guilabel> and one for the <guilabel>Grown-up Mode</guilabel>.
 </para>
 </note>
 
@@ -181,7 +179,7 @@ on closing of &klettres; and loaded the next time, with the level you were in.
 </para>
 <para>The mode (kid or grown-up) is saved in the config file and therefore
 is kept until you change.</para>
-<para>The letters appear in random order. They are not the same consecutively. </para>
+<para>The letters appear in random order. They are not the same consecutively.</para>
 
 <para>
 <screenshot>
@@ -201,7 +199,7 @@ is kept until you change.</para>
 <para>Clicking in the level combo-box and choosing <guilabel>Level
 2</guilabel> or using the <guimenu>Level</guimenu> menu brings you to level 2. In that level, the user only
 hears the sound of the letter and has to type in the letter. If he
-is wrong, the letter appears to help him. </para>
+is wrong, the letter appears to help him.</para>
 </sect1>
 
 <sect1 id="levels3-and4">
@@ -246,25 +244,25 @@ three, it depends of the language.</para>
 <para>Here you can see &klettres; level 4, <emphasis>kid</emphasis> mode, <emphasis>Desert</emphasis> theme and Slovak language.
 </para>
 
-<para>The sounds appear in random order. </para> <para>Clicking in the
+<para>The sounds appear in random order.</para> <para>Clicking in the
 level combo-box or using the <guimenu>Level</guimenu> menu in the menubar
 and choosing <guilabel>Level 4</guilabel> brings you
 to level 4. In that level, the user only hears the sound of the
 syllable and has to type in the letters. This level is quite difficult
-for a young child. </para>
+for a young child.</para>
 
 </sect1>
 
 <sect1 id ="configuring">
 <title>Configuration dialog</title>
-<para>The configuration dialog has two pages: one for <guilabel>Font Settings</guilabel> 
+<para>The configuration dialog has two pages: one for <guilabel>Font</guilabel>
 and one for the <guilabel>Timer</guilabel>.</para>
 
 <sect2 id="about-font">
-<title>About fonts</title>
+<title>About font</title>
 
 <para>
-You can easily change the font that displays the letters. In some distribution, the default font used from the system is really ugly. In grown-up mode, in the <guimenu>Settings</guimenu> menu, in <guimenuitem>Configure &klettres;...</guimenuitem> you will find a <guilabel>Font Settings</guilabel> page with a font chooser dialog. The new font will be applied to both the displayed letter/syllable and the user field.
+You can easily change the font that displays the letters. In some distribution, the default font used from the system is really ugly. In grown-up mode, in the <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure &klettres;...</guimenuitem></menuchoice> menu item you will find a <guilabel>Font</guilabel> page with a font chooser dialog. The new font will be applied to both the displayed letter/syllable and the user field.
 </para>
 
 <warning>
@@ -294,21 +292,21 @@ You can also choose here the size you like the best. This size will be kept in c
 </sect2>
 
 <sect2 id="timers">
-<title>Timers</title>
+<title>Timer</title>
 
-<para>The timers set the time between two letters &ie; the time during which a letter is displayed. The units are tenths of seconds. 
+<para>The timer set the time between two letters &ie; the time during which a letter is displayed. The units are tenths of seconds.
 </para>
 
-<para>The <guilabel>Timer</guilabel> page in the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &klettres;...</guimenuitem></menuchoice> dialog has two timers settings: one for the <guilabel>Kid Mode</guilabel> and one for the <guilabel>Grown-up Mode</guilabel>. Defaults are 4 tenths of seconds for <guilabel>Kid Mode</guilabel> and 2 tenths of seconds for <guilabel>Grown-up Mode</guilabel>. Increasing the time leaves you more time to see your errors.</para>
+<para>The <guilabel>Timer</guilabel> page in the <menuchoice><guimenu>Settings</guimenu> <guimenuitem>Configure &klettres;...</guimenuitem></menuchoice> menu item has two timers settings: one for the <guilabel>Kid Mode</guilabel> and one for the <guilabel>Grown-up Mode</guilabel>. Defaults are 4 tenths of seconds for <guilabel>Kid Mode</guilabel> and 2 tenths of seconds for <guilabel>Grown-up Mode</guilabel>. Increasing the time leaves you more time to see your errors.</para>
 
 <screenshot>
-<screeninfo>Screenshot of &klettres; Timers Settings</screeninfo>
+<screeninfo>Screenshot of &klettres; Timer Settings</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="klettres6.png" format="PNG"/>
       </imageobject>
        <textobject>
-        <phrase>Screenshot of &klettres; Timers Settings</phrase>
+        <phrase>Screenshot of &klettres; Timer Settings</phrase>
       </textobject>
     </mediaobject>
 </screenshot>
@@ -317,8 +315,8 @@ You can also choose here the size you like the best. This size will be kept in c
 </sect1>
 <sect1 id="Get-new-stuff">
 <title>Getting a new language</title>
-<para>You might want to use &klettres; to help you learn a new language. By using <menuchoice><guimenu>File</guimenu>
-<guimenuitem>Get Alphabet in New Language...</guimenuitem></menuchoice>, you will see a new dialog with the list of available languages (you need to be connected to the Internet to use that feature).</para>
+<para>You might want to use &klettres; to help you learn a new language. By using the <menuchoice><guimenu>File</guimenu>
+<guimenuitem>Get Alphabet in New Language...</guimenuitem></menuchoice> menu item, you will see a new dialog with the list of available languages (you need to be connected to the Internet to use that feature).</para>
 <screenshot>
 <screeninfo>Get a New Language Dialog</screeninfo>
     <mediaobject>
@@ -369,7 +367,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>File</guimenu>
 <guimenuitem>New Sound</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Play</action> a new sound</para></listitem>
+<listitem><para><action>Play</action> a new sound.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -380,7 +378,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>File</guimenu>
 <guimenuitem>Replay Sound</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Play</action> the same sound again</para></listitem>
+<listitem><para><action>Play</action> the same sound again.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -388,7 +386,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>File</guimenu>
 <guimenuitem>Get Alphabet in New Language...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Opens</action> the <guilabel>Get Hot New Stuff</guilabel> dialog for &klettres; to download a new language</para></listitem>
+<listitem><para><action>Opens</action> the <guilabel>Get Hot New Stuff</guilabel> dialog for &klettres; to download a new language.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -399,7 +397,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>File</guimenu>
 <guimenuitem>Quit</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Quits</action> &klettres;</para></listitem>
+<listitem><para><action>Quits</action> &klettres;.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -415,7 +413,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>Level</guimenu>
 <guimenuitem>Level 1</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the level 1 (letter displayed and sound)</para></listitem>
+<listitem><para><action>Choose</action> the level 1 (letter displayed and sound).</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -423,7 +421,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>Level</guimenu>
 <guimenuitem>Level 2</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the level 2 (no letter displayed, sound only)</para></listitem>
+<listitem><para><action>Choose</action> the level 2 (no letter displayed, sound only).</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -431,7 +429,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>Level</guimenu>
 <guimenuitem>Level 3</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the level 3 (syllable displayed and sound)</para></listitem>
+<listitem><para><action>Choose</action> the level 3 (syllable displayed and sound).</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -439,7 +437,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>Level</guimenu>
 <guimenuitem>Level 4</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the level 4 (no syllable displayed, sound only)</para></listitem>
+<listitem><para><action>Choose</action> the level 4 (no syllable displayed, sound only).</para></listitem>
 </varlistentry>
 
 </variablelist>
@@ -455,7 +453,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>Language</guimenu>
 <guimenuitem>English</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the English language</para></listitem>
+<listitem><para><action>Choose</action> the English language.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -463,7 +461,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>Language</guimenu>
 <guimenuitem>French</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Choose</action> the French language</para></listitem>
+<listitem><para><action>Choose</action> the French language.</para></listitem>
 </varlistentry>
 
 </variablelist>
@@ -479,7 +477,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>Look</guimenu>
 <guisubmenu>Themes</guisubmenu>
 </menuchoice></term>
-<listitem><para><action>Switch</action> to the Kid, Desert, Savannah or Aqua theme</para></listitem>
+<listitem><para>A submenu for <action>switch</action> to the Kid, Desert, Savannah or Aqua theme.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -490,7 +488,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>Look</guimenu>
 <guimenuitem>Mode Kid</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Toggle</action> the kid mode: no menubar</para></listitem>
+<listitem><para><action>Toggle</action> the kid mode: no menubar.</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -501,7 +499,7 @@ You can also choose here the size you like the best. This size will be kept in c
 <guimenu>Look</guimenu>
 <guimenuitem>Mode Grown-up</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Toggle</action> the grown-up mode: normal interface</para></listitem>
+<listitem><para><action>Toggle</action> the grown-up mode: normal interface.</para></listitem>
 </varlistentry>
 </variablelist>
 
@@ -541,7 +539,7 @@ If you would like to add sounds in your own language, it is very easy to do so. 
 <para>Replace "cs" with the two letter code and "Czech" with the name of your language. Write the sound names with the special characters of your language in uppercase in utf8.</para>
 
 <para>Additionally you can tell about special letters in your language so we can easily generate the special <guimenuitem>Special Characters</guimenuitem> toolbar. Create a text file <filename>cs.txt</filename> (replace "cs" with the two letter code of your language) with each special character of your language in uppercase on one line.
-And save both text files with <quote>utf8</quote> encoding (upper right dropbox in &kate; allows that)</para>
+And save both text files with <quote>utf8</quote> encoding (upper right dropbox in &kate; allows that).</para>
 
 <para>The sounds should be in ogg format and long enough for the audio player to play them (between 1.5 and 2 seconds long, please add some silence if they are too short). Then make a tarball of all that and send it to the mailinglist <email>kde-edu@kde.org</email>.
 </para>
@@ -566,7 +564,7 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>I do not hear any sounds</para>
+<para>I do not hear any sounds.</para>
 </question>
 <answer>
 <para>Make sure that &phonon; is working on your system. To do so, open &systemsettings; and in the <guilabel>Hardware</guilabel> category click on <guilabel>Multimedia</guilabel>.
@@ -648,13 +646,13 @@ I am very grateful to the following people whose contribution has been greatly v
 <email>zerokode@yahoo.com</email></para></listitem>
 <listitem><para>Support and coding guidance: &Robert.Gogolok;
 &Robert.Gogolok.mail;</para></listitem>
-<listitem><para>SVG icon: Chris Luetchford
+<listitem><para>&SVG; icon: Chris Luetchford
 <email>chris@os11.com</email></para></listitem>
 <listitem><para>Code for generating special characters icons: Peter Hedlund
 <email>peter@peterandlinda.com</email></para></listitem>
 <listitem><para>Port to KConfig XT, coding help: &Waldo.Bastian;
 &Waldo.Bastian.mail;</para></listitem>
-<listitem><para>Kids and grownup SVG icons, Desert theme: &Danny.Allen;
+<listitem><para>Kids and grownup &SVG; icons, Desert theme: &Danny.Allen;
     <email>dannya40uk@yahoo.co.uk</email></para></listitem>
 <listitem><para>Timer setting widget: Michael Goettsche
     <email>michael.goettsche@kdemail.net</email></para></listitem>
