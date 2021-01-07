@@ -13,7 +13,7 @@ set(klettres_SRCS
    timer.cpp
     )
 
-ecm_qt_declare_logging_category(klettres_SRCS HEADER klettres_debug.h IDENTIFIER KLETTRES_LOG CATEGORY_NAME log_klettres)
+ecm_qt_declare_logging_category(klettres_SRCS HEADER klettres_debug.h IDENTIFIER KLETTRES_LOG CATEGORY_NAME log_klettres DESCRIPTION "klettres" EXPORT KLETTRES)
 
 ki18n_wrap_ui(klettres_SRCS
     timerui.ui
