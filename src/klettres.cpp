@@ -416,7 +416,9 @@ void KLettres::loadLangToolBar()
         QFile openFileStream(myFile.fileName());
         openFileStream.open(QIODevice::ReadOnly);
         QTextStream readFileStr(&openFileStream);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         readFileStr.setCodec("UTF-8");
+#endif
         //allData contains all the words from the file
         allData = readFileStr.readAll().split(QLatin1Char('\n'));
         openFileStream.close();
