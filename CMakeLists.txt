@@ -1,5 +1,5 @@
 #minimum requirements
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
 # KDE Application Version, managed by release script
 set(RELEASE_SERVICE_VERSION_MAJOR "21")
@@ -9,8 +9,8 @@ set(RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_
 
 project(klettres VERSION ${RELEASE_SERVICE_VERSION})
 
-set(QT_MIN_VERSION "5.12.0")
-set(KF5_MIN_VERSION "5.68.0")
+set(QT_MIN_VERSION "5.15.0")
+set(KF5_MIN_VERSION "5.83.0")
 
 
 # we need some parts of the ECM CMake helpers

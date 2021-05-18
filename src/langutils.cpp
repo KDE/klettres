@@ -91,11 +91,11 @@ QStringList LangUtils::getLanguages()
     return m_languages;
 }
 
-QStringList LangUtils::getLanguagesNames(QStringList languagesList)
+QStringList LangUtils::getLanguagesNames(const QStringList &languagesList)
 {
     QStringList languagesNames;
 
-    foreach(const QString &language, languagesList) {
+    for (const QString &language : languagesList) {
         if (language == QLatin1String("hi-ro")) {
             languagesNames.append(i18n("Romanized Hindi"));
         } else if (language == QLatin1String("lug_UG")) {

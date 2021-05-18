@@ -33,7 +33,7 @@ public:
     static QStringList getLanguages();
     static void writeLangConfig();
     ///All available languages translated names
-    static QStringList getLanguagesNames(QStringList languagesList);
+    static QStringList getLanguagesNames(const QStringList &languagesList);
 };
 
 #endif
