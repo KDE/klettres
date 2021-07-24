@@ -14,6 +14,7 @@
   <name xml:lang="en-GB">KLettres</name>
   <name xml:lang="es">KLettres</name>
   <name xml:lang="et">KLettres</name>
+  <name xml:lang="eu">KLettres</name>
   <name xml:lang="fi">KLettres</name>
   <name xml:lang="fr">KLettres</name>
   <name xml:lang="gl">KLettres</name>
@@ -46,6 +47,7 @@
   <summary xml:lang="en-GB">Learn The Alphabet</summary>
   <summary xml:lang="es">Aprende el alfabeto</summary>
   <summary xml:lang="et">Tähestiku õppimine</summary>
+  <summary xml:lang="eu">Alfabetoa ikasi</summary>
   <summary xml:lang="fi">Opi aakkoset</summary>
   <summary xml:lang="fr">Apprenez l'alphabet</summary>
   <summary xml:lang="gl">Aprende o alfabeto</summary>
@@ -78,6 +80,7 @@
     <p xml:lang="en-GB">KLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hungarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.</p>
     <p xml:lang="es">KLettres es una aplicación especialmente diseñada para ayudar al usuario a aprender un alfabeto en otro idioma y después, a aprender a leer sílabas sencillas. El usuario puede ser un niño de a partir de dos años o un adulto que quiere aprender la base de un idioma extranjero. Actualmente, hay 25 idiomas disponibles: árabe, brasileño, portugués, checo, danés, holandés, inglés británico, inglés de Estados Unidos, ingles fónico, francés, alemán, hebreo, húngaro, italiano, kannada, bajo sajón, malayo, bokmål noruego, punjabí, luganda, hindi romanizado, ruso, español, eslovaco, telugú y ucraniano. KLettres proporciona una interfaz de usuario y temas especiales para los usuarios más jóvenes.</p>
     <p xml:lang="et">KLettres on rakendus, mille eesmärk on aidata õppuril omandada uue keele tähestik ja seejärel lugeda lihtsamaid silpe. Õppur võib olla väike laps (alates umbes 2.5-aastastest) või ka täiskasvanu, kes soovib tundma õppida mõne võõrkeele põhitõdesid. Praegu on välja pakkuda 25 keelt: alamsaksa, araabia, Brasiilia portugali, Briti inglise, foneetiline inglise, heebrea, hispaania, hollandi, itaalia, kannada, latiniseeritud hindi, luganda, malajalami, Norra Bokmåli, pandžaabi, prantsuse, saksa, slovaki, taani, telugu, tšehhi, ukraina, ungari, USA inglise ja vene keel. KLettres pakub eriti noortele õppuritele spetsiaalset kasutajaliidest ja teemasid.</p>
+    <p xml:lang="eu">KLettres erabiltzaileari hizkuntza berri bateko alfabetoa ikasten laguntzeko, eta ondoren silaba sinpleak irakurtzen laguntzeko, bereziki diseinatutako aplikazio bat da. Erabiltzailea bi urte eta erditik aurrerako haur gazte bat edo atzerriko hizkuntza baten oinarrizkoa  ikasi nahi duen heldu bat izan daiteke. Gaur egun 25 hizkuntza daude erabilgarri: AEBko ingelesa, alemana, arabiera, behe saxoniera, Brasileko portugesa, Britainiako ingelesa, daniera, errusiera, eslovakiera, frantsesa, gaztelania, hebreera, hindi erromanikoa, hungariera, italiera, ingeles fonikoa, kannada, luganda, malabarera, nederlandera, norvegiera Bokmål, punjabera, telugu, txekiera eta ukrainera. KLettres-ek erabiltzaile interfaze bat eta gai bereziak eskaintzen ditu erabiltzaile gazteagoentzat.</p>
     <p xml:lang="fi">KLettres on sovellus, joka on suunniteltu erityisesti auttamaan käyttäjää oppimaan uuden kielen aakkoset ja oppimaan sitten lukemaan yksinkertaisia tavuja. Käyttäjä voi olla kaksi ja puoli -vuotiaasta lapsesta aikuiseen, joka haluaa oppia vieraan kielen perusteet. Tällä hetkellä on saatavilla 25 kieltä: alasaksa, amerikanenglanti, arabia, brasilianportugali, brittienglanti, englannin äänteet, espanja, ganda, heprea, hollanti, italia, kannada, latinaistettu hindi, malajalam, norjan bokmål, pandžabi, ranska, saksa, slovakki, tanska, telugu, tšekki, ukraina, unkari ja venäjä. KLettresissä on nuorempia käyttäjiä varten oma käyttöliittymä ja teemoja.</p>
     <p xml:lang="fr">KLettres est une application spécialement conçue pour aider l'utilisateur à apprendre l'alphabet d'une nouvelle langue puis l'aider à apprendre à lire des syllabes simples. L'utilisateur peut être un jeune enfant à partir de deux ans et demi ou un adulte qui souhaite apprendre les rudiments d'une langue étrangère. 25 langues sont disponibles : arabe, portugais brésilien, tchèque, danois, néerlandais, anglais britannique, anglais américain, anglais phonétique, français, allemand, hébreu, hongrois, italien, kannada, bas saxon, malayalam, norvégien bokmål, pendjabi, luganda, hindi romanisé, russe, espagnol, slovaque, télougou et ukrainien. KLettres fournit une interface utilisateur spéciale et des thèmes pour les jeunes utilisateurs.</p>
     <p xml:lang="gl">KLettres é unha aplicación deseñado especialmente para axudar aos usuarios a aprender o alfabeto nun novo idioma e aprender a continuación a ler sílabas sinxelas. O usuario pode ser por exemplo un rapaz de dous anos e medio ou un adulto que quere aprender a base dun idioma estranxeiro. Actualmente hai 25 idiomas dispoñíbeis: alemán, árabe, baixo saxón, bokmål, canarés, castelán, checo, danés, eslovaco, francés, hebreo, hindi romanizado, holandés, húngaro, inglés británico, inglés estadounidense, inglés silábico, italiano, luganda, malaialam, portugués do Brasil, punjabi, ruso, telugu e ucraíno. KLettres fornece unha interface de usuario e temas especiais para rapaces.</p>
@@ -112,6 +115,7 @@
       <caption xml:lang="en-GB">KLettres training session</caption>
       <caption xml:lang="es">Sesión de entrenamiento de KLettres</caption>
       <caption xml:lang="et">KLettresi harjutusseanss</caption>
+      <caption xml:lang="eu">KLettres trebakuntza saioa</caption>
       <caption xml:lang="fr">Séance d'entraînement sur KLettres</caption>
       <caption xml:lang="gl">Sesión de adestramento de KLettres</caption>
       <caption xml:lang="id">Sesi pembelajaran KLettres</caption>
