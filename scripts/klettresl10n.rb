@@ -5,9 +5,9 @@
 #
 # SPDX-FileCopyrightText: 2005 Mark Kretschmann <markey@web.de>
 # SPDX-FileCopyrightText: 2007-2008 Anne-Marie Mahfouf <annma@kde.org>
-# modified by Carsten Niehaus
+# SPDX-FileCopyrightText: Carsten Niehaus
+# SPDX-License-Identifier: GPL-2.0-or-later
 # Some parts of this code taken from cvs2dist
-# License: GPL V2+
 
 # Each tarball is packaged klettres-<iso>.tar.bz2 where <iso> is the language
 # iso code used by KDE
