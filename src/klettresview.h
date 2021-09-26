@@ -1,6 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2001-2008 Anne-Marie Mahfouf
-    annma@kde.org
+    SPDX-FileCopyrightText: 2001-2008 Anne-Marie Mahfouf <annma@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */

@@ -1,5 +1,5 @@
 /*
-    Copyright (C) SPDX-FileCopyrightText: 2007 Pino Toscano <pino@kde.org>
+    SPDX-FileCopyrightText: 2007 Pino Toscano <pino@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */

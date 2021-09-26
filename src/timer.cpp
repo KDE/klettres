@@ -1,8 +1,6 @@
 /*
-    SPDX-FileCopyrightText: 2005 Michael Goettsche
-    michael.goettsche@kdemail.net
-    SPDX-FileCopyrightText: 2006 Anne-Marie Mahfouf
-    annemarie.mahfouf@free.fr
+    SPDX-FileCopyrightText: 2005 Michael Goettsche <michael.goettsche@kdemail.net>
+    SPDX-FileCopyrightText: 2006 Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */

@@ -1,10 +1,7 @@
-/* -------------------------------------------------------------
-    From KDE Tuberling
-    mailto:e.bischoff@noos.fr
-    -------------------------------------------------------------*/
 /*
+    SPDX-FileCopyrightText: KDE Tuberling <e.bischoff@noos.fr>
     SPDX-FileCopyrightText: 2001 Eric Bischoff
-    2004-2007 Anne-Marie Mahfouf <annma@kde.org>
+    SPDX-FileCopyrightText: 2004-2007 Anne-Marie Mahfouf <annma@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */

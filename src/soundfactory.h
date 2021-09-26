@@ -1,13 +1,10 @@
-/* -------------------------------------------------------------
-    From KDE Tuberling
-    mailto:e.bischoff@noos.fr
-    -------------------------------------------------------------*/
-    /
+/*
+    SPDX-FileCopyrightText: KDE Tuberling <e.bischoff@noos.fr>
     SPDX-FileCopyrightText: 2001 Eric Bischoff <e.bischoff@noos.fr>
-    2004-2007 Anne-Marie Mahfouf <annma@kde.org>
+    SPDX-FileCopyrightText: 2004-2007 Anne-Marie Mahfouf <annma@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-
+*/
 
 #ifndef _SOUNDFACTORY_H_
 #define _SOUNDFACTORY_H_
