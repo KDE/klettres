@@ -3,8 +3,8 @@
 # This script gets all KLettres data currently in trunk/l10n-kde4 svn and makes
 # tarballs of it, removing svn hidden dirs and CMakeLists.txt
 #
-# (c) 2005 Mark Kretschmann <markey@web.de>
-# (c) 2007 - 2008 Anne-Marie Mahfouf <annma@kde.org>
+# SPDX-FileCopyrightText: 2005 Mark Kretschmann <markey@web.de>
+# SPDX-FileCopyrightText: 2007-2008 Anne-Marie Mahfouf <annma@kde.org>
 # modified by Carsten Niehaus
 # Some parts of this code taken from cvs2dist
 # License: GPL V2+
