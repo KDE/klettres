@@ -37,7 +37,7 @@ public:
     /**
      * Destructor
      */
-    virtual ~KLettresView();
+    ~KLettresView() override;
     /// Enter a letter into the input widget.
     void  enterLetter(const QString &letter) { m_letterEdit->setText(letter); }
 

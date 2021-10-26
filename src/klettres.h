@@ -32,7 +32,7 @@ public:
     ///Constructor
     KLettres();
     ///Destructor
-    virtual ~KLettres();
+    ~KLettres() override;
 
     ///Sound class
     SoundFactory *soundFactory = nullptr;

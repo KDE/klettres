@@ -35,7 +35,7 @@ class SoundFactory : public QObject
 public:
 
     explicit SoundFactory(KLettres *parent, const QString &name);
-    ~SoundFactory();
+    ~SoundFactory() override;
 
     ///Call the main instance of the program
     KLettres *klettres;
