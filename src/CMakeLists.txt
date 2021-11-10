@@ -4,13 +4,19 @@
 ecm_setup_version(${RELEASE_SERVICE_VERSION} VARIABLE_PREFIX KLETTRES VERSION_HEADER klettres_version.h)
 
 set(klettres_SRCS
-   klettres.cpp
-   main.cpp
-   klettresview.cpp
-   soundfactory.cpp
-   langutils.cpp
-   kltheme.cpp
-   timer.cpp
+    klettres.cpp
+    klettres.h
+    klettresview.cpp
+    klettresview.h
+    kltheme.cpp
+    kltheme.h
+    langutils.cpp
+    langutils.h
+    main.cpp
+    soundfactory.cpp
+    soundfactory.h
+    timer.cpp
+    timer.h
     )
 
 ecm_qt_declare_logging_category(klettres_SRCS HEADER klettres_debug.h IDENTIFIER KLETTRES_LOG CATEGORY_NAME log_klettres DESCRIPTION "klettres" EXPORT KLETTRES)
