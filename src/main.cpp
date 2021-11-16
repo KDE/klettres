@@ -17,12 +17,6 @@
 #include "klettres.h"
 #include "klettres_version.h"
 
-static const char description[] =
-    I18N_NOOP("KLettres helps a very young child or an adult learning \n"
-              "a new language by associating sounds and \n"
-              "letters in this language.\n\n"
-              "25 languages are available.");
-
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
@@ -39,7 +33,10 @@ int main(int argc, char **argv)
     migrator.setUiFiles(rcFiles);
     migrator.migrate();
 
-    KAboutData about(QStringLiteral("klettres"), i18n("KLettres"), QStringLiteral(KLETTRES_VERSION_STRING), i18n(description),
+    KAboutData about(QStringLiteral("klettres"), i18n("KLettres"), QStringLiteral(KLETTRES_VERSION_STRING), i18n("KLettres helps a very young child or an adult learning \n"
+                                                                                                                 "a new language by associating sounds and \n"
+                                                                                                                 "letters in this language.\n\n"
+                                                                                                                 "25 languages are available."),
                      KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QStringLiteral("https://edu.kde.org/klettres"), QStringLiteral("submit@bugs.kde.org"));
     about.addAuthor( i18n("Anne-Marie Mahfouf"), QString(), QStringLiteral("annma AT kde DOT org"), QStringLiteral("https://annma.blogspot.com"), QStringLiteral("annma"));
     about.addCredit(i18n("Marc Cheng"),
