@@ -10,19 +10,20 @@ set(RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_
 project(klettres VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.83.0")
-
+set(KF5_MIN_VERSION "5.85.0")
 
 # we need some parts of the ECM CMake helpers
 find_package (ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
+
 include(ECMOptionalAddSubdirectory)
 include(CMakePackageConfigHelpers)
 include(ECMInstallIcons)
 
-include(KDEInstallDirs)
-include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
-include(KDECMakeSettings)
 include(ECMAddTests)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
@@ -67,9 +68,6 @@ if (KF5DocTools_FOUND)
 endif()
 install(FILES org.kde.klettres.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
-
 ecm_qt_install_logging_categories(EXPORT KLETTRES FILE klettres.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
-
-
