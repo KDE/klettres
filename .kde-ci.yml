@@ -12,3 +12,4 @@ Dependencies:
     'frameworks/kwidgetsaddons': '@stable'
     'frameworks/kconfigwidgets': '@stable'
     'frameworks/kcoreaddons': '@stable'
+    'libraries/phonon': '@stable'
