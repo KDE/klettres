@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <name>KLettres</name>
+  <name xml:lang="ar">حروفك</name>
   <name xml:lang="bs">KLettres</name>
   <name xml:lang="ca">KLettres</name>
   <name xml:lang="ca-valencia">KLettres</name>
@@ -38,6 +39,7 @@
   <name xml:lang="zh-CN">KLettres</name>
   <name xml:lang="zh-TW">語言_KLetters</name>
   <summary>Learn The Alphabet</summary>
+  <summary xml:lang="ar">تعلّم الأبجدية</summary>
   <summary xml:lang="bs">Naučite abecedu</summary>
   <summary xml:lang="ca">Aprendre l'alfabet</summary>
   <summary xml:lang="ca-valencia">Aprendre l'alfabet</summary>
@@ -72,6 +74,7 @@
   <summary xml:lang="zh-TW">語言_KLetters</summary>
   <description>
     <p>KLettres is an application specially designed to help the user to learn an alphabet in a new language and then to learn to read simple syllables. The user can be a young child aged from two and a half or an adult that wants to learn the basics of a foreign language. There are currently 25 languages available: Arabian, Brazilian Portuguese, Czech, Danish, Dutch, British English, US English, Phonics English, French, German, Hebrew, Hungarian, Italian, Kannada, Low Saxon, Malayalam, Norwegian Bokmål, Punjabi, Luganda, Romanized Hindi, Russian, Spanish, Slovak, Telugu and Ukrainian. KLettres provides a special user interface and themes for younger users.</p>
+    <p xml:lang="ar">حروفك هو تطبيق مصمم خصيصًا لمساعدة المستخدم على تعلم الأبجدية بلغة جديدة ثم تعلم قراءة المقاطع البسيطة. يمكن أن يكون المستخدم طفلًا صغيرًا يبلغ من العمر عامين ونصف أو بالغًا يريد تعلم أساسيات لغة أجنبية. يوجد حاليًا 25 لغة متوفرة: العربية، البرتغالية البرازيلية، التشيكية، الدنماركية، الهولندية، الإنجليزية البريطانية، الإنجليزية الأمريكية، الإنجليزية الصوتية، الفرنسية، الألمانية، العبرية، الهنغارية، الإيطالية، الكانادا، لو سكسونية، المالايالامية، النرويجية بوكمال، البنجابية، لوغندا، الهندية، الروسية، الإسبانية، السلوفاكية، التيلجو والأوكرانية بالحروف اللاتينية. يوفر حروفك واجهة مستخدم خاصة وسمات للمستخدمين الأصغر سنًا.</p>
     <p xml:lang="bs">KLettres je aplikacija specijalno dizajnirana da pomogne korisniku da uči alfabetu u novom jeziku, a zatim da nauči da čita jednostavne slogove. Korisnik može biti dijete uzrasta od dvije i po ili odrasla osoba koja želi da nauči osnove stranog jezika. Trenutno ima 25 jezika dostupnih: arapski, brazilski portugalski, češki, danski, holandski, britanski engleski, američki engleski, fonetski engleski, francuski, nemački, hebrejski, mađarski, italijanski, kanada, Lov Sakon, malajalam, norveški bokmal, pandžabi, Luganda , romanizovanimhindi, ruski, španski, slovački, ukrajinski i telugu. KLettres daje poseban korisnički interfejs i teme za mlađe korisnike.</p>
     <p xml:lang="ca">El KLettres és una aplicació especialment dissenyada per a ajudar a l'usuari a aprendre un alfabet en un idioma nou i després aprendre a llegir síl·labes senzilles. L'usuari pot ser des d'un infant de dos anys i mig a un adult que vol aprendre les bases d'un idioma estranger. Actualment hi ha 25 idiomes disponibles: àrab, portuguès de Brasil, txec, danès, neerlandès, anglès britànic, anglès dels EUA, anglès fònic, francès, alemany, hebreu, hongarès, italià, kanarès, baix saxó, malaiàlam, noruec Bokmal, panjabi, luganda, hindi romanitzat, rus, espanyol, eslovac, telugu i ucraïnès. El KLettres proporciona una interfície d'usuari espacial i temes per a usuaris joves.</p>
     <p xml:lang="ca-valencia">El KLettres és una aplicació especialment dissenyada per a ajudar a l'usuari a aprendre un alfabet en un idioma nou i després aprendre a llegir síl·labes senzilles. L'usuari pot ser des d'un infant de dos anys i mig a un adult que vol aprendre les bases d'un idioma estranger. Actualment hi ha 25 idiomes disponibles: àrab, portugués de Brasil, txec, danés, neerlandés, anglés britànic, anglés dels EUA, anglés fònic, francés, alemany, hebreu, hongarés, italià, kanarés, baix saxó, malaiàlam, noruec Bokmal, panjabi, luganda, hindi romanitzat, rus, espanyol, eslovac, telugu i ucraïnés. El KLettres proporciona una interfície d'usuari espacial i temes per a usuaris joves.</p>
@@ -109,6 +112,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>KLettres training session</caption>
+      <caption xml:lang="ar">جلسة تدريب حروفك</caption>
       <caption xml:lang="ca">Sessió d'entrenament del KLettres</caption>
       <caption xml:lang="ca-valencia">Sessió d'entrenament del KLettres</caption>
       <caption xml:lang="de">Übungssitzung in KLettres</caption>
