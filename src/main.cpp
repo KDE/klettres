@@ -11,7 +11,9 @@
 #include <QCommandLineParser>
 
 #include <KLocalizedString>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
+#endif
 #include <KCrash>
 #include <KAboutData>
 #include "klettres.h"
@@ -20,10 +22,11 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-
+#endif
     KLocalizedString::setApplicationDomain("klettres");
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QStringList configFiles;
     QStringList rcFiles;
     configFiles << QStringLiteral("klettresrc");
@@ -32,6 +35,7 @@ int main(int argc, char **argv)
     migrator.setConfigFiles(configFiles);
     migrator.setUiFiles(rcFiles);
     migrator.migrate();
+#endif
 
     KAboutData about(QStringLiteral("klettres"), i18n("KLettres"), QStringLiteral(KLETTRES_VERSION_STRING), i18n("KLettres helps a very young child or an adult learning \n"
                                                                                                                  "a new language by associating sounds and \n"

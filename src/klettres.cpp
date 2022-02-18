@@ -5,7 +5,6 @@
 */
 
 #include "klettres.h"
-#include <kwidgetsaddons_version.h>
 
 //Qt includes
 #include <QAction>
@@ -32,7 +31,7 @@
 #include <KToolBar>
 #include <KToggleAction>
 
-#include <kns3/downloaddialog.h>
+#include <KNS3/QtQuickDialogWrapper>
 //Project includes
 #include "ui_fontsdlg.h"
 #include "timer.h"
@@ -114,7 +113,7 @@ void KLettres::setupActions()
 {
     QAction *m_newAction = actionCollection()->addAction(QStringLiteral("play_new"));
     m_newAction->setText(i18n("New Sound"));
-    actionCollection()->setDefaultShortcut(m_newAction,QKeySequence(Qt::CTRL+Qt::Key_N));
+    actionCollection()->setDefaultShortcut(m_newAction,QKeySequence(Qt::CTRL | Qt::Key_N));
     m_newAction->setIcon(QIcon::fromTheme(QStringLiteral("document-new"))); // ### better icon for this?
     connect(m_newAction, &QAction::triggered, m_view, &KLettresView::game);
     m_newAction->setToolTip(i18n("Play a new sound"));
@@ -161,33 +160,21 @@ void KLettres::setupActions()
 
     m_kidAction = actionCollection()->add<KToggleAction>(QStringLiteral("mode_kid"));
     m_kidAction->setText(i18n("Mode Kid"));
-    actionCollection()->setDefaultShortcut(m_kidAction,QKeySequence(Qt::CTRL+Qt::Key_K));
+    actionCollection()->setDefaultShortcut(m_kidAction,QKeySequence(Qt::CTRL | Qt::Key_K));
     m_kidAction->setIcon(QIcon::fromTheme(QStringLiteral("klettres_kids")));
     connect(m_kidAction, &KToggleAction::triggered, this, &KLettres::slotModeKid);
     m_kidAction->setWhatsThis(i18n("If you are in the Grown-up mode, clicking on this button will set up the Kid mode. The Kid mode has no menubar and the font is bigger in the statusbar."));
 
     m_grownupAction = actionCollection()->add<KToggleAction>(QStringLiteral("mode_grownup"));
     m_grownupAction->setText(i18n("Mode Grown-up"));
-    actionCollection()->setDefaultShortcut(m_grownupAction,QKeySequence(Qt::CTRL+Qt::Key_G));
+    actionCollection()->setDefaultShortcut(m_grownupAction,QKeySequence(Qt::CTRL | Qt::Key_G));
     m_grownupAction->setIcon(QIcon::fromTheme(QStringLiteral("klettres_grownup")));
     connect(m_grownupAction, &KToggleAction::triggered, this, &KLettres::slotModeGrownup);
     m_grownupAction->setWhatsThis(i18n("The Grownup mode is the normal mode where you can see the menubar."));
 
-#if KWIDGETSADDONS_VERSION < QT_VERSION_CHECK(5, 78, 0)
-    connect(m_levelAction, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &KLettres::slotChangeLevel);
-#else
     connect(m_levelAction, &KSelectAction::indexTriggered, this, &KLettres::slotChangeLevel);
-#endif
-#if KWIDGETSADDONS_VERSION < QT_VERSION_CHECK(5, 78, 0)
-    connect(m_languageAction, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &KLettres::slotChangeLanguage);
-#else
     connect(m_languageAction, &KSelectAction::indexTriggered, this, &KLettres::slotChangeLanguage);
-#endif
-#if KWIDGETSADDONS_VERSION < QT_VERSION_CHECK(5, 78, 0)
-    connect(m_themeAction, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered), this, &KLettres::slotChangeTheme);
-#else
     connect(m_themeAction, &KSelectAction::indexTriggered, this, &KLettres::slotChangeTheme);
-#endif
 
     KStandardAction::preferences(this, SLOT(optionsPreferences()), actionCollection());
 
@@ -257,13 +244,11 @@ void KLettres::loadSettings()
 
 void KLettres::slotDownloadNewStuff()
 {
-    QPointer<KNS3::DownloadDialog> dialog(new KNS3::DownloadDialog(QStringLiteral("klettres.knsrc"), this));
-    if ( dialog->exec() == QDialog::Accepted ) {
-        // do nothing
+    KNS3::QtQuickDialogWrapper dialog(QStringLiteral("klettres.knsrc"));
+    const QList<KNSCore::EntryInternal> entries = dialog.exec();
+    if (entries.isEmpty()) {
+        return;
     }
-
-    delete dialog;
-
     //look for languages dirs installed
     QStringList languages = LangUtils::getLanguages();
     m_languageNames = LangUtils::getLanguagesNames(languages);

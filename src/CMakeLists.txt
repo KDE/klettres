@@ -36,9 +36,9 @@ target_link_libraries(klettres
   KF5::Crash
   KF5::NewStuff
   KF5::I18n
-  Qt5::Svg
+  Qt::Svg
   ${PHONON_LIBRARY}
-  Qt5::Xml)
+  Qt::Xml)
 
 install(TARGETS klettres  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
@@ -46,7 +46,7 @@ install(TARGETS klettres  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 ########### install files ###############
 
 install( PROGRAMS org.kde.klettres.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
-install( FILES klettresui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/klettres )
+install( FILES klettresui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUIDIR}/klettres )
 install( FILES klettres.kcfg  DESTINATION  ${KDE_INSTALL_KCFGDIR} )
 install( FILES klettres.knsrc  DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 

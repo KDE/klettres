@@ -8,6 +8,7 @@
 
 #include "soundfactory.h"
 
+#include <KRandom>
 #include <QStandardPaths>
 
 #include <KMessageBox>
@@ -170,13 +171,12 @@ bool SoundFactory::loadLanguage(QDomDocument &layoutDocument, const QString &cur
 void SoundFactory::setSoundSequence()
 {
     // Seed the random number generator
-    KRandomSequence randomSequence;
     randomList.clear();
     //get the number of sounds then shuffle it: each number will be taken once then the sequence will come back
     for (uint j = 0; j < sounds; j++) 
         randomList.append(j);
 
-    randomSequence.randomize(randomList);
+    KRandom::shuffle(randomList);
 }
 
 

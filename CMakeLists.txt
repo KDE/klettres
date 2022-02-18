@@ -10,7 +10,7 @@ set(RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_
 project(klettres VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.85.0")
+set(KF5_MIN_VERSION "5.90.0")
 
 # we need some parts of the ECM CMake helpers
 find_package (ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
@@ -31,14 +31,14 @@ include(ECMSetupVersion)
 
 # Load the frameworks we need
 
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED
   Core
   Svg
   Network
   Test
   Widgets
 )
-find_package(Phonon4Qt5 REQUIRED)
+find_package(Phonon4Qt${QT_MAJOR_VERSION} REQUIRED)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
   Crash
