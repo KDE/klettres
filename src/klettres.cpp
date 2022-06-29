@@ -244,19 +244,23 @@ void KLettres::loadSettings()
 
 void KLettres::slotDownloadNewStuff()
 {
-    KNS3::QtQuickDialogWrapper dialog(QStringLiteral("klettres.knsrc"));
-    const QList<KNSCore::EntryInternal> entries = dialog.exec();
-    if (entries.isEmpty()) {
-        return;
-    }
-    //look for languages dirs installed
-    QStringList languages = LangUtils::getLanguages();
-    m_languageNames = LangUtils::getLanguagesNames(languages);
+    KNS3::QtQuickDialogWrapper *dialog = new KNS3::QtQuickDialogWrapper(QStringLiteral("klettres.knsrc"), this);
+    dialog->open();
+    connect(dialog, &KNS3::QtQuickDialogWrapper::closed, this, [this, dialog] {
+        const QList<KNSCore::EntryInternal> entries = dialog->changedEntries();
+        if (!entries.isEmpty()) {
+            //look for languages dirs installed
+            QStringList languages = LangUtils::getLanguages();
+            m_languageNames = LangUtils::getLanguagesNames(languages);
 
-    //refresh Languages menu
-    m_languageAction->setItems(m_languageNames);
-    slotChangeLanguage(languages.indexOf(Prefs::language()));
-    m_languageAction->setCurrentItem(languages.indexOf(Prefs::language()));
+            //refresh Languages menu
+            m_languageAction->setItems(m_languageNames);
+            slotChangeLanguage(languages.indexOf(Prefs::language()));
+            m_languageAction->setCurrentItem(languages.indexOf(Prefs::language()));
+        }
+        dialog->deleteLater();
+    });
+
 }
 
 void KLettres::slotMenubar()
