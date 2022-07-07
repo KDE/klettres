@@ -13,3 +13,6 @@ Dependencies:
     'frameworks/kconfigwidgets': '@stable'
     'frameworks/kcoreaddons': '@stable'
     'libraries/phonon': '@stable'
+
+Options:
+    require-passing-tests-on: [ 'Linux', 'FreeBSD', 'Windows' ]
