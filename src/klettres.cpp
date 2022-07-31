@@ -382,7 +382,7 @@ void KLettres::loadLangToolBar()
         if (!myFile.exists()) {
             QString mString=i18n("File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
                                     "please check your installation.", lang);
-            KMessageBox::sorry( this, mString,
+            KMessageBox::error( this, mString,
                                     i18n("Error") );
             qApp->quit();
         }
