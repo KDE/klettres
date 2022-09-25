@@ -11,9 +11,8 @@
 #include <KRandom>
 #include <QStandardPaths>
 
-#include <KMessageBox>
 #include <KLocalizedString>
-#include <KRandomSequence>
+#include <KMessageBox>
 #include <phonon/MediaObject>
 
 #include "klettres_debug.h"
