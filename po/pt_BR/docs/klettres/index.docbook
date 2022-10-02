@@ -1,0 +1,1088 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klettres" lang="&language;">
+
+<bookinfo>
+<title
+>Manual do &klettres;</title>
+
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Luiz Fernando</firstname
+><surname
+>Ranghetti</surname
+><affiliation
+><address
+><email
+>elchevive@opensuse.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>André Marcelo</firstname
+><surname
+>Alvarenga</surname
+><affiliation
+><address
+><email
+>alvarenga@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year
+><year
+>2007</year>
+<holder
+>&Anne-Marie.Mahfouf;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>20/04/2016</date>
+<releaseinfo
+>2.3 (Applications 16.04)</releaseinfo>
+
+<abstract>
+<para
+>O &klettres; é um aplicativo especialmente desenvolvido para ajudar o usuário a aprender o alfabeto de um novo idioma e depois aprender a ler sílabas simples. O usuário pode ser uma criança de idade reduzida, a partir de dois anos e meio, ou até mesmo um adulto que só queira aprender as bases de um idioma estrangeiro. </para>
+<para
+>Atualmente estão disponíveis vinte e cinco idiomas: Árabe, Português do Brasil, Tcheco, Dinamarquês, Holandês, Inglês Britânico, Inglês Americano, Inglês Fonético, Francês, Alemão, Hebraico, Húngaro, Italiano, Canarês, Baixo-Saxão, Malaiala, Dano-norueguês, Punjabi, Luganda, Hindi Romanizado, Russo, Espanhol, Eslovaco, Telugu e Ucraniano, mas somente serão instalados por padrão o Inglês, o Francês e o seu idioma, caso esteja entre estes. </para>
+<para
+>O &klettres; é realmente simples de usar. O idioma pode ser alterado no menu <guimenu
+>Idiomas</guimenu
+>. O usuário pode também escolher o nível de 1 a 4 em uma lista da barra de ferramentas ou através do menu <guimenu
+>Nível</guimenu
+>. Os <guimenuitem
+>Temas</guimenuitem
+> (cor de fundo e do texto) podem ser alterados em uma lista ou no menu <menuchoice
+><guimenu
+>Aparência</guimenu
+><guimenuitem
+>Temas</guimenuitem
+></menuchoice
+>. Estão disponíveis três temas: <guimenuitem
+>Infantil</guimenuitem
+>, <guimenuitem
+>Deserto</guimenuitem
+> e <guimenuitem
+>Savana</guimenuitem
+>. Finalmente, pode-se alterar o modo de infantil para adulto no menu <guimenu
+>Aparência</guimenu
+>. </para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeedu</keyword>
+<keyword
+>klettres</keyword>
+<keyword
+>alfabeto</keyword>
+<keyword
+>sons</keyword>
+<keyword
+>idioma</keyword>
+<keyword
+>teclado</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Introdução</title>
+
+<para
+>O &klettres; é um aplicativo muito simples, que ajuda uma criança ou um adulto a aprender o alfabeto e alguns sons simples no seu próprio idioma ou outro qualquer. O programa escolhe uma letra ou sílaba aleatoriamente, ela é mostrada e o som é reproduzido. O usuário deverá então escrever esta letra ou sílaba. O treinamento termina nos níveis onde a letra/sílaba não é apresentada e só o som é reproduzido. O usuário não precisa saber usar o mouse, pois apenas o teclado é necessário.</para>
+
+<para
+>Atualmente estão disponíveis vinte e cinco idiomas: veja a lista acima. Se o seu idioma do &kde; for um dos mencionados acima, então será usado por padrão, caso contrário, será usado o Francês. Você poderá obter facilmente outros idiomas adicionais se usar o menu <guimenu
+>Arquivo</guimenu
+> e a opção <guimenuitem
+>Obter o alfabeto em novo idioma...</guimenuitem
+>, desde que o seu computador esteja conectado à Internet.</para>
+
+<!-- add a note for the sound, what does KLettres needs -->
+
+<para
+>Os dois modos diferentes permitem-lhe adaptar o &klettres; às suas necessidades. Para uma criança, a barra de menus não ficará visível. Nós consideramos que uma criança não pretende alterar ela própria o idioma. Uma lista permite ao usuário escolher os diferentes níveis. Para um usuário com mais idade, o fundo não é tão infantil e a barra de menus está presente no estilo Adulto. Existem três temas (<guimenuitem
+>Infantil</guimenuitem
+>, <guimenuitem
+>Deserto</guimenuitem
+> e <guimenuitem
+>Savana</guimenuitem
+>) para escolher um fundo diferente com fontes e cores diferentes.</para>
+
+<note>
+<para
+>Não é mais necessário utilizar o layout de teclado do idioma, uma vez que você pode usar a barra de <guimenuitem
+>Caracteres especiais</guimenuitem
+> para escrever qualquer caractere especial de cada idioma. No menu <guimenu
+>Configurações</guimenu
+>, <guisubmenu
+>Barras de ferramentas exibidas</guisubmenu
+>, selecione o item <guimenuitem
+>Caracteres especiais</guimenuitem
+>, para que a barra de ferramentas apareça na parte inferior do &klettres;. Clique na letra desejada e ela será mostrada no campo de texto. Esta barra de ferramentas pode ser arrastada para qualquer lado da tela.</para>
+<para
+>Se preferir ter o layout de teclado do idioma, use as &systemsettings;, na categoria <guilabel
+>Hardware</guilabel
+>, <guimenu
+>Dispositivos de entrada</guimenu
+> no item <guimenuitem
+>Teclado</guimenuitem
+> para configurar o layout de teclado correto.</para>
+</note>
+</chapter>
+
+<chapter id="using-klettres">
+<title
+>Usando o &klettres;</title>
+<para
+>O &klettres; possui 4 níveis. Os níveis 1 e 2 lidam com o alfabeto e os níveis 3 e 4 com as sílabas. Para uma criança de idade reduzida (entre dois anos e meio a quatro), sugere-se que ela esteja sentada no seu colo em frente ao computador e que você jogue junto com ela.</para>
+
+<sect1 id="levels1-and2">
+<title
+>Níveis 1 e 2</title>
+
+<screenshot>
+<screeninfo
+>Imagem do nível 1 do &klettres;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres1.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>Nível 1 do &klettres;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>O nível é o 1, o idioma é o Francês, o tema é o Deserto e o modo é de <emphasis
+>adulto</emphasis
+>.</para>
+<note>
+<para
+>Se o seu idioma do &kde; estiver entre os idiomas suportados, então ele será o idioma padrão na primeira vez que você executar o &klettres;. Para os outros idiomas, o Inglês é usado por padrão. O &klettres; vem com o Inglês, o Francês e com o seu idioma padrão, se estiver incluído na lista acima e você poderá obter mais idiomas através do menu <menuchoice
+><guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Obter o alfabeto em novo idioma...</guimenuitem
+></menuchoice
+>, desde que tenha uma conexão com a Internet. </para>
+</note>
+<para
+>No nível 1, o usuário vê a letra e ouve o som. Ele então terá que escrever a letra no campo de texto. Se estiver correta, a próxima letra irá aparecer (sem ter que pressionar &Enter; ou outra tecla qualquer). Se o usuário digitar a letra errada, ele irá ouvir o som novamente. Neste nível, o usuário irá memorizar as letras, associá-las com seu som e reconhecê-las no teclado. </para>
+
+<note>
+<para
+>O usuário pode digitar em minúsculas ou maiúsculas. As letras são automaticamente colocadas em maiúsculas para que uma criança identifique-as no teclado. Ela só poderá digitar uma letra de cada vez.</para>
+<para
+>Quando você digitar uma letra no campo de texto, não há necessidade de pressionar &Enter; e o programa espera durante alguns momentos antes de verificar se a letra está correta. Este tempo curto de espera é para dar tempo de uma criança perceber o que ela acabou de digitar, principalmente se for a letra errada. Você pode alterar este tempo usando o menu <guimenu
+>Configurações</guimenu
+> <guimenuitem
+>Configurar o &klettres;...</guimenuitem
+> e a página <guilabel
+>Temporizador</guilabel
+>, que apresentará um diálogo onde podem ser configurados dois tempos diferentes: um para o <guilabel
+>Modo infantil</guilabel
+> e outro para o <guilabel
+>Modo adulto</guilabel
+>. </para>
+</note>
+
+<para
+>Depois da primeira execução, a configuração do idioma é armazenada em um arquivo de configuração ao fechar o &klettres; e carregado na próxima vez, no nível onde você estava. </para>
+<para
+>O modo (infantil ou adulto) é armazenado no arquivo de configuração e, como tal, é mantido até que você o altere.</para>
+<para
+>As letras aparecem em ordem aleatória. Elas não seguem nenhuma sequência. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Imagem do nível 2 do &klettres;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>Nível 2 do &klettres;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para
+>Aqui está uma imagem do nível 2 com o modo <emphasis
+>infantil</emphasis
+>, o tema <emphasis
+>Infantil</emphasis
+> e com o idioma Dinamarquês.</para>
+
+<para
+>Clicar na lista de níveis e escolher o <guilabel
+>Nível 2</guilabel
+> ou usar o menu <guimenu
+>Nível</guimenu
+> irá para o nível 2. Nesse nível, o usuário só ouve o som da letra e terá que digitá-la. Se estiver errada, a letra aparecerá para ajudá-lo. </para>
+</sect1>
+
+<sect1 id="levels3-and4">
+<title
+>Níveis 3 e 4</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Imagem do nível 3 do &klettres;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres3.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>Nível 3 do &klettres;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Aqui você pode ver o nível 3 do &klettres;, com o modo <emphasis
+>adulto</emphasis
+>, o tema <emphasis
+>Savana</emphasis
+> e o idioma Tcheco. </para>
+
+<para
+>No nível 3, o usuário vê a sílaba e ouve o som. Ele então terá que escrever as letras no campo de texto. Se a primeira letra do som estiver errada, o usuário não poderá escrever a segunda. A letra irá desaparecer e ele terá que tentar novamente. São duas ou três letras, dependendo do idioma.</para>
+
+<screenshot>
+<screeninfo
+>Imagem do nível 4 do &klettres;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres4.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>Nível 4 do &klettres;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Aqui você poderá ver o nível 4 do &klettres;, com o modo <emphasis
+>infantil</emphasis
+>, o tema <emphasis
+>Deserto</emphasis
+> e o idioma Eslovaco. </para>
+
+<para
+>Os sons aparecem em ordem aleatória. </para
+> <para
+>Clicar na lista de níveis ou usar o menu <guimenu
+>Nível</guimenu
+> da barra de menus e escolher o <guilabel
+>Nível 4</guilabel
+> levará você ao nível 4. Nesse nível, o usuário só ouve o som da sílaba e terá que digitar as letras corretamente. Este nível é bastante difícil para uma criança. </para>
+
+</sect1>
+
+<sect1 id ="configuring">
+<title
+>Janela de configuração</title>
+<para
+>A janela de configuração possui duas páginas: uma para as <guilabel
+>Configurações da fonte</guilabel
+> e outra para o <guilabel
+>Temporizador</guilabel
+>.</para>
+
+<sect2 id="about-font">
+<title
+>Sobre as fontes</title>
+
+<para
+>Você poderá alterar facilmente a fonte usada para exibição das letras. Em algumas distribuições, a fonte padrão usada no sistema é realmente feia. No modo adulto, no menu <guimenu
+>Configurações</guimenu
+>, na opção <guimenuitem
+>Configurar o &klettres;...</guimenuitem
+>, você encontrará uma página com as <guilabel
+>Configurações da fonte</guilabel
+> que lhe mostrará uma janela de seleção de fontes. A nova fonte será aplicada às letras/sílabas apresentadas e ao campo do usuário. </para>
+
+<warning>
+<para
+>A alteração da fonte é também interessante, uma vez que algumas fontes (a Helvetica, por exemplo) não mostram corretamente os idiomas do Leste Europeu, como o Tcheco e o Eslovaco. Se algumas letras ou sílabas não forem exibidas, altere a fonte e escolha a Arial, por exemplo. </para>
+</warning>
+
+<para
+>Você pode escolher o tamanho que achar melhor. Este tamanho será mantido na configuração. </para>
+
+<screenshot>
+<screeninfo
+>Imagem da página de seleção de fonte do &klettres;</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres5.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>Página de seleção de fonte do &klettres;</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Aqui você pode ver a página de seleção de fonte do &klettres;. </para>
+</sect2>
+
+<sect2 id="timers">
+<title
+>Temporizadores</title>
+
+<para
+>Os temporizadores definem o tempo entre duas letras, &ie; o tempo durante o qual uma letra é exibida. As unidades são décimos de segundos. </para>
+
+<para
+>A página <guilabel
+>Temporizador</guilabel
+> na opção <menuchoice
+><guimenu
+>Configurações</guimenu
+><guimenuitem
+>Configurar o &klettres;...</guimenuitem
+></menuchoice
+> possui duas configurações de temporizador: uma para o <guilabel
+>Modo infantil</guilabel
+> e outra para o <guilabel
+>Modo adulto</guilabel
+>. Por padrão, são 4 décimos de segundos para o <guilabel
+>Modo infantil</guilabel
+> e 2 décimos para o <guilabel
+>Modo adulto</guilabel
+>. Ao aumentar esses valores, você terá mais tempo para ver os seus erros.</para>
+
+<screenshot>
+<screeninfo
+>Imagem das configurações dos temporizadores do &klettres;</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres6.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Imagem das configurações dos temporizadores do &klettres;</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+<sect1 id="Get-new-stuff">
+<title
+>Obtendo um novo idioma</title>
+<para
+>Você pode querer usar o &klettres; para ajudá-lo a aprender um novo idioma. Ao usar o <menuchoice
+><guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Obter o alfabeto em novo idioma...</guimenuitem
+></menuchoice
+>, será exibida uma nova janela com a lista de idiomas disponíveis (você precisa estar conectado à Internet para usar esta funcionalidade).</para>
+<screenshot>
+<screeninfo
+>Janela obter um novo idioma</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Janela obter um novo idioma</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para
+>Clique no botão <guilabel
+>Instalar</guilabel
+> à direita do idioma que deseja instalar.</para>
+<para
+>Perceba que alguns arquivos possuem vários MB, por isso poderá demorar um pouco, dependendo da sua conexão.</para>
+<para
+>O arquivo será instalado automaticamente quando a transferência for concluída e, ao fechar a janela de <guilabel
+>Obter novidades</guilabel
+>, o novo idioma estará disponível no menu <guimenu
+>Idioma</guimenu
+>, podendo ser usado imediatamente.</para>
+
+<para
+>Quando um idioma é baixado, você poderá ver o botão <guilabel
+>Instalar</guilabel
+> alterado para <guilabel
+>Desinstalar</guilabel
+>.</para>
+<para
+>A imagem a seguir mostra o Dinamarquês instalado.</para>
+<screenshot>
+<screeninfo
+>O Dinamarquês está instalado</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>O Dinamarquês está instalado</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Referência de comandos</title>
+
+<sect1 id="klettres-mainwindow">
+<title
+>A janela principal do &klettres;</title>
+
+<sect2>
+<title
+>Menu Arquivo</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Novo som</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Reproduz</action
+> um novo som</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>F5</keycap
+> </shortcut
+> <guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Repetir o som</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Reproduz</action
+> novamente o mesmo som</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Obter alfabeto em novo idioma...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Abre</action
+> a janela <guilabel
+>Obter novidades</guilabel
+>, para baixar um novo idioma para o &klettres;</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Sair</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Sai</action
+> do &klettres;</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Menu Nível</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Nível</guimenu
+> <guimenuitem
+>Nível 1</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escolhe</action
+> o nível 1 (letra apresentada e som)</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Nível</guimenu
+><guimenuitem
+>Nível 2</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escolhe</action
+> o nível 2 (sem letra apresentada, mas com som)</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Nível</guimenu
+><guimenuitem
+>Nível 3</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escolhe</action
+> o nível 3 (sílaba apresentada e som)</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Nível</guimenu
+><guimenuitem
+>Nível 4</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escolhe</action
+> o nível 4 (sem sílaba apresentada, mas com som)</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+<sect2>
+<title
+>Menu Idioma</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Idioma</guimenu
+> <guimenuitem
+>Inglês</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escolhe</action
+> o idioma inglês</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Idioma</guimenu
+> <guimenuitem
+>Francês</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Escolhe</action
+> o idioma francês</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Menu Aparência</title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Aparência</guimenu
+> <guisubmenu
+>Temas</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Muda</action
+> para o tema Infantil, Deserto, Savana ou Água</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>K</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Aparência</guimenu
+> <guimenuitem
+>Modo infantil</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Muda</action
+> para o modo infantil: sem menu</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>G</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Aparência</guimenu
+> <guimenuitem
+>Modo adulto</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Muda</action
+> para o modo adulto: interface normal</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>O &klettres; possui os itens dos menus <guimenu
+>Configurações</guimenu
+> e <guimenu
+>Ajuda</guimenu
+>, comuns do &kde;. Para mais informações, consulte as seções sobre o <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menu Configurações</ulink
+> e o <ulink url="help:/fundamentals/ui.html#menus-help"
+>Menu Ajuda</ulink
+> dos Fundamentos do &kde;. </para>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="sounds">
+<title
+>Adicionando sons ao &klettres;</title>
+
+<para
+>Se você quiser adicionar sons ao seu próprio idioma, é muito fácil fazê-lo. Grave os sons do alfabeto e coloque-os em uma pasta chamada 'alpha'. Depois grave as sílabas mais comuns e coloque-as em uma pasta 'syllab'.</para
+> 
+<para
+>Crie um arquivo de texto <filename
+>sounds.xml</filename
+>, de preferência com o editor &kate;, ou com outro que suporte codificações diferentes. Neste arquivo, escreva todos os sons do alfabeto e das sílabas que gravou, como neste exemplo para o idioma tcheco:</para>
+<programlisting
+>&lt;klettres&gt;
+&lt;language code="cs"&gt;
+    &lt;menuitem&gt;
+      &lt;label&gt;&amp;Czech&lt;/label&gt;
+    &lt;/menuitem&gt;
+    &lt;alphabet&gt;
+        &lt;sound name="A" file="cs/alpha/a.ogg" /&gt;
+        ...
+    &lt;/alphabet&gt;
+    &lt;syllables&gt;
+        &lt;sound name="BA" file="cs/syllab/ba.ogg" /&gt;
+        ...
+    &lt;/syllables&gt;
+  &lt;/language&gt;
+&lt;/klettres&gt;</programlisting>
+<para
+>Substitua o "cs" pelo código de duas letras e o "Czech" pelo nome do seu idioma. Escreva os nomes dos sons, com os caracteres especiais do seu idioma em maiúsculas e UTF-8.</para>
+
+<para
+>Além disso, você poderá informar as letras especiais do seu idioma, para que seja possível gerar a barra de ferramentas especial de <guimenuitem
+>Caracteres especiais</guimenuitem
+>. Crie um arquivo de texto <filename
+>cs.txt</filename
+> (substitua o "cs" pelo código de duas letras do seu idioma) com cada um dos caracteres especiais em letras maiúsculas, um em cada linha. Salve ambos os arquivos com a codificação <quote
+>utf8</quote
+> (a lista superior direita no &kate; permite fazer isso)</para>
+
+<para
+>Os sons deverão estar no formato OGG e ter um tamanho suficiente para o reprodutor de áudio reproduzi-los (entre 1,5 e 2 segundos de duração; adicione algum silêncio se forem muito curtos). Depois, crie um pacote com tudo e envie para a lista de discussão <email
+>kde-edu@kde.org</email
+>. </para>
+
+<para
+>Veja o <ulink url="https://edu.kde.org/klettres/add_language.php"
+>site do &klettres;</ulink
+> para informações mais atualizadas sobre como adicionar um novo idioma. </para>
+</chapter>
+
+<chapter id="faq">
+<title
+>Perguntas e respostas</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>A imagem de fundo não aparece.</para>
+</question>
+<answer>
+<para
+>Se você mesmo compilar o &klettres;, é necessário configurar com a opção <option
+>--prefix</option
+> definida para a sua pasta do &kde; ou adicionar esta pasta ao seu PATH.</para
+> </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Eu não ouço nenhum som</para>
+</question>
+<answer>
+<para
+>Certifique-se de que o &phonon; está funcionando no seu sistema. Para isso, abra as &systemsettings; e na categoria <guilabel
+>Hardware</guilabel
+>, clique em <guilabel
+>Multimídia</guilabel
+>. </para>
+ </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Não vejo algumas letras nos ícones da barra de <guimenuitem
+>Caracteres especiais</guimenuitem
+>. Em vez disso, vejo retângulos ou os ícones são muito pequenos para alguns idiomas.</para>
+</question>
+<answer>
+<para
+>O &klettres; em Tcheco e Eslovaco necessita da fonte Arial e, caso não tenha esta fonte instalada, peça ao suporte da sua distribuição para saber como instalar.</para
+> 
+<para
+>Se você tiver o &Windows; na sua máquina, pode-se usar as fontes TTF do &Windows; (a Arial é uma delas) através do item <guilabel
+>Gerenciamento de fontes</guilabel
+> na categoria <guilabel
+>Aparência</guilabel
+> das &systemsettings; e adicione a pasta de fontes do &Windows;.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Porque só existem vinte e cinco idiomas?</para>
+</question>
+<answer>
+<para
+>Para poder adicionar um novo idioma, precisamos dos sons do alfabeto e de algumas sílabas básicas. É preciso que alguém que fale o idioma nativamente grave esses sons no formato OGG. Para os níveis 3 e 4, as sílabas precisam ser escolhidas por um professor ou por alguém que saiba como as crianças aprendem: elas deverão ser as sílabas que você terá que aprender após o alfabeto, para conhecer bem as bases desse idioma. Por favor, envie um e-mail para <email
+>kde-edu@kde.org</email
+> se estiver disposto a fazer isso. Veja no <ulink url="https://edu.kde.org/klettres/add_language.php"
+>site da Internet do &klettres;</ulink
+> algumas informações mais detalhadas sobre como adicionar um novo idioma.</para
+> </answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Créditos e licença</title>
+
+<para
+>&klettres; </para>
+<para
+>Direitos autorais do programa 2001-2007 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+<para
+>Muito obrigado às pessoas a seguir, que tiveram uma valiosa contribuição: <itemizedlist>
+<listitem
+><para
+>Sons em português brasileiro: Lindonjohnson Monte (pai) e Michelle Monte 09 anos (filha) <email
+>lindon_johnson@brturbo.com.br</email
+></para
+> </listitem>
+<listitem
+><para
+>Sons em tcheco: Eva Mikulčíková <email
+>evmi@seznam.cz</email
+></para
+> </listitem>
+<listitem
+><para
+>Sons em dinamarquês: Erik Kjaer Pedersen <email
+>erik@binghamton.edu</email
+></para
+> </listitem>
+<listitem
+><para
+>Sons em holandês: Geert Stams <email
+>geert@pa3csg.myweb.nl</email
+></para
+> </listitem>
+<listitem
+><para
+>Sons em inglês: Robert Wadley <email
+>robntina@juno.com</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em francês: Ludovic Grossard <email
+>grossard@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em alemão: Helmut Kriege <email
+>h.kriege@freenet.de</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em hebraico: Assaf Gorgon <email
+>assafgordon@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em italiano: Pietro Pasotti <email
+>pietro@itopen.it</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em canarês: Vikram Vincent <email
+>vincentvikram@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em baixo-saxão: Manfred Wiese e Sönke Dibbern <email
+>s_dibbern@web.de</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em luganda: John Magoye e Cormac Lynch <email
+>cormaclynch@eircom.net</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em hindi romanizado: Vikas Kharat <email
+>kharat@sancharnet.in</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em espanhol: Ana Belén Caballero e Juan Pedro Paredes <email
+>neneta @iquis.com</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em eslovaco: Silvia Motyčková e Jozef Říha <email
+>silviamotycka@seznam.cz</email
+></para
+></listitem>
+<listitem
+><para
+>Sons em telugu: Pavithran Shakamuri <email
+>pavithran.s@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Ícones originais: &Primoz.Anzur; <email
+>zerokode@yahoo.com</email
+></para
+></listitem>
+<listitem
+><para
+>Suporte e apoio no código: &Robert.Gogolok; &Robert.Gogolok.mail;</para
+></listitem>
+<listitem
+><para
+>Ícone SVG: Chris Luetchford <email
+>chris@os11.com</email
+></para
+></listitem>
+<listitem
+><para
+>Código para gerar os ícones dos caracteres especiais: Peter Hedlund <email
+>peter@peterandlinda.com</email
+></para
+></listitem>
+<listitem
+><para
+>Migração para o KConfig XT, ajuda na codificação: &Waldo.Bastian; &Waldo.Bastian.mail;</para
+></listitem>
+<listitem
+><para
+>Ícones em SVG para crianças e adultos, tema Deserto: &Danny.Allen; <email
+>dannya40uk@yahoo.co.uk</email
+></para
+></listitem>
+<listitem
+><para
+>Widget de configuração do temporizador: Michael Goettsche <email
+>michael.goettsche@kdemail.net</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Direitos autorais da documentação 2001-2006 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+
+<para
+>Tradução de Marcus Gama <email
+>marcus.gama@gmail.com</email
+>, Luiz Fernando Ranghetti <email
+>elchevive@opensuse.org</email
+> e André Marcelo Alvarenga <email
+>alvarenga@kde.org</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

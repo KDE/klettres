@@ -1,0 +1,515 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"PO-Revision-Date: 2013-04-06 12:56+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "चेतन खोना"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "chetan@kompkin.com"
+
+#: klettres.cpp:90
+#, kde-format
+msgid ""
+"The file sounds.xml was not found in\n"
+"$KDEDIR/share/apps/klettres/\n"
+"\n"
+"Please install this file and start KLettres again.\n"
+"\n"
+msgstr ""
+
+#: klettres.cpp:93
+#, kde-format
+msgid "KLettres - Error"
+msgstr ""
+
+#: klettres.cpp:115
+#, kde-format
+msgid "New Sound"
+msgstr ""
+
+#: klettres.cpp:119
+#, kde-format
+msgid "Play a new sound"
+msgstr ""
+
+#: klettres.cpp:120
+#, kde-format
+msgid ""
+"You can play a new sound by clicking this button or using the File menu, New "
+"Sound."
+msgstr ""
+
+#: klettres.cpp:123
+#, kde-format
+msgid "Get Alphabet in New Language..."
+msgstr ""
+
+#: klettres.cpp:128
+#, kde-format
+msgid "Replay Sound"
+msgstr ""
+
+#: klettres.cpp:131
+#, kde-format
+msgid "Play the same sound again"
+msgstr ""
+
+#: klettres.cpp:133
+#, kde-format
+msgid ""
+"You can replay the same sound again by clicking this button or using the "
+"File menu, Replay Sound."
+msgstr ""
+
+#: klettres.cpp:139
+#, kde-format
+msgctxt "@label:listbox which difficulty level to use"
+msgid "L&evel"
+msgstr "पातळी (&E)"
+
+#: klettres.cpp:140
+#, kde-format
+msgid "Select the level"
+msgstr ""
+
+#: klettres.cpp:141
+#, kde-format
+msgid ""
+"You can select the level: level 1 displays a letter and you hear it; level 2 "
+"does not display the letter, you only hear it; level 3 displays a syllable "
+"and you hear it; level 4 does not display the syllable, you only hear it."
+msgstr ""
+
+#: klettres.cpp:144
+#, kde-format
+msgctxt "@label:listbox"
+msgid "&Language"
+msgstr "भाषा (&L)"
+
+#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#, kde-format
+msgctxt "@item:inlistbox choose level"
+msgid "Level %1"
+msgid_plural "Level %1"
+msgstr[0] "पातळी %1"
+msgstr[1] "पातळी %1"
+
+#: klettres.cpp:155
+#, kde-format
+msgid "Themes"
+msgstr ""
+
+#: klettres.cpp:158
+#, kde-format
+msgid "Select the theme"
+msgstr ""
+
+#: klettres.cpp:159
+#, kde-format
+msgid ""
+"Here you can change the theme for KLettres. A theme consists in the "
+"background picture and the font color for the letter displayed."
+msgstr ""
+
+#: klettres.cpp:162
+#, kde-format
+msgid "Mode Kid"
+msgstr ""
+
+#: klettres.cpp:166
+#, kde-format
+msgid ""
+"If you are in the Grown-up mode, clicking on this button will set up the Kid "
+"mode. The Kid mode has no menubar and the font is bigger in the statusbar."
+msgstr ""
+
+#: klettres.cpp:169
+#, kde-format
+msgid "Mode Grown-up"
+msgstr ""
+
+#: klettres.cpp:173
+#, kde-format
+msgid "The Grownup mode is the normal mode where you can see the menubar."
+msgstr ""
+
+#. i18n: ectx: label, entry (Font), group (mFont)
+#: klettres.cpp:209 klettres.kcfg:51
+#, kde-format
+msgid "Font"
+msgstr "फॉन्ट"
+
+#: klettres.cpp:209
+#, kde-format
+msgid "Font Settings"
+msgstr "फॉन्ट संयोजना"
+
+#: klettres.cpp:213
+#, kde-format
+msgid "Timer"
+msgstr "टाइमर"
+
+#: klettres.cpp:213
+#, fuzzy, kde-format
+#| msgid "&Settings"
+msgid "Timer Settings"
+msgstr "संयोजना (&S)"
+
+#: klettres.cpp:231 klettres.cpp:299
+#, kde-format
+msgctxt "@info:status the current level chosen"
+msgid "(Level %1)"
+msgstr "(पातळी %1)"
+
+#: klettres.cpp:342
+#, kde-format
+msgid "Grown-up mode is currently active"
+msgstr ""
+
+#: klettres.cpp:343
+#, kde-format
+msgid "Switch to Kid mode"
+msgstr ""
+
+#: klettres.cpp:361
+#, kde-format
+msgid "Kid mode is currently active"
+msgstr ""
+
+#: klettres.cpp:362
+#, kde-format
+msgid "Switch to Grown-up mode"
+msgstr ""
+
+#: klettres.cpp:383
+#, kde-format
+msgid ""
+"File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
+"please check your installation."
+msgstr ""
+
+#: klettres.cpp:386
+#, kde-format
+msgid "Error"
+msgstr "त्रुटी"
+
+#. i18n: ectx: label, entry (Language), group (General)
+#: klettres.kcfg:10
+#, kde-format
+msgid "Language"
+msgstr "भाषा"
+
+#. i18n: ectx: label, entry (Theme), group (General)
+#: klettres.kcfg:14
+#, kde-format
+msgid "Theme"
+msgstr "शैली"
+
+#. i18n: ectx: label, entry (MenuBarBool), group (General)
+#: klettres.kcfg:23
+#, kde-format
+msgid "Whether the menubar is shown or hidden"
+msgstr ""
+
+#. i18n: ectx: label, entry (Mode), group (General)
+#: klettres.kcfg:27
+#, kde-format
+msgid "Mode"
+msgstr "पद्धत"
+
+#. i18n: ectx: label, entry (Level), group (General)
+#: klettres.kcfg:35
+#, kde-format
+msgid "Difficulty level."
+msgstr ""
+
+#. i18n: ectx: label, entry (KidTimer), group (General)
+#: klettres.kcfg:41
+#, kde-format
+msgid "Kid Timer"
+msgstr ""
+
+#. i18n: ectx: label, entry (GrownTimer), group (General)
+#: klettres.kcfg:45
+#, kde-format
+msgid "Grown-up Timer"
+msgstr ""
+
+#. i18n: ectx: Menu (file)
+#: klettresui.rc:4
+#, kde-format
+msgid "&File"
+msgstr "फाईल (&F)"
+
+#. i18n: ectx: Menu (look_mode)
+#: klettresui.rc:15
+#, kde-format
+msgid "L&ook"
+msgstr "बघा (&O)"
+
+#. i18n: ectx: Menu (settings)
+#: klettresui.rc:23
+#, kde-format
+msgid "&Settings"
+msgstr "संयोजना (&S)"
+
+#. i18n: ectx: ToolBar (mainToolbar)
+#: klettresui.rc:33
+#, kde-format
+msgid "Main"
+msgstr "मुख्य"
+
+#. i18n: ectx: ToolBar (specialCharToolbar)
+#: klettresui.rc:47
+#, kde-format
+msgid "Special Characters"
+msgstr "विशिष्ठ अक्षरे"
+
+#: klettresview.cpp:32
+#, kde-format
+msgid "Type the letter or syllable that you just heard"
+msgstr ""
+
+#: klettresview.cpp:131
+#, kde-format
+msgctxt "%1 is uppercase letter, %2 is the same in lowercase"
+msgid "%1 / %2"
+msgstr ""
+
+#: kltheme.cpp:36
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Kid"
+msgstr ""
+
+#: kltheme.cpp:86
+#, kde-format
+msgctxt "@item:inlistbox desert theme for the interface"
+msgid "Desert"
+msgstr ""
+
+#: kltheme.cpp:136
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Savannah"
+msgstr ""
+
+#: kltheme.cpp:187
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Aqua"
+msgstr ""
+
+#: langutils.cpp:88
+#, kde-format
+msgid "Romanized Hindi"
+msgstr ""
+
+#: langutils.cpp:90
+#, kde-format
+msgid "Luganda"
+msgstr ""
+
+#: langutils.cpp:92
+#, kde-format
+msgid "English Phonics"
+msgstr ""
+
+#: langutils.cpp:94
+#, kde-format
+msgid "Tswana"
+msgstr ""
+
+#: langutils.cpp:99
+#, kde-format
+msgctxt "@item:inlistbox no language for that locale"
+msgid "None"
+msgstr "काही नाही"
+
+#: main.cpp:40
+#, kde-format
+msgid "KLettres"
+msgstr ""
+
+#: main.cpp:40
+#, kde-format
+msgid ""
+"KLettres helps a very young child or an adult learning \n"
+"a new language by associating sounds and \n"
+"letters in this language.\n"
+"\n"
+"25 languages are available."
+msgstr ""
+
+#: main.cpp:44
+#, kde-format
+msgid "(C) 2001-2011 Anne-Marie Mahfouf"
+msgstr "(c) 2001-2011, आन्ने-मारिआ माहफौफ"
+
+#: main.cpp:45
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "आन्ने-मारिआ माहफौफ"
+
+#: main.cpp:46
+#, kde-format
+msgid "Marc Cheng"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Kids and grown-up oxygen icons"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Danny Allen"
+msgstr "डैनी एलन"
+
+#: main.cpp:49
+#, kde-format
+msgid "SVG background pictures"
+msgstr ""
+
+#: main.cpp:50
+#, kde-format
+msgid "Robert Gogolok"
+msgstr "रॉबर्ट गोगोलोक"
+
+#: main.cpp:51
+#, kde-format
+msgid "Support and coding guidance"
+msgstr ""
+
+#: main.cpp:52
+#, kde-format
+msgid "Peter Hedlund"
+msgstr "पीटर हेडलुंड"
+
+#: main.cpp:53
+#, kde-format
+msgid "Code for generating special characters' icons"
+msgstr ""
+
+#: main.cpp:54
+#, kde-format
+msgid "Waldo Bastian"
+msgstr "वाल्डो बास्तियान"
+
+#: main.cpp:55
+#, kde-format
+msgid "Port to KConfig XT, coding help"
+msgstr ""
+
+#: main.cpp:56
+#, kde-format
+msgid "Pino Toscano"
+msgstr "पिनो तोस्कानो"
+
+#: main.cpp:57
+#, kde-format
+msgid "Code cleaning, Theme class"
+msgstr ""
+
+#: main.cpp:58
+#, kde-format
+msgid "Michael Goettsche"
+msgstr "माइकल गोएत्चे"
+
+#: main.cpp:59
+#, kde-format
+msgid "Timer setting widgets"
+msgstr ""
+
+#: main.cpp:60
+#, kde-format
+msgid "Laurent Navet"
+msgstr ""
+
+#: main.cpp:61
+#, kde-format
+msgid "Port to KDE Frameworks 5"
+msgstr ""
+
+#: soundfactory.cpp:86
+#, kde-format
+msgid "Error while loading the sound names."
+msgstr ""
+
+#: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
+#, kde-format
+msgid "1 tenth of second"
+msgid_plural "%1 tenths of second"
+msgstr[0] ""
+msgstr[1] ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: timerui.ui:51
+#, kde-format
+msgid "Set the time between 2 letters."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_KidTimer)
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:91 timerui.ui:184
+#, kde-format
+msgid "Set the timer (in tenths of seconds)"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_KidTimer)
+#: timerui.ui:94
+#, kde-format
+msgid ""
+"You can set the time between two letters in Kid mode. Default is 4 tenths of "
+"seconds but younger children might need longer time."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: timerui.ui:122
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Kid Mode</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:187
+#, kde-format
+msgid ""
+"You can set the time between two letters in Grown-up mode. Default is 2 "
+"tenths of seconds."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: timerui.ui:215
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Grown-up Mode</p></body></html>"
+msgstr ""

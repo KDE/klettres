@@ -1,0 +1,1062 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klettres" lang="&language;">
+
+<bookinfo>
+<title
+>Handbok &klettres;</title>
+
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year
+><year
+>2007</year>
+<holder
+>&Anne-Marie.Mahfouf;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2020-12-29</date>
+<releaseinfo
+>Program 20.12</releaseinfo>
+
+<abstract>
+<para
+>&klettres; är ett program som är särskilt framtaget för att hjälpa användaren att lära sig alfabetet på ett nytt språk och sedan lära sig läsa enkla stavelser. Användaren kan vara ett litet barn från två och ett halvt år, eller en vuxen som vill lära sig grunderna i ett främmande språk.</para>
+<para
+>Tjugofem språk är tillgängliga för tillfället: amerikansk engelska, arabiska, brasiliansk portugisiska, brittisk engelska, danska, engelska med stavelser, franska, hebreiska, holländska, italienska, kanaresiska, luganda, lågsachsiska, malayalam, norskt bokmål, punjabi, romansk hindi, ryska, slovakiska, spanska, telugu, tjeckiska, tyska, ukrainska och ungerska, men bara engelska, franska och ditt språk om det finns bland dessa är normalt installerade. </para>
+<para
+>&klettres; är mycket enkelt att använda. Språket kan ändras genom att använda menyn <guimenu
+>Språk</guimenu
+>. Användaren kan också välja nivå från 1 till 4 i en kombinationsruta i verktygsraden eller via menyn <guimenu
+>Nivå</guimenu
+>. Teman (bakgrund och teckensnittsfärg) kan ändras i en kombinationsruta eller i menyn <menuchoice
+><guimenu
+>Utseende</guimenu
+> <guimenuitem
+>Teman</guimenuitem
+></menuchoice
+>. Fyra teman är tillgängliga: <guimenuitem
+>Barn</guimenuitem
+>, <guimenuitem
+>Öken</guimenuitem
+>, <guimenuitem
+>Savann</guimenuitem
+> och <guimenuitem
+>Aqua</guimenuitem
+>. Till sist kan läget ändras från barn till vuxet med menyn <guimenu
+>Utseende</guimenu
+>. </para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeedu</keyword>
+<keyword
+>klettres</keyword>
+<keyword
+>alfabet</keyword>
+<keyword
+>ljud</keyword>
+<keyword
+>språk</keyword>
+<keyword
+>tangentbord</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inledning</title>
+
+<para
+>&klettres; är ett mycket enkelt program som hjälper ett barn eller en vuxen att lära sig alfabetet och vissa enkla ljud på sitt språk, eller ett annat språk. Programmet väljer slumpmässigt en bokstav eller en stavelse, bokstaven eller stavelsen visas och ljudet spelas upp. Användaren ska sedan skriva in bokstaven eller stavelsen. Inlärning görs på nivåer där bokstaven eller stavelsen inte visas, utan bara ljudet spelas. Användaren behöver inte veta hur man använder musen, utan bara tangentbordet är nödvändigt.</para>
+
+<para
+>För närvarande finns det tjugofem språk tillgängliga: se listan ovan. Om ditt språk i &kde; finns bland dem, används det som förval, annars är franska förvalt. Du kan enkelt hämta ytterligare tillgängliga språk genom att använda menyn <menuchoice
+><guimenu
+>Arkiv</guimenu
+><guimenuitem
+>Hämta alfabet för nytt språk...</guimenuitem
+></menuchoice
+>, under förutsättning att datorn är ansluten till Internet.</para>
+
+<!-- add a note for the sound, what does KLettres needs -->
+
+<para
+>Två olika utseenden låter dig anpassa &klettres; efter dina behov, och visa det vanliga fullständiga gränssnittet eller ett förenklat gränssnitt. För ett barn är inte menyraden längre synlig. Vi antar att barnet inte själv vill ange språk. En kombinationsruta gör det möjligt att välja olika nivåer. För en äldre användare, är bakgrunden inte så barnslig, och menyraden syns med vuxen stil. Fyra olika teman (<guimenuitem
+>Barn</guimenuitem
+>, <guimenuitem
+>Öken</guimenuitem
+>, <guimenuitem
+>Savann</guimenuitem
+> och <guimenuitem
+>Aqua</guimenuitem
+>) ställer in olika bakgrund med olika teckensnitt.</para>
+
+<note>
+<para
+>Du behöver inte språkets tangentbordslayout längre, eftersom du kan använda verktygsraden <guilabel
+>Specialtecken</guilabel
+> för att skriva in eventuella specialtecken på varje språk. Välj menyalternativet <menuchoice
+><guimenu
+>Inställningar</guimenu
+><guisubmenu
+>Visade verktygsrader</guisubmenu
+><guimenuitem
+>Tecken</guimenuitem
+></menuchoice
+>, så visas verktygsraden längst ner i &klettres;. Klicka på bokstaven du vill ha så visas den in inmatningsrutan. Verktygsraden kan dras vart som helst på skärmen.</para>
+<para
+>Om du föredrar att ha språkets tangentbordslayout, använd systeminställningarna under kategorin <guilabel
+>Hårdvara</guilabel
+>, <guimenu
+>inmatningsenheter</guimenu
+> på sidan <guimenuitem
+>Tangentbord</guimenuitem
+> för att ställa in rätt tangentbordslayout.</para>
+</note>
+</chapter>
+
+<chapter id="using-klettres">
+<title
+>Att använda &klettres;</title>
+<para
+>&klettres; har fyra nivåer. Nivå 1 och 2 hanterar alfabetet och nivå 3 och 4 behandlar ljud. För mycket unga barn (2 1/2 till 4), föreslår jag att han/hon sitter i din famn framför datorn och att ni spelar spelet tillsammans.</para>
+
+<sect1 id="levels1-and2">
+<title
+>Nivå 1 och 2</title>
+
+<screenshot>
+<screeninfo
+>Skärmbild av &klettres;, nivå 1</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres1.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; nivå1</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Nivån är 1, språket är franska, temat är öken och utseendet <emphasis
+>vuxet</emphasis
+>.</para>
+<note>
+<para
+>Om ditt språk i &kde; är bland de språk som stöds, är det förvalt språk första gången du kör &klettres;. För andra språk är engelska förvalt. &klettres; levereras med engelska, franska och ditt förvalda språk om det är bland de som listas ovan, och du kan hämta ytterligare språk via menyalternativet <menuchoice
+><guimenu
+>Arkiv</guimenu
+> <guimenuitem
+>Hämta alfabet för nytt språk...</guimenuitem
+></menuchoice
+> under förutsättning att du har en Internet-anslutning. </para>
+</note>
+<para
+>På nivå 1, ser användaren bokstäverna och hör ljudet. Han måste sedan skriva in bokstaven i rutan. Om den är riktigt, visas nästa bokstav (utan att behöva trycka på returtangenten eller någonting annat). Om användaren skriver in fel bokstav, hör han ljudet igen. På den här nivån memorerar användaren bokstäverna, kopplar ihop dem med ljuden och känner igen dem på tangentbordet. </para>
+
+<note>
+<para
+>Användaren kan skriva in antingen små eller stora bokstäver. Bokstäverna ändras automatiskt till stora, så att ett barn passar ihop dem med tangentbordet. Man kan bara skriva in en bokstav åt gången.</para>
+<para
+>När du skriver en bokstav i inmatningsrutan behöver du inte trycka på returtangenten, och programmet väntar en kort stund innan det kontrollerar om bokstaven är riktig. Den korta väntetiden är till för att låta ett litet barn förstå vad han eller hon just skrev in, särskilt om det är fel bokstav. Du kan ändra tiden genom att använda menyalternativet <menuchoice
+><guimenu
+>Inställningar</guimenu
+><guimenuitem
+>Anpassa &klettres;...</guimenuitem
+></menuchoice
+> och sidan <guilabel
+>Tid</guilabel
+>, som visar en dialogruta där du kan ställa in två olika tider: en för <guilabel
+>Barnutseende</guilabel
+> och en för <guilabel
+>Vuxenutseende</guilabel
+>. </para>
+</note>
+
+<para
+>Efter första gången sparas språkinställningarna i en inställningsfil när &klettres; avslutas, och laddas nästa gång, med den nivå du använde. </para>
+<para
+>Läget (barn eller vuxet) sparas i inställningsfilen, och behålls därför till du ändrar det.</para>
+<para
+>Bokstäverna visas i slumpmässig ordning. De är inte likadana två gånger i rad.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Skärmbild av &klettres;, nivå 2</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; nivå 2</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para
+>Här är en skärmbild av nivå 2, med <emphasis
+>barn</emphasis
+> utseendet, <emphasis
+>barntema</emphasis
+> och det danska språket.</para>
+
+<para
+>Att klicka på nivåkombinationsrutan och välja <guilabel
+>Nivå 2</guilabel
+> eller att använda menyn <guilabel
+>Nivå</guilabel
+>, byter till nivå 2. På den nivån hör användaren bara ljudet av bokstaven, och måste skriva in bokstaven. Om han har fel, så visas bokstaven för att hjälpa honom.</para>
+</sect1>
+
+<sect1 id="levels3-and4">
+<title
+>Nivå 3 och 4</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Skärmbild av &klettres;, nivå 3</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres3.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; nivå 3</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Här kan du se &klettres;, nivå 3, <emphasis
+>vuxet</emphasis
+> utseende, temat <emphasis
+>savann</emphasis
+> och tjeckiska språket. </para>
+
+<para
+>På nivå 3, ser användaren stavelsen och hör ljudet. Han måste sedan skriva in bokstäverna i rutan. Om den första bokstaven i ljudet är fel, kan användaren inte skriva in den andra. Bokstaven försvinner och han måste försöka igen.</para>
+
+<screenshot>
+<screeninfo
+>Skärmbild av &klettres;, nivå 4</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres4.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; nivå 4</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Här kan du se &klettres;, nivå 4, <emphasis
+>barn</emphasis
+> utseende, temat <emphasis
+>öken</emphasis
+> och slovakiska språket. </para>
+
+<para
+>Ljuden hörs i slumpmässig ordning.</para
+> <para
+>Att klicka i nivåkombinationsrutan eller använda menyn <guimenu
+>Nivå</guimenu
+> i menyraden och välja <guilabel
+>Nivå 4</guilabel
+>, byter till nivå 4. På den nivån hör användaren bara ljudet av stavelsen, och måste skriva in bokstäverna. Den här nivån är ganska svår för ett ungt barn.</para>
+
+</sect1>
+
+<sect1 id ="configuring">
+<title
+>Inställningsdialogruta</title>
+<para
+>Inställningsdialogrutan har två sidor: en för <guilabel
+>Teckensnitt</guilabel
+> och en för <guilabel
+>Tid</guilabel
+>.</para>
+
+<sect2 id="about-font">
+<title
+>Om teckensnitt</title>
+
+<para
+>Du kan enkelt ändra teckensnittet som visar bokstäverna. I vissa distributioner, är det vanliga systemets teckensnitt verkligen fult. Med vuxen stil hittar du sidan <guilabel
+>Teckensnitt</guilabel
+> med en dialogruta för att välja teckensnitt med menyalternativet <menuchoice
+><guimenu
+>Inställningar</guimenu
+><guimenuitem
+>Anpassa &klettres;...</guimenuitem
+></menuchoice
+>. Det nya teckensnittet används både för den visade bokstaven eller stavelsen och användarrutan. </para>
+
+<warning>
+<para
+>Ändra teckensnitt är också trevligt, eftersom vissa teckensnitt (till exempel Helvetica) inte visar östeuropeiska språk som tjeckiska och slovakiska riktigt. Om vissa bokstäver och stavelser inte visas, ändra då teckensnitt och välj till exempel Arial. </para>
+</warning>
+
+<para
+>Här kan du också välja storleken du tycker bäst om. Storleken behålls i inställningen. </para>
+
+<screenshot>
+<screeninfo
+>Skärmbild av &klettres; teckenvalsdialogruta</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres5.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; teckenvalsdialogruta</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Här kan du se &klettres; teckenvalsdialogruta. </para>
+</sect2>
+
+<sect2 id="timers">
+<title
+>Tid</title>
+
+<para
+>Tiden anger tiden mellan två bokstäver, dvs. tiden som en bokstav visas. Enheten är tiondels sekunder. </para>
+
+<para
+>Sidan <guilabel
+>Tid</guilabel
+> i dialogrutan <menuchoice
+><guimenu
+>Inställningar</guimenu
+> <guimenuitem
+>Anpassa &klettres;...</guimenuitem
+></menuchoice
+> har två tidsinställningar: en för barnläge och en för vuxenläge. Förvalda värden är 4 tiondels sekunder för <guilabel
+>Barnläge</guilabel
+> och 2 tiondels sekunder för <guilabel
+>Vuxet läge</guilabel
+>. Att öka tiderna ger dig mer tid att se dina fel.</para>
+
+<screenshot>
+<screeninfo
+>Skärmbild av &klettres; tidsinställningar</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres6.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Skärmbild av &klettres; tidsinställningar</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+<sect1 id="Get-new-stuff">
+<title
+>Hämta ett nytt språk</title>
+<para
+>Du kanske vill använda &klettres; för att hjälpa till att lära dig ett nytt språk. Genom att använda menyalternativet <menuchoice
+><guimenu
+>Arkiv</guimenu
+> <guimenuitem
+>Hämta alfabet för nytt språk...</guimenuitem
+></menuchoice
+> visas en ny dialogruta med en lista över tillgängliga språk (du måste vara ansluten till Internet för att använda funktionen).</para>
+<screenshot>
+<screeninfo
+>Dialogrutan för att hämta ett nytt språk</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Dialogrutan för att hämta ett nytt språk</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para
+>Klicka på knappen <guilabel
+>Installera</guilabel
+> till höger om språket du vill installera.</para>
+<para
+>Observera att vissa filer innehåller flera Mibyte, så det kan vara långsamt beroende på din anslutning.</para>
+<para
+>När filen har laddats ner, installeras den automatiskt och när du stänger dialogrutan <guilabel
+>Hämta heta nyheter</guilabel
+> ser du det nya språket i menyn <guimenu
+>Språk</guimenu
+>, och du kan omedelbart använda det.</para>
+
+<para
+>När ett språk har laddats ner, ser du att knappen <guilabel
+>Installera</guilabel
+> ändras till <guilabel
+>Avinstallera</guilabel
+>.</para>
+<para
+>Nästa skärmbild visar Danska installerad.</para>
+<screenshot>
+<screeninfo
+>Danska har installerats</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Danska har installerats</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Kommandoreferens</title>
+
+<sect1 id="klettres-mainwindow">
+<title
+>&klettres; huvudfönster</title>
+
+<sect2>
+<title
+>Menyn Arkiv</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Arkiv</guimenu
+> <guimenuitem
+>Nytt ljud</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Spela</action
+> ett nytt ljud.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>F5</keycap
+> </shortcut
+> <guimenu
+>Arkiv</guimenu
+> <guimenuitem
+>Spela ljud igen</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Spela</action
+> samma ljud igen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Arkiv</guimenu
+> <guimenuitem
+>Hämta alfabet för nytt språk...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Visa</action
+> dialogrutan <guilabel
+>Hämta heta nyheter</guilabel
+> för &klettres;, för att ladda ner ett nytt språk.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Arkiv</guimenu
+> <guimenuitem
+>Avsluta</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Avslutar</action
+> &klettres;.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Menyn Nivå</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Nivå</guimenu
+> <guimenuitem
+>Nivå 1</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Välj</action
+> nivå 1 (bokstav visas och ljud).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Nivå</guimenu
+> <guimenuitem
+>Nivå 2</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Välj</action
+> nivå 2 (ingen bokstav visas, bara ljud).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Nivå</guimenu
+> <guimenuitem
+>Nivå 3</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Välj</action
+> nivå 3 (stavelse visas och ljud).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Nivå</guimenu
+> <guimenuitem
+>Nivå 4</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Välj</action
+> nivå 4 (ingen stavelse visas, bara ljud).</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+<sect2>
+<title
+>Menyn Språk</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Språk</guimenu
+> <guimenuitem
+>Engelska</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Välj</action
+> engelska språket.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Språk</guimenu
+> <guimenuitem
+>Franska</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Välj</action
+> franska språket.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Menyn Utseende</title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Utseende</guimenu
+> <guisubmenu
+>Teman</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>En undermeny för att <action
+>välja</action
+> Barn-, Öken-, Savann- eller Aquatema.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>K</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Utseende</guimenu
+> <guimenuitem
+>Barnutseende</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Väljer</action
+> barnutseende: Ingen menyrad.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>G</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Utseende</guimenu
+> <guimenuitem
+>Vuxenutseende</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Byt till</action
+> vuxet läge: normalt gränssnitt.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Dessutom har &klettres; de vanliga menyalternativen <guimenu
+>Inställningar</guimenu
+> och <guimenu
+>Hjälp</guimenu
+> i &kde;. För mer information, läs avsnitten  <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menyn Inställningar</ulink
+> och <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menyn Hjälp</ulink
+> i &kde;:s Grunder. </para>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="sounds">
+<title
+>Lägga till ljud i &klettres;</title>
+
+<para
+>Om du skulle vilja lägga till ljud på ditt eget språk är det mycket enkelt att göra. Spela in alfabetsljuden och lägg dem i en katalog som heter 'alpha'. Spela därefter in de vanligaste stavelserna och lägg dem i en katalog som heter 'syllab'.</para
+> 
+<para
+>Skapa textfilen <filename
+>sounds.xml</filename
+>, helst genom att använda &kate; som editor, eller en annan editor som klarar av olika kodning. Skriv in alla alfabetsljuden och stavelseljuden du spelat in i filen, som i följande exempel för tjeckiska:</para>
+<programlisting
+>&lt;klettres&gt;
+&lt;language code="cs"&gt;
+    &lt;menuitem&gt;
+      &lt;label&gt;&amp;Czech&lt;/label&gt;
+    &lt;/menuitem&gt;
+    &lt;alphabet&gt;
+        &lt;sound name="A" file="cs/alpha/a.ogg" /&gt;
+        ...
+    &lt;/alphabet&gt;
+    &lt;syllables&gt;
+        &lt;sound name="BA" file="cs/syllab/ba.ogg" /&gt;
+        ...
+    &lt;/syllables&gt;
+  &lt;/language&gt;
+&lt;/klettres&gt;</programlisting>
+<para
+>Ersätt "cs" med tvåbokstäverskoden och "Czech" med ditt språks namn. Skriv ljudnamnen med ditt språks specialtecken med stora bokstäver och UTF8.</para>
+
+<para
+>Du kan dessutom berätta om specialtecken i ditt språk så att vi enkelt kan skapa verktygsraden <guimenuitem
+>Specialtecken</guimenuitem
+>. Skapa textfilen <filename
+>cs.txt</filename
+> (ersätt "cs" med ditt språks tvåbokstavskod) med varje specialtecken för ditt språk med stora bokstäver på en rad. Spara båda textfiler med kodningen <quote
+>UTF8</quote
+> (kombinationsrutan längst upp till höger i &kate; tillåter det).</para>
+
+<para
+>Ljuden ska ha formatet ogg, och vara långa nog för att ljudspelaren ska kunna spela dem (mellan 1,5 och 2 sekunder långa, lägg till tystnad om de är för korta). Skapa därefter ett komprimerat arkiv och skicka det till sändlistan <email
+>kde-edu@kde.org</email
+>. </para>
+
+<para
+>Se <ulink url="https://edu.kde.org/klettres/add_language.php"
+>&klettres; hemsida</ulink
+> för aktuellare instruktioner om hur man lägger till ett nytt språk. </para>
+</chapter>
+
+<chapter id="faq">
+<title
+>Frågor och svar</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Bakgrundsbilden visas inte.</para>
+</question>
+<answer>
+<para
+>Om du bygger &klettres; själv, måste du konfigurera med väljaren <option
+>--prefix</option
+> satt till din &kde;-katalog eller lägga till katalogen i din sökväg.</para
+> </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Jag hör inte några ljud.</para>
+</question>
+<answer>
+<para
+>Försäkra dig om att &phonon; fungerar på systemet. Öppna systeminställningar och klicka på <guilabel
+>Multimedia</guilabel
+> under kategorin <guilabel
+>Hårdvara</guilabel
+> för att göra det. </para>
+ </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Jag ser inte vissa bokstäver på ikonerna i verktygsraden <guimenuitem
+>Specialtecken</guimenuitem
+>. Istället ser jag rektanglar eller så är ikonerna för små för vissa språk.</para>
+</question>
+<answer>
+<para
+>&klettres; på tjeckiska och slovakiska behöver Arial, och om du inte har detta teckensnitt installerat, fråga din distributör om hur man installerar det.</para
+> 
+<para
+>Om du har &Windows; på datorn, kan du använda TTF-teckensnitten från &Windows; (Arial finns bland dem) via <guilabel
+>Teckensnittshantering</guilabel
+> i kategorin <guilabel
+>Utseende</guilabel
+> i systeminställningarna och lägg till &Windows; teckensnittskatalog.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Varför finns det bara tjugofem språk?</para>
+</question>
+<answer>
+<para
+>För att vi ska kunna lägga till ett nytt språk, behöver vi ljuden för alfabetet och några grundläggande stavelser. Någon som talar det nya språket som modersmål måste spela in dessa ljud på ogg-format. För nivå 3 och 4, måste stavelserna väljas av en lärare eller någon som känner till hur barns inlärning går till: de måste vara stavelser som man bör lära sig precis efter alfabetet, för att kunna lära sig grunderna i språket väl. Skicka e-post till <email
+>kde-edu@kde.org</email
+> om du kan åstadkomma detta. Se <ulink url="https://edu.kde.org/klettres/add_language.php"
+>&klettres; hemsida</ulink
+> för detaljerade instruktioner om hur man lägger till ett nytt språk.</para
+> </answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Tack till och licens</title>
+
+<para
+>&klettres; </para>
+<para
+>Program copyright 2001-2007 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+<para
+>Jag är mycket tacksam till följande personer, vars bidrag har varit mycket värdefulla: <itemizedlist>
+<listitem
+><para
+>Brasiliansk portugisiska ljud: Lindonjohnson Monte (far) och Michelle Monte 9 år (son) <email
+>lindon_johnson@brturbo.com.br</email
+></para
+> </listitem>
+<listitem
+><para
+>Tjeckiska ljud: Eva Mikulčíková <email
+>eva@seznam.cz</email
+></para
+> </listitem>
+<listitem
+><para
+>Danska ljud: Erik Kjaer Pedersen <email
+>erik@binghamton.edu</email
+></para
+> </listitem>
+<listitem
+><para
+>Holländska ljud: Geert Stams <email
+>geert@pa3csg.myweb.nl</email
+></para
+> </listitem>
+<listitem
+><para
+>Engelska ljud: Robert Wadley <email
+>robntina@juno.com</email
+></para
+></listitem>
+<listitem
+><para
+>Franska ljud: Ludovic Grossard <email
+>grossard@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Tyska ljud: Helmut Kriege <email
+>h.kriege@freenet.de</email
+></para
+></listitem>
+<listitem
+><para
+>Hebreiska ljud: Assaf Gorgon <email
+>assafgordon@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Italienska ljud: Pietro Pasotti <email
+>pietro@itopen.it</email
+></para
+></listitem>
+<listitem
+><para
+>Kanaresiska ljud: Vikram Vincent <email
+>vincentvikram@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Lågsachsiska ljud: Manfred Wiese and Sönke Dibbern <email
+>s_dibbern@web.de</email
+></para
+></listitem>
+<listitem
+><para
+>Ljud för luganda: John Magoye and Cormac Lynch <email
+>cormaclynch@eircom.net</email
+></para
+></listitem>
+<listitem
+><para
+>Ljud för romansk hindi: Vikas Kharat <email
+>kharat@sancharnet.in</email
+></para
+></listitem>
+<listitem
+><para
+>Spanska ljud: Ana Belén Caballero och Juan Pedro Paredes <email
+>neneta@iquis.com</email
+></para
+></listitem>
+<listitem
+><para
+>Slovakiska ljud: Silvia Motyčková och Jozef Říha <email
+>silviamotycka@seznam.cz</email
+></para
+></listitem>
+<listitem
+><para
+>Ljud för telugu: Pavithran Shakamuri <email
+>pavithran.s@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Originalikoner: &Primoz.Anzur; <email
+>zerokode@yahoo.com</email
+></para
+></listitem>
+<listitem
+><para
+>Stöd och kodningsguide: &Robert.Gogolok; &Robert.Gogolok.mail;</para
+></listitem>
+<listitem
+><para
+>&SVG;-ikoner: Chris Luetchford <email
+>chris@os11.com</email
+></para
+></listitem>
+<listitem
+><para
+>Kod för att skapa ikoner för specialtecken: Peter Hedlund <email
+>peter@peterandlinda.com</email
+></para
+></listitem>
+<listitem
+><para
+>Överföring till Kconfig XT, kodningshjälp: &Waldo.Bastian; &Waldo.Bastian.mail;</para
+></listitem>
+<listitem
+><para
+>&SVG;-ikoner för barn och vuxna, ökentema: &Danny.Allen; <email
+>dannya40uk@yahoo.co.uk</email
+></para
+></listitem>
+<listitem
+><para
+>Grafisk tidsinställningskomponent: Michael Goettsche <email
+>michael.goettsche@kdemail.net</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Dokumentation copyright 2001-2006 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

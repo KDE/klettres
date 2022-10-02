@@ -1,0 +1,1044 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klettres" lang="&language;">
+
+<bookinfo>
+<title
+>Het handboek van &klettres;</title>
+
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+&Jaap.Woldringh;&Rinse.Devries;&Freek.de.Kruijf; 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year
+><year
+>2007</year>
+<holder
+>&Anne-Marie.Mahfouf;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2020-12-29</date>
+<releaseinfo
+>Applications 20.12</releaseinfo>
+
+<abstract>
+<para
+>&klettres; is een programma dat speciaal ontworpen is om de gebruiker het alfabet te leren van een nieuwe taal, en om daarna eenvoudige lettergrepen te leren lezen. De gebruiker kan een klein kind zijn van twee en een half jaar of een volwassene die de beginselen van een vreemde taal wilt leren.</para>
+<para
+>Op dit moment zijn er vijfentwintig talen beschikbaar: Arabisch, Braziliaans Portugees, Tsjechisch, Deens, Nederlands, Brits Engels, VS Engels, Fonetisch Engels, Frans, Duits, Hebreeuws, Hongaars, Italiaans, Kannada, Nedersaksisch, Malayalam, Noors Bokmål, Punjabi, Luganda, Hindi in Westers schrift, Russisch, Spaans, Slowaaks, Teluga en Oekraïens. Alleen Engels, Frans en uw taal, als deze hier bij staat, worden standaard geïnstalleerd. </para>
+<para
+>&klettres; is echt heel gemakkelijk te gebruiken. De taal kan worden gewijzigd met het menu <guimenu
+>Taal</guimenu
+>. De gebruiker kan ook het niveau kiezen van 1 tot 4 in een afrolmenu in de werkbalk of via het menu <guimenu
+>Niveau</guimenu
+>. Thema's (achtergrond en kleur van de letters) kunnen worden gewijzigd in een afrolmenu of in het menu <menuchoice
+><guimenu
+>Uiterlijk</guimenu
+> <guimenuitem
+>Thema's</guimenuitem
+></menuchoice
+>. Er zijn vier thema's beschikbaar: <guimenuitem
+>Kind</guimenuitem
+>, <guimenuitem
+>Woestijn</guimenuitem
+>, <guimenuitem
+>Savanne</guimenuitem
+> en <guimenuitem
+>Water</guimenuitem
+>. Tenslotte kan de presentatie worden gewijzigd van kind tot volwassenen met het menu <guimenu
+>Uiterlijk</guimenu
+>. </para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeedu</keyword>
+<keyword
+>klettres</keyword>
+<keyword
+>alfabet</keyword>
+<keyword
+>klanken</keyword>
+<keyword
+>taal</keyword>
+<keyword
+>toetsenbord</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Inleiding</title>
+
+<para
+>&klettres; is een erg eenvoudig programma dat een kind of volwassene helpt met het leren van het alfabet en enkele eenvoudige klanken in zijn eigen taal of in een andere taal. Het programma kiest een willekeurige letter of lettergreep, toont deze letter/lettergreep, en laat de klank ervan horen. De gebruiker moet dan deze letter of lettergreep intypen. Het oefenen gebeurt in die niveaus waarin de letter/lettergreep niet wordt getoond, maar alleen kan worden beluisterd. De gebruiker hoeft niet te weten hoe de muis moet worden gebruikt, en heeft alleen het toetsenbord nodig.</para>
+
+<para
+>Op dit moment zijn er vijfentwintig talen beschikbaar: zie de bovenstaande lijst. Als u &kde; hebt ingesteld met een van deze talen, dan zal uw taal als standaardtaal worden gebruikt in het programma. Anders is Frans de standaardtaal. U kunt de beschikbare aanvullende talen downloaden via het menu-item <menuchoice
+><guimenu
+>Bestand</guimenu
+><guimenuitem
+>Alfabet in nieuwe taal ophalen...</guimenuitem
+></menuchoice
+>. Hiervoor hebt u een internetverbinding nodig.</para>
+
+<!-- add a note for the sound, what does KLettres needs -->
+
+<para
+>Twee verschillende presentaties maken het mogelijk om &klettres; naar wens aan te passen. Voor een kind zijn de menubalk en de taalknop niet zichtbaar. We gaan ervan uit dat een kind niet zelf de taal hoeft te kiezen. In een afrolmenu kan hij een niveau kiezen. Voor een wat ouder persoon is de achtergrond wat minder kinderlijk, en is de menubalk aanwezig. Vier verschillende thema's (<guimenuitem
+>Kind</guimenuitem
+>, <guimenuitem
+>Woestijn</guimenuitem
+>, <guimenuitem
+>Savanne</guimenuitem
+> en <guimenuitem
+>Aqua</guimenuitem
+>) stellen verschillende achtergronden in met verschillende lettertypen en kleuren.</para>
+
+<note>
+<para
+>Er is geen speciale toetsenbordindeling meer nodig voor een bepaalde taal, omdat nu in de werkbalk <guilabel
+>Speciale tekens</guilabel
+> kan worden gebruikt om speciale tekens in elke taal te typen. Selecteer het menu-item <menuchoice
+><guimenu
+>Instellingen</guimenu
+> <guisubmenu
+>Getoonde werkbalken</guisubmenu
+><guimenuitem
+>Speciale tekens</guimenuitem
+></menuchoice
+>, waarna deze werkbalk onderaan in &klettres; verschijnt. Klik op de gewenste letter, die daarna in het invoerveld wordt getoond. Deze werkbalk kan naar elke plek op het scherm worden gesleept.</para>
+<para
+>Gebruik &systemsettings;, indien de voorkeur uitgaat naar het gebruik van de speciale toetsenbordindeling, in de categorie <guilabel
+>Hardware</guilabel
+>, <guimenu
+>Invoerapparaten</guimenu
+>, op de pagina <guimenuitem
+>Toetsenbord</guimenuitem
+> om de juiste indeling in te stellen.</para>
+</note>
+</chapter>
+
+<chapter id="using-klettres">
+<title
+>Het gebruik van &klettres;</title>
+<para
+>Er zijn 4 moeilijkheidsgraden in &klettres;. In niveau 1 en 2 wordt het alfabet geoefend, en in niveau 3 en 4 lettergrepen. Bij heel jonge kinderen (2 1/2 tot 4 jaar) stel ik voor dat u die op schoot neemt voor de computer, en dat u samen dit spelletje doet.</para>
+
+<sect1 id="levels1-and2">
+<title
+>Niveau 1 en 2</title>
+
+<screenshot>
+<screeninfo
+>Schermafbeelding van &klettres; Niveau 1</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres1.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; niveau1</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Niveau is niveau 1, de taal is Frans, het thema is Woestijn en de presentatie is voor een <emphasis
+>volwassene</emphasis
+>.</para>
+<note>
+<para
+>Als uw &kde;-taal onder de ondersteunde talen valt, dan zal uw taal als standaardtaal worden gebruikt, de eerste keer dat je &klettres; uitvoert. Voor de andere talen is Engels de standaardtaal. &klettres; wordt geleverd met Engels, Frans en uw eigen taal als die hierboven is vermeld. U kunt aanvullende talen downloaden via het menu-item <menuchoice
+><guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Alfabet in nieuwe taal ophalen...</guimenuitem
+></menuchoice
+>. Hiervoor hebt u een internetverbinding nodig. </para>
+</note>
+<para
+>In niveau 1 ziet en hoort de gebruiker de letter. Hij moet dan de letter in het invulvak typen. Als die goed is verschijnt de volgende letter (zonder op &Enter; te drukken of wat dan ook). Als de gebruiker de verkeerde letter intoetst, hoort hij de klank ervan opnieuw. In dit niveau leert de gebruiker de letters en de plaats ervan op het toetsenbord. </para>
+
+<note>
+<para
+>De letters kunnen als kleine-, maar ook als hoofdletter worden ingetoetst. De letters worden automatisch omgezet naar hoofdletters, zodat een kind ze op het toetsenbord kan herkennen. Hij kan maar een letter per keer typen.</para>
+<para
+>Wanneer een letter wordt ingetoetst in het invoerveld, is het niet nodig daarna op &Enter; te drukken, en het programma wacht even voordat het gaat controleren of deze letter goed is. Deze korte wachttijd geeft een jong kind de gelegenheid te begrijpen wat hij/zij zojuist heeft ingetoetst, vooral als het een verkeerde letter is. U kunt de wachttijd veranderen via menuoptie <menuchoice
+><guimenu
+>Instellingen</guimenu
+> <guimenuitem
+>&klettres; configureren...</guimenuitem
+></menuchoice
+> en de pagina <guimenuitem
+>Tijdklok instellen</guimenuitem
+>. Dit opent een dialoog waarin u twee soorten timers kunt aanpassen, eentje voor de <guilabel
+>Kind</guilabel
+>-presentatie en een voor de <guilabel
+>Volwassenen</guilabel
+>-presentatie. </para>
+</note>
+
+<para
+>Na de eerste keer wordt de ingestelde taal bij het afsluiten van &klettres; bewaard in een configuratiebestand. Deze wordt geladen bij de volgende keer dat het programma wordt gestart, op het niveau waarop je was. </para>
+<para
+>Ook de presentatie (Kind of Volwassene) wordt bewaard in het configuratiebestand, en blijft dus zo totdat deze weer wordt veranderd.</para>
+<para
+>De letters verschijnen in een willekeurige volgorde, nooit twee keer dezelfde achter elkaar.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Schermafbeelding van &klettres; Niveau 2</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; niveau2</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para
+>Hier ziet u een schermafdruk van niveau 2 met de presentatie voor een <emphasis
+>kind</emphasis
+> en voor de Deense taal.</para>
+
+<para
+>Als geklikt wordt op het afrolmenu voor niveau en <guilabel
+>Niveau 2</guilabel
+> wordt gekozen of als het menu <guimenu
+>Niveaus</guimenu
+> wordt gebruikt, komt u in niveau 2. Bij dit niveau hoort de gebruiker alleen de klank van de letter, en moet hij die letter intoetsen. Als hij dit fout doet wordt de letter getoond, om hem te helpen.</para>
+</sect1>
+
+<sect1 id="levels3-and4">
+<title
+>Niveaus 3 en 4</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Schermafbeelding van &klettres; Niveau 3</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres3.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; niveau3</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Hier ziet u &klettres;, niveau 3, presentatie voor <emphasis
+>volwassenen</emphasis
+>, thema <emphasis
+>Savanne</emphasis
+> en met Tsjechische taal ingesteld. </para>
+
+<para
+>In niveau 3 ziet de gebruiker de lettergreep, en hoort hij de klank. Hij moet dan de letters in het invoerveld typen. Als de eerste letter fout is, kan hij niet verder typen. De letter verdwijnt en hij moet het dan nog eens proberen. Het aantal letters is twee of drie, dit is afhankelijk van de taal.</para>
+
+<screenshot>
+<screeninfo
+>Schermafbeelding van &klettres; Niveau 4</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres4.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; niveau4</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Hier ziet u &klettres;, niveau 4, presentatie voor een <emphasis
+>kind</emphasis
+>, thama <emphasis
+>Woestijn</emphasis
+> en de taal is Slowaaks. </para>
+
+<para
+>De klanken worden in een willekeurige volgorde ten gehore gebracht.</para
+> <para
+>Door te klikken op het afrolmenu voor niveau of door het menu <guimenu
+>Niveaus</guimenu
+> te gebruiken in de menubalk en daarin <guilabel
+>Niveau 4</guilabel
+> te kiezen, komt men in niveau 4. In dit niveau hoort de gebruiker alleen maar de klank van de lettergreep, en moet hij de letters intypen. Dit niveau is erg moeilijk voor een klein kind.</para>
+
+</sect1>
+
+<sect1 id ="configuring">
+<title
+>Instellingendialoog</title>
+<para
+>De configuratiedialoog heeft twee pagina's: een voor <guilabel
+>Lettertype</guilabel
+> en een voor de <guilabel
+>Timer</guilabel
+>.</para>
+
+<sect2 id="about-font">
+<title
+>Over lettertype</title>
+
+<para
+>Er is nog een instelling die veranderd kan worden: het lettertype waarin de letters worden getoond. In sommige distributies is het standaardlettertype erg lelijk. In de presentatie voor volwassenen, in het menu-item <menuchoice
+><guimenu
+>Instellingen</guimenu
+><guimenuitem
+>&klettres; configureren...</guimenuitem
+></menuchoice
+> kunt u de pagina <guilabel
+>Lettertype</guilabel
+> vinden, met een dialoogvenster voor het kiezen van een lettertype. Het nieuwe lettertype wordt gebruikt voor het tonen van de letters/lettergrepen en het invoerveld. </para>
+
+<warning>
+<para
+>Het veranderen van het lettertype is ook prettig omdat met sommige lettertypen (Helvetica bijvoorbeeld) Oost-Europese talen zoals Tsjechisch en Slowaaks niet goed kunnen worden weergegeven. Als er letters of lettergrepen zijn, die niet kunnen worden getoond, kies dan een ander lettertype, zoals bijvoorbeeld Arial. </para>
+</warning>
+
+<para
+>U kunt ook de grootte van het lettertype kiezen die u het best bevalt. Deze grootte zal in de configuratie worden opgeslagen. </para>
+
+<screenshot>
+<screeninfo
+>Schermafbeelding van het dialoog voor het kiezen van een lettertype</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres5.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>Dialoog voor het kiezen van een lettertype</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Hier ziet u de dialoog voor het kiezen van een lettertype in &klettres;. </para>
+</sect2>
+
+<sect2 id="timers">
+<title
+>Timer</title>
+
+<para
+>De timer stelt de tijd in tussen twee letters &ie; de tijd gedurende welke een letter wordt getoond. De eenheid is een tiende van een seconde. </para>
+
+<para
+>De pagina <guilabel
+>Timer</guilabel
+> in het menu-item <menuchoice
+><guimenu
+>Instellingen</guimenu
+> <guimenuitem
+>&klettres; configureren...</guimenuitem
+></menuchoice
+> heeft twee timer-instellingen: een voor de <guilabel
+>Kind-presentatie</guilabel
+> en een voor de <guilabel
+>Volwassenen-presentatie</guilabel
+>. Standaard zijn dat 0,4 seconde voor <guilabel
+>Kind-presentatie</guilabel
+> en 0,2 seconde voor de <guilabel
+>Volwassenen-presentatie</guilabel
+>. Vergroten van de tijd geeft meer tijd om uw fouten te zien.</para>
+
+<screenshot>
+<screeninfo
+>Schermafdruk van &klettres; Timer-instellingen</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres6.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Schermafdruk van &klettres; Timer-instellingen</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+<sect1 id="Get-new-stuff">
+<title
+>Een nieuwe taal ophalen</title>
+<para
+>U zou &klettres; kunnen gebruiken om u te helpen om een nieuwe taal te leren. Door het menu-item <menuchoice
+><guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Alfabet in nieuwe taal ophalen...</guimenuitem
+></menuchoice
+> te gebruiken, krijgt u een nieuwe dialoog met de lijst van beschikbare talen (u moet verbonden zijn met het internet om dit te kunnen gebruiken).</para>
+<screenshot>
+<screeninfo
+>Dialoog een nieuwe taal ophalen</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Dialoog een nieuwe taal ophalen</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para
+>Klik op de knop <guilabel
+>Installeren</guilabel
+> rechts van de taal die u wilt installeren.</para>
+<para
+>Merk op dat sommige bestanden verschillende MB groot zijn zodat het, afhankelijk van uw verbinding, langzaam kan lijken.</para>
+<para
+>Nadat het bestand is gedownload, wordt het automatisch geïnstalleerd en wanneer u de dialoog <guilabel
+>Vers van de pers</guilabel
+> sluit, dan ziet u de nieuwe taal in het menu <guimenu
+>Taal</guimenu
+> en kunt u het onmiddellijk gebruiken.</para>
+
+<para
+>Wanneer een taal gedownload is, ziet u de knop <guilabel
+>Install</guilabel
+> veranderen in <guilabel
+>Installatie ongedaan maken</guilabel
+>.</para>
+<para
+>De volgende schermafdruk toont Deens geïnstalleerd.</para>
+<screenshot>
+<screeninfo
+>Deens is geïnstalleerd</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Deens is geïnstalleerd</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Overzicht van de opdrachten</title>
+
+<sect1 id="klettres-mainwindow">
+<title
+>Het hoofdvenster van &klettres;</title>
+
+<sect2>
+<title
+>Het menu Bestand</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Niewe klank</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Speel</action
+> een nieuwe klank af.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>F5</keycap
+> </shortcut
+> <guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Klank opnieuw afspelen</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Speel</action
+> dezelfde klank nog een keer af.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Alfabet in nieuwe taal ophalen...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Opent</action
+> de dialoog <guilabel
+>Vers van de pers</guilabel
+> voor &klettres; om een nieuwe taal op te halen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Afsluiten</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Afsluiten</action
+> van &klettres;.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Het menu Niveau</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Niveau</guimenu
+> <guimenuitem
+>Niveau 1</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kiezen</action
+> van het niveau 1 (letter getoond en klank afgespeeld).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Niveau</guimenu
+> <guimenuitem
+>Niveau 2</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kiezen</action
+> van het niveau 2 (geen letter getoond en alleen klank afgespeeld).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Niveau</guimenu
+> <guimenuitem
+>Niveau 3</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kiezen</action
+> van het niveau 3 (lettergreep getoond en klank afgespeeld).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Niveau</guimenu
+> <guimenuitem
+>Niveau 4</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kiezen</action
+> van het niveau 4 (geen lettergreep getoond en alleen klank afgespeeld).</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+<sect2>
+<title
+>Het menu Taal</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Taal</guimenu
+> <guimenuitem
+>Engels</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kiezen van </action
+> de Engelse taal.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Taal</guimenu
+> <guimenuitem
+>Frans</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Kiezen van </action
+> de Franse taal.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Het menu Uiterlijk</title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Uiterlijk</guimenu
+> <guisubmenu
+>Thema's</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Een submenu voor <action
+>omschakelen</action
+> naar het thema Kind, Woestijn, Savanne of Water</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>K</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Uiterlijk</guimenu
+> <guimenuitem
+>Kind-presentatie</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Omschakelen</action
+> van kind-presentatie: geen menubalk.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>G</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Uiterlijk</guimenu
+> <guimenuitem
+>Volwassenen-presentatie</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Omschakelen</action
+> van volwassenen-presentatie: normaal interface.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Bovendien heeft &klettres; de gezamenlijke menu-items van &kde; <guimenu
+>Instellingen</guimenu
+> en <guimenu
+>Help</guimenu
+>, voor meer informatie lees de secties over de <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Menu-instellingen</ulink
+> en <ulink url="help:/fundamentals/menus.html#menus-help"
+>Menu Help</ulink
+> van &kde;-fundamentals. </para>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="sounds">
+<title
+>Klanken toevoegen aan &klettres;</title>
+
+<para
+>Als u klanken wilt toevoegen in uw eigen taal, dan is dat erg eenvoudig. Maak een opname van de klanken van het alfabet en plaats deze in een map genaamd 'alpha'. Maak dan een opname met de meest gangbare lettergrepen en stop die in een map genaamd 'syllab'.</para
+> 
+<para
+>Maak een tekstbestand <filename
+>sounds.xml</filename
+>, bij voorkeur met &kate; als bewerker of een andere bewerker geschikt voorf verschillende coderingen. Schrijf alle klanken van het alfabet en de lettergrepen erin die u hebt opgenomen, zoals dit voorbeeld voor de Tsjechische taal:</para>
+<programlisting
+>&lt;klettres&gt;
+&lt;language code="cs"&gt;
+    &lt;menuitem&gt;
+      &lt;label&gt;&amp;Czech&lt;/label&gt;
+    &lt;/menuitem&gt;
+    &lt;alphabet&gt;
+        &lt;sound name="A" file="cs/alpha/a.ogg" /&gt;
+        ...
+    &lt;/alphabet&gt;
+    &lt;syllables&gt;
+        &lt;sound name="BA" file="cs/syllab/ba.ogg" /&gt;
+        ...
+    &lt;/syllables&gt;
+  &lt;/language&gt;
+&lt;/klettres&gt;</programlisting>
+<para
+>Vervang "cs" door de tweeletterige taalcode en "Czech" door de naam van uw taal. Schrijf de namen van de klanken met de speciale tekens van uw taal in hoofdletters in utf8.</para>
+
+<para
+>Bovendien laat u weten welke speciale letters er in uw taal zijn zodat we gemakkelijk de speciale werkbalk <guimenuitem
+>Speciale tekens</guimenuitem
+> kan maken. Maak een tekst bestand <filename
+>cs.txt</filename
+> aan (vervang "cs" door de tweeletterige code van uw taal) met elk speciaal teken van uw taal in hoofdletters op een regel. En sla beide tekst bestanden op met <quote
+>utf8</quote
+>-codering (rechtsboven afrolmenu in &kate; staat dat toe).</para>
+
+<para
+>De klanken zouden in het ogg-formaat moeten zijn en lang genoeg voor de geluidsspeler om ze af te spelen (tussen 1,5 en 2 seconden, gaarne enige stilte toevoegen als ze te kort zijn). Maak dan van alles een tarball en stuur deze naar de e-maillijst <email
+>kde-edu@kde.org</email
+>. </para>
+
+<para
+>Kijk op de <ulink url="https://edu.kde.org/klettres/add_language.php"
+>website van &klettres;</ulink
+> voor instructies over het toevoegen van een nieuwe taal. </para>
+</chapter>
+
+<chapter id="faq">
+<title
+>Vragen en antwoorden</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Er is geen achtergrondafbeelding.</para>
+</question>
+<answer>
+<para
+>Als u &klettres; zelf bouwt dan moet u bij het compileren configureren met de optie <option
+>--prefix</option
+> ingesteld op uw &kde;-map of u moet deze map aan uw pad toevoegen.</para
+> </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Ik hoor niets.</para>
+</question>
+<answer>
+<para
+>Verzeker u ervan dat &phonon; werkt op uw systeem. Dat gaat als volgt: open &systemsettings; en in de categorie <guilabel
+>Hardware</guilabel
+> klik op <guilabel
+>Multimedia</guilabel
+>. </para>
+ </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Ik kan niet alle letters zien op de pictogrammen in de speciale werkbalk <guimenuitem
+>Speciale tekens</guimenuitem
+>. Ik zie blokjes in plaats daarvan of de pictogrammen zijn te klein voor sommige talen.</para>
+</question>
+<answer>
+<para
+>&klettres; in Tsjechies en Slovaaks heeft Arial nodig om de speciale tekens weer te geven. Als u geen Arial hebt, informeer dan bij uw distributeur hoe u het lettertype kunt installeren.</para
+> 
+<para
+>Als u &Windows; op uw computer hebt, dan kunt u de TTF-lettertypen van &Windows; gebruiken (dit bevat Arial) via <guilabel
+>Lettertypebeheer</guilabel
+> in de categorie <guilabel
+>Uiterlijk</guilabel
+> van &systemsettings; en voeg de &Windows;-lettertypemap toe.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Waarom zijn er slechts vijfentwintig talen beschikbaar?</para>
+</question>
+<answer>
+<para
+>Om een nieuwe taal toe te voegen, heb we de klanken nodig voor het alfabet en enkele basislettergrepen. Iemand voor wie de nieuwe taal de moedertaal is, moet dan deze klanken opnemen in een wav-, mp3- of het liefst in een ogg-bestand. Voor de niveaus 3 en 4 moeten de lettergrepen worden uitgekozen door een onderwijzer, of door iemand die weet hoe kinderen leren: dit moeten de lettergrepen zijn die men het eerst moet leren na het alfabet, om de grondslagen van een taal goed te kunnen leren. Als u dit kunt doen, stuur dan een e-mail naar <email
+>kde-edu@kde.org</email
+>. Zie <ulink url="https://edu.kde.org/klettres/add_language.php"
+>De webpagina van &klettres;</ulink
+> voor nadere instructies hoe een nieuwe taal moet worden toegevoegd.</para
+> </answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Dankbetuigingen en licentie</title>
+
+<para
+>&klettres; </para>
+<para
+>Programma copyright 2001-2007 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+<para
+>Ik ben de volgende personen erg dankbaar voor hun zeer waardevolle bijdrage: <itemizedlist>
+<listitem
+><para
+>Braziliaans-Portugese klanken: Lindonjohnson Monte (Father) and Michelle Monte 09 years (Son) <email
+>lindon_johnson@brturbo.com.br</email
+></para
+> </listitem>
+<listitem
+><para
+>Klanken Tsjechische taal: Eva Mikulčíková <email
+>evmi@seznam.cz</email
+></para
+> </listitem>
+<listitem
+><para
+>Klanken Deense taal: Erik Kjaer Pedersen <email
+>erik@binghamton.edu</email
+></para
+> </listitem>
+<listitem
+><para
+>Klanken Nederlandse taal: Geert Stams</para
+> </listitem>
+<listitem
+><para
+>Engelse klanken: Robert Wadley <email
+>robntina AT juno DOT com</email
+></para
+></listitem>
+<listitem
+><para
+>Klanken Franse taal: Ludovic Grossard <email
+>grossard@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Duitse klanken: Helmut Kriege <email
+>h.kriege@freenet.de</email
+></para
+></listitem>
+<listitem
+><para
+>Hebreeuwse klanken: Assaf Gorgon <email
+>assafgordon@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Klanken Italiaanse taal: Pietro Pasotti <email
+>pietro@itopen.it</email
+></para
+></listitem>
+<listitem
+><para
+>Kannada klanken: Vikram Vincent <email
+>vincentvikram@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Nedersaksische klanken: Manfred Wiese and Sönke Dibbern <email
+>s_dibbern@web.de</email
+></para
+></listitem>
+<listitem
+><para
+>Luganda klanken: John Magoye en Cormac Lynch <email
+>cormaclynch@eircom.net</email
+></para
+></listitem>
+<listitem
+><para
+>Hindi klanken: Vikas Kharat <email
+>kharat@sancharnet.in</email
+></para
+></listitem>
+<listitem
+><para
+>Klanken Spaanse taal: Ana Belén Caballero en Juan Pedro Paredes <email
+>neneta @iquis.com</email
+></para
+></listitem>
+<listitem
+><para
+>Klanken Slowaakse taal: Silvia Motyčková and Jozef Říha <email
+>silviamotycka@seznam.cz</email
+></para
+></listitem>
+<listitem
+><para
+>Klanken Telugu-taal: Pavithran Shakamuri <email
+>pavithran.s@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Oorspronkelijke pictogrammen: &Primoz.Anzur; <email
+>zerokode@yahoo.com</email
+></para
+></listitem>
+<listitem
+><para
+>Ondersteuning en begeleiding bij het programmeren: &Robert.Gogolok; &Robert.Gogolok.mail;</para
+></listitem>
+<listitem
+><para
+>&SVG;-pictogrammen: Chris Luetchford <email
+>chris@os11.com</email
+></para
+></listitem>
+<listitem
+><para
+>Code voor het genereren van pictogrammen met speciale tekens: Peter Hedlund <email
+>peter@peterandlinda.com</email
+></para
+></listitem>
+<listitem
+><para
+>Aanpassing voor KConfig XT, hulp bij het programmeren: &Waldo.Bastian; &Waldo.Bastian.mail;</para
+></listitem>
+<listitem
+><para
+>Kinderen- en volwassenen-&SVG;-pictogrammen, woestijnthema: &Danny.Allen; <email
+>dannya40uk@yahoo.co.uk</email
+></para
+></listitem>
+<listitem
+><para
+>Widget voor het instellen van de tijdklok: Michael Goettsche <email
+>michael.goettsche@kdemail.net</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Documentatie copyright 2001-2006 &Anne-Marie.Mahfouf;&Anne-Marie.Mahfouf.mail; </para>
+
+&meld.fouten;&vertaling.jaap;&nagelezen.rinse;&vertaling.rinse;&vertaling.freek; &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

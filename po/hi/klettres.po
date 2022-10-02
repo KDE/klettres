@@ -1,0 +1,708 @@
+# translation of klettres.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: klettres\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"PO-Revision-Date: 2021-08-21 16:25+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.0\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "raviratlami@aol.in,"
+
+#: klettres.cpp:90
+#, kde-format
+msgid ""
+"The file sounds.xml was not found in\n"
+"$KDEDIR/share/apps/klettres/\n"
+"\n"
+"Please install this file and start KLettres again.\n"
+"\n"
+msgstr ""
+"फ़ाइल sounds.xml नहीं मिला यहाँ-\n"
+"$KDEDIR/share/apps/klettres/\n"
+"\n"
+"कृपया इस फ़ाइल को संस्थापित करें तथा के-लेटर्स फिर से प्रारंभ करें.\n"
+"\n"
+
+#: klettres.cpp:93
+#, fuzzy, kde-format
+#| msgid "KLettres"
+msgid "KLettres - Error"
+msgstr "के-लेटर्स"
+
+#: klettres.cpp:115
+#, kde-format
+msgid "New Sound"
+msgstr "नई ध्वनि"
+
+#: klettres.cpp:119
+#, kde-format
+msgid "Play a new sound"
+msgstr "नई ध्वनि बजाएँ"
+
+#: klettres.cpp:120
+#, kde-format
+msgid ""
+"You can play a new sound by clicking this button or using the File menu, New "
+"Sound."
+msgstr ""
+"आप इस बटन को दबाकर या फ़ाइल मेन्यू में नई ध्वनि का प्रयोग कर नई ध्वनि बजा सकते हैं."
+
+#: klettres.cpp:123
+#, kde-format
+msgid "Get Alphabet in New Language..."
+msgstr "नई भाषा में अक्षर प्राप्त करें..."
+
+#: klettres.cpp:128
+#, kde-format
+msgid "Replay Sound"
+msgstr "ध्वनि फििर से बजाएँ"
+
+#: klettres.cpp:131
+#, kde-format
+msgid "Play the same sound again"
+msgstr "उसी ध्वनि को फिर से बजाएँ"
+
+#: klettres.cpp:133
+#, kde-format
+msgid ""
+"You can replay the same sound again by clicking this button or using the "
+"File menu, Replay Sound."
+msgstr ""
+"आप उसी ध्वनि को इस बटन पर क्लिक कर या फ़ाइल मेन्यू में फिर से ध्वनि बजाएँ चुन कर फिर से "
+"बजा सकते हैं."
+
+#: klettres.cpp:139
+#, kde-format
+msgctxt "@label:listbox which difficulty level to use"
+msgid "L&evel"
+msgstr "स्तर (&e)"
+
+#: klettres.cpp:140
+#, kde-format
+msgid "Select the level"
+msgstr "स्तर चुनें"
+
+#: klettres.cpp:141
+#, kde-format
+msgid ""
+"You can select the level: level 1 displays a letter and you hear it; level 2 "
+"does not display the letter, you only hear it; level 3 displays a syllable "
+"and you hear it; level 4 does not display the syllable, you only hear it."
+msgstr ""
+
+#: klettres.cpp:144
+#, kde-format
+msgctxt "@label:listbox"
+msgid "&Language"
+msgstr "भाषा (&L)"
+
+#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox choose level 1"
+#| msgid "Level 1"
+msgctxt "@item:inlistbox choose level"
+msgid "Level %1"
+msgid_plural "Level %1"
+msgstr[0] "स्तर 1"
+msgstr[1] "स्तर 1"
+
+#: klettres.cpp:155
+#, kde-format
+msgid "Themes"
+msgstr "प्रसंग"
+
+#: klettres.cpp:158
+#, kde-format
+msgid "Select the theme"
+msgstr "प्रसंग चुनें"
+
+#: klettres.cpp:159
+#, kde-format
+msgid ""
+"Here you can change the theme for KLettres. A theme consists in the "
+"background picture and the font color for the letter displayed."
+msgstr ""
+
+#: klettres.cpp:162
+#, kde-format
+msgid "Mode Kid"
+msgstr "मोड किड"
+
+#: klettres.cpp:166
+#, kde-format
+msgid ""
+"If you are in the Grown-up mode, clicking on this button will set up the Kid "
+"mode. The Kid mode has no menubar and the font is bigger in the statusbar."
+msgstr ""
+
+#: klettres.cpp:169
+#, kde-format
+msgid "Mode Grown-up"
+msgstr "मोड ग्रोन-अप"
+
+#: klettres.cpp:173
+#, kde-format
+msgid "The Grownup mode is the normal mode where you can see the menubar."
+msgstr "ग्रोनअप मोड वह सामान्य मोड है जहाँ आप मेन्यूपट्टी को देख सकते हैं."
+
+#. i18n: ectx: label, entry (Font), group (mFont)
+#: klettres.cpp:209 klettres.kcfg:51
+#, kde-format
+msgid "Font"
+msgstr "फ़ॉन्ट"
+
+#: klettres.cpp:209
+#, kde-format
+msgid "Font Settings"
+msgstr "फ़ॉन्ट विन्यास"
+
+#: klettres.cpp:213
+#, kde-format
+msgid "Timer"
+msgstr "टाइमर"
+
+#: klettres.cpp:213
+#, fuzzy, kde-format
+#| msgid "Timer setting widgets"
+msgid "Timer Settings"
+msgstr "टाइमर सेटिंग विज़ेट्स"
+
+#: klettres.cpp:231 klettres.cpp:299
+#, kde-format
+msgctxt "@info:status the current level chosen"
+msgid "(Level %1)"
+msgstr "(स्तर %1)"
+
+#: klettres.cpp:342
+#, kde-format
+msgid "Grown-up mode is currently active"
+msgstr "ग्रोनअप मोड वर्तमान में सक्रिय है"
+
+#: klettres.cpp:343
+#, kde-format
+msgid "Switch to Kid mode"
+msgstr "किड मोड में स्विच करें"
+
+#: klettres.cpp:361
+#, kde-format
+msgid "Kid mode is currently active"
+msgstr "किड मोड वर्तमान में सक्रिय है"
+
+#: klettres.cpp:362
+#, kde-format
+msgid "Switch to Grown-up mode"
+msgstr "ग्रोन-अप मोड में स्विच करें"
+
+#: klettres.cpp:383
+#, kde-format
+msgid ""
+"File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
+"please check your installation."
+msgstr ""
+"फ़ाइल $KDEDIR/share/apps/klettres/%1.txt नहीं मिला;\n"
+"कृपया अपनी संस्थापना जाँचें."
+
+#: klettres.cpp:386
+#, kde-format
+msgid "Error"
+msgstr "त्रुटि"
+
+#. i18n: ectx: label, entry (Language), group (General)
+#: klettres.kcfg:10
+#, kde-format
+msgid "Language"
+msgstr "भाषा"
+
+#. i18n: ectx: label, entry (Theme), group (General)
+#: klettres.kcfg:14
+#, kde-format
+msgid "Theme"
+msgstr "प्रसंग"
+
+#. i18n: ectx: label, entry (MenuBarBool), group (General)
+#: klettres.kcfg:23
+#, kde-format
+msgid "Whether the menubar is shown or hidden"
+msgstr ""
+
+#. i18n: ectx: label, entry (Mode), group (General)
+#: klettres.kcfg:27
+#, kde-format
+msgid "Mode"
+msgstr "मोड"
+
+#. i18n: ectx: label, entry (Level), group (General)
+#: klettres.kcfg:35
+#, kde-format
+msgid "Difficulty level."
+msgstr "कठिनाई स्तर"
+
+#. i18n: ectx: label, entry (KidTimer), group (General)
+#: klettres.kcfg:41
+#, kde-format
+msgid "Kid Timer"
+msgstr "किड टाइमर"
+
+#. i18n: ectx: label, entry (GrownTimer), group (General)
+#: klettres.kcfg:45
+#, kde-format
+msgid "Grown-up Timer"
+msgstr "ग्रोन-अप टाइमर"
+
+#. i18n: ectx: Menu (file)
+#: klettresui.rc:4
+#, kde-format
+msgid "&File"
+msgstr "फ़ाइल (&F)"
+
+#. i18n: ectx: Menu (look_mode)
+#: klettresui.rc:15
+#, kde-format
+msgid "L&ook"
+msgstr "देखें (&o)"
+
+#. i18n: ectx: Menu (settings)
+#: klettresui.rc:23
+#, kde-format
+msgid "&Settings"
+msgstr "विन्यास (&S)"
+
+#. i18n: ectx: ToolBar (mainToolbar)
+#: klettresui.rc:33
+#, kde-format
+msgid "Main"
+msgstr "मुख्य"
+
+#. i18n: ectx: ToolBar (specialCharToolbar)
+#: klettresui.rc:47
+#, kde-format
+msgid "Special Characters"
+msgstr "विशिष्ट अक्षर"
+
+#: klettresview.cpp:32
+#, kde-format
+msgid "Type the letter or syllable that you just heard"
+msgstr "पत्र या सिलेबल जो आपने अभी सुना वह टाइप करें"
+
+#: klettresview.cpp:131
+#, kde-format
+msgctxt "%1 is uppercase letter, %2 is the same in lowercase"
+msgid "%1 / %2"
+msgstr ""
+
+#: kltheme.cpp:36
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Kid"
+msgstr "किड"
+
+#: kltheme.cpp:86
+#, kde-format
+msgctxt "@item:inlistbox desert theme for the interface"
+msgid "Desert"
+msgstr "मरूस्थल"
+
+#: kltheme.cpp:136
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Savannah"
+msgstr "सावाना"
+
+#: kltheme.cpp:187
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Aqua"
+msgstr ""
+
+#: langutils.cpp:88
+#, kde-format
+msgid "Romanized Hindi"
+msgstr "रोमनीकृत हिन्दी"
+
+#: langutils.cpp:90
+#, kde-format
+msgid "Luganda"
+msgstr "लुगांडा"
+
+#: langutils.cpp:92
+#, fuzzy, kde-format
+#| msgid "English sounds"
+msgid "English Phonics"
+msgstr "अंग्रेज़ी ध्वनि"
+
+#: langutils.cpp:94
+#, kde-format
+msgid "Tswana"
+msgstr ""
+
+#: langutils.cpp:99
+#, kde-format
+msgctxt "@item:inlistbox no language for that locale"
+msgid "None"
+msgstr ""
+
+#: main.cpp:40
+#, kde-format
+msgid "KLettres"
+msgstr "के-लेटर्स"
+
+#: main.cpp:40
+#, kde-format
+msgid ""
+"KLettres helps a very young child or an adult learning \n"
+"a new language by associating sounds and \n"
+"letters in this language.\n"
+"\n"
+"25 languages are available."
+msgstr ""
+
+#: main.cpp:44
+#, fuzzy, kde-format
+#| msgid "(C) 2001-2007 Anne-Marie Mahfouf"
+msgid "(C) 2001-2011 Anne-Marie Mahfouf"
+msgstr "(C) 2001-2007 एन मेरी माहफॉफ"
+
+#: main.cpp:45
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "एन्ने मैरी मेहफोफ"
+
+#: main.cpp:46
+#, kde-format
+msgid "Marc Cheng"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Kids and grown-up oxygen icons"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Danny Allen"
+msgstr "डैनी एलन"
+
+#: main.cpp:49
+#, fuzzy, kde-format
+#| msgid "SVG background pictures, kids and grown-up SVG icons"
+msgid "SVG background pictures"
+msgstr "एसवीजी पृष्ठभूमि छवियाँ, बच्चे तथा ग्रोनअप एसवीजी प्रतीक."
+
+#: main.cpp:50
+#, kde-format
+msgid "Robert Gogolok"
+msgstr "रॉबर्ट गोगोलोक"
+
+#: main.cpp:51
+#, kde-format
+msgid "Support and coding guidance"
+msgstr "समर्थन तथा कोडिंग मार्गदर्शन"
+
+#: main.cpp:52
+#, kde-format
+msgid "Peter Hedlund"
+msgstr "पीटर हेडलुंड"
+
+#: main.cpp:53
+#, kde-format
+msgid "Code for generating special characters' icons"
+msgstr "विशेष अक्षरों के प्रतीक ज़ेनरेट करने हेतु कोड"
+
+#: main.cpp:54
+#, kde-format
+msgid "Waldo Bastian"
+msgstr "वाल्दो बास्तियान"
+
+#: main.cpp:55
+#, kde-format
+msgid "Port to KConfig XT, coding help"
+msgstr "के-कॉन्फ़िग एक्सटी में पोर्ट, कोड लिखने में मदद"
+
+#: main.cpp:56
+#, kde-format
+msgid "Pino Toscano"
+msgstr "पिनो टोसकानो"
+
+#: main.cpp:57
+#, kde-format
+msgid "Code cleaning, Theme class"
+msgstr "कोड साफ करना, प्रसंग क्लास"
+
+#: main.cpp:58
+#, kde-format
+msgid "Michael Goettsche"
+msgstr "माइकल गोएत्चे"
+
+#: main.cpp:59
+#, kde-format
+msgid "Timer setting widgets"
+msgstr "टाइमर सेटिंग विज़ेट्स"
+
+#: main.cpp:60
+#, kde-format
+msgid "Laurent Navet"
+msgstr ""
+
+#: main.cpp:61
+#, kde-format
+msgid "Port to KDE Frameworks 5"
+msgstr ""
+
+#: soundfactory.cpp:86
+#, kde-format
+msgid "Error while loading the sound names."
+msgstr "ध्वनि नाम लोड करने में त्रुटि."
+
+#: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
+#, fuzzy, kde-format
+#| msgid "tenths of second"
+msgid "1 tenth of second"
+msgid_plural "%1 tenths of second"
+msgstr[0] "सेकंड का दसवां हिस्सा"
+msgstr[1] "सेकंड का दसवां हिस्सा"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: timerui.ui:51
+#, kde-format
+msgid "Set the time between 2 letters."
+msgstr "२ अक्षरों के बीच का समय सेट करें"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_KidTimer)
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:91 timerui.ui:184
+#, fuzzy, kde-format
+#| msgid "tenths of second"
+msgid "Set the timer (in tenths of seconds)"
+msgstr "सेकंड का दसवां हिस्सा"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_KidTimer)
+#: timerui.ui:94
+#, kde-format
+msgid ""
+"You can set the time between two letters in Kid mode. Default is 4 tenths of "
+"seconds but younger children might need longer time."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: timerui.ui:122
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Kid Mode</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">किड मोड</p></body></html>"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:187
+#, kde-format
+msgid ""
+"You can set the time between two letters in Grown-up mode. Default is 2 "
+"tenths of seconds."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: timerui.ui:215
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Grown-up Mode</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">ग्रोन अप मोड</p></body></html>"
+
+#, fuzzy
+#~| msgid "KLettres"
+#~ msgid "Klettres"
+#~ msgstr "के-लेटर्स"
+
+#~ msgid "Ludovic Grossard"
+#~ msgstr "लुडोविक ग्रोसार्ड"
+
+#~ msgid "French sounds"
+#~ msgstr "फ्रांसीसी ध्वनि"
+
+#~ msgid "Geert Stams"
+#~ msgstr "गीर्त स्टैम्स"
+
+#~ msgid "Dutch sounds"
+#~ msgstr "डच ध्वनि"
+
+#~ msgid "Erik Kjaer Pedersen"
+#~ msgstr "एरिक कजेर पेडर्सन"
+
+#~ msgid "Danish sounds"
+#~ msgstr "दानिश ध्वनि"
+
+#~ msgid "Eva Mikulčíková"
+#~ msgstr "इवा मििकुलसिकोवा"
+
+#~ msgid "Czech sounds"
+#~ msgstr "चेक ध्वनि"
+
+#~ msgid "Silvia Motyčková & Jozef Říha"
+#~ msgstr "स्लिविया मोताकोवा तथा जोजेफ रिया"
+
+#~ msgid "Slovak sounds"
+#~ msgstr "स्लोवाक ध्वनि"
+
+#~ msgid "Robert Wadley"
+#~ msgstr "रॉबर्ट वाडले"
+
+#~ msgid "English sounds"
+#~ msgstr "अंग्रेज़ी ध्वनि"
+
+#~ msgid "Pietro Pasotti"
+#~ msgstr "पेत्रो पासोती"
+
+#~ msgid "Italian sounds"
+#~ msgstr "इतालवी ध्वनियाँ"
+
+#~ msgid "Ana Belén Caballero and Juan Pedro Paredes"
+#~ msgstr "आना बेलेन काबालेरो तथा जुआन पेद्रो परेदेस"
+
+#~ msgid "Spanish sounds"
+#~ msgstr "स्पैनी ध्वनि"
+
+#~ msgid "Vikas Kharat"
+#~ msgstr "विकास करात"
+
+#~ msgid "Romanized Hindi sounds"
+#~ msgstr "रोमनीकृत हिन्दी ध्वनि"
+
+#~ msgid "John Magoye and Cormac Lynch"
+#~ msgstr "जान मागोये तथा कोरमाक लायंच"
+
+#~ msgid "Luganda sounds"
+#~ msgstr "लुगांडा ध्वनि"
+
+#~ msgid "Helmut Kriege"
+#~ msgstr "हेलमुट क्रिग"
+
+#~ msgid "German sounds"
+#~ msgstr "जर्मनी ध्वनि"
+
+#~ msgid "Assaf Gorgon and Diego Iastrubni"
+#~ msgstr "असाफ गोरगोन तथा डिएगो लास्त्रुबनी"
+
+#~ msgid "Hebrew sounds"
+#~ msgstr "हीब्रू ध्वनि"
+
+#~ msgid "Lisa Kriege"
+#~ msgstr "लिसा क्रिग"
+
+#~ msgid "British English sounds"
+#~ msgstr "ब्रितानी अंग्रेज़ी ध्वनि"
+
+#, fuzzy
+#~| msgid "Luganda sounds"
+#~ msgid "Kannada sounds"
+#~ msgstr "लुगांडा ध्वनि"
+
+#~ msgid "Show &Menubar"
+#~ msgstr "मेन्यू पट्टी दिखाएँ (&M)"
+
+#~ msgid "Hide &Menubar"
+#~ msgstr "मेन्यूपट्टी छुपाएँ (&M)"
+
+#~ msgid ""
+#~ "You can show or hide the menubar as you wish by clicking this button."
+#~ msgstr "इस बटन को क्लिक कर आप मेन्यू पट्टी को अपनी इच्छानुसार छुपा या दिखा सकते हैं."
+
+#~ msgid "Show Menubar"
+#~ msgstr "मेनू-पट्टी दिखाएँ"
+
+#~ msgid "Hide Menubar"
+#~ msgstr "मेन्यूपट्टी छुपाएँ"
+
+#~ msgctxt "@item:inlistbox choose level 2"
+#~ msgid "Level 2"
+#~ msgstr "स्तर 2"
+
+#~ msgctxt "@item:inlistbox choose level 3"
+#~ msgid "Level 3"
+#~ msgstr "स्तर 3"
+
+#~ msgctxt "@item:inlistbox choose level 4"
+#~ msgid "Level 4"
+#~ msgstr "स्तर 4"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style="
+#~ "\" white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+#~ "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+#~ "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+#~ "indent:0; text-indent:0px;\">Set the timer (in tens of seconds)</p></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style="
+#~ "\" white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+#~ "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+#~ "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+#~ "indent:0; text-indent:0px;\">टाइमर सेट करें (सेकण्ड के दसवें हिस्से में)</p></body></"
+#~ "html>"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style="
+#~ "\" white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+#~ "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+#~ "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+#~ "indent:0; text-indent:0px;\">You can set the time between two letters in "
+#~ "Kid mode. Default is 4 tens of seconds but younger children might need "
+#~ "longer time.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style="
+#~ "\" white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+#~ "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+#~ "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+#~ "indent:0; text-indent:0px;\">आप किड मोड में दो अक्षरों के बीच का समय सेट कर सकते "
+#~ "हैं. डिफ़ॉल्ट है सेकण्ड का ४ दसवां हिस्सा, परंतु छोटे बच्चों को अधिक समय की आवश्यकता हो "
+#~ "सकती है </p></body></html>"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style="
+#~ "\" white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+#~ "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+#~ "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+#~ "indent:0; text-indent:0px;\">You can set the time between two letters in "
+#~ "Grown-up mode. Default is 2 tens of seconds.</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style="
+#~ "\" white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+#~ "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+#~ "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+#~ "indent:0; text-indent:0px;\">आप ग्रोन अप मोड में दो अक्षरों के बीच का समय सेट कर "
+#~ "सकते हैं. डिफ़ॉल्ट है सेकण्ड के २ दसवें हिस्से.</p></body></html>"

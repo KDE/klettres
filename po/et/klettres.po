@@ -1,0 +1,689 @@
+# Translation of klettres.po to Estonian.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+#
+# Marek Laane <bald@starman.ee>, 2002-2009.
+# Marek Laane <bald@smail.ee>, 2009, 2011, 2014, 2016, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: klettres\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"PO-Revision-Date: 2019-11-11 20:14+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marek Laane"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "qiilaq69@gmail.com"
+
+#: klettres.cpp:90
+#, kde-format
+msgid ""
+"The file sounds.xml was not found in\n"
+"$KDEDIR/share/apps/klettres/\n"
+"\n"
+"Please install this file and start KLettres again.\n"
+"\n"
+msgstr ""
+"Faili sounds.xml ei leitud kataloogis\n"
+"$KDEDIR/share/apps/klettres/\n"
+"\n"
+"Palun paigalda fail ja käivita KLettres uuesti.\n"
+"\n"
+
+#: klettres.cpp:93
+#, kde-format
+msgid "KLettres - Error"
+msgstr "KLettres - viga"
+
+#: klettres.cpp:115
+#, kde-format
+msgid "New Sound"
+msgstr "Uus häälik"
+
+#: klettres.cpp:119
+#, kde-format
+msgid "Play a new sound"
+msgstr "Esita uus häälik"
+
+#: klettres.cpp:120
+#, kde-format
+msgid ""
+"You can play a new sound by clicking this button or using the File menu, New "
+"Sound."
+msgstr ""
+"Uut häälikut saab esitada kas klõpsuga sellele nupule või menüükäsuga Fail -"
+"> Uus häälik."
+
+#: klettres.cpp:123
+#, kde-format
+msgid "Get Alphabet in New Language..."
+msgstr "Hangi uue keele tähestik..."
+
+#: klettres.cpp:128
+#, kde-format
+msgid "Replay Sound"
+msgstr "Korda häälikut"
+
+#: klettres.cpp:131
+#, kde-format
+msgid "Play the same sound again"
+msgstr "Esita sama häälik uuesti"
+
+#: klettres.cpp:133
+#, kde-format
+msgid ""
+"You can replay the same sound again by clicking this button or using the "
+"File menu, Replay Sound."
+msgstr ""
+"Sama häälikut saab uuesti esitada kas klõpsuga sellele nupule või "
+"menüükäsuga Fail -> Korda häälikut."
+
+#: klettres.cpp:139
+#, kde-format
+msgctxt "@label:listbox which difficulty level to use"
+msgid "L&evel"
+msgstr "Tas&e"
+
+#: klettres.cpp:140
+#, kde-format
+msgid "Select the level"
+msgstr "Vali tase"
+
+#: klettres.cpp:141
+#, kde-format
+msgid ""
+"You can select the level: level 1 displays a letter and you hear it; level 2 "
+"does not display the letter, you only hear it; level 3 displays a syllable "
+"and you hear it; level 4 does not display the syllable, you only hear it."
+msgstr ""
+"Siin saad valida taseme: tasemel 1 näidatakse tähte ja sa kuuled seda, "
+"tasemel 2 tähte ei näidata, sa ainult kuuled seda, tasemel 3 näidatakse "
+"silpi ja sa kuuled seda, tasemel 4 silpi ei näidata, sa ainult kuuled seda."
+
+#: klettres.cpp:144
+#, kde-format
+msgctxt "@label:listbox"
+msgid "&Language"
+msgstr "Kee&l"
+
+#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#, kde-format
+msgctxt "@item:inlistbox choose level"
+msgid "Level %1"
+msgid_plural "Level %1"
+msgstr[0] "Tase %1"
+msgstr[1] "Tase %1"
+
+#: klettres.cpp:155
+#, kde-format
+msgid "Themes"
+msgstr "Teemad"
+
+#: klettres.cpp:158
+#, kde-format
+msgid "Select the theme"
+msgstr "Vali teema"
+
+#: klettres.cpp:159
+#, kde-format
+msgid ""
+"Here you can change the theme for KLettres. A theme consists in the "
+"background picture and the font color for the letter displayed."
+msgstr ""
+"Siin saab muuta KLettresi teemat. Teema koosneb taustapildist ja tähtede "
+"näitamisel kasutatava fondi värvist."
+
+#: klettres.cpp:162
+#, kde-format
+msgid "Mode Kid"
+msgstr "Lasterežiim"
+
+#: klettres.cpp:166
+#, kde-format
+msgid ""
+"If you are in the Grown-up mode, clicking on this button will set up the Kid "
+"mode. The Kid mode has no menubar and the font is bigger in the statusbar."
+msgstr ""
+"Täiskasvanute režiimis olles kehtestab klõps sellele nupule lasterežiimi. "
+"Viimase puhul menüüriba ei näidata ning olekuriba font on suurem."
+
+#: klettres.cpp:169
+#, kde-format
+msgid "Mode Grown-up"
+msgstr "Täiskasvanute režiim"
+
+#: klettres.cpp:173
+#, kde-format
+msgid "The Grownup mode is the normal mode where you can see the menubar."
+msgstr "Täiskasvanute režiim on tavaline režiim, kus näeb ka menüüriba."
+
+#. i18n: ectx: label, entry (Font), group (mFont)
+#: klettres.cpp:209 klettres.kcfg:51
+#, kde-format
+msgid "Font"
+msgstr "Font"
+
+#: klettres.cpp:209
+#, kde-format
+msgid "Font Settings"
+msgstr "Fondiseadistused"
+
+#: klettres.cpp:213
+#, kde-format
+msgid "Timer"
+msgstr "Taimer"
+
+#: klettres.cpp:213
+#, fuzzy, kde-format
+#| msgid "Timer setting widgets"
+msgid "Timer Settings"
+msgstr "Taimeri seadistusvidinad"
+
+#: klettres.cpp:231 klettres.cpp:299
+#, kde-format
+msgctxt "@info:status the current level chosen"
+msgid "(Level %1)"
+msgstr "(Tase %1)"
+
+#: klettres.cpp:342
+#, kde-format
+msgid "Grown-up mode is currently active"
+msgstr "Praegu on aktiivne täiskasvanute režiim"
+
+#: klettres.cpp:343
+#, kde-format
+msgid "Switch to Kid mode"
+msgstr "Lülitumine lasterežiimi"
+
+#: klettres.cpp:361
+#, kde-format
+msgid "Kid mode is currently active"
+msgstr "Praegu on aktiivne lasterežiim"
+
+#: klettres.cpp:362
+#, kde-format
+msgid "Switch to Grown-up mode"
+msgstr "Lülitumine täiskasvanute režiimi"
+
+#: klettres.cpp:383
+#, kde-format
+msgid ""
+"File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
+"please check your installation."
+msgstr ""
+"Faili $KDEDIR/share/apps/klettres/%1.txt ei leitud.\n"
+"Kontrolli palun paigaldust."
+
+#: klettres.cpp:386
+#, kde-format
+msgid "Error"
+msgstr "Viga"
+
+#. i18n: ectx: label, entry (Language), group (General)
+#: klettres.kcfg:10
+#, kde-format
+msgid "Language"
+msgstr "Keel"
+
+#. i18n: ectx: label, entry (Theme), group (General)
+#: klettres.kcfg:14
+#, kde-format
+msgid "Theme"
+msgstr "Teema"
+
+#. i18n: ectx: label, entry (MenuBarBool), group (General)
+#: klettres.kcfg:23
+#, kde-format
+msgid "Whether the menubar is shown or hidden"
+msgstr "Kas menüüriba näidata või see peita"
+
+#. i18n: ectx: label, entry (Mode), group (General)
+#: klettres.kcfg:27
+#, kde-format
+msgid "Mode"
+msgstr "Režiim"
+
+#. i18n: ectx: label, entry (Level), group (General)
+#: klettres.kcfg:35
+#, kde-format
+msgid "Difficulty level."
+msgstr "Raskusaste."
+
+#. i18n: ectx: label, entry (KidTimer), group (General)
+#: klettres.kcfg:41
+#, kde-format
+msgid "Kid Timer"
+msgstr "Lastetaimer"
+
+#. i18n: ectx: label, entry (GrownTimer), group (General)
+#: klettres.kcfg:45
+#, kde-format
+msgid "Grown-up Timer"
+msgstr "Täiskasvanute taimer"
+
+#. i18n: ectx: Menu (file)
+#: klettresui.rc:4
+#, kde-format
+msgid "&File"
+msgstr "&Fail"
+
+#. i18n: ectx: Menu (look_mode)
+#: klettresui.rc:15
+#, kde-format
+msgid "L&ook"
+msgstr "&Välimus"
+
+#. i18n: ectx: Menu (settings)
+#: klettresui.rc:23
+#, kde-format
+msgid "&Settings"
+msgstr "&Seadistused"
+
+#. i18n: ectx: ToolBar (mainToolbar)
+#: klettresui.rc:33
+#, kde-format
+msgid "Main"
+msgstr "Peamine"
+
+#. i18n: ectx: ToolBar (specialCharToolbar)
+#: klettresui.rc:47
+#, kde-format
+msgid "Special Characters"
+msgstr "Eritähed"
+
+#: klettresview.cpp:32
+#, kde-format
+msgid "Type the letter or syllable that you just heard"
+msgstr "Kirjuta täht või silp, mida sa praegu kuulsid"
+
+#: klettresview.cpp:131
+#, kde-format
+msgctxt "%1 is uppercase letter, %2 is the same in lowercase"
+msgid "%1 / %2"
+msgstr "%1 / %2"
+
+#: kltheme.cpp:36
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Kid"
+msgstr "Laste"
+
+#: kltheme.cpp:86
+#, kde-format
+msgctxt "@item:inlistbox desert theme for the interface"
+msgid "Desert"
+msgstr "Kõrb"
+
+#: kltheme.cpp:136
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Savannah"
+msgstr "Savannah"
+
+#: kltheme.cpp:187
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Aqua"
+msgstr "Aqua"
+
+#: langutils.cpp:88
+#, kde-format
+msgid "Romanized Hindi"
+msgstr "Latiniseeritud hindi"
+
+#: langutils.cpp:90
+#, kde-format
+msgid "Luganda"
+msgstr "Luganda"
+
+#: langutils.cpp:92
+#, kde-format
+msgid "English Phonics"
+msgstr "Inglise häälikud"
+
+#: langutils.cpp:94
+#, kde-format
+msgid "Tswana"
+msgstr "Tsvaana"
+
+#: langutils.cpp:99
+#, kde-format
+msgctxt "@item:inlistbox no language for that locale"
+msgid "None"
+msgstr "Puudub"
+
+#: main.cpp:40
+#, kde-format
+msgid "KLettres"
+msgstr "KLettres"
+
+#: main.cpp:40
+#, kde-format
+msgid ""
+"KLettres helps a very young child or an adult learning \n"
+"a new language by associating sounds and \n"
+"letters in this language.\n"
+"\n"
+"25 languages are available."
+msgstr ""
+"KLettres aitab uut keelt õppival väikelapsel või täiskasvanul \n"
+"seostada võõrkeele häälikud ja tähed emakeele \n"
+"tähtede ja häälikutega.\n"
+"Praegu on võimalik kasutada 25 keelt."
+
+#: main.cpp:44
+#, kde-format
+msgid "(C) 2001-2011 Anne-Marie Mahfouf"
+msgstr "(C) 2001-2011: Anne-Marie Mahfouf"
+
+#: main.cpp:45
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: main.cpp:46
+#, kde-format
+msgid "Marc Cheng"
+msgstr "Marc Cheng"
+
+#: main.cpp:47
+#, kde-format
+msgid "Kids and grown-up oxygen icons"
+msgstr "Laste ja täiskasvanute Oxygeni ikoonid"
+
+#: main.cpp:48
+#, kde-format
+msgid "Danny Allen"
+msgstr "Danny Allen"
+
+#: main.cpp:49
+#, kde-format
+msgid "SVG background pictures"
+msgstr "SVG taustapildid"
+
+#: main.cpp:50
+#, kde-format
+msgid "Robert Gogolok"
+msgstr "Robert Gogolok"
+
+#: main.cpp:51
+#, kde-format
+msgid "Support and coding guidance"
+msgstr "Toetamine ja kood"
+
+#: main.cpp:52
+#, kde-format
+msgid "Peter Hedlund"
+msgstr "Peter Hedlund"
+
+#: main.cpp:53
+#, kde-format
+msgid "Code for generating special characters' icons"
+msgstr "Eritähtede ikoonide genereerimise kood"
+
+#: main.cpp:54
+#, kde-format
+msgid "Waldo Bastian"
+msgstr "Waldo Bastian"
+
+#: main.cpp:55
+#, kde-format
+msgid "Port to KConfig XT, coding help"
+msgstr "KConfig XT port, abi koodi juures"
+
+#: main.cpp:56
+#, kde-format
+msgid "Pino Toscano"
+msgstr "Pino Toscano"
+
+#: main.cpp:57
+#, kde-format
+msgid "Code cleaning, Theme class"
+msgstr "Koodi puhastamine, klass Theme"
+
+#: main.cpp:58
+#, kde-format
+msgid "Michael Goettsche"
+msgstr "Michael Goettsche"
+
+#: main.cpp:59
+#, kde-format
+msgid "Timer setting widgets"
+msgstr "Taimeri seadistusvidinad"
+
+#: main.cpp:60
+#, kde-format
+msgid "Laurent Navet"
+msgstr "Laurent Navet"
+
+#: main.cpp:61
+#, kde-format
+msgid "Port to KDE Frameworks 5"
+msgstr "KDE Frameworks 5 port"
+
+#: soundfactory.cpp:86
+#, kde-format
+msgid "Error while loading the sound names."
+msgstr "Viga häälikunimede avamisel."
+
+#: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
+#, kde-format
+msgid "1 tenth of second"
+msgid_plural "%1 tenths of second"
+msgstr[0] "1 kümnendiksekund"
+msgstr[1] "%1 kümnendiksekundit"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: timerui.ui:51
+#, kde-format
+msgid "Set the time between 2 letters."
+msgstr "Kahe tähe vahelise aja määramine."
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_KidTimer)
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:91 timerui.ui:184
+#, kde-format
+msgid "Set the timer (in tenths of seconds)"
+msgstr "Taimeri määramine (kümnendisksekundites)"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_KidTimer)
+#: timerui.ui:94
+#, kde-format
+msgid ""
+"You can set the time between two letters in Kid mode. Default is 4 tenths of "
+"seconds but younger children might need longer time."
+msgstr ""
+"Siin saab määrata kahe tähe vahelise aja lasterežiimis. Vaikimis on see 4 "
+"kümnendiksekundit, aga eriti väiksematel lastel võib vaja minna veidi rohkem "
+"aega."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: timerui.ui:122
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Kid Mode</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Lasterežiim</p></body></html>"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:187
+#, kde-format
+msgid ""
+"You can set the time between two letters in Grown-up mode. Default is 2 "
+"tenths of seconds."
+msgstr ""
+"Siin saab määrata kahe tähe vahelise aja täiskasvanute režiimis. Vaikimis on "
+"see 2 kümnendiksekundit."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: timerui.ui:215
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Grown-up Mode</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Täiskasvanute režiim</p></body></html>"
+
+#~ msgid "Klettres"
+#~ msgstr "Klettres"
+
+#~ msgid "Ludovic Grossard"
+#~ msgstr "Ludovic Grossard"
+
+#~ msgid "French sounds"
+#~ msgstr "Prantsuse häälikud"
+
+#~ msgid "Geert Stams"
+#~ msgstr "Geert Stams"
+
+#~ msgid "Dutch sounds"
+#~ msgstr "Hollandi häälikud"
+
+#~ msgid "Erik Kjaer Pedersen"
+#~ msgstr "Erik Kjaer Pedersen"
+
+#~ msgid "Danish sounds"
+#~ msgstr "Taani häälikud"
+
+#~ msgid "Eva Mikulčíková"
+#~ msgstr "Eva Mikulčíková"
+
+#~ msgid "Czech sounds"
+#~ msgstr "Tšehhi häälikud"
+
+#~ msgid "Silvia Motyčková & Jozef Říha"
+#~ msgstr "Silvia Motyčková & Jozef Říha"
+
+#~ msgid "Slovak sounds"
+#~ msgstr "Slovaki häälikud"
+
+#~ msgid "Robert Wadley"
+#~ msgstr "Robert Wadley"
+
+#~ msgid "English sounds"
+#~ msgstr "Inglise häälikud"
+
+#~ msgid "Pietro Pasotti"
+#~ msgstr "Pietro Pasotti"
+
+#~ msgid "Italian sounds"
+#~ msgstr "Itaalia häälikud"
+
+#~ msgid "Ana Belén Caballero and Juan Pedro Paredes"
+#~ msgstr "Ana Belén Caballero ja Juan Pedro Paredes"
+
+#~ msgid "Spanish sounds"
+#~ msgstr "Hispaania häälikud"
+
+#~ msgid "Vikas Kharat"
+#~ msgstr "Vikas Kharat"
+
+#~ msgid "Romanized Hindi sounds"
+#~ msgstr "Latiniseeritud hindi häälikud"
+
+#~ msgid "John Magoye and Cormac Lynch"
+#~ msgstr "John Magoye ja Cormac Lynch"
+
+#~ msgid "Luganda sounds"
+#~ msgstr "Luganda häälikud"
+
+#~ msgid "Helmut Kriege"
+#~ msgstr "Helmut Kriege"
+
+#~ msgid "German sounds"
+#~ msgstr "Saksa häälikud"
+
+#~ msgid "Assaf Gorgon and Diego Iastrubni"
+#~ msgstr "Assaf Gorgon ja Diego Iastrubni"
+
+#~ msgid "Hebrew sounds"
+#~ msgstr "Heebrea häälikud"
+
+#~ msgid "Lisa Kriege"
+#~ msgstr "Lisa Kriege"
+
+#~ msgid "British English sounds"
+#~ msgstr "Briti inglise häälikud"
+
+#~ msgid "Vikram Vincent"
+#~ msgstr "Vikram Vincent"
+
+#~ msgid "Kannada sounds"
+#~ msgstr "Kannada häälikud"
+
+#~ msgid "Show &Menubar"
+#~ msgstr "&Menüüriba näitamine"
+
+#~ msgid "Hide &Menubar"
+#~ msgstr "&Menüüriba peitmine"
+
+#~ msgid ""
+#~ "You can show or hide the menubar as you wish by clicking this button."
+#~ msgstr "Sellele nupule klõpsates saab menüüriba nähtavale tuua või peita."
+
+#~ msgid "Show Menubar"
+#~ msgstr "Menüüriba näitamine"
+
+#~ msgid "Hide Menubar"
+#~ msgstr "Menüüriba peitmine"
+
+#~ msgctxt "@item:inlistbox choose level 2"
+#~ msgid "Level 2"
+#~ msgstr "Tase 2"
+
+#~ msgctxt "@item:inlistbox choose level 3"
+#~ msgid "Level 3"
+#~ msgstr "Tase 3"
+
+#~ msgctxt "@item:inlistbox choose level 4"
+#~ msgid "Level 4"
+#~ msgstr "Tase 4"
+
+#~ msgid "Current language is %1"
+#~ msgstr "Praegune keel on %1"
+
+#~ msgid "Current level is %1"
+#~ msgstr "Praegune tase on %1"
+
+#~ msgid "Classroom"
+#~ msgstr "Klassituba"
+
+#~ msgid "Arctic"
+#~ msgstr "Arktika"
+
+#~ msgid "Start"
+#~ msgstr "Alusta"
+
+#~ msgid "Inserts the character %1"
+#~ msgstr "Lisab tähe %1"
+
+#~ msgid "Only used if Use a timer is checked"
+#~ msgstr "Kasutatav ainult siis, kui taimeri kasutamine on lubatud"

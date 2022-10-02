@@ -1,0 +1,636 @@
+# translation of klettres.po to Tajik
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# 2004, infoDev, a World Bank organization
+# 2004, Khujand Computer Technologies, Inc.
+# 2004, Youth Opportunities, NGO
+# Marina Kolucheva <youth_opportunities@tajik.net>, 2004.
+# Victor Ibragimov <youth_opportunities@tajik.net>, 2004, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: klettres\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"PO-Revision-Date: 2019-09-29 12:21+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Tajik KDE Teams Марина Колючева Виктор Ибрагимов"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "youth_opportunities@tajik.net"
+
+#: klettres.cpp:90
+#, fuzzy, kde-format
+msgid ""
+"The file sounds.xml was not found in\n"
+"$KDEDIR/share/apps/klettres/\n"
+"\n"
+"Please install this file and start KLettres again.\n"
+"\n"
+msgstr ""
+"Файли sounds.xml ёфта нашудар\n"
+"$KDEDIR/share/apps/klettres/data/\n"
+"\n"
+"Илтимос, ин файл аз сари нав гузоред ва барномви KLettres сар кунед.\n"
+"\n"
+
+#: klettres.cpp:93
+#, fuzzy, kde-format
+#| msgid "KLettres"
+msgid "KLettres - Error"
+msgstr "KLettres"
+
+#: klettres.cpp:115
+#, kde-format
+msgid "New Sound"
+msgstr ""
+
+#: klettres.cpp:119
+#, fuzzy, kde-format
+msgid "Play a new sound"
+msgstr "Овозҳои Словакиягӣ"
+
+#: klettres.cpp:120
+#, kde-format
+msgid ""
+"You can play a new sound by clicking this button or using the File menu, New "
+"Sound."
+msgstr ""
+
+#: klettres.cpp:123
+#, fuzzy, kde-format
+msgid "Get Alphabet in New Language..."
+msgstr "Забонҳои нав..."
+
+#: klettres.cpp:128
+#, kde-format
+msgid "Replay Sound"
+msgstr ""
+
+#: klettres.cpp:131
+#, kde-format
+msgid "Play the same sound again"
+msgstr ""
+
+#: klettres.cpp:133
+#, kde-format
+msgid ""
+"You can replay the same sound again by clicking this button or using the "
+"File menu, Replay Sound."
+msgstr ""
+
+#: klettres.cpp:139
+#, fuzzy, kde-format
+msgctxt "@label:listbox which difficulty level to use"
+msgid "L&evel"
+msgstr "Ҳамвор 1"
+
+#: klettres.cpp:140
+#, kde-format
+msgid "Select the level"
+msgstr ""
+
+#: klettres.cpp:141
+#, kde-format
+msgid ""
+"You can select the level: level 1 displays a letter and you hear it; level 2 "
+"does not display the letter, you only hear it; level 3 displays a syllable "
+"and you hear it; level 4 does not display the syllable, you only hear it."
+msgstr ""
+
+#: klettres.cpp:144
+#, fuzzy, kde-format
+msgctxt "@label:listbox"
+msgid "&Language"
+msgstr "Забон"
+
+#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#, fuzzy, kde-format
+#| msgid "Level 1"
+msgctxt "@item:inlistbox choose level"
+msgid "Level %1"
+msgid_plural "Level %1"
+msgstr[0] "Ҳамвор 1"
+msgstr[1] "Ҳамвор 1"
+
+#: klettres.cpp:155
+#, kde-format
+msgid "Themes"
+msgstr ""
+
+#: klettres.cpp:158
+#, kde-format
+msgid "Select the theme"
+msgstr ""
+
+#: klettres.cpp:159
+#, kde-format
+msgid ""
+"Here you can change the theme for KLettres. A theme consists in the "
+"background picture and the font color for the letter displayed."
+msgstr ""
+
+#: klettres.cpp:162
+#, kde-format
+msgid "Mode Kid"
+msgstr ""
+
+#: klettres.cpp:166
+#, kde-format
+msgid ""
+"If you are in the Grown-up mode, clicking on this button will set up the Kid "
+"mode. The Kid mode has no menubar and the font is bigger in the statusbar."
+msgstr ""
+
+#: klettres.cpp:169
+#, fuzzy, kde-format
+msgid "Mode Grown-up"
+msgstr "Таймери талаба"
+
+#: klettres.cpp:173
+#, kde-format
+msgid "The Grownup mode is the normal mode where you can see the menubar."
+msgstr ""
+
+#. i18n: ectx: label, entry (Font), group (mFont)
+#: klettres.cpp:209 klettres.kcfg:51
+#, kde-format
+msgid "Font"
+msgstr ""
+
+#: klettres.cpp:209
+#, kde-format
+msgid "Font Settings"
+msgstr "Танзимоти Ҳарф"
+
+#: klettres.cpp:213
+#, kde-format
+msgid "Timer"
+msgstr "Таймер"
+
+#: klettres.cpp:213
+#, fuzzy, kde-format
+msgid "Timer Settings"
+msgstr "Танзимоти Ҳарф"
+
+#: klettres.cpp:231 klettres.cpp:299
+#, fuzzy, kde-format
+#| msgid "Level 1"
+msgctxt "@info:status the current level chosen"
+msgid "(Level %1)"
+msgstr "Ҳамвор 1"
+
+#: klettres.cpp:342
+#, kde-format
+msgid "Grown-up mode is currently active"
+msgstr ""
+
+#: klettres.cpp:343
+#, fuzzy, kde-format
+msgid "Switch to Kid mode"
+msgstr "Ба ҳолати намоиши кӯдак иваз кунед"
+
+#: klettres.cpp:361
+#, kde-format
+msgid "Kid mode is currently active"
+msgstr ""
+
+#: klettres.cpp:362
+#, fuzzy, kde-format
+msgid "Switch to Grown-up mode"
+msgstr "Ба ҳолати намоиши талаба иваз кунед"
+
+#: klettres.cpp:383
+#, kde-format
+msgid ""
+"File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
+"please check your installation."
+msgstr ""
+"Файли $KDEDIR/share/apps/klettres/%1.txt ёфт нашуд;\n"
+"Лутфан, сабти Шумо санҷиш кунед."
+
+#: klettres.cpp:386
+#, kde-format
+msgid "Error"
+msgstr ""
+
+#. i18n: ectx: label, entry (Language), group (General)
+#: klettres.kcfg:10
+#, kde-format
+msgid "Language"
+msgstr "Забон"
+
+#. i18n: ectx: label, entry (Theme), group (General)
+#: klettres.kcfg:14
+#, fuzzy, kde-format
+msgid "Theme"
+msgstr "Таймер"
+
+#. i18n: ectx: label, entry (MenuBarBool), group (General)
+#: klettres.kcfg:23
+#, kde-format
+msgid "Whether the menubar is shown or hidden"
+msgstr ""
+
+#. i18n: ectx: label, entry (Mode), group (General)
+#: klettres.kcfg:27
+#, kde-format
+msgid "Mode"
+msgstr ""
+
+#. i18n: ectx: label, entry (Level), group (General)
+#: klettres.kcfg:35
+#, kde-format
+msgid "Difficulty level."
+msgstr "Дараҷаи мураккаб."
+
+#. i18n: ectx: label, entry (KidTimer), group (General)
+#: klettres.kcfg:41
+#, kde-format
+msgid "Kid Timer"
+msgstr "Таймери кӯдак"
+
+#. i18n: ectx: label, entry (GrownTimer), group (General)
+#: klettres.kcfg:45
+#, kde-format
+msgid "Grown-up Timer"
+msgstr "Таймери талаба"
+
+#. i18n: ectx: Menu (file)
+#: klettresui.rc:4
+#, kde-format
+msgid "&File"
+msgstr ""
+
+#. i18n: ectx: Menu (look_mode)
+#: klettresui.rc:15
+#, kde-format
+msgid "L&ook"
+msgstr ""
+
+#. i18n: ectx: Menu (settings)
+#: klettresui.rc:23
+#, fuzzy, kde-format
+msgid "&Settings"
+msgstr "Танзимоти Ҳарф"
+
+#. i18n: ectx: ToolBar (mainToolbar)
+#: klettresui.rc:33
+#, kde-format
+msgid "Main"
+msgstr "Асосӣ"
+
+#. i18n: ectx: ToolBar (specialCharToolbar)
+#: klettresui.rc:47
+#, fuzzy, kde-format
+msgid "Special Characters"
+msgstr "Ҳарфҳо"
+
+#: klettresview.cpp:32
+#, kde-format
+msgid "Type the letter or syllable that you just heard"
+msgstr "Ҳарфҳо ё нишонаҳо ки шумо ҳозир шунидед навиштан гиред."
+
+#: klettresview.cpp:131
+#, kde-format
+msgctxt "%1 is uppercase letter, %2 is the same in lowercase"
+msgid "%1 / %2"
+msgstr ""
+
+#: kltheme.cpp:36
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Kid"
+msgstr ""
+
+#: kltheme.cpp:86
+#, kde-format
+msgctxt "@item:inlistbox desert theme for the interface"
+msgid "Desert"
+msgstr ""
+
+#: kltheme.cpp:136
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Savannah"
+msgstr ""
+
+#: kltheme.cpp:187
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Aqua"
+msgstr ""
+
+#: langutils.cpp:88
+#, kde-format
+msgid "Romanized Hindi"
+msgstr ""
+
+#: langutils.cpp:90
+#, kde-format
+msgid "Luganda"
+msgstr ""
+
+#: langutils.cpp:92
+#, fuzzy, kde-format
+msgid "English Phonics"
+msgstr "Овозҳои Даниягӣ"
+
+#: langutils.cpp:94
+#, kde-format
+msgid "Tswana"
+msgstr ""
+
+#: langutils.cpp:99
+#, kde-format
+msgctxt "@item:inlistbox no language for that locale"
+msgid "None"
+msgstr ""
+
+#: main.cpp:40
+#, kde-format
+msgid "KLettres"
+msgstr "KLettres"
+
+#: main.cpp:40
+#, fuzzy, kde-format
+msgid ""
+"KLettres helps a very young child or an adult learning \n"
+"a new language by associating sounds and \n"
+"letters in this language.\n"
+"\n"
+"25 languages are available."
+msgstr ""
+"Бозии KLettres барои хондани забонҳои нав ҳамроҳи овоз ва калимаҳои забони \n"
+"интихобшуда ба кӯдакон хеле фоиданок аст.\n"
+"Шумо метавонед 5 забонҳо интихоб кунед: Чехиягӣ, Даниягӣ, Нидерландӣ, "
+"Франсиягӣ ва Словакӣ."
+
+#: main.cpp:44
+#, kde-format
+msgid "(C) 2001-2011 Anne-Marie Mahfouf"
+msgstr ""
+
+#: main.cpp:45
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr ""
+
+#: main.cpp:46
+#, kde-format
+msgid "Marc Cheng"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Kids and grown-up oxygen icons"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Danny Allen"
+msgstr ""
+
+#: main.cpp:49
+#, fuzzy, kde-format
+#| msgid "Background picture"
+msgid "SVG background pictures"
+msgstr "Сурати Замина"
+
+#: main.cpp:50
+#, kde-format
+msgid "Robert Gogolok"
+msgstr ""
+
+#: main.cpp:51
+#, kde-format
+msgid "Support and coding guidance"
+msgstr "Роҳнамои тарафдорӣ ва рамзгузорӣ"
+
+#: main.cpp:52
+#, kde-format
+msgid "Peter Hedlund"
+msgstr ""
+
+#: main.cpp:53
+#, kde-format
+msgid "Code for generating special characters' icons"
+msgstr "Рамзгузорӣ барои ҳарфҳои махсуси' icons"
+
+#: main.cpp:54
+#, kde-format
+msgid "Waldo Bastian"
+msgstr ""
+
+#: main.cpp:55
+#, kde-format
+msgid "Port to KConfig XT, coding help"
+msgstr "Порт ба KConfig XT, Роҳнамои рамзгузорӣ"
+
+#: main.cpp:56
+#, kde-format
+msgid "Pino Toscano"
+msgstr ""
+
+#: main.cpp:57
+#, kde-format
+msgid "Code cleaning, Theme class"
+msgstr ""
+
+#: main.cpp:58
+#, kde-format
+msgid "Michael Goettsche"
+msgstr ""
+
+#: main.cpp:59
+#, kde-format
+msgid "Timer setting widgets"
+msgstr ""
+
+#: main.cpp:60
+#, kde-format
+msgid "Laurent Navet"
+msgstr ""
+
+#: main.cpp:61
+#, kde-format
+msgid "Port to KDE Frameworks 5"
+msgstr ""
+
+#: soundfactory.cpp:86
+#, kde-format
+msgid "Error while loading the sound names."
+msgstr "Дар ҳоли пурбор кардани номҳои овоз хато омад."
+
+#: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
+#, kde-format
+msgid "1 tenth of second"
+msgid_plural "%1 tenths of second"
+msgstr[0] ""
+msgstr[1] ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: timerui.ui:51
+#, kde-format
+msgid "Set the time between 2 letters."
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_KidTimer)
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:91 timerui.ui:184
+#, kde-format
+msgid "Set the timer (in tenths of seconds)"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_KidTimer)
+#: timerui.ui:94
+#, kde-format
+msgid ""
+"You can set the time between two letters in Kid mode. Default is 4 tenths of "
+"seconds but younger children might need longer time."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: timerui.ui:122
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Kid Mode</p></body></html>"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:187
+#, kde-format
+msgid ""
+"You can set the time between two letters in Grown-up mode. Default is 2 "
+"tenths of seconds."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: timerui.ui:215
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Grown-up Mode</p></body></html>"
+msgstr ""
+
+#, fuzzy
+#~| msgid "KLettres"
+#~ msgid "Klettres"
+#~ msgstr "KLettres"
+
+#~ msgid "French sounds"
+#~ msgstr "Овозҳои Франсиягӣ"
+
+#~ msgid "Dutch sounds"
+#~ msgstr "Овозҳои Нидерландӣ"
+
+#~ msgid "Danish sounds"
+#~ msgstr "Овозҳои Даниягӣ"
+
+#~ msgid "Czech sounds"
+#~ msgstr "Овозҳои Чехиягӣ"
+
+#~ msgid "Slovak sounds"
+#~ msgstr "Овозҳои Словакиягӣ"
+
+#, fuzzy
+#~ msgid "English sounds"
+#~ msgstr "Овозҳои Даниягӣ"
+
+#~ msgid "Italian sounds"
+#~ msgstr "Овозҳои Словакиягӣ"
+
+#, fuzzy
+#~ msgid "Spanish sounds"
+#~ msgstr "Овозҳои Даниягӣ"
+
+#, fuzzy
+#~ msgid "Luganda sounds"
+#~ msgstr "Овозҳои Даниягӣ"
+
+#, fuzzy
+#~ msgid "German sounds"
+#~ msgstr "Овозҳои Даниягӣ"
+
+#, fuzzy
+#~ msgid "Hebrew sounds"
+#~ msgstr "Овозҳои Франсиягӣ"
+
+#, fuzzy
+#~ msgid "British English sounds"
+#~ msgstr "Овозҳои Даниягӣ"
+
+#, fuzzy
+#~ msgid "Kannada sounds"
+#~ msgstr "Овозҳои Даниягӣ"
+
+#, fuzzy
+#~ msgid "Show &Menubar"
+#~ msgstr "Намоиши Пайраҳаи Меню"
+
+#~ msgid "Hide &Menubar"
+#~ msgstr "Пинҳон кардани &пайраҳаи меню"
+
+#, fuzzy
+#~ msgid "Show Menubar"
+#~ msgstr "Намоиши Пайраҳаи Меню"
+
+#, fuzzy
+#~ msgid "Hide Menubar"
+#~ msgstr "Пинҳон кардани &пайраҳаи меню"
+
+#, fuzzy
+#~| msgid "Level 2"
+#~ msgctxt "@item:inlistbox choose level 2"
+#~ msgid "Level 2"
+#~ msgstr "Ҳамвор 2"
+
+#, fuzzy
+#~| msgid "Level 3"
+#~ msgctxt "@item:inlistbox choose level 3"
+#~ msgid "Level 3"
+#~ msgstr "Ҳамвор 3"
+
+#, fuzzy
+#~| msgid "Level 4"
+#~ msgctxt "@item:inlistbox choose level 4"
+#~ msgid "Level 4"
+#~ msgstr "Ҳамвор 4"
+
+#~ msgid "Current language is %1"
+#~ msgstr "Забони ҳозира %1"
+
+#~ msgid "Current level is %1"
+#~ msgstr "Ҳамвори ҳозира %1"
+
+#~ msgid "Icons"
+#~ msgstr "Тасвирҳои шартӣ"
+
+#, fuzzy
+#~ msgid "SVG icon"
+#~ msgstr "Тасвири шартии svg"
+
+#~ msgid "Inserts the character %1"
+#~ msgstr "Интихоби ҳарфи %1"
+
+#, fuzzy
+#~ msgid "Grown-up Mode"
+#~ msgstr "Таймери талаба"

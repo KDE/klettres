@@ -1,0 +1,1128 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&klettres;"
+><!-- replace klettres here -->
+  <!ENTITY package "kdeedu">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Estonian  "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klettres" lang="&language;">
+
+<bookinfo>
+<title
+>&klettres;i käsiraamat</title>
+
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Marek</firstname
+><surname
+>Laane</surname
+><affiliation
+><address
+><email
+>bald@starman.ee</email
+></address
+></affiliation
+><contrib
+>Tõlge eesti keelde</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year
+><year
+>2007</year>
+<holder
+>&Anne-Marie.Mahfouf;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2013-05-31</date>
+<releaseinfo
+>2.3 (&kde; 4.11)</releaseinfo>
+
+<abstract>
+<para
+>&klettres; on rakendus, mille siht on õpetada kasutajale võõrkeele tähtede ning seejärel ka lihtsamate silpide hääldust. Kasutajana peetakse silmas ennekõike lapsi alates vanusest kaks ja pool aastat, kuid see sobib ka täiskasvanutele, kes soovivad omandada algteadmisi võõrkeelest. </para>
+<para
+>Praegu saab kasutada kahtkümmend viit keelt: alamsaksi, araabia, Brasiilia portugali, Briti inglise, heebrea, hispaania, hollandi, hääldusinglise (Phonics), itaalia, kannada, latiniseeritud hindi, luganda, malajalami, norra Bokmål, pandžabi, prantsuse, saksa, slovaki, taani, telugu, tšehhi, ukraina, ungari, USA inglise ja vene, kuid vaikimisi paigaldatakse ainult inglise, prantsuse ja sinu keel (kui viimane kuulub loetletute hulka). </para>
+<para
+>&klettres;i kasutamine on väga lihtne. Keelt saab muuta menüüst <guimenu
+>Keel</guimenu
+>. Rippmenüüst tööriistaribal või menüüst <guimenu
+>Tase</guimenu
+> saab valida taseme (vahemikus 1 kuni 4). <guimenuitem
+>Teema</guimenuitem
+>t (tausta ja fondivärve) saab muuta samuti rippmenüüst või menüüst <menuchoice
+><guimenu
+>Välimus</guimenu
+> <guimenuitem
+>Teemad</guimenuitem
+></menuchoice
+>. Saada on kolm teemat: <guimenuitem
+>laste</guimenuitem
+>, <guimenuitem
+>kõrb</guimenuitem
+> ja <guimenuitem
+>savann</guimenuitem
+>. Lasterežiimi ja täiskasvanute režiimi vahel saab valida menüüs <guimenu
+>Välimus</guimenu
+>. </para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeedu</keyword>
+<keyword
+>klettres</keyword>
+<keyword
+>tähestik</keyword>
+<keyword
+>helid</keyword>
+<keyword
+>keel</keyword>
+<keyword
+>klaviatuur</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Sissejuhatus</title>
+
+<para
+>&klettres; on väga lihtne rakendus, mis aitab lapsel või täiskasvanul omandada emakeele või mõne võõrkeele tähestikku ning valiku lihtsamaid hääldusreegleid. Rakendus valib suvalises järjekorras tähe või silbi, seda näidatakse ning seejärel hääldatakse. Kasutaja peab seejärel antud tähe või silbi klaviatuuril sisestama. Õppimine käib tasemetel, kus tähte või silpi ei näidata, vaid see ainult hääldatakse. Rakenduse pruukimiseks ei ole vaja kasutada isegi hiirt, piisab ainult klaviatuurist.</para>
+
+<para
+>Praegu saab kasutada kahtkümmend viit keelt, mis on ära toodud eespool. Vaikimisi paigaldatakse ainult prantsuse keel ning vastavalt sellele, milline on sinu &kde; keel, ka vastav keel. Kui sul on internetiühendus, on uusi keeli äärmiselt lihtne hankida, kasutades menüüs <guimenu
+>Fail</guimenu
+> leiduvat käsku <guimenuitem
+>Hangi uue keele tähestik...</guimenuitem
+></para>
+
+<!-- add a note for the sound, what does KLettres needs -->
+
+<para
+>Kaks erinevat režiimi võimaldavad kohandada &klettres;i just sinu vajadustele. Lastevälimuse korral ei ole menüüriba ja keelenupp näha, sest me eeldame, et laps ei taha just keelt vahetada. Hüpikkastist saab valida tasemete vahel. Vanemale kasutajale mõeldud stiil ei ole nii lapselik ning kasutada saab ka menüüriba. Kolm erinevat teemat (<guimenuitem
+>laste</guimenuitem
+>, <guimenuitem
+>kõrb</guimenuitem
+> ja <guimenuitem
+>savann</guimenuitem
+>) võimaldavad muuta tausta ja fonte.</para>
+
+<note>
+<para
+>Õigupoolest on üsna ükspuha, millist klaviatuuri kasutada, sest <guimenuitem
+>erimärkide</guimenuitem
+> tööriistariba võimaldab sisestada tüüpklaviatuuril mitteleiduvaid tähti väga erinevate keelte korral. Vali menüüst <guimenu
+>Seadistused</guimenu
+> <guisubmenu
+>Näidatavad tööriistaribad</guisubmenu
+> <guimenuitem
+>Erimärgid</guimenuitem
+> ning vastav tööriistariba ilmub &klettres;i akna allserva. Klõpsa seal vajalikul tähel ning see lisatakse sisendväljale. Selle tööriistariba võib ekraanil lohistada just sinna, kuhu sulle meeldib.</para>
+<para
+>Vastavale keelele kohandatud korrektse klaviatuuri saab määrata Süsteemi seadistuste kategoorias <guilabel
+>Riistvara</guilabel
+> <guimenu
+>Sisendseadmed</guimenu
+> kaardil <guimenuitem
+>Klaviatuur</guimenuitem
+>.</para>
+</note>
+</chapter>
+
+<chapter id="using-klettres">
+<title
+>&klettres;i kasutamine</title>
+<para
+>Rakendusel &klettres; on neli taset. Tasemed 1 ja 2 on mõeldud tähestiku ning 3 ja 4 silpide tarbeks. Väga väikeste laste korral (2,5 kuni 4 aastat) julgeksin ma oletada, et ta istub arvuti ees oma vanema süles ja et te õpite üheskoos.</para>
+
+<sect1 id="levels1-and2">
+<title
+>Tasemed 1 ja 2</title>
+
+<screenshot>
+<screeninfo
+>&klettres;i tase 1 näeb välja selline</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres1.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres;i tase 1</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Tase on 1, keel prantsuse, teemaks kõrb ning režiimiks <emphasis
+>täiskasvanulik</emphasis
+>.</para>
+<note>
+<para
+>Kui sinu &kde; keel kuulub toetatud keelte hulka, siis avatakse &klettres; esmakordsel käivitamisel vastavas keeles. Muudel juhtudel on esialgseks keeleks inglise keel. &klettres; paigaldatakse vaikimisi inglise, prantsuse ja sinu vaikekeelega, kui viimane kuulub loetletute hulka. Internetiühenduse olemasolul saab lisakeeli hankida menüükäsuga <menuchoice
+><guimenu
+>Fail</guimenu
+> <guimenuitem
+>Hangi uus keel...</guimenuitem
+></menuchoice
+> </para>
+</note>
+<para
+>Esimesel tasemel näeb kasutaja tähte ja kuuleb selle hääldust. Seejärel tuleb täht kasti kirjutada. Kui see on õige, ilmub uus täht (puudub vajadus vajutada klahvi &Enter; või anda mingi muu käsk). Kui sisestati vale täht, hääldatakse näidatav täht uuesti. Sel tasemel on kasutajal võimalik täht ja selle hääldus selgeks õppida ning tuvastada selle asukoht klaviatuuril. </para>
+
+<note>
+<para
+>Kasutaja võib sisestada nii suur- kui väiketähe. Ekraanil ilmuvad need automaatselt suurtähena, et lapsel oleks võimalik näha samasugust tähte ka klaviatuuril. Korraga saab sisestada ainult ühe tähe.</para>
+<para
+>Kui kirjutad sisendväljale tähe, ei pea vajutama klahvi &Enter;, vaid programm ootab mõne hetke ja siis kontrollib, kas täht on õige või mitte. See lühike viivitus aitab noorematel lastel mõista, mida ta kirjutas, mis on eriti kasulik siis, kui kirjutati vale täht. Viivituse aega saab muuta menüükäsuga <guimenu
+>Seadistused</guimenu
+> -> <guimenuitem
+>&klettres;i seadistamine...</guimenuitem
+>, ilmuvas dialoogis saab <guilabel
+>taimer</guilabel
+>i kaardil määrata eraldi aja nii <guilabel
+>lasterežiim</guilabel
+>i kui <guilabel
+>täiskasvanute režiim</guilabel
+>i taimeri. </para>
+</note>
+
+<para
+>Rakendusest selle esimese käivitamise järel väljudes salvestatakse viimasena kasutatud keel &klettres;i seadistustefaili ning see laaditakse ka järgmisel korral. Samamoodi jäetakse meelde tase. </para>
+<para
+>Seadistustefailis salvestatakse ka kasutatav režiim, mis püsib seetõttu seni, kuni sa pole seda vahetanud.</para>
+<para
+>Tähed ilmuvad juhuslikus järjekorras, kuid üks täht ei tohiks esineda kaks korda järjest. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>&klettres;i tase 2</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres;i tase 2</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para
+>Selline näeb välja tase 2 <emphasis
+>lapseliku</emphasis
+> režiimi, <emphasis
+>laste</emphasis
+> teema ja taani keelega.</para>
+
+<para
+>Klõps kastil <guilabel
+>Tase</guilabel
+> ning sealt kirje <guilabel
+>Tase 2</guilabel
+> valimine või samalaadne operatsioon menüüs <guimenu
+>Tase</guimenu
+> viib sind teisele tasemele. Sellel tasemel kuuleb kasutaja ainult tähe hääldust ning peab sisestama vastava tähe. Eksimise korral ilmub ekraanile õige täht. </para>
+</sect1>
+
+<sect1 id="levels3-and4">
+<title
+>Tasemed 3 ja 4</title>
+
+<para>
+<screenshot>
+<screeninfo
+>&klettres;i tase 3</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres3.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres;i tase 3</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Selline näeb välja &klettres;i kolmas tase <emphasis
+>täiskasvanuliku</emphasis
+> režiimi, <emphasis
+>savanni</emphasis
+> teema ja tšehhi keelega. </para>
+
+<para
+>Kolmandal tasemel näeb kasutaja silpe ja kuuleb nende hääldust. Seejärel tuleb õiged tähed kasti kirjutada. Kui esimene täht on vale, ei ole võimalik teist tähte sisestada. Esimenegi täht kaob ning kasutaja saab uue võimaluse. Tähti on sõltuvalt keelest kaks või kolm.</para>
+
+<screenshot>
+<screeninfo
+>&klettres;i tase 4</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres4.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres;i tase 4</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Selline näeb välja &klettres;i neljas tase <emphasis
+>lapseliku</emphasis
+> režiimi, <emphasis
+>kõrbe</emphasis
+> teema ja slovaki keelega. </para>
+
+<para
+>Häälikud öeldakse juhuslikus järjekorras. </para
+> <para
+>Klõps liitkastil <guilabel
+>Tase</guilabel
+> või menüüst <guimenu
+>Tase</guimenu
+> <guilabel
+>Tase 4</guilabel
+> valimine viib sind neljandale tasemele. Sellel tasemel kuuleb kasutaja ainult hääldust ning peab sisestama õiged tähed. Väiksele lapsele on see vahest liiga raske. </para>
+
+</sect1>
+
+<sect1 id ="configuring">
+<title
+>Seadistustedialoog</title>
+<para
+>Seadistustedialoogis on kaks kaarti: üks <guilabel
+>font</guilabel
+>ide, teine <guilabel
+>taimer</guilabel
+>i jaoks.</para>
+
+<sect2 id="about-font">
+<title
+>Fondid</title>
+
+<para
+>Fonti, millega tähti näidatakse, on üpris lihtne muuta. Mõnes distributsioonis on süsteemne vaikefont üsna kole. Täiskasvanute stiilis saab menüükäsuga <guimenu
+>Seadistused</guimenu
+> -> <guimenuitem
+>&klettres;i seadistamine...</guimenuitem
+> avada dialoogi, millelt leiab kaardi <guilabel
+>Fondid</guilabel
+> ja sellelt fondi valimise dialoogi. Uut fonti kasutatakse nii näidatava tähe/silbi kui ka kasutaja välja jaoks. </para>
+
+<warning>
+<para
+>Fondi muutmine on mõttekas ka seepärast, et mõned fondid (näiteks Helvetica) ei esita korrektselt Ida-Euroopa keelte, näiteks tšehhi ja slovaki keele tähti. Kui mingeid tähti või silpe ei ole näha või on need ilmselgelt vigased, vaheta palun fonti, valides näiteks Ariali. </para>
+</warning>
+
+<para
+>Suuruse võid valida just endale meelepärase. See jäetakse seadistustefailis meelde. </para>
+
+<screenshot>
+<screeninfo
+>&klettres;i fondi valimise dialoog</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres5.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres;i fondi valimise dialoog</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Selline näeb välja &klettres;i fondi valimise dialoog. </para>
+</sect2>
+
+<sect2 id="timers">
+<title
+>Taimerid</title>
+
+<para
+>Taimeritega saab määrata kahe tähe vahelise aja, &ie; aja, kui kaua tähte näidatakse. Ühikuks on kümnendiksekundid. </para>
+
+<para
+><guilabel
+>Taimer</guilabel
+>i seadistustedialoogil (<menuchoice
+><guimenu
+>Seadistused</guimenu
+> <guimenuitem
+>&klettres;i seadistamine...</guimenuitem
+></menuchoice
+>) on kaks valikut: üks <guilabel
+>lasterežiim</guilabel
+>i, teine <guilabel
+>täiskasvanute režiim</guilabel
+>i jaoks. Vaikeväärtused on 4 kümnendiksekundit <guilabel
+>lasterežiim</guilabel
+>i ja 2 kümnendiksekundit <guilabel
+>täiskasvanute režiim</guilabel
+>i jaoks. Aja pikendamine jätab sulle rohkem aega oma vigadest aru saada.</para>
+
+<screenshot>
+<screeninfo
+>&klettres;i taimeri seadistuste pilt</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres6.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>&klettres;i taimeri seadistuste pilt</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+<sect1 id="Get-new-stuff">
+<title
+>Uue keele hankimine</title>
+<para
+>Soovi korral võid &klettres;i abil omandada ka mõningaid teadmisi uuest keelest. Valides <menuchoice
+><guimenu
+>Fail</guimenu
+> <guimenuitem
+>Hangi uue keele tähestik...</guimenuitem
+></menuchoice
+>, ilmub dialoog kõigi saadaolevate keelte nimekirjaga (selleks peab muidugi olema ka toimiv internetiühendus).</para>
+<screenshot>
+<screeninfo
+>Uue keele hankimise dialoog</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Uue keele hankimise dialoog</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para
+>Klõpsa keelest, mida tahad paigaldada, paremal asuvale nupule <guilabel
+>Paigalda</guilabel
+>.</para>
+<para
+>Pane tähele, et mõned failid võivad olla lausa mitme megabaidi suurused, nii et sõltuvalt sinu ühendusest võib nende allalaadimiseks aega kuluda.</para>
+<para
+>Kui fail on alla laaditud, paigaldatakse see automaatselt, ning kui sulged <guilabel
+>uue kraami hankimise</guilabel
+> dialoogi, näed uut keelt menüüs <guimenu
+>Keel</guimenu
+> ja võid seda kohe kasutama hakata.</para>
+
+<para
+>Kui keel on alla laaditud, näed, et nupule <guilabel
+>Paigalda</guilabel
+> ilmub hoopis kiri <guilabel
+>Eemalda</guilabel
+>.</para>
+<para
+>Järgmine pilt näitab paigaldatud taani keelt.</para>
+<screenshot>
+<screeninfo
+>Taani keel on paigaldatud</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Taani keel on paigaldatud</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Käskude seletused</title>
+
+<sect1 id="klettres-mainwindow">
+<title
+>&klettres;i peaaken</title>
+
+<sect2>
+<title
+>Menüü Fail</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Fail</guimenu
+> <guimenuitem
+>Uus häälik</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Esitab</action
+> uue hääliku</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>F5</keycap
+> </shortcut
+> <guimenu
+>Fail</guimenu
+> <guimenuitem
+>Korda häälikut</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Esitab</action
+> sama hääliku uuesti</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Fail</guimenu
+> <guimenuitem
+>Hangi uus keel...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Avab</action
+> &klettres;i <guilabel
+>uue kuuma kraami hankimise</guilabel
+> dialoogi</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Fail</guimenu
+> <guimenuitem
+>Välju</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Väljub</action
+> &klettres;ist</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Menüü Tase</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Tase</guimenu
+> <guimenuitem
+>Tase 1</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Valib</action
+> esimese taseme (näidatakse ja hääldatakse täht)</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Tase</guimenu
+> <guimenuitem
+>Tase 2</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Valib</action
+> teise taseme (tähte ei näidata, ainult hääldatakse)</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Tase</guimenu
+> <guimenuitem
+>Tase 3</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Valib</action
+> kolmanda taseme (näidatakse ja hääldatalse silp)</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Tase</guimenu
+> <guimenuitem
+>Tase 4</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Valib</action
+> neljanda taseme (silpi ei näidata, ainult hääldatakse)</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+<sect2>
+<title
+>Menüü Keel</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Keel</guimenu
+> <guimenuitem
+>Inglise</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Valib</action
+> inglise keele</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Keel</guimenu
+> <guimenuitem
+>Prantsuse</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Valib</action
+> prantsuse keele</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Menüü Välimus</title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Välimus</guimenu
+> <guisubmenu
+>Teemad</guisubmenu
+> <guimenuitem
+>Laste</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Lülitub</action
+> lasteteemale</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Välimus</guimenu
+> <guisubmenu
+>Teemad</guisubmenu
+> <guimenuitem
+>Kõrb</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Lülitub</action
+> kõrbeteemale</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Välimus</guimenu
+> <guisubmenu
+>Teemad</guisubmenu
+> <guimenuitem
+>Savann</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Lülitub</action
+> savanniteemale</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>K</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Välimus</guimenu
+> <guimenuitem
+>Lasterežiim</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Lülitub</action
+> lasterežiimile (menüüriba puudub)</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>G</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Välimus</guimenu
+> <guimenuitem
+>Täiskasvanute režiim</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Lülitub</action
+> täiskasvanute režiimi (tavaline liides)</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Lisaks on &klettres;il tavapärased &kde; <guimenu
+>seadistuste</guimenu
+> ja <guimenu
+>abi</guimenu
+>menüü elemendid, mille kohta leiab rohkem teavet &kde; põhialuste käsiraamatu osadest <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Menüü Seadistused</ulink
+> ja <ulink url="help:/fundamentals/ui.html#menus-help"
+>Menüü Abi</ulink
+>. </para>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="sounds">
+<title
+>Häälikute lisamine &klettres;ile</title>
+
+<para
+>Kui soovid ka oma keele häälikuid kasutada, siis see polegi nii keeruline. Salvesta häälikud kataloogi 'alpha'. Seejärel salvesta levinumad silbid kataloogi 'syllab'.</para
+> 
+<para
+>Loo tekstifail <filename
+>sounds.xml</filename
+> (parem on seda teha redaktoris &kate; või mõnes muus erinevaid kodeeringuid võimaldavas redaktoris). Pane faili kirja kõik salvestatud häälikud ja silbid. Toome näiteks tšehhi keele:</para>
+<programlisting
+>&lt;klettres&gt;
+&lt;language code="cs"&gt;
+    &lt;menuitem&gt;
+      &lt;label&gt;&amp;Czech&lt;/label&gt;
+    &lt;/menuitem&gt;
+    &lt;alphabet&gt;
+        &lt;sound name="A" file="cs/alpha/a.ogg" /&gt;
+        ...
+    &lt;/alphabet&gt;
+    &lt;syllables&gt;
+        &lt;sound name="BA" file="cs/syllab/ba.ogg" /&gt;
+        ...
+    &lt;/syllables&gt;
+  &lt;/language&gt;
+&lt;/klettres&gt;</programlisting>
+<para
+>Asenda "cs" oma keele kahetähelise koodiga ning "Czech" oma keelega. Pane erimärkide häälikute nimed (eesti keele puhul täpitähed ja susisevad häälikud) oma keeles kirja suurtähtedega ja kodeeringus UTF-8-</para>
+
+<para
+>Lisaks tasuks eritähtedest ka mulle teada anda, et ma saaksin luua neile vajaliku <guimenuitem
+>erimärkide</guimenuitem
+> tööriistariba. Loo selleks tekstifail <filename
+>cs.txt</filename
+> (asenda mõistagi "cs" oma keele kahetähelise koodiga), kus on igal real kirjas üks sinu keele eritäht. Salvesta mõlemad failid kodeeringus <quote
+>utf8</quote
+> (selle saab &kate; korral valida salvestamisdialoogi ülemises parempoolses nurgas).</para>
+
+<para
+>Häälikud peavad olema ogg-vormingus ning piisavalt pikad, et helimängija suudaks neid esitada (1,5 kuni 2 sekundit - kui need on liiga lühikesed, lisa palun vahele veidi vaikust). Lõpuks paki kõik kokku ja saada mulle. </para>
+
+<para
+>Uue keele lisamisest on põhjalikumalt juttu <ulink url="http://edu.kde.org/klettres/add_language.php"
+>&klettres;i veebileheküljel</ulink
+>. </para>
+</chapter>
+
+<chapter id="faq">
+<title
+>Küsimused ja vastused</title>
+&reporting.bugs; &updating.documentation; <qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Taustapilti ei ole.</para>
+</question>
+<answer>
+<para
+>Kui ehitad &klettres;i ise, tuleks see konfigureerida võtmega <option
+>--prefix</option
+>, mis osutab sinu &kde; kataloogile, või tuleks see kataloog lisada sinu otsingurajale.</para
+> </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Ma ei kuule ühtki heli</para>
+</question>
+<answer>
+<para
+>Kontrolli, kas sinu süsteemis töötab &phonon;. Selleks ava Süsteemi seadistused ning klõpsa kategoorias <guilabel
+>Riistvara</guilabel
+> <guilabel
+>Multimeedia</guilabel
+> peale. </para>
+ </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Ma ei näe mõningaid tähti ikoonidena <guimenuitem
+>eritähtede</guimenuitem
+> ribal, vaid nende asemel on teatud keeltes arusaamatud riskülikud.</para>
+</question>
+<answer>
+<para
+>&klettres; vajab tšehhi ja slovaki keele korral fonti Arial ja kui see ei ole sul paigaldatud, uuri järgi, kuidas seda enda distributsioonis teha.</para
+> 
+<para
+>Kui sul on arvutis ka &Windows;, võid kasutada &Windows; TTF-fonte (nende seas on ka Arial), valides selles Süsteemi seadistused -&gt; <guilabel
+>Süsteemi haldamine</guilabel
+> -&gt; <guilabel
+>Fontide paigaldaja</guilabel
+> ja lisa &Windows; fontide kataloog.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+><guimenuitem
+>Eritähtede</guimenuitem
+> ribal ikoonidena näidatavad tähed on mõne keele puhul liiga väikesed.</para>
+</question>
+<answer>
+<para
+>&klettres; vajab tšehhi ja slovaki keele korral fonti Arial ja kui see ei ole sul paigaldatud, uuri järgi, kuidas seda enda distributsioonis teha.</para
+> 
+<para
+>Kui sul on arvutis ka &Windows;, võid kasutada &Windows; TTF-fonte (nende seas on ka Arial), valides selles Süsteemi seadistused -&gt; <guilabel
+>Süsteemi haldamine</guilabel
+> -&gt; <guilabel
+>Fontide paigaldaja</guilabel
+> ja lisa &Windows; fontide kataloog.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Miks ainult kakskümmend viis keelt?</para>
+</question>
+<answer>
+<para
+>Selleks, et uut keelt lisada, läheb vaja lisaks tähestikule ka häälikuid ja mõningaid levinud silpe koos hääldusega. Häälikud tuleb selle keele kõnelejal salvestada ogg-vormingus. Kolmanda ja neljanda taseme jaoks peaks silbid välja valima õpetaja või vähemalt isik, kes tunneb laste õppimisprotsessi iseärasusi: need peavad olema silbid, mida laps omandab kohe pärast tähtede selgekssaamist. Kui oled selliseks ülesandeks valmis, anna mulle teada. Täpsemalt saab selle kohta, kuidas uut keelt lisada, lugeda <ulink url="http://edu.kde.org/klettres/add_language.php"
+>&klettres;i veebileheküljelt</ulink
+>.</para
+> </answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Autorid ja litsents</title>
+
+<para
+>&klettres; </para>
+<para
+>Rakenduse autoriõigus 2001-2007: &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+<para
+>Olen väga tänulik järgmistele inimestele, kelle panus oli tõesti väga väärtuslik: <itemizedlist>
+<listitem
+><para
+>Brasiilia portugali häälikud: Lindonjohnson Monte (isa) ja Michelle Monte (üheksa-aastane poeg) <email
+>lindon_johnson@brturbo.com.br</email
+></para
+> </listitem>
+<listitem
+><para
+>Tšehhi häälikud: Eva Mikulčíková <email
+>evmi@seznam.cz</email
+></para
+> </listitem>
+<listitem
+><para
+>Taani häälikud: Erik Kjaer Pedersen <email
+>erik@binghamton.edu</email
+></para
+> </listitem>
+<listitem
+><para
+>Hollandi häälikud: Geert Stams <email
+>geert@pa3csg.myweb.nl</email
+></para
+> </listitem>
+<listitem
+><para
+>Inglise häälikud: Robert Wadley <email
+>robntina@juno.com</email
+></para
+></listitem>
+<listitem
+><para
+>Prantsuse häälikud: Ludovic Grossard <email
+>grossard@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Saksa häälikud: Helmut Kriege <email
+>h.kriege@freenet.de</email
+></para
+></listitem>
+<listitem
+><para
+>Heebrea häälikud: Assaf Gorgon <email
+>assafgordon@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Itaalia häälikud: Pietro Pasotti <email
+>pietro@itopen.it</email
+></para
+></listitem>
+<listitem
+><para
+>Kannada häälikud: Vikram Vincent <email
+>vincentvikram@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Alamsaksi häälikud: Manfred Wiese ja Sönke Dibbern <email
+>s_dibbern@web.de</email
+></para
+></listitem>
+<listitem
+><para
+>Luganda häälikud: John Magoye ja Cormac Lynch <email
+>cormaclynch@eircom.net</email
+></para
+></listitem>
+<listitem
+><para
+>Latiniseeritud hindi häälikud: Vikas Kharat <email
+>kharat@sancharnet.in</email
+></para
+></listitem>
+<listitem
+><para
+>Hispaania häälikud: Ana Belén Caballero and Juan Pedro Paredes <email
+>neneta @iquis.com</email
+></para
+></listitem>
+<listitem
+><para
+>Slovaki häälikud: Silvia Motyčková ja Jozef Říha <email
+>silviamotycka@seznam.cz</email
+></para
+></listitem>
+<listitem
+><para
+>Telugu häälikud: Pavithran Shakamuri <email
+>pavithran.s@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Algupärased ikoonid: &Primoz.Anzur; <email
+>zerokode@yahoo.com</email
+></para
+></listitem>
+<listitem
+><para
+>Toetus ja abi koodi juures: &Robert.Gogolok; &Robert.Gogolok.mail;</para
+></listitem>
+<listitem
+><para
+>SVG ikoonid: Chris Luetchford <email
+>chris@os11.com</email
+></para
+></listitem>
+<listitem
+><para
+>Erimärkide ikoonide genereerimise kood: Peter Hedlund <email
+>peter@peterandlinda.com</email
+></para
+></listitem>
+<listitem
+><para
+>KConfig XT port, abi koodi juures: &Waldo.Bastian; &Waldo.Bastian.mail;</para
+></listitem>
+<listitem
+><para
+>Laste ja täiskasvanute režiimi SVG-ikoonid, kõrbeteema: &Danny.Allen; <email
+>dannya40uk@yahoo.co.uk</email
+></para
+></listitem>
+<listitem
+><para
+>Taimeri seadistuste vidin: Michael Goettsche <email
+>michael.goettsche@kdemail.net</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Dokumentatsiooni autoriõigus 2001-2006: &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+
+<para
+>Tõlge eesti keelde: Marek Laane <email
+>bald@starman.ee</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+<!-- <appendix id="installation">
+<title
+>Installation</title>
+
+&install.intro.documentation;
+
+&install.compile.documentation;
+
+</appendix>
+-->
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->

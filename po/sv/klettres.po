@@ -1,0 +1,656 @@
+# translation of klettres.po to Swedish
+# Copyright (C).
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2011, 2014, 2015, 2018, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: klettres\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"PO-Revision-Date: 2020-12-30 09:01+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stefan Asserhäll"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "stefan.asserhall@bredband.net"
+
+#: klettres.cpp:90
+#, kde-format
+msgid ""
+"The file sounds.xml was not found in\n"
+"$KDEDIR/share/apps/klettres/\n"
+"\n"
+"Please install this file and start KLettres again.\n"
+"\n"
+msgstr ""
+"Filen sounds.xml hittades inte i\n"
+"$KDEDIR/share/apps/klettres/\n"
+"\n"
+"Installera filen och starta om Klettres.\n"
+"\n"
+
+#: klettres.cpp:93
+#, kde-format
+msgid "KLettres - Error"
+msgstr "Klettres - Fel"
+
+#: klettres.cpp:115
+#, kde-format
+msgid "New Sound"
+msgstr "Nytt ljud"
+
+#: klettres.cpp:119
+#, kde-format
+msgid "Play a new sound"
+msgstr "Spela ett nytt ljud"
+
+#: klettres.cpp:120
+#, kde-format
+msgid ""
+"You can play a new sound by clicking this button or using the File menu, New "
+"Sound."
+msgstr ""
+"Du kan spela ett nytt ljud genom att klicka på den här knappen eller använda "
+"menyn Arkiv, Nytt ljud."
+
+#: klettres.cpp:123
+#, kde-format
+msgid "Get Alphabet in New Language..."
+msgstr "Hämta alfabet för nytt språk..."
+
+#: klettres.cpp:128
+#, kde-format
+msgid "Replay Sound"
+msgstr "Spela ljud igen"
+
+#: klettres.cpp:131
+#, kde-format
+msgid "Play the same sound again"
+msgstr "Spela samma ljud igen"
+
+#: klettres.cpp:133
+#, kde-format
+msgid ""
+"You can replay the same sound again by clicking this button or using the "
+"File menu, Replay Sound."
+msgstr ""
+"Du kan spela samma ljud igen genom att klicka på den här knappen eller "
+"använda menyn Arkiv, Spela ljud igen."
+
+#: klettres.cpp:139
+#, kde-format
+msgctxt "@label:listbox which difficulty level to use"
+msgid "L&evel"
+msgstr "&Nivå"
+
+#: klettres.cpp:140
+#, kde-format
+msgid "Select the level"
+msgstr "Välj nivå"
+
+#: klettres.cpp:141
+#, kde-format
+msgid ""
+"You can select the level: level 1 displays a letter and you hear it; level 2 "
+"does not display the letter, you only hear it; level 3 displays a syllable "
+"and you hear it; level 4 does not display the syllable, you only hear it."
+msgstr ""
+"Du kan välja nivå: Nivå 1 visar en bokstav och du hör den. Nivå 2 visar inte "
+"bokstaven, utan du hör den bara. Nivå 3 visar en stavelse och du hör den. "
+"Nivå 4 visar inte stavelsen, utan du hör den bara."
+
+#: klettres.cpp:144
+#, kde-format
+msgctxt "@label:listbox"
+msgid "&Language"
+msgstr "S&pråk"
+
+#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#, kde-format
+msgctxt "@item:inlistbox choose level"
+msgid "Level %1"
+msgid_plural "Level %1"
+msgstr[0] "Nivå %1"
+msgstr[1] "Nivå %1"
+
+#: klettres.cpp:155
+#, kde-format
+msgid "Themes"
+msgstr "Teman"
+
+#: klettres.cpp:158
+#, kde-format
+msgid "Select the theme"
+msgstr "Välj tema"
+
+#: klettres.cpp:159
+#, kde-format
+msgid ""
+"Here you can change the theme for KLettres. A theme consists in the "
+"background picture and the font color for the letter displayed."
+msgstr ""
+"Här kan du ändra Klettres tema. Ett tema består av bakgrundsbilden och "
+"teckenfärgen för bokstaven som visas."
+
+#: klettres.cpp:162
+#, kde-format
+msgid "Mode Kid"
+msgstr "Barnutseende"
+
+#: klettres.cpp:166
+#, kde-format
+msgid ""
+"If you are in the Grown-up mode, clicking on this button will set up the Kid "
+"mode. The Kid mode has no menubar and the font is bigger in the statusbar."
+msgstr ""
+"Om du har vuxenutseende, ändras det till barnutseende genom att klicka på "
+"knappen. Barnutseendet har ingen menyrad och teckensnittet i statusraden är "
+"större."
+
+#: klettres.cpp:169
+#, kde-format
+msgid "Mode Grown-up"
+msgstr "Vuxenutseende"
+
+#: klettres.cpp:173
+#, kde-format
+msgid "The Grownup mode is the normal mode where you can see the menubar."
+msgstr "Det vuxna utseendet är det normala, då du kan se menyraden."
+
+#. i18n: ectx: label, entry (Font), group (mFont)
+#: klettres.cpp:209 klettres.kcfg:51
+#, kde-format
+msgid "Font"
+msgstr "Teckensnitt"
+
+#: klettres.cpp:209
+#, kde-format
+msgid "Font Settings"
+msgstr "Teckensnittsinställningar"
+
+#: klettres.cpp:213
+#, kde-format
+msgid "Timer"
+msgstr "Tid"
+
+#: klettres.cpp:213
+#, kde-format
+msgid "Timer Settings"
+msgstr "Tidsinställningar"
+
+#: klettres.cpp:231 klettres.cpp:299
+#, kde-format
+msgctxt "@info:status the current level chosen"
+msgid "(Level %1)"
+msgstr "(Nivå %1)"
+
+#: klettres.cpp:342
+#, kde-format
+msgid "Grown-up mode is currently active"
+msgstr "Vuxenutseende är för närvarande aktivt"
+
+#: klettres.cpp:343
+#, kde-format
+msgid "Switch to Kid mode"
+msgstr "Byt till utseende för barn"
+
+#: klettres.cpp:361
+#, kde-format
+msgid "Kid mode is currently active"
+msgstr "Barnutseende är för närvarande aktivt"
+
+#: klettres.cpp:362
+#, kde-format
+msgid "Switch to Grown-up mode"
+msgstr "Byt till utseende för vuxna"
+
+#: klettres.cpp:383
+#, kde-format
+msgid ""
+"File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
+"please check your installation."
+msgstr ""
+"Filen $KDEDIR/share/apps/klettres/%1.txt hittades inte.\n"
+"Kontrollera installationen."
+
+#: klettres.cpp:386
+#, kde-format
+msgid "Error"
+msgstr "Fel"
+
+#. i18n: ectx: label, entry (Language), group (General)
+#: klettres.kcfg:10
+#, kde-format
+msgid "Language"
+msgstr "Språk"
+
+#. i18n: ectx: label, entry (Theme), group (General)
+#: klettres.kcfg:14
+#, kde-format
+msgid "Theme"
+msgstr "Tema"
+
+#. i18n: ectx: label, entry (MenuBarBool), group (General)
+#: klettres.kcfg:23
+#, kde-format
+msgid "Whether the menubar is shown or hidden"
+msgstr "Om menyraden visas eller döljs"
+
+#. i18n: ectx: label, entry (Mode), group (General)
+#: klettres.kcfg:27
+#, kde-format
+msgid "Mode"
+msgstr "Utseende"
+
+#. i18n: ectx: label, entry (Level), group (General)
+#: klettres.kcfg:35
+#, kde-format
+msgid "Difficulty level."
+msgstr "Svårighetsnivå."
+
+#. i18n: ectx: label, entry (KidTimer), group (General)
+#: klettres.kcfg:41
+#, kde-format
+msgid "Kid Timer"
+msgstr "Barntid"
+
+#. i18n: ectx: label, entry (GrownTimer), group (General)
+#: klettres.kcfg:45
+#, kde-format
+msgid "Grown-up Timer"
+msgstr "Vuxentid"
+
+#. i18n: ectx: Menu (file)
+#: klettresui.rc:4
+#, kde-format
+msgid "&File"
+msgstr "&Arkiv"
+
+#. i18n: ectx: Menu (look_mode)
+#: klettresui.rc:15
+#, kde-format
+msgid "L&ook"
+msgstr "&Utseende"
+
+#. i18n: ectx: Menu (settings)
+#: klettresui.rc:23
+#, kde-format
+msgid "&Settings"
+msgstr "In&ställningar"
+
+#. i18n: ectx: ToolBar (mainToolbar)
+#: klettresui.rc:33
+#, kde-format
+msgid "Main"
+msgstr "Huvudverktygsrad"
+
+#. i18n: ectx: ToolBar (specialCharToolbar)
+#: klettresui.rc:47
+#, kde-format
+msgid "Special Characters"
+msgstr "Specialtecken"
+
+#: klettresview.cpp:32
+#, kde-format
+msgid "Type the letter or syllable that you just heard"
+msgstr "Skriv in bokstaven eller stavelsen du just hörde"
+
+#: klettresview.cpp:131
+#, kde-format
+msgctxt "%1 is uppercase letter, %2 is the same in lowercase"
+msgid "%1 / %2"
+msgstr "%1 / %2"
+
+#: kltheme.cpp:36
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Kid"
+msgstr "Barn"
+
+#: kltheme.cpp:86
+#, kde-format
+msgctxt "@item:inlistbox desert theme for the interface"
+msgid "Desert"
+msgstr "Öken"
+
+#: kltheme.cpp:136
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Savannah"
+msgstr "Savann"
+
+#: kltheme.cpp:187
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Aqua"
+msgstr "Aqua"
+
+#: langutils.cpp:88
+#, kde-format
+msgid "Romanized Hindi"
+msgstr "Romansk hindi"
+
+#: langutils.cpp:90
+#, kde-format
+msgid "Luganda"
+msgstr "Luganda"
+
+#: langutils.cpp:92
+#, kde-format
+msgid "English Phonics"
+msgstr "Engelska stavelser"
+
+#: langutils.cpp:94
+#, kde-format
+msgid "Tswana"
+msgstr "Setswana"
+
+#: langutils.cpp:99
+#, kde-format
+msgctxt "@item:inlistbox no language for that locale"
+msgid "None"
+msgstr "Inget"
+
+#: main.cpp:40
+#, kde-format
+msgid "KLettres"
+msgstr "Klettres"
+
+#: main.cpp:40
+#, kde-format
+msgid ""
+"KLettres helps a very young child or an adult learning \n"
+"a new language by associating sounds and \n"
+"letters in this language.\n"
+"\n"
+"25 languages are available."
+msgstr ""
+"Klettres hjälper ett litet barn eller en vuxen som lär sig\n"
+"ett nytt språk att koppla ihop ljud med bokstäver på\n"
+"detta språk.\n"
+"Det finns 25 språk tillgängliga."
+
+#: main.cpp:44
+#, kde-format
+msgid "(C) 2001-2011 Anne-Marie Mahfouf"
+msgstr "© 2001-2011 Anne-Marie Mahfouf"
+
+#: main.cpp:45
+#, kde-format
+msgid "Anne-Marie Mahfouf"
+msgstr "Anne-Marie Mahfouf"
+
+#: main.cpp:46
+#, kde-format
+msgid "Marc Cheng"
+msgstr "Marc Cheng"
+
+#: main.cpp:47
+#, kde-format
+msgid "Kids and grown-up oxygen icons"
+msgstr "Oxygen-ikoner för barn och vuxna"
+
+#: main.cpp:48
+#, kde-format
+msgid "Danny Allen"
+msgstr "Danny Allen"
+
+#: main.cpp:49
+#, kde-format
+msgid "SVG background pictures"
+msgstr "SVG-bakgrundsbilder"
+
+#: main.cpp:50
+#, kde-format
+msgid "Robert Gogolok"
+msgstr "Robert Gogolok"
+
+#: main.cpp:51
+#, kde-format
+msgid "Support and coding guidance"
+msgstr "Stöd och kodningsguide"
+
+#: main.cpp:52
+#, kde-format
+msgid "Peter Hedlund"
+msgstr "Peter Hedlund"
+
+#: main.cpp:53
+#, kde-format
+msgid "Code for generating special characters' icons"
+msgstr "Kod för att skapa ikoner för specialtecken"
+
+#: main.cpp:54
+#, kde-format
+msgid "Waldo Bastian"
+msgstr "Waldo Bastian"
+
+#: main.cpp:55
+#, kde-format
+msgid "Port to KConfig XT, coding help"
+msgstr "Överföring till Kconfig XT, kodningshjälp"
+
+#: main.cpp:56
+#, kde-format
+msgid "Pino Toscano"
+msgstr "Pino Toscano"
+
+#: main.cpp:57
+#, kde-format
+msgid "Code cleaning, Theme class"
+msgstr "Kodupprensning, temaklass"
+
+#: main.cpp:58
+#, kde-format
+msgid "Michael Goettsche"
+msgstr "Michael Goettsche"
+
+#: main.cpp:59
+#, kde-format
+msgid "Timer setting widgets"
+msgstr "Tidsinställningskomponent"
+
+#: main.cpp:60
+#, kde-format
+msgid "Laurent Navet"
+msgstr "Laurent Navet"
+
+#: main.cpp:61
+#, kde-format
+msgid "Port to KDE Frameworks 5"
+msgstr "Konvertering till KDE Ramverk 5"
+
+#: soundfactory.cpp:86
+#, kde-format
+msgid "Error while loading the sound names."
+msgstr "Fel när ljudnamnen laddades."
+
+#: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
+#, kde-format
+msgid "1 tenth of second"
+msgid_plural "%1 tenths of second"
+msgstr[0] "1 tiondels sekund"
+msgstr[1] "%1 tiondels sekunder"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: timerui.ui:51
+#, kde-format
+msgid "Set the time between 2 letters."
+msgstr "Ställer in tiden mellan två bokstäver."
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_KidTimer)
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:91 timerui.ui:184
+#, kde-format
+msgid "Set the timer (in tenths of seconds)"
+msgstr "Ställer in tiden (i tiondels sekunder)"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_KidTimer)
+#: timerui.ui:94
+#, kde-format
+msgid ""
+"You can set the time between two letters in Kid mode. Default is 4 tenths of "
+"seconds but younger children might need longer time."
+msgstr ""
+"Du kan ställa in tiden mellan två bokstäver i barnläge. Normalvärdet är fyra "
+"tiondels sekunder, men yngre barn kan behöva en längre tid."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: timerui.ui:122
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Kid Mode</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Barnläge</p></body></html>"
+
+#. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_GrownTimer)
+#: timerui.ui:187
+#, kde-format
+msgid ""
+"You can set the time between two letters in Grown-up mode. Default is 2 "
+"tenths of seconds."
+msgstr ""
+"Du kan ställa in tiden mellan två bokstäver i vuxenläge. Normalvärdet är två "
+"tiondels sekunder."
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: timerui.ui:215
+#, kde-format
+msgid ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Grown-up Mode</p></body></html>"
+msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">Vuxenläge</p></body></html>"
+
+#~ msgid "Klettres"
+#~ msgstr "Klettres"
+
+#~ msgid "Ludovic Grossard"
+#~ msgstr "Ludovic Grossard"
+
+#~ msgid "French sounds"
+#~ msgstr "Franska ljud"
+
+#~ msgid "Geert Stams"
+#~ msgstr "Geert Stams"
+
+#~ msgid "Dutch sounds"
+#~ msgstr "Holländska ljud"
+
+#~ msgid "Erik Kjaer Pedersen"
+#~ msgstr "Erik Kjaer Pedersen"
+
+#~ msgid "Danish sounds"
+#~ msgstr "Danska ljud"
+
+#~ msgid "Eva Mikulčíková"
+#~ msgstr "Eva Mikulčíková"
+
+#~ msgid "Czech sounds"
+#~ msgstr "Tjeckiska ljud"
+
+#~ msgid "Silvia Motyčková & Jozef Říha"
+#~ msgstr "Silvia Motyčková & Jozef Říha"
+
+#~ msgid "Slovak sounds"
+#~ msgstr "Slovakiska ljud"
+
+#~ msgid "Robert Wadley"
+#~ msgstr "Robert Wadley"
+
+#~ msgid "English sounds"
+#~ msgstr "Engelska ljud"
+
+#~ msgid "Pietro Pasotti"
+#~ msgstr "Pietro Pasotti"
+
+#~ msgid "Italian sounds"
+#~ msgstr "Italienska ljud"
+
+#~ msgid "Ana Belén Caballero and Juan Pedro Paredes"
+#~ msgstr "Ana Belén Caballero och Juan Pedro Paredes"
+
+#~ msgid "Spanish sounds"
+#~ msgstr "Spanska ljud"
+
+#~ msgid "Vikas Kharat"
+#~ msgstr "Vikas Kharat"
+
+#~ msgid "Romanized Hindi sounds"
+#~ msgstr "Romansk hindi ljud"
+
+#~ msgid "John Magoye and Cormac Lynch"
+#~ msgstr "John Magoye och Cormac Lynch"
+
+#~ msgid "Luganda sounds"
+#~ msgstr "Luganda ljud"
+
+#~ msgid "Helmut Kriege"
+#~ msgstr "Helmut Kriege"
+
+#~ msgid "German sounds"
+#~ msgstr "Tyska ljud"
+
+#~ msgid "Assaf Gorgon and Diego Iastrubni"
+#~ msgstr "Assaf Gorgon och Diego Iastrubni"
+
+#~ msgid "Hebrew sounds"
+#~ msgstr "Hebreiska ljud"
+
+#~ msgid "Lisa Kriege"
+#~ msgstr "Lisa Kriege"
+
+#~ msgid "British English sounds"
+#~ msgstr "Brittisk engelska ljud"
+
+#~ msgid "Vikram Vincent"
+#~ msgstr "Vikram Vincent"
+
+#~ msgid "Kannada sounds"
+#~ msgstr "Kanaresiska ljud"
+
+#~ msgid "Show &Menubar"
+#~ msgstr "Visa &menyrad"
+
+#~ msgid "Hide &Menubar"
+#~ msgstr "Dölj &menyrad"
+
+#~ msgid ""
+#~ "You can show or hide the menubar as you wish by clicking this button."
+#~ msgstr ""
+#~ "Du kan visa eller dölja menyraden som du önskar genom att klicka på den "
+#~ "här knappen."
+
+#~ msgid "Show Menubar"
+#~ msgstr "Visa menyrad"
+
+#~ msgid "Hide Menubar"
+#~ msgstr "Dölj menyrad"

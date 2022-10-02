@@ -1,0 +1,1075 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klettres" lang="&language;">
+
+<bookinfo>
+<title
+>Das Handbuch zu &klettres;</title>
+
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Thorsten</firstname
+><surname
+>Mürell</surname
+><affiliation
+><address
+><email
+>thorsten@muerell.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year
+><year
+>2007</year>
+<holder
+>&Anne-Marie.Mahfouf;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2020-12-29</date>
+<releaseinfo
+>Anwendungen 20.12</releaseinfo>
+
+<abstract>
+<para
+>&klettres; ist eine Anwendung, die dafür erstellt wurde, dem Benutzer das Lernen des Alphabets in einer neuen Sprache zu erleichtern und dann anschließend das Lesen von einfachen Silben. Der Benutzer kann ein junges Kind von zweieinhalb sein oder ein Erwachsener, der die Grundlage einer fremden Sprache lernen möchte.</para>
+<para
+>Fünfundzwanzig Sprachen sind zurzeit verfügbar: Arabisch, Brasilianisches Portugiesisch, Tschechisch, Dänisch, Holländisch, Britisches Englisch, Amerikanisches Englisch, Englisches Phonics, Französisch, Deutsch, Hebräisch, Ungarisch, Italienisch, Kanadisch, Niederdeutsch, Malayam (eine Südindische Sprache), Norwegisch Bokmål, Punjab, Hindi (in lateinischer Umschrift), Russisch, Spanisch, Slowakisch, Telugu und Ukrainisch. Nur Englisch, Französisch und Ihre Sprache, wenn Sie hier aufgeführt ist, werden als Voreinstellung installiert. </para>
+<para
+>&klettres; ist leicht zu spielen. Sie können die Sprache im Menü <guimenu
+>Sprache</guimenu
+> wählen. Die Spielstufe von 1 bis 4 können Sie im Auswahlfeld in der Werkzeugleiste oder im Menü <guimenu
+>Spielstufe</guimenu
+> einstellen. Das Design (Hintergrund und Schrift) wählen Sie in einem Auswahlfeld oder im Menü <menuchoice
+><guimenu
+>Aussehen</guimenu
+> <guimenuitem
+>Design</guimenuitem
+></menuchoice
+>. Zur Auswahl stehen vier Designs: <guimenuitem
+>Kind</guimenuitem
+>, <guimenuitem
+>Wüste</guimenuitem
+>, <guimenuitem
+>Savanne</guimenuitem
+> und <guimenuitem
+>Wasser</guimenuitem
+>. Im Menü <guimenu
+>Aussehen</guimenu
+> können Sie einen Kindmodus oder den Erwachsenenmodus einstellen. </para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeedu</keyword>
+<keyword
+>klettres</keyword>
+<keyword
+>Alphabet</keyword>
+<keyword
+>Klänge</keyword>
+<keyword
+>Sprache</keyword>
+<keyword
+>Tastatur</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Einleitung</title>
+
+<para
+>&klettres; ist eine einfaches Programm, das einem Kind oder einem Erwachsenen hilft, das Alphabet und einige einfache Laute in der eigenen oder einer fremden Sprache zu lernen. Das Programm wählt einen zufälligen Buchstaben oder eine Silbe dieser Buchstabe/diese Silbe wird angezeigt und der Laut wird abgespielt. Der Benutzer soll dann diesen Buchstaben oder diese Silbe eingeben. Das Training ist in verschiedene Schwierigkeitsstufen eingeteilt, in einigen Stufen wird der Buchstabe/die Silbe nicht angezeigt und nur der Laut gespielt Der Benutzer muss nicht wissen, wie die Maus bedient wird, die Tastatur reicht völlig aus.</para>
+
+<para
+>Es gibt zurzeit die oben genannten fünfundzwanzig Sprachen. Falls Ihre Sprache darin enthalten ist, wird diese als Standard eingestellt, sonst ist Französisch die Voreinstellung. Sie können zusätzliche Sprachen im Menü <menuchoice
+><guimenu
+>Datei</guimenu
+> <guimenuitem
+>Neue Sprache herunterladen ...</guimenuitem
+></menuchoice
+> installieren, Ihr Computer muss nur mit dem Internet verbunden sein.</para>
+
+<!-- add a note for the sound, what does KLettres needs -->
+
+<para
+>Mit zwei verschiedenen Oberflächen können Sie &klettres; an Ihre Bedürfnisse anpassen, entweder mit der üblichen vollständigen oder mit einer vereinfachten Oberfläche. Für ein Kind ist die Menüleiste ausgeblendet und die Auswahl der Sprache nicht möglich. In einem Auswahlfeld kann das Kind zwischen verschiedenen Spielstufen wählen. Für ältere Benutzer ist der Hintergrund nicht so kindisch und die Menüleiste wird angezeigt. Mit vier verschiedenen Designs (<guimenuitem
+>Kind</guimenuitem
+>, <guimenuitem
+>Wüste</guimenuitem
+>, <guimenuitem
+>Savanne</guimenuitem
+> und <guimenuitem
+>Wasser</guimenuitem
+>) können Sie unterschiedliche Hintergründe und Schriften einstellen.</para>
+
+<note>
+<para
+>Sie brauchen die Tastatureinstellungen nicht mehr zu verändern, da Sie die Werkzeugleiste <guilabel
+>Sonderzeichen</guilabel
+> benutzen können, um Sonderzeichen in jeder Sprache einzugeben. Wählen Sie im Menü <menuchoice
+><guimenu
+>Einstellungen</guimenu
+> <guisubmenu
+>Angezeigte Werkzeugleisten</guisubmenu
+> <guimenuitem
+>Sonderzeichen</guimenuitem
+></menuchoice
+> und die Werkzeugleiste wird am unteren Rand von &klettres; angezeigt. Klicken Sie auf den Buchstaben, den Sie eingeben wollen und er wird im Eingabefeld angezeigt. Diese Werkzeugleiste können Sie auf dem Bildschirm beliebig verschieben.</para>
+<para
+>Falls Sie lieber die Tastaturbelegung ändern möchten, benutzen Sie die &systemsettings; und wählen aus der Kategorie <guilabel
+>Hardware</guilabel
+> <guimenu
+>Eingabegeräte</guimenu
+> die Seite <guimenuitem
+>Tastatur</guimenuitem
+> und stellen hier die gewünschte Tastaturbelegung ein.</para>
+</note>
+</chapter>
+
+<chapter id="using-klettres">
+<title
+>&klettres; benutzen</title>
+<para
+>&klettres; hat 4 Schwierigkeitsstufen. Die Stufen 1 und 2 behandeln das  Alphabet und die Stufen 3 und 4 betreffen die Silben. Bei sehr jungen Kindern (2 1/2 bis 4) würde ich vorschlagen, dass sie auf Ihrem Schoß vor dem Computer sitzen und das Spiel zusammen spielen.</para>
+
+<sect1 id="levels1-and2">
+<title
+>Stufen 1 und 2</title>
+
+<screenshot>
+<screeninfo
+>Bildschirmfoto von &klettres; in der 1. Schwierigkeitsstufe</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres1.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; Stufe 1</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Spielstufe 1, Sprache Französisch, Wüsten-Design und der <emphasis
+>Erwachsenenmodus</emphasis
+>.</para>
+<note>
+<para
+>Falls &klettres; in Ihrer Sprache übersetzt ist, wird diese Ihre Standardsprache, wenn Sie das erste Mal &klettres; starten. Für alle anderen Sprache ist Englisch der Standard.  &klettres; wird mit Englisch, Französisch und Ihrer eingestellten Sprache installiert, wenn sie in der oben genannten Liste enthalten ist. Sie können zusätzliche Sprachen im Menü <menuchoice
+><guimenu
+>Datei</guimenu
+><guimenuitem
+>Neue Sprache herunterladen ...</guimenuitem
+></menuchoice
+> installieren. Ihr Rechner muss nur mit dem Internet verbunden sein. </para>
+</note>
+<para
+>In der Stufe 1 sieht der Benutzer einen Buchstaben und hört den Laut dazu. Er muss dann den Buchstaben in das Textfeld eingeben. Wenn das korrekt ausgeführt wurde, erscheint der nächste Buchstabe (ohne dass Sie die &Enter;taste oder etwas andere Tasten drücken müssen). Wenn der Benutzer falschen Buchstaben eingibt, wird der Laut noch einmal abgespielt. In dieser Stufe merkt sich der Benutzer die Buchstaben, verbindet sie mit den Lauten und erkennt sie auf der Tastatur. </para>
+
+<note>
+<para
+>Der Benutzer kann entweder Klein- oder Großbuchstaben eingeben. Die Buchstaben werden automatisch in Großbuchstaben umgewandelt, sodass ein Kind diese auf der Tastatur wiedererkennt. Sie können nur jeweils einen Buchstaben eingeben.</para>
+<para
+>Wenn Sie einen Buchstaben in das Eingabefeld eingeben, müssen Sie nicht die &Enter;taste drücken. Das Programm wartet einen Augenblick dann wird geprüft, ob der Buchstabe richtig war. Diese kurze Pause erlaubt es einem kleinen Kind zu verstehen, was es eingegeben hat, vor allem, wenn es der falsche Buchstabe war. Diese Wartezeit können Sie im Menü <menuchoice
+><guimenu
+>Einstellungen</guimenu
+> <guimenuitem
+> &klettres; einrichten ...</guimenuitem
+></menuchoice
+> einstellen. Auf der Seite <guilabel
+>Zeiten</guilabel
+> können Sie zwei verschiedene Zeiten einstellen können: einmal für den <guilabel
+>Kindmodus</guilabel
+> und einmal für den <guilabel
+>Erwachsenenmodus</guilabel
+>. </para>
+</note>
+
+<para
+>Nach dem ersten Start wird die Spracheinstellung in einer Datei beim Beenden von &klettres; gespeichert und beim nächsten Starten mit der zuletzt gespielten Spielstufe wieder geladen. </para>
+<para
+>Das Aussehen wird auch in der Einstellungsdatei gespeichert und wird deswegen beibehalten, bis Sie es ändern.</para>
+<para
+>Die Buchstaben erscheinen in zufälliger Reihenfolge, aber nicht der gleiche Buchstabe hintereinander.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Bildschirmfoto von &klettres; in der 2. Schwierigkeitsstufe</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; Stufe 2</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para
+>Hier ist ein Bildschirmfoto der Stufe 2 mit dem <quote
+>Kindmodus</quote
+>, im Design <emphasis
+>Kind</emphasis
+> in dänischer Sprache.</para>
+
+<para
+>Klicken Sie in das Auswahlfeld <guilabel
+>Spielstufe</guilabel
+> oder benutzen Sie das Menü <guilabel
+>Spielstufe</guilabel
+>, um die Spielstufe 2 einzustellen. In dieser Schwierigkeitsstufe hört der Benutzer nur den Laut des Buchstabens und muss ihn dann eingeben. Bei einer falschen Eingabe wird der richtige Buchstabe angezeigt, um dem Benutzer eine Hilfestellung zu geben.</para>
+</sect1>
+
+<sect1 id="levels3-and4">
+<title
+>Stufen 3 und 4</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Bildschirmfotos von &klettres; Stufe 3</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres3.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; Stufe 3</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Hier sehen Sie &klettres; Stufe 3, <quote
+>Erwachsenenmodus</quote
+>, Design <emphasis
+>Savanne</emphasis
+> in tschechischer Sprache. </para>
+
+<para
+>In der Stufe 3 sieht der Benutzer die Silbe und hört den Laut. Er muss dann die Buchstaben in das Textfeld eingeben. Wenn der erste Buchstabe des Lautes falsch ist, können keine weiteren Buchstaben eingegeben werden. Der Buchstabe wird gelöscht und Benutzer hat einen weiteren Versuch. Die Silben haben zwei oder drei Buchstaben, das hängt von der Sprache ab.</para>
+
+<screenshot>
+<screeninfo
+>Bildschirmfoto von &klettres; in der 4. Schwierigkeitsstufe</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres4.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; Stufe 4</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Hier sehen Sie &klettres; Stufe 4, <quote
+>Kindmodus</quote
+>, Design <emphasis
+>Wüste</emphasis
+> in Slowakischer Sprache. </para>
+
+<para
+>Die Laute ertönen in zufälliger Reihenfolge.</para
+> <para
+>Klicken Sie in das Auswahlfeld <guilabel
+>Spielstufe</guilabel
+> oder benutzen Sie das Menü <guilabel
+>Spielstufe</guilabel
+>, um Spielstufe 4 einzustellen. In dieser Schwierigkeitsstufe hört der Benutzer nur den Laut der Silbe und muss ihn dann eingeben. Diese Stufe ist sehr schwierig für ein kleines Kind.</para>
+
+</sect1>
+
+<sect1 id ="configuring">
+<title
+>Einrichtungsdialog</title>
+<para
+>Der Dialog enthält die zwei Seiten <guilabel
+>Schrift</guilabel
+> und <guilabel
+>Zeiten</guilabel
+>.</para>
+
+<sect2 id="about-font">
+<title
+>Über Schriften</title>
+
+<para
+>Die Schriftart für die Anzeige der Buchstaben ist einstellbar. In einigen Distributionen sieht die Standardschrift nicht so toll aus. Im <quote
+>Erwachsenenmodus</quote
+> öffnen Sie im Menü <guimenu
+>Einstellungen</guimenu
+> mit <guimenuitem
+>&klettres; einrichten ...</guimenuitem
+> die Seite <guilabel
+>Schrifteinstellungen</guilabel
+>, auf der Sie eine neue Schrift auswählen können. Diese Schrift wird für die angezeigten Buchstaben/Silben und auch für das Eingabefeld benutzt. </para>
+
+<warning>
+<para
+>Die Schriftart zu ändern ist auch dann sinnvoll, weil einige Schriftarten (wie zum Beispiel <quote
+>Helvetica</quote
+>) die Osteuropäischen Sprachen wie Tschechisch und Slowakisch nicht korrekt anzeigen. Wenn einige Buchstaben oder Silben nicht angezeigt werden, ändern Sie bitte die Schriftart und wählen zum Beispiel <quote
+>Arial</quote
+>. </para>
+</warning>
+
+<para
+>Sie können hier auch die gewünschte Schriftgröße wählen. Diese Einstellung wird gespeichert. </para>
+
+<screenshot>
+<screeninfo
+>Bildschirmfoto vom &klettres;-Dialog zur Auswahl der Schrift</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres5.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres;-Dialog zur Auswahl der Schrift</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Hier sehen Sie den &klettres;-zur Auswahl der Schrift. </para>
+</sect2>
+
+<sect2 id="timers">
+<title
+>Zeiten</title>
+
+<para
+>Hier stellen Sie die Zeit für die Anzeige der Buchstaben in Zehntelsekunden ein. </para>
+
+<para
+>Auf der Seite <guilabel
+>Zeiten</guilabel
+> des Dialogs <menuchoice
+><guimenu
+>Einstellungen</guimenu
+> <guimenuitem
+>&klettres; einrichten ...</guimenuitem
+> </menuchoice
+> können Sie zwei Zeiten einstellen: für den <guilabel
+>Kindmodus</guilabel
+> (Voreinstellung 4 Zehntelsekunden) und für den <guilabel
+>Erwachsenenmodus</guilabel
+>. (Voreinstellung 2 Zehntelsekunden). Die Einstellung einer längeren Zeitdauer hilft Ihnen, Fehler zu erkennen.</para>
+
+<screenshot>
+<screeninfo
+>Bildschirmfoto von &klettres; mit der Einstellung der Zeiten</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres6.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Bildschirmfoto von &klettres; mit der Einstellung der Zeiten</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+<sect1 id="Get-new-stuff">
+<title
+>Eine neue Sprache hinzufügen</title>
+<para
+>Möglicherweise möchten Sie mit &klettres;  eine neue Sprache lernen. Mit <menuchoice
+><guimenu
+>Datei</guimenu
+> <guimenuitem
+>Neue Sprache herunterladen ...</guimenuitem
+></menuchoice
+> öffnen Sie einen Dialog, der die Liste der verfügbaren Sprachen anzeigt. Um diese Funktion benutzen zu können, müssen Sie mit dem Internet verbunden sein.</para>
+<screenshot>
+<screeninfo
+>Der Dialog <quote
+>Neue Sprache herunterladen</quote
+></screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Der Dialog <quote
+>Neue Sprache herunterladen</quote
+></phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para
+>Klicken Sie auf den Knopf <guilabel
+>Installieren</guilabel
+> rechts neben der gewünschten Sprache.</para>
+<para
+>Bitte beachten Sie, dass einige Dateien eine Größe von mehreren Megabyte haben, sodass das Herunterladen abhängig von Ihrer Internetverbindung einige Zeit in Anspruch nehmen kann.</para>
+<para
+>Nachdem die Datei heruntergeladen wurde, wird sie automatisch installiert. Wenn Sie den Dialog schließen, können Sie die neue Sprache im Menü <guilabel
+>Sprache</guilabel
+> auswählen und sofort verwenden.</para>
+
+<para
+>Wenn eine Sprache heruntergeladen wurde, wechselt der Knopf <guilabel
+>Installieren</guilabel
+> zu <guilabel
+>Deinstallieren</guilabel
+>.</para>
+<para
+>Das nächste Bildschirmfoto zeigt die installierte Sprache Dänisch.</para>
+<screenshot>
+<screeninfo
+>Dänisch ist installiert</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Dänisch ist installiert</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Befehlsreferenz</title>
+
+<sect1 id="klettres-mainwindow">
+<title
+>Das Hauptfenster von &klettres;</title>
+
+<sect2>
+<title
+>Das Menü Datei</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Datei</guimenu
+> <guimenuitem
+>Neuer Laut</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Spielt</action
+> einen neuen Laut.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycap
+>F5</keycap
+></shortcut
+> <guimenu
+>Datei</guimenu
+> <guimenuitem
+>Laut wiederholen</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Spielt</action
+> den gleichen Laut noch einmal.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Datei</guimenu
+> <guimenuitem
+>Neue Sprache herunterladen ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Öffnet</action
+> den Dialog <quote
+>Neue Erweiterungen herunterladen</quote
+> für &klettres;, um eine neue Sprache herunterzuladen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Datei</guimenu
+> <guimenuitem
+>Beenden</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Beendet</action
+> &klettres;.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Das Menü Spielstufe</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spielstufe</guimenu
+> <guimenuitem
+>Stufe 1</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Stellt</action
+> die Spielstufe 1 ein (Buchstaben werden angezeigt und vorgelesen).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spielstufe</guimenu
+> <guimenuitem
+>Stufe 2</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Stellt</action
+> die Spielstufe 2 ein (Buchstaben werden nicht angezeigt, nur vorgelesen).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spielstufe</guimenu
+> <guimenuitem
+>Stufe 3</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Stellt</action
+> die Spielstufe 3 ein (Silben werden angezeigt und vorgelesen).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Spielstufe</guimenu
+> <guimenuitem
+>Stufe 4</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Stellt</action
+> die Spielstufe 4 ein (Silben werden nicht angezeigt, nur vorgelesen).</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+<sect2>
+<title
+>Das Menü Sprache</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Sprache</guimenu
+> <guimenuitem
+>Englisch</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wählt</action
+> die Englische Sprache.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Sprache</guimenu
+> <guimenuitem
+>Französisch</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wählt</action
+> die Französische Sprache.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Das Menü Aussehen</title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Aussehen</guimenu
+> <guisubmenu
+>Design</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Wechselt</action
+> zum Design Kind, Wüste, Savanne oder Wasser.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>K</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Aussehen</guimenu
+> <guimenuitem
+>Kindmodus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Stellt</action
+> den Kindmodus ohne Menüleiste ein.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+><keycombo action="simul"
+>&Ctrl;<keycap
+>G</keycap
+></keycombo
+></shortcut
+> <guimenu
+>Aussehen</guimenu
+> <guimenuitem
+>Erwachsenenmodus</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Stellt</action
+> den Erwachsenenmodus mit der normalen Oberfläche ein.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Zusätzlich hat &klettres; die bekannten &kde;-Einträge im Menü <guimenu
+>Einstellungen</guimenu
+> und <guimenu
+>Hilfe</guimenu
+>, weitere Informationen dazu finden Sie in den Abschnitten über die Menüs <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Einstellungen</ulink
+> und <ulink url="help:/fundamentals/menus.html#menus-help"
+>
+>Hilfe</ulink
+> der &kde;-Grundlagen. </para>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="sounds">
+<title
+>Neue Dateien mit Lauten für &klettres;</title>
+
+<para
+>Es ist sehr einfach, Laute für Ihre eigene Sprache hinzuzufügen. Nehmen Sie die Laute Ihres Alphabets auf und speichern Sie sie in einen Ordner namens ‚alpha‘. Nehmen Sie dann die Laute der häufigsten Silben auf und speichern Sie sie in einen Ordner namens ‚syllab‘.</para
+> 
+<para
+>Erstellen Sie die Textdatei <filename
+>sounds.xml</filename
+> mit &kate; als Editor oder einem anderen Editor, der verschiedene Kodierungen verarbeitet. In diese Datei schreiben Sie alle aufgenommen Buchstaben- und Silbendateien, wie in diesem Beispiel für die tschechische Sprache:</para>
+<programlisting
+>&lt;klettres&gt;
+&lt;language code="cs"&gt;
+    &lt;menuitem&gt;
+      &lt;label&gt;&amp;Czech&lt;/label&gt;
+    &lt;/menuitem&gt;
+    &lt;alphabet&gt;
+        &lt;sound name="A" file="cs/alpha/a.ogg" /&gt;
+        ...
+    &lt;/alphabet&gt;
+    &lt;syllables&gt;
+        &lt;sound name="BA" file="cs/syllab/ba.ogg" /&gt;
+        ...
+    &lt;/syllables&gt;
+  &lt;/language&gt;
+&lt;/klettres&gt;</programlisting>
+<para
+>Ersetzen Sie <quote
+>cs</quote
+> mit dem Zwei-Buchstaben-Code und <quote
+>Czech</quote
+> mit dem Namen Ihrer Sprache. Schreiben Sie die Namen der Laute auch mit den Sonderzeichen Ihrer Sprache in Großbuchstaben in utf8-Kodierung.</para>
+
+<para
+>Geben Sie auch alle Sonderzeichen für Ihre Sprache an, damit dann die Werkzeugleiste für diese <guimenuitem
+>Sonderzeichen</guimenuitem
+> erstellt werden kann. Schreiben Sie alle Sonderzeichen Ihrer Sprache in Großbuchstaben zeilenweise in eine Textdatei namens <filename
+>cs.txt</filename
+> (Ersetzen Sie <quote
+>cs</quote
+> mit dem Zwei-Buchstaben-Code Ihrer Sprache). Speichern Sie beide Dateien in <quote
+>utf8</quote
+>-Kodierung (in &kate; in dem Auswahlfeld oben rechts).</para>
+
+<para
+>Die Laute sollten im ogg- Format vorliegen und lang genug für das Abspielen für die Audiowiedergabe sein, d. h. Dauer der Aufnahme etwa 1,5 bis 2 Sekunden. Packen Sie alle Dateien als tar-Archiv und schicken Sie sie an die Mailingliste <email
+>kde-edu@kde.org</email
+>. </para>
+
+<para
+>Auf der <ulink url="https://edu.kde.org/klettres/add_language.php"
+>&klettres; Internetseite</ulink
+> finden Sie neuere Informationen, wie Sie eine neue Sprache hinzuzufügen können. </para>
+</chapter>
+
+<chapter id="faq">
+<title
+>Fragen und Antworten</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Das Hintergrundbild erscheint nicht.</para>
+</question>
+<answer>
+<para
+>Wenn Sie &klettres; selbst kompilieren, müssen Sie <quote
+>configure</quote
+> die Option <option
+>--prefix</option
+> mit dem &kde;-Ordner übergeben  oder diesen Ordner zu ihrem Pfad hinzufügen.</para
+> </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Ich höre keine Laute.</para>
+</question>
+<answer>
+<para
+>Vergewissern Sie sich, dass &phonon; auf Ihrem System funktioniert. Dazu öffnen Sie die &systemsettings; und klicken im Abschnitt <guilabel
+>Hardware</guilabel
+> auf <guilabel
+>Multimedia</guilabel
+>. </para>
+ </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Ich sehe keine Buchstaben auf einigen Symbolen in der Werkzeugleiste für Sonderzeichen. Stattdessen werden nur Rechtecke in einigen Sprachen angezeigt.</para>
+</question>
+<answer>
+<para
+>&klettres; braucht für Tschechisch und Slowakisch die Schrift Arial. Haben Sie diese Schrift nicht installiert, suchen Sie sie in Ihrer Distribution.</para
+> 
+<para
+>Wenn Sie &Windows; auf Ihrem Computer installiert haben, können Sie dessen TTF-Schriften (Arial ist darin enthalten) benutzen, indem Sie in Systemeinstellungen -&gt; <guilabel
+>Systemverwaltung</guilabel
+> -&gt; <guilabel
+>Schriftarteninstallation</guilabel
+> wählen und den Ordner mit den &Windows;-Schriften hinzufügen.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Warum gibt es nur Fünfundzwanzig Sprachen?</para>
+</question>
+<answer>
+<para
+>Damit eine neue Sprache erstellt werden kann, sind die Laute für das Alphabet und einige grundlegende Silben erforderlich. Jemand, der eine Sprache als Muttersprache spricht, muss diese Laute im ogg-Format aufnehmen. Für die Stufen 3 und 4 müssen die Silben von einem Lehrer oder von jemandem ausgewählt werden, der sich mit dem Lehren beschäftigt: Es müssen die Laute sein, die man gleich nach dem Alphabet als Grundlage der Sprache lernt. Bitte senden Sie eine E-Mail an <email
+>kde-edu@kde.org</email
+>. Auf der <ulink url="https://edu.kde.org/klettres/add_language.php"
+>&klettres;-Internetseite</ulink
+> finden Sie ausführliche Informationen, um eine neue Sprache hinzuzufügen.</para
+> </answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Danksagungen und Lizenz</title>
+
+<para
+>&klettres; </para>
+<para
+>Programm Copyright 2001-2007 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+<para
+>Ich bin folgenden Personen sehr dankbar für Ihre große Hilfe: <itemizedlist>
+<listitem
+><para
+>Laute für brasilianisches Portugiesisch: Lindonjohnson Monte (Vater) and Michelle Monte, 9 Jahre (Sohn) <email
+>lindon_johnson@brturbo.com.br</email
+></para
+> </listitem>
+<listitem
+><para
+>Tschechische Laute: Eva Mikulčíková <email
+>evmi@seznam.cz</email
+></para
+> </listitem>
+<listitem
+><para
+>Dänische Laute: Erik Kjaer Pedersen <email
+>erik@binghamton.edu</email
+></para
+> </listitem>
+<listitem
+><para
+>Holländische Laute: Geert Stams <email
+>geert@pa3csg.myweb.nl</email
+></para
+> </listitem>
+<listitem
+><para
+>Englische Laute: Robert Wadley <email
+>robntina@juno.com</email
+></para
+></listitem>
+<listitem
+><para
+>Französische Laute: Ludovic Grossard <email
+>grossard@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Deutsche Laute: Helmut Kriege <email
+>h.kriege@freenet.de</email
+></para
+></listitem>
+<listitem
+><para
+>Hebräische Laute: Assaf Gorgon <email
+>assafgordon@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Italienische Laute: Pietro Pasotti <email
+>pietro@itopen.it</email
+></para
+></listitem>
+<listitem
+><para
+>Kannada Laute: Vikram Vincent <email
+>vincentvikram@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Niederdeutsche Laute: Manfred Wiese and Sönke Dibbern <email
+>s_dibbern@web.de</email
+></para
+></listitem>
+<listitem
+><para
+>Luganda Laute: John Magoye and Cormac Lynch <email
+>cormaclynch@eircom.net</email
+></para
+></listitem>
+<listitem
+><para
+>Hindi Laute (in lateinischer Umschrift): Vikas Kharat <email
+>kharat@sancharnet.in</email
+></para
+></listitem>
+<listitem
+><para
+>Spanische Laute: Ana Belén Caballero und Juan Pedro Paredes <email
+>neneta @iquis.com</email
+></para
+></listitem>
+<listitem
+><para
+>Slowakische Laute: Silvia Motyčková und Jozef Říha <email
+>silviamotycka@seznam.cz</email
+></para
+></listitem>
+<listitem
+><para
+>Telugu Laute: Pavithran Shakamuri <email
+>pavithran.s@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Ursprüngliche Symbole: &Primoz.Anzur; <email
+>zerokode@yahoo.com</email
+></para
+></listitem>
+<listitem
+><para
+>Unterstützung und Hilfe beim Programmieren: &Robert.Gogolok; &Robert.Gogolok.mail;</para
+></listitem>
+<listitem
+><para
+>&SVG;-Symbole: Chris Luetchford <email
+>chris@os11.com</email
+></para
+></listitem>
+<listitem
+><para
+>Code für die Anzeige der Symbole für die Sonderzeichen: Peter Hedlund <email
+>peter@peterandlinda.com</email
+></para
+></listitem>
+<listitem
+><para
+>Portierung zu KConfig XT, Hilfe beim Programmieren: &Waldo.Bastian; &Waldo.Bastian.mail;</para
+></listitem>
+<listitem
+><para
+>&SVG;-Symbole für Kinder und Erwachsene, Wüstendesign: &Danny.Allen; <email
+>dannya40uk@yahoo.co.uk</email
+></para
+></listitem>
+<listitem
+><para
+>Symbol für die Einstellung der Zeiten: Michael Goettsche <email
+>michael.goettsche@kdemail.net</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Copyright der Dokumentation 2001-2006 &Anne-Marie.Mahfouf;&Anne-Marie.Mahfouf.mail; </para>
+
+<para
+>Übersetzung: Thorsten Mürell <email
+>thorsten@muerell.de</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
