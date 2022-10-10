@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+   KDE EDU KLettres
+
+   Sounds taken from GCompris (license: GNU GPL 3 or later).
+
+   The files were generated using the commercial CereVoice Cloud
+   text-to-speech service from CereProc: https://www.cereproc.com/
+
+   Credits:
+
+   Karl Ove Hufthammer <karl@huftis.org>
+   Creation of audio files, pronunciation adjustments, QA.
+
+   Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>
+   QA of the resulting speech files.
+-->
+
+<klettres>
+  <language code="nn">
+    <menuitem>
+      <label>&amp;Norwegian Nynorsk</label>
+    </menuitem>
+    <alphabet>
+      <sound name="A" file="nn/alpha/U0061.opus"/>
+      <sound name="B" file="nn/alpha/U0062.opus"/>
+      <sound name="C" file="nn/alpha/U0063.opus"/>
+      <sound name="D" file="nn/alpha/U0064.opus"/>
+      <sound name="E" file="nn/alpha/U0065.opus"/>
+      <sound name="F" file="nn/alpha/U0066.opus"/>
+      <sound name="G" file="nn/alpha/U0067.opus"/>
+      <sound name="H" file="nn/alpha/U0068.opus"/>
+      <sound name="I" file="nn/alpha/U0069.opus"/>
+      <sound name="J" file="nn/alpha/U006A.opus"/>
+      <sound name="K" file="nn/alpha/U006B.opus"/>
+      <sound name="L" file="nn/alpha/U006C.opus"/>
+      <sound name="M" file="nn/alpha/U006D.opus"/>
+      <sound name="N" file="nn/alpha/U006E.opus"/>
+      <sound name="O" file="nn/alpha/U006F.opus"/>
+      <sound name="P" file="nn/alpha/U0070.opus"/>
+      <sound name="Q" file="nn/alpha/U0071.opus"/>
+      <sound name="R" file="nn/alpha/U0072.opus"/>
+      <sound name="S" file="nn/alpha/U0073.opus"/>
+      <sound name="T" file="nn/alpha/U0074.opus"/>
+      <sound name="U" file="nn/alpha/U0075.opus"/>
+      <sound name="V" file="nn/alpha/U0076.opus"/>
+      <sound name="W" file="nn/alpha/U0077.opus"/>
+      <sound name="X" file="nn/alpha/U0078.opus"/>
+      <sound name="Y" file="nn/alpha/U0079.opus"/>
+      <sound name="Z" file="nn/alpha/U007A.opus"/>
+      <sound name="Æ" file="nn/alpha/U00E6.opus"/>
+      <sound name="Ø" file="nn/alpha/U00F8.opus"/>
+      <sound name="Å" file="nn/alpha/U00E5.opus"/>
+    </alphabet>
+  </language>
+</klettres>

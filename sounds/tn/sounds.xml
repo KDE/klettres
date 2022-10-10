@@ -1,0 +1,68 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+
+  <language code="tn">
+
+      <alphabet>
+	<sound name="A" file="tn/alpha/a.ogg"/>
+	<sound name="E" file="tn/alpha/e.ogg"/>
+	<sound name="I" file="tn/alpha/i.ogg"/>
+	<sound name="K" file="tn/alpha/k.ogg"/>
+	<sound name="L" file="tn/alpha/l.ogg"/>
+	<sound name="N" file="tn/alpha/n.ogg"/>
+	<sound name="R" file="tn/alpha/r.ogg"/>
+      </alphabet>
+
+      <syllables>
+	<sound name="BA" file="tn/syllab/ba.ogg"/>
+	<sound name="BE" file="tn/syllab/be.ogg"/>
+	<sound name="BI" file="tn/syllab/bu.ogg"/>
+	<sound name="BO" file="tn/syllab/bo.ogg"/>
+	<sound name="FA" file="tn/syllab/fa.ogg"/>
+	<sound name="FE" file="tn/syllab/fe.ogg"/>
+	<sound name="FI" file="tn/syllab/fi.ogg"/>
+	<sound name="FO" file="tn/syllab/fo.ogg"/>
+	<sound name="FU" file="tn/syllab/fu.ogg"/>
+	<sound name="GA" file="tn/syllab/ga.ogg"/>
+	<sound name="GE" file="tn/syllab/ge.ogg"/>
+	<sound name="GI" file="tn/syllab/gi.ogg"/>
+	<sound name="GU" file="tn/syllab/gu.ogg"/>
+	<sound name="KA" file="tn/syllab/ka.ogg"/>
+	<sound name="KE" file="tn/syllab/ke.ogg"/>
+	<sound name="KI" file="tn/syllab/ki.ogg"/>
+	<sound name="KO" file="tn/syllab/ko.ogg"/>
+	<sound name="KU" file="tn/syllab/ku.ogg"/>
+	<sound name="LA" file="tn/syllab/la.ogg"/>
+	<sound name="LI" file="tn/syllab/li.ogg"/>
+	<sound name="MA" file="tn/syllab/ma.ogg"/>
+	<sound name="ME" file="tn/syllab/me.ogg"/>
+	<sound name="MO" file="tn/syllab/mo.ogg"/>
+	<sound name="NA" file="tn/syllab/na.ogg"/>
+	<sound name="NE" file="tn/syllab/ne.ogg"/>
+	<sound name="PO" file="tn/syllab/po.ogg"/>
+	<sound name="RA" file="tn/syllab/ra.ogg"/>
+	<sound name="RE" file="tn/syllab/re.ogg"/>
+	<sound name="RO" file="tn/syllab/ro.ogg"/>
+	<sound name="RU" file="tn/syllab/ru.ogg"/>
+	<sound name="SA" file="tn/syllab/sa.ogg"/>
+	<sound name="Te" file="tn/syllab/te.ogg"/>
+	<sound name="TO" file="tn/syllab/to.ogg"/>
+	<sound name="WA" file="tn/syllab/wa.ogg"/>
+	<sound name="WE" file="tn/syllab/we.ogg"/>
+	<sound name="KI" file="tn/syllab/ki.ogg"/>
+	<sound name="YA" file="tn/syllab/ya.ogg"/>
+      </syllables>
+
+    </language>
+</klettres>

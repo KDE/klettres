@@ -1,0 +1,137 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+   
+   Traduzido Portuguese Brasileiro por: Lindonjohnson Monte <Father> and
+	   Michelle Monte 09 years (Son)
+	   lindon_johnson@brturbo.com.br
+Date:28-10-2007
+-->
+
+<klettres>
+
+  <language code="pt_BR">
+
+    <menuitem>
+      <label>Brazilian Portuguese</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="A" file="pt_BR/alpha/a.ogg" />
+	<sound name="B" file="pt_BR/alpha/b.ogg" />
+	<sound name="C" file="pt_BR/alpha/c.ogg" />
+	<sound name="D" file="pt_BR/alpha/d.ogg" />  
+	<sound name="E" file="pt_BR/alpha/e.ogg" />
+	<sound name="F" file="pt_BR/alpha/f.ogg" />
+	<sound name="G" file="pt_BR/alpha/g.ogg" />
+	<sound name="H" file="pt_BR/alpha/h.ogg" />
+	<sound name="I" file="pt_BR/alpha/i.ogg" />
+	<sound name="J" file="pt_BR/alpha/j.ogg" /> 
+	<sound name="K" file="pt_BR/alpha/k.ogg" />
+	<sound name="L" file="pt_BR/alpha/l.ogg" />
+	<sound name="M" file="pt_BR/alpha/m.ogg" />
+	<sound name="N" file="pt_BR/alpha/n.ogg" />
+	<sound name="O" file="pt_BR/alpha/o.ogg" />
+	<sound name="P" file="pt_BR/alpha/p.ogg" />
+	<sound name="Q" file="pt_BR/alpha/q.ogg" />
+	<sound name="R" file="pt_BR/alpha/r.ogg" />
+	<sound name="S" file="pt_BR/alpha/s.ogg" />
+	<sound name="T" file="pt_BR/alpha/t.ogg" />
+	<sound name="U" file="pt_BR/alpha/u.ogg" />
+	<sound name="V" file="pt_BR/alpha/v.ogg" />
+	<sound name="W" file="pt_BR/alpha/w.ogg" />
+	<sound name="X" file="pt_BR/alpha/x.ogg" />
+	<sound name="Y" file="pt_BR/alpha/y.ogg" />
+	<sound name="Z" file="pt_BR/alpha/z.ogg" />
+    </alphabet>
+
+    <syllables>
+ 	<sound name="BA" file="pt_BR/syllab/ba.ogg" />
+	<sound name="BE" file="pt_BR/syllab/be.ogg" />
+	<sound name="BI" file="pt_BR/syllab/bi.ogg" />
+	<sound name="BO" file="pt_BR/syllab/bo.ogg" />
+	<sound name="BU" file="pt_BR/syllab/bu.ogg" />
+	<sound name="CA" file="pt_BR/syllab/ca.ogg" />
+	<sound name="CO" file="pt_BR/syllab/co.ogg" />
+	<sound name="CU" file="pt_BR/syllab/cu.ogg" />
+	<sound name="DA" file="pt_BR/syllab/da.ogg" />
+	<sound name="DE" file="pt_BR/syllab/de.ogg" />
+	<sound name="DI" file="pt_BR/syllab/di.ogg" />
+	<sound name="DO" file="pt_BR/syllab/do.ogg" />
+	<sound name="DU" file="pt_BR/syllab/du.ogg" />
+	<sound name="FA" file="pt_BR/syllab/fa.ogg" />
+	<sound name="FE" file="pt_BR/syllab/fe.ogg" />
+	<sound name="FI" file="pt_BR/syllab/fi.ogg" />
+	<sound name="FO" file="pt_BR/syllab/fo.ogg" />
+	<sound name="FU" file="pt_BR/syllab/fu.ogg" />
+	<sound name="GA" file="pt_BR/syllab/ga.ogg" />
+	<sound name="GO" file="pt_BR/syllab/go.ogg" />
+	<sound name="GU" file="pt_BR/syllab/gu.ogg" />
+	<sound name="JA" file="pt_BR/syllab/ja.ogg" />
+	<sound name="JE" file="pt_BR/syllab/je.ogg" />
+	<sound name="JI" file="pt_BR/syllab/ji.ogg" />
+	<sound name="JO" file="pt_BR/syllab/jo.ogg" />
+	<sound name="JU" file="pt_BR/syllab/ju.ogg" />
+	<sound name="LA" file="pt_BR/syllab/la.ogg" />
+	<sound name="LE" file="pt_BR/syllab/le.ogg" />
+	<sound name="LI" file="pt_BR/syllab/li.ogg" />
+	<sound name="LO" file="pt_BR/syllab/lo.ogg" />
+	<sound name="LU" file="pt_BR/syllab/lu.ogg" />
+	<sound name="MA" file="pt_BR/syllab/ma.ogg" />
+	<sound name="ME" file="pt_BR/syllab/me.ogg" />
+	<sound name="MI" file="pt_BR/syllab/mi.ogg" />
+	<sound name="MO" file="pt_BR/syllab/mo.ogg" />
+	<sound name="MU" file="pt_BR/syllab/mu.ogg" />
+	<sound name="NA" file="pt_BR/syllab/na.ogg" />
+	<sound name="NE" file="pt_BR/syllab/ne.ogg" />
+	<sound name="NI" file="pt_BR/syllab/ni.ogg" />
+	<sound name="NO" file="pt_BR/syllab/no.ogg" />
+	<sound name="NU" file="pt_BR/syllab/nu.ogg" />
+	<sound name="PA" file="pt_BR/syllab/pa.ogg" />
+	<sound name="PE" file="pt_BR/syllab/pe.ogg" />
+	<sound name="PI" file="pt_BR/syllab/pi.ogg" />
+	<sound name="PO" file="pt_BR/syllab/po.ogg" />
+	<sound name="PU" file="pt_BR/syllab/pu.ogg" />
+	<sound name="RA" file="pt_BR/syllab/ra.ogg" />
+	<sound name="RE" file="pt_BR/syllab/re.ogg" />
+	<sound name="RI" file="pt_BR/syllab/ri.ogg" />
+	<sound name="RO" file="pt_BR/syllab/ro.ogg" />
+	<sound name="RU" file="pt_BR/syllab/ru.ogg" />
+	<sound name="SA" file="pt_BR/syllab/sa.ogg" />
+	<sound name="SE" file="pt_BR/syllab/se.ogg" />
+	<sound name="SI" file="pt_BR/syllab/si.ogg" />
+	<sound name="SO" file="pt_BR/syllab/so.ogg" />
+	<sound name="SU" file="pt_BR/syllab/su.ogg" />
+	<sound name="TA" file="pt_BR/syllab/ta.ogg" />
+	<sound name="TE" file="pt_BR/syllab/te.ogg" />
+	<sound name="TI" file="pt_BR/syllab/ti.ogg" />
+	<sound name="TO" file="pt_BR/syllab/to.ogg" />
+	<sound name="TU" file="pt_BR/syllab/tu.ogg" />
+	<sound name="VA" file="pt_BR/syllab/va.ogg" />
+	<sound name="VE" file="pt_BR/syllab/ve.ogg" />
+	<sound name="VI" file="pt_BR/syllab/vi.ogg" />
+	<sound name="VO" file="pt_BR/syllab/vo.ogg" />
+	<sound name="VU" file="pt_BR/syllab/vu.ogg" />
+	<sound name="XA" file="pt_BR/syllab/xa.ogg" />
+	<sound name="XE" file="pt_BR/syllab/xe.ogg" />
+	<sound name="XI" file="pt_BR/syllab/xi.ogg" />
+	<sound name="XO" file="pt_BR/syllab/xo.ogg" />
+	<sound name="XU" file="pt_BR/syllab/xu.ogg" />
+	<sound name="ZA" file="pt_BR/syllab/za.ogg" />
+	<sound name="ZE" file="pt_BR/syllab/ze.ogg" />
+	<sound name="ZI" file="pt_BR/syllab/zi.ogg" />
+	<sound name="ZO" file="pt_BR/syllab/zo.ogg" />
+	<sound name="ZU" file="pt_BR/syllab/zu.ogg" />
+</syllables>
+
+  </language>
+
+</klettres>
+

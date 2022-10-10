@@ -1,0 +1,127 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+ <language code="it">
+
+    <menuitem>
+      <label>&amp;Italian</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="A" file="it/alpha/a.ogg" />
+	<sound name="B" file="it/alpha/b.ogg" />
+	<sound name="C" file="it/alpha/c.ogg" />
+	<sound name="D" file="it/alpha/d.ogg" />  
+	<sound name="E" file="it/alpha/e.ogg" />
+	<sound name="F" file="it/alpha/f.ogg" />
+	<sound name="G" file="it/alpha/g.ogg" />
+	<sound name="H" file="it/alpha/h.ogg" />
+	<sound name="I" file="it/alpha/i.ogg" />
+	<sound name="J" file="it/alpha/j.ogg" /> 
+	<sound name="K" file="it/alpha/k.ogg" />
+	<sound name="L" file="it/alpha/l.ogg" />
+	<sound name="M" file="it/alpha/m.ogg" />
+	<sound name="N" file="it/alpha/n.ogg" />
+	<sound name="O" file="it/alpha/o.ogg" />
+	<sound name="P" file="it/alpha/p.ogg" />
+	<sound name="Q" file="it/alpha/q.ogg" />
+	<sound name="R" file="it/alpha/r.ogg" />
+	<sound name="S" file="it/alpha/s.ogg" />
+	<sound name="T" file="it/alpha/t.ogg" />
+	<sound name="U" file="it/alpha/u.ogg" />
+	<sound name="W" file="it/alpha/w.ogg" />
+	<sound name="X" file="it/alpha/x.ogg" />
+	<sound name="Y" file="it/alpha/y.ogg" />
+	<sound name="Z" file="it/alpha/z.ogg" />
+    </alphabet>
+
+    <syllables>
+ 	<sound name="BA" file="it/syllab/ba.ogg" />
+	<sound name="BE" file="it/syllab/be.ogg" />
+	<sound name="BI" file="it/syllab/bi.ogg" />
+	<sound name="BO" file="it/syllab/bo.ogg" />
+	<sound name="BU" file="it/syllab/bu.ogg" />
+	<sound name="CA" file="it/syllab/ca.ogg" />
+	<sound name="CE" file="it/syllab/ce.ogg" />
+	<sound name="CI" file="it/syllab/ci.ogg" />
+	<sound name="CO" file="it/syllab/co.ogg" />
+	<sound name="CU" file="it/syllab/cu.ogg" />
+	<sound name="DA" file="it/syllab/da.ogg" />
+	<sound name="DE" file="it/syllab/de.ogg" />
+	<sound name="DI" file="it/syllab/di.ogg" />
+	<sound name="DO" file="it/syllab/do.ogg" />
+	<sound name="DU" file="it/syllab/du.ogg" />
+	<sound name="FA" file="it/syllab/fa.ogg" />
+	<sound name="FE" file="it/syllab/fe.ogg" />
+	<sound name="FI" file="it/syllab/fi.ogg" />
+	<sound name="FO" file="it/syllab/fo.ogg" />
+	<sound name="GA" file="it/syllab/ga.ogg" />
+	<sound name="GE" file="it/syllab/ge.ogg" />
+	<sound name="GI" file="it/syllab/gi.ogg" />
+	<sound name="GLI" file="it/syllab/gli.ogg" />
+	<sound name="GNA" file="it/syllab/gna.ogg" />
+	<sound name="GNE" file="it/syllab/gne.ogg" />
+	<sound name="GNI" file="it/syllab/gni.ogg" />
+	<sound name="GNO" file="it/syllab/gno.ogg" />
+	<sound name="GNU" file="it/syllab/gnu.ogg" />
+	<sound name="GO" file="it/syllab/go.ogg" />
+	<sound name="GU" file="it/syllab/gu.ogg" />
+	<sound name="LA" file="it/syllab/la.ogg" />
+	<sound name="LE" file="it/syllab/le.ogg" />
+	<sound name="LI" file="it/syllab/li.ogg" />
+	<sound name="LO" file="it/syllab/lo.ogg" />
+	<sound name="LU" file="it/syllab/lu.ogg" />
+	<sound name="MA" file="it/syllab/ma.ogg" />
+	<sound name="ME" file="it/syllab/me.ogg" />
+	<sound name="MI" file="it/syllab/mi.ogg" />
+	<sound name="MO" file="it/syllab/mo.ogg" />
+	<sound name="MU" file="it/syllab/mu.ogg" />
+	<sound name="NA" file="it/syllab/na.ogg" />
+	<sound name="NE" file="it/syllab/ne.ogg" />
+	<sound name="NI" file="it/syllab/ni.ogg" />
+	<sound name="NO" file="it/syllab/no.ogg" />
+	<sound name="NU" file="it/syllab/nu.ogg" />
+	<sound name="PA" file="it/syllab/pa.ogg" />
+	<sound name="PE" file="it/syllab/pe.ogg" />
+	<sound name="PI" file="it/syllab/pi.ogg" />
+	<sound name="PO" file="it/syllab/po.ogg" />
+	<sound name="PU" file="it/syllab/pu.ogg" />
+	<sound name="RA" file="it/syllab/ra.ogg" />
+	<sound name="RE" file="it/syllab/re.ogg" />
+	<sound name="RI" file="it/syllab/ri.ogg" />
+	<sound name="RO" file="it/syllab/ro.ogg" />
+	<sound name="RU" file="it/syllab/ru.ogg" />
+	<sound name="SA" file="it/syllab/sa.ogg" />
+	<sound name="SE" file="it/syllab/se.ogg" />
+	<sound name="SI" file="it/syllab/si.ogg" />
+	<sound name="SO" file="it/syllab/so.ogg" />
+	<sound name="SU" file="it/syllab/su.ogg" />
+	<sound name="TA" file="it/syllab/ta.ogg" />
+	<sound name="TE" file="it/syllab/te.ogg" />
+	<sound name="TI" file="it/syllab/ti.ogg" />
+	<sound name="TO" file="it/syllab/to.ogg" />
+	<sound name="TU" file="it/syllab/tu.ogg" />
+	<sound name="VA" file="it/syllab/va.ogg" />
+	<sound name="VE" file="it/syllab/ve.ogg" />
+	<sound name="VI" file="it/syllab/vi.ogg" />
+	<sound name="VO" file="it/syllab/vo.ogg" />
+	<sound name="VU" file="it/syllab/vu.ogg" />
+	<sound name="ZA" file="it/syllab/za.ogg" />
+	<sound name="ZE" file="it/syllab/ze.ogg" />
+	<sound name="ZI" file="it/syllab/zi.ogg" />
+	<sound name="ZO" file="it/syllab/zo.ogg" />
+	<sound name="ZU" file="it/syllab/zu.ogg" />
+    </syllables>
+
+  </language>
+</klettres>

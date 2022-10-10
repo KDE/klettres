@@ -1,0 +1,116 @@
+<!--
+   Russian sounds made at Google Code-in
+-->
+
+<klettres>
+
+  <language code="ru">
+
+    <menuitem>
+      <label>&amp;Russian</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="А" file="ru/alpha/a.ogg" />
+	<sound name="Б" file="ru/alpha/be.ogg" />
+	<sound name="В" file="ru/alpha/ve.ogg" />
+	<sound name="Г" file="ru/alpha/ge.ogg" />
+	<sound name="Д" file="ru/alpha/de.ogg" />
+	<sound name="Е" file="ru/alpha/e.ogg" />
+	<sound name="Ё" file="ru/alpha/yo.ogg" />
+	<sound name="Ж" file="ru/alpha/zh.ogg" />
+	<sound name="З" file="ru/alpha/ze.ogg" />
+	<sound name="И" file="ru/alpha/y.ogg" /> 
+	<sound name="Й" file="ru/alpha/i.ogg" />
+	<sound name="К" file="ru/alpha/k.ogg" />
+	<sound name="Л" file="ru/alpha/l.ogg" />
+	<sound name="М" file="ru/alpha/em.ogg" />
+	<sound name="Н" file="ru/alpha/en.ogg" />
+	<sound name="О" file="ru/alpha/o.ogg" />
+	<sound name="П" file="ru/alpha/pe.ogg" />
+	<sound name="Р" file="ru/alpha/er.ogg" />
+	<sound name="С" file="ru/alpha/es.ogg" />
+	<sound name="Т" file="ru/alpha/te.ogg" />
+	<sound name="У" file="ru/alpha/u.ogg" />
+	<sound name="Ф" file="ru/alpha/f.ogg" />
+	<sound name="Х" file="ru/alpha/ha.ogg" />
+	<sound name="Ц" file="ru/alpha/tse.ogg" />
+	<sound name="Ч" file="ru/alpha/che.ogg" />
+	<sound name="Ш" file="ru/alpha/sha.ogg" />
+	<sound name="Щ" file="ru/alpha/scha.ogg" />
+	<sound name="Ъ" file="ru/alpha/hard.ogg" />
+	<sound name="Ы" file="ru/alpha/iu.ogg" />
+	<sound name="Ь" file="ru/alpha/soft.ogg" />
+	<sound name="Э" file="ru/alpha/ae.ogg" />
+	<sound name="Ю" file="ru/alpha/yu.ogg" />
+	<sound name="Я" file="ru/alpha/ya.ogg" />
+    </alphabet>
+
+    <syllables>
+	<sound name="БА"     file="ru/syllab/ba.ogg" />
+	<sound name="БЕ"     file="ru/syllab/be.ogg" />
+	<sound name="БРО"    file="ru/syllab/bro.ogg" />
+	<sound name="БУ"     file="ru/syllab/bu.ogg" />
+	<sound name="ВО"     file="ru/syllab/vo.ogg" />
+	<sound name="ВСЕ"    file="ru/syllab/vse.ogg" />
+	<sound name="ВЫ"     file="ru/syllab/viu.ogg" />
+	<sound name="ДА"     file="ru/syllab/da.ogg" />
+	<sound name="ДО"     file="ru/syllab/do.ogg" />
+	<sound name="ДУ"     file="ru/syllab/du.ogg" />
+	<sound name="ЖЕ"     file="ru/syllab/zhe.ogg" />
+	<sound name="ЖИ"     file="ru/syllab/zhi.ogg" />
+	<sound name="ЖИТЬ"   file="ru/syllab/zhyt.ogg" />
+	<sound name="ЗЛО"    file="ru/syllab/zlo.ogg" />
+	<sound name="ЗИК"    file="ru/syllab/zyk.ogg" />
+	<sound name="ИЗ"     file="ru/syllab/yizh.ogg" />
+	<sound name="КА"     file="ru/syllab/ka.ogg" />
+	<sound name="КO"     file="ru/syllab/ko.ogg" />
+	<sound name="КУ"     file="ru/syllab/ku.ogg" />
+	<sound name="ЛИ"     file="ru/syllab/ly.ogg" />
+	<sound name="ЛО"     file="ru/syllab/lo.ogg" />
+	<sound name="ЛЮ"     file="ru/syllab/lyu.ogg" />
+	<sound name="ЛЯ"     file="ru/syllab/lya.ogg" />
+	<sound name="МА"     file="ru/syllab/ma.ogg" />
+	<sound name="МАЙ"    file="ru/syllab/may.ogg" />
+	<sound name="МЫ"     file="ru/syllab/miu.ogg" />
+	<sound name="НА"     file="ru/syllab/na.ogg" />
+	<sound name="НЕ"     file="ru/syllab/ne.ogg" />
+	<sound name="НЕТ"    file="ru/syllab/net.ogg" />
+	<sound name="НИ"     file="ru/syllab/ny.ogg" />
+	<sound name="НО"     file="ru/syllab/no.ogg" />
+	<sound name="НОЙ"    file="ru/syllab/noy.ogg" />
+	<sound name="НЫЙ"    file="ru/syllab/niuy.ogg" />
+	<sound name="НЯ"     file="ru/syllab/nya.ogg" />
+	<sound name="ПА"     file="ru/syllab/pa.ogg" />
+	<sound name="ПИ"     file="ru/syllab/pi.ogg" />
+	<sound name="РИС"    file="ru/syllab/rys.ogg" />
+	<sound name="РО"     file="ru/syllab/ro.ogg" />
+	<sound name="РУСЬ"   file="ru/syllab/russ.ogg" />
+	<sound name="СКА"    file="ru/syllab/ska.ogg" />
+	<sound name="СИ"     file="ru/syllab/sy.ogg" />    
+	<sound name="СИТЬ"   file="ru/syllab/syt.ogg" />
+	<sound name="СО"     file="ru/syllab/so.ogg" />
+	<sound name="ТА"     file="ru/syllab/ta.ogg" />
+	<sound name="ТВОЙ"   file="ru/syllab/tvoy.ogg" />
+	<sound name="ТЕ"     file="ru/syllab/te.ogg" />
+	<sound name="ТИ"     file="ru/syllab/ty.ogg" />
+	<sound name="ТО"     file="ru/syllab/to.ogg" />
+	<sound name="ТЫ"     file="ru/syllab/tiu.ogg" />
+	<sound name="ТЬСЯ"   file="ru/syllab/tsya.ogg" />
+	<sound name="ХА"     file="ru/syllab/ha.ogg" />
+	<sound name="ЧЕЙ"    file="ru/syllab/chey.ogg" />
+	<sound name="ЧИК"    file="ru/syllab/chyk.ogg" />
+	<sound name="ЧКА"    file="ru/syllab/chka.ogg" />
+	<sound name="ЧОК"    file="ru/syllab/chok.ogg" />
+	<sound name="ЧТО"    file="ru/syllab/chto.ogg" />
+	<sound name="ЧУ"     file="ru/syllab/chu.ogg" />
+	<sound name="ЧУТ"    file="ru/syllab/chut.ogg" />
+	<sound name="ША"     file="ru/syllab/sha.ogg" />    
+	<sound name="ШЕ"     file="ru/syllab/she.ogg" />
+	<sound name="ЩИ"     file="ru/syllab/schy.ogg" />
+    
+    </syllables>
+
+  </language>
+
+</klettres>

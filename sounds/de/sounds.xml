@@ -1,0 +1,92 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+
+  <language code="de">
+
+    <menuitem>
+      <label>&amp;German</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="A" file="de/alpha/a.ogg" />
+	<sound name="Ä" file="de/alpha/ae.ogg" />
+	<sound name="B" file="de/alpha/b.ogg" />
+	<sound name="C" file="de/alpha/c.ogg" />
+	<sound name="D" file="de/alpha/d.ogg" />  
+	<sound name="E" file="de/alpha/e.ogg" />
+	<sound name="F" file="de/alpha/f.ogg" />
+	<sound name="G" file="de/alpha/g.ogg" />
+	<sound name="H" file="de/alpha/h.ogg" />
+	<sound name="I" file="de/alpha/i.ogg" />
+	<sound name="J" file="de/alpha/j.ogg" /> 
+	<sound name="K" file="de/alpha/k.ogg" />
+	<sound name="L" file="de/alpha/l.ogg" />
+	<sound name="M" file="de/alpha/m.ogg" />
+	<sound name="N" file="de/alpha/n.ogg" />
+	<sound name="O" file="de/alpha/o.ogg" />
+	<sound name="Ö" file="de/alpha/oe.ogg" />
+	<sound name="P" file="de/alpha/p.ogg" />
+	<sound name="Q" file="de/alpha/q.ogg" />
+	<sound name="R" file="de/alpha/r.ogg" />
+	<sound name="S" file="de/alpha/s.ogg" />
+	<sound name="T" file="de/alpha/t.ogg" />
+	<sound name="U" file="de/alpha/u.ogg" />
+	<sound name="Ü" file="de/alpha/ue.ogg" />
+	<sound name="V" file="de/alpha/v.ogg" />
+	<sound name="W" file="de/alpha/w.ogg" />
+	<sound name="X" file="de/alpha/x.ogg" />
+	<sound name="Y" file="de/alpha/y.ogg" />
+	<sound name="Z" file="de/alpha/z.ogg" />
+    </alphabet>
+
+    <syllables>
+	<sound name="AFFE"   file="de/syllab/affe.ogg" />
+	<sound name="AUCH"   file="de/syllab/auch.ogg" />
+	<sound name="BÄR"    file="de/syllab/baer.ogg" />
+	<sound name="BUS"    file="de/syllab/bus.ogg" />
+	<sound name="DEM"    file="de/syllab/dem.ogg" />
+	<sound name="DIE"    file="de/syllab/die.ogg" />
+	<sound name="DIR"    file="de/syllab/dir.ogg" />
+	<sound name="EIN"    file="de/syllab/ein.ogg" />
+	<sound name="EULE"   file="de/syllab/eule.ogg" />
+	<sound name="FISCH"  file="de/syllab/fisch.ogg" />
+	<sound name="FRAU"   file="de/syllab/frau.ogg" />
+	<sound name="FUß"    file="de/syllab/fusz.ogg" />
+	<sound name="GUT"    file="de/syllab/gut.ogg" />
+	<sound name="HAUS"   file="de/syllab/haus.ogg" />
+	<sound name="HEU"    file="de/syllab/heu.ogg" />
+	<sound name="HUND"   file="de/syllab/hund.ogg" />
+	<sound name="IST"    file="de/syllab/ist.ogg" />
+	<sound name="JA"     file="de/syllab/ja.ogg" />
+	<sound name="KIND"   file="de/syllab/kind.ogg" />
+	<sound name="LISA"   file="de/syllab/lisa.ogg" />
+	<sound name="NASE"   file="de/syllab/nase.ogg" />
+	<sound name="ÖL"     file="de/syllab/oel.ogg" />
+	<sound name="OPA"    file="de/syllab/opa.ogg" />
+	<sound name="PUTE"   file="de/syllab/pute.ogg" />
+	<sound name="REH"    file="de/syllab/reh.ogg" />
+	<sound name="ROT"    file="de/syllab/rot.ogg" />
+	<sound name="SEIN"   file="de/syllab/sein.ogg" />
+	<sound name="SITZ"   file="de/syllab/sitz.ogg" />
+	<sound name="TÜR"    file="de/syllab/tuer.ogg" />
+	<sound name="VOR"    file="de/syllab/vor.ogg" />
+	<sound name="WAS"    file="de/syllab/was.ogg" />
+	<sound name="WILL"   file="de/syllab/will.ogg" />
+	<sound name="WO"     file="de/syllab/wo.ogg" />
+	<sound name="ZU"     file="de/syllab/zu.ogg" />
+    </syllables>
+
+  </language>
+
+</klettres>

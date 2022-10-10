@@ -1,0 +1,135 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+<!--  
+Lithuanian alphabet and syllables V 1.0
+
+Made by Liudas Ališauskas; liudas@akmc.lt
+-->
+<klettres>
+
+  <language code="lt">
+
+    <menuitem>
+      <label>&amp;Lithuanian</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="A" file="lt/alpha/a-1.ogg" />
+	<sound name="Ą" file="lt/alpha/a-2.ogg" />
+	<sound name="B" file="lt/alpha/b.ogg" />
+	<sound name="C" file="lt/alpha/c-1.ogg" />
+	<sound name="Č" file="lt/alpha/c-2.ogg" />
+	<sound name="D" file="lt/alpha/d.ogg" />  
+	<sound name="E" file="lt/alpha/e-1.ogg" />
+	<sound name="Ę" file="lt/alpha/e-2.ogg" />
+	<sound name="Ė" file="lt/alpha/e-3.ogg" />
+	<sound name="F" file="lt/alpha/f.ogg" />
+	<sound name="G" file="lt/alpha/g.ogg" />
+	<sound name="H" file="lt/alpha/h.ogg" />
+	<sound name="I" file="lt/alpha/i-1.ogg" />
+	<sound name="Į" file="lt/alpha/i-2.ogg" />
+	<sound name="Y" file="lt/alpha/y.ogg" />
+	<sound name="J" file="lt/alpha/j.ogg" /> 
+	<sound name="K" file="lt/alpha/k.ogg" />
+	<sound name="L" file="lt/alpha/l.ogg" />
+	<sound name="M" file="lt/alpha/m.ogg" />
+	<sound name="N" file="lt/alpha/n.ogg" />
+	<sound name="O" file="lt/alpha/o.ogg" />
+	<sound name="P" file="lt/alpha/p.ogg" />
+	<sound name="R" file="lt/alpha/r.ogg" />
+	<sound name="S" file="lt/alpha/s-1.ogg" />
+	<sound name="Š" file="lt/alpha/s-2.ogg" />
+	<sound name="T" file="lt/alpha/t.ogg" />
+	<sound name="U" file="lt/alpha/u-1.ogg" />
+	<sound name="Ų" file="lt/alpha/u-2.ogg" />
+	<sound name="Ū" file="lt/alpha/u-3.ogg" />
+	<sound name="V" file="lt/alpha/v.ogg" />
+	<sound name="Z" file="lt/alpha/z-1.ogg" />
+	<sound name="Ž" file="lt/alpha/z-2.ogg" />
+    </alphabet>
+
+    <syllables>
+	<sound name="AU"   file="lt/syllab/au.ogg" />
+	<sound name="IE"   file="lt/syllab/ie.ogg" />
+	<sound name="UO"   file="lt/syllab/uo.ogg" />
+	<sound name="EU"   file="lt/syllab/eu.ogg" />
+	<sound name="OU"   file="lt/syllab/ou.ogg" />
+	<sound name="PATS"   file="lt/syllab/pats.ogg" />
+	<sound name="ŠA"   file="lt/syllab/s2a.ogg" />
+	<sound name="DZIN"   file="lt/syllab/dzin.ogg" />
+	<sound name="AL"   file="lt/syllab/al.ogg" />
+	<sound name="AM"   file="lt/syllab/am.ogg" />
+	<sound name="AN"   file="lt/syllab/an.ogg" />
+	<sound name="AR"   file="lt/syllab/ar.ogg" />
+	<sound name="IL"   file="lt/syllab/il.ogg" />
+	<sound name="IM"   file="lt/syllab/im.ogg" />
+	<sound name="IN"   file="lt/syllab/in.ogg" />
+	<sound name="IR"   file="lt/syllab/ir.ogg" />
+	<sound name="UL"   file="lt/syllab/ul.ogg" />
+	<sound name="UM"   file="lt/syllab/um.ogg" />
+	<sound name="UN"   file="lt/syllab/un.ogg" />
+	<sound name="UR"   file="lt/syllab/ur.ogg" />
+	<sound name="KAS"   file="lt/syllab/kas.ogg" />
+	<sound name="RAS"   file="lt/syllab/ras.ogg" />
+	<sound name="ŠOK"   file="lt/syllab/s2ok.ogg" />
+	<sound name="VOK"   file="lt/syllab/vok.ogg" />
+	<sound name="LOK"   file="lt/syllab/lok.ogg" />
+	<sound name="MES"   file="lt/syllab/mes.ogg" />
+	<sound name="KO"   file="lt/syllab/ko.ogg" />
+	<sound name="NA"   file="lt/syllab/na.ogg" />
+	<sound name="TAI"   file="lt/syllab/tai.ogg" />
+	<sound name="JIS"   file="lt/syllab/jis.ogg" />
+	<sound name="JI"   file="lt/syllab/ji.ogg" />
+	<sound name="JIE"   file="lt/syllab/jie.ogg" />
+	<sound name="VIS"   file="lt/syllab/vis.ogg" />
+	<sound name="BUS"   file="lt/syllab/bus.ogg" />
+	<sound name="TUOJ"   file="lt/syllab/tuoj.ogg" />
+	<sound name="LAI"   file="lt/syllab/lai.ogg" />
+	<sound name="JEI"   file="lt/syllab/jei.ogg" />
+	<sound name="VĖL"   file="lt/syllab/ve3l.ogg" />
+	<sound name="TIES"   file="lt/syllab/ties.ogg" />
+	<sound name="TUOS"   file="lt/syllab/tuos.ogg" />
+	<sound name="DUOS"   file="lt/syllab/duos.ogg" />
+	<sound name="NEŠ"   file="lt/syllab/nes2.ogg" />
+	<sound name="BELS"   file="lt/syllab/bels.ogg" />
+	<sound name="MELS"   file="lt/syllab/mels.ogg" />
+	<sound name="LIS"   file="lt/syllab/lis.ogg" />
+	<sound name="RĖK"   file="lt/syllab/re3k.ogg" />
+	<sound name="LĖK"   file="lt/syllab/le3k.ogg" />
+	<sound name="LEIS"   file="lt/syllab/leis.ogg" />
+	<sound name="KILO"   file="lt/syllab/kilo.ogg" />
+	<sound name="TAIP"   file="lt/syllab/taip.ogg" />
+	<sound name="NE"   file="lt/syllab/ne.ogg" />
+	<sound name="RIES"   file="lt/syllab/ries.ogg" />
+	<sound name="GROS"   file="lt/syllab/gros.ogg" />
+	<sound name="JOKS"   file="lt/syllab/joks.ogg" />
+	<sound name="JUOS"   file="lt/syllab/juos.ogg" />
+	<sound name="JUS"   file="lt/syllab/jus.ogg" />
+	<sound name="JAU"   file="lt/syllab/jau.ogg" />
+	<sound name="NORS"   file="lt/syllab/nors.ogg" />
+	<sound name="ŠALS"   file="lt/syllab/s2als.ogg" />
+	<sound name="BALS"   file="lt/syllab/bals.ogg" />
+	<sound name="FUI"   file="lt/syllab/fui.ogg" />
+	<sound name="ZIP"   file="lt/syllab/zip.ogg" />
+	<sound name="PUR"   file="lt/syllab/pur.ogg" />
+	<sound name="MUR"   file="lt/syllab/mur.ogg" />
+	<sound name="TUR"   file="lt/syllab/tur.ogg" />
+	<sound name="YRA"   file="lt/syllab/yra.ogg" />
+	<sound name="NĖR"   file="lt/syllab/ne3r.ogg" />
+	<sound name="KAIP"   file="lt/syllab/kaip.ogg" />
+	<sound name="TEIS"   file="lt/syllab/ties.ogg" />
+	<sound name="DŽIU"   file="lt/syllab/dz2iu.ogg" />
+    </syllables>
+
+  </language>
+
+</klettres>

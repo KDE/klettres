@@ -1,0 +1,2 @@
+FILE(GLOB datafiles *.ogg )
+install( FILES ${datafiles} DESTINATION ${DATA_INSTALL_DIR}/klettres/pt_BR/syllab ) 

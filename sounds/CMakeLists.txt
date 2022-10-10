@@ -1,4 +1,4 @@
-set(langdir fr en )
+set(langdir fr en ar cs da de en_GB es he hu id it lt ml nb nds nl nn pt_BR ru tn uk)
 set(sublangdir alpha syllab )
 foreach (_langcurrentdir ${langdir})
     file(GLOB _xmlfile "${_langcurrentdir}/*.xml" )

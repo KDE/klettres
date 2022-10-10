@@ -1,0 +1,78 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+
+  <language code="en_GB">
+
+    <menuitem>
+      <label>&amp;English</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="A" file="en_GB/alpha/a.ogg" />
+	<sound name="B" file="en_GB/alpha/b.ogg" />
+	<sound name="C" file="en_GB/alpha/c.ogg" />
+	<sound name="D" file="en_GB/alpha/d.ogg" />  
+	<sound name="E" file="en_GB/alpha/e.ogg" />
+	<sound name="F" file="en_GB/alpha/f.ogg" />
+	<sound name="G" file="en_GB/alpha/g.ogg" />
+	<sound name="H" file="en_GB/alpha/h.ogg" />
+	<sound name="I" file="en_GB/alpha/i.ogg" />
+	<sound name="J" file="en_GB/alpha/j.ogg" /> 
+	<sound name="K" file="en_GB/alpha/k.ogg" />
+	<sound name="L" file="en_GB/alpha/l.ogg" />
+	<sound name="M" file="en_GB/alpha/m.ogg" />
+	<sound name="N" file="en_GB/alpha/n.ogg" />
+	<sound name="O" file="en_GB/alpha/o.ogg" />
+	<sound name="P" file="en_GB/alpha/p.ogg" />
+	<sound name="Q" file="en_GB/alpha/q.ogg" />
+	<sound name="R" file="en_GB/alpha/r.ogg" />
+	<sound name="S" file="en_GB/alpha/s.ogg" />
+	<sound name="T" file="en_GB/alpha/t.ogg" />
+	<sound name="U" file="en_GB/alpha/u.ogg" />
+	<sound name="V" file="en_GB/alpha/v.ogg" />
+	<sound name="W" file="en_GB/alpha/w.ogg" />
+	<sound name="X" file="en_GB/alpha/x.ogg" />
+	<sound name="Y" file="en_GB/alpha/y.ogg" />
+	<sound name="Z" file="en_GB/alpha/z.ogg" />
+    </alphabet>
+
+    <syllables>
+	<sound name="ARM"   file="en_GB/syllab/arm.ogg" />
+	<sound name="BALL"   file="en_GB/syllab/ball.ogg" />
+	<sound name="CAR"    file="en_GB/syllab/car.ogg" />
+	<sound name="DOG"    file="en_GB/syllab/dog.ogg" />
+	<sound name="EAR"    file="en_GB/syllab/ear.ogg" />
+	<sound name="FIX"    file="en_GB/syllab/fix.ogg" />
+	<sound name="GAS"    file="en_GB/syllab/gas.ogg" />
+	<sound name="GEM"    file="en_GB/syllab/gem.ogg" />
+	<sound name="HOT"   file="en_GB/syllab/hot.ogg" />
+	<sound name="HUT"  file="en_GB/syllab/hut.ogg" />
+	<sound name="JET"   file="en_GB/syllab/jet.ogg" />
+	<sound name="KEY"    file="en_GB/syllab/key.ogg" />
+	<sound name="ME"    file="en_GB/syllab/me.ogg" />
+	<sound name="MY"   file="en_GB/syllab/my.ogg" />
+	<sound name="NO"    file="en_GB/syllab/no.ogg" />
+	<sound name="OR"   file="en_GB/syllab/or.ogg" />
+	<sound name="PET"    file="en_GB/syllab/pet.ogg" />
+	<sound name="SAW"     file="en_GB/syllab/saw.ogg" />
+	<sound name="SAY"   file="en_GB/syllab/say.ogg" />
+	<sound name="SIT"   file="en_GB/syllab/sit.ogg" />
+	<sound name="SKY" file="en_GB/syllab/sky.ogg" />
+	<sound name="THE"   file="en_GB/syllab/the.ogg" />
+	<sound name="WELL"     file="en_GB/syllab/well.ogg" />
+    </syllables>
+
+  </language>
+
+</klettres>

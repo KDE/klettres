@@ -1,0 +1,141 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+   
+   Diterjemahkan ke bahasa Indonesia oleh: Wantoyo wantoyek@gmail.com <Father> and
+   Winda Yunixa Trisnawati 08 years (Son) Date:10-10-2019
+-->
+
+<klettres>
+
+  <language code="id">
+
+    <menuitem>
+      <label>Indonesian</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="A" file="id/alpha/a.wav" />
+	<sound name="B" file="id/alpha/b.wav" />
+	<sound name="C" file="id/alpha/c.wav" />
+	<sound name="D" file="id/alpha/d.wav" />  
+	<sound name="E" file="id/alpha/e.wav" />
+	<sound name="F" file="id/alpha/f.wav" />
+	<sound name="G" file="id/alpha/g.wav" />
+	<sound name="H" file="id/alpha/h.wav" />
+	<sound name="I" file="id/alpha/i.wav" />
+	<sound name="J" file="id/alpha/j.wav" /> 
+	<sound name="K" file="id/alpha/k.wav" />
+	<sound name="L" file="id/alpha/l.wav" />
+	<sound name="M" file="id/alpha/m.wav" />
+	<sound name="N" file="id/alpha/n.wav" />
+	<sound name="O" file="id/alpha/o.wav" />
+	<sound name="P" file="id/alpha/p.wav" />
+	<sound name="Q" file="id/alpha/q.wav" />
+	<sound name="R" file="id/alpha/r.wav" />
+	<sound name="S" file="id/alpha/s.wav" />
+	<sound name="T" file="id/alpha/t.wav" />
+	<sound name="U" file="id/alpha/u.wav" />
+	<sound name="V" file="id/alpha/v.wav" />
+	<sound name="W" file="id/alpha/w.wav" />
+	<sound name="X" file="id/alpha/x.wav" />
+	<sound name="Y" file="id/alpha/y.wav" />
+	<sound name="Z" file="id/alpha/z.wav" />
+    </alphabet>
+
+    <syllables>
+ 	<sound name="BA" file="id/syllab/ba.wav" />
+	<sound name="BE" file="id/syllab/be.wav" />
+	<sound name="BI" file="id/syllab/bi.wav" />
+	<sound name="BO" file="id/syllab/bo.wav" />
+	<sound name="BU" file="id/syllab/bu.wav" />
+	<sound name="CA" file="id/syllab/ca.wav" />
+	<sound name="CE" file="id/syllab/ce.wav" />
+	<sound name="CO" file="id/syllab/co.wav" />
+	<sound name="CU" file="id/syllab/cu.wav" />
+	<sound name="DA" file="id/syllab/da.wav" />
+	<sound name="DE" file="id/syllab/de.wav" />
+	<sound name="DI" file="id/syllab/di.wav" />
+	<sound name="DO" file="id/syllab/do.wav" />
+	<sound name="DU" file="id/syllab/du.wav" />
+	<sound name="FA" file="id/syllab/fa.wav" />
+	<sound name="FE" file="id/syllab/fe.wav" />
+	<sound name="FI" file="id/syllab/fi.wav" />
+	<sound name="FO" file="id/syllab/fo.wav" />
+	<sound name="FU" file="id/syllab/fu.wav" />
+	<sound name="GA" file="id/syllab/ga.wav" />
+	<sound name="GO" file="id/syllab/go.wav" />
+	<sound name="GU" file="id/syllab/gu.wav" />
+	<sound name="JA" file="id/syllab/ja.wav" />
+	<sound name="JE" file="id/syllab/je.wav" />
+	<sound name="JI" file="id/syllab/ji.wav" />
+	<sound name="JO" file="id/syllab/jo.wav" />
+	<sound name="JU" file="id/syllab/ju.wav" />
+	<sound name="LA" file="id/syllab/la.wav" />
+	<sound name="LE" file="id/syllab/le.wav" />
+	<sound name="LI" file="id/syllab/li.wav" />
+	<sound name="LO" file="id/syllab/lo.wav" />
+	<sound name="LU" file="id/syllab/lu.wav" />
+	<sound name="MA" file="id/syllab/ma.wav" />
+	<sound name="ME" file="id/syllab/me.wav" />
+	<sound name="MI" file="id/syllab/mi.wav" />
+	<sound name="MO" file="id/syllab/mo.wav" />
+	<sound name="MU" file="id/syllab/mu.wav" />
+	<sound name="NA" file="id/syllab/na.wav" />
+	<sound name="NE" file="id/syllab/ne.wav" />
+	<sound name="NI" file="id/syllab/ni.wav" />
+	<sound name="NO" file="id/syllab/no.wav" />
+	<sound name="NU" file="id/syllab/nu.wav" />
+	<sound name="PA" file="id/syllab/pa.wav" />
+	<sound name="PE" file="id/syllab/pe.wav" />
+	<sound name="PI" file="id/syllab/pi.wav" />
+	<sound name="PO" file="id/syllab/po.wav" />
+	<sound name="PU" file="id/syllab/pu.wav" />
+	<sound name="RA" file="id/syllab/ra.wav" />
+	<sound name="RE" file="id/syllab/re.wav" />
+	<sound name="RI" file="id/syllab/ri.wav" />
+	<sound name="RO" file="id/syllab/ro.wav" />
+	<sound name="RU" file="id/syllab/ru.wav" />
+	<sound name="SA" file="id/syllab/sa.wav" />
+	<sound name="SE" file="id/syllab/se.wav" />
+	<sound name="SI" file="id/syllab/si.wav" />
+	<sound name="SO" file="id/syllab/so.wav" />
+	<sound name="SU" file="id/syllab/su.wav" />
+	<sound name="TA" file="id/syllab/ta.wav" />
+	<sound name="TE" file="id/syllab/te.wav" />
+	<sound name="TI" file="id/syllab/ti.wav" />
+	<sound name="TO" file="id/syllab/to.wav" />
+	<sound name="TU" file="id/syllab/tu.wav" />
+	<sound name="VA" file="id/syllab/va.wav" />
+	<sound name="VE" file="id/syllab/ve.wav" />
+	<sound name="VI" file="id/syllab/vi.wav" />
+	<sound name="VO" file="id/syllab/vo.wav" />
+	<sound name="VU" file="id/syllab/vu.wav" />
+	<sound name="WA" file="id/syllab/wa.wav" />
+	<sound name="WE" file="id/syllab/we.wav" />
+	<sound name="WI" file="id/syllab/wi.wav" />
+	<sound name="WO" file="id/syllab/wo.wav" />
+	<sound name="WU" file="id/syllab/wu.wav" />
+	<sound name="YA" file="id/syllab/ya.wav" />
+	<sound name="YE" file="id/syllab/ye.wav" />
+	<sound name="YI" file="id/syllab/yi.wav" />
+	<sound name="YO" file="id/syllab/yo.wav" />
+	<sound name="YU" file="id/syllab/yu.wav" />
+	<sound name="ZA" file="id/syllab/za.wav" />
+	<sound name="ZE" file="id/syllab/ze.wav" />
+	<sound name="ZI" file="id/syllab/zi.wav" />
+	<sound name="ZO" file="id/syllab/zo.wav" />
+	<sound name="ZU" file="id/syllab/zu.wav" />
+</syllables>
+
+  </language>
+
+</klettres>
+

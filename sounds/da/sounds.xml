@@ -1,0 +1,85 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+
+<language code="da">
+
+    <menuitem>
+      <label>&amp;Danish</label>
+    </menuitem>
+    <alphabet>
+	<sound name="A" file="da/alpha/a-0.ogg" />
+	<sound name="B" file="da/alpha/a-1.ogg" />
+	<sound name="C" file="da/alpha/a-2.ogg" />
+	<sound name="D" file="da/alpha/a-3.ogg" />
+	<sound name="E" file="da/alpha/a-4.ogg" />
+	<sound name="F" file="da/alpha/a-5.ogg" />
+	<sound name="G" file="da/alpha/a-6.ogg" />
+	<sound name="H" file="da/alpha/a-7.ogg" />
+	<sound name="I" file="da/alpha/a-8.ogg" />
+	<sound name="J" file="da/alpha/a-9.ogg" />
+	<sound name="K" file="da/alpha/a-10.ogg" />
+	<sound name="L" file="da/alpha/a-11.ogg" />
+	<sound name="M" file="da/alpha/a-12.ogg" />
+	<sound name="N" file="da/alpha/a-13.ogg" />
+	<sound name="O" file="da/alpha/a-14.ogg" />
+	<sound name="P" file="da/alpha/a-15.ogg" />
+	<sound name="Q" file="da/alpha/a-16.ogg" />
+	<sound name="R" file="da/alpha/a-17.ogg" />
+	<sound name="S" file="da/alpha/a-18.ogg" />
+	<sound name="T" file="da/alpha/a-19.ogg" />
+	<sound name="U" file="da/alpha/a-20.ogg" />
+	<sound name="V" file="da/alpha/a-21.ogg" />
+	<sound name="W" file="da/alpha/a-22.ogg" />
+	<sound name="X" file="da/alpha/a-23.ogg" />
+	<sound name="Y" file="da/alpha/a-24.ogg" />
+	<sound name="Z" file="da/alpha/a-25.ogg" />
+	<sound name="Æ" file="da/alpha/a-26.ogg" />
+	<sound name="Ø" file="da/alpha/a-27.ogg" />
+	<sound name="Å" file="da/alpha/a-28.ogg" />
+    </alphabet>
+
+    <syllables>
+    	<sound name="AD" file="da/syllab/ad-0.ogg" />
+	<sound name="BE" file="da/syllab/ad-1.ogg" />
+	<sound name="BÅ" file="da/syllab/ad-2.ogg" />
+	<sound name="DA" file="da/syllab/ad-3.ogg" />
+	<sound name="DY" file="da/syllab/ad-4.ogg" />
+	<sound name="EN" file="da/syllab/ad-5.ogg" />
+	<sound name="ER" file="da/syllab/ad-6.ogg" />
+	<sound name="ET" file="da/syllab/ad-7.ogg" />
+	<sound name="ES" file="da/syllab/ad-8.ogg" />
+	<sound name="FO" file="da/syllab/ad-9.ogg" />
+	<sound name="GA" file="da/syllab/ad-10.ogg" />
+	<sound name="HU" file="da/syllab/ad-11.ogg" />
+	<sound name="HØ" file="da/syllab/ad-12.ogg" />
+	<sound name="IN" file="da/syllab/ad-13.ogg" />
+	<sound name="LE" file="da/syllab/ad-14.ogg" />
+	<sound name="ME" file="da/syllab/ad-15.ogg" />
+	<sound name="MO" file="da/syllab/ad-16.ogg" />
+	<sound name="MU" file="da/syllab/ad-17.ogg" />
+	<sound name="NY" file="da/syllab/ad-18.ogg" />
+	<sound name="OG" file="da/syllab/ad-19.ogg" />
+	<sound name="OM" file="da/syllab/ad-20.ogg" />
+	<sound name="OP" file="da/syllab/ad-21.ogg" />
+	<sound name="RE" file="da/syllab/ad-22.ogg" />
+	<sound name="TE" file="da/syllab/ad-23.ogg" />
+	<sound name="UD" file="da/syllab/ad-24.ogg" />
+	<sound name="VI" file="da/syllab/ad-25.ogg" />
+	<sound name="VÆ" file="da/syllab/ad-26.ogg" />
+	<sound name="ÅR" file="da/syllab/ad-27.ogg" />
+    </syllables>
+
+  </language>
+
+</klettres>

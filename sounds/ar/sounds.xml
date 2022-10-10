@@ -1,0 +1,44 @@
+<!--
+Staring Rafik, my little nephew's voice. :)
+-->
+
+<klettres>
+ <language code="ar">
+
+ <menuitem>
+    <label>&amp;Arabic</label>
+ </menuitem>
+
+ <alphabet>
+ <sound name="ا" file="ar/alpha/a-01.ogg" />
+ <sound name="ب" file="ar/alpha/a-02.ogg" />
+ <sound name="ت" file="ar/alpha/a-03.ogg" />
+ <sound name="ث" file="ar/alpha/a-04.ogg" />
+ <sound name="ج" file="ar/alpha/a-05.ogg" />
+ <sound name="ح" file="ar/alpha/a-06.ogg" />
+ <sound name="خ" file="ar/alpha/a-07.ogg" />
+ <sound name="د" file="ar/alpha/a-08.ogg" />
+ <sound name="ذ" file="ar/alpha/a-09.ogg" />
+ <sound name="ر" file="ar/alpha/a-10.ogg" />
+ <sound name="ز" file="ar/alpha/a-11.ogg" />
+ <sound name="س" file="ar/alpha/a-12.ogg" />
+ <sound name="ش" file="ar/alpha/a-13.ogg" />
+ <sound name="ص" file="ar/alpha/a-14.ogg" />
+ <sound name="ط" file="ar/alpha/a-15.ogg" />
+ <sound name="ض" file="ar/alpha/a-16.ogg" />
+ <sound name="ظ" file="ar/alpha/a-17.ogg" />
+ <sound name="ع" file="ar/alpha/a-18.ogg" />
+ <sound name="غ" file="ar/alpha/a-19.ogg" />
+ <sound name="ف" file="ar/alpha/a-20.ogg" />
+ <sound name="ق" file="ar/alpha/a-21.ogg" />
+ <sound name="ك" file="ar/alpha/a-22.ogg" />
+ <sound name="ل" file="ar/alpha/a-23.ogg" />
+ <sound name="م" file="ar/alpha/a-24.ogg" />
+ <sound name="ن" file="ar/alpha/a-25.ogg" />
+ <sound name="ه" file="ar/alpha/a-26.ogg" />
+ <sound name="و" file="ar/alpha/a-27.ogg" />
+ <sound name="ي" file="ar/alpha/a-28.ogg" />
+ </alphabet>
+
+ </language>
+ </klettres>

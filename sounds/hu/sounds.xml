@@ -1,0 +1,97 @@
+<klettres>
+ 
+ <language code="hu">
+  
+  <menuitem>
+   <label>&amp;Hungarian</label>
+  </menuitem>
+  <alphabet>
+   <sound name="A" file="hu/alpha/a1.ogg" />
+   <sound name="Á" file="hu/alpha/a2.ogg" />
+   <sound name="B" file="hu/alpha/b.ogg" />
+   <sound name="C" file="hu/alpha/c.ogg" />
+   <sound name="CS" file="hu/alpha/cs.ogg" />
+   <sound name="D" file="hu/alpha/d.ogg" />
+   <sound name="DZ" file="hu/alpha/dz.ogg" />
+   <sound name="DZS" file="hu/alpha/dzs.ogg" />
+   <sound name="E" file="hu/alpha/e1.ogg" />
+   <sound name="É" file="hu/alpha/e2.ogg" />
+   <sound name="F" file="hu/alpha/f.ogg" />
+   <sound name="G" file="hu/alpha/g.ogg" />
+   <sound name="GY" file="hu/alpha/gy.ogg" />
+   <sound name="H" file="hu/alpha/h.ogg" />
+   <sound name="I" file="hu/alpha/i1.ogg" />
+   <sound name="Í" file="hu/alpha/i2.ogg" />
+   <sound name="J" file="hu/alpha/j.ogg" />
+   <sound name="K" file="hu/alpha/k.ogg" />
+   <sound name="L" file="hu/alpha/l.ogg" />
+   <sound name="LY" file="hu/alpha/ly.ogg" />
+   <sound name="M" file="hu/alpha/m.ogg" />
+   <sound name="N" file="hu/alpha/n.ogg" />
+   <sound name="NY" file="hu/alpha/ny.ogg" />
+   <sound name="O" file="hu/alpha/o1.ogg" />
+   <sound name="Ó" file="hu/alpha/o2.ogg" />
+   <sound name="Ö" file="hu/alpha/o3.ogg" />
+   <sound name="Ő" file="hu/alpha/o4.ogg" />
+   <sound name="P" file="hu/alpha/p.ogg" />
+   <sound name="Q" file="hu/alpha/q.ogg" />
+   <sound name="R" file="hu/alpha/r.ogg" />
+   <sound name="S" file="hu/alpha/s.ogg" />
+   <sound name="SZ" file="hu/alpha/sz.ogg" />
+   <sound name="T" file="hu/alpha/t.ogg" />
+   <sound name="TY" file="hu/alpha/ty.ogg" />
+   <sound name="U" file="hu/alpha/u1.ogg" />
+   <sound name="Ú" file="hu/alpha/u2.ogg" />
+   <sound name="Ü" file="hu/alpha/u3.ogg" />
+   <sound name="Ű" file="hu/alpha/u4.ogg" />
+   <sound name="V" file="hu/alpha/v.ogg" />
+   <sound name="W" file="hu/alpha/w.ogg" />
+   <sound name="X" file="hu/alpha/x.ogg" />
+   <sound name="Y" file="hu/alpha/y.ogg" />
+   <sound name="Z" file="hu/alpha/z.ogg" />
+   <sound name="ZS" file="hu/alpha/zs.ogg" />
+  </alphabet>
+  
+  <syllables>
+   <sound name="AZ" file="hu/syllab/01-az.ogg" />
+   <sound name="ÁR" file="hu/syllab/02-ar.ogg" />
+   <sound name="BÉR" file="hu/syllab/03-ber.ogg" />
+   <sound name="CÉL" file="hu/syllab/04-cel.ogg" />
+   <sound name="CSÍK" file="hu/syllab/05-csik.ogg" />
+   <sound name="DÉL" file="hu/syllab/06-del.ogg" />
+   <sound name="EGY" file="hu/syllab/07-egy.ogg" />
+   <sound name="ÉK" file="hu/syllab/08-ek.ogg" />
+   <sound name="FAL" file="hu/syllab/09-fal.ogg" />
+   <sound name="GÉZ" file="hu/syllab/10-gez.ogg" />
+   <sound name="GYÍK" file="hu/syllab/11-gyik.ogg" />
+   <sound name="HÓ" file="hu/syllab/12-ho.ogg" />
+   <sound name="ITT" file="hu/syllab/13-itt.ogg" />
+   <sound name="ÍJ" file="hu/syllab/14-ij.ogg" />
+   <sound name="JÓ" file="hu/syllab/15-jo.ogg" />
+   <sound name="KÁD" file="hu/syllab/16-kad.ogg" />
+   <sound name="LÓ" file="hu/syllab/17-lo.ogg" />
+   <sound name="LYUK" file="hu/syllab/18-lyuk.ogg" />
+   <sound name="MA" file="hu/syllab/19-ma.ogg" />
+   <sound name="NÉGY" file="hu/syllab/20-negy.ogg" />
+   <sound name="NYOLC" file="hu/syllab/21-nyolc.ogg" />
+   <sound name="OSZT" file="hu/syllab/22-oszt.ogg" />
+   <sound name="ÓL" file="hu/syllab/23-ol.ogg" />
+   <sound name="ÖT" file="hu/syllab/24-ot.ogg" />
+   <sound name="ŐR" file="hu/syllab/25-or.ogg" />
+   <sound name="PÉK" file="hu/syllab/26-pek.ogg" />
+   <sound name="RÉT" file="hu/syllab/27-ret.ogg" />
+   <sound name="SÓ" file="hu/syllab/28-so.ogg" />
+   <sound name="SZÖG" file="hu/syllab/29-szog.ogg" />
+   <sound name="TÖK" file="hu/syllab/30-tok.ogg" />
+   <sound name="TYÚK" file="hu/syllab/31-tyuk.ogg" />
+   <sound name="UJJ" file="hu/syllab/32-ujj.ogg" />
+   <sound name="ÚT" file="hu/syllab/33-ut.ogg" />
+   <sound name="ÜL" file="hu/syllab/34-ul.ogg" />
+   <sound name="ŰR" file="hu/syllab/35-ur.ogg" />
+   <sound name="VÉN" file="hu/syllab/36-ven.ogg" />
+   <sound name="ZAB" file="hu/syllab/37-zab.ogg" />
+   <sound name="ZSÁK" file="hu/syllab/38-zsak.ogg" />
+  </syllables>
+  
+ </language>
+</klettres> 

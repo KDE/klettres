@@ -1,0 +1,78 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+
+  <language code="he">
+    <menuitem>
+      <label>&amp;Hebrew</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="א" file="he/alpha/a-01.ogg" />
+	<sound name="א" file="he/alpha/a-01.ogg" />
+	<sound name="ב" file="he/alpha/a-02.ogg" />
+	<sound name="ג" file="he/alpha/a-03.ogg" />
+	<sound name="ד" file="he/alpha/a-04.ogg" />
+	<sound name="ה" file="he/alpha/a-05.ogg" />
+	<sound name="ו" file="he/alpha/a-06.ogg" />
+	<sound name="ז" file="he/alpha/a-07.ogg" />
+	<sound name="ח" file="he/alpha/a-08.ogg" />
+	<sound name="ט" file="he/alpha/a-09.ogg" />
+	<sound name="י" file="he/alpha/a-10.ogg" />
+	<sound name="כ" file="he/alpha/a-11.ogg" />
+	<sound name="ך" file="he/alpha/a-12.ogg" />
+	<sound name="ל" file="he/alpha/a-13.ogg" />
+	<sound name="מ" file="he/alpha/a-14.ogg" />
+	<sound name="ם" file="he/alpha/a-15.ogg" />
+	<sound name="נ" file="he/alpha/a-16.ogg" />
+	<sound name="ן" file="he/alpha/a-17.ogg" />
+	<sound name="ס" file="he/alpha/a-18.ogg" />
+	<sound name="ע" file="he/alpha/a-19.ogg" />
+	<sound name="פ" file="he/alpha/a-20.ogg" />
+	<sound name="ף" file="he/alpha/a-21.ogg" />
+	<sound name="צ" file="he/alpha/a-22.ogg" />
+	<sound name="ץ" file="he/alpha/a-23.ogg" />
+	<sound name="ק" file="he/alpha/a-24.ogg" />
+	<sound name="ר" file="he/alpha/a-25.ogg" />
+	<sound name="ש" file="he/alpha/a-26.ogg" />
+	<sound name="ת" file="he/alpha/a-27.ogg" />
+    </alphabet>
+
+      <syllables>
+	<sound name="אב" file="he/syllab/ad-01.ogg" />
+	<sound name="רק" file="he/syllab/ad-02.ogg" />
+	<sound name="גם" file="he/syllab/ad-03.ogg" />
+	<sound name="לא" file="he/syllab/ad-04.ogg" />
+	<sound name="כן" file="he/syllab/ad-05.ogg" />
+	<sound name="צח" file="he/syllab/ad-07.ogg" />
+	<sound name="לי" file="he/syllab/ad-08.ogg" />
+	<sound name="הר" file="he/syllab/ad-09.ogg" />
+	<sound name="נר" file="he/syllab/ad-10.ogg" />
+	<sound name="חם" file="he/syllab/ad-11.ogg" />
+	<sound name="קו" file="he/syllab/ad-12.ogg" />
+	<sound name="בו" file="he/syllab/ad-13.ogg" />
+	<sound name="בי" file="he/syllab/ad-14.ogg" />
+	<sound name="כי" file="he/syllab/ad-15.ogg" />
+	<sound name="די" file="he/syllab/ad-16.ogg" />
+	<sound name="סל" file="he/syllab/ad-17.ogg" />
+	<sound name="יש" file="he/syllab/ad-18.ogg" />
+	<sound name="עד" file="he/syllab/ad-19.ogg" />
+	<sound name="גר" file="he/syllab/ad-20.ogg" />
+	<sound name="דג" file="he/syllab/ad-21.ogg" />
+	<sound name="ים" file="he/syllab/ad-23.ogg" />
+	<sound name="מי" file="he/syllab/ad-24.ogg" />
+	<sound name="אף" file="he/syllab/ad-25.ogg" />
+	<sound name="קש" file="he/syllab/ad-26.ogg" />
+      </syllables>
+    </language>
+</klettres>

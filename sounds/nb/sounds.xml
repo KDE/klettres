@@ -1,0 +1,55 @@
+<!--
+   KDE EDU KLettres
+
+   Sounds taken from GCompris (license: GPL 2 or later).
+   Thanks to Johnstad/Gabor.
+
+   Modify this file if you want to add new sounds
+   or modify existing ones.
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+
+<language code="nb">
+
+    <menuitem>
+      <label>&amp;Norwegian Bokmål</label>
+    </menuitem>
+    <alphabet>
+	<sound name="A" file="nb/alpha/U0061.ogg" />
+	<sound name="B" file="nb/alpha/U0062.ogg" />
+	<sound name="C" file="nb/alpha/U0063.ogg" />
+	<sound name="D" file="nb/alpha/U0064.ogg" />
+	<sound name="E" file="nb/alpha/U0065.ogg" />
+	<sound name="F" file="nb/alpha/U0066.ogg" />
+	<sound name="G" file="nb/alpha/U0067.ogg" />
+	<sound name="H" file="nb/alpha/U0068.ogg" />
+	<sound name="I" file="nb/alpha/U0069.ogg" />
+	<sound name="J" file="nb/alpha/U006A.ogg" />
+	<sound name="K" file="nb/alpha/U006B.ogg" />
+	<sound name="L" file="nb/alpha/U006C.ogg" />
+	<sound name="M" file="nb/alpha/U006D.ogg" />
+	<sound name="N" file="nb/alpha/U006E.ogg" />
+	<sound name="O" file="nb/alpha/U006F.ogg" />
+	<sound name="P" file="nb/alpha/U0070.ogg" />
+	<sound name="Q" file="nb/alpha/U0071.ogg" />
+	<sound name="R" file="nb/alpha/U0072.ogg" />
+	<sound name="S" file="nb/alpha/U0073.ogg" />
+	<sound name="T" file="nb/alpha/U0074.ogg" />
+	<sound name="U" file="nb/alpha/U0075.ogg" />
+	<sound name="V" file="nb/alpha/U0076.ogg" />
+	<sound name="W" file="nb/alpha/U0077.ogg" />
+	<sound name="X" file="nb/alpha/U0078.ogg" />
+	<sound name="Y" file="nb/alpha/U0079.ogg" />
+	<sound name="Z" file="nb/alpha/U007A.ogg" />
+	<sound name="Æ" file="nb/alpha/U00E6.ogg" />
+	<sound name="Ø" file="nb/alpha/U00F8.ogg" />
+	<sound name="Å" file="nb/alpha/U00E5.ogg" />
+    </alphabet>
+
+  </language>
+
+</klettres>

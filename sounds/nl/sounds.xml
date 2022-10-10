@@ -1,0 +1,75 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+<language code="nl">
+
+    <menuitem>
+      <label>D&amp;utch</label>
+    </menuitem>
+
+      <alphabet>
+	<sound name="A" file="nl/alpha/a-0.ogg" />
+	<sound name="B" file="nl/alpha/a-1.ogg" />
+	<sound name="D" file="nl/alpha/a-2.ogg" />
+	<sound name="E" file="nl/alpha/a-3.ogg" />
+	<sound name="F" file="nl/alpha/a-4.ogg" />
+	<sound name="G" file="nl/alpha/a-5.ogg" />
+	<sound name="H" file="nl/alpha/a-6.ogg" />
+	<sound name="I" file="nl/alpha/a-7.ogg" />
+	<sound name="J" file="nl/alpha/a-8.ogg" />
+	<sound name="K" file="nl/alpha/a-9.ogg" />
+	<sound name="L" file="nl/alpha/a-10.ogg" />
+	<sound name="M" file="nl/alpha/a-11.ogg" />
+	<sound name="N" file="nl/alpha/a-12.ogg" />
+	<sound name="O" file="nl/alpha/a-13.ogg" />
+	<sound name="P" file="nl/alpha/a-14.ogg" />
+	<sound name="R" file="nl/alpha/a-15.ogg" />
+	<sound name="S" file="nl/alpha/a-16.ogg" />
+	<sound name="T" file="nl/alpha/a-17.ogg" />
+	<sound name="U" file="nl/alpha/a-18.ogg" />
+	<sound name="V" file="nl/alpha/a-19.ogg" />
+	<sound name="W" file="nl/alpha/a-20.ogg" />
+	<sound name="Z" file="nl/alpha/a-21.ogg" />
+      </alphabet>
+      <syllables>
+	<sound name="AA" file="nl/syllab/ad-0.ogg" />
+	<sound name="AAN" file="nl/syllab/ad-1.ogg" />
+	<sound name="AAP" file="nl/syllab/ad-2.ogg" />
+	<sound name="EE" file="nl/syllab/ad-3.ogg" />
+	<sound name="EEN" file="nl/syllab/ad-4.ogg" />
+	<sound name="EET" file="nl/syllab/ad-5.ogg" />
+	<sound name="EI" file="nl/syllab/ad-6.ogg" />
+	<sound name="EN" file="nl/syllab/ad-7.ogg" />
+	<sound name="EU" file="nl/syllab/ad-8.ogg" />
+	<sound name="IE" file="nl/syllab/ad-9.ogg" />
+	<sound name="IK" file="nl/syllab/ad-10.ogg" />
+	<sound name="IN" file="nl/syllab/ad-11.ogg" />
+	<sound name="IS" file="nl/syllab/ad-12.ogg" />
+	<sound name="ME" file="nl/syllab/ad-13.ogg" />
+	<sound name="OE" file="nl/syllab/ad-14.ogg" />
+	<sound name="OM" file="nl/syllab/ad-15.ogg" />
+	<sound name="OO" file="nl/syllab/ad-16.ogg" />
+	<sound name="OOG" file="nl/syllab/ad-17.ogg" />
+	<sound name="OOM" file="nl/syllab/ad-18.ogg" />
+	<sound name="OOR" file="nl/syllab/ad-19.ogg" />
+	<sound name="OP" file="nl/syllab/ad-20.ogg" />
+	<sound name="TE" file="nl/syllab/ad-21.ogg" />
+	<sound name="UI" file="nl/syllab/ad-22.ogg" />
+	<sound name="UU" file="nl/syllab/ad-23.ogg" />
+	<sound name="UUR" file="nl/syllab/ad-24.ogg" />
+	<sound name="YS" file="nl/syllab/ad-25.ogg" />
+      </syllables>
+
+</language>
+
+</klettres>

@@ -1,0 +1,107 @@
+<!--
+   KDE EDU KLettres
+
+   Thanks to Eric Bischoff (KTuberling)
+
+   Modify this file if you want to add new sounds
+   or modify existing ones. 
+
+   IMPORTANT: when you modify this file, save it using kwrite or kate with Save as and choose
+   utf8 in the encoding combobox on the right of the file title.
+-->
+
+<klettres>
+
+  <language code="nds">
+
+    <menuitem>
+      <label>&amp;Low Saxon</label>
+    </menuitem>
+
+    <alphabet>
+	<sound name="A" file="nds/alpha/a.ogg" />
+	<sound name="Ä" file="nds/alpha/ae.ogg" />
+	<sound name="B" file="nds/alpha/b.ogg" />
+	<sound name="C" file="nds/alpha/c.ogg" />
+	<sound name="D" file="nds/alpha/d.ogg" />  
+	<sound name="E" file="nds/alpha/e.ogg" />
+	<sound name="F" file="nds/alpha/f.ogg" />
+	<sound name="G" file="nds/alpha/g.ogg" />
+	<sound name="H" file="nds/alpha/h.ogg" />
+	<sound name="I" file="nds/alpha/i.ogg" />
+	<sound name="J" file="nds/alpha/j.ogg" /> 
+	<sound name="K" file="nds/alpha/k.ogg" />
+	<sound name="L" file="nds/alpha/l.ogg" />
+	<sound name="M" file="nds/alpha/m.ogg" />
+	<sound name="N" file="nds/alpha/n.ogg" />
+	<sound name="O" file="nds/alpha/o.ogg" />
+	<sound name="Ö" file="nds/alpha/oe.ogg" />
+	<sound name="P" file="nds/alpha/p.ogg" />
+	<sound name="Q" file="nds/alpha/q.ogg" />
+	<sound name="R" file="nds/alpha/r.ogg" />
+	<sound name="S" file="nds/alpha/s.ogg" />
+	<sound name="T" file="nds/alpha/t.ogg" />
+	<sound name="U" file="nds/alpha/u.ogg" />
+	<sound name="Ü" file="nds/alpha/ue.ogg" />
+	<sound name="V" file="nds/alpha/v.ogg" />
+	<sound name="W" file="nds/alpha/w.ogg" />
+	<sound name="X" file="nds/alpha/x.ogg" />
+	<sound name="Y" file="nds/alpha/y.ogg" />
+	<sound name="Z" file="nds/alpha/z.ogg" />
+	<sound name="ß" file="nds/alpha/sz.ogg" />
+    </alphabet>
+
+    <syllables>
+	<sound name="AAL"   file="nds/syllab/aal.ogg" />
+	<sound name="AL"   file="nds/syllab/al.ogg" />
+	<sound name="ALL"     file="nds/syllab/all.ogg" />
+	<sound name="BOOM"    file="nds/syllab/boom.ogg" />
+	<sound name="CENT"    file="nds/syllab/cent.ogg" />
+	<sound name="DEERT"    file="nds/syllab/deert.ogg" />
+	<sound name="EER"    file="nds/syllab/eer.ogg" />
+	<sound name="EHR"    file="nds/syllab/ehr.ogg" />
+	<sound name="EN"    file="nds/syllab/en.ogg" />
+	<sound name="FÄHR"   file="nds/syllab/faehr.ogg" />
+	<sound name="GREEKSCH"  file="nds/syllab/greeksch.ogg" />
+	<sound name="HUUS"   file="nds/syllab/huus.ogg" />
+	<sound name="IES"   file="nds/syllab/ies.ogg" />
+	<sound name="IK"    file="nds/syllab/ik.ogg" />
+	<sound name="IMM"     file="nds/syllab/imm.ogg" />
+	<sound name="JÜST"    file="nds/syllab/juest.ogg" />
+	<sound name="KEERL"   file="nds/syllab/keerl.ogg" />
+	<sound name="LEEF"    file="nds/syllab/leef.ogg" />
+	<sound name="MUUR"    file="nds/syllab/muur.ogg" />
+	<sound name="NAAM"   file="nds/syllab/naam.ogg" />
+	<sound name="OCH"   file="nds/syllab/och.ogg" />
+	<sound name="OLL"   file="nds/syllab/oll.ogg" />
+	<sound name="OOLT" file="nds/syllab/oolt.ogg" />
+	<sound name="PANN"    file="nds/syllab/pann.ogg" />
+	<sound name="QUEERN"   file="nds/syllab/queern.ogg" />
+	<sound name="REEG"    file="nds/syllab/reeg.ogg" />
+	<sound name="SACHTS"    file="nds/syllab/sachts.ogg" />
+	<sound name="SCHIET"   file="nds/syllab/schiet.ogg" />
+	<sound name="TAACH"   file="nds/syllab/taach.ogg" />
+	<sound name="UT"    file="nds/syllab/ut.ogg" />
+	<sound name="UUL"    file="nds/syllab/uul.ogg" />
+	<sound name="STUNN"    file="nds/syllab/stunn.ogg" />
+	<sound name="VEEL"   file="nds/syllab/veel.ogg" />
+	<sound name="VEEGTOORSCH"     file="nds/syllab/veegtoorsch.ogg" />
+	<sound name="WAAG"     file="nds/syllab/waag.ogg" />
+	<sound name="FIX"     file="nds/syllab/fix.ogg" />
+	<sound name="TYP"     file="nds/syllab/typ.ogg" />
+	<sound name="ZEEG"     file="nds/syllab/zeeg.ogg" />
+	<sound name="ÄTEN"     file="nds/syllab/aeten.ogg" />
+	<sound name="BÄÄR"     file="nds/syllab/baeaer.ogg" />
+	<sound name="ÄNNERN"     file="nds/syllab/aennern.ogg" />
+	<sound name="ÖKO"     file="nds/syllab/oeko.ogg" />
+	<sound name="ÖÖL"     file="nds/syllab/oeoel.ogg" />
+	<sound name="ÖLLER"     file="nds/syllab/oeller.ogg" />
+	<sound name="ÜM"     file="nds/syllab/uem.ogg" />
+	<sound name="ÜNNER"     file="nds/syllab/uenner.ogg" />
+	<sound name="ÜÜTZ"     file="nds/syllab/ueuetz.ogg" />
+	<sound name="SPAAß"     file="nds/syllab/spaasz.ogg" />
+    </syllables>
+
+  </language>
+
+</klettres>
