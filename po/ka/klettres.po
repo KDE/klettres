@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:41+0000\n"
-"PO-Revision-Date: 2022-09-12 20:32+0200\n"
+"PO-Revision-Date: 2022-12-07 15:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -184,22 +184,22 @@ msgstr "(დონე %1)"
 #: klettres.cpp:342
 #, kde-format
 msgid "Grown-up mode is currently active"
-msgstr ""
+msgstr "ამჟამად ჩართულია ზრდასრულის რეჟიმი"
 
 #: klettres.cpp:343
 #, kde-format
 msgid "Switch to Kid mode"
-msgstr ""
+msgstr "ბავშვის რეჟიმზე გადართვა"
 
 #: klettres.cpp:361
 #, kde-format
 msgid "Kid mode is currently active"
-msgstr ""
+msgstr "ამჟამად ჩართულია ბავშვის რეჟიმი"
 
 #: klettres.cpp:362
 #, kde-format
 msgid "Switch to Grown-up mode"
-msgstr ""
+msgstr "ზრდასრულის რეჟიმზე გადართვა"
 
 #: klettres.cpp:383
 #, kde-format
@@ -247,13 +247,13 @@ msgstr "სირთულის დონე."
 #: klettres.kcfg:41
 #, kde-format
 msgid "Kid Timer"
-msgstr ""
+msgstr "ბავშვის ტაიმერი"
 
 #. i18n: ectx: label, entry (GrownTimer), group (General)
 #: klettres.kcfg:45
 #, kde-format
 msgid "Grown-up Timer"
-msgstr ""
+msgstr "ზრდასრულის ტაიმერი"
 
 #. i18n: ectx: Menu (file)
 #: klettresui.rc:4
@@ -265,7 +265,7 @@ msgstr "&ფაილი"
 #: klettresui.rc:15
 #, kde-format
 msgid "L&ook"
-msgstr ""
+msgstr "&შეხედვა"
 
 #. i18n: ectx: Menu (settings)
 #: klettresui.rc:23
@@ -283,7 +283,7 @@ msgstr "მთავარი"
 #: klettresui.rc:47
 #, kde-format
 msgid "Special Characters"
-msgstr ""
+msgstr "სპეციალური სიმბოლოები"
 
 #: klettresview.cpp:32
 #, kde-format
@@ -300,13 +300,13 @@ msgstr "%1 / %2"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Kid"
-msgstr ""
+msgstr "ბავშვი"
 
 #: kltheme.cpp:86
 #, kde-format
 msgctxt "@item:inlistbox desert theme for the interface"
 msgid "Desert"
-msgstr ""
+msgstr "უდაბნო"
 
 #: kltheme.cpp:136
 #, kde-format
@@ -323,7 +323,7 @@ msgstr "წყლის ფერი"
 #: langutils.cpp:88
 #, kde-format
 msgid "Romanized Hindi"
-msgstr ""
+msgstr "გაინგლისურებული ჰინდი"
 
 #: langutils.cpp:90
 #, kde-format
@@ -333,7 +333,7 @@ msgstr "ლუგანდა"
 #: langutils.cpp:92
 #, kde-format
 msgid "English Phonics"
-msgstr ""
+msgstr "ინგლისური აკუსტიკა"
 
 #: langutils.cpp:94
 #, kde-format
@@ -344,7 +344,7 @@ msgstr "ცვანა"
 #, kde-format
 msgctxt "@item:inlistbox no language for that locale"
 msgid "None"
-msgstr ""
+msgstr "არაფერი"
 
 #: main.cpp:40
 #, kde-format
@@ -434,7 +434,7 @@ msgstr ""
 #: main.cpp:58
 #, kde-format
 msgid "Michael Goettsche"
-msgstr ""
+msgstr "Michael Goettsche"
 
 #: main.cpp:59
 #, kde-format
@@ -444,7 +444,7 @@ msgstr ""
 #: main.cpp:60
 #, kde-format
 msgid "Laurent Navet"
-msgstr ""
+msgstr "Laurent Navet"
 
 #: main.cpp:61
 #, kde-format
