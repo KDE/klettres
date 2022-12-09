@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:41+0000\n"
-"PO-Revision-Date: 2022-12-07 15:56+0100\n"
+"PO-Revision-Date: 2022-12-08 07:25+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -63,7 +63,7 @@ msgstr ""
 #: klettres.cpp:123
 #, kde-format
 msgid "Get Alphabet in New Language..."
-msgstr ""
+msgstr "მიიღეთ ახალი ენის ანბანი..."
 
 #: klettres.cpp:128
 #, kde-format
@@ -152,7 +152,7 @@ msgstr "დიდის რეჟიმი"
 #: klettres.cpp:173
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
-msgstr ""
+msgstr "ზრდასრულების რეჟიმი ნორმალური რეჟიმია, სადაც მენიუს ზოლიც ჩანს."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
 #: klettres.cpp:209 klettres.kcfg:51
@@ -207,6 +207,8 @@ msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
 "please check your installation."
 msgstr ""
+"ფაილი $KDEDIR/share/apps/klettres/%1.txt არ არსებობს;\n"
+"გადაამოწმეთ თქვენი დაყენებული ვერსია."
 
 #: klettres.cpp:386
 #, kde-format
@@ -229,7 +231,7 @@ msgstr "თემა"
 #: klettres.kcfg:23
 #, kde-format
 msgid "Whether the menubar is shown or hidden"
-msgstr ""
+msgstr "დამალულია თუ არა მენიუს ზოლი"
 
 #. i18n: ectx: label, entry (Mode), group (General)
 #: klettres.kcfg:27
@@ -288,7 +290,7 @@ msgstr "სპეციალური სიმბოლოები"
 #: klettresview.cpp:32
 #, kde-format
 msgid "Type the letter or syllable that you just heard"
-msgstr ""
+msgstr "აკრიფეთ სიმბოლო ან მარცვალი, რომელიც ახლა გაიგეთ"
 
 #: klettresview.cpp:131
 #, kde-format
@@ -379,7 +381,7 @@ msgstr "Marc Cheng"
 #: main.cpp:47
 #, kde-format
 msgid "Kids and grown-up oxygen icons"
-msgstr ""
+msgstr "ბავშვებისა და ზრდასრულების Oxygen ხატულები"
 
 #: main.cpp:48
 #, kde-format
@@ -399,7 +401,7 @@ msgstr "Robert Gogolok"
 #: main.cpp:51
 #, kde-format
 msgid "Support and coding guidance"
-msgstr ""
+msgstr "მხარდაჭერა და პროგრამირების გაძღოლა"
 
 #: main.cpp:52
 #, kde-format
@@ -409,7 +411,7 @@ msgstr "Peter Hedlund"
 #: main.cpp:53
 #, kde-format
 msgid "Code for generating special characters' icons"
-msgstr ""
+msgstr "სპეციალური სიმბოლოს ხატულების გენერირების კოდი"
 
 #: main.cpp:54
 #, kde-format
@@ -419,7 +421,7 @@ msgstr "Waldo Bastian"
 #: main.cpp:55
 #, kde-format
 msgid "Port to KConfig XT, coding help"
-msgstr ""
+msgstr "KConfig XT-ზე პორტი, დახმარება პროგრამირებაში"
 
 #: main.cpp:56
 #, kde-format
@@ -429,7 +431,7 @@ msgstr "Pino Toscano"
 #: main.cpp:57
 #, kde-format
 msgid "Code cleaning, Theme class"
-msgstr ""
+msgstr "კოდის გასუფთავება, თემის კლასი"
 
 #: main.cpp:58
 #, kde-format
@@ -439,7 +441,7 @@ msgstr "Michael Goettsche"
 #: main.cpp:59
 #, kde-format
 msgid "Timer setting widgets"
-msgstr ""
+msgstr "ტაიმერის პარამეტრების ვიჯეტები"
 
 #: main.cpp:60
 #, kde-format
@@ -449,32 +451,32 @@ msgstr "Laurent Navet"
 #: main.cpp:61
 #, kde-format
 msgid "Port to KDE Frameworks 5"
-msgstr ""
+msgstr "KDE Frameworks 5-ზე გადატანა"
 
 #: soundfactory.cpp:86
 #, kde-format
 msgid "Error while loading the sound names."
-msgstr ""
+msgstr "შეცდომა ხმის სახელების ჩატვირთვისას."
 
 #: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
 #, kde-format
 msgid "1 tenth of second"
 msgid_plural "%1 tenths of second"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "წამის ერთი მეათედი"
+msgstr[1] "წამის %1 მეათედი"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: timerui.ui:51
 #, kde-format
 msgid "Set the time between 2 letters."
-msgstr ""
+msgstr "დრო ორ სიმბოლოს შორის."
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_KidTimer)
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_GrownTimer)
 #: timerui.ui:91 timerui.ui:184
 #, kde-format
 msgid "Set the timer (in tenths of seconds)"
-msgstr ""
+msgstr "ტაიმერის დაყენება (წამის მეათედები)"
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_KidTimer)
 #: timerui.ui:94
@@ -483,6 +485,9 @@ msgid ""
 "You can set the time between two letters in Kid mode. Default is 4 tenths of "
 "seconds but younger children might need longer time."
 msgstr ""
+"ბავშვების რეჟიმში ორ სიმბოლოს შორის დრო შეგიძლიათ დააყენოთ. ნაგულისხმები "
+"მნიშვნელობაა ოთხი მეათედი წამი, მაგრამ პატარა ბავშვებს უფრო მეტი დროც კი "
+"შეიძლება დასჭირდეთ."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: timerui.ui:122
@@ -494,6 +499,11 @@ msgid ""
 "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
 "indent:0; text-indent:0px;\">Kid Mode</p></body></html>"
 msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">საბავშვო რეჟიმი</p></body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_GrownTimer)
 #: timerui.ui:187
