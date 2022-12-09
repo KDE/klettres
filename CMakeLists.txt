@@ -28,6 +28,7 @@ include(ECMAddTests)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMSetupVersion)
+include(ECMDeprecationSettings)
 
 # Load the frameworks we need
 
@@ -51,6 +52,9 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+     KF 5.101.0
+    )
 
 
 ecm_optional_add_subdirectory( doc )
