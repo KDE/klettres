@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:41+0000\n"
-"PO-Revision-Date: 2022-12-12 09:55+0100\n"
+"PO-Revision-Date: 2022-12-24 07:00+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -37,6 +37,11 @@ msgid ""
 "Please install this file and start KLettres again.\n"
 "\n"
 msgstr ""
+"ფაილი sounds.xml ვერ იქნა ნაპოვნი\n"
+"$KDEDIR/share/apps/klettres/\n"
+"\n"
+"დააყენეთ ეს ფაილი და KLettres თავიდან გაუშვით.\n"
+"\n"
 
 #: klettres.cpp:93
 #, kde-format
@@ -103,6 +108,10 @@ msgid ""
 "does not display the letter, you only hear it; level 3 displays a syllable "
 "and you hear it; level 4 does not display the syllable, you only hear it."
 msgstr ""
+"თქვენ შეგიძლიათ აირჩიოთ დონე: დონე 1 აჩვენებს წერილს და გესმით იგი; მე -2 "
+"დონე არ აჩვენებს წერილს, თქვენ მხოლოდ მოისმენთ მას; მე -3 დონე აჩვენებს "
+"syllable- ს და მოისმენთ; მე -4 დონე არ აჩვენებს syllable- ს, თქვენ მხოლოდ "
+"მოისმენთ."
 
 #: klettres.cpp:144
 #, kde-format
@@ -134,6 +143,8 @@ msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
 "background picture and the font color for the letter displayed."
 msgstr ""
+"აქ შეგიძლიათ KLettres-ის თემა შეცვალოთ. თემა ფონის სურათისა და საჩვენებელი "
+"წერილის ფერისგან შედგება."
 
 #: klettres.cpp:162
 #, kde-format
@@ -146,6 +157,9 @@ msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
 "mode. The Kid mode has no menubar and the font is bigger in the statusbar."
 msgstr ""
+"თქვენ ზრდასრულის რეჟიმში ხართ. ამ ღილაკზე დაწოლით ბავშვის რეჟიმის მორგება "
+"შეგიძლიათ. ბავშვის რეჟიმს მენიუს ზოლი არ აქვს და სტატუსის ზოლში ფონტი უფრო "
+"დიდია."
 
 #: klettres.cpp:169
 #, kde-format
@@ -365,6 +379,11 @@ msgid ""
 "\n"
 "25 languages are available."
 msgstr ""
+"KLettres ძალიან ეხმარება მცირეწლოვან ბავშვს ან ზრდასრულს, ისწავლოს \n"
+"ახალი ენა ბგერების ასოცირებით და \n"
+"ბგერებით ამ ენაზე.\n"
+"\n"
+"ხელმისაწვდომია 25 ენა."
 
 #: main.cpp:44
 #, kde-format
