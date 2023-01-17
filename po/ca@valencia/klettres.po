@@ -185,7 +185,7 @@ msgstr "Tipus de lletra"
 #: klettres.cpp:209
 #, kde-format
 msgid "Font Settings"
-msgstr "Configuració del tipus de lletra"
+msgstr "Configureu el tipus de lletra"
 
 #: klettres.cpp:213
 #, kde-format
@@ -195,7 +195,7 @@ msgstr "Temporitzador"
 #: klettres.cpp:213
 #, kde-format
 msgid "Timer Settings"
-msgstr "Configuració del temporitzador"
+msgstr "Configureu el temporitzador"
 
 #: klettres.cpp:231 klettres.cpp:299
 #, kde-format
