@@ -29,6 +29,13 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMSetupVersion)
 include(ECMDeprecationSettings)
+if (QT_MAJOR_VERSION STREQUAL "6")
+    set(QT_REQUIRED_VERSION "6.4.0")
+    set(KF_MIN_VERSION "5.240.0")
+    set(KF_MAJOR_VERSION "6")
+else()
+    set(KF_MAJOR_VERSION "5")
+endif()
 
 # Load the frameworks we need
 
@@ -41,7 +48,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED
 )
 find_package(Phonon4Qt${QT_MAJOR_VERSION} REQUIRED)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF${KF_MAJOR_VERSION} ${KF5_MIN_VERSION} REQUIRED COMPONENTS
   Crash
   DocTools
   I18n
@@ -52,7 +59,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
-ecm_set_disabled_deprecation_versions(QT 5.15.2
+ecm_set_disabled_deprecation_versions(QT 6.4
      KF 5.101.0
     )
 
