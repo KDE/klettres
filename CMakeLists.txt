@@ -56,6 +56,7 @@ find_package(KF${KF_MAJOR_VERSION} ${KF5_MIN_VERSION} REQUIRED COMPONENTS
   WidgetsAddons
   ConfigWidgets
   CoreAddons
+  XmlGui
 )
 
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
