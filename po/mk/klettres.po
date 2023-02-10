@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2005-05-17 12:03+0200\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -185,34 +185,34 @@ msgstr ""
 msgid "Timer Settings"
 msgstr "Поставувања на фонтот"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "Ниво 1"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr ""
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, fuzzy, kde-format
 msgid "Switch to Kid mode"
 msgstr "Префрли на детски изглед"
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr ""
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, fuzzy, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Префрли на изглед за возрасни"
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, fuzzy, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -221,7 +221,7 @@ msgstr ""
 "Датотеката $KDEDIR/share/apps/%1 не е најдена!\n"
 "Проверете ја вашата инсталација, ве молам!"
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr ""

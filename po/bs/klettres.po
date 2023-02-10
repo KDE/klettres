@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2015-01-07 00:29+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -194,33 +194,33 @@ msgstr "Tajmer"
 msgid "Timer Settings"
 msgstr "Kontrole za postavljanje tajmera"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(Nivo %1)"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Režim za odrasle je trenutno aktivan"
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Prebaci na režim za djecu"
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Režim za djecu je trenutno aktivan"
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Prebaci na režim za odrasle"
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -229,7 +229,7 @@ msgstr ""
 "Datoteka $KDEDIR/share/apps/klettres/%1.txt nije pronađen;\n"
 "provjerite svoju instalaciju."
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr "Greška"

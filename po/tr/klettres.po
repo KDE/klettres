@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2022-12-11 13:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -201,33 +201,33 @@ msgstr "Sayaç"
 msgid "Timer Settings"
 msgstr "Sayaç Ayarları"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(Düzey %1)"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Yetişkin kipi şu anda etkin"
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Çocuk kipine geç"
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Çocuk kipi şu anda etkin"
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Yetişkin kipine geç"
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -236,7 +236,7 @@ msgstr ""
 "$KDEDIR/share/apps/%1.txt dosyası bulunamadı!\n"
 "Lütfen kurulumunuzu gözden geçirin."
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr "Hata"

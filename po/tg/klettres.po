@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2019-09-29 12:21+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -184,34 +184,34 @@ msgstr "Таймер"
 msgid "Timer Settings"
 msgstr "Танзимоти Ҳарф"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "Ҳамвор 1"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr ""
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, fuzzy, kde-format
 msgid "Switch to Kid mode"
 msgstr "Ба ҳолати намоиши кӯдак иваз кунед"
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr ""
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, fuzzy, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Ба ҳолати намоиши талаба иваз кунед"
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -220,7 +220,7 @@ msgstr ""
 "Файли $KDEDIR/share/apps/klettres/%1.txt ёфт нашуд;\n"
 "Лутфан, сабти Шумо санҷиш кунед."
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr ""

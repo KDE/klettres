@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2021-07-23 22:16+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -199,33 +199,33 @@ msgstr "Tenporizadorea"
 msgid "Timer Settings"
 msgstr "Tenporizadorearen ezarpenak"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(%1. maila)"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Helduen modua une honetan aktibo dago"
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Aldatu haurren modura"
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Haurren modua une honetan aktibo dago"
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Aldatu helduen modura"
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -234,7 +234,7 @@ msgstr ""
 "Ez da $KDEDIR/share/apps/klettres/%1.txt fitxategia aurkitu;\n"
 "egiaztatu zure instalazioa."
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr "Errorea"

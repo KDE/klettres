@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2019-02-14 21:19+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -185,33 +185,33 @@ msgstr "計時"
 msgid "Timer Settings"
 msgstr "計時設定"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "（第 %1 級）"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "目前為大人模式"
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "切換到兒童模式"
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "目前為兒童模式"
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "切換到大人模式"
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -220,7 +220,7 @@ msgstr ""
 "找不到 $KDEDIR/share/apps/klettres/%1.txt。\n"
 "請檢查您的安裝。"
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr "錯誤"

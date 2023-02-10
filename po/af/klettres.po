@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2002-11-07 11:31+0200\n"
 "Last-Translator: WEB-Translator <http://kde.af.org.za>\n"
 "Language-Team: AFRIKAANS <AF@lia.org.za>\n"
@@ -175,34 +175,34 @@ msgstr ""
 msgid "Timer Settings"
 msgstr ""
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "Vlak 1"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr ""
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr ""
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr ""
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr ""
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, fuzzy, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -211,7 +211,7 @@ msgstr ""
 "Lêer $Kdedir/deel/programme/%1 nie gevind!\n"
 "Bevestig jou installasie, asseblief!"
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr ""

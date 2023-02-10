@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2012-07-06 15:34+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -188,33 +188,33 @@ msgstr "ឧបករណ៍​កំណត់​ពេល​វេលា"
 msgid "Timer Settings"
 msgstr "ធាតុ​ក្រាហ្វិក​ការកំណត់​ឧបករណ៍​កំណត់​ពេលវេលា"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(កម្រិត %1)"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "របៀប Grown-up បច្ចុប្បន្ន​សកម្ម"
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "ប្ដូរ​ទៅ​របៀប Kid"
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "របៀប Kid បច្ចុប្បន្ន​សកម្ម"
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "ប្ដូរ​ទៅ​របៀប Grown-up"
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -223,7 +223,7 @@ msgstr ""
 "រក​មិន​ឃើញ​ឯកសារ $KDEDIR/share/apps/klettres/%1.txt ទេ ។\n"
 "សូម​ពិនិត្យ​មើល​ការ​ដំឡើង​របស់​អ្នក ។"
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr "កំហុស"

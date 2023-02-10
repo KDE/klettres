@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kletters-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2008-07-07 14:49+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -192,33 +192,33 @@ msgstr "ઘડિયાળ"
 msgid "Timer Settings"
 msgstr "સમય ગોઠવણી વિજેટ્સ"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(સ્તર %1)"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "તરુણ સ્થિતિ અત્યારે સક્રિય છે"
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "બાળક સ્થિતિમાં ફેરવો"
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "બાળક સ્થિતિ અત્યારે સક્રિય છે"
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "તરુણ સ્થિતિમાં બદલો"
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -227,7 +227,7 @@ msgstr ""
 "ફાઇલ $KDEDIR/share/apps/klettres/%1.txt મળી નહી;\n"
 "મહેરબાની કરી તમારું સ્થાપન ચકાસો."
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr "ક્ષતિ"

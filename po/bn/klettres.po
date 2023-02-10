@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres (KDE 3.5)\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:41+0000\n"
+"POT-Creation-Date: 2023-02-10 00:54+0000\n"
 "PO-Revision-Date: 2006-03-29 23:30+0600\n"
 "Last-Translator: Progga <progga@BengaLinux.Org>\n"
 "Language-Team: Bangla <kde-translation@BengaLinux.Org>\n"
@@ -199,34 +199,34 @@ msgstr "সময়-সংরক্ষক"
 msgid "Timer Settings"
 msgstr "সময়সীমা নির্ধারক উইজেট"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:231 klettres.cpp:303
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "১ম স্তর"
 
-#: klettres.cpp:342
+#: klettres.cpp:346
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "বর্তমানে প্রাপ্তবয়স্ক মোড সক্রিয় রয়েছে"
 
-#: klettres.cpp:343
+#: klettres.cpp:347
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "শিশুতোষ মোড-এ চলে যাও"
 
-#: klettres.cpp:361
+#: klettres.cpp:365
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "বর্তমানে শিশুতোষ মোড সক্রিয় রয়েছে"
 
-#: klettres.cpp:362
+#: klettres.cpp:366
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "প্রাপ্তবয়স্ক মোড-এ চলে যাও"
 
-#: klettres.cpp:383
+#: klettres.cpp:387
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -235,7 +235,7 @@ msgstr ""
 "$KDEDIR/share/apps/klettres/%1.txt ফাইলটি পাওয়া যায় নি;\n"
 "অনুগ্রহপূর্বক ইনস্টলকৃত ফাইলসমূহ পরীক্ষা করুন।"
 
-#: klettres.cpp:386
+#: klettres.cpp:390
 #, kde-format
 msgid "Error"
 msgstr ""
