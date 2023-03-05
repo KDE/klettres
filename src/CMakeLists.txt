@@ -34,7 +34,7 @@ add_executable(klettres ${klettres_SRCS})
 
 target_link_libraries(klettres
   KF${KF_MAJOR_VERSION}::Crash
-  KF${KF_MAJOR_VERSION}::NewStuff
+  KF${KF_MAJOR_VERSION}::NewStuffWidgets
   KF${KF_MAJOR_VERSION}::I18n
   KF${KF_MAJOR_VERSION}::XmlGui
   Qt::Svg
