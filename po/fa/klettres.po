@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:54+0000\n"
+"POT-Creation-Date: 2023-03-06 00:43+0000\n"
 "PO-Revision-Date: 2007-08-07 19:51+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "daniarzadeh@itland.ir"
 
-#: klettres.cpp:90
+#: klettres.cpp:95
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -43,22 +43,22 @@ msgstr ""
 "لطفاً، این پرونده را نصب کرده و مجدداً  KLettre را آغاز کنید.\n"
 "\n"
 
-#: klettres.cpp:93
+#: klettres.cpp:98
 #, kde-format
 msgid "KLettres - Error"
 msgstr ""
 
-#: klettres.cpp:115
+#: klettres.cpp:120
 #, kde-format
 msgid "New Sound"
 msgstr "صوت جدید"
 
-#: klettres.cpp:119
+#: klettres.cpp:124
 #, kde-format
 msgid "Play a new sound"
 msgstr "پخش کردن یک صوت جدید"
 
-#: klettres.cpp:120
+#: klettres.cpp:125
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
@@ -67,22 +67,22 @@ msgstr ""
 "می‌توانید یک صوت جدید را با فشار این دکمه، یا با استفاده از گزینه صوت جدید در "
 "گزینگان پرونده پخش کنید."
 
-#: klettres.cpp:123
+#: klettres.cpp:128
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "گرفتن الفبا در زبان جدید..."
 
-#: klettres.cpp:128
+#: klettres.cpp:133
 #, kde-format
 msgid "Replay Sound"
 msgstr "پخش مجدد صوت"
 
-#: klettres.cpp:131
+#: klettres.cpp:136
 #, kde-format
 msgid "Play the same sound again"
 msgstr "همین صوت را دوباره پخش کنید"
 
-#: klettres.cpp:133
+#: klettres.cpp:138
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -91,18 +91,18 @@ msgstr ""
 "دوباره می‌توانید همین صوت را با فشار این دکمه، یا با استفاده از گزینه پخش "
 "مجدد صوت در گزینگان پرونده، مجدداً پخش کنید."
 
-#: klettres.cpp:139
+#: klettres.cpp:144
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "&سطح‌"
 
-#: klettres.cpp:140
+#: klettres.cpp:145
 #, kde-format
 msgid "Select the level"
 msgstr "برگزیدن سطح"
 
-#: klettres.cpp:141
+#: klettres.cpp:146
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -113,13 +113,13 @@ msgstr ""
 "۲، حرف را نمایش نمی‌دهد، فقط می‌توانید آن را بشنوید؛ سطح ۳، یک هجا را نمایش "
 "می‌دهد و آن را می‌شنوید؛ سطح ۴، هجا را نمایش نمی‌دهد و فقط آن را می‌شنوید."
 
-#: klettres.cpp:144
+#: klettres.cpp:149
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "&زبان‌"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:152 klettres.cpp:153 klettres.cpp:154 klettres.cpp:155
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox choose level 1"
 #| msgid "Level 1"
@@ -128,17 +128,17 @@ msgid "Level %1"
 msgid_plural "Level %1"
 msgstr[0] "سطح ۱"
 
-#: klettres.cpp:155
+#: klettres.cpp:160
 #, kde-format
 msgid "Themes"
 msgstr "چهره‌ها"
 
-#: klettres.cpp:158
+#: klettres.cpp:163
 #, kde-format
 msgid "Select the theme"
 msgstr "برگزیدن چهره"
 
-#: klettres.cpp:159
+#: klettres.cpp:164
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -147,12 +147,12 @@ msgstr ""
 "در اینجا می‌توانید چهره را برای  KLettres تغییر دهید. چهره منوط به عکس زمینه "
 "می‌باشد، و رنگ قلم، برای حرف نمایش داده می‌شود."
 
-#: klettres.cpp:162
+#: klettres.cpp:167
 #, kde-format
 msgid "Mode Kid"
 msgstr "حالت خردسال"
 
-#: klettres.cpp:166
+#: klettres.cpp:171
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -161,66 +161,66 @@ msgstr ""
 "اگر در حالت بزرگسال هستید، فشار دادن این دکمه حالت خردسال را تنظیم خواهد "
 "کرد. حالت خردسال میله گزینگان ندارد، و قلم موجود در میله وضعیت بزرگ‌تر است."
 
-#: klettres.cpp:169
+#: klettres.cpp:174
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "حالت بزرگسال"
 
-#: klettres.cpp:173
+#: klettres.cpp:178
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr ""
 "حالت بزرگسال حالتی عادی است که در آن حالت می‌توانید میله گزینگان را ببینید."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:214 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "قلم"
 
-#: klettres.cpp:209
+#: klettres.cpp:214
 #, kde-format
 msgid "Font Settings"
 msgstr "تنظیمات قلم"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, kde-format
 msgid "Timer"
 msgstr "زمان‌سنج"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, fuzzy, kde-format
 #| msgid "Timer setting widgets"
 msgid "Timer Settings"
 msgstr "عناصر تنظیم زمان‌سنج"
 
-#: klettres.cpp:231 klettres.cpp:303
+#: klettres.cpp:236 klettres.cpp:316
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(سطح %1)"
 
-#: klettres.cpp:346
+#: klettres.cpp:359
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "در حال حاضر حالت بزرگسال فعال است"
 
-#: klettres.cpp:347
+#: klettres.cpp:360
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "سودهی به حالت خردسال"
 
-#: klettres.cpp:365
+#: klettres.cpp:378
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "در حال حاضر حالت خردسال فعال است"
 
-#: klettres.cpp:366
+#: klettres.cpp:379
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "سودهی به حالت بزرگسال"
 
-#: klettres.cpp:387
+#: klettres.cpp:400
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -229,7 +229,7 @@ msgstr ""
 "پرونده  $KDEDIR/share/apps/klettres/%1.txt یافت نشد؛ لطفاً، نصب خود را بررسی "
 "کنید."
 
-#: klettres.cpp:390
+#: klettres.cpp:403
 #, kde-format
 msgid "Error"
 msgstr "خطا"

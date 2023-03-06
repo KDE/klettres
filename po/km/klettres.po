@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:54+0000\n"
+"POT-Creation-Date: 2023-03-06 00:43+0000\n"
 "PO-Revision-Date: 2012-07-06 15:34+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
 
-#: klettres.cpp:90
+#: klettres.cpp:95
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -44,44 +44,44 @@ msgstr ""
 "សូម​ដំឡើង​ឯកសារ​នេះ ហើយ​ចាប់ផ្ដើម KLettres ម្ដងទៀត ។\n"
 "\n"
 
-#: klettres.cpp:93
+#: klettres.cpp:98
 #, kde-format
 msgid "KLettres - Error"
 msgstr "KLettres - កំហុស"
 
-#: klettres.cpp:115
+#: klettres.cpp:120
 #, kde-format
 msgid "New Sound"
 msgstr "សំឡេង​ថ្មី"
 
-#: klettres.cpp:119
+#: klettres.cpp:124
 #, kde-format
 msgid "Play a new sound"
 msgstr "លេង​សំឡេង​ថ្មី"
 
-#: klettres.cpp:120
+#: klettres.cpp:125
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
 "Sound."
 msgstr "អ្នក​អាច​ចាក់​សំឡេង​ថ្មី ដោយ​ចុច​ប៊ូតុង​នេះ ឬ​ប្រើ​ម៉ឺនុយ ឯកសារ -> សំឡេងថ្មី ។"
 
-#: klettres.cpp:123
+#: klettres.cpp:128
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "យក​អក្សរ​ក្រម​ជា​ភាសា​ថ្មី..."
 
-#: klettres.cpp:128
+#: klettres.cpp:133
 #, kde-format
 msgid "Replay Sound"
 msgstr "ចាក់​សំឡេង​ម្ដងទៀត"
 
-#: klettres.cpp:131
+#: klettres.cpp:136
 #, kde-format
 msgid "Play the same sound again"
 msgstr "ចាក់​សំឡេង​ដដែល​ម្ដងទៀត"
 
-#: klettres.cpp:133
+#: klettres.cpp:138
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -89,18 +89,18 @@ msgid ""
 msgstr ""
 "អ្នកអាច​ចាក់​សំឡេង​ដដែល​ម្ដង​ទៀត ដោយចុច​ប៊ូតុង​នេះ ឬ​ដោយប្រើ​ម៉ឺនុយ ឯកសារ -> ចាក់​សំឡេង​ម្ដងទៀត ។"
 
-#: klettres.cpp:139
+#: klettres.cpp:144
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "កម្រិត"
 
-#: klettres.cpp:140
+#: klettres.cpp:145
 #, kde-format
 msgid "Select the level"
 msgstr "ជ្រើស​កម្រិត"
 
-#: klettres.cpp:141
+#: klettres.cpp:146
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -110,30 +110,30 @@ msgstr ""
 "អ្នក​អាច​ជ្រើស​កម្រិត ៖ កម្រិត ១ បង្ហាញ​ទាំង​អក្សរ និង​ឮ​ទាំង​សំឡេង ។ កម្រិត ២ មិន​បង្ហាញ​អក្សរ​ទេ ប៉ុន្តែ​ឮ​"
 "សំឡេង ។ កម្រិត ៣ បង្ហាញ​ជា​ព្យាង្គ និង​ឮ​សំឡេង ។ កម្រិត ៤ មិនបង្ហាញ​ជា​ព្យាង្គ​ទេ ប៉ុន្តែ​ឮ​សំឡេង ។"
 
-#: klettres.cpp:144
+#: klettres.cpp:149
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "ភាសា"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:152 klettres.cpp:153 klettres.cpp:154 klettres.cpp:155
 #, kde-format
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
 msgid_plural "Level %1"
 msgstr[0] "កម្រិត %1"
 
-#: klettres.cpp:155
+#: klettres.cpp:160
 #, kde-format
 msgid "Themes"
 msgstr "ស្បែក"
 
-#: klettres.cpp:158
+#: klettres.cpp:163
 #, kde-format
 msgid "Select the theme"
 msgstr "ជ្រើស​ស្បែក"
 
-#: klettres.cpp:159
+#: klettres.cpp:164
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -142,12 +142,12 @@ msgstr ""
 "ទីនេះ អ្នក​អាច​ផ្លាស់ប្ដូរ​ស្បែក KLettres បាន ។ ស្បែក មាន​នៅក្នុង​រូបភាព​ផ្ទៃខាងក្រោយ ហើយ​ពណ៌ពុម្ព​"
 "អក្សរ​គឺ​ដើម្បី​បង្ហាញ​តួអក្សរ ។"
 
-#: klettres.cpp:162
+#: klettres.cpp:167
 #, kde-format
 msgid "Mode Kid"
 msgstr "Mode Kid"
 
-#: klettres.cpp:166
+#: klettres.cpp:171
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -156,65 +156,65 @@ msgstr ""
 "ប្រសិន​បើ​អ្នក​នៅ​ក្នុង​របៀប Grown-up ចុច​លើប៊ូតុង​នេះ​នឹង​រៀបចំ​របៀប Kid ។ របៀប Kid ​​គ្មាន​លេខ និង​"
 "ពុម្ពអក្សរ​គឺ​ធំ​ជាង​នៅ​ក្នុង​របារ​ស្ថានភាព ។"
 
-#: klettres.cpp:169
+#: klettres.cpp:174
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "របៀប Grown-up"
 
-#: klettres.cpp:173
+#: klettres.cpp:178
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr "របៀប Grownup គឺ​ជា​របៀប​ធម្មតា​ដែលអ្នក​អាច​ឃើញ​របារ​ម៉ឺនុយ ។"
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:214 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "ពុម្ព​អក្សរ"
 
-#: klettres.cpp:209
+#: klettres.cpp:214
 #, kde-format
 msgid "Font Settings"
 msgstr "ការ​កំណត់​ពុម្ពអក្សរ"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, kde-format
 msgid "Timer"
 msgstr "ឧបករណ៍​កំណត់​ពេល​វេលា"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, fuzzy, kde-format
 #| msgid "Timer setting widgets"
 msgid "Timer Settings"
 msgstr "ធាតុ​ក្រាហ្វិក​ការកំណត់​ឧបករណ៍​កំណត់​ពេលវេលា"
 
-#: klettres.cpp:231 klettres.cpp:303
+#: klettres.cpp:236 klettres.cpp:316
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(កម្រិត %1)"
 
-#: klettres.cpp:346
+#: klettres.cpp:359
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "របៀប Grown-up បច្ចុប្បន្ន​សកម្ម"
 
-#: klettres.cpp:347
+#: klettres.cpp:360
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "ប្ដូរ​ទៅ​របៀប Kid"
 
-#: klettres.cpp:365
+#: klettres.cpp:378
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "របៀប Kid បច្ចុប្បន្ន​សកម្ម"
 
-#: klettres.cpp:366
+#: klettres.cpp:379
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "ប្ដូរ​ទៅ​របៀប Grown-up"
 
-#: klettres.cpp:387
+#: klettres.cpp:400
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -223,7 +223,7 @@ msgstr ""
 "រក​មិន​ឃើញ​ឯកសារ $KDEDIR/share/apps/klettres/%1.txt ទេ ។\n"
 "សូម​ពិនិត្យ​មើល​ការ​ដំឡើង​របស់​អ្នក ។"
 
-#: klettres.cpp:390
+#: klettres.cpp:403
 #, kde-format
 msgid "Error"
 msgstr "កំហុស"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:54+0000\n"
+"POT-Creation-Date: 2023-03-06 00:43+0000\n"
 "PO-Revision-Date: 2006-06-02 15:38+0930\n"
 "Last-Translator: Trần Thế Trung <tttrung@hotmail.com>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tttrung@hotmail.com"
 
-#: klettres.cpp:90
+#: klettres.cpp:95
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -42,23 +42,23 @@ msgstr ""
 "Xin cài đặt tệp này rồi khởi động lại KLettres.\n"
 "\n"
 
-#: klettres.cpp:93
+#: klettres.cpp:98
 #, fuzzy, kde-format
 #| msgid "KLettres"
 msgid "KLettres - Error"
 msgstr "KLettres"
 
-#: klettres.cpp:115
+#: klettres.cpp:120
 #, kde-format
 msgid "New Sound"
 msgstr "Âm thanh Mới"
 
-#: klettres.cpp:119
+#: klettres.cpp:124
 #, kde-format
 msgid "Play a new sound"
 msgstr "Chơi âm thanh mới"
 
-#: klettres.cpp:120
+#: klettres.cpp:125
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
@@ -67,22 +67,22 @@ msgstr ""
 "Bạn có thể chơi một âm thanh mới bằng cách ấn nút này hoặc dùng trình đơn "
 "Tệp rồi Âm thanh Mới"
 
-#: klettres.cpp:123
+#: klettres.cpp:128
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "Lấy Bảng chữ cái trong Ngôn ngữ Mới..."
 
-#: klettres.cpp:128
+#: klettres.cpp:133
 #, kde-format
 msgid "Replay Sound"
 msgstr "Chơi lại Âm thanh"
 
-#: klettres.cpp:131
+#: klettres.cpp:136
 #, kde-format
 msgid "Play the same sound again"
 msgstr "Chơi lại âm thanh một lần nữa"
 
-#: klettres.cpp:133
+#: klettres.cpp:138
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -91,19 +91,19 @@ msgstr ""
 "Bạn có thể chơi lại một âm thanh bằng cách ấn nút này hoặc dùng trình đơn "
 "Tệp rồi Chơi lại Âm thanh"
 
-#: klettres.cpp:139
+#: klettres.cpp:144
 #, fuzzy, kde-format
 #| msgid "L&evel"
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "T&rình độ"
 
-#: klettres.cpp:140
+#: klettres.cpp:145
 #, kde-format
 msgid "Select the level"
 msgstr "Chọn trình độ"
 
-#: klettres.cpp:141
+#: klettres.cpp:146
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -115,14 +115,14 @@ msgstr ""
 "trình độ 3 hiển thị các âm tiết và bạn cũng được nghe các âm tiết này; trình "
 "độ 4 không hiển thị các âm tiết, bạn chỉ nghe thấy chúng."
 
-#: klettres.cpp:144
+#: klettres.cpp:149
 #, fuzzy, kde-format
 #| msgid "&Language"
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "&Ngôn ngữ"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:152 klettres.cpp:153 klettres.cpp:154 klettres.cpp:155
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@item:inlistbox choose level"
@@ -130,17 +130,17 @@ msgid "Level %1"
 msgid_plural "Level %1"
 msgstr[0] "Trình độ 1"
 
-#: klettres.cpp:155
+#: klettres.cpp:160
 #, kde-format
 msgid "Themes"
 msgstr "Sắc thái"
 
-#: klettres.cpp:158
+#: klettres.cpp:163
 #, kde-format
 msgid "Select the theme"
 msgstr "Chọn một sắc thái"
 
-#: klettres.cpp:159
+#: klettres.cpp:164
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -149,12 +149,12 @@ msgstr ""
 "Tại đây bạn có thể chọn một sắc thái cho KLettres. Một sắc thái quy định "
 "hình nên và màu phông chữ cho các chữ cái khi hiển thị."
 
-#: klettres.cpp:162
+#: klettres.cpp:167
 #, kde-format
 msgid "Mode Kid"
 msgstr "Chế độ Trẻ con"
 
-#: klettres.cpp:166
+#: klettres.cpp:171
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -164,66 +164,66 @@ msgstr ""
 "Chế độ Trẻ con không có thanh thực đơn và các phông chữ lớn hơn trong thanh "
 "trạng thái."
 
-#: klettres.cpp:169
+#: klettres.cpp:174
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "Chế độ Người lớn"
 
-#: klettres.cpp:173
+#: klettres.cpp:178
 #, fuzzy, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr ""
 "Chế độ Người lớn, là chế độ thông thường, và bạn sẽ thấy thanh thực đơn."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:214 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr ""
 
-#: klettres.cpp:209
+#: klettres.cpp:214
 #, kde-format
 msgid "Font Settings"
 msgstr "Cài đặt Phông chữ"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, kde-format
 msgid "Timer"
 msgstr "Đồng hồ hẹn giờ"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, fuzzy, kde-format
 #| msgid "Timer setting widgets"
 msgid "Timer Settings"
 msgstr "Ô điều khiển đặt đồng hồ hẹn giờ"
 
-#: klettres.cpp:231 klettres.cpp:303
+#: klettres.cpp:236 klettres.cpp:316
 #, fuzzy, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "Trình độ 1"
 
-#: klettres.cpp:346
+#: klettres.cpp:359
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Chế độ Người lớn đang bật"
 
-#: klettres.cpp:347
+#: klettres.cpp:360
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Chuyển sang chế độ Trẻ con"
 
-#: klettres.cpp:365
+#: klettres.cpp:378
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Chế độ Trẻ con đang bật"
 
-#: klettres.cpp:366
+#: klettres.cpp:379
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Chuyển sang chế độ Người lớn"
 
-#: klettres.cpp:387
+#: klettres.cpp:400
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -232,7 +232,7 @@ msgstr ""
 "Tệp $KDEDIR/share/apps/klettres/%1.txt không tìm thấy;\n"
 "kiểm tra lại cài đặt KLettres của bạn xem sao."
 
-#: klettres.cpp:390
+#: klettres.cpp:403
 #, kde-format
 msgid "Error"
 msgstr ""

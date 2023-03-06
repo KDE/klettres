@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:54+0000\n"
+"POT-Creation-Date: 2023-03-06 00:43+0000\n"
 "PO-Revision-Date: 2022-09-21 14:42+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -32,7 +32,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "leosson@frisurf.no, sv1@fellsnet.is"
 
-#: klettres.cpp:90
+#: klettres.cpp:95
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -47,22 +47,22 @@ msgstr ""
 "Vinsamlegast settu þessa skrá inn og reyndu KLettres aftur.\n"
 "\n"
 
-#: klettres.cpp:93
+#: klettres.cpp:98
 #, kde-format
 msgid "KLettres - Error"
 msgstr "KLettres - Villa"
 
-#: klettres.cpp:115
+#: klettres.cpp:120
 #, kde-format
 msgid "New Sound"
 msgstr "Nýtt hljóð"
 
-#: klettres.cpp:119
+#: klettres.cpp:124
 #, kde-format
 msgid "Play a new sound"
 msgstr "Spila nýtt hljóð"
 
-#: klettres.cpp:120
+#: klettres.cpp:125
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
@@ -71,22 +71,22 @@ msgstr ""
 "Þú getur spilað nýtt hljóð með því að smella á þennan hnapp eða með því að "
 "nota Skráavalmyndina, Nýtt hljóð."
 
-#: klettres.cpp:123
+#: klettres.cpp:128
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "Ná í stafróf fyrir nýtt tungumál..."
 
-#: klettres.cpp:128
+#: klettres.cpp:133
 #, kde-format
 msgid "Replay Sound"
 msgstr "Endurspila hljóð"
 
-#: klettres.cpp:131
+#: klettres.cpp:136
 #, kde-format
 msgid "Play the same sound again"
 msgstr "Spila sama hljóð aftur"
 
-#: klettres.cpp:133
+#: klettres.cpp:138
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -95,18 +95,18 @@ msgstr ""
 "Þú getur endurspilað sama hljóðið aftur með því að smella á þennan hnapp eða "
 "með því að nota skráarvalmyndina, Endurspila hljóð."
 
-#: klettres.cpp:139
+#: klettres.cpp:144
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "Sti&g"
 
-#: klettres.cpp:140
+#: klettres.cpp:145
 #, kde-format
 msgid "Select the level"
 msgstr "Veldu stig"
 
-#: klettres.cpp:141
+#: klettres.cpp:146
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -117,13 +117,13 @@ msgstr ""
 "ekki bókstafinn heldur heyrir þú hann bara, stig 3 sýnir atkvæði og þú "
 "heyrir það, stig 4 sýnir ekki atkvæðið heldur heyrir þú það bara."
 
-#: klettres.cpp:144
+#: klettres.cpp:149
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "Tungumá&l"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:152 klettres.cpp:153 klettres.cpp:154 klettres.cpp:155
 #, kde-format
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
@@ -131,17 +131,17 @@ msgid_plural "Level %1"
 msgstr[0] "Stig %1"
 msgstr[1] "Stig %1"
 
-#: klettres.cpp:155
+#: klettres.cpp:160
 #, kde-format
 msgid "Themes"
 msgstr "Þemu"
 
-#: klettres.cpp:158
+#: klettres.cpp:163
 #, kde-format
 msgid "Select the theme"
 msgstr "Veldu þema"
 
-#: klettres.cpp:159
+#: klettres.cpp:164
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -150,12 +150,12 @@ msgstr ""
 "Hér getur þú breytt ásýnd KLettres. Ásýndin er samansett af bakgrunnsmynd og "
 "lit stafaleturs bókstafsins sem er birtur."
 
-#: klettres.cpp:162
+#: klettres.cpp:167
 #, kde-format
 msgid "Mode Kid"
 msgstr "Barnahamur"
 
-#: klettres.cpp:166
+#: klettres.cpp:171
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -165,65 +165,65 @@ msgstr ""
 "barnaham. Barnahamur hefur enga valmyndarrönd og stafaletrið er stærra í "
 "stöðulínunni."
 
-#: klettres.cpp:169
+#: klettres.cpp:174
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "Fullorðinshamur"
 
-#: klettres.cpp:173
+#: klettres.cpp:178
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr ""
 "Fullorðinshamur er eins og venjulegur hamur þar sem þú sérð valmyndastikuna."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:214 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "Letur"
 
-#: klettres.cpp:209
+#: klettres.cpp:214
 #, kde-format
 msgid "Font Settings"
 msgstr "Stillingar leturs"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, kde-format
 msgid "Timer"
 msgstr "Niðurteljari"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, kde-format
 msgid "Timer Settings"
 msgstr "Stillingar tímatöku"
 
-#: klettres.cpp:231 klettres.cpp:303
+#: klettres.cpp:236 klettres.cpp:316
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(Stig %1)"
 
-#: klettres.cpp:346
+#: klettres.cpp:359
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Fullorðinshamur er í gangi í augnablikinu"
 
-#: klettres.cpp:347
+#: klettres.cpp:360
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Breyta yfir í barnaham"
 
-#: klettres.cpp:365
+#: klettres.cpp:378
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Barnahamur er í gangi núna"
 
-#: klettres.cpp:366
+#: klettres.cpp:379
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Breyta yfir í fullorðinsham"
 
-#: klettres.cpp:387
+#: klettres.cpp:400
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -232,7 +232,7 @@ msgstr ""
 "Skráin $KDEDIR/share/apps/klettres/%1.txt fannst ekki:\n"
 "vinsamlegast athugaðu uppsetninguna þína."
 
-#: klettres.cpp:390
+#: klettres.cpp:403
 #, kde-format
 msgid "Error"
 msgstr "Villa"

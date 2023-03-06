@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-10 00:54+0000\n"
+"POT-Creation-Date: 2023-03-06 00:43+0000\n"
 "PO-Revision-Date: 2012-01-11 21:30+0200\n"
 "Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "gintam@inbox.lv, einars8@gmail.com"
 
-#: klettres.cpp:90
+#: klettres.cpp:95
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -45,22 +45,22 @@ msgstr ""
 "Lūdzu uzinstalējat šo failu un palaidiet KLettres no jauna.\n"
 "\n"
 
-#: klettres.cpp:93
+#: klettres.cpp:98
 #, kde-format
 msgid "KLettres - Error"
 msgstr "KLettres - Kļūda"
 
-#: klettres.cpp:115
+#: klettres.cpp:120
 #, kde-format
 msgid "New Sound"
 msgstr "Jauna skaņa"
 
-#: klettres.cpp:119
+#: klettres.cpp:124
 #, kde-format
 msgid "Play a new sound"
 msgstr "Atskaņot jauno skaņu"
 
-#: klettres.cpp:120
+#: klettres.cpp:125
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
@@ -69,22 +69,22 @@ msgstr ""
 "Varat atskaņot jauno skaņu, noklikšķinot šo pogu vai lietojot izvēlni "
 "'Fails', 'Jauna skaņa'."
 
-#: klettres.cpp:123
+#: klettres.cpp:128
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "Iegūt alfabētu jaunā valodā..."
 
-#: klettres.cpp:128
+#: klettres.cpp:133
 #, kde-format
 msgid "Replay Sound"
 msgstr "Atkārtot skaņu"
 
-#: klettres.cpp:131
+#: klettres.cpp:136
 #, kde-format
 msgid "Play the same sound again"
 msgstr "Atskaņot to pašu skaņu vēlreiz"
 
-#: klettres.cpp:133
+#: klettres.cpp:138
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -93,18 +93,18 @@ msgstr ""
 "Varat atkārtot to pašu skaņu vēlreiz, nospiežot šo pogu vai lietojot izvēlni "
 "'Fails', 'Atkārtot skaņu'."
 
-#: klettres.cpp:139
+#: klettres.cpp:144
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "Līm&enis"
 
-#: klettres.cpp:140
+#: klettres.cpp:145
 #, kde-format
 msgid "Select the level"
 msgstr "Izvēlēties līmeni"
 
-#: klettres.cpp:141
+#: klettres.cpp:146
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -115,13 +115,13 @@ msgstr ""
 "līmenī burts netiek rādīts, jūs to tikai dzirdat; 3. līmenī tiek parādīta "
 "zilbe un jūs to dzirdat; 4. līmenī zilbe netiek rādīta, jūs to tikai dzirdat."
 
-#: klettres.cpp:144
+#: klettres.cpp:149
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "&Valoda"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:152 klettres.cpp:153 klettres.cpp:154 klettres.cpp:155
 #, kde-format
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
@@ -130,17 +130,17 @@ msgstr[0] "%1.līmenis"
 msgstr[1] "%1.līmenis"
 msgstr[2] "%1.līmenis"
 
-#: klettres.cpp:155
+#: klettres.cpp:160
 #, kde-format
 msgid "Themes"
 msgstr "Tēmas"
 
-#: klettres.cpp:158
+#: klettres.cpp:163
 #, kde-format
 msgid "Select the theme"
 msgstr "Izvēlieties tēmu"
 
-#: klettres.cpp:159
+#: klettres.cpp:164
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -149,12 +149,12 @@ msgstr ""
 "Šeit varat mainīt KLettres tēmu. Tēma sastāv no fona attēla un attēlotā "
 "burta fonta krāsas."
 
-#: klettres.cpp:162
+#: klettres.cpp:167
 #, kde-format
 msgid "Mode Kid"
 msgstr "Bērna režīms"
 
-#: klettres.cpp:166
+#: klettres.cpp:171
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -163,65 +163,65 @@ msgstr ""
 "Ja esat pieaugušā režīmā, nospiežot šo pogu, tiks ieslēgts bērna režīms. "
 "Bērna režīmā nav izvēlnes joslas, un fonts statusa joslā ir lielāks."
 
-#: klettres.cpp:169
+#: klettres.cpp:174
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "Pieaugušā režīms"
 
-#: klettres.cpp:173
+#: klettres.cpp:178
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr "Pieaugušā režīms ir normālais režīms, kur varat redzēt izvēlnes joslu."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:214 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "Fonts"
 
-#: klettres.cpp:209
+#: klettres.cpp:214
 #, kde-format
 msgid "Font Settings"
 msgstr "Fontu iestatījumi"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, kde-format
 msgid "Timer"
 msgstr "Taimeris"
 
-#: klettres.cpp:213
+#: klettres.cpp:218
 #, fuzzy, kde-format
 #| msgid "Timer setting widgets"
 msgid "Timer Settings"
 msgstr "Taimera iestatījumu sīkrīki"
 
-#: klettres.cpp:231 klettres.cpp:303
+#: klettres.cpp:236 klettres.cpp:316
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(%1. līmenis)"
 
-#: klettres.cpp:346
+#: klettres.cpp:359
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Pieaugušā režīms pašreiz ir aktīvs"
 
-#: klettres.cpp:347
+#: klettres.cpp:360
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Pārslēgt uz bērna režīmu"
 
-#: klettres.cpp:365
+#: klettres.cpp:378
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Bērna režīms pašreiz ir aktīvs"
 
-#: klettres.cpp:366
+#: klettres.cpp:379
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Pārslēgt uz pieaugušā režīmu"
 
-#: klettres.cpp:387
+#: klettres.cpp:400
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -230,7 +230,7 @@ msgstr ""
 "Fails $KDEDIR/share/apps/klettres/%1.txt nav atrasts;\n"
 "lūdzu, pārbaudiet jūsu instalāciju!"
 
-#: klettres.cpp:390
+#: klettres.cpp:403
 #, kde-format
 msgid "Error"
 msgstr "Kļūda"
