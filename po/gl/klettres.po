@@ -1,18 +1,18 @@
 # translation of klettres.po to galician
 # Copyright (C) 2003, 2004, 2006, 2008, 2009 Free Software Foundation, Inc.
-#
 # Gonzalo H. Castilla <<ttxzgl@yahoo.es>>, 2003, 2004.
 # Xabi García <xabigf@gmx.net>, 2004.
 # mvillarino <mvillarino@users.sourceforge.net>, 2006, 2008, 2009.
 # Xosé <xosecalvo@gmail.com>, 2009, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-06 00:43+0000\n"
-"PO-Revision-Date: 2019-11-17 09:28+0100\n"
+"PO-Revision-Date: 2023-04-23 06:53+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.03.70\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -192,10 +192,9 @@ msgid "Timer"
 msgstr "Temporizador"
 
 #: klettres.cpp:218
-#, fuzzy, kde-format
-#| msgid "Timer setting widgets"
+#, kde-format
 msgid "Timer Settings"
-msgstr "Trebellos de configuración de temporizador"
+msgstr "Configuración do temporizador"
 
 #: klettres.cpp:236 klettres.cpp:316
 #, kde-format
