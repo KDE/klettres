@@ -35,7 +35,7 @@
 #if KNEWSTUFF_VERSION < QT_VERSION_CHECK(5, 240, 0)
 #include <KNS3/QtQuickDialogWrapper>
 #else
-#include <KNSWidgets/QtQuickDialogWrapper>
+#include <KNSWidgets/Dialog>
 #endif
 //Project includes
 #include "ui_fontsdlg.h"
@@ -252,13 +252,13 @@ void KLettres::slotDownloadNewStuff()
 #if KNEWSTUFF_VERSION < QT_VERSION_CHECK(5, 240, 0)
     KNS3::QtQuickDialogWrapper *dialog = new KNS3::QtQuickDialogWrapper(QStringLiteral("klettres.knsrc"), this);
 #else
-    KNSWidgets::QtQuickDialogWrapper *dialog = new KNSWidgets::QtQuickDialogWrapper(QStringLiteral("khangman.knsrc"), this);
+    KNSWidgets::Dialog *dialog = new KNSWidgets::Dialog(QStringLiteral("khangman.knsrc"), this);
 #endif
     dialog->open();
 #if KNEWSTUFF_VERSION < QT_VERSION_CHECK(5, 240, 0)
     connect(dialog, &KNS3::QtQuickDialogWrapper::closed, this, [this, dialog] {
 #else
-    connect(dialog, &KNSWidgets::QtQuickDialogWrapper::closed, this, [this, dialog] {
+    connect(dialog, &KNSWidgets::Dialog::finished, this, [this, dialog] {
 #endif
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         const QList<KNSCore::EntryInternal> entries = dialog->changedEntries();
