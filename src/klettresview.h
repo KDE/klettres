@@ -46,9 +46,9 @@ public:
     ///The index to the random sequence
     int randomInt;
     ///A Klettres object
-    KLettres *m_klettres;
+    KLettres *m_klettres = nullptr;
     ///The line where the user enters his/her input
-    QLineEdit *m_letterEdit;
+    QLineEdit *m_letterEdit = nullptr;
     ///set the chosen theme
     void setTheme(KLTheme *theme);
 

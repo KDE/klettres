@@ -55,27 +55,27 @@ public:
 
 protected:
     ///Call an instance of the KLettresView widget
-    KLettresView *m_view;
+    KLettresView *m_view = nullptr;
     ///Action that enables the ShowMenuBar item in the Settings menu
-    KToggleAction *m_menubarAction;
+    KToggleAction *m_menubarAction = nullptr;
     ///Action that sets up the Level menu
-    KSelectAction *m_levelAction;
+    KSelectAction *m_levelAction = nullptr;
     ///Action that sets up the Look menu
-    KSelectAction *m_themeAction;
+    KSelectAction *m_themeAction = nullptr;
     ///Action allowing the Kid mode
-    KToggleAction *m_kidAction;
+    KToggleAction *m_kidAction = nullptr;
     ///Action allowing the Grownup mode
-    KToggleAction *m_grownupAction;
+    KToggleAction *m_grownupAction = nullptr;
     ///Label stating the language in the statusbar
-    QLabel *m_langLabel;
+    QLabel *m_langLabel = nullptr;
     ///Label stating the level in the statusbar
-    QLabel *m_levLabel;
+    QLabel *m_levLabel = nullptr;
     ///Holds the levels
     QStringList m_levelsNames;
     ///Holds the looks
     QStringList m_themesNames;
     ///Create an instance of a KToolBar
-    KToolBar *m_mainToolbar;
+    KToolBar *m_mainToolbar = nullptr;
     ///Second toolbar with buttons of special characters per language
     KToolBar *specialCharToolbar;
     ///is false when menubar button is not shown
