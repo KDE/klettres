@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.10.2\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -130,7 +130,6 @@ msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
 msgid_plural "Level %1"
 msgstr[0] "レベル %1"
-msgstr[1] "レベル %1"
 
 #: klettres.cpp:160
 #, kde-format
@@ -503,7 +502,6 @@ msgstr "サウンド名を読み込み中にエラー。"
 msgid "1 tenth of second"
 msgid_plural "%1 tenths of second"
 msgstr[0] "/ 10 秒"
-msgstr[1] "/ 10 秒"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: timerui.ui:51
