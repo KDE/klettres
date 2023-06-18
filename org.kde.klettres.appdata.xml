@@ -14,6 +14,7 @@
   <name xml:lang="de">KLettres</name>
   <name xml:lang="el">KLettres</name>
   <name xml:lang="en-GB">KLettres</name>
+  <name xml:lang="eo">KLettres</name>
   <name xml:lang="es">KLettres</name>
   <name xml:lang="et">KLettres</name>
   <name xml:lang="eu">KLettres</name>
@@ -50,6 +51,7 @@
   <summary xml:lang="de">Lerne das Alphabet</summary>
   <summary xml:lang="el">Μάθετε την Αλφαβήτα</summary>
   <summary xml:lang="en-GB">Learn The Alphabet</summary>
+  <summary xml:lang="eo">Lerni la Alfabeton</summary>
   <summary xml:lang="es">Aprende el alfabeto</summary>
   <summary xml:lang="et">Tähestiku õppimine</summary>
   <summary xml:lang="eu">Alfabetoa ikasi</summary>
@@ -126,6 +128,7 @@
       <caption xml:lang="de">Übungssitzung in KLettres</caption>
       <caption xml:lang="el">Συνεδρία εξάσκησης KLettres</caption>
       <caption xml:lang="en-GB">KLettres training session</caption>
+      <caption xml:lang="eo">Trejnsesio en KLettres</caption>
       <caption xml:lang="es">Sesión de entrenamiento de KLettres</caption>
       <caption xml:lang="et">KLettresi harjutusseanss</caption>
       <caption xml:lang="eu">KLettres trebakuntza saioa</caption>
