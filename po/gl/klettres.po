@@ -93,8 +93,8 @@ msgid ""
 "You can replay the same sound again by clicking this button or using the "
 "File menu, Replay Sound."
 msgstr ""
-"Podes reproducir de novo o mesmo son premendo este botón ou empregando o "
-"menú Ficheiro -> Repetir o son."
+"Podes reproducir de novo o mesmo son premendo este botón ou usando o menú "
+"Ficheiro -> Repetir o son."
 
 #: klettres.cpp:144
 #, kde-format
@@ -149,7 +149,7 @@ msgid ""
 "background picture and the font color for the letter displayed."
 msgstr ""
 "Aquí podes cambiar o tema de KLettres. Un tema consiste na imaxe de fondo e "
-"a cor da fonte da letras que se mostran."
+"a cor da fonte da letras que se amosan."
 
 #: klettres.cpp:167
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "Tema"
 #: klettres.kcfg:23
 #, kde-format
 msgid "Whether the menubar is shown or hidden"
-msgstr "Indica se a barra de menú é mostrada ou agochada"
+msgstr "Indica se a barra de menú é amosada ou agochada"
 
 #. i18n: ectx: label, entry (Mode), group (General)
 #: klettres.kcfg:27
