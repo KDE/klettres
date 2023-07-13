@@ -230,4 +230,4 @@ void KLettresView::keyReleaseEvent(QKeyEvent * e)
        }
 }
 
-
+#include "moc_klettresview.cpp"

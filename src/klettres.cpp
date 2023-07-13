@@ -494,4 +494,4 @@ QIcon KLettres::charIcon(QChar c)
     return QIcon(pm);
 }
 
-
+#include "moc_klettres.cpp"

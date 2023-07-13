@@ -178,4 +178,4 @@ void SoundFactory::setSoundSequence()
     KRandom::shuffle(randomList);
 }
 
-
+#include "moc_soundfactory.cpp"

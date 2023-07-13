@@ -29,5 +29,4 @@ void Timer::sliderValueChanged()
     ui_timer.timeGrownLabel->setText(i18np("1 tenth of second", "%1 tenths of second", ui_timer.kcfg_GrownTimer->value()));
 }
 
-
-
+#include "moc_timer.cpp"

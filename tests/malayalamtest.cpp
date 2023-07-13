@@ -39,3 +39,4 @@ void MalayalamTest::decomposeConsonant()
 
 QTEST_MAIN(MalayalamTest)
 
+#include "moc_malayalamtest.cpp"
