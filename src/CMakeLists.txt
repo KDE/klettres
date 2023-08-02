@@ -17,6 +17,7 @@ set(klettres_SRCS
     soundfactory.h
     timer.cpp
     timer.h
+    klettres.qrc
     )
 
 ecm_qt_declare_logging_category(klettres_SRCS HEADER klettres_debug.h IDENTIFIER KLETTRES_LOG CATEGORY_NAME log_klettres DESCRIPTION "klettres" EXPORT KLETTRES)
@@ -47,7 +48,6 @@ install(TARGETS klettres  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 ########### install files ###############
 
 install( PROGRAMS org.kde.klettres.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
-install( FILES klettresui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUIDIR}/klettres )
 install( FILES klettres.kcfg  DESTINATION  ${KDE_INSTALL_KCFGDIR} )
 install( FILES klettres.knsrc  DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 
