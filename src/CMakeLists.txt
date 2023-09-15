@@ -34,10 +34,10 @@ ecm_add_app_icon(klettres_SRCS ICONS ${ICONS_SRCS})
 add_executable(klettres ${klettres_SRCS})
 
 target_link_libraries(klettres
-  KF${KF_MAJOR_VERSION}::Crash
-  KF${KF_MAJOR_VERSION}::NewStuffWidgets
-  KF${KF_MAJOR_VERSION}::I18n
-  KF${KF_MAJOR_VERSION}::XmlGui
+  KF6::Crash
+  KF6::NewStuffWidgets
+  KF6::I18n
+  KF6::XmlGui
   Qt::Svg
   ${PHONON_LIBRARY}
   Qt::Xml)

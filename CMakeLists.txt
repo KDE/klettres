@@ -9,8 +9,8 @@ set(RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_
 
 project(klettres VERSION ${RELEASE_SERVICE_VERSION})
 
-set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.90.0")
+set(QT_MIN_VERSION "6.5.0")
+set(KF5_MIN_VERSION "5.240.0")
 
 # we need some parts of the ECM CMake helpers
 find_package (ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
@@ -29,26 +29,18 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMSetupVersion)
 include(ECMDeprecationSettings)
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
-
 # Load the frameworks we need
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED
   Core
   Svg
   Network
   Test
   Widgets
 )
-find_package(Phonon4Qt${QT_MAJOR_VERSION} REQUIRED)
+find_package(Phonon4Qt6 REQUIRED)
 
-find_package(KF${KF_MAJOR_VERSION} ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF6 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
   Crash
   DocTools
   I18n
@@ -60,8 +52,8 @@ find_package(KF${KF_MAJOR_VERSION} ${KF5_MIN_VERSION} REQUIRED COMPONENTS
 )
 
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
-ecm_set_disabled_deprecation_versions(QT 6.4
-     KF 5.101.0
+ecm_set_disabled_deprecation_versions(QT 6.5
+     KF 5.240.0
     )
 
 
