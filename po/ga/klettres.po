@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu/klettres.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 00:43+0000\n"
+"POT-Creation-Date: 2023-09-16 01:54+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com"
 
-#: klettres.cpp:95
+#: klettres.cpp:90
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -42,22 +42,22 @@ msgstr ""
 "Suiteáil an comhad seo le do thoil agus atosaigh KLettres.\n"
 "\n"
 
-#: klettres.cpp:98
+#: klettres.cpp:93
 #, kde-format
 msgid "KLettres - Error"
 msgstr "KLettres - Earráid"
 
-#: klettres.cpp:120
+#: klettres.cpp:115
 #, kde-format
 msgid "New Sound"
 msgstr "Fuaim Nua"
 
-#: klettres.cpp:124
+#: klettres.cpp:119
 #, kde-format
 msgid "Play a new sound"
 msgstr "Seinn fuaim nua"
 
-#: klettres.cpp:125
+#: klettres.cpp:120
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
@@ -66,22 +66,22 @@ msgstr ""
 "Is féidir leat fuaim nua a sheinm tríd an chnaipe seo a chliceáil, nó trí "
 "roghchlár Comhad -> Fuaim Nua."
 
-#: klettres.cpp:128
+#: klettres.cpp:123
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "Faigh Aibítir i dTeanga Nua..."
 
-#: klettres.cpp:133
+#: klettres.cpp:128
 #, kde-format
 msgid "Replay Sound"
 msgstr "Athsheinn Fuaim"
 
-#: klettres.cpp:136
+#: klettres.cpp:131
 #, kde-format
 msgid "Play the same sound again"
 msgstr "Seinn an fhuaim chéanna arís"
 
-#: klettres.cpp:138
+#: klettres.cpp:133
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -90,18 +90,18 @@ msgstr ""
 "Is féidir leat an fhuaim chéanna a sheinm arís tríd an chnaipe seo a "
 "chliceáil, nó trí roghchlár Comhad -> Athsheinn Fuaim."
 
-#: klettres.cpp:144
+#: klettres.cpp:139
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "L&eibhéal"
 
-#: klettres.cpp:145
+#: klettres.cpp:140
 #, kde-format
 msgid "Select the level"
 msgstr "Roghnaigh an leibhéal"
 
-#: klettres.cpp:146
+#: klettres.cpp:141
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -113,13 +113,13 @@ msgstr ""
 "taispeánann leibhéal 3 siolla agus cloiseann tú é; ní thaispeánann leibhéal "
 "4 an siolla, ach cloiseann tú é."
 
-#: klettres.cpp:149
+#: klettres.cpp:144
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "&Teanga"
 
-#: klettres.cpp:152 klettres.cpp:153 klettres.cpp:154 klettres.cpp:155
+#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
 #, kde-format
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
@@ -130,17 +130,17 @@ msgstr[2] "Leibhéal %1"
 msgstr[3] "Leibhéal %1"
 msgstr[4] "Leibhéal %1"
 
-#: klettres.cpp:160
+#: klettres.cpp:155
 #, kde-format
 msgid "Themes"
 msgstr "Téamaí"
 
-#: klettres.cpp:163
+#: klettres.cpp:158
 #, kde-format
 msgid "Select the theme"
 msgstr "Roghnaigh an téama"
 
-#: klettres.cpp:164
+#: klettres.cpp:159
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -149,12 +149,12 @@ msgstr ""
 "Is féidir leat téama KLettres a roghnú. Is éard atá i dtéama ná pictiúr "
 "cúlra agus dath an chló."
 
-#: klettres.cpp:167
+#: klettres.cpp:162
 #, kde-format
 msgid "Mode Kid"
 msgstr "Mód do Pháistí"
 
-#: klettres.cpp:171
+#: klettres.cpp:166
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -164,12 +164,12 @@ msgstr ""
 "chur ar siúl. Níl aon bharra roghchláir i mód \"Páiste\" agus tá cló níos mó "
 "sa bharra stádais."
 
-#: klettres.cpp:174
+#: klettres.cpp:169
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "Mód do Dhaoine Fásta"
 
-#: klettres.cpp:178
+#: klettres.cpp:173
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr ""
@@ -177,54 +177,54 @@ msgstr ""
 "fheiceáil."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:214 klettres.kcfg:51
+#: klettres.cpp:209 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "Cló"
 
-#: klettres.cpp:214
+#: klettres.cpp:209
 #, kde-format
 msgid "Font Settings"
 msgstr "Socruithe na gClónna"
 
-#: klettres.cpp:218
+#: klettres.cpp:213
 #, kde-format
 msgid "Timer"
 msgstr "Uaineadóir"
 
-#: klettres.cpp:218
+#: klettres.cpp:213
 #, fuzzy, kde-format
 #| msgid "Timer setting widgets"
 msgid "Timer Settings"
 msgstr "Giuirléidí a shocraíonn an t-am"
 
-#: klettres.cpp:236 klettres.cpp:316
+#: klettres.cpp:231 klettres.cpp:299
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(Leibhéal %1)"
 
-#: klettres.cpp:359
+#: klettres.cpp:342
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Tá an mód do dhaoine fásta gníomhach faoi láthair"
 
-#: klettres.cpp:360
+#: klettres.cpp:343
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Athraigh go Mód do Pháistí"
 
-#: klettres.cpp:378
+#: klettres.cpp:361
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Tá an Mód do Pháistí gníomhach faoi láthair"
 
-#: klettres.cpp:379
+#: klettres.cpp:362
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Athraigh go Mód do Dhaoine Fásta"
 
-#: klettres.cpp:400
+#: klettres.cpp:383
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -233,7 +233,7 @@ msgstr ""
 "Níor aimsíodh an comhad $KDEDIR/share/apps/klettres/%1.txt;\n"
 "Seiceáil do chóras le do thoil."
 
-#: klettres.cpp:403
+#: klettres.cpp:386
 #, kde-format
 msgid "Error"
 msgstr "Earráid"
@@ -371,12 +371,12 @@ msgctxt "@item:inlistbox no language for that locale"
 msgid "None"
 msgstr "Neamhní"
 
-#: main.cpp:40
+#: main.cpp:24
 #, kde-format
 msgid "KLettres"
 msgstr "KLettres"
 
-#: main.cpp:40
+#: main.cpp:24
 #, kde-format
 msgid ""
 "KLettres helps a very young child or an adult learning \n"
@@ -391,92 +391,92 @@ msgstr ""
 "\n"
 "Tá 25 teanga ar fáil."
 
-#: main.cpp:44
+#: main.cpp:28
 #, kde-format
 msgid "(C) 2001-2011 Anne-Marie Mahfouf"
 msgstr "© 2001-2011 Anne-Marie Mahfouf"
 
-#: main.cpp:45
+#: main.cpp:29
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: main.cpp:46
+#: main.cpp:30
 #, kde-format
 msgid "Marc Cheng"
 msgstr "Marc Cheng"
 
-#: main.cpp:47
+#: main.cpp:31
 #, kde-format
 msgid "Kids and grown-up oxygen icons"
 msgstr "Deilbhíní oxygen do pháistí agus do dhaoine fásta"
 
-#: main.cpp:48
+#: main.cpp:32
 #, kde-format
 msgid "Danny Allen"
 msgstr "Danny Allen"
 
-#: main.cpp:49
+#: main.cpp:33
 #, kde-format
 msgid "SVG background pictures"
 msgstr "Íomhánna cúlra SVG"
 
-#: main.cpp:50
+#: main.cpp:34
 #, kde-format
 msgid "Robert Gogolok"
 msgstr "Robert Gogolok"
 
-#: main.cpp:51
+#: main.cpp:35
 #, kde-format
 msgid "Support and coding guidance"
 msgstr "Tacaíocht agus stiúradh códaithe"
 
-#: main.cpp:52
+#: main.cpp:36
 #, kde-format
 msgid "Peter Hedlund"
 msgstr "Peter Hedlund"
 
-#: main.cpp:53
+#: main.cpp:37
 #, kde-format
 msgid "Code for generating special characters' icons"
 msgstr "Cód a ghineann deilbhíní do charachtair speisialta"
 
-#: main.cpp:54
+#: main.cpp:38
 #, kde-format
 msgid "Waldo Bastian"
 msgstr "Waldo Bastian"
 
-#: main.cpp:55
+#: main.cpp:39
 #, kde-format
 msgid "Port to KConfig XT, coding help"
 msgstr "An leagan KConfig XT, cabhair le ríomhchlárú"
 
-#: main.cpp:56
+#: main.cpp:40
 #, kde-format
 msgid "Pino Toscano"
 msgstr "Pino Toscano"
 
-#: main.cpp:57
+#: main.cpp:41
 #, kde-format
 msgid "Code cleaning, Theme class"
 msgstr "Glanadh an chóid, aicme \"Theme\""
 
-#: main.cpp:58
+#: main.cpp:42
 #, kde-format
 msgid "Michael Goettsche"
 msgstr "Michael Goettsche"
 
-#: main.cpp:59
+#: main.cpp:43
 #, kde-format
 msgid "Timer setting widgets"
 msgstr "Giuirléidí a shocraíonn an t-am"
 
-#: main.cpp:60
+#: main.cpp:44
 #, kde-format
 msgid "Laurent Navet"
 msgstr ""
 
-#: main.cpp:61
+#: main.cpp:45
 #, kde-format
 msgid "Port to KDE Frameworks 5"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 00:43+0000\n"
+"POT-Creation-Date: 2023-09-16 01:54+0000\n"
 "PO-Revision-Date: 2014-04-24 00:47+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "m.j.wiese@web.de, s_dibbern@web.de"
 
-#: klettres.cpp:95
+#: klettres.cpp:90
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -42,22 +42,22 @@ msgstr ""
 "Bitte installeer disse Datei un start KLettres denn nieg.\n"
 "\n"
 
-#: klettres.cpp:98
+#: klettres.cpp:93
 #, kde-format
 msgid "KLettres - Error"
 msgstr "KLettres - Fehler"
 
-#: klettres.cpp:120
+#: klettres.cpp:115
 #, kde-format
 msgid "New Sound"
 msgstr "Nieg Klang"
 
-#: klettres.cpp:124
+#: klettres.cpp:119
 #, kde-format
 msgid "Play a new sound"
 msgstr "En nieg Klang afspelen"
 
-#: klettres.cpp:125
+#: klettres.cpp:120
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
@@ -66,22 +66,22 @@ msgstr ""
 "Du kannst en nieg Klang afspelen, wenn Du op dissen Knoop klickst, oder "
 "binnen dat Dateimenü \"Nieg Klang\" bruukst."
 
-#: klettres.cpp:128
+#: klettres.cpp:123
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "Alfabeet in en nieg Spraak daalladen..."
 
-#: klettres.cpp:133
+#: klettres.cpp:128
 #, kde-format
 msgid "Replay Sound"
 msgstr "Klang wedderhalen"
 
-#: klettres.cpp:136
+#: klettres.cpp:131
 #, kde-format
 msgid "Play the same sound again"
 msgstr "Sülven Klang nochmaal afspelen"
 
-#: klettres.cpp:138
+#: klettres.cpp:133
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -91,18 +91,18 @@ msgstr ""
 "klickst, oder binnen dat Dateimenü \"Klang wedderhalen\" bruukst."
 
 # unreviewed-context
-#: klettres.cpp:144
+#: klettres.cpp:139
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "&Stoop"
 
-#: klettres.cpp:145
+#: klettres.cpp:140
 #, kde-format
 msgid "Select the level"
 msgstr "De Stoop utsöken"
 
-#: klettres.cpp:146
+#: klettres.cpp:141
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -114,14 +114,14 @@ msgstr ""
 "Du höörst ehr; Stoop 4 wiest keen Sülv, Du höörst ehr bloots."
 
 # unreviewed-context
-#: klettres.cpp:149
+#: klettres.cpp:144
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "&Spraak"
 
 # unreviewed-context
-#: klettres.cpp:152 klettres.cpp:153 klettres.cpp:154 klettres.cpp:155
+#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
 #, kde-format
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
@@ -129,17 +129,17 @@ msgid_plural "Level %1"
 msgstr[0] "Stoop %1"
 msgstr[1] "Stoop %1"
 
-#: klettres.cpp:160
+#: klettres.cpp:155
 #, kde-format
 msgid "Themes"
 msgstr "Mustern"
 
-#: klettres.cpp:163
+#: klettres.cpp:158
 #, kde-format
 msgid "Select the theme"
 msgstr "Dat Muster utsöken"
 
-#: klettres.cpp:164
+#: klettres.cpp:159
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -148,12 +148,12 @@ msgstr ""
 "Hier kannst Du dat Muster för KLettres ännern. En Muster bargt en "
 "Achtergrundbild un de Schriftklöör för den wiesten Bookstaav."
 
-#: klettres.cpp:167
+#: klettres.cpp:162
 #, kde-format
 msgid "Mode Kid"
 msgstr "Kinnerbedrief"
 
-#: klettres.cpp:171
+#: klettres.cpp:166
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -163,65 +163,65 @@ msgstr ""
 "Kinnerbedrief wesseln. De Kinnerbedrief hett keen Menübalken un de "
 "Statusbalkenschrift is grötter."
 
-#: klettres.cpp:174
+#: klettres.cpp:169
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "Opwussenbedrief"
 
-#: klettres.cpp:178
+#: klettres.cpp:173
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr "De Opwussenbedrief is de normale Bedrief, de Menübalken warrt wiest."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:214 klettres.kcfg:51
+#: klettres.cpp:209 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "Schriftoort"
 
-#: klettres.cpp:214
+#: klettres.cpp:209
 #, kde-format
 msgid "Font Settings"
 msgstr "Schriftoorden"
 
-#: klettres.cpp:218
+#: klettres.cpp:213
 #, kde-format
 msgid "Timer"
 msgstr "Stoppklock"
 
-#: klettres.cpp:218
+#: klettres.cpp:213
 #, fuzzy, kde-format
 #| msgid "Timer setting widgets"
 msgid "Timer Settings"
 msgstr "Stoppklock-Instellfinster"
 
-#: klettres.cpp:236 klettres.cpp:316
+#: klettres.cpp:231 klettres.cpp:299
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(Stoop %1)"
 
-#: klettres.cpp:359
+#: klettres.cpp:342
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Opstunns is de Opwussenbedrief aktiv"
 
-#: klettres.cpp:360
+#: klettres.cpp:343
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Na Kinnerbedrief wesseln"
 
-#: klettres.cpp:378
+#: klettres.cpp:361
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Opstunns is de Kinnerbedrief aktiv"
 
-#: klettres.cpp:379
+#: klettres.cpp:362
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Na Opwussenbedrief wesseln"
 
-#: klettres.cpp:400
+#: klettres.cpp:383
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -230,7 +230,7 @@ msgstr ""
 "De Datei $KDEDIR/share/apps/klettres/%1.txt lett sik nich finnen.\n"
 "Bitte prööv Dien Installatschoon."
 
-#: klettres.cpp:403
+#: klettres.cpp:386
 #, kde-format
 msgid "Error"
 msgstr "Fehler"
@@ -369,12 +369,12 @@ msgctxt "@item:inlistbox no language for that locale"
 msgid "None"
 msgstr "Keen"
 
-#: main.cpp:40
+#: main.cpp:24
 #, kde-format
 msgid "KLettres"
 msgstr "KLettres"
 
-#: main.cpp:40
+#: main.cpp:24
 #, kde-format
 msgid ""
 "KLettres helps a very young child or an adult learning \n"
@@ -389,92 +389,92 @@ msgstr ""
 "\n"
 "Fiefuntwintig Spraken sünd verföögbor."
 
-#: main.cpp:44
+#: main.cpp:28
 #, kde-format
 msgid "(C) 2001-2011 Anne-Marie Mahfouf"
 msgstr "© 2001-2011 Anne-Marie Mahfouf"
 
-#: main.cpp:45
+#: main.cpp:29
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr "Anne-Marie Mahfouf"
 
-#: main.cpp:46
+#: main.cpp:30
 #, kde-format
 msgid "Marc Cheng"
 msgstr "Marc Cheng"
 
-#: main.cpp:47
+#: main.cpp:31
 #, kde-format
 msgid "Kids and grown-up oxygen icons"
 msgstr "Oxygen-Lüttbiller för Kinner un Opwussen"
 
-#: main.cpp:48
+#: main.cpp:32
 #, kde-format
 msgid "Danny Allen"
 msgstr "Danny Allen"
 
-#: main.cpp:49
+#: main.cpp:33
 #, kde-format
 msgid "SVG background pictures"
 msgstr "SVG-Achtergrundbiller"
 
-#: main.cpp:50
+#: main.cpp:34
 #, kde-format
 msgid "Robert Gogolok"
 msgstr "Robert Gogolok"
 
-#: main.cpp:51
+#: main.cpp:35
 #, kde-format
 msgid "Support and coding guidance"
 msgstr "Ünnerstütten un Anholt bi't Programmeren"
 
-#: main.cpp:52
+#: main.cpp:36
 #, kde-format
 msgid "Peter Hedlund"
 msgstr "Peter Hedlund"
 
-#: main.cpp:53
+#: main.cpp:37
 #, kde-format
 msgid "Code for generating special characters' icons"
 msgstr "Kode för't Opstellen vun de Sünnerteken-Lüttbiller"
 
-#: main.cpp:54
+#: main.cpp:38
 #, kde-format
 msgid "Waldo Bastian"
 msgstr "Waldo Bastian"
 
-#: main.cpp:55
+#: main.cpp:39
 #, kde-format
 msgid "Port to KConfig XT, coding help"
 msgstr "Porteren na KConfig XT, Programmeerhülp"
 
-#: main.cpp:56
+#: main.cpp:40
 #, kde-format
 msgid "Pino Toscano"
 msgstr "Pino Toscano"
 
-#: main.cpp:57
+#: main.cpp:41
 #, kde-format
 msgid "Code cleaning, Theme class"
 msgstr "Kodeoprümen, Musterklass"
 
-#: main.cpp:58
+#: main.cpp:42
 #, kde-format
 msgid "Michael Goettsche"
 msgstr "Michael Goettsche"
 
-#: main.cpp:59
+#: main.cpp:43
 #, kde-format
 msgid "Timer setting widgets"
 msgstr "Stoppklock-Instellfinster"
 
-#: main.cpp:60
+#: main.cpp:44
 #, kde-format
 msgid "Laurent Navet"
 msgstr ""
 
-#: main.cpp:61
+#: main.cpp:45
 #, kde-format
 msgid "Port to KDE Frameworks 5"
 msgstr ""

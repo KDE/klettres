@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 00:43+0000\n"
+"POT-Creation-Date: 2023-09-16 01:54+0000\n"
 "PO-Revision-Date: 2007-06-25 11:11+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "komzpa@licei2.com"
 
-#: klettres.cpp:95
+#: klettres.cpp:90
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -40,64 +40,64 @@ msgid ""
 "\n"
 msgstr ""
 
-#: klettres.cpp:98
+#: klettres.cpp:93
 #, fuzzy, kde-format
 #| msgid "KLettres"
 msgid "KLettres - Error"
 msgstr "KLettres"
 
-#: klettres.cpp:120
+#: klettres.cpp:115
 #, kde-format
 msgid "New Sound"
 msgstr ""
 
-#: klettres.cpp:124
+#: klettres.cpp:119
 #, kde-format
 msgid "Play a new sound"
 msgstr ""
 
-#: klettres.cpp:125
+#: klettres.cpp:120
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
 "Sound."
 msgstr ""
 
-#: klettres.cpp:128
+#: klettres.cpp:123
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr ""
 
-#: klettres.cpp:133
+#: klettres.cpp:128
 #, kde-format
 msgid "Replay Sound"
 msgstr ""
 
-#: klettres.cpp:136
+#: klettres.cpp:131
 #, kde-format
 msgid "Play the same sound again"
 msgstr ""
 
-#: klettres.cpp:138
+#: klettres.cpp:133
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
 "File menu, Replay Sound."
 msgstr ""
 
-#: klettres.cpp:144
+#: klettres.cpp:139
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "Узровень 1"
 
-#: klettres.cpp:145
+#: klettres.cpp:140
 #, kde-format
 msgid "Select the level"
 msgstr ""
 
-#: klettres.cpp:146
+#: klettres.cpp:141
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -105,14 +105,14 @@ msgid ""
 "and you hear it; level 4 does not display the syllable, you only hear it."
 msgstr ""
 
-#: klettres.cpp:149
+#: klettres.cpp:144
 #, fuzzy, kde-format
 #| msgid "&Language"
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "&Мова"
 
-#: klettres.cpp:152 klettres.cpp:153 klettres.cpp:154 klettres.cpp:155
+#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@item:inlistbox choose level"
@@ -122,102 +122,102 @@ msgstr[0] "Узровень 1"
 msgstr[1] "Узровень 1"
 msgstr[2] "Узровень 1"
 
-#: klettres.cpp:160
+#: klettres.cpp:155
 #, kde-format
 msgid "Themes"
 msgstr "Тэмы"
 
-#: klettres.cpp:163
+#: klettres.cpp:158
 #, kde-format
 msgid "Select the theme"
 msgstr ""
 
-#: klettres.cpp:164
+#: klettres.cpp:159
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
 "background picture and the font color for the letter displayed."
 msgstr ""
 
-#: klettres.cpp:167
+#: klettres.cpp:162
 #, kde-format
 msgid "Mode Kid"
 msgstr ""
 
-#: klettres.cpp:171
+#: klettres.cpp:166
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
 "mode. The Kid mode has no menubar and the font is bigger in the statusbar."
 msgstr ""
 
-#: klettres.cpp:174
+#: klettres.cpp:169
 #, kde-format
 msgid "Mode Grown-up"
 msgstr ""
 
-#: klettres.cpp:178
+#: klettres.cpp:173
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr ""
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:214 klettres.kcfg:51
+#: klettres.cpp:209 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "Шрыфт"
 
-#: klettres.cpp:214
+#: klettres.cpp:209
 #, kde-format
 msgid "Font Settings"
 msgstr "Наставіць шрыфты"
 
-#: klettres.cpp:218
+#: klettres.cpp:213
 #, kde-format
 msgid "Timer"
 msgstr ""
 
-#: klettres.cpp:218
+#: klettres.cpp:213
 #, fuzzy, kde-format
 #| msgid "&Settings"
 msgid "Timer Settings"
 msgstr "&Настаўленні"
 
-#: klettres.cpp:236 klettres.cpp:316
+#: klettres.cpp:231 klettres.cpp:299
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "Узровень 1"
 
-#: klettres.cpp:359
+#: klettres.cpp:342
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr ""
 
-#: klettres.cpp:360
+#: klettres.cpp:343
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr ""
 
-#: klettres.cpp:378
+#: klettres.cpp:361
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr ""
 
-#: klettres.cpp:379
+#: klettres.cpp:362
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr ""
 
-#: klettres.cpp:400
+#: klettres.cpp:383
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
 "please check your installation."
 msgstr ""
 
-#: klettres.cpp:403
+#: klettres.cpp:386
 #, kde-format
 msgid "Error"
 msgstr "Памылка"
@@ -355,12 +355,12 @@ msgctxt "@item:inlistbox no language for that locale"
 msgid "None"
 msgstr ""
 
-#: main.cpp:40
+#: main.cpp:24
 #, kde-format
 msgid "KLettres"
 msgstr "KLettres"
 
-#: main.cpp:40
+#: main.cpp:24
 #, kde-format
 msgid ""
 "KLettres helps a very young child or an adult learning \n"
@@ -370,92 +370,92 @@ msgid ""
 "25 languages are available."
 msgstr ""
 
-#: main.cpp:44
+#: main.cpp:28
 #, kde-format
 msgid "(C) 2001-2011 Anne-Marie Mahfouf"
 msgstr ""
 
-#: main.cpp:45
+#: main.cpp:29
 #, kde-format
 msgid "Anne-Marie Mahfouf"
 msgstr ""
 
-#: main.cpp:46
+#: main.cpp:30
 #, kde-format
 msgid "Marc Cheng"
 msgstr ""
 
-#: main.cpp:47
+#: main.cpp:31
 #, kde-format
 msgid "Kids and grown-up oxygen icons"
 msgstr ""
 
-#: main.cpp:48
+#: main.cpp:32
 #, kde-format
 msgid "Danny Allen"
 msgstr ""
 
-#: main.cpp:49
+#: main.cpp:33
 #, kde-format
 msgid "SVG background pictures"
 msgstr ""
 
-#: main.cpp:50
+#: main.cpp:34
 #, kde-format
 msgid "Robert Gogolok"
 msgstr ""
 
-#: main.cpp:51
+#: main.cpp:35
 #, kde-format
 msgid "Support and coding guidance"
 msgstr ""
 
-#: main.cpp:52
+#: main.cpp:36
 #, kde-format
 msgid "Peter Hedlund"
 msgstr ""
 
-#: main.cpp:53
+#: main.cpp:37
 #, kde-format
 msgid "Code for generating special characters' icons"
 msgstr ""
 
-#: main.cpp:54
+#: main.cpp:38
 #, kde-format
 msgid "Waldo Bastian"
 msgstr ""
 
-#: main.cpp:55
+#: main.cpp:39
 #, kde-format
 msgid "Port to KConfig XT, coding help"
 msgstr ""
 
-#: main.cpp:56
+#: main.cpp:40
 #, kde-format
 msgid "Pino Toscano"
 msgstr ""
 
-#: main.cpp:57
+#: main.cpp:41
 #, kde-format
 msgid "Code cleaning, Theme class"
 msgstr ""
 
-#: main.cpp:58
+#: main.cpp:42
 #, kde-format
 msgid "Michael Goettsche"
 msgstr ""
 
-#: main.cpp:59
+#: main.cpp:43
 #, kde-format
 msgid "Timer setting widgets"
 msgstr ""
 
-#: main.cpp:60
+#: main.cpp:44
 #, kde-format
 msgid "Laurent Navet"
 msgstr ""
 
-#: main.cpp:61
+#: main.cpp:45
 #, kde-format
 msgid "Port to KDE Frameworks 5"
 msgstr ""
