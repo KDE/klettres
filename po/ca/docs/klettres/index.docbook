@@ -65,7 +65,7 @@
 >Idioma</guimenu
 >. L'usuari també pot triar el nivell des de l'1 fins el 4 en un quadre combinat a la barra d'eines o mitjançant el menú <guimenu
 >Nivell</guimenu
->. Els temes (fons i color del tipus de lletra) es poden canviar en un quadre combinat a la barra d'eines o al submenú <menuchoice
+>. Els temes (fons i color de la lletra) es poden canviar en un quadre combinat a la barra d'eines o al submenú <menuchoice
 ><guimenu
 >Estil</guimenu
 > <guimenuitem
@@ -131,7 +131,7 @@
 >Sabana</guimenuitem
 > i <guimenuitem
 >Aigua</guimenuitem
->) que estableixen fons diferents, amb diferents tipus de lletra i colors.</para>
+>) que estableixen fons diferents, amb lletres i colors diferents.</para>
 
 <note>
 <para
@@ -320,51 +320,51 @@
 <title
 >El diàleg de configuració</title>
 <para
->El diàleg de configuració té dues pàgines: Una per al <guilabel
->Tipus de lletra</guilabel
+>El diàleg de configuració té dues pàgines: Una per a la <guilabel
+>Lletra</guilabel
 > i una altra per al <guilabel
 >Temporitzador</guilabel
 >.</para>
 
 <sect2 id="about-font">
 <title
->Quant al tipus de lletra</title>
+>Quant a la lletra</title>
 
 <para
->Podeu canviar amb facilitat el tipus de lletra que mostra les lletres. En algunes distribucions, el tipus de lletra predeterminat utilitzat pel sistema és molt lleig. En el mode adult, a l'element de menú <menuchoice
+>Podeu canviar amb facilitat la font que mostra les lletres. En algunes distribucions, la font predeterminada utilitzada pel sistema és molt lletja. En el mode adult, a l'element de menú <menuchoice
 ><guimenu
 >Arranjament</guimenu
 ><guimenuitem
 >Configura el &klettres;...</guimenuitem
 ></menuchoice
 > trobareu una pàgina <guilabel
->Tipus de lletra</guilabel
-> amb un diàleg de selecció per al tipus de lletra. El nou tipus de lletra s'aplicarà a totes les lletres mostrades o escrites. </para>
+>Lletra</guilabel
+> amb un diàleg de selecció de la font. La font nova s'aplicarà a totes les lletres mostrades o escrites. </para>
 
 <warning>
 <para
->Hi ha tipus de lletra agradables per a visualitzar (helvètica, per exemple) el qual no podrà mostrar correctament els idiomes de l'est d'Europa com el txec o l'eslovac. Si algunes lletres o síl·labes no es veuen, canvieu el tipus de lletra i escolliu Arial, per exemple. </para>
+>Hi ha fonts agradables per a visualitzar (helvètica, per exemple) la qual no podrà mostrar correctament els idiomes de l'est d'Europa com el txec o l'eslovac. Si algunes lletres o síl·labes no es veuen, canvieu la font i escolliu Arial, per exemple. </para>
 </warning>
 
 <para
->Podeu escollir també la mida del tipus de lletra amb la qual us sentiu més còmode. Aquesta mida es desarà a la configuració. </para>
+>Podeu escollir també la mida de la lletra amb la qual us sentiu més còmode. Aquesta mida es desarà a la configuració. </para>
 
 <screenshot>
 <screeninfo
->Captura de pantalla del diàleg de selecció del tipus de lletra del &klettres;</screeninfo>
+>Captura de pantalla del diàleg de selecció de la font del &klettres;</screeninfo>
 	<mediaobject>
 	  <imageobject>
 	    <imagedata fileref="klettres5.png" format="PNG"/>
 	  </imageobject>
 	   <textobject>
 	    <phrase
->Diàleg de selecció del tipus de lletra del &klettres;</phrase>
+>Diàleg de selecció de la font del &klettres;</phrase>
 	  </textobject>
 	</mediaobject>
 </screenshot>
 
 <para
->Podeu veure el diàleg dels tipus de lletra del &klettres;. </para>
+>Podeu veure el diàleg de les fonts del &klettres;. </para>
 </sect2>
 
 <sect2 id="timers">
@@ -869,14 +869,14 @@
 </question>
 <answer>
 <para
->Per al &klettres; en txec i eslovac cal emprar el tipus de lletra Arial. En el cas de no tenir-la instal·lada consulteu l'ajuda de la vostra distribució per a saber com instal·lar-la.</para
+>Per al &klettres; en txec i eslovac cal emprar la font Arial. En el cas de no tenir-la instal·lada consulteu l'ajuda de la vostra distribució per a saber com instal·lar-la.</para
 > 
 <para
->Si teniu el &Windows; en la vostra màquina, podeu emprar els tipus de lletra TTF de &Windows; (en aquest cas Arial) a través de l'&systemsettings; a <guilabel
->Gestió del tipus de lletra</guilabel
+>Si teniu el &Windows; en la vostra màquina, podeu emprar les fonts TTF del &Windows; (en aquest cas Arial) a través de l'&systemsettings; a <guilabel
+>Gestió de les fonts</guilabel
 > a la categoria <guilabel
 >Aparença</guilabel
-> i afegiu la carpeta dels tipus de lletra de &Windows;.</para
+> i afegiu la carpeta de les fonts del &Windows;.</para
 ></answer>
 </qandaentry>
 <qandaentry>

@@ -1,24 +1,24 @@
 # Translation of klettres.po to Catalan (Valencian)
-# Copyright (C) 2004-2022 This_file_is_part_of_KDE
+# Copyright (C) 2004-2023 This_file_is_part_of_KDE
 #
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2006.
 # David Gil <al016950@yahoo.es>, 2005.
 # Orestes Mas Casals <orestes@tsc.upc.edu>, 2006, 2007, 2008, 2009, 2011, 2014.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2009, 2010, 2011, 2015, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2009, 2010, 2011, 2015, 2018, 2019, 2020, 2021, 2022, 2023.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2016, 2017, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-16 01:54+0000\n"
-"PO-Revision-Date: 2022-06-14 19:23+0200\n"
+"PO-Revision-Date: 2023-09-16 13:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -180,12 +180,12 @@ msgstr "El mode adult és el mode normal, on podreu veure la barra de menús."
 #: klettres.cpp:209 klettres.kcfg:51
 #, kde-format
 msgid "Font"
-msgstr "Tipus de lletra"
+msgstr "Lletra"
 
 #: klettres.cpp:209
 #, kde-format
 msgid "Font Settings"
-msgstr "Configureu el tipus de lletra"
+msgstr "Configureu la lletra"
 
 #: klettres.cpp:213
 #, kde-format
