@@ -34,11 +34,11 @@ include(ECMDeprecationSettings)
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED
   Core
   Svg
+  Multimedia
   Network
   Test
   Widgets
 )
-find_package(Phonon4Qt6 REQUIRED)
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
   Crash
@@ -51,7 +51,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
   XmlGui
 )
 
-include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
+include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR})
 ecm_set_disabled_deprecation_versions(QT 6.8.0
      KF 6.9.0
     )
