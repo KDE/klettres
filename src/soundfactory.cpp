@@ -9,11 +9,12 @@
 #include "soundfactory.h"
 
 #include <KRandom>
+#include <QAudioOutput>
+#include <QMediaPlayer>
 #include <QStandardPaths>
 
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <phonon/MediaObject>
 
 #include "klettres_debug.h"
 #include "klettres.h"
@@ -73,11 +74,13 @@ void SoundFactory::playSound(int mySound)
     }
 
     if (!m_player)  {
-        m_player = Phonon::createPlayer(Phonon::GameCategory, QUrl::fromLocalFile(soundFile));
+        m_player = new QMediaPlayer();
+        // Create default audio output to play back on speakers/headphones, etc.
+        QAudioOutput *output = new QAudioOutput();
+        m_player->setAudioOutput(output);
         m_player->setParent(this);
-    }  else  {
-        m_player->setCurrentSource(QUrl::fromLocalFile(soundFile));
     }
+    m_player->setSource(QUrl::fromLocalFile(soundFile));
     m_player->play();
 }
 
@@ -172,7 +175,7 @@ void SoundFactory::setSoundSequence()
     // Seed the random number generator
     randomList.clear();
     //get the number of sounds then shuffle it: each number will be taken once then the sequence will come back
-    for (uint j = 0; j < sounds; j++) 
+    for (uint j = 0; j < sounds; j++)
         randomList.append(j);
 
     KRandom::shuffle(randomList);

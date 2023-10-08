@@ -38,8 +38,8 @@ target_link_libraries(klettres
   KF6::NewStuffWidgets
   KF6::I18n
   KF6::XmlGui
+  Qt::Multimedia
   Qt::Svg
-  ${PHONON_LIBRARY}
   Qt::Xml)
 
 install(TARGETS klettres  ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

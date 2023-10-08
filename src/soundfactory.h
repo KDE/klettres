@@ -14,10 +14,7 @@
 #include <QDomDocument>
 
 class KLettres;
-namespace Phonon
-{
-    class MediaObject;
-}
+class QMediaPlayer;
 
 /**
  * This class manages the sounds to play in KLettres, reading the data about the sounds
@@ -27,7 +24,7 @@ namespace Phonon
  * @author Anne-Marie Mahfouf <annma@kde.org>
  * @version 1.80
  */
- 
+
 class SoundFactory : public QObject
 {
   Q_OBJECT
@@ -65,7 +62,7 @@ private:
     void loadFailure();
     ///Shuffle the index in random to get random sounds. The sequence of random sounds will take 1 random sound after another, then restart when all sounds have been played
     void setSoundSequence();
-    Phonon::MediaObject *m_player = nullptr;
+    QMediaPlayer *m_player = nullptr;
 };
 
 #endif
