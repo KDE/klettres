@@ -482,7 +482,7 @@ msgstr "Adaptación á versión 5 da infraestrutura de KDE."
 #: soundfactory.cpp:86
 #, kde-format
 msgid "Error while loading the sound names."
-msgstr "Ocorreu un erro ao cargar os nomes dos sons."
+msgstr "Produciuse un erro ao cargar os nomes dos sons."
 
 #: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
 #, kde-format
