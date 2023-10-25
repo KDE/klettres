@@ -19,7 +19,7 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain("klettres");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("klettres"));
 
     KAboutData about(QStringLiteral("klettres"), i18n("KLettres"), QStringLiteral(KLETTRES_VERSION_STRING), i18n("KLettres helps a very young child or an adult learning \n"
                                                                                                                  "a new language by associating sounds and \n"
