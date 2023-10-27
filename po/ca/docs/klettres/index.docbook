@@ -814,9 +814,7 @@
 >Caràcters especials</guimenuitem
 >. Creeu un fitxer de text <filename
 >cs.txt</filename
-> (substituint «cs» amb les lletres de codi del vostre idioma) amb cadascun dels caràcters especials de l'idioma en majúscules en una sola línia. I deseu els fitxers de text amb la codificació <quote
->UTF-8</quote
-> (des del menú «Fitxer -> Desa com a», la llista desplegable «Codificació» en el diàleg del &kate;).</para>
+> (substituint «cs» amb les lletres de codi del vostre idioma) amb cadascun dels caràcters especials de l'idioma en majúscules en una sola línia. I deseu els fitxers de text amb la codificació «UTF-8» (des del menú «Fitxer -> Desa com a», la llista desplegable «Codificació» en el diàleg del &kate;).</para>
 
 <para
 >Els sons han d'estar en format ogg i durar prou temps perquè el reproductor d'àudio els reprodueixi (això seria entre 1,5 i 2 segons, si us plau, afegiu una mica de silenci si són massa curts). A continuació, creeu un arxiu tar de tot això i envieu-m'ho a la llista de correu <email
