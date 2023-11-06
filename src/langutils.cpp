@@ -107,7 +107,7 @@ QStringList LangUtils::getLanguagesNames(const QStringList &languagesList)
 void LangUtils::writeLangConfig()
 {
     //write the present languages in config so they cannot be downloaded
-    KConfigGroup config(KSharedConfig::openConfig(), "KNewStuffStatus");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("KNewStuffStatus"));
     QStringList m_languages = getLanguages();
     for (int i=0;  i<m_languages.count(); i++)  {
         QString tmp = m_languages[i];
