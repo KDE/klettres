@@ -3,21 +3,22 @@
 # tahmar1900 <tahmar1900@gmail.com>, 2005, 2006, 2007.
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-16 01:54+0000\n"
-"PO-Revision-Date: 2017-05-16 06:59-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
+"PO-Revision-Date: 2023-11-17 08:26+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,13 +42,13 @@ msgstr ""
 "הקובץ sound.xml לא נמצא \n"
 "ב־$KDEDIR/share/apps/klettres/ \n"
 "\n"
-"אנא התקן את הקובץ והפעל את KLettres שוב.\n"
+"נא להתקין את הקובץ ולהפעיל את KLettres מחדש.\n"
 "\n"
 
 #: klettres.cpp:93
-#, fuzzy, kde-format
+#, kde-format
 msgid "KLettres - Error"
-msgstr "KLettres"
+msgstr "KLettres - שגיאה"
 
 #: klettres.cpp:115
 #, kde-format
@@ -57,31 +58,29 @@ msgstr "צליל חדש"
 #: klettres.cpp:119
 #, kde-format
 msgid "Play a new sound"
-msgstr "נגן צליל חדש"
+msgstr "ניגון צליל חדש"
 
 #: klettres.cpp:120
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
 "Sound."
-msgstr ""
-"ביכולתך לנגן צליל חדש על ידי לחיצה על הכפתור הזה או שימוש בתפריט הקובץ, צליל "
-"חדש."
+msgstr "אפשר לנגן צליל חדש בלחיצה על הכפתור הזה או דרך התפריט קובץ, צליל חדש."
 
 #: klettres.cpp:123
 #, kde-format
 msgid "Get Alphabet in New Language..."
-msgstr "קבל את האלף בית בשפה חדשה..."
+msgstr "הורדת האלפבית בשפה חדשה…"
 
 #: klettres.cpp:128
 #, kde-format
 msgid "Replay Sound"
-msgstr "נגן צליל מחדש"
+msgstr "ניגון הצליל שוב"
 
 #: klettres.cpp:131
 #, kde-format
 msgid "Play the same sound again"
-msgstr "נגן את הצליל הזה שוב"
+msgstr "לנגן את הצליל הזה שוב"
 
 #: klettres.cpp:133
 #, kde-format
@@ -89,19 +88,19 @@ msgid ""
 "You can replay the same sound again by clicking this button or using the "
 "File menu, Replay Sound."
 msgstr ""
-"ביכולתך לנגן את הצליל הזה שוב על ידי לחיצה על הכפתור הזה או שימוש בתפריט "
-"הקובץ, נגן צליל מחדש."
+"אפשר לנגן את הצליל הזה שוב בלחיצה על הכפתור הזה או דרך התפריט קובץ, ניגון "
+"הצליל שוב."
 
 #: klettres.cpp:139
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
-msgstr "ש&לב"
+msgstr "&שלב"
 
 #: klettres.cpp:140
 #, kde-format
 msgid "Select the level"
-msgstr "בחר שלב"
+msgstr "בחירת שלב"
 
 #: klettres.cpp:141
 #, kde-format
@@ -110,35 +109,35 @@ msgid ""
 "does not display the letter, you only hear it; level 3 displays a syllable "
 "and you hear it; level 4 does not display the syllable, you only hear it."
 msgstr ""
-"אתה יכול לבחור שלבים: שלב 1 מראה את האות ואתה יכול גם לשמוע אותה; בשלב 2 "
-"האות אינה מוצגת, אתה יכול רק לשמוע אותה; בשלב 3 אתה רואה את ההברה ולא שומע "
-"אותה; שלב 4 לא מראה את ההברה, אתה רק שומע אותה."
+"אפשר לבחור שלבים: שלב 1 מראה את האות וניתן גם לשמוע אותה; בשלב 2 האות אינה "
+"מוצגת, אפשר רק לשמוע אותה; בשלב 3 ההברה מופיעה אך לא שומעים אותה; שלב 4 לא "
+"מראה את ההברה, אלא רק משמיע אותה."
 
 #: klettres.cpp:144
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
-msgstr "&שפה"
+msgstr "ש&פה"
 
 #: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
 msgid_plural "Level %1"
-msgstr[0] "שלב 1"
-msgstr[1] "שלב 1"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "שלב %1"
+msgstr[1] "שלב %1"
+msgstr[2] "שלב %1"
+msgstr[3] "שלב %1"
 
 #: klettres.cpp:155
 #, kde-format
 msgid "Themes"
-msgstr "ערכות נושא"
+msgstr "ערכות עיצוב"
 
 #: klettres.cpp:158
 #, kde-format
 msgid "Select the theme"
-msgstr "בחר ערכת נושא"
+msgstr "בחירת ערכת עיצוב"
 
 #: klettres.cpp:159
 #, kde-format
@@ -146,13 +145,13 @@ msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
 "background picture and the font color for the letter displayed."
 msgstr ""
-"כאן אתה יכול לשנות את ערכת הנושא של KLettres. ערכת נושא מכילה רקע תמונה ואת "
+"כאן ניתן לשנות את ערכת העיצוב של KLettres. ערכת עיצוב מכילה תמונת רקע ואת "
 "צבע הגופן בשביל האותיות המוצגות."
 
 #: klettres.cpp:162
 #, kde-format
 msgid "Mode Kid"
-msgstr "מצב ילד"
+msgstr "מצב ילדים"
 
 #: klettres.cpp:166
 #, kde-format
@@ -160,24 +159,24 @@ msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
 "mode. The Kid mode has no menubar and the font is bigger in the statusbar."
 msgstr ""
-"אם אתה במצב מבוגר, לחיצה על הכפתור הזה תעביר אותך למצב ילד. מצב הילד לא כולל "
-"שורת תפריטים והגופן גדול יותר בשורת המצב."
+"אם אתה במצב בוגרים, לחיצה על הכפתור הזה תעביר אותך למצב ילד. מצב הילד לא "
+"כולל שורת תפריטים והגופן גדול יותר בשורת המצב."
 
 #: klettres.cpp:169
 #, kde-format
 msgid "Mode Grown-up"
-msgstr "מצב מבוגר"
+msgstr "מצב בוגרים"
 
 #: klettres.cpp:173
-#, fuzzy, kde-format
+#, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
-msgstr "מצב המבוגר הוא המצב הרגיל בו ביכולתך לראות את שורת התפריטים."
+msgstr "מצב הבוגרים הוא המצב הרגיל בו ניתן לראות את סרגל התפריטים."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
 #: klettres.cpp:209 klettres.kcfg:51
 #, kde-format
 msgid "Font"
-msgstr ""
+msgstr "גופן"
 
 #: klettres.cpp:209
 #, kde-format
@@ -187,29 +186,28 @@ msgstr "הגדרות הגופן"
 #: klettres.cpp:213
 #, kde-format
 msgid "Timer"
-msgstr "שעון־עצר"
+msgstr "מתזמן"
 
 #: klettres.cpp:213
-#, fuzzy, kde-format
-#| msgid "Timer setting widgets"
+#, kde-format
 msgid "Timer Settings"
-msgstr "הגדרות שעון־העצר"
+msgstr "הגדרות מתזמן"
 
 #: klettres.cpp:231 klettres.cpp:299
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
-msgstr "שלב 1"
+msgstr "(שלב %1)"
 
 #: klettres.cpp:342
 #, kde-format
 msgid "Grown-up mode is currently active"
-msgstr "מצב מבוגר פעיל כרגע"
+msgstr "מצב בוגרים פעיל כרגע"
 
 #: klettres.cpp:343
 #, kde-format
 msgid "Switch to Kid mode"
-msgstr "החלף למצב ילד"
+msgstr "החלפה למצב ילד"
 
 #: klettres.cpp:361
 #, kde-format
@@ -219,7 +217,7 @@ msgstr "מצב ילד פעיל כרגע"
 #: klettres.cpp:362
 #, kde-format
 msgid "Switch to Grown-up mode"
-msgstr "החלף למצב מבוגר"
+msgstr "החלפה למצב בוגרים"
 
 #: klettres.cpp:383
 #, kde-format
@@ -228,12 +226,12 @@ msgid ""
 "please check your installation."
 msgstr ""
 "הקובץ $KDEDIR/share/apps/klettres/%1.txt לא נמצא;\n"
-"אנא בדוק את ההתקנה שלך."
+"נא לבדוק שההתקנה שלך תקינה."
 
 #: klettres.cpp:386
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "שגיאה"
 
 #. i18n: ectx: label, entry (Language), group (General)
 #: klettres.kcfg:10
@@ -245,13 +243,13 @@ msgstr "שפה"
 #: klettres.kcfg:14
 #, kde-format
 msgid "Theme"
-msgstr "ערכת נושא"
+msgstr "ערכת עיצוב"
 
 #. i18n: ectx: label, entry (MenuBarBool), group (General)
 #: klettres.kcfg:23
 #, kde-format
 msgid "Whether the menubar is shown or hidden"
-msgstr ""
+msgstr "האם סרגל התפריטים מופיע או מוסתר"
 
 #. i18n: ectx: label, entry (Mode), group (General)
 #: klettres.kcfg:27
@@ -269,31 +267,31 @@ msgstr "רמת קושי."
 #: klettres.kcfg:41
 #, kde-format
 msgid "Kid Timer"
-msgstr "שעון־עצר לילד"
+msgstr "מתזמן לילד"
 
 #. i18n: ectx: label, entry (GrownTimer), group (General)
 #: klettres.kcfg:45
 #, kde-format
 msgid "Grown-up Timer"
-msgstr "שעון־עצר למבוגר"
+msgstr "מתזמן למבוגר"
 
 #. i18n: ectx: Menu (file)
 #: klettresui.rc:4
 #, kde-format
 msgid "&File"
-msgstr ""
+msgstr "&קובץ"
 
 #. i18n: ectx: Menu (look_mode)
 #: klettresui.rc:15
 #, kde-format
 msgid "L&ook"
-msgstr "הס&תכל"
+msgstr "ה&צצה"
 
 #. i18n: ectx: Menu (settings)
 #: klettresui.rc:23
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Settings"
-msgstr "הגדרות הגופן"
+msgstr "ה&גדרות"
 
 #. i18n: ectx: ToolBar (mainToolbar)
 #: klettresui.rc:33
@@ -303,29 +301,29 @@ msgstr "ראשי"
 
 #. i18n: ectx: ToolBar (specialCharToolbar)
 #: klettresui.rc:47
-#, fuzzy, kde-format
+#, kde-format
 msgid "Special Characters"
-msgstr "אותיות"
+msgstr "אותיות מיוחדות"
 
 #: klettresview.cpp:32
 #, kde-format
 msgid "Type the letter or syllable that you just heard"
-msgstr "הקלד את האות או ההברה שכרגע שמעת"
+msgstr "נא להקליד את האות או ההברה ששמעת כרגע"
 
 #: klettresview.cpp:131
 #, kde-format
 msgctxt "%1 is uppercase letter, %2 is the same in lowercase"
 msgid "%1 / %2"
-msgstr ""
+msgstr "%1 / %2"
 
 #: kltheme.cpp:36
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Kid"
-msgstr ""
+msgstr "ילדים"
 
 #: kltheme.cpp:86
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox desert theme for the interface"
 msgid "Desert"
 msgstr "מדבר"
@@ -334,39 +332,39 @@ msgstr "מדבר"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Savannah"
-msgstr ""
+msgstr "סוואנה"
 
 #: kltheme.cpp:187
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Aqua"
-msgstr ""
+msgstr "אקווה"
 
 #: langutils.cpp:88
 #, kde-format
 msgid "Romanized Hindi"
-msgstr "הודית רומית"
+msgstr "הינדי באותיות לטיניות"
 
 #: langutils.cpp:90
 #, kde-format
 msgid "Luganda"
-msgstr "לוגנדית"
+msgstr "לוגנדה"
 
 #: langutils.cpp:92
-#, fuzzy, kde-format
+#, kde-format
 msgid "English Phonics"
-msgstr "צלילים אנגליים"
+msgstr "צלילים באנגלית"
 
 #: langutils.cpp:94
 #, kde-format
 msgid "Tswana"
-msgstr ""
+msgstr "טסואנה"
 
 #: langutils.cpp:99
 #, kde-format
 msgctxt "@item:inlistbox no language for that locale"
 msgid "None"
-msgstr ""
+msgstr "ללא"
 
 #: main.cpp:24
 #, kde-format
@@ -374,7 +372,7 @@ msgid "KLettres"
 msgstr "KLettres"
 
 #: main.cpp:24
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "KLettres helps a very young child or an adult learning \n"
 "a new language by associating sounds and \n"
@@ -382,46 +380,45 @@ msgid ""
 "\n"
 "25 languages are available."
 msgstr ""
-"התוכנה KLettres עוזרת לילדים קטנים מאוד או מבוגרים ללמוד \n"
-"שפה חדשה על ידי קישור הצלילים \n"
-"והאותיות בשפה הזאת. \n"
-"שלוש-עשרה שפות זמינות: בריטית, צ'כית, דנית, הולנדית, אנגלית, צרפתית, גרמנית, "
-"עברית, איטלקית, לוגנדית, הודית רומית, ספרדית וסלובקית."
+"התוכנה KLettres מסייעת לילדים צעירים או לבוגרים ללמוד\n"
+"שפה חדשה על ידי הצמדת צלילים לאותיות בשפה הזאת.\n"
+"\n"
+"25 שפות זמינות."
 
 #: main.cpp:28
 #, kde-format
 msgid "(C) 2001-2011 Anne-Marie Mahfouf"
-msgstr ""
+msgstr "(C) 2001‏-2011 אן־מרי מחפוף"
 
 #: main.cpp:29
 #, kde-format
 msgid "Anne-Marie Mahfouf"
-msgstr ""
+msgstr "אן־מרי מחפוף"
 
 #: main.cpp:30
 #, kde-format
 msgid "Marc Cheng"
-msgstr ""
+msgstr "מארק צ׳נג"
 
 #: main.cpp:31
 #, kde-format
 msgid "Kids and grown-up oxygen icons"
-msgstr ""
+msgstr "סמלי חמצן לילדים ולמבוגרים"
 
 #: main.cpp:32
 #, kde-format
 msgid "Danny Allen"
-msgstr ""
+msgstr "דני אלן"
 
 #: main.cpp:33
-#, fuzzy, kde-format
+#, kde-format
 msgid "SVG background pictures"
-msgstr "תמונת רקע"
+msgstr "תמונות רקע ב־SVG"
 
 #: main.cpp:34
 #, kde-format
 msgid "Robert Gogolok"
-msgstr ""
+msgstr "רוברט גוגולוק"
 
 #: main.cpp:35
 #, kde-format
@@ -431,17 +428,17 @@ msgstr "תמיכה והנחיות תכנות"
 #: main.cpp:36
 #, kde-format
 msgid "Peter Hedlund"
-msgstr ""
+msgstr "פיטר הדלונד"
 
 #: main.cpp:37
 #, kde-format
 msgid "Code for generating special characters' icons"
-msgstr "קוד ליצירת צלמיות לאותיות מיוחדות"
+msgstr "קוד ליצירת סמלים לאותיות מיוחדות"
 
 #: main.cpp:38
 #, kde-format
 msgid "Waldo Bastian"
-msgstr ""
+msgstr "ולדו בסטיאן"
 
 #: main.cpp:39
 #, kde-format
@@ -451,59 +448,59 @@ msgstr "הסבה ל־KConfigXT, עזרה בתכנות"
 #: main.cpp:40
 #, kde-format
 msgid "Pino Toscano"
-msgstr ""
+msgstr "פינו טוסקנו"
 
 #: main.cpp:41
 #, kde-format
 msgid "Code cleaning, Theme class"
-msgstr ""
+msgstr "ניקוי הקוד, מחלקת ערכות העיצוב"
 
 #: main.cpp:42
 #, kde-format
 msgid "Michael Goettsche"
-msgstr ""
+msgstr "מייקל גוטצ׳ה"
 
 #: main.cpp:43
 #, kde-format
 msgid "Timer setting widgets"
-msgstr "הגדרות שעון־העצר"
+msgstr "הגדרות מתזמנים"
 
 #: main.cpp:44
 #, kde-format
 msgid "Laurent Navet"
-msgstr ""
+msgstr "לורנט נאווט"
 
 #: main.cpp:45
 #, kde-format
 msgid "Port to KDE Frameworks 5"
-msgstr ""
+msgstr "הסבה לתשתיות KDE 5"
 
 #: soundfactory.cpp:86
 #, kde-format
 msgid "Error while loading the sound names."
-msgstr "שגיאה בזמן טעינת שמות קבצי הקול"
+msgstr "שגיאה בטעינת שמות קובצי הקול."
 
 #: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
-#, fuzzy, kde-format
+#, kde-format
 msgid "1 tenth of second"
 msgid_plural "%1 tenths of second"
 msgstr[0] "עשירית השנייה"
-msgstr[1] "עשירית השנייה"
-msgstr[2] ""
-msgstr[3] ""
+msgstr[1] "שתי עשיריות השנייה"
+msgstr[2] "%1 עשיריות השנייה"
+msgstr[3] "%1 עשיריות השנייה"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: timerui.ui:51
 #, kde-format
 msgid "Set the time between 2 letters."
-msgstr "הגדר זמן בן 2 אותיות"
+msgstr "הגדרת הפרש זמן בין אות לאות."
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_KidTimer)
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_GrownTimer)
 #: timerui.ui:91 timerui.ui:184
-#, fuzzy, kde-format
+#, kde-format
 msgid "Set the timer (in tenths of seconds)"
-msgstr "הגדר את שעון־העצר (בדקות)"
+msgstr "הגדרת המתזמן (בעשיריות השנייה)"
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_KidTimer)
 #: timerui.ui:94
@@ -512,6 +509,8 @@ msgid ""
 "You can set the time between two letters in Kid mode. Default is 4 tenths of "
 "seconds but younger children might need longer time."
 msgstr ""
+"אפשר להגדיר את הפרש ההקלדה בין שתי אותיות במצב ילדים. ברירת המחדל היא 4 "
+"עשיריות השנייה אך ילדים צעירים יותר כנראה יזדקקו ליותר זמן."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: timerui.ui:122
@@ -523,6 +522,11 @@ msgid ""
 "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
 "indent:0; text-indent:0px;\">Kid Mode</p></body></html>"
 msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">מצב ילדים</p></body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_GrownTimer)
 #: timerui.ui:187
@@ -531,6 +535,8 @@ msgid ""
 "You can set the time between two letters in Grown-up mode. Default is 2 "
 "tenths of seconds."
 msgstr ""
+"אפשר להגדיר את הפרש ההקלדה בין שתי אותיות במצב בוגרים. ברירת המחדל היא 2 "
+"עשיריות השנייה."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: timerui.ui:215
@@ -542,6 +548,11 @@ msgid ""
 "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
 "indent:0; text-indent:0px;\">Grown-up Mode</p></body></html>"
 msgstr ""
+"<html><head><meta name=\"qrichtext\" content=\"1\" /></head><body style=\" "
+"white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
+"weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
+"top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
+"indent:0; text-indent:0px;\">מצב בוגרים</p></body></html>"
 
 #, fuzzy
 #~ msgid "Klettres"
