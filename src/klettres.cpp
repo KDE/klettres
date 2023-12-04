@@ -39,10 +39,11 @@
 #include "langutils.h"
 #include "kltheme.h"
 
-class fontsdlg : public QWidget, public Ui::fontsdlg
+class FontChooser : public KFontChooser, public Ui::fontsdlg
 {
     public:
-        fontsdlg( QWidget * parent ) : QWidget(parent)
+        FontChooser(QWidget * parent)
+            : KFontChooser(KFontChooser::NoDisplayFlags, parent)
         {
             setupUi(this);
         }
@@ -206,9 +207,7 @@ void KLettres::optionsPreferences()
     }
 
     KConfigDialog *dialog = new KConfigDialog(this, QStringLiteral("settings"), Prefs::self());
-    dialog->addPage(new fontsdlg(nullptr), i18n("Font"), QStringLiteral("preferences-desktop-font"), i18n("Font Settings"));
-    //fontsdlg is the page name, mFont is the widget name, Font Settings is the page display string
-    //fonts is the icon
+    dialog->addPage(new FontChooser(nullptr), i18n("Font"), QStringLiteral("preferences-desktop-font"), i18n("Font Settings"));
     Timer *m_timer = new Timer();
     dialog->addPage(m_timer, i18n("Timer"), QStringLiteral("chronometer"), i18n("Timer Settings"));
     connect(dialog, &KConfigDialog::settingsChanged, this, &KLettres::slotUpdateSettings);

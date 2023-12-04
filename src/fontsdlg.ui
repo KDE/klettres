@@ -1,37 +1,17 @@
 <ui version="4.0" >
  <class>fontsdlg</class>
- <widget class="QWidget" name="fontsdlg" >
-  <property name="geometry" >
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>484</width>
-    <height>330</height>
-   </rect>
+ <widget class="KFontChooser" name="kcfg_Font" >
+  <property name="font" >
+   <font>
+    <family>Sans Serif</family>
+    <pointsize>48</pointsize>
+    <weight>75</weight>
+    <italic>false</italic>
+    <bold>true</bold>
+    <underline>false</underline>
+    <strikeout>false</strikeout>
+   </font>
   </property>
-  <layout class="QGridLayout" >
-   <property name="margin" >
-    <number>11</number>
-   </property>
-   <property name="spacing" >
-    <number>6</number>
-   </property>
-   <item row="0" column="0" >
-    <widget class="KFontChooser" name="kcfg_Font" >
-     <property name="font" >
-      <font>
-       <family>Sans Serif</family>
-       <pointsize>48</pointsize>
-       <weight>75</weight>
-       <italic>false</italic>
-       <bold>true</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-    </widget>
-   </item>
-  </layout>
  </widget>
   <customwidgets>
   <customwidget>
