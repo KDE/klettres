@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:54+0000\n"
+"POT-Creation-Date: 2023-12-05 01:33+0000\n"
 "PO-Revision-Date: 2015-01-07 00:29+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosanski <lokal@lugbih.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Vljubovic@smartnet.ba,melina@etf.ba,samir.ribic@etf.unsa.ba"
 
-#: klettres.cpp:90
+#: klettres.cpp:91
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -44,22 +44,22 @@ msgstr ""
 "Instalirajte ovaj datoteku i pokrenite KLettres ponovo.\n"
 "\n"
 
-#: klettres.cpp:93
+#: klettres.cpp:94
 #, kde-format
 msgid "KLettres - Error"
 msgstr "KLettres-greška"
 
-#: klettres.cpp:115
+#: klettres.cpp:116
 #, kde-format
 msgid "New Sound"
 msgstr "Novi zvuk"
 
-#: klettres.cpp:119
+#: klettres.cpp:120
 #, kde-format
 msgid "Play a new sound"
 msgstr "Pusti novi zvuk"
 
-#: klettres.cpp:120
+#: klettres.cpp:121
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
@@ -68,22 +68,22 @@ msgstr ""
 "Novi zvuk možete pustiti klikom na ovo dugme, ili preko menija Datoteka, "
 "Novi zvuk."
 
-#: klettres.cpp:123
+#: klettres.cpp:124
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "Nađi alfabet u novom jeziku..."
 
-#: klettres.cpp:128
+#: klettres.cpp:129
 #, kde-format
 msgid "Replay Sound"
 msgstr "Ponovo pusti zvuk"
 
-#: klettres.cpp:131
+#: klettres.cpp:132
 #, kde-format
 msgid "Play the same sound again"
 msgstr "Pušta isti zvuk ponovo"
 
-#: klettres.cpp:133
+#: klettres.cpp:134
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -92,18 +92,18 @@ msgstr ""
 "Možete ponovo pustiti isti zvuk klikom na ovo dugme ili preko menija "
 "Datoteka, Ponovo pusti zvuk."
 
-#: klettres.cpp:139
+#: klettres.cpp:140
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "&Nivo"
 
-#: klettres.cpp:140
+#: klettres.cpp:141
 #, kde-format
 msgid "Select the level"
 msgstr "Izaberite nivo"
 
-#: klettres.cpp:141
+#: klettres.cpp:142
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -114,13 +114,13 @@ msgstr ""
 "prikazuje slovo, samo ga čujete; nivo 3 prikazuje slog i čujete ga; nivo 4 "
 "ne prikazuje slog, samo ga čujete."
 
-#: klettres.cpp:144
+#: klettres.cpp:145
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "&Jezik"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:148 klettres.cpp:149 klettres.cpp:150 klettres.cpp:151
 #, kde-format
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
@@ -129,17 +129,17 @@ msgstr[0] "Nivo %1"
 msgstr[1] "Nivo %1"
 msgstr[2] "Nivo %1"
 
-#: klettres.cpp:155
+#: klettres.cpp:156
 #, kde-format
 msgid "Themes"
 msgstr "Teme"
 
-#: klettres.cpp:158
+#: klettres.cpp:159
 #, kde-format
 msgid "Select the theme"
 msgstr "Izaberite temu"
 
-#: klettres.cpp:159
+#: klettres.cpp:160
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -148,12 +148,12 @@ msgstr ""
 "Ovdje možete promijeniti temu za KLettres. Tema se sastoji od pozadinske "
 "slike i boje kojom su slova prikazana."
 
-#: klettres.cpp:162
+#: klettres.cpp:163
 #, kde-format
 msgid "Mode Kid"
 msgstr "Režim za djecu"
 
-#: klettres.cpp:166
+#: klettres.cpp:167
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -162,65 +162,65 @@ msgstr ""
 "Ako ste u režimu za odrasle, klikom na ovo dugme dobit ćete režim za djecu. "
 "Dječji režim nema traku menija i font je veći u statusnoj traci."
 
-#: klettres.cpp:169
+#: klettres.cpp:170
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "Režim za odrasle"
 
-#: klettres.cpp:173
+#: klettres.cpp:174
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr "Razvijeni način je normalan način, gdje možete vidjeti traku."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:210 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "Font"
 
-#: klettres.cpp:209
+#: klettres.cpp:210
 #, kde-format
 msgid "Font Settings"
 msgstr "Podešavanja fonta"
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, kde-format
 msgid "Timer"
 msgstr "Tajmer"
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, fuzzy, kde-format
 #| msgid "Timer setting widgets"
 msgid "Timer Settings"
 msgstr "Kontrole za postavljanje tajmera"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:230 klettres.cpp:298
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(Nivo %1)"
 
-#: klettres.cpp:342
+#: klettres.cpp:341
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Režim za odrasle je trenutno aktivan"
 
-#: klettres.cpp:343
+#: klettres.cpp:342
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Prebaci na režim za djecu"
 
-#: klettres.cpp:361
+#: klettres.cpp:360
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Režim za djecu je trenutno aktivan"
 
-#: klettres.cpp:362
+#: klettres.cpp:361
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Prebaci na režim za odrasle"
 
-#: klettres.cpp:383
+#: klettres.cpp:382
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -229,7 +229,7 @@ msgstr ""
 "Datoteka $KDEDIR/share/apps/klettres/%1.txt nije pronađen;\n"
 "provjerite svoju instalaciju."
 
-#: klettres.cpp:386
+#: klettres.cpp:385
 #, kde-format
 msgid "Error"
 msgstr "Greška"

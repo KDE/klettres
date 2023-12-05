@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:54+0000\n"
+"POT-Creation-Date: 2023-12-05 01:33+0000\n"
 "PO-Revision-Date: 2022-02-06 18:47+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -31,7 +31,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ex3cution1337@gmail.com"
 
-#: klettres.cpp:90
+#: klettres.cpp:91
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -46,22 +46,22 @@ msgstr ""
 "Instalați acest fișier și porniți KLettres din nou.\n"
 "\n"
 
-#: klettres.cpp:93
+#: klettres.cpp:94
 #, kde-format
 msgid "KLettres - Error"
 msgstr "KLettres - Eroare"
 
-#: klettres.cpp:115
+#: klettres.cpp:116
 #, kde-format
 msgid "New Sound"
 msgstr "Sunet nou"
 
-#: klettres.cpp:119
+#: klettres.cpp:120
 #, kde-format
 msgid "Play a new sound"
 msgstr "Redă un sunet nou"
 
-#: klettres.cpp:120
+#: klettres.cpp:121
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
@@ -70,22 +70,22 @@ msgstr ""
 "Puteți rula un sunet nou făcand click pe acest buton sau folosind meniul "
 "Fișier, Sunet nou."
 
-#: klettres.cpp:123
+#: klettres.cpp:124
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "Se preia alfabetul in noua limbă"
 
-#: klettres.cpp:128
+#: klettres.cpp:129
 #, kde-format
 msgid "Replay Sound"
 msgstr "Redă din nou sunetul"
 
-#: klettres.cpp:131
+#: klettres.cpp:132
 #, kde-format
 msgid "Play the same sound again"
 msgstr "Redă același sunet din nou"
 
-#: klettres.cpp:133
+#: klettres.cpp:134
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -94,18 +94,18 @@ msgstr ""
 "Poți reda acelaș sunet din nou făcand clic pe acest buton sau folosind "
 "meniul Fișier, Reda din nou sunetul"
 
-#: klettres.cpp:139
+#: klettres.cpp:140
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "Niv&el"
 
-#: klettres.cpp:140
+#: klettres.cpp:141
 #, kde-format
 msgid "Select the level"
 msgstr "Selectează nivelul"
 
-#: klettres.cpp:141
+#: klettres.cpp:142
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -116,13 +116,13 @@ msgstr ""
 "2 nu afișează litera, doar o auziți; nivelul 3 afișează o silabă si o veți "
 "auzii; nivelul 4 nu afișează silaba, doar o auziti."
 
-#: klettres.cpp:144
+#: klettres.cpp:145
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "&Limba"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:148 klettres.cpp:149 klettres.cpp:150 klettres.cpp:151
 #, kde-format
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
@@ -131,17 +131,17 @@ msgstr[0] "Nivelul %1"
 msgstr[1] "Nivelul %1"
 msgstr[2] "Nivelul %1"
 
-#: klettres.cpp:155
+#: klettres.cpp:156
 #, kde-format
 msgid "Themes"
 msgstr "Teme"
 
-#: klettres.cpp:158
+#: klettres.cpp:159
 #, kde-format
 msgid "Select the theme"
 msgstr "Alege tematica"
 
-#: klettres.cpp:159
+#: klettres.cpp:160
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -150,12 +150,12 @@ msgstr ""
 "Aici puteți schimba tema pentru KLettres. O tema constă în imaginea de pe "
 "fundal și culoarea fontului pentru litera afișată."
 
-#: klettres.cpp:162
+#: klettres.cpp:163
 #, kde-format
 msgid "Mode Kid"
 msgstr "Modul copil"
 
-#: klettres.cpp:166
+#: klettres.cpp:167
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -164,64 +164,64 @@ msgstr ""
 "Daca sunteți in modul adult, clicul pe acest buton va pregăti modul copil."
 "Modul copil nu are bară de meniu și are fontul mai mare in bara de status."
 
-#: klettres.cpp:169
+#: klettres.cpp:170
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "Modul adult"
 
-#: klettres.cpp:173
+#: klettres.cpp:174
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr "Modul adult este modul normal unde puteți vedea bara de meniu."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:210 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "Font"
 
-#: klettres.cpp:209
+#: klettres.cpp:210
 #, kde-format
 msgid "Font Settings"
 msgstr "Preferințe font"
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, kde-format
 msgid "Timer"
 msgstr "Cronometru"
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, kde-format
 msgid "Timer Settings"
 msgstr "Opțiuni cronometru"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:230 klettres.cpp:298
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(Nivel %1)"
 
-#: klettres.cpp:342
+#: klettres.cpp:341
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "Modul adult este momentan activ"
 
-#: klettres.cpp:343
+#: klettres.cpp:342
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "Schimbați în modul copil"
 
-#: klettres.cpp:361
+#: klettres.cpp:360
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "Modul copil este momentan activ"
 
-#: klettres.cpp:362
+#: klettres.cpp:361
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Schimbați în modul adult"
 
-#: klettres.cpp:383
+#: klettres.cpp:382
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -230,7 +230,7 @@ msgstr ""
 "Fișierul $KDEDIR/share/apps/klettres/%1.txt nu a fost găsit;\n"
 "vă rugăm verificați instalarea."
 
-#: klettres.cpp:386
+#: klettres.cpp:385
 #, kde-format
 msgid "Error"
 msgstr "Eroare"

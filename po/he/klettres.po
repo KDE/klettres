@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:54+0000\n"
+"POT-Creation-Date: 2023-12-05 01:33+0000\n"
 "PO-Revision-Date: 2023-11-17 08:26+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tahmar1900@gmail.com,kde-l10n-he@kde.org"
 
-#: klettres.cpp:90
+#: klettres.cpp:91
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -45,44 +45,44 @@ msgstr ""
 "נא להתקין את הקובץ ולהפעיל את KLettres מחדש.\n"
 "\n"
 
-#: klettres.cpp:93
+#: klettres.cpp:94
 #, kde-format
 msgid "KLettres - Error"
 msgstr "KLettres - שגיאה"
 
-#: klettres.cpp:115
+#: klettres.cpp:116
 #, kde-format
 msgid "New Sound"
 msgstr "צליל חדש"
 
-#: klettres.cpp:119
+#: klettres.cpp:120
 #, kde-format
 msgid "Play a new sound"
 msgstr "ניגון צליל חדש"
 
-#: klettres.cpp:120
+#: klettres.cpp:121
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
 "Sound."
 msgstr "אפשר לנגן צליל חדש בלחיצה על הכפתור הזה או דרך התפריט קובץ, צליל חדש."
 
-#: klettres.cpp:123
+#: klettres.cpp:124
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "הורדת האלפבית בשפה חדשה…"
 
-#: klettres.cpp:128
+#: klettres.cpp:129
 #, kde-format
 msgid "Replay Sound"
 msgstr "ניגון הצליל שוב"
 
-#: klettres.cpp:131
+#: klettres.cpp:132
 #, kde-format
 msgid "Play the same sound again"
 msgstr "לנגן את הצליל הזה שוב"
 
-#: klettres.cpp:133
+#: klettres.cpp:134
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -91,18 +91,18 @@ msgstr ""
 "אפשר לנגן את הצליל הזה שוב בלחיצה על הכפתור הזה או דרך התפריט קובץ, ניגון "
 "הצליל שוב."
 
-#: klettres.cpp:139
+#: klettres.cpp:140
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "&שלב"
 
-#: klettres.cpp:140
+#: klettres.cpp:141
 #, kde-format
 msgid "Select the level"
 msgstr "בחירת שלב"
 
-#: klettres.cpp:141
+#: klettres.cpp:142
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -113,13 +113,13 @@ msgstr ""
 "מוצגת, אפשר רק לשמוע אותה; בשלב 3 ההברה מופיעה אך לא שומעים אותה; שלב 4 לא "
 "מראה את ההברה, אלא רק משמיע אותה."
 
-#: klettres.cpp:144
+#: klettres.cpp:145
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "ש&פה"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:148 klettres.cpp:149 klettres.cpp:150 klettres.cpp:151
 #, kde-format
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
@@ -129,17 +129,17 @@ msgstr[1] "שלב %1"
 msgstr[2] "שלב %1"
 msgstr[3] "שלב %1"
 
-#: klettres.cpp:155
+#: klettres.cpp:156
 #, kde-format
 msgid "Themes"
 msgstr "ערכות עיצוב"
 
-#: klettres.cpp:158
+#: klettres.cpp:159
 #, kde-format
 msgid "Select the theme"
 msgstr "בחירת ערכת עיצוב"
 
-#: klettres.cpp:159
+#: klettres.cpp:160
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -148,12 +148,12 @@ msgstr ""
 "כאן ניתן לשנות את ערכת העיצוב של KLettres. ערכת עיצוב מכילה תמונת רקע ואת "
 "צבע הגופן בשביל האותיות המוצגות."
 
-#: klettres.cpp:162
+#: klettres.cpp:163
 #, kde-format
 msgid "Mode Kid"
 msgstr "מצב ילדים"
 
-#: klettres.cpp:166
+#: klettres.cpp:167
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -162,64 +162,64 @@ msgstr ""
 "אם אתה במצב בוגרים, לחיצה על הכפתור הזה תעביר אותך למצב ילד. מצב הילד לא "
 "כולל שורת תפריטים והגופן גדול יותר בשורת המצב."
 
-#: klettres.cpp:169
+#: klettres.cpp:170
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "מצב בוגרים"
 
-#: klettres.cpp:173
+#: klettres.cpp:174
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr "מצב הבוגרים הוא המצב הרגיל בו ניתן לראות את סרגל התפריטים."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:210 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "גופן"
 
-#: klettres.cpp:209
+#: klettres.cpp:210
 #, kde-format
 msgid "Font Settings"
 msgstr "הגדרות הגופן"
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, kde-format
 msgid "Timer"
 msgstr "מתזמן"
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, kde-format
 msgid "Timer Settings"
 msgstr "הגדרות מתזמן"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:230 klettres.cpp:298
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(שלב %1)"
 
-#: klettres.cpp:342
+#: klettres.cpp:341
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "מצב בוגרים פעיל כרגע"
 
-#: klettres.cpp:343
+#: klettres.cpp:342
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "החלפה למצב ילד"
 
-#: klettres.cpp:361
+#: klettres.cpp:360
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "מצב ילד פעיל כרגע"
 
-#: klettres.cpp:362
+#: klettres.cpp:361
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "החלפה למצב בוגרים"
 
-#: klettres.cpp:383
+#: klettres.cpp:382
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -228,7 +228,7 @@ msgstr ""
 "הקובץ $KDEDIR/share/apps/klettres/%1.txt לא נמצא;\n"
 "נא לבדוק שההתקנה שלך תקינה."
 
-#: klettres.cpp:386
+#: klettres.cpp:385
 #, kde-format
 msgid "Error"
 msgstr "שגיאה"

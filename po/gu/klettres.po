@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kletters-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:54+0000\n"
+"POT-Creation-Date: 2023-12-05 01:33+0000\n"
 "PO-Revision-Date: 2008-07-07 14:49+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kartik.mistry@gmail.com"
 
-#: klettres.cpp:90
+#: klettres.cpp:91
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -42,22 +42,22 @@ msgstr ""
 "મહેરબાની કરી આ ફાઇલનું સ્થાપન કરો અને KLettres ફરી શરૂ કરો.\n"
 "\n"
 
-#: klettres.cpp:93
+#: klettres.cpp:94
 #, kde-format
 msgid "KLettres - Error"
 msgstr "KLettres - ક્ષતિ"
 
-#: klettres.cpp:115
+#: klettres.cpp:116
 #, kde-format
 msgid "New Sound"
 msgstr "નવો અવાજ"
 
-#: klettres.cpp:119
+#: klettres.cpp:120
 #, kde-format
 msgid "Play a new sound"
 msgstr "નવો અવાજ વગાડો"
 
-#: klettres.cpp:120
+#: klettres.cpp:121
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
@@ -65,22 +65,22 @@ msgid ""
 msgstr ""
 "તમે નવો અવાજ આ બટન ક્લિક કરીને અથવા ફાઇલ મેનુ, નવો અવાજ ઉપયોગ કરીને વગાડી શકો છો. "
 
-#: klettres.cpp:123
+#: klettres.cpp:124
 #, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "નવી ભાષામાં કક્કો મેળવો..."
 
-#: klettres.cpp:128
+#: klettres.cpp:129
 #, kde-format
 msgid "Replay Sound"
 msgstr "અવાજ ફરી વગાડો"
 
-#: klettres.cpp:131
+#: klettres.cpp:132
 #, kde-format
 msgid "Play the same sound again"
 msgstr "એ જ અવાજ ફરી વગાડો"
 
-#: klettres.cpp:133
+#: klettres.cpp:134
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
@@ -89,18 +89,18 @@ msgstr ""
 "તમે એ જ અવાજ આ બટન ક્લિક કરીને અથવા ફાઇલ મેનુ, ફરી અવાજ વગાડો નો ઉપયોગ કરીને ફરી "
 "વગાડી શકો છો."
 
-#: klettres.cpp:139
+#: klettres.cpp:140
 #, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "સ્તર (&e)"
 
-#: klettres.cpp:140
+#: klettres.cpp:141
 #, kde-format
 msgid "Select the level"
 msgstr "સ્તર પસંદ કરો"
 
-#: klettres.cpp:141
+#: klettres.cpp:142
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -111,13 +111,13 @@ msgstr ""
 "દર્શાવશે નહી, તમે માત્ર તેને સાંભળી શકશો; સ્તર ૩ શબ્દો દર્શાવશે અને તમે તેને સાંભળી શકશો; "
 "સ્તર ૪ શબ્દો દર્શાવશે નહી, તમે માત્ર તેને સાંભળી શકશો."
 
-#: klettres.cpp:144
+#: klettres.cpp:145
 #, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "ભાષા (&L)"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:148 klettres.cpp:149 klettres.cpp:150 klettres.cpp:151
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox choose level 1"
 #| msgid "Level 1"
@@ -127,17 +127,17 @@ msgid_plural "Level %1"
 msgstr[0] "સ્તર ૧"
 msgstr[1] "સ્તર ૧"
 
-#: klettres.cpp:155
+#: klettres.cpp:156
 #, kde-format
 msgid "Themes"
 msgstr "થીમ્સ"
 
-#: klettres.cpp:158
+#: klettres.cpp:159
 #, kde-format
 msgid "Select the theme"
 msgstr "થીમ પસંદ કરો"
 
-#: klettres.cpp:159
+#: klettres.cpp:160
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
@@ -146,12 +146,12 @@ msgstr ""
 "તમે અહીં KLettres માટે થીમ બદલી શકશો. થીમમાં પાશ્વભાગનાં ચિત્ર અને અક્ષરનાં ફોન્ટનાં "
 "રંગનો સમાવેશ થાય છે."
 
-#: klettres.cpp:162
+#: klettres.cpp:163
 #, kde-format
 msgid "Mode Kid"
 msgstr "બાળક સ્થિતિ"
 
-#: klettres.cpp:166
+#: klettres.cpp:167
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
@@ -160,65 +160,65 @@ msgstr ""
 "જો તમે તરૂણ સ્થિતિમાં હશો તો, આ બટનને ક્લિક કરવાથી બાળક સ્થિતિમાં ગોઠવી શકશો. બાળક "
 "સ્થિતિને મેનુપટ્ટી નથી અને સ્થિતિપટ્ટીમાં ફોન્ટ મોટાં હોય છે."
 
-#: klettres.cpp:169
+#: klettres.cpp:170
 #, kde-format
 msgid "Mode Grown-up"
 msgstr "સ્થિતિ વધતી ઉંમર"
 
-#: klettres.cpp:173
+#: klettres.cpp:174
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr "તરુણ સ્થિતિએ સામાન્ય સ્થિતિ છે જ્યાં તમે મેનુપટ્ટી જોઇ શકો છો."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:210 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr "ફોન્ટ"
 
-#: klettres.cpp:209
+#: klettres.cpp:210
 #, kde-format
 msgid "Font Settings"
 msgstr "ફોન્ટ ગોઠવણીઓ"
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, kde-format
 msgid "Timer"
 msgstr "ઘડિયાળ"
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, fuzzy, kde-format
 #| msgid "Timer setting widgets"
 msgid "Timer Settings"
 msgstr "સમય ગોઠવણી વિજેટ્સ"
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:230 klettres.cpp:298
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "(સ્તર %1)"
 
-#: klettres.cpp:342
+#: klettres.cpp:341
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr "તરુણ સ્થિતિ અત્યારે સક્રિય છે"
 
-#: klettres.cpp:343
+#: klettres.cpp:342
 #, kde-format
 msgid "Switch to Kid mode"
 msgstr "બાળક સ્થિતિમાં ફેરવો"
 
-#: klettres.cpp:361
+#: klettres.cpp:360
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr "બાળક સ્થિતિ અત્યારે સક્રિય છે"
 
-#: klettres.cpp:362
+#: klettres.cpp:361
 #, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "તરુણ સ્થિતિમાં બદલો"
 
-#: klettres.cpp:383
+#: klettres.cpp:382
 #, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -227,7 +227,7 @@ msgstr ""
 "ફાઇલ $KDEDIR/share/apps/klettres/%1.txt મળી નહી;\n"
 "મહેરબાની કરી તમારું સ્થાપન ચકાસો."
 
-#: klettres.cpp:386
+#: klettres.cpp:385
 #, kde-format
 msgid "Error"
 msgstr "ક્ષતિ"

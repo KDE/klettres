@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-16 01:54+0000\n"
+"POT-Creation-Date: 2023-12-05 01:33+0000\n"
 "PO-Revision-Date: 2002-09-27 17:05SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -32,7 +32,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Undoqoe@translate.org.za"
 
-#: klettres.cpp:90
+#: klettres.cpp:91
 #, kde-format
 msgid ""
 "The file sounds.xml was not found in\n"
@@ -42,63 +42,63 @@ msgid ""
 "\n"
 msgstr ""
 
-#: klettres.cpp:93
+#: klettres.cpp:94
 #, fuzzy, kde-format
 #| msgid "KLettres"
 msgid "KLettres - Error"
 msgstr "Undoqoes"
 
-#: klettres.cpp:115
+#: klettres.cpp:116
 #, kde-format
 msgid "New Sound"
 msgstr ""
 
-#: klettres.cpp:119
+#: klettres.cpp:120
 #, fuzzy, kde-format
 msgid "Play a new sound"
 msgstr "Undoqo sesidanishi"
 
-#: klettres.cpp:120
+#: klettres.cpp:121
 #, kde-format
 msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
 "Sound."
 msgstr ""
 
-#: klettres.cpp:123
+#: klettres.cpp:124
 #, fuzzy, kde-format
 msgid "Get Alphabet in New Language..."
 msgstr "Ufundo L&olwimi olutsha"
 
-#: klettres.cpp:128
+#: klettres.cpp:129
 #, kde-format
 msgid "Replay Sound"
 msgstr ""
 
-#: klettres.cpp:131
+#: klettres.cpp:132
 #, kde-format
 msgid "Play the same sound again"
 msgstr ""
 
-#: klettres.cpp:133
+#: klettres.cpp:134
 #, kde-format
 msgid ""
 "You can replay the same sound again by clicking this button or using the "
 "File menu, Replay Sound."
 msgstr ""
 
-#: klettres.cpp:139
+#: klettres.cpp:140
 #, fuzzy, kde-format
 msgctxt "@label:listbox which difficulty level to use"
 msgid "L&evel"
 msgstr "Umphakamo 1"
 
-#: klettres.cpp:140
+#: klettres.cpp:141
 #, fuzzy, kde-format
 msgid "Select the level"
 msgstr "Tshintsha umphakamo"
 
-#: klettres.cpp:141
+#: klettres.cpp:142
 #, kde-format
 msgid ""
 "You can select the level: level 1 displays a letter and you hear it; level 2 "
@@ -106,13 +106,13 @@ msgid ""
 "and you hear it; level 4 does not display the syllable, you only hear it."
 msgstr ""
 
-#: klettres.cpp:144
+#: klettres.cpp:145
 #, fuzzy, kde-format
 msgctxt "@label:listbox"
 msgid "&Language"
 msgstr "Ufundo L&olwimi olutsha"
 
-#: klettres.cpp:147 klettres.cpp:148 klettres.cpp:149 klettres.cpp:150
+#: klettres.cpp:148 klettres.cpp:149 klettres.cpp:150 klettres.cpp:151
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@item:inlistbox choose level"
@@ -121,94 +121,94 @@ msgid_plural "Level %1"
 msgstr[0] "Umphakamo 1"
 msgstr[1] "Umphakamo 1"
 
-#: klettres.cpp:155
+#: klettres.cpp:156
 #, kde-format
 msgid "Themes"
 msgstr ""
 
-#: klettres.cpp:158
+#: klettres.cpp:159
 #, kde-format
 msgid "Select the theme"
 msgstr ""
 
-#: klettres.cpp:159
+#: klettres.cpp:160
 #, kde-format
 msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
 "background picture and the font color for the letter displayed."
 msgstr ""
 
-#: klettres.cpp:162
+#: klettres.cpp:163
 #, kde-format
 msgid "Mode Kid"
 msgstr ""
 
-#: klettres.cpp:166
+#: klettres.cpp:167
 #, kde-format
 msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
 "mode. The Kid mode has no menubar and the font is bigger in the statusbar."
 msgstr ""
 
-#: klettres.cpp:169
+#: klettres.cpp:170
 #, fuzzy, kde-format
 msgid "Mode Grown-up"
 msgstr "&Umntu-Okhulileyo"
 
-#: klettres.cpp:173
+#: klettres.cpp:174
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
 msgstr ""
 
 #. i18n: ectx: label, entry (Font), group (mFont)
-#: klettres.cpp:209 klettres.kcfg:51
+#: klettres.cpp:210 klettres.kcfg:51
 #, kde-format
 msgid "Font"
 msgstr ""
 
-#: klettres.cpp:209
+#: klettres.cpp:210
 #, kde-format
 msgid "Font Settings"
 msgstr ""
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, kde-format
 msgid "Timer"
 msgstr ""
 
-#: klettres.cpp:213
+#: klettres.cpp:212
 #, kde-format
 msgid "Timer Settings"
 msgstr ""
 
-#: klettres.cpp:231 klettres.cpp:299
+#: klettres.cpp:230 klettres.cpp:298
 #, fuzzy, kde-format
 #| msgid "Level 1"
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
 msgstr "Umphakamo 1"
 
-#: klettres.cpp:342
+#: klettres.cpp:341
 #, kde-format
 msgid "Grown-up mode is currently active"
 msgstr ""
 
-#: klettres.cpp:343
+#: klettres.cpp:342
 #, fuzzy, kde-format
 msgid "Switch to Kid mode"
 msgstr "Undoqoshela kwingangeleko yobuntwana"
 
-#: klettres.cpp:361
+#: klettres.cpp:360
 #, kde-format
 msgid "Kid mode is currently active"
 msgstr ""
 
-#: klettres.cpp:362
+#: klettres.cpp:361
 #, fuzzy, kde-format
 msgid "Switch to Grown-up mode"
 msgstr "Undoqoshela kwingangeleko yomntu-omdala"
 
-#: klettres.cpp:383
+#: klettres.cpp:382
 #, fuzzy, kde-format
 msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
@@ -217,7 +217,7 @@ msgstr ""
 "Ifayile $KDEDIR/share/apps/klettres/umphakamo 1.txt ayifumanwanga!\n"
 "Nceda ujonge ufako lwako!"
 
-#: klettres.cpp:386
+#: klettres.cpp:385
 #, kde-format
 msgid "Error"
 msgstr ""
