@@ -53,6 +53,7 @@ int main(int argc, char **argv)
     app.setApplicationVersion(QStringLiteral(KLETTRES_VERSION_STRING));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
 
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("klettres")));
     KCrash::initialize();
 
     // see if we are starting with session management
