@@ -2,30 +2,31 @@
 # Tamas Szanto <tszanto@interware.hu>, 2001.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2012.
 # Balázs Úr <urbalazs@gmail.com>, 2014.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-05 01:33+0000\n"
-"PO-Revision-Date: 2014-05-04 16:32+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"PO-Revision-Date: 2024-01-25 10:25+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.01.90\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Szántó Tamás"
+msgstr "Kiszel Kristóf"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tszanto@interware.hu"
+msgstr "ulysses@fsf.hu"
 
 #: klettres.cpp:91
 #, kde-format
@@ -187,10 +188,9 @@ msgid "Timer"
 msgstr "Időmérő"
 
 #: klettres.cpp:212
-#, fuzzy, kde-format
-#| msgid "Timer setting widgets"
+#, kde-format
 msgid "Timer Settings"
-msgstr "Időzítőbeállító elemek"
+msgstr "Időzítőbeállítások"
 
 #: klettres.cpp:230 klettres.cpp:298
 #, kde-format
@@ -313,7 +313,7 @@ msgstr "Üsse le a hallott hangnak megfelelő betűt vagy szótagot"
 #, kde-format
 msgctxt "%1 is uppercase letter, %2 is the same in lowercase"
 msgid "%1 / %2"
-msgstr ""
+msgstr "%1 / %2"
 
 #: kltheme.cpp:36
 #, kde-format
@@ -357,7 +357,7 @@ msgstr "Angol hangzástan"
 #: langutils.cpp:94
 #, kde-format
 msgid "Tswana"
-msgstr ""
+msgstr "Tswana"
 
 #: langutils.cpp:99
 #, kde-format
@@ -468,12 +468,12 @@ msgstr "Időzítőbeállító elemek"
 #: main.cpp:44
 #, kde-format
 msgid "Laurent Navet"
-msgstr ""
+msgstr "Laurent Navet"
 
 #: main.cpp:45
 #, kde-format
 msgid "Port to KDE Frameworks 5"
-msgstr ""
+msgstr "Portolás KDE Frameworks 5-re"
 
 #: soundfactory.cpp:86
 #, kde-format
@@ -481,12 +481,11 @@ msgid "Error while loading the sound names."
 msgstr "Hiba történt a hangok neveinek betöltése közben."
 
 #: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
-#, fuzzy, kde-format
-#| msgid "tenths of second"
+#, kde-format
 msgid "1 tenth of second"
 msgid_plural "%1 tenths of second"
-msgstr[0] "tizedmásodperc"
-msgstr[1] "tizedmásodperc"
+msgstr[0] "1 tizedmásodperc"
+msgstr[1] "%1 tizedmásodperc"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: timerui.ui:51
