@@ -25,7 +25,7 @@ int main(int argc, char **argv)
                                                                                                                  "a new language by associating sounds and \n"
                                                                                                                  "letters in this language.\n\n"
                                                                                                                  "25 languages are available."),
-                     KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QStringLiteral("https://edu.kde.org/klettres"), QStringLiteral("submit@bugs.kde.org"));
+                     KAboutLicense::GPL, i18n("(C) 2001-2011 Anne-Marie Mahfouf"),QString(), QStringLiteral("https://apps.kde.org/klettres"), QStringLiteral("submit@bugs.kde.org"));
     about.addAuthor( i18n("Anne-Marie Mahfouf"), QString(), QStringLiteral("annma AT kde DOT org"), QStringLiteral("https://annma.blogspot.com"), QStringLiteral("annma"));
     about.addCredit(i18n("Marc Cheng"),
                     i18n("Kids and grown-up oxygen icons"), QStringLiteral("bdgraue AT web DOT de"));

@@ -129,7 +129,7 @@
     <p xml:lang="zh-CN">KLettres 是一个特别设计于帮助用户学习新语言字母，并学习阅读简单音节的应用程序。用户可以为两岁半的幼儿，或是项学习外语基础的成年人。目前有 25 种语言：阿拉伯语、巴西葡萄牙语、捷克语、丹麦语、荷兰语、英式英语、美式英语、自然拼读英语、法语、德语、希伯来语、匈牙利语、意大利语、卡纳达语、低撒克逊语、马拉雅拉姆语、挪威博克马尔语、旁遮普语、卢干达语、罗马化印地语、俄语、西班牙语、斯洛伐克语、泰卢固语和乌克兰语。KLettres 可为年轻用户提供特殊用户界面和主题。</p>
     <p xml:lang="zh-TW">KLettres 是一套特別設計協助使用者學習新語言的字母，並且學會讀簡單音節的應用程式。使用者可以是兩歲半的孩子，或是想學新外語的成人。目前有包括阿拉伯語、巴西葡萄牙語、捷克語、丹麥語、荷蘭語、英式英語、美式英語等等 25 種語言。KLettres 針對小小孩也提供了一套特別的使用者介面。</p>
   </description>
-  <url type="homepage">https://edu.kde.org/klettres/</url>
+  <url type="homepage">https://apps.kde.org/klettres</url>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?format=guided&amp;product=klettres</url>
   <url type="help">https://docs.kde.org/?application=klettres</url>
   <url type="donation">https://www.kde.org/community/donations/?app=klettres&amp;source=appdata</url>
