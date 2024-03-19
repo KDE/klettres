@@ -43,15 +43,13 @@ int main(int argc, char **argv)
                     i18n("Timer setting widgets"), QStringLiteral("michael.goettsche AT kdemail DOT net"));
     about.addCredit(i18n("Laurent Navet"),
                     i18n("Port to KDE Frameworks 5"), QStringLiteral("laurent DOT navet+klettres AT gmail DOT com"));
-    QCommandLineParser parser;
+
     KAboutData::setApplicationData(about);
+
+    QCommandLineParser parser;
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
-
-    app.setApplicationName(QStringLiteral("klettres"));
-    app.setApplicationVersion(QStringLiteral(KLETTRES_VERSION_STRING));
-    app.setOrganizationDomain(QStringLiteral("kde.org"));
 
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("klettres")));
     KCrash::initialize();
