@@ -74,7 +74,7 @@ msgstr ""
 #: klettres.cpp:124
 #, kde-format
 msgid "Get Alphabet in New Language..."
-msgstr "Obtín l'alfabet en un idioma nou..."
+msgstr "Obtín l'alfabet en un idioma nou…"
 
 #: klettres.cpp:129
 #, kde-format
