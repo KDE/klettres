@@ -10,10 +10,10 @@ set(RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_
 project(klettres VERSION ${RELEASE_SERVICE_VERSION})
 
 set(QT_MIN_VERSION "6.5.0")
-set(KF5_MIN_VERSION "5.240.0")
+set(KF_MIN_VERSION "5.240.0")
 
 # we need some parts of the ECM CMake helpers
-find_package (ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package (ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 set (CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
@@ -40,7 +40,7 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED
 )
 find_package(Phonon4Qt6 REQUIRED)
 
-find_package(KF6 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
   Crash
   DocTools
   I18n
