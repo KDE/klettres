@@ -1,0 +1,1067 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klettres" lang="&language;">
+
+<bookinfo>
+<title
+>&klettres; Priročnik</title>
+
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Jan</firstname
+><surname
+>Napast</surname
+><affiliation
+><address
+><email
+>jan.napast153@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year
+><year
+>2007</year>
+<holder
+>&Anne-Marie.Mahfouf;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>29.12.2020</date>
+<releaseinfo
+>Aplikacije 20.12</releaseinfo>
+
+<abstract>
+<para
+>&klettres; je aplikacija, posebej zasnovana za pomoč uporabniku pri učenju abecede v novem jeziku in nato pri učenju brati preproste zloge. Uporabnik je lahko mlajši otrok od dveh let in pol ali odrasel človek, ki se želi naučiti osnov tujega jezika.</para>
+<para
+>Trenutno je na voljo petindvajset jezikov: arabščina, brazilska portugalščina, češčina, danščina, nizozemščina, britanska angleščina, ameriška angleščina, glasovna angleščina, francoščina, nemščina, hebrejščina, madžarščina, italijanščina, kanada, nizkosaksonščina, malajalamščina, norveški bokmål, pandžabi , luganda, romanizirana hindijščina, ruščina, španščina, slovaščina, telugu in ukrajinščina, vendar samo angleščina, francoščina in vaš jezik, če je med njimi, so privzeto nameščeni. </para>
+<para
+>&klettres; je zelo enostaven za uporabo. Jezik lahko spremenite v meniju <guimenu
+>Jezik</guimenu
+>. Uporabnik lahko izbere tudi raven od 1 do 4 v kombiniranem polju v orodni vrstici ali prek menija <guimenu
+>Raven</guimenu
+>. Teme (barvo ozadja in pisave) lahko spremenite v kombiniranem polju ali v meniju <menuchoice
+><guimenu
+>Pogled</guimenu
+> <guimenuitem
+>Teme</guimenuitem
+></menuchoice
+>. Na voljo so štiri teme: <guimenuitem
+>Kid</guimenuitem
+>, <guimenuitem
+>Puščava</guimenuitem
+>, <guimenuitem
+>Savana</guimenuitem
+> in <guimenuitem
+>Aqua</guimenuitem
+>. Nazadnje, način lahko spremenite iz otroškega v odraslega z uporabo menija <guimenu
+>Poglej</guimenu
+>. </para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeedu</keyword>
+<keyword
+>klettres</keyword>
+<keyword
+>abeceda</keyword>
+<keyword
+>zvoki</keyword>
+<keyword
+>jezik</keyword>
+<keyword
+>tipkovnica</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+
+<para
+>&klettres; je zelo preprosta aplikacija, ki otroku ali odraslemu pomaga pri učenju abecede in nekaterih preprostih glasov v svojem ali drugem jeziku. Program naključno izbere črko ali zlog, ta črka/zlog se prikaže in predvaja se zvok. Uporabnik mora nato vnesti to črko ali zlog. Vadba poteka v stopnjah, kjer črka/zlog ni prikazana, predvaja se le zvok. Uporabniku ni treba znati uporabljati miške, potrebuje le tipkovnico.</para>
+
+<para
+>Trenutno je na voljo petindvajset jezikov: glejte zgornji seznam. Če vaš &kde; jezik je med temi, potem je vzet kot privzeti, drugače je privzeta francoščina. Z uporabo menijske postavke <menuchoice
+><guimenu
+>Datoteka</guimenu
+><guimenuitem
+>Pridobi abecedo v novem jeziku ...</guimenuitem
+></menuchoice
+> lahko preprosto pridobite kateri koli dodatni razpoložljivi jezik, pod pogojem, da je vaš računalnik povezan na internet.</para>
+
+<!-- add a note for the sound, what does KLettres needs -->
+
+<para
+>Dva različna načina omogočata prilagajanje &klettres; vašim potrebam in imate polni običajen vmesnik ali odstranjen vmesnik. Za otroka menijska vrstica ni več vidna. Predvidevamo, da otrok ne bo želel sam nastaviti jezika. Kombinirano polje mu omogoča izbiro različnih ravni. Za starejšega uporabnika ozadje ni tako otročje in menijska vrstica je prisotna v slogu za odrasle. Štiri različne teme (<guimenuitem
+>Kid</guimenuitem
+>, <guimenuitem
+>Puščava</guimenuitem
+>, <guimenuitem
+>Savana</guimenuitem
+> in <guimenuitem
+>Aqua</guimenuitem
+>) nastavijo drugačno ozadje z različnimi pisavami in barvami .</para>
+
+<note>
+<para
+>Jezikovne razporeditve tipkovnice ne potrebujete več, saj lahko uporabite posebno orodno vrstico <guilabel
+>Posebni znaki</guilabel
+> za vnos katerega koli posebnega znaka v vsakem jeziku. Izberite menijsko postavko <menuchoice
+><guimenu
+>Nastavitve</guimenu
+> <guisubmenu
+>Prikazane orodne vrstice</guisubmenu
+><guimenuitem
+>Posebni znaki</guimenuitem
+></menuchoice
+> in orodna vrstica se bo prikazala na dnu &klettres;. Kliknite želeno črko in prikazala se bo v vnosnem polju. To orodno vrstico lahko povlečete kamor koli na zaslonu.</para>
+<para
+>Če želite imeti jezikovno razporeditev tipkovnice, uporabite &systemsettings;, v kategoriji <guilabel
+>Strojna oprema</guilabel
+>, <guimenu
+>Vnosne naprave</guimenu
+> na strani <guimenuitem
+>Tipkovnica</guimenuitem
+>, da nastavite pravilno razporeditev tipkovnice.</para>
+</note>
+</chapter>
+
+<chapter id="using-klettres">
+<title
+>Uporaba &klettres;</title>
+<para
+>&klettres; ima 4 stopnje. 1. in 2. stopnja obravnavata abecedo, 3. in 4. stopnja pa zloge. Za zelo majhnega otroka (2 1/2 do 4) bi predlagal, da sedi v vašem naročju pred računalnikom in da igrata igro skupaj.</para>
+
+<sect1 id="levels1-and2">
+<title
+>1. in 2. stopnja</title>
+
+<screenshot>
+<screeninfo
+>Posnetek zaslona &klettres; 1. stopnja</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres1.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; raven1</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Raven je 1. stopnja, jezik je francoščina, tema je puščava in način je <emphasis
+>za odrasle</emphasis
+>.</para>
+<note>
+<para
+>Če vaš &kde; jezik med podprtimi jeziki, potem bo to privzeti jezik, ko prvič zaženete &klettres;. Za druge jezike je privzeta angleščina. &klettres; prihaja z angleščino, francoščino in vašim privzetim jezikom, če je med tistimi, ki so navedeni zgoraj, dodatne jezike pa lahko dobite prek <menuchoice
+><guimenu
+>Datoteka</guimenu
+> <guimenuitem
+>Pridobite abecedo v novem jeziku ...</guimenuitem
+></menuchoice 
+> element menija, če imate internetno povezavo. </para>
+</note>
+<para
+>Na ravni 1 uporabnik vidi črko in sliši zvok. Nato mora črko vnesti v polje. Če je pravilna, se prikaže naslednja črka (ne da bi morali pritisniti &Enter; ali kar koli drugega). Če uporabnik vnese napačno črko, znova sliši zvok. Na tej stopnji si uporabnik zapomni črke, jih poveže z njihovim zvokom in jih prepozna na tipkovnici. </para>
+
+<note>
+<para
+>Uporabnik lahko vnese male ali velike črke. Črke so samodejno zapisane z velikimi črkami, tako da jih bo otrok povezal s tipkovnico. Vtipka lahko samo eno črko naenkrat.</para>
+<para
+>Ko vnesete črko v vnosno polje, vam ni treba pritisniti &Enter; in program počaka nekaj časa, preden preizkusi, ali je črka prava. To kratko čakanje je namenjeno puščanju časa majhnemu otroku, da razume, kaj je pravkar vtipkal, še posebej, če je to napačna črka. Ta čas lahko spremenite z uporabo menijske postavke <menuchoice
+><guimenu
+>Nastavitve</guimenu
+><guimenuitem
+>Konfiguriraj &klettres;...</guimenuitem
+></menuchoice
+> in strani <guilabel
+>Časovnik</guilabel
+>, ki vam bo prineslo pogovorno okno, v katerem lahko nastavite dva različna časa: enega za <guilabel
+>način za otroke</guilabel
+> in enega za <guilabel
+>način za odrasle</guilabel
+>. </para>
+</note>
+
+<para
+>Po prvem zapiranju &klettres; se nastavitev jezika shrani v konfiguracijsko datoteko. in se naslednjič naloži s stopnjo, na kateri ste bili. </para>
+<para
+>Način (otroški ali odrasli) je shranjen v konfiguracijski datoteki in se zato hrani, dokler ga ne spremenite.</para>
+<para
+>Črke se pojavljajo v naključnem vrstnem redu. Zaporedoma niso enaki.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Posnetek zaslona &klettres; 2. stopnja</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; raven2</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para
+>Tukaj je posnetek zaslona 2. stopnje z načinom <emphasis
+>otrok</emphasis
+>, temo <emphasis
+>Otrok</emphasis
+> in danščino.</para>
+
+<para
+>Če kliknete v kombinirano polje ravni in izberete <guilabel
+>Raven 2</guilabel
+> ali uporabite meni <guimenu
+>Raven</guimenu
+>, vas pripelje na raven 2. Na tej ravni uporabnik sliši samo zvok črke in mora vnesti pismo. Če se moti, mu pismo pomaga.</para>
+</sect1>
+
+<sect1 id="levels3-and4">
+<title
+>Ravni 3 in 4</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Posnetek zaslona &klettres; 3. stopnja</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres3.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; raven 3</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Tukaj si lahko ogledate &klettres; raven 3, način <emphasis
+>odrasli</emphasis
+>, tema <emphasis
+>Savana</emphasis
+> in češki jezik. </para>
+
+<para
+>Na ravni 3 uporabnik vidi zlog in sliši zvok. Nato mora v polje vnesti črke. Če je prva črka zvoka napačna, uporabnik ne more vpisati druge. Pismo izgine in poskusiti mora znova. Število črk je dve ali tri, odvisno od jezika.</para>
+
+<screenshot>
+<screeninfo
+>Posnetek zaslona &klettres; 4. stopnja</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres4.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; raven 4</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Tukaj si lahko ogledate &klettres; raven 4, <emphasis
+>otroški</emphasis
+> način, <emphasis
+>Puščava</emphasis
+> tema in slovaški jezik. </para>
+
+<para
+>Zvoki se prikažejo v naključnem vrstnem redu.</para
+> <para
+>Če kliknete kombinirano polje ravni ali uporabite meni <guimenu
+>Raven</guimenu
+> v menijski vrstici in izberete <guilabel
+>Raven 4</guilabel
+>, vas pripelje na raven 4. Na tej ravni uporabnik sliši samo zvok zlog in mora vnesti črke. Ta stopnja je za majhnega otroka precej težka.</para>
+
+</sect1>
+
+<sect1 id ="configuring">
+<title
+>Konfiguracijsko pogovorno okno</title>
+<para
+>Konfiguracijsko pogovorno okno ima dve strani: eno za <guilabel
+>Pisavo</guilabel
+> in eno za <guilabel
+>Časovnik</guilabel
+>.</para>
+
+<sect2 id="about-font">
+<title
+>O pisavi</title>
+
+<para
+>Pisavo, ki prikazuje črke, lahko preprosto spremenite. V nekaterih distribucijah je privzeta pisava, uporabljena iz sistema, res grda. V načinu za odrasle boste v menijskem elementu <menuchoice
+><guimenu
+>Nastavitve</guimenu
+><guimenuitem
+>Konfiguriraj &klettres;...</guimenuitem
+></menuchoice
+> našli <guilabel
+>Pisavo</guilabel
+> stran s pogovornim oknom za izbiro pisave. Nova pisava bo uporabljena tako za prikazano črko/zlog kot za uporabniško polje. </para>
+
+<warning>
+<para
+>Spreminjanje pisave je prav tako lepo, saj nekatere pisave (na primer Helvetica) ne prikazujejo pravilno vzhodnoevropskih jezikov, kot sta češčina in slovaščina. Če nekatere črke ali zlogi niso prikazani, spremenite pisavo in na primer izberite Arial. </para>
+</warning>
+
+<para
+>Tukaj lahko izberete tudi velikost, ki vam je najbolj všeč. Ta velikost bo ohranjena v konfiguraciji. </para>
+
+<screenshot>
+<screeninfo
+>Posnetek zaslona &klettres; Pogovorno okno za izbiro pisave</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres5.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; Pogovorno okno za izbiro pisave</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Tukaj si lahko ogledate &klettres; Pogovorno okno za izbiro pisave. </para>
+</sect2>
+
+<sect2 id="timers">
+<title
+>Časovnik</title>
+
+<para
+>Časovnik nastavi čas med dvema črkama &ie; čas, v katerem je črka prikazana. Enote so desetinke sekunde. </para>
+
+<para
+>Stran <guilabel
+>Časovnik</guilabel
+> v menijskem elementu <menuchoice
+><guimenu
+>Nastavitve</guimenu
+> <guimenuitem
+>Konfiguriraj &klettres;...</guimenuitem
+></menuchoice
+> ima dve nastavitvi časovnika: eno za <guilabel
+>Način za otroke</guilabel
+> in enega za <guilabel
+>način za odrasle</guilabel
+>. Privzete vrednosti so 4 desetinke sekunde za <guilabel
+>način za otroke</guilabel
+> in 2 desetinki sekunde za <guilabel
+>način za odrasle</guilabel
+>. Podaljšanje časa vam pusti več časa, da vidite svoje napake.</para>
+
+<screenshot>
+<screeninfo
+>Posnetek zaslona &klettres; Nastavitve časovnika</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres6.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Posnetek zaslona &klettres; Nastavitve časovnika</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+<sect1 id="Get-new-stuff">
+<title
+>Pridobivanje novega jezika</title>
+<para
+>Morda boste želeli uporabiti &klettres; za pomoč pri učenju novega jezika. Z uporabo menijske postavke <menuchoice
+><guimenu
+>Datoteka</guimenu
+> <guimenuitem
+>Pridobi abecedo v novem jeziku ...</guimenuitem
+></menuchoice
+> se prikaže novo pogovorno okno s seznamom razpoložljivih jezikov (vi za uporabo te funkcije morate biti povezani v internet)</para>
+<screenshot>
+<screeninfo
+>Pridobite pogovorno okno novega jezika</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Pridobite pogovorno okno novega jezika</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para
+>Kliknite gumb <guilabel
+>Namesti</guilabel
+> na desni strani jezika, ki ga želite namestiti.</para>
+<para
+>Upoštevajte, da imajo nekatere datoteke več MB, zato je lahko počasno, odvisno od vaše povezave.</para>
+<para
+>Ko je datoteka prenesena, se samodejno namesti in ko zaprete pogovorno okno <guilabel
+>Pridobite vroče nove stvari</guilabel
+>, boste videli nov jezik v meniju <guimenu
+>Jezik</guimenu
+> in ga lahko uporabljate takoj.</para>
+
+<para
+>Ko je jezik prenesen, lahko vidite gumb <guilabel
+>Namesti</guilabel
+>, ki se spremeni v <guilabel
+>Odstrani</guilabel
+>.</para>
+<para
+>Naslednji posnetek zaslona prikazuje nameščeno dansko.</para>
+<screenshot>
+<screeninfo
+>Danščina je nameščena</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Danščina je nameščena</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Referenca ukaza</title>
+
+<sect1 id="klettres-mainwindow">
+<title
+>Glavni &klettres; Okno</title>
+
+<sect2>
+<title
+>Meni Datoteka</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Datoteka</guimenu
+> <guimenuitem
+>Nov zvok</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Predvajaj</action
+> nov zvok.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>F5</keycap
+> </shortcut
+> <guimenu
+>Datoteka</guimenu
+> <guimenuitem
+>Ponovno predvajaj zvok</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Predvajaj</action
+> znova isti zvok.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Datoteka</guimenu
+> <guimenuitem
+>Pridobite abecedo v novem jeziku ...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Odpre</action
+> pogovorno okno <guilabel
+>Pridobite vroče nove stvari</guilabel
+> za &klettres; za prenos novega jezika.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Datoteka</guimenu
+> <guimenuitem
+>Zapri</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Zapusti</action
+> &klettres;.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Meni ravni</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Raven</guimenu
+> <guimenuitem
+>Raven 1</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Izberite</action
+> raven 1 (prikazana črka in zvok).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Raven</guimenu
+> <guimenuitem
+>Raven 2</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Izberite</action
+> raven 2 (brez prikazane črke, samo zvok).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Raven</guimenu
+> <guimenuitem
+>Raven 3</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Izberite</action
+> raven 3 (prikaz zloga in zvok).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Raven</guimenu
+> <guimenuitem
+>Raven 4</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Izberite</action
+> stopnjo 4 (zlog ni prikazan, samo zvok).</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+<sect2>
+<title
+>Jezikovni meni</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Jezik</guimenu
+> <guimenuitem
+>angleščina</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Izberite</action
+> angleški jezik.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Jezik</guimenu
+> <guimenuitem
+>francoščina</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Izberite</action
+> francoski jezik.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Meni Pogled</title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Poglej</guimenu
+> <guisubmenu
+>Teme</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Podmeni za <action
+>preklop</action
+> na temo Kid, Desert, Savannah ali Aqua.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>K</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Poglej</guimenu
+> <guimenuitem
+>Mode Kid</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Preklopi</action
+> otroški način: brez menijske vrstice.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>G</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Poglej</guimenu
+> <guimenuitem
+>Način za odrasle</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Preklopi</action
+> način za odrasle: običajni vmesnik.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Poleg tega &klettres; ima skupno &kde; Elementi menija <guimenu
+>Nastavitve</guimenu
+> in <guimenu
+>Pomoč</guimenu
+>, za več informacij preberite razdelke o <ulink url="help:/fundamentals/menus.html#menus-settings"
+>meniju z nastavitvami</ulink
+> in <ulink url="help:/fundamentals/menus.html#menus-help"
+>meni Pomoč</ulink
+> v &kde; Osnove. </para>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="sounds">
+<title
+>Dodajanje zvokov v &klettres;</title>
+
+<para
+>Če želite dodati zvoke v svojem jeziku, je to zelo enostavno. Posnemite zvoke abecede in jih postavite v mapo z imenom 'alpha'. Nato posnemite najnovejše zloge in jih shranite v mapo z imenom 'syllab'.</para
+> 
+<para
+>Ustvarite besedilno datoteko <filename
+>sounds.xml</filename
+>, po možnosti z &kate; kot urejevalnik ali drug urejevalnik z možnostjo drugačnega kodiranja. V to datoteko zapišite vse glasove abecede in zvoke zlogov, ki ste jih posneli, kot je ta primer za češki jezik:</para>
+<programlisting
+>&lt;klettres&gt;
+&lt;language code="cs"&gt;
+    &lt;menuitem&gt;
+      &lt;label&gt;&amp;Czech&lt;/label&gt;
+    &lt;/menuitem&gt;
+    &lt;alphabet&gt;
+        &lt;sound name="A" file="cs/alpha/a.ogg" /&gt;
+        ...
+    &lt;/alphabet&gt;
+    &lt;syllables&gt;
+        &lt;sound name="BA" file="cs/syllab/ba.ogg" /&gt;
+        ...
+    &lt;/syllables&gt;
+  &lt;/language&gt;
+&lt;/klettres&gt;</programlisting>
+<para
+>Zamenjajte "cs" z dvočrkovno kodo in "Czech" z imenom vašega jezika. Zapišite zvočna imena s posebnimi znaki vašega jezika z velikimi črkami v utf8.</para>
+
+<para
+>Poleg tega lahko poveste o posebnih črkah v vašem jeziku, tako da lahko preprosto ustvarimo posebno orodno vrstico <guimenuitem
+>Posebni znaki</guimenuitem
+>. Ustvarite besedilno datoteko <filename
+>cs.txt</filename
+> (zamenjajte "cs" z dvočrkovno kodo vašega jezika) z vsakim posebnim znakom vašega jezika z velikimi črkami v eni vrstici. In shranite obe besedilni datoteki s kodiranjem <quote
+>utf8</quote
+> (zgornji desni spustni nabiralnik v &kate; to omogoča).</para>
+
+<para
+>Zvoki morajo biti v formatu ogg in dovolj dolgi, da jih predvajalnik zvoka predvaja (dolgi med 1,5 in 2 sekundami, dodajte nekaj tišine, če so prekratki). Nato naredite arhiv vsega tega in ga pošljite na poštni seznam <email
+>kde-edu@kde.org</email
+>. </para>
+
+<para
+>Oglejte si <ulink url="https://edu.kde.org/klettres/add_language.php"
+>&klettres; spletno mesto</ulink
+> za najnovejša navodila o tem, kako dodati nov jezik. </para>
+</chapter>
+
+<chapter id="faq">
+<title
+>Vprašanja in odgovori</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Slika ozadja se ne prikaže.</para>
+</question>
+<answer>
+<para
+>Če zgradite &klettres; sami, morate konfigurirati z možnostjo <option
+>--prefix</option
+>, nastavljeno na vaš &kde; ali da dodate to mapo na svojo pot.</para
+> </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Ne slišim nobenih zvokov.</para>
+</question>
+<answer>
+<para
+>Prepričajte se, da &phonon; deluje na vašem sistemu. Če želite to narediti, odprite &systemsettings; in v kategoriji <guilabel
+>Strojna oprema</guilabel
+> kliknite <guilabel
+>Večpredstavnost</guilabel
+>. </para>
+ </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Ne vidim nekaterih črk na ikonah v posebni orodni vrstici <guimenuitem
+>Posebni znaki</guimenuitem
+>. Namesto tega vidim pravokotnike ali pa so ikone premajhne za nekatere jezike.</para>
+</question>
+<answer>
+<para
+>&klettres; v češčini in slovaščini potrebuje Arial in če te pisave nimate nameščene, vprašajte distribucijsko podporo, kako jo namestiti.</para
+> 
+<para
+>Če imate &Windows; na vašem računalniku lahko uporabite pisave TTF iz &Windows; (Arial je v teh) prek <guilabel
+>Upravljanje pisav</guilabel
+> v kategoriji <guilabel
+>Videz</guilabel
+> v &systemsettings; in dodajte &Windows; Mapa s pisavami.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Zakaj obstaja le petindvajset jezikov?</para>
+</question>
+<answer>
+<para
+>Za dodajanje novega jezika potrebujemo zvoke za abecedo in nekaj osnovnih zlogov. Nekdo, ki govori materni jezik novega jezika, mora posneti te zvoke v formatu ogg. Za 3. in 4. stopnjo mora zloge izbrati učitelj ali nekdo, ki ve, kako se otroci učijo: to morajo biti zlogi, ki se jih morate naučiti takoj za abecedo, da se dobro naučite osnov tega jezika. Če lahko to storite, pošljite e-pošto na <email
+>kde-edu@kde.org</email
+>. Oglejte si <ulink url="https://edu.kde.org/klettres/add_language.php"
+>&klettres; spletno mesto</ulink
+> za podrobna navodila o dodajanju novega jezika.</para
+> </answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Zasluge in licenca</title>
+
+<para
+>&klettres; </para>
+<para
+>Avtorske pravice za program 2001-2007 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+<para
+>Zelo sem hvaležen naslednjim ljudem, katerih prispevek je bil zelo dragocen: <itemizedlist>
+<listitem
+><para
+>Brazilski portugalski zvoki: Lindonjohnson Monte (oče) in Michelle Monte 09 let (sin) <email
+>lindon_johnson@brturbo.com.br</email
+></para
+> </listitem>
+<listitem
+><para
+>Češki zvoki: Eva Mikulčíková <email
+>evmi@seznam.cz</email
+></para
+> </listitem>
+<listitem
+><para
+>Danski zvoki: Erik Kjaer Pedersen <email
+>erik@binghamton.edu</email
+></para
+> </listitem>
+<listitem
+><para
+>Nizozemski zvoki: Geert Stams <email
+>geert@pa3csg.myweb.nl</email
+></para
+> </listitem>
+<listitem
+><para
+>Angleški zvoki: Robert Wadley <email
+>robntina@juno.com</email
+></para
+></listitem>
+<listitem
+><para
+>Francoski zvoki: Ludovic Grossard <email
+>grossard@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Nemški zvoki: Helmut Kriege <email
+>h.kriege@freenet.de</email
+></para
+></listitem>
+<listitem
+><para
+>Hebrejski zvoki: Assaf Gorgon <email
+>assafgordon@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Italijanski zvoki: Pietro Pasotti <email
+>pietro@itopen.it</email
+></para
+></listitem>
+<listitem
+><para
+>Kannada zvoki: Vikram Vincent <email
+>vincentvikram@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Nizkosaksonski zvoki: Manfred Wiese in Sönke Dibbern <email
+>s_dibbern@web.de</email
+></para
+></listitem>
+<listitem
+><para
+>Luganda zvoki: John Magoye in Cormac Lynch <email
+>cormaclynch@eircom.net</email
+></para
+></listitem>
+<listitem
+><para
+>Romanizirani hindujski zvoki: Vikas Kharat <email
+>kharat@sancharnet.in</email
+></para
+></listitem>
+<listitem
+><para
+>Španski zvoki: Ana Belén Caballero in Juan Pedro Paredes <email
+>neneta @iquis.com</email
+></para
+></listitem>
+<listitem
+><para
+>Slovaški zvoki: Silvia Motyčková in Jozef Říha <email
+>silviamotycka@seznam.cz</email
+></para
+></listitem>
+<listitem
+><para
+>Teluški zvoki: Pavithran Shakamuri <email
+>pavithran.s@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Izvirne ikone: &Primoz.Anzur; <email
+>zerokode@yahoo.com</email
+></para
+></listitem>
+<listitem
+><para
+>Podpora in navodila za kodiranje: &Robert.Gogolok; &Robert.Gogolok.mail;</para
+></listitem>
+<listitem
+><para
+>&SVG; ikona: Christopher Luetchford <email
+>chris@os11.com</email
+></para
+></listitem>
+<listitem
+><para
+>Koda za generiranje ikon posebnih znakov: Peter Hedlund <email
+>peter@peterandlinda.com</email
+></para
+></listitem>
+<listitem
+><para
+>Vrata v KConfig XT, pomoč pri kodiranju: &Waldo.Bastian; &Waldo.Bastian.mail;</para
+></listitem>
+<listitem
+><para
+>Otroci in odrasli &SVG; ikone, tema puščave: &Danny.Allen; <email
+>dannya40uk@yahoo.co.uk</email
+></para
+></listitem>
+<listitem
+><para
+>Pripomoček za nastavitev časovnika: Michael Goettsche <email
+>michael.goettsche@kdemail.net</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>Avtorske pravice za dokumentacijo 2001-2006 &Anne-Marie.Mahfouf;&Anne-Marie.Mahfouf.mail; </para>
+
+<para
+>Prevod: Jan Napast<email
+>jan.napast153@gmail.com
+></email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
