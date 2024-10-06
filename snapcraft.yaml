@@ -39,7 +39,7 @@ parts:
     source-type: local
     build-packages:
       - libpulse0
-    staage-packages:
+    stage-packages:
       - libpulse0
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
