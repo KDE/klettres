@@ -15,7 +15,12 @@ apps:
     desktop: usr/share/applications/org.kde.klettres.desktop
     command: usr/bin/klettres
     plugs:
-      - audio-record
+        - audio-record
+environment:
+  ALSA_CONFIG_PATH: "/snap/kf6-core22/current/etc/asound.conf"
+layout:
+  /usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/alsa-lib:
+    bind: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/alsa-lib
 package-repositories:
   - type: apt
     components:
@@ -35,6 +40,9 @@ parts:
     build-packages:
       - libpulse0
     stage-packages:
+      - libasound2
+      - libasound2-plugins
+      - libasound2-data
       - libpulse0
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
