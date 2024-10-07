@@ -16,11 +16,6 @@ apps:
     command: usr/bin/klettres
     plugs:
       - audio-record
-slots:
-  session-dbus-interface:
-    interface: dbus
-    name: org.kde.klettres
-    bus: session
 package-repositories:
   - type: apt
     components:
