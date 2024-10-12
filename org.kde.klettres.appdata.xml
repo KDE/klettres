@@ -32,6 +32,7 @@
   <name xml:lang="it">KLettres</name>
   <name xml:lang="ka">KLettres</name>
   <name xml:lang="ko">KLettres</name>
+  <name xml:lang="lv">KLettres</name>
   <name xml:lang="nds">KLettres</name>
   <name xml:lang="nl">KLettres</name>
   <name xml:lang="nn">KBokstavar</name>
@@ -72,6 +73,7 @@
   <summary xml:lang="it">Impara l'alfabeto</summary>
   <summary xml:lang="ka">ისწავლეთ ანბანი</summary>
   <summary xml:lang="ko">알파벳 익히기</summary>
+  <summary xml:lang="lv">Mācieties alfabētu</summary>
   <summary xml:lang="nds">Dat Alfabeet lehren</summary>
   <summary xml:lang="nl">Leer het alfabet</summary>
   <summary xml:lang="nn">Lær alfabetet</summary>
@@ -112,6 +114,7 @@
     <p xml:lang="it">KLettres è un'applicazione progettata specificatamente per aiutare gli utenti ad imparare l'alfabeto di una nuova lingua, e poi a leggere semplici sillabe. L'utente può essere un bambino dai due anni e mezzo in su, oppure un adulto che vuole imparare le basi di una lingua straniera. Al momento sono supportate 25 lingue: arabo, portoghese del Brasile, ceco, danese, olandese, inglese britannico, inglese americano, inglese fonetico, francese, tedesco, ebraico, ungherese, italiano, kannada, basso sassone, malese, norvegese bokmål, punjabi, luganda, hindi romanizzato, russo, spagnolo, slovacco, telugu e ucraino.</p>
     <p xml:lang="ka">KLettres აპლიკაციაა, რომელიც სპეციალურადაა განკუთვნილი, რომ მომხმარებელს ახალი ენის ანბანი და მარტივი მარცვლების კითხვა ასწავლოს. მომხმარებელი შეიძლება იყოს ბავშვი 2.5 წლიდან ან ზრდასრული, რომელსაც უცხო ენის საბაზისო ცოდნა სჭირდება. ხელმისაწვდომია 25 ენა: არაბულ, ბრაზილიური პორტუგალიური, ჩეხური, დანიური, ჰოლანდიური, ბრიტანული ინგლისური, ამერიკული ინგლისური, ფონიკური ინგლისური, ფრანგული, გერმანული, ივრითი, უნგრული, იტალიური, კენადა, ქვემო საქსონური, მალაური, ნორგვეგიული ბოქმელი, პუნჯაბი, ლუგანდა, რომანიზებული ინდური, რუსული, ესპანური, სლოვაკური, ტელუგუ და უკრაინული. KLettres-ს მცირე ასაკის მომხმარებლებისთვის სპეციალური მომხმარებლის ინტერფეისი და თემები გააჩნია.</p>
     <p xml:lang="ko">KLettres는 새 언어의 글자를 익히고 간단한 음절을 읽는 법을 연습하는 도구입니다. 2세 어린이부터 외국어를 배우려는 성인까지 모든 학습자에게 어울립니다. 현재 다음 25개 언어를 지원합니다: 네덜란드어, 노르웨이어 보크몰, 덴마크어, 독일어, 러시아어, 루간다어, 말라얄람어, 미국 영어, 브라질 포르투갈어, 스페인어, 슬로바키아어, 아랍어, 영국 영어, 우크라이나어, 이탈리아어, 저지 독일, 체코어, 칸나다어, 텔루구어, 파닉스 영어, 펀자브어, 프랑스어, 헝가리어, 히브리어, 힌디어(로마자). KLettres는 어린이용 사용자 인터페이스와 테마를 지원합니다.</p>
+    <p xml:lang="lv">„KLettres“ programma ir paredzēta, lai mācītos citu valodu alfabētu un vienkāršu zilbju lasīšanu. Tās lietotāji var būt mazi bērni no divarpus gadu vecuma vai pieaugušie, kuri vēlas apgūt jaunas svešvalodas pamatus. Šobrīd ir pieejamas 25 valodas: arābu, brazīliešu portugāļu, čehu, dāņu, holandiešu, britu angļu, ASV angļu, angļu skaņas, franču, vācu, ivrits, unāru, itāļu, kannadu, lejasvācu, malajālamu, norvēģu (būkmols), pandžabu, lugandu, hindi ar latīņu burtiem, krievu, spāņu, slovāku, telugu un ukraiņu. „KLettres“ sniedz īpašu lietotāju saskarni un motīvus jaunākiem lietotājiem.</p>
     <p xml:lang="nds">KLettres is en Programm, dat Brukers hölpt, dat Alfabet in en nieg Spraak to lehren un denn ok eenfach Sülven in disse Spraak to lesen. De Bruker kann en lütt Blaag vun tweeenhalf Johr oder en Opwussen wesen, de dat Grundweten vun en nieg Spraak lehren will. Opstunns sünd 25 Spraken verföögbor: Araabsch, Brasiliaansch Portugeesch, Tschechsch, Däänsch, Nedderlannsch, Britsch Engelsch, US Engelsch, Foneetsch Engelsch, Franzöösch, Hoochdüütsch, Hebrääsch, Ungaarsch, Italieensch, Kannadaansch, Plattdüütsch, Malayalaamsch, Norweegsch (Bokmål), Pandschaabsch, Lugandsch, Romaniseert Hindi, Russ'sch, Spaansch, Slowaaksch, Telugu un Ukrainsch. KLetrres hett en besünner Böversiet un Mustern för jünger Brukers.</p>
     <p xml:lang="nl">KLettres is een toepassing speciaal ontworpen om de gebruiker te helpen bij het leren van het alfabet van een nieuwe taal en daarna het leren lezen van eenvoudige zinnen. De gebruiker kan een jong kind zijn in de leeftijd van twee en een half of een volwassene die de basis van een vreemde taal wil leren. Er zijn nu 25 talen beschikbaar: Arabisch, Braziliaans Portugees, Tsjechisch, Deens, Nederlands, Brits Engels, VS Engels, Fonetisch Engels, Frans, Duits, Hebreeuws, Hongaars, Italiaans, Kannada, Nedersaksisch, Malayalam, Noors Bokmål, Punjabi, Luganda, Geromaniseerd Hindi, Russisch, Spaans, Slowaaks, Telugu en Oekraïens. KLettres biedt een speciaal gebruikersinterface en thema's voor jonge gebruikers.</p>
     <p xml:lang="nn">KLettres er eit program du kan bruka til å læra alfabetet i ulike språk og så læra å lesa enkle stavingar. Programmet passar både for ungar frå to eit halvt år og oppover og for å vaksne som vil få i lita innføring i eit nytt språk. Det er 25 støtta språk: arabisk, Brasil-portugisisk, dansk, engelsk (britisk, amerikansk og fonetisk), fransk, hebraisk, italiensk, kannada, luganda, malayalam, nederlandsk, norsk (bokmål), punjabi, romanisert hindi, russisk, slovakisk, spansk, telugu, tsjekkisk, tysk, ukrainsk og ungarsk. For dei yngste har programmet ei tilpassa brukarflate og eit eige tema.</p>
@@ -157,6 +160,7 @@
       <caption xml:lang="it">Sessione di apprendimento in KLettres</caption>
       <caption xml:lang="ka">KLettres -ის სესია</caption>
       <caption xml:lang="ko">KLettres 연습 세션</caption>
+      <caption xml:lang="lv">„KLettres“ mācību sesija</caption>
       <caption xml:lang="nl">Trainingsessie van KLettres</caption>
       <caption xml:lang="nn">Læreøkt i KLettres</caption>
       <caption xml:lang="pl">Sesja ćwiczeń z KLettres</caption>
