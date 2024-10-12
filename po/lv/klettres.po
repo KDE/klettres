@@ -4,31 +4,32 @@
 # Gints Polis <gintam@inbox.lv>, 2003.
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Einars Sprugis <einars8@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-05 01:33+0000\n"
-"PO-Revision-Date: 2012-01-11 21:30+0200\n"
-"Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
-"Language-Team: Latvian <locale@laka.lv>\n"
+"PO-Revision-Date: 2024-10-10 18:49+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Gints Polis, Einārs Sprūģis"
+msgstr "Gints Polis, Einārs Sprūģis, Toms Trasūns"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "gintam@inbox.lv, einars8@gmail.com"
+msgstr "gintam@inbox.lv, einars8@gmail.com, toms.trasuns@posteo.net"
 
 #: klettres.cpp:91
 #, kde-format
@@ -39,16 +40,16 @@ msgid ""
 "Please install this file and start KLettres again.\n"
 "\n"
 msgstr ""
-"sounds.xml fails nav atrasts \n"
+"„sounds.xml“ datne nav atrasta mapē \n"
 "$KDEDIR/share/apps/klettres/data/\n"
 "\n"
-"Lūdzu uzinstalējat šo failu un palaidiet KLettres no jauna.\n"
+"Ieinstalējiet šo datni un ieslēdziet „KLettres“ no jauna.\n"
 "\n"
 
 #: klettres.cpp:94
 #, kde-format
 msgid "KLettres - Error"
-msgstr "KLettres - Kļūda"
+msgstr "KLettres — Kļūda"
 
 #: klettres.cpp:116
 #, kde-format
@@ -66,8 +67,8 @@ msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
 "Sound."
 msgstr ""
-"Varat atskaņot jauno skaņu, noklikšķinot šo pogu vai lietojot izvēlni "
-"'Fails', 'Jauna skaņa'."
+"Varat atskaņot jauno skaņu, noklikšķinot uz šīs pogas vai lietojot izvēlni "
+"„Datne“, „Jauna skaņa“."
 
 #: klettres.cpp:124
 #, kde-format
@@ -91,7 +92,7 @@ msgid ""
 "File menu, Replay Sound."
 msgstr ""
 "Varat atkārtot to pašu skaņu vēlreiz, nospiežot šo pogu vai lietojot izvēlni "
-"'Fails', 'Atkārtot skaņu'."
+"„Fails“, „Atkārtot skaņu“."
 
 #: klettres.cpp:140
 #, kde-format
@@ -102,7 +103,7 @@ msgstr "Līm&enis"
 #: klettres.cpp:141
 #, kde-format
 msgid "Select the level"
-msgstr "Izvēlēties līmeni"
+msgstr "Izvēlieties līmeni"
 
 #: klettres.cpp:142
 #, kde-format
@@ -111,9 +112,10 @@ msgid ""
 "does not display the letter, you only hear it; level 3 displays a syllable "
 "and you hear it; level 4 does not display the syllable, you only hear it."
 msgstr ""
-"Varat izvēlēties līmeni: 1. līmenī tiek parādīts burts un jūs to dzirdat; 2. "
-"līmenī burts netiek rādīts, jūs to tikai dzirdat; 3. līmenī tiek parādīta "
-"zilbe un jūs to dzirdat; 4. līmenī zilbe netiek rādīta, jūs to tikai dzirdat."
+"Varat izvēlēties līmeni: pirmajā līmenī ir redzams burts un dzirdama tā "
+"skaņa; otrajā līmenī burtu neredzat, bet to tikai dzirdat; trešajā līmenī "
+"redzat un dzirdat zilbi; ceturtajā līmenī zilbi neredzat, bet to tikai "
+"dzirdat."
 
 #: klettres.cpp:145
 #, kde-format
@@ -126,19 +128,19 @@ msgstr "&Valoda"
 msgctxt "@item:inlistbox choose level"
 msgid "Level %1"
 msgid_plural "Level %1"
-msgstr[0] "%1.līmenis"
-msgstr[1] "%1.līmenis"
-msgstr[2] "%1.līmenis"
+msgstr[0] "%1. līmenis"
+msgstr[1] "%1. līmenis"
+msgstr[2] "%1. līmenis"
 
 #: klettres.cpp:156
 #, kde-format
 msgid "Themes"
-msgstr "Tēmas"
+msgstr "Motīvi"
 
 #: klettres.cpp:159
 #, kde-format
 msgid "Select the theme"
-msgstr "Izvēlieties tēmu"
+msgstr "Izvēlieties motīvu"
 
 #: klettres.cpp:160
 #, kde-format
@@ -146,13 +148,13 @@ msgid ""
 "Here you can change the theme for KLettres. A theme consists in the "
 "background picture and the font color for the letter displayed."
 msgstr ""
-"Šeit varat mainīt KLettres tēmu. Tēma sastāv no fona attēla un attēlotā "
-"burta fonta krāsas."
+"Šeit varat mainīt „KLettres“ motīvu. Motīvs sastāv no fona attēla un "
+"attēlotā burta fonta krāsas."
 
 #: klettres.cpp:163
 #, kde-format
 msgid "Mode Kid"
-msgstr "Bērna režīms"
+msgstr "Bērnu režīms"
 
 #: klettres.cpp:167
 #, kde-format
@@ -160,18 +162,18 @@ msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
 "mode. The Kid mode has no menubar and the font is bigger in the statusbar."
 msgstr ""
-"Ja esat pieaugušā režīmā, nospiežot šo pogu, tiks ieslēgts bērna režīms. "
-"Bērna režīmā nav izvēlnes joslas, un fonts statusa joslā ir lielāks."
+"Ja esat pieaugušo režīmā, nospiežot šo pogu, ieslēgsies bērnu režīms. Bērnu "
+"režīmā nav izvēlnes joslas, bet fonts statusa joslā ir lielāks."
 
 #: klettres.cpp:170
 #, kde-format
 msgid "Mode Grown-up"
-msgstr "Pieaugušā režīms"
+msgstr "Pieaugušo režīms"
 
 #: klettres.cpp:174
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
-msgstr "Pieaugušā režīms ir normālais režīms, kur varat redzēt izvēlnes joslu."
+msgstr "Pieaugušo režīms ir normālais režīms, kur varat redzēt izvēlnes joslu."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
 #: klettres.cpp:210 klettres.kcfg:51
@@ -190,10 +192,9 @@ msgid "Timer"
 msgstr "Taimeris"
 
 #: klettres.cpp:212
-#, fuzzy, kde-format
-#| msgid "Timer setting widgets"
+#, kde-format
 msgid "Timer Settings"
-msgstr "Taimera iestatījumu sīkrīki"
+msgstr "Taimera iestatījumi"
 
 #: klettres.cpp:230 klettres.cpp:298
 #, kde-format
@@ -204,22 +205,22 @@ msgstr "(%1. līmenis)"
 #: klettres.cpp:341
 #, kde-format
 msgid "Grown-up mode is currently active"
-msgstr "Pieaugušā režīms pašreiz ir aktīvs"
+msgstr "Šobrīd ieslēgts ir pieaugušo režīms"
 
 #: klettres.cpp:342
 #, kde-format
 msgid "Switch to Kid mode"
-msgstr "Pārslēgt uz bērna režīmu"
+msgstr "Pārslēgties uz bērnu režīmu"
 
 #: klettres.cpp:360
 #, kde-format
 msgid "Kid mode is currently active"
-msgstr "Bērna režīms pašreiz ir aktīvs"
+msgstr "Šobrīd ieslēgts ir bērnu režīms"
 
 #: klettres.cpp:361
 #, kde-format
 msgid "Switch to Grown-up mode"
-msgstr "Pārslēgt uz pieaugušā režīmu"
+msgstr "Pārslēgties uz pieaugušo režīmu"
 
 #: klettres.cpp:382
 #, kde-format
@@ -227,8 +228,8 @@ msgid ""
 "File $KDEDIR/share/apps/klettres/%1.txt not found;\n"
 "please check your installation."
 msgstr ""
-"Fails $KDEDIR/share/apps/klettres/%1.txt nav atrasts;\n"
-"lūdzu, pārbaudiet jūsu instalāciju!"
+"Datne „$KDEDIR/share/apps/klettres/%1.txt“ nav atrasta.\n"
+"Pārbaudiet instalāciju!"
 
 #: klettres.cpp:385
 #, kde-format
@@ -245,13 +246,13 @@ msgstr "Valoda"
 #: klettres.kcfg:14
 #, kde-format
 msgid "Theme"
-msgstr "Tēma"
+msgstr "Motīvs"
 
 #. i18n: ectx: label, entry (MenuBarBool), group (General)
 #: klettres.kcfg:23
 #, kde-format
 msgid "Whether the menubar is shown or hidden"
-msgstr "Vai izvēlnes josla tiek rādīta vai slēpta"
+msgstr "Rādīt vai slēpt izvēļņu joslu"
 
 #. i18n: ectx: label, entry (Mode), group (General)
 #: klettres.kcfg:27
@@ -281,7 +282,7 @@ msgstr "Pieaugušā taimeris"
 #: klettresui.rc:4
 #, kde-format
 msgid "&File"
-msgstr "&Fails"
+msgstr "&Datne"
 
 #. i18n: ectx: Menu (look_mode)
 #: klettresui.rc:15
@@ -310,13 +311,13 @@ msgstr "Speciālās rakstzīmes"
 #: klettresview.cpp:32
 #, kde-format
 msgid "Type the letter or syllable that you just heard"
-msgstr "Uzrakstiet burtu vai zilbi, kuru tikko dzirdējāt"
+msgstr "Rakstiet burtu vai zilbi, kuru tikko dzirdējāt"
 
 #: klettresview.cpp:131
 #, kde-format
 msgctxt "%1 is uppercase letter, %2 is the same in lowercase"
 msgid "%1 / %2"
-msgstr ""
+msgstr "%1 / %2"
 
 #: kltheme.cpp:36
 #, kde-format
@@ -340,17 +341,17 @@ msgstr "Savanna"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Aqua"
-msgstr ""
+msgstr "Ūdens"
 
 #: langutils.cpp:88
 #, kde-format
 msgid "Romanized Hindi"
-msgstr "Romanizētā hindi"
+msgstr "Hindi ar latīņu alfabētu"
 
 #: langutils.cpp:90
 #, kde-format
 msgid "Luganda"
-msgstr "Luganda"
+msgstr "Lugandu"
 
 #: langutils.cpp:92
 #, kde-format
@@ -360,7 +361,7 @@ msgstr "Angļu skaņas"
 #: langutils.cpp:94
 #, kde-format
 msgid "Tswana"
-msgstr ""
+msgstr "Cvanu"
 
 #: langutils.cpp:99
 #, kde-format
@@ -382,16 +383,16 @@ msgid ""
 "\n"
 "25 languages are available."
 msgstr ""
-"KLettres palīdz ļoti jauniem bērniem vai pieaugušiem mācīties \n"
-"jaunu valodu, saistot skaņas un \n"
-"burtus šai valodā.\n"
+"„KLettres“ palīdz ļoti jauniem bērniem vai pieaugušajiem mācīties \n"
+"jaunu valodu, saistot valodas skaņas un \n"
+"burtus.\n"
 "\n"
 "Ir pieejamas 25 valodas."
 
 #: main.cpp:28
 #, kde-format
 msgid "(C) 2001-2011 Anne-Marie Mahfouf"
-msgstr "(C) 2001-2011 Anne-Marie Mahfouf"
+msgstr "(C) 2001—2011 Anne-Marie Mahfouf"
 
 #: main.cpp:29
 #, kde-format
@@ -406,7 +407,7 @@ msgstr "Marc Cheng"
 #: main.cpp:31
 #, kde-format
 msgid "Kids and grown-up oxygen icons"
-msgstr "Bērnu un pieaugušo Oxygen ikonas"
+msgstr "Bērnu un pieaugušo „Oxygen“ ikonas"
 
 #: main.cpp:32
 #, kde-format
@@ -446,7 +447,7 @@ msgstr "Waldo Bastian"
 #: main.cpp:39
 #, kde-format
 msgid "Port to KConfig XT, coding help"
-msgstr "Portēšana uz KConfig XT, palīdzība kodēšanā"
+msgstr "Portēšana uz „KConfig XT“, palīdzība kodēšanā"
 
 #: main.cpp:40
 #, kde-format
@@ -456,7 +457,7 @@ msgstr "Pino Toscano"
 #: main.cpp:41
 #, kde-format
 msgid "Code cleaning, Theme class"
-msgstr "Koda attīrīšana, tēmu klase"
+msgstr "Koda attīrīšana, motīvu klase"
 
 #: main.cpp:42
 #, kde-format
@@ -471,32 +472,31 @@ msgstr "Taimera iestatījumu sīkrīki"
 #: main.cpp:44
 #, kde-format
 msgid "Laurent Navet"
-msgstr ""
+msgstr "Laurent Navet"
 
 #: main.cpp:45
 #, kde-format
 msgid "Port to KDE Frameworks 5"
-msgstr ""
+msgstr "Ports uz „KDE Frameworks 5“"
 
 #: soundfactory.cpp:86
 #, kde-format
 msgid "Error while loading the sound names."
-msgstr "Kļūda ielādējot skaņu nosaukumus."
+msgstr "Kļūda, ielādējot skaņu nosaukumus."
 
 #: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
-#, fuzzy, kde-format
-#| msgid "tenths of second"
+#, kde-format
 msgid "1 tenth of second"
 msgid_plural "%1 tenths of second"
-msgstr[0] "sekundes desmitdaļas"
-msgstr[1] "sekundes desmitdaļas"
-msgstr[2] "sekundes desmitdaļas"
+msgstr[0] "sekundes %1 desmitdaļa"
+msgstr[1] "sekundes %1 desmitdaļas"
+msgstr[2] "sekundes %1 desmitdaļu"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: timerui.ui:51
 #, kde-format
 msgid "Set the time between 2 letters."
-msgstr "Iestatiet laiku starp 2 burtiem."
+msgstr "Iestatiet laiku starp diviem burtiem."
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_KidTimer)
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_GrownTimer)
@@ -512,8 +512,9 @@ msgid ""
 "You can set the time between two letters in Kid mode. Default is 4 tenths of "
 "seconds but younger children might need longer time."
 msgstr ""
-"Bērna režīmā jūs varat iestatīt laiku starp diviem burtiem. Noklusējums ir 4 "
-"sekundes desmitdaļas, bet jaunākiem bērniem būtu vajadzīgs ilgāks laiks."
+"Bērnu režīmā varat iestatīt laiku starp diviem burtiem. Noklusējums ir "
+"četras sekundes desmitdaļas, bet jaunākiem bērniem var būt vajadzīgs ilgāks "
+"laiks."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: timerui.ui:122
@@ -529,7 +530,7 @@ msgstr ""
 "white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
 "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
 "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px;\">Bērna režīms</p></body></html>"
+"indent:0; text-indent:0px;\">Bērnu režīms</p></body></html>"
 
 #. i18n: ectx: property (whatsThis), widget (QSlider, kcfg_GrownTimer)
 #: timerui.ui:187
@@ -538,8 +539,8 @@ msgid ""
 "You can set the time between two letters in Grown-up mode. Default is 2 "
 "tenths of seconds."
 msgstr ""
-"Pieaugušā režīmā jūs varat iestatīt laiku starp diviem burtiem. Noklusējums "
-"ir 2 sekundes desmitdaļas."
+"Pieaugušo režīmā varat iestatīt laiku starp diviem burtiem. Noklusējums ir "
+"divas sekundes desmitdaļas."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: timerui.ui:215
@@ -555,7 +556,7 @@ msgstr ""
 "white-space: pre-wrap; font-family:Sans Serif; font-size:9pt; font-"
 "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
 "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
-"indent:0; text-indent:0px;\">Pieaugušā režīms</p></body></html>"
+"indent:0; text-indent:0px;\">Pieaugušo režīms</p></body></html>"
 
 #, fuzzy
 #~| msgid "KLettres"
