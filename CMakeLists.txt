@@ -53,7 +53,7 @@ find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
 
 include_directories (${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${PHONON_INCLUDE_DIR})
 ecm_set_disabled_deprecation_versions(QT 6.8.0
-     KF 6.5
+     KF 6.9.0
     )
 
 
