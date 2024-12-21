@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-05 01:33+0000\n"
-"PO-Revision-Date: 2024-12-14 01:42+0530\n"
+"PO-Revision-Date: 2024-12-20 12:26+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -196,7 +196,7 @@ msgstr "टाइमर सेटिंग्स्"
 #, kde-format
 msgctxt "@info:status the current level chosen"
 msgid "(Level %1)"
-msgstr "(स्तरः %1) २."
+msgstr "(स्तरः %1)"
 
 #: klettres.cpp:341
 #, kde-format
