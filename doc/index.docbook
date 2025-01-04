@@ -564,15 +564,6 @@ path.</para> </answer>
 </qandaentry>
 <qandaentry>
 <question>
-<para>I do not hear any sounds.</para>
-</question>
-<answer>
-<para>Make sure that &phonon; is working on your system. To do so, open &systemsettings; and in the <guilabel>Hardware</guilabel> category click on <guilabel>Multimedia</guilabel>.
-</para>
- </answer>
-</qandaentry>
-<qandaentry>
-<question>
 <para>I do not see  some letters on the icons on the special <guimenuitem>Special Characters</guimenuitem> toolbar. I see rectangles instead or the icons are too small for some languages.</para>
 </question>
 <answer>
