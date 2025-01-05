@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:33+0000\n"
+"POT-Creation-Date: 2025-01-05 00:37+0000\n"
 "PO-Revision-Date: 2002-07-02 08:32+200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -459,7 +459,7 @@ msgstr ""
 msgid "Port to KDE Frameworks 5"
 msgstr ""
 
-#: soundfactory.cpp:86
+#: soundfactory.cpp:89
 #, kde-format
 msgid "Error while loading the sound names."
 msgstr ""

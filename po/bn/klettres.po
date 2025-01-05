@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres (KDE 3.5)\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:33+0000\n"
+"POT-Creation-Date: 2025-01-05 00:37+0000\n"
 "PO-Revision-Date: 2006-03-29 23:30+0600\n"
 "Last-Translator: Progga <progga@BengaLinux.Org>\n"
 "Language-Team: Bangla <kde-translation@BengaLinux.Org>\n"
@@ -488,7 +488,7 @@ msgstr ""
 msgid "Port to KDE Frameworks 5"
 msgstr ""
 
-#: soundfactory.cpp:86
+#: soundfactory.cpp:89
 #, kde-format
 msgid "Error while loading the sound names."
 msgstr "ধ্বনির নাম লোড করার সময় সমস্যা হয়েছে."

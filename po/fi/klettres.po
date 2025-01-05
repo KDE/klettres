@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:33+0000\n"
+"POT-Creation-Date: 2025-01-05 00:37+0000\n"
 "PO-Revision-Date: 2022-05-01 22:12+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -481,7 +481,7 @@ msgstr "Laurent Navet"
 msgid "Port to KDE Frameworks 5"
 msgstr "Sovitus KDE Frameworks 5:een"
 
-#: soundfactory.cpp:86
+#: soundfactory.cpp:89
 #, kde-format
 msgid "Error while loading the sound names."
 msgstr "Virhe ladattaessa äänien nimiä."

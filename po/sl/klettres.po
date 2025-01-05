@@ -1,6 +1,6 @@
 # Translation of klettres.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
-# $Id: klettres.po 1666566 2023-12-05 02:00:01Z scripty $
+# $Id: klettres.po 1699440 2025-01-05 01:18:48Z scripty $
 # $Source$
 #
 # Andrej Vernekar <andrej.vernekar@moj.net>, 2002.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:33+0000\n"
+"POT-Creation-Date: 2025-01-05 00:37+0000\n"
 "PO-Revision-Date: 2020-12-31 09:05+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -486,7 +486,7 @@ msgstr "Laurent Navet"
 msgid "Port to KDE Frameworks 5"
 msgstr "Predelava za Ogrodja KDE 5"
 
-#: soundfactory.cpp:86
+#: soundfactory.cpp:89
 #, kde-format
 msgid "Error while loading the sound names."
 msgstr "Napaka med nalaganjem zvokovnih imen."

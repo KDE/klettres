@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-05 01:33+0000\n"
+"POT-Creation-Date: 2025-01-05 00:37+0000\n"
 "PO-Revision-Date: 2010-11-07 18:57+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -493,7 +493,7 @@ msgstr ""
 msgid "Port to KDE Frameworks 5"
 msgstr ""
 
-#: soundfactory.cpp:86
+#: soundfactory.cpp:89
 #, kde-format
 msgid "Error while loading the sound names."
 msgstr "Pogreška tijekom učitavanja naziva glasova."
