@@ -837,20 +837,6 @@
 <qandaentry>
 <question>
 <para
->Je n'entends aucun son.</para>
-</question>
-<answer>
-<para
->Assurez vous que &phonon; fonctionne sur votre système. Pour ce faire, ouvrez la &systemsettings; et dans la catégorie <guilabel
-> Matériel</guilabel
-> cliquez sur <guilabel
->Multimédia</guilabel
->. </para>
- </answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para
 >Je ne vois pas certaines lettres sur les icônes de la barre d'outils des <guimenuitem
 >Caractères spéciaux</guimenuitem
 >. Je vois des rectangles à la place ou les icônes sont trop petites pour certaines langues.</para>

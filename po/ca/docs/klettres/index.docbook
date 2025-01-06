@@ -847,20 +847,6 @@
 <qandaentry>
 <question>
 <para
->No escolto cap so.</para>
-</question>
-<answer>
-<para
->Assegureu-vos que el &phonon; està funcionant en el sistema. Per a fer-ho, obriu l'&systemsettings; i feu clic a la categoria <guilabel
->Maquinari</guilabel
-> en la secció <guilabel
->Multimèdia</guilabel
->. </para>
- </answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para
 >No trobo algunes lletres en les icones dels <guimenuitem
 >Caràcters especials</guimenuitem
 > de la barra d'eines. Només veig rectangles o les icones són massa petites per a alguns idiomes.</para>
