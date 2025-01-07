@@ -877,20 +877,6 @@
 <qandaentry>
 <question>
 <para
->Non sento alcun suono.</para>
-</question>
-<answer>
-<para
->Assicurati che &phonon; sia in esecuzione nel tuo sistema. Per farlo, apri le &systemsettings; e fai clic su <guilabel
->Multimedia</guilabel
->, che si trova nella categoria <guilabel
->Hardware</guilabel
->. </para>
- </answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para
 >Non vedo alcune lettere sulle icone della barra degli strumenti <guimenuitem
 >Caratteri speciali</guimenuitem
 >, al loro posto ci sono dei rettangoli, oppure le icone sono troppo piccole per alcune lingue.</para>
