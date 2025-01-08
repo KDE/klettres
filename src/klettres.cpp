@@ -243,7 +243,7 @@ void KLettres::loadSettings()
 
 void KLettres::slotDownloadNewStuff()
 {
-    KNSWidgets::Dialog *dialog = new KNSWidgets::Dialog(QStringLiteral("khangman.knsrc"), this);
+    KNSWidgets::Dialog *dialog = new KNSWidgets::Dialog(QStringLiteral("klettres.knsrc"), this);
     dialog->open();
     connect(dialog, &KNSWidgets::Dialog::finished, this, [this, dialog] {
         const QList<KNSCore::Entry> entries = dialog->changedEntries();
