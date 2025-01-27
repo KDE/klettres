@@ -11,13 +11,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013.
 # Zerrin Cakmakkaya <zerrin@uludag.org.tr>, 2005.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeedu-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-05 01:33+0000\n"
-"PO-Revision-Date: 2024-09-23 15:21+0300\n"
+"PO-Revision-Date: 2025-01-26 13:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -49,13 +49,13 @@ msgstr ""
 "$KDEDIR/share/apps/klettres/data/ içinde\n"
 "sounds.xml dosyası bulunamadı\n"
 "\n"
-"Lütfen bu dosyayı kurun ve KLetters'ı yeniden başlatın.\n"
+"Lütfen bu dosyayı kurun ve K Harfler’i yeniden başlatın.\n"
 "\n"
 
 #: klettres.cpp:94
 #, kde-format
 msgid "KLettres - Error"
-msgstr "K Harfler - Hata"
+msgstr "K Harfler — Hata"
 
 #: klettres.cpp:116
 #, kde-format
@@ -73,13 +73,13 @@ msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
 "Sound."
 msgstr ""
-"Bu düğmeyi tıklayarak veya Dosya menüsü Yeni Ses'i kullanarak yeni bir ses "
-"çalabilirsiniz."
+"Bu düğmeyi tıklayarak veya “Dosya → Yeni Ses” ögesini kullanarak yeni bir "
+"ses çalabilirsiniz."
 
 #: klettres.cpp:124
 #, kde-format
 msgid "Get Alphabet in New Language..."
-msgstr "Yeni Dilde Alfabe Al..."
+msgstr "Yeni Dilde Abece Al…"
 
 #: klettres.cpp:129
 #, kde-format
@@ -97,8 +97,8 @@ msgid ""
 "You can replay the same sound again by clicking this button or using the "
 "File menu, Replay Sound."
 msgstr ""
-"Bu düğmeyi tıklayarak veya Dosya menüsü, Sesi Yeniden Çal'ı kullanarak aynı "
-"sesi yeniden çalabilirsiniz."
+"Bu düğmeyi tıklayarak veya “Dosya → Sesi Yeniden Çal” ögesini kullanarak "
+"aynı sesi yeniden çalabilirsiniz."
 
 #: klettres.cpp:140
 #, kde-format
@@ -402,7 +402,7 @@ msgstr "© 2001–2011 Anne–Marie Mahfouf"
 #: main.cpp:29
 #, kde-format
 msgid "Anne-Marie Mahfouf"
-msgstr "Anne-Marie Mahfouf"
+msgstr "Anne–Marie Mahfouf"
 
 #: main.cpp:30
 #, kde-format
@@ -462,7 +462,7 @@ msgstr "Pino Toscano"
 #: main.cpp:41
 #, kde-format
 msgid "Code cleaning, Theme class"
-msgstr "Kod temizliği, Tema sınıfı"
+msgstr "Kod temizliği, tema sınıfı"
 
 #: main.cpp:42
 #, kde-format
