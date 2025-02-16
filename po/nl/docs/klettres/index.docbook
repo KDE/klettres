@@ -833,20 +833,6 @@
 <qandaentry>
 <question>
 <para
->Ik hoor niets.</para>
-</question>
-<answer>
-<para
->Verzeker u ervan dat &phonon; werkt op uw systeem. Dat gaat als volgt: open &systemsettings; en in de categorie <guilabel
->Hardware</guilabel
-> klik op <guilabel
->Multimedia</guilabel
->. </para>
- </answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para
 >Ik kan niet alle letters zien op de pictogrammen in de speciale werkbalk <guimenuitem
 >Speciale tekens</guimenuitem
 >. Ik zie blokjes in plaats daarvan of de pictogrammen zijn te klein voor sommige talen.</para>
