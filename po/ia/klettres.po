@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the klettres package.
 #
-# SPDX-FileCopyrightText: 2023 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2023, 2025 giovanni <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-05 00:37+0000\n"
-"PO-Revision-Date: 2023-09-19 18:45+0200\n"
+"PO-Revision-Date: 2025-04-02 15:49+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -511,8 +511,8 @@ msgid ""
 "seconds but younger children might need longer time."
 msgstr ""
 "Tu pote assignar le tempore inter duo litteras in modo Kid (Infante). Per "
-"definitionj es 4 decimos de secundas ma infantes plus juvenes poterea "
-"necesitar un tempore plus longe."
+"definition es 4 decimos de secundas ma infantes plus juvenes poterea "
+"necessitar un tempore plus longe."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: timerui.ui:122
