@@ -1,16 +1,16 @@
 # Spanish translations for klettres.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the klettres package.
 # Automatically generated, 2014.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2018, 2019, 2020.
-# Rocio Gallego <traducciones@rociogallego.com>, 2014.
+#
+# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2020, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014 Rocio Gallego <traducciones@rociogallego.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-05 00:37+0000\n"
-"PO-Revision-Date: 2020-12-30 11:43+0100\n"
+"PO-Revision-Date: 2025-05-18 12:57+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -72,7 +72,7 @@ msgstr ""
 #: klettres.cpp:124
 #, kde-format
 msgid "Get Alphabet in New Language..."
-msgstr "Obtener el alfabeto en un nuevo idioma..."
+msgstr "Obtener el alfabeto en un nuevo idioma…"
 
 #: klettres.cpp:129
 #, kde-format
@@ -556,6 +556,3 @@ msgstr ""
 "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
 "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
 "indent:0; text-indent:0px;\">Modo adulto</p></body></html>"
-
-#~ msgid "Klettres"
-#~ msgstr "Klettres"
