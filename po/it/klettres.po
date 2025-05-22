@@ -3,14 +3,14 @@
 # Davide Rizzo <drizzo@daviderizzo.com>, 2003, 2004, 2005.
 # Nicola Ruggero <nixprog.adsl@tiscali.it>, 2006.
 # Nicola Ruggero <nicola@nxnt.org>, 2006, 2007, 2008, 2009, 2010, 2011.
-# Paolo Zamponi <feus73@gmail.com>, 2019, 2021.
+# SPDX-FileCopyrightText: 2019, 2021, 2025 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-05 00:37+0000\n"
-"PO-Revision-Date: 2021-02-27 13:52+0100\n"
+"PO-Revision-Date: 2025-05-18 18:12+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -161,7 +161,7 @@ msgid ""
 "mode. The Kid mode has no menubar and the font is bigger in the statusbar."
 msgstr ""
 "Se sei nella modalità per ragazzi, facendo clic su questo pulsante passerai "
-"a quella per bambini. Nella modalità per bambini non c'è barra dei menu, e "
+"a quella per bambini. Nella modalità per bambini non c'è barra del menu, e "
 "la dimensione dei caratteri nella barra di stato è maggiore."
 
 #: klettres.cpp:170
@@ -253,7 +253,7 @@ msgstr "Tema"
 #: klettres.kcfg:23
 #, kde-format
 msgid "Whether the menubar is shown or hidden"
-msgstr "Se la barra dei menu è visibile o nascosta"
+msgstr "Se la barra del menu è visibile o nascosta"
 
 #. i18n: ectx: label, entry (Mode), group (General)
 #: klettres.kcfg:27
