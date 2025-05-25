@@ -68,8 +68,8 @@ msgid ""
 "You can play a new sound by clicking this button or using the File menu, New "
 "Sound."
 msgstr ""
-"Podeu reproduir un so nou clicant este botó o bé emprant el menú «Fitxer -> "
-"So nou»."
+"Podeu reproduir un so nou clicant damunt d'este botó o bé emprant el menú "
+"«Fitxer -> So nou»."
 
 #: klettres.cpp:124
 #, kde-format
@@ -92,8 +92,8 @@ msgid ""
 "You can replay the same sound again by clicking this button or using the "
 "File menu, Replay Sound."
 msgstr ""
-"Podeu tornar a reproduir el mateix so clicant este botó o emprant el menú "
-"«Fitxer -> Torna a reproduir el so»."
+"Podeu tornar a reproduir el mateix so clicant damunt d'este botó o emprant "
+"el menú «Fitxer -> Torna a reproduir el so»."
 
 #: klettres.cpp:140
 #, kde-format
@@ -104,7 +104,7 @@ msgstr "Niv&ell"
 #: klettres.cpp:141
 #, kde-format
 msgid "Select the level"
-msgstr "Escolliu el nivell"
+msgstr "Trieu el nivell"
 
 #: klettres.cpp:142
 #, kde-format
@@ -140,7 +140,7 @@ msgstr "Temes"
 #: klettres.cpp:159
 #, kde-format
 msgid "Select the theme"
-msgstr "Escolliu el tema"
+msgstr "Trieu el tema"
 
 #: klettres.cpp:160
 #, kde-format
@@ -162,9 +162,9 @@ msgid ""
 "If you are in the Grown-up mode, clicking on this button will set up the Kid "
 "mode. The Kid mode has no menubar and the font is bigger in the statusbar."
 msgstr ""
-"Si esteu en el mode adult, clicant este botó es passarà al mode infantil. El "
-"mode infantil no té barra de menús i la lletra de la barra d'estat és més "
-"gran."
+"Si esteu en el mode adult, clicant damunt d'este botó es passarà al mode "
+"infantil. El mode infantil no té barra de menús i la lletra de la barra "
+"d'estat és més gran."
 
 #: klettres.cpp:170
 #, kde-format
