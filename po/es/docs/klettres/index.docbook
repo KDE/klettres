@@ -92,20 +92,6 @@
 ><contrib
 >Traductor</contrib
 ></othercredit
-> <othercredit role="translator"
-><firstname
->Rocío</firstname
-> <surname
->Gallego</surname
-><affiliation
-> <address
-><email
->traducciones@.com</email
-></address
-></affiliation
-><contrib
->Traductor</contrib
-></othercredit
 > 
 </authorgroup>
 
@@ -186,7 +172,7 @@
 ><guimenu
 >Archivo</guimenu
 > <guimenuitem
->Obtener alfabeto en un nuevo idioma...</guimenuitem
+>Obtener alfabeto en un nuevo idioma…</guimenuitem
 ></menuchoice
 >, siempre que su equipo esté conectado a Internet.</para>
 
@@ -261,7 +247,7 @@
 ><guimenu
 >Archivo</guimenu
 > <guimenuitem
->Obtener el alfabeto en un nuevo idioma...</guimenuitem
+>Obtener el alfabeto en un nuevo idioma…</guimenuitem
 ></menuchoice
 >, para lo que tendrá que tener una conexión a Internet. </para>
 </note>
@@ -276,7 +262,7 @@
 ><guimenu
 >Preferencias</guimenu
 ><guimenuitem
->Configurar &klettres;...</guimenuitem
+>Configurar &klettres;…</guimenuitem
 ></menuchoice
 >, donde la página <guilabel
 >Temporizador</guilabel
@@ -405,7 +391,7 @@
 ><guimenu
 >Configuración</guimenu
 ><guimenuitem
->Configurar &klettres;...</guimenuitem
+>Configurar &klettres;…</guimenuitem
 ></menuchoice
 >, encontrará la página <guilabel
 >Configuración de tipografía</guilabel
@@ -451,7 +437,7 @@
 ><guimenu
 >Configuración</guimenu
 > <guimenuitem
->Configurar &klettres;...</guimenuitem
+>Configurar &klettres;…</guimenuitem
 ></menuchoice
 > permite configurar dos temporizadores: uno para el <guilabel
 >Modo infantil</guilabel
@@ -486,7 +472,7 @@
 >Puede utilizar &klettres; para ayudarle a aprender un nuevo idioma. Si va a la opción del menú <guimenu
 >Archivo</guimenu
 > <guimenuitem
->Obtener el alfabeto en un nuevo idioma...</guimenuitem
+>Obtener el alfabeto en un nuevo idioma…</guimenuitem
 > verá un nuevo diálogo con la lista de idiomas disponibles (tendrá que estar conectado a Internet para usar esta función del programa).</para>
 <screenshot>
 <screeninfo
@@ -602,7 +588,7 @@
 ><guimenu
 >Archivo</guimenu
 > <guimenuitem
->Obtener el alfabeto en un nuevo idioma...</guimenuitem
+>Obtener el alfabeto en un nuevo idioma…</guimenuitem
 > </menuchoice
 ></term>
 <listitem
@@ -866,11 +852,11 @@
     &lt;/menuitem&gt;
     &lt;alphabet&gt;
         &lt;sound name="A" file="cs/alpha/a.ogg" /&gt;
-        ...
+        …
     &lt;/alphabet&gt;
     &lt;syllables&gt;
         &lt;sound name="BA" file="cs/syllab/ba.ogg" /&gt;
-        ...
+        …
     &lt;/syllables&gt;
   &lt;/language&gt;
 &lt;/klettres&gt;</programlisting>
@@ -911,20 +897,6 @@
 >--prefix</option
 > indicando la carpeta de su &kde; o agregando esta carpeta a su ruta.</para
 > </answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para
->No puedo escuchar ningún sonido.</para>
-</question>
-<answer>
-<para
->Asegúrese de que &phonon; está funcionando en su sistema. Para hacer esto, abra &systemsettings; y en la sección <guilabel
->Hardware</guilabel
->, pulse en <guilabel
->Multimedia</guilabel
->. </para>
- </answer>
 </qandaentry>
 <qandaentry>
 <question>
