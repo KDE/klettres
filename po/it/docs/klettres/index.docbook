@@ -151,7 +151,7 @@
 <!-- add a note for the sound, what does KLettres needs -->
 
 <para
->Due diverse modalità ti permettono di adattare &klettres; alle tue esigenze e di avere l'interfaccia grafica completa o una sua versione ridotta. Per un bambino, la barra dei menu non è più visibile: crediamo che non voglia impostarsi la lingua da solo. Una casella combinata gli permette di scegliere i vari livelli. Per un utente più grande lo sfondo non è così infantile, e la barra dei menu è presente nello stile ragazzi. Quattro temi diversi (<guimenuitem
+>Due diverse modalità ti permettono di adattare &klettres; alle tue esigenze e di avere l'interfaccia grafica completa o una sua versione ridotta. Per un bambino, la barra del menu non è più visibile: crediamo che non voglia impostarsi la lingua da solo. Una casella combinata gli permette di scegliere i vari livelli. Per un utente più grande lo sfondo non è così infantile, e la barra del menu è presente nello stile ragazzi. Quattro temi diversi (<guimenuitem
 >Bambini</guimenuitem
 >, <guimenuitem
 >Deserto</guimenuitem
@@ -338,7 +338,7 @@
 > <para
 >Facendo clic sulla casella combinata o usando il menu<guilabel
 >Livello</guilabel
-> nella barra dei menu e scegliendo <guilabel
+> nella barra del menu e scegliendo <guilabel
 >Livello 4</guilabel
 > si accede al quarto livello. In questo livello l'utente sente solo il suono della sillaba, e deve digitare le lettere. Questo livello è abbastanza difficile per un bambino piccolo.</para>
 
