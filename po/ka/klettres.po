@@ -507,7 +507,7 @@ msgid ""
 "You can set the time between two letters in Kid mode. Default is 4 tenths of "
 "seconds but younger children might need longer time."
 msgstr ""
-"ბავშვების რეჟიმში ორ სიმბოლოს შორის დრო შეგიძლიათ დააყენოთ. ნაგულისხმები "
+"ბავშვების რეჟიმში ორ სიმბოლოს შორის დრო შეგიძლიათ დააყენოთ. ნაგულისხმევი "
 "მნიშვნელობაა ოთხი მეათედი წამი, მაგრამ პატარა ბავშვებს უფრო მეტი დროც კი "
 "შეიძლება დასჭირდეთ."
 
@@ -534,7 +534,7 @@ msgid ""
 "You can set the time between two letters in Grown-up mode. Default is 2 "
 "tenths of seconds."
 msgstr ""
-"შეგიძლიათ ზრდასრულ რეჟიმში ორ სიმბოლოს შორის დრო დააყენოთ. ნაგულისხმები "
+"შეგიძლიათ ზრდასრულ რეჟიმში ორ სიმბოლოს შორის დრო დააყენოთ. ნაგულისხმევი "
 "მნიშვნელობაა ორი მეათედი წამი."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
