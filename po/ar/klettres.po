@@ -513,8 +513,8 @@ msgid ""
 "You can set the time between two letters in Kid mode. Default is 4 tenths of "
 "seconds but younger children might need longer time."
 msgstr ""
-"يمكنك تعيين الوقت بين كلّ حرفين في وضع الطّفل. الافتراضيّ هو 4 أعشار الثّانية "
-"لكنّ الأطفال الأصغر قد يحتاجون وقتًا أطول."
+"يمكنك تعيين الوقت بين كلّ حرفين في وضع الطّفل. المبدئيّ هو 4 أعشار الثّانية لكنّ "
+"الأطفال الأصغر قد يحتاجون وقتًا أطول."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: timerui.ui:122
@@ -538,8 +538,7 @@ msgstr ""
 msgid ""
 "You can set the time between two letters in Grown-up mode. Default is 2 "
 "tenths of seconds."
-msgstr ""
-"يمكنك تعيين الوقت بين كلّ حرفين في وضع النموّ. الافتراضيّ هو عشريّ الثّانية."
+msgstr "يمكنك تعيين الوقت بين كلّ حرفين في وضع النموّ. المبدئيّ هو عشريّ الثّانية."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: timerui.ui:215
