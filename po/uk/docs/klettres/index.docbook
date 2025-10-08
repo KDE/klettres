@@ -845,20 +845,6 @@
 <qandaentry>
 <question>
 <para
->Я не чую жодних звуків.</para>
-</question>
-<answer>
-<para
->Переконайтеся, що у системі працює &phonon;. Щоб зробити це, відкрийте «Системні параметри» і на сторінці <guilabel
->Обладнання</guilabel
-> натисніть кнопку <guilabel
->Звук та відео</guilabel
->. </para>
- </answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para
 >Я не бачу деяких з літер на піктограмах панелі <guimenuitem
 >Спеціальних символів</guimenuitem
 >. Замість них я бачу для деяких з мов прямокутнички або малі піктограми.</para>
