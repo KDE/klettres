@@ -1,11 +1,11 @@
-# Thomas Diehl <thd@kde.org>, 2003.
-# Stephan Johach <hunsum@gmx.de>, 2005.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008.
-# Burkhard Lück <lueck@hube-lueck.de>, 2006, 2009, 2014, 2015, 2018, 2019, 2021.
-# Thorsten Mürell <thorsten@muerell.de>, 2003, 2004, 2005, 2006, 2007.
-# Martin Ereth <martin.ereth@arcor.de>, 2008.
-# Moritz Baumann <flamingmo@online.de>, 2010.
-# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011.
+# SPDX-FileCopyrightText: 2003 Thomas Diehl <thd@kde.org>
+# SPDX-FileCopyrightText: 2005 Stephan Johach <hunsum@gmx.de>
+# SPDX-FileCopyrightText: 2005, 2006, 2007, 2008 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2006, 2009, 2014, 2015, 2018, 2019, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2003, 2004, 2005, 2006, 2007 Thorsten Mürell <thorsten@muerell.de>
+# SPDX-FileCopyrightText: 2008 Martin Ereth <martin.ereth@arcor.de>
+# SPDX-FileCopyrightText: 2010 Moritz Baumann <flamingmo@online.de>
+# SPDX-FileCopyrightText: 2010, 2011 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
