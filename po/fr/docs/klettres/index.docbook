@@ -107,7 +107,7 @@
 <!-- add a note for the sound, what does KLettres needs -->
 
 <para
->Deux modes différents vous permettent d'adapter &klettres; à vos besoins et d'avoir l'interface complète habituelle ou une interface plus dépouillée. Pour un enfant, la barre de menus n'est plus visible. Nous considérons qu'un enfant ne veut pas configurer la langue par lui-même. Une boîte à liste déroulante lui permet de sélectionner le niveau. Pour un utilisateur plus âgé, le fond d'écran n'est pas si enfantin et la barre de menu est présente dans le style « Adulte ». Quatre thèmes différents (<guimenuitem
+>Deux modes différents vous permettent d'adapter &klettres; à vos besoins et d'avoir l'interface complète habituelle ou une interface plus dépouillée. Pour un enfant, la barre de menus n'est plus visible. Nous considérons qu'un enfant ne veut pas configurer la langue par lui-même. Une boite à liste déroulante lui permet de sélectionner le niveau. Pour un utilisateur plus âgé, le fond d'écran n'est pas si enfantin et la barre de menu est présente dans le style « Adulte ». Quatre thèmes différents (<guimenuitem
 >Enfant</guimenuitem
 >, <guimenuitem
 >Désert</guimenuitem
@@ -129,7 +129,7 @@
 ><guimenuitem
 >Caractères spéciaux</guimenuitem
 ></menuchoice
-> et la barre d'outils apparaîtra en bas de &klettres;. Veuillez cliquer sur la lettre de votre choix et elle sera affichée dans le champ de saisie. Cette barre d'outils peut être déplacée n'importe où sur votre écran.</para>
+> et la barre d'outils apparaitra en bas de &klettres;. Veuillez cliquer sur la lettre de votre choix et elle sera affichée dans le champ de saisie. Cette barre d'outils peut être déplacée n'importe où sur votre écran.</para>
 <para
 >Si vous préférez avoir la disposition du clavier de la langue, veuillez utiliser la &configurationDuSysteme;, dans la section <guilabel
 >Matériel </guilabel
@@ -180,7 +180,7 @@
 >, à condition de disposer d'une connexion Internet. </para>
 </note>
 <para
->Dans le niveau 1, l'utilisateur voit la lettre et entend le son. Il doit ensuite saisir la lettre dans la boîte. Si c'est correct, la lettre suivante apparaît (sans avoir à appuyer sur <keycap
+>Dans le niveau 1, l'utilisateur voit la lettre et entend le son. Il doit ensuite saisir la lettre dans la boite. Si c'est correct, la lettre suivante apparait (sans avoir à appuyer sur <keycap
 >Entrée</keycap
 > ou quoi que ce soit). Si l'utilisateur saisit une mauvaise lettre, il entendra le son de nouveau. Dans ce niveau, l'utilisateur mémorise les lettres, leur associe un son et les reconnaît sur le clavier. </para>
 
@@ -198,7 +198,7 @@
 ></menuchoice
 >. La page<guilabel
 >Chronomètre</guilabel
-> fera apparaître une boîte de dialogue dans laquelle vous pourrez régler deux durées différentes : une pour le <guilabel
+> fera apparaitre une boite de dialogue dans laquelle vous pourrez régler deux durées différentes : une pour le <guilabel
 >mode « Enfant »</guilabel
 > et l'autre pour le <guilabel
 >mode « Adulte »</guilabel
@@ -235,11 +235,11 @@
 > et du danois.</para>
 
 <para
->Un clic sur la boîte déroulante et une sélection du <guilabel
+>Un clic sur la boite déroulante et une sélection du <guilabel
 >Niveau 2</guilabel
 > ou en utilisant le menu <guimenu
 >Niveau</guimenu
-> vous permettra d'accéder au niveau 2. Dans ce niveau, l'utilisateur entend uniquement le son et doit saisir la lettre. S'il se trompe, la lettre apparaîtra afin de l'aider.</para>
+> vous permettra d'accéder au niveau 2. Dans ce niveau, l'utilisateur entend uniquement le son et doit saisir la lettre. S'il se trompe, la lettre apparaitra afin de l'aider.</para>
 </sect1>
 
 <sect1 id="levels3-and4">
@@ -270,7 +270,7 @@
 > et en tchèque. </para>
 
 <para
->Dans le niveau 3, l'utilisateur voit les syllabes et entend le son. Il doit alors saisir des lettres dans le champ de saisie. Si la première lettre du son n'est pas la bonne, l'utilisateur ne peut pas saisir la deuxième. La lettre disparaît, et il doit recommencer. Le nombre de lettres est égal à deux ou trois, en fonction de la langue.</para>
+>Dans le niveau 3, l'utilisateur voit les syllabes et entend le son. Il doit alors saisir des lettres dans le champ de saisie. Si la première lettre du son n'est pas la bonne, l'utilisateur ne peut pas saisir la deuxième. La lettre disparait, et il doit recommencer. Le nombre de lettres est égal à deux ou trois, en fonction de la langue.</para>
 
 <screenshot>
 <screeninfo
@@ -296,7 +296,7 @@
 <para
 >Les sons se produisent dans un ordre aléatoire.</para
 > <para
->Un clic sur la boîte déroulante ou une sélection du menu <guimenu
+>Un clic sur la boite déroulante ou une sélection du menu <guimenu
 >Niveau</guimenu
 > dans la barre de menus et la sélection du <guilabel
 > 4</guilabel
@@ -306,9 +306,9 @@
 
 <sect1 id ="configuring">
 <title
->La boîte de dialogue de configuration</title>
+>La boite de dialogue de configuration</title>
 <para
->La boîte de dialogue de configuration comprend deux pages : une pour les <guilabel
+>La boite de dialogue de configuration comprend deux pages : une pour les <guilabel
 >Polices</guilabel
 > et une pour le <guilabel
 >Chronomètre</guilabel
@@ -339,7 +339,7 @@
 
 <screenshot>
 <screeninfo
->Capture d'écran de &klettres;, boîte de dialogue de choix des polices</screeninfo>
+>Capture d'écran de &klettres;, boite de dialogue de choix des polices</screeninfo>
 	<mediaobject>
 	  <imageobject>
 	    <imagedata fileref="klettres5.png" format="PNG"/>
@@ -352,7 +352,7 @@
 </screenshot>
 
 <para
->Vous pouvez voir ici la boîte de dialogue de choix des polices de &klettres;. </para>
+>Vous pouvez voir ici la boite de dialogue de choix des polices de &klettres;. </para>
 </sect2>
 
 <sect2 id="timers">
@@ -407,7 +407,7 @@
 > <guimenuitem
 >Obtenir un alphabet dans une nouvelle langue...</guimenuitem
 ></menuchoice
->, vous verrez une nouvelle boîte de dialogue avec la liste des langues disponibles (Vous devez disposer d'une connexion Internet pour bénéficier de cette fonctionnalité).</para>
+>, vous verrez une nouvelle boite de dialogue avec la liste des langues disponibles (Vous devez disposer d'une connexion Internet pour bénéficier de cette fonctionnalité).</para>
 <screenshot>
 <screeninfo
 >Télécharger une nouvelle langue...</screeninfo>
@@ -428,7 +428,7 @@
 <para
 >Notez que certains fichiers font plusieurs Mo ; le téléchargement peut donc être long suivant votre connexion.</para>
 <para
->Lorsque le fichier est téléchargé, il est automatiquement installé et lorsque vous fermez la boîte de dialogue <guilabel
+>Lorsque le fichier est téléchargé, il est automatiquement installé et lorsque vous fermez la boite de dialogue <guilabel
 >Obtenir les nouveautés </guilabel
 > vous verrez la nouvelle langue dans le menu <guimenu
 >Langue </guimenu
@@ -529,7 +529,7 @@
 ><para
 ><action
 >Ouvre</action
-> la boîte de dialogue <guilabel
+> la boite de dialogue <guilabel
 >Obtenir les toutes dernières nouveautés</guilabel
 > de &klettres; pour télécharger une nouvelle langue.</para
 ></listitem>
@@ -804,7 +804,7 @@
 >cs.txt </filename
 > (Remplacez « cs » avec le code de votre langue sur 2 lettres) avec chaque caractère spécial de votre langue en majuscule sur une ligne. Ensuite, veuillez enregistrer chacun des fichiers avec l'encodage <quote
 >utf8</quote
-> (La boîte déroulante en haut à droite dans &kate; le permet).</para>
+> (La boite déroulante en haut à droite dans &kate; le permet).</para>
 
 <para
 >Les sons doivent être dans le format « ogg » et assez longs pour que le lecteur audio puisse les jouer (la longueur doit être comprise entre 1.5 et 2 secondes). Veuillez ajouter des sons blancs pour compléter s'ils sont trop courts. Puis, veuillez les compresser au format « tar.gz » et les envoyer à la liste de diffusion <email
@@ -825,7 +825,7 @@
 <qandaentry>
 <question>
 <para
->L'image de fond n'apparaît pas.</para>
+>L'image de fond n'apparait pas.</para>
 </question>
 <answer>
 <para
