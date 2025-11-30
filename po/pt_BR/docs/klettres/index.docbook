@@ -79,13 +79,13 @@
 >&FDLNotice;</legalnotice>
 
 <date
->20/04/2016</date>
+>29/12/2020</date>
 <releaseinfo
->2.3 (Applications 16.04)</releaseinfo>
+>Applications 20.12</releaseinfo>
 
 <abstract>
 <para
->O &klettres; é um aplicativo especialmente desenvolvido para ajudar o usuário a aprender o alfabeto de um novo idioma e depois aprender a ler sílabas simples. O usuário pode ser uma criança de idade reduzida, a partir de dois anos e meio, ou até mesmo um adulto que só queira aprender as bases de um idioma estrangeiro. </para>
+>O &klettres; é um aplicativo especialmente desenvolvido para ajudar o usuário a aprender o alfabeto de um novo idioma e depois aprender a ler sílabas simples. O usuário pode ser uma criança de idade reduzida, a partir de dois anos e meio, ou até mesmo um adulto que só queira aprender as bases de um idioma estrangeiro.</para>
 <para
 >Atualmente estão disponíveis vinte e cinco idiomas: Árabe, Português do Brasil, Tcheco, Dinamarquês, Holandês, Inglês Britânico, Inglês Americano, Inglês Fonético, Francês, Alemão, Hebraico, Húngaro, Italiano, Canarês, Baixo-Saxão, Malaiala, Dano-norueguês, Punjabi, Luganda, Hindi Romanizado, Russo, Espanhol, Eslovaco, Telugu e Ucraniano, mas somente serão instalados por padrão o Inglês, o Francês e o seu idioma, caso esteja entre estes. </para>
 <para
@@ -101,12 +101,14 @@
 ><guimenuitem
 >Temas</guimenuitem
 ></menuchoice
->. Estão disponíveis três temas: <guimenuitem
+>. Estão disponíveis quatro temas: <guimenuitem
 >Infantil</guimenuitem
 >, <guimenuitem
 >Deserto</guimenuitem
-> e <guimenuitem
+>, <guimenuitem
 >Savana</guimenuitem
+> e <guimenuitem
+>Água</guimenuitem
 >. Finalmente, pode-se alterar o modo de infantil para adulto no menu <guimenu
 >Aparência</guimenu
 >. </para>
@@ -140,32 +142,36 @@
 >O &klettres; é um aplicativo muito simples, que ajuda uma criança ou um adulto a aprender o alfabeto e alguns sons simples no seu próprio idioma ou outro qualquer. O programa escolhe uma letra ou sílaba aleatoriamente, ela é mostrada e o som é reproduzido. O usuário deverá então escrever esta letra ou sílaba. O treinamento termina nos níveis onde a letra/sílaba não é apresentada e só o som é reproduzido. O usuário não precisa saber usar o mouse, pois apenas o teclado é necessário.</para>
 
 <para
->Atualmente estão disponíveis vinte e cinco idiomas: veja a lista acima. Se o seu idioma do &kde; for um dos mencionados acima, então será usado por padrão, caso contrário, será usado o Francês. Você poderá obter facilmente outros idiomas adicionais se usar o menu <guimenu
+>Atualmente estão disponíveis vinte e cinco idiomas: veja a lista acima. Se o seu idioma do &kde; for um dos mencionados acima, então será usado por padrão, caso contrário, será usado o Francês. Você poderá obter facilmente outros idiomas adicionais se usar o menu <menuchoice
+><guimenu
 >Arquivo</guimenu
-> e a opção <guimenuitem
+> <guimenuitem
 >Obter o alfabeto em novo idioma...</guimenuitem
+></menuchoice
 >, desde que o seu computador esteja conectado à Internet.</para>
 
 <!-- add a note for the sound, what does KLettres needs -->
 
 <para
->Os dois modos diferentes permitem-lhe adaptar o &klettres; às suas necessidades. Para uma criança, a barra de menus não ficará visível. Nós consideramos que uma criança não pretende alterar ela própria o idioma. Uma lista permite ao usuário escolher os diferentes níveis. Para um usuário com mais idade, o fundo não é tão infantil e a barra de menus está presente no estilo Adulto. Existem três temas (<guimenuitem
+>Os dois modos diferentes permitem-lhe adaptar o &klettres; às suas necessidades. Para uma criança, a barra de menus não ficará visível. Nós consideramos que uma criança não pretende alterar ela própria o idioma. Uma lista permite ao usuário escolher os diferentes níveis. Para um usuário com mais idade, o fundo não é tão infantil e a barra de menus está presente no estilo Adulto. Existem quatro temas (<guimenuitem
 >Infantil</guimenuitem
 >, <guimenuitem
 >Deserto</guimenuitem
-> e <guimenuitem
+>, <guimenuitem
 >Savana</guimenuitem
+> e <guimenuitem
+>Água</guimenuitem
 >) para escolher um fundo diferente com fontes e cores diferentes.</para>
 
 <note>
 <para
->Não é mais necessário utilizar o layout de teclado do idioma, uma vez que você pode usar a barra de <guimenuitem
->Caracteres especiais</guimenuitem
+>Não é mais necessário utilizar o layout de teclado do idioma, uma vez que você pode usar a barra de <guilabel
+>Caracteres especiais</guilabel
 > para escrever qualquer caractere especial de cada idioma. No menu <guimenu
 >Configurações</guimenu
->, <guisubmenu
+><guisubmenu
 >Barras de ferramentas exibidas</guisubmenu
->, selecione o item <guimenuitem
+><guimenuitem
 >Caracteres especiais</guimenuitem
 >, para que a barra de ferramentas apareça na parte inferior do &klettres;. Clique na letra desejada e ela será mostrada no campo de texto. Esta barra de ferramentas pode ser arrastada para qualquer lado da tela.</para>
 <para
@@ -224,10 +230,12 @@
 <para
 >O usuário pode digitar em minúsculas ou maiúsculas. As letras são automaticamente colocadas em maiúsculas para que uma criança identifique-as no teclado. Ela só poderá digitar uma letra de cada vez.</para>
 <para
->Quando você digitar uma letra no campo de texto, não há necessidade de pressionar &Enter; e o programa espera durante alguns momentos antes de verificar se a letra está correta. Este tempo curto de espera é para dar tempo de uma criança perceber o que ela acabou de digitar, principalmente se for a letra errada. Você pode alterar este tempo usando o menu <guimenu
+>Quando você digitar uma letra no campo de texto, não há necessidade de pressionar &Enter; e o programa espera durante alguns momentos antes de verificar se a letra está correta. Este tempo curto de espera é para dar tempo de uma criança perceber o que ela acabou de digitar, principalmente se for a letra errada. Você pode alterar este tempo usando o menu <menuchoice
+><guimenu
 >Configurações</guimenu
 > <guimenuitem
->Configurar o &klettres;...</guimenuitem
+>Configurar &klettres;...</guimenuitem
+></menuchoice
 > e a página <guilabel
 >Temporizador</guilabel
 >, que apresentará um diálogo onde podem ser configurados dois tempos diferentes: um para o <guilabel
@@ -242,7 +250,7 @@
 <para
 >O modo (infantil ou adulto) é armazenado no arquivo de configuração e, como tal, é mantido até que você o altere.</para>
 <para
->As letras aparecem em ordem aleatória. Elas não seguem nenhuma sequência. </para>
+>As letras aparecem em ordem aleatória. Elas não seguem nenhuma sequência.</para>
 
 <para>
 <screenshot>
@@ -271,7 +279,7 @@
 >Nível 2</guilabel
 > ou usar o menu <guimenu
 >Nível</guimenu
-> irá para o nível 2. Nesse nível, o usuário só ouve o som da letra e terá que digitá-la. Se estiver errada, a letra aparecerá para ajudá-lo. </para>
+> irá para o nível 2. Nesse nível, o usuário só ouve o som da letra e terá que digitá-la. Se estiver errada, a letra aparecerá para ajudá-lo.</para>
 </sect1>
 
 <sect1 id="levels3-and4">
@@ -326,13 +334,13 @@
 > e o idioma Eslovaco. </para>
 
 <para
->Os sons aparecem em ordem aleatória. </para
+>Os sons aparecem em ordem aleatória.</para
 > <para
 >Clicar na lista de níveis ou usar o menu <guimenu
 >Nível</guimenu
 > da barra de menus e escolher o <guilabel
 >Nível 4</guilabel
-> levará você ao nível 4. Nesse nível, o usuário só ouve o som da sílaba e terá que digitar as letras corretamente. Este nível é bastante difícil para uma criança. </para>
+> levará você ao nível 4. Nesse nível, o usuário só ouve o som da sílaba e terá que digitar as letras corretamente. Este nível é bastante difícil para uma criança.</para>
 
 </sect1>
 
@@ -340,23 +348,25 @@
 <title
 >Janela de configuração</title>
 <para
->A janela de configuração possui duas páginas: uma para as <guilabel
->Configurações da fonte</guilabel
+>A janela de configuração possui duas páginas: uma para a <guilabel
+>Fonte</guilabel
 > e outra para o <guilabel
 >Temporizador</guilabel
 >.</para>
 
 <sect2 id="about-font">
 <title
->Sobre as fontes</title>
+>Sobre a fonte</title>
 
 <para
->Você poderá alterar facilmente a fonte usada para exibição das letras. Em algumas distribuições, a fonte padrão usada no sistema é realmente feia. No modo adulto, no menu <guimenu
+>Você poderá alterar facilmente a fonte usada para exibição das letras. Em algumas distribuições, a fonte padrão usada no sistema é realmente feia. No modo adulto, no menu <menuchoice
+><guimenu
 >Configurações</guimenu
->, na opção <guimenuitem
->Configurar o &klettres;...</guimenuitem
->, você encontrará uma página com as <guilabel
->Configurações da fonte</guilabel
+><guimenuitem
+>Configurar &klettres;...</guimenuitem
+></menuchoice
+>, você encontrará uma página <guilabel
+>Fonte</guilabel
 > que lhe mostrará uma janela de seleção de fontes. A nova fonte será aplicada às letras/sílabas apresentadas e ao campo do usuário. </para>
 
 <warning>
@@ -387,15 +397,15 @@
 
 <sect2 id="timers">
 <title
->Temporizadores</title>
+>Temporizador</title>
 
 <para
->Os temporizadores definem o tempo entre duas letras, &ie; o tempo durante o qual uma letra é exibida. As unidades são décimos de segundos. </para>
+>O temporizador define o tempo entre duas letras, &ie; o tempo durante o qual uma letra é exibida. As unidades são décimos de segundos. </para>
 
 <para
 >A página <guilabel
 >Temporizador</guilabel
-> na opção <menuchoice
+> no menu <menuchoice
 ><guimenu
 >Configurações</guimenu
 ><guimenuitem
@@ -413,14 +423,14 @@
 
 <screenshot>
 <screeninfo
->Imagem das configurações dos temporizadores do &klettres;</screeninfo>
+>Imagem das configurações do temporizador do &klettres;</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="klettres6.png" format="PNG"/>
       </imageobject>
        <textobject>
         <phrase
->Imagem das configurações dos temporizadores do &klettres;</phrase>
+>Imagem das configurações do temporizador do &klettres;</phrase>
       </textobject>
     </mediaobject>
 </screenshot>
@@ -431,7 +441,7 @@
 <title
 >Obtendo um novo idioma</title>
 <para
->Você pode querer usar o &klettres; para ajudá-lo a aprender um novo idioma. Ao usar o <menuchoice
+>Você pode querer usar o &klettres; para ajudá-lo a aprender um novo idioma. Ao usar o menu <menuchoice
 ><guimenu
 >Arquivo</guimenu
 > <guimenuitem
@@ -459,7 +469,7 @@
 >Perceba que alguns arquivos possuem vários MB, por isso poderá demorar um pouco, dependendo da sua conexão.</para>
 <para
 >O arquivo será instalado automaticamente quando a transferência for concluída e, ao fechar a janela de <guilabel
->Obter novidades</guilabel
+>Baixar novidades</guilabel
 >, o novo idioma estará disponível no menu <guimenu
 >Idioma</guimenu
 >, podendo ser usado imediatamente.</para>
@@ -521,7 +531,7 @@
 ><para
 ><action
 >Reproduz</action
-> um novo som</para
+> um novo som.</para
 ></listitem>
 </varlistentry>
 
@@ -542,7 +552,7 @@
 ><para
 ><action
 >Reproduz</action
-> novamente o mesmo som</para
+> novamente o mesmo som.</para
 ></listitem>
 </varlistentry>
 
@@ -560,8 +570,8 @@
 ><action
 >Abre</action
 > a janela <guilabel
->Obter novidades</guilabel
->, para baixar um novo idioma para o &klettres;</para
+>Baixar novidades</guilabel
+>, para baixar um novo idioma para o &klettres;.</para
 ></listitem>
 </varlistentry>
 
@@ -584,7 +594,7 @@
 ><para
 ><action
 >Sai</action
-> do &klettres;</para
+> do &klettres;.</para
 ></listitem>
 </varlistentry>
 </variablelist>
@@ -610,7 +620,7 @@
 ><para
 ><action
 >Escolhe</action
-> o nível 1 (letra apresentada e som)</para
+> o nível 1 (letra apresentada e som).</para
 ></listitem>
 </varlistentry>
 
@@ -627,7 +637,7 @@
 ><para
 ><action
 >Escolhe</action
-> o nível 2 (sem letra apresentada, mas com som)</para
+> o nível 2 (sem letra apresentada, mas com som).</para
 ></listitem>
 </varlistentry>
 
@@ -644,7 +654,7 @@
 ><para
 ><action
 >Escolhe</action
-> o nível 3 (sílaba apresentada e som)</para
+> o nível 3 (sílaba apresentada e som).</para
 ></listitem>
 </varlistentry>
 
@@ -661,7 +671,7 @@
 ><para
 ><action
 >Escolhe</action
-> o nível 4 (sem sílaba apresentada, mas com som)</para
+> o nível 4 (sem sílaba apresentada, mas com som).</para
 ></listitem>
 </varlistentry>
 
@@ -687,7 +697,7 @@
 ><para
 ><action
 >Escolhe</action
-> o idioma inglês</para
+> o idioma inglês.</para
 ></listitem>
 </varlistentry>
 
@@ -704,7 +714,7 @@
 ><para
 ><action
 >Escolhe</action
-> o idioma francês</para
+> o idioma francês.</para
 ></listitem>
 </varlistentry>
 
@@ -728,9 +738,9 @@
 ></term>
 <listitem
 ><para
-><action
->Muda</action
-> para o tema Infantil, Deserto, Savana ou Água</para
+>Um submenu para <action
+>mudar</action
+> para o tema Infantil, Deserto, Savana ou Água.</para
 ></listitem>
 </varlistentry>
 
@@ -753,7 +763,7 @@
 ><para
 ><action
 >Muda</action
-> para o modo infantil: sem menu</para
+> para o modo infantil: sem menu.</para
 ></listitem>
 </varlistentry>
 
@@ -776,7 +786,7 @@
 ><para
 ><action
 >Muda</action
-> para o modo adulto: interface normal</para
+> para o modo adulto: interface normal.</para
 ></listitem>
 </varlistentry>
 </variablelist>
@@ -786,9 +796,9 @@
 >Configurações</guimenu
 > e <guimenu
 >Ajuda</guimenu
->, comuns do &kde;. Para mais informações, consulte as seções sobre o <ulink url="help:/fundamentals/ui.html#menus-settings"
+>, comuns do &kde;. Para mais informações, consulte as seções sobre o <ulink url="help:/fundamentals/menus.html#menus-settings"
 >Menu Configurações</ulink
-> e o <ulink url="help:/fundamentals/ui.html#menus-help"
+> e o <ulink url="help:/fundamentals/menus.html#menus-help"
 >Menu Ajuda</ulink
 > dos Fundamentos do &kde;. </para>
 
@@ -834,7 +844,7 @@
 >cs.txt</filename
 > (substitua o "cs" pelo código de duas letras do seu idioma) com cada um dos caracteres especiais em letras maiúsculas, um em cada linha. Salve ambos os arquivos com a codificação <quote
 >utf8</quote
-> (a lista superior direita no &kate; permite fazer isso)</para>
+> (a lista superior direita no &kate; permite fazer isso).</para>
 
 <para
 >Os sons deverão estar no formato OGG e ter um tamanho suficiente para o reprodutor de áudio reproduzi-los (entre 1,5 e 2 segundos de duração; adicione algum silêncio se forem muito curtos). Depois, crie um pacote com tudo e envie para a lista de discussão <email
@@ -863,20 +873,6 @@
 >--prefix</option
 > definida para a sua pasta do &kde; ou adicionar esta pasta ao seu PATH.</para
 > </answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para
->Eu não ouço nenhum som</para>
-</question>
-<answer>
-<para
->Certifique-se de que o &phonon; está funcionando no seu sistema. Para isso, abra as &systemsettings; e na categoria <guilabel
->Hardware</guilabel
->, clique em <guilabel
->Multimídia</guilabel
->. </para>
- </answer>
 </qandaentry>
 <qandaentry>
 <question>
@@ -1033,7 +1029,7 @@
 ></listitem>
 <listitem
 ><para
->Ícone SVG: Chris Luetchford <email
+>Ícone &SVG;: Chris Luetchford <email
 >chris@os11.com</email
 ></para
 ></listitem>
@@ -1049,7 +1045,7 @@
 ></listitem>
 <listitem
 ><para
->Ícones em SVG para crianças e adultos, tema Deserto: &Danny.Allen; <email
+>Ícones em &SVG; para crianças e adultos, tema Deserto: &Danny.Allen; <email
 >dannya40uk@yahoo.co.uk</email
 ></para
 ></listitem>
