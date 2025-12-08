@@ -29,6 +29,7 @@
   <name xml:lang="hu">KLettres</name>
   <name xml:lang="ia">KLettres</name>
   <name xml:lang="id">KLettres</name>
+  <name xml:lang="is">KStafir</name>
   <name xml:lang="it">KLettres</name>
   <name xml:lang="ka">KLettres</name>
   <name xml:lang="ko">KLettres</name>
@@ -70,6 +71,7 @@
   <summary xml:lang="hu">Tanulja meg az ábécét</summary>
   <summary xml:lang="ia">Apprende le Alphabeto</summary>
   <summary xml:lang="id">Mempelajari Alfabet</summary>
+  <summary xml:lang="is">Lærðu stafrófið</summary>
   <summary xml:lang="it">Impara l'alfabeto</summary>
   <summary xml:lang="ka">ისწავლეთ ანბანი</summary>
   <summary xml:lang="ko">알파벳 익히기</summary>
@@ -157,6 +159,7 @@
       <caption xml:lang="hu">Gyakorlás a KLettresben</caption>
       <caption xml:lang="ia">Session de exercitation de KLettres</caption>
       <caption xml:lang="id">Sesi pembelajaran KLettres</caption>
+      <caption xml:lang="is">Æfingarlota í KStafir</caption>
       <caption xml:lang="it">Sessione di apprendimento in KLettres</caption>
       <caption xml:lang="ka">KLettres -ის სესია</caption>
       <caption xml:lang="ko">KLettres 연습 세션</caption>
