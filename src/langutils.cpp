@@ -51,9 +51,7 @@ QStringList LangUtils::getLanguages()
     //if (mdirs.isEmpty()) return NULL;
     for (QStringList::const_iterator it =mdirs.constBegin(); it !=mdirs.constEnd(); ++it ) {
         QDir dir(*it);
-        m_languages += dir.entryList(QDir::Dirs, QDir::Name);
-        m_languages.removeAll(QStringLiteral("."));
-        m_languages.removeAll(QStringLiteral(".."));
+        m_languages += dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
     }
     m_languages.removeAll(QStringLiteral("pics"));
     m_languages.removeAll(QStringLiteral("data"));
