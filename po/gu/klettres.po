@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kletters-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:48+0000\n"
+"POT-Creation-Date: 2026-01-03 00:39+0000\n"
 "PO-Revision-Date: 2008-07-07 14:49+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -339,28 +339,28 @@ msgctxt "@item:inlistbox"
 msgid "Aqua"
 msgstr ""
 
-#: langutils.cpp:88
+#: langutils.cpp:86
 #, kde-format
 msgid "Romanized Hindi"
 msgstr "રોમન હિન્દી"
 
-#: langutils.cpp:90
+#: langutils.cpp:88
 #, kde-format
 msgid "Luganda"
 msgstr "લુગાન્ડા"
 
-#: langutils.cpp:92
+#: langutils.cpp:90
 #, fuzzy, kde-format
 #| msgid "English sounds"
 msgid "English Phonics"
 msgstr "અંગ્રેજી અવાજો"
 
-#: langutils.cpp:94
+#: langutils.cpp:92
 #, kde-format
 msgid "Tswana"
 msgstr ""
 
-#: langutils.cpp:99
+#: langutils.cpp:97
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "@item:inlistbox no language for that locale"

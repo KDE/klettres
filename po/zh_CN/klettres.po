@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:48+0000\n"
+"POT-Creation-Date: 2026-01-03 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -331,27 +331,27 @@ msgctxt "@item:inlistbox"
 msgid "Aqua"
 msgstr "Aqua"
 
-#: langutils.cpp:88
+#: langutils.cpp:86
 #, kde-format
 msgid "Romanized Hindi"
 msgstr "罗马化的印地语"
 
-#: langutils.cpp:90
+#: langutils.cpp:88
 #, kde-format
 msgid "Luganda"
 msgstr "卢干达语"
 
-#: langutils.cpp:92
+#: langutils.cpp:90
 #, kde-format
 msgid "English Phonics"
 msgstr "英语拼音"
 
-#: langutils.cpp:94
+#: langutils.cpp:92
 #, kde-format
 msgid "Tswana"
 msgstr "茨瓦纳语"
 
-#: langutils.cpp:99
+#: langutils.cpp:97
 #, kde-format
 msgctxt "@item:inlistbox no language for that locale"
 msgid "None"

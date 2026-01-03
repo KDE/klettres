@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:48+0000\n"
+"POT-Creation-Date: 2026-01-03 00:39+0000\n"
 "PO-Revision-Date: 2021-01-11 14:28-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -344,27 +344,27 @@ msgctxt "@item:inlistbox"
 msgid "Aqua"
 msgstr "Aqua"
 
-#: langutils.cpp:88
+#: langutils.cpp:86
 #, kde-format
 msgid "Romanized Hindi"
 msgstr "Hindi romanizado"
 
-#: langutils.cpp:90
+#: langutils.cpp:88
 #, kde-format
 msgid "Luganda"
 msgstr "Luganda"
 
-#: langutils.cpp:92
+#: langutils.cpp:90
 #, kde-format
 msgid "English Phonics"
 msgstr "Fonemas ingleses"
 
-#: langutils.cpp:94
+#: langutils.cpp:92
 #, kde-format
 msgid "Tswana"
 msgstr "Tswana"
 
-#: langutils.cpp:99
+#: langutils.cpp:97
 #, kde-format
 msgctxt "@item:inlistbox no language for that locale"
 msgid "None"

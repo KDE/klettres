@@ -1,6 +1,6 @@
 # Translation of klettres.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
-# $Id: klettres.po 1723087 2025-11-17 12:44:32Z scripty $
+# $Id: klettres.po 1726420 2026-01-03 01:25:59Z scripty $
 # $Source$
 #
 # Andrej Vernekar <andrej.vernekar@moj.net>, 2002.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klettres\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:48+0000\n"
+"POT-Creation-Date: 2026-01-03 00:39+0000\n"
 "PO-Revision-Date: 2020-12-31 09:05+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -351,27 +351,27 @@ msgctxt "@item:inlistbox"
 msgid "Aqua"
 msgstr "Voda"
 
-#: langutils.cpp:88
+#: langutils.cpp:86
 #, kde-format
 msgid "Romanized Hindi"
 msgstr "Romanizirani hindi"
 
-#: langutils.cpp:90
+#: langutils.cpp:88
 #, kde-format
 msgid "Luganda"
 msgstr "Luganda"
 
-#: langutils.cpp:92
+#: langutils.cpp:90
 #, kde-format
 msgid "English Phonics"
 msgstr "Angleški zvoki"
 
-#: langutils.cpp:94
+#: langutils.cpp:92
 #, kde-format
 msgid "Tswana"
 msgstr "Tswana"
 
-#: langutils.cpp:99
+#: langutils.cpp:97
 #, kde-format
 msgctxt "@item:inlistbox no language for that locale"
 msgid "None"
