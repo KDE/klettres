@@ -1,5 +1,5 @@
 #minimum requirements
-cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16)
 
 # KDE Application Version, managed by release script
 set(RELEASE_SERVICE_VERSION_MAJOR "26")
