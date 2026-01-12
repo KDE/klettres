@@ -482,7 +482,7 @@ msgstr "Adaptació als Frameworks 5 de KDE"
 #: soundfactory.cpp:89
 #, kde-format
 msgid "Error while loading the sound names."
-msgstr "S'ha produït un error en carregar els noms dels sons."
+msgstr "S'ha produït un error mentre es carregaven els noms dels sons."
 
 #: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
 #, kde-format
