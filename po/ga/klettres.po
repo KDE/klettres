@@ -193,10 +193,9 @@ msgid "Timer"
 msgstr "Uaineadóir"
 
 #: klettres.cpp:212
-#, fuzzy, kde-format
-#| msgid "Timer setting widgets"
+#, kde-format
 msgid "Timer Settings"
-msgstr "Giuirléidí a shocraíonn an t-am"
+msgstr ""
 
 #: klettres.cpp:230 klettres.cpp:298
 #, kde-format
@@ -487,15 +486,11 @@ msgid "Error while loading the sound names."
 msgstr "Earráid agus ainmneacha na bhfuaimeanna á luchtú."
 
 #: timer.cpp:19 timer.cpp:20 timer.cpp:28 timer.cpp:29
-#, fuzzy, kde-format
-#| msgid "tenths of second"
+#, kde-format
 msgid "1 tenth of second"
 msgid_plural "%1 tenths of second"
-msgstr[0] "deichiú soicind"
-msgstr[1] "deichiú soicind"
-msgstr[2] "deichiú soicind"
-msgstr[3] "deichiú soicind"
-msgstr[4] "deichiú soicind"
+msgstr[0] ""
+msgstr[1] ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: timerui.ui:51
@@ -562,158 +557,3 @@ msgstr ""
 "weight:400; font-style:normal; text-decoration:none;\"><p style=\" margin-"
 "top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-"
 "indent:0; text-indent:0px;\">Don Fhoghlaimeoir Fásta</p></body></html>"
-
-#, fuzzy
-#~| msgid "KLettres"
-#~ msgid "Klettres"
-#~ msgstr "KLettres"
-
-#~ msgid "Ludovic Grossard"
-#~ msgstr "Ludovic Grossard"
-
-#~ msgid "French sounds"
-#~ msgstr "Fuaimeanna na Fraincise"
-
-#~ msgid "Geert Stams"
-#~ msgstr "Geert Stams"
-
-#~ msgid "Dutch sounds"
-#~ msgstr "Fuaimeanna na hOllainnise"
-
-#~ msgid "Erik Kjaer Pedersen"
-#~ msgstr "Erik Kjaer Pedersen"
-
-#~ msgid "Danish sounds"
-#~ msgstr "Fuaimeanna na Danmhairgise"
-
-#~ msgid "Eva Mikulčíková"
-#~ msgstr "Eva Mikulčíková"
-
-#~ msgid "Czech sounds"
-#~ msgstr "Fuaimeanna na Seicise"
-
-#~ msgid "Silvia Motyčková & Jozef Říha"
-#~ msgstr "Silvia Motyčková agus Jozef Říha"
-
-#~ msgid "Slovak sounds"
-#~ msgstr "Fuaimeanna na Slóvaicise"
-
-#~ msgid "Robert Wadley"
-#~ msgstr "Robert Wadley"
-
-#~ msgid "English sounds"
-#~ msgstr "Fuaimeanna an Bhéarla"
-
-#~ msgid "Pietro Pasotti"
-#~ msgstr "Pietro Pasotti"
-
-#~ msgid "Italian sounds"
-#~ msgstr "Fuaimeanna na hIodáilise"
-
-#~ msgid "Ana Belén Caballero and Juan Pedro Paredes"
-#~ msgstr "Ana Belén Caballero agus Juan Pedro Paredes"
-
-#~ msgid "Spanish sounds"
-#~ msgstr "Fuaimeanna na Spáinnise"
-
-#~ msgid "Vikas Kharat"
-#~ msgstr "Vikas Kharat"
-
-#~ msgid "Romanized Hindi sounds"
-#~ msgstr "Fuaimeanna na Hiondúise Rómhánaithe"
-
-#~ msgid "John Magoye and Cormac Lynch"
-#~ msgstr "John Magoye agus Cormac Lynch"
-
-#~ msgid "Luganda sounds"
-#~ msgstr "Fuaimeanna na Gandaise"
-
-#~ msgid "Helmut Kriege"
-#~ msgstr "Helmut Kriege"
-
-#~ msgid "German sounds"
-#~ msgstr "Fuaimeanna na Gearmáinise"
-
-#~ msgid "Assaf Gorgon and Diego Iastrubni"
-#~ msgstr "Assaf Gorgon agus Diego Iastrubni"
-
-#~ msgid "Hebrew sounds"
-#~ msgstr "Fuaimeanna na hEabhraise"
-
-#~ msgid "Lisa Kriege"
-#~ msgstr "Lisa Kriege"
-
-#~ msgid "British English sounds"
-#~ msgstr "Fuaimeanna Béarla na Sasanach"
-
-#~ msgid "Vikram Vincent"
-#~ msgstr "Vikram Vincent"
-
-#~ msgid "Kannada sounds"
-#~ msgstr "Fuaimeanna na Cannadaise"
-
-#~ msgid "Show &Menubar"
-#~ msgstr "Taispeáin an Barra &Roghchláir"
-
-#~ msgid "Hide &Menubar"
-#~ msgstr "Folaigh an Barra &Roghchláir"
-
-#~ msgid ""
-#~ "You can show or hide the menubar as you wish by clicking this button."
-#~ msgstr ""
-#~ "Is féidir leat an Barra Roghchláir a thaispeáint nó a chur i bhfolach "
-#~ "tríd an chnaipe seo a chliceáil."
-
-#~ msgid "Show Menubar"
-#~ msgstr "Taispeáin an Barra Roghchláir"
-
-#~ msgid "Hide Menubar"
-#~ msgstr "Folaigh an Barra Roghchláir"
-
-#~ msgctxt "@item:inlistbox choose level 2"
-#~ msgid "Level 2"
-#~ msgstr "Leibhéal 2"
-
-#~ msgctxt "@item:inlistbox choose level 3"
-#~ msgid "Level 3"
-#~ msgstr "Leibhéal 3"
-
-#~ msgctxt "@item:inlistbox choose level 4"
-#~ msgid "Level 4"
-#~ msgstr "Leibhéal 4"
-
-#~ msgid "Form"
-#~ msgstr "Foirm"
-
-#~ msgid "Current language is %1"
-#~ msgstr "Teanga reatha: %1"
-
-#~ msgid "Current level is %1"
-#~ msgstr "Leibhéal reatha: %1"
-
-#~ msgid "Classroom"
-#~ msgstr "Seomra Ranga"
-
-#~ msgid "Arctic"
-#~ msgstr "Artach"
-
-#~ msgid "Start"
-#~ msgstr "Tosaigh"
-
-#~ msgid "Icons"
-#~ msgstr "Deilbhíní"
-
-#~ msgid "SVG icon"
-#~ msgstr "Deilbhín SVG"
-
-#~ msgid "Inserts the character %1"
-#~ msgstr "Ionsáigh carachtar %1"
-
-#~ msgid "Only used if Use a timer is checked"
-#~ msgstr "Ná húsáid ach nuair atá \"Úsáid Uaineadóir\" ticeáilte"
-
-#~ msgid "Kid Mode"
-#~ msgstr "Mód do Pháistí"
-
-#~ msgid "Grown-up Mode"
-#~ msgstr "Mód do Dhaoine Fásta"
