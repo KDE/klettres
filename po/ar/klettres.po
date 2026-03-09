@@ -171,7 +171,7 @@ msgstr "وضع النموّ"
 #: klettres.cpp:174
 #, kde-format
 msgid "The Grownup mode is the normal mode where you can see the menubar."
-msgstr "وضع النموّ هو الوضع العاديّ الّذي ترى فيه شريط القوائم."
+msgstr "وضع النموّ هو الوضع العاديّ الذي ترى فيه شريط القوائم."
 
 #. i18n: ectx: label, entry (Font), group (mFont)
 #: klettres.cpp:210 klettres.kcfg:51
