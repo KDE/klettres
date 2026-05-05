@@ -383,14 +383,14 @@
 
 <screenshot>
 <screeninfo
->Copie d'écran de la configuration du chronométrage de &klettres;</screeninfo>
+>Capture d'écran de la configuration du chronométrage de &klettres;</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="klettres6.png" format="PNG"/>
       </imageobject>
        <textobject>
         <phrase
->Copie d'écran de la configuration du chronométrage de &klettres;</phrase>
+>Capture d'écran de la configuration du chronométrage de &klettres;</phrase>
       </textobject>
     </mediaobject>
 </screenshot>
