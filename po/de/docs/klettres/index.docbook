@@ -860,20 +860,6 @@
 <qandaentry>
 <question>
 <para
->Ich höre keine Laute.</para>
-</question>
-<answer>
-<para
->Vergewissern Sie sich, dass &phonon; auf Ihrem System funktioniert. Dazu öffnen Sie die &systemsettings; und klicken im Abschnitt <guilabel
->Hardware</guilabel
-> auf <guilabel
->Multimedia</guilabel
->. </para>
- </answer>
-</qandaentry>
-<qandaentry>
-<question>
-<para
 >Ich sehe keine Buchstaben auf einigen Symbolen in der Werkzeugleiste für Sonderzeichen. Stattdessen werden nur Rechtecke in einigen Sprachen angezeigt.</para>
 </question>
 <answer>
