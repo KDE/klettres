@@ -69,7 +69,7 @@ msgid ""
 "Sound."
 msgstr ""
 "Podeu reproduir un so nou clicant damunt d'este botó o bé emprant el menú "
-"«Fitxer -> So nou»."
+"«Fitxer → So nou»."
 
 #: klettres.cpp:124
 #, kde-format
@@ -93,7 +93,7 @@ msgid ""
 "File menu, Replay Sound."
 msgstr ""
 "Podeu tornar a reproduir el mateix so clicant damunt d'este botó o emprant "
-"el menú «Fitxer -> Torna a reproduir el so»."
+"el menú «Fitxer → Torna a reproduir el so»."
 
 #: klettres.cpp:140
 #, kde-format
