@@ -135,9 +135,9 @@
 
 <note>
 <para
->Sie brauchen die Tastatureinstellungen nicht mehr zu verändern, da Sie die Werkzeugleiste <guilabel
+>Sie benötigen die Tastatureinstellungen nicht mehr zu verändern, da Sie die Werkzeugleiste <guilabel
 >Sonderzeichen</guilabel
-> benutzen können, um Sonderzeichen in jeder Sprache einzugeben. Wählen Sie im Menü <menuchoice
+> verwenden können, um Sonderzeichen in jeder Sprache einzugeben. Wählen Sie im Menü <menuchoice
 ><guimenu
 >Einstellungen</guimenu
 > <guisubmenu
@@ -145,9 +145,9 @@
 > <guimenuitem
 >Sonderzeichen</guimenuitem
 ></menuchoice
-> und die Werkzeugleiste wird am unteren Rand von &klettres; angezeigt. Klicken Sie auf den Buchstaben, den Sie eingeben wollen und er wird im Eingabefeld angezeigt. Diese Werkzeugleiste können Sie auf dem Bildschirm beliebig verschieben.</para>
+> und die Werkzeugleiste wird am unteren Rand von &klettres; angezeigt. Klicken Sie auf den Buchstaben, den Sie eingeben möchten und er wird im Eingabefeld angezeigt. Diese Werkzeugleiste können Sie auf dem Bildschirm beliebig verschieben.</para>
 <para
->Falls Sie lieber die Tastaturbelegung ändern möchten, benutzen Sie die &systemsettings; und wählen aus der Kategorie <guilabel
+>Falls Sie lieber die Tastaturbelegung ändern möchten, verwenden Sie die &systemsettings; und wählen aus der Kategorie <guilabel
 >Hardware</guilabel
 > <guimenu
 >Eingabegeräte</guimenu
@@ -159,7 +159,7 @@
 
 <chapter id="using-klettres">
 <title
->&klettres; benutzen</title>
+>&klettres; verwenden</title>
 <para
 >&klettres; hat 4 Schwierigkeitsstufen. Die Stufen 1 und 2 behandeln das  Alphabet und die Stufen 3 und 4 betreffen die Silben. Bei sehr jungen Kindern (2 1/2 bis 4) würde ich vorschlagen, dass sie auf Ihrem Schoß vor dem Computer sitzen und das Spiel zusammen spielen.</para>
 
@@ -249,7 +249,7 @@
 <para
 >Klicken Sie in das Auswahlfeld <guilabel
 >Spielstufe</guilabel
-> oder benutzen Sie das Menü <guilabel
+> oder verwenden Sie das Menü <guilabel
 >Spielstufe</guilabel
 >, um die Spielstufe 2 einzustellen. In dieser Schwierigkeitsstufe hört der Benutzer nur den Laut des Buchstabens und muss ihn dann eingeben. Bei einer falschen Eingabe wird der richtige Buchstabe angezeigt, um dem Benutzer eine Hilfestellung zu geben.</para>
 </sect1>
@@ -310,7 +310,7 @@
 > <para
 >Klicken Sie in das Auswahlfeld <guilabel
 >Spielstufe</guilabel
-> oder benutzen Sie das Menü <guilabel
+> oder verwenden Sie das Menü <guilabel
 >Spielstufe</guilabel
 >, um Spielstufe 4 einzustellen. In dieser Schwierigkeitsstufe hört der Benutzer nur den Laut der Silbe und muss ihn dann eingeben. Diese Stufe ist sehr schwierig für ein kleines Kind.</para>
 
@@ -339,7 +339,7 @@
 >&klettres; einrichten ...</guimenuitem
 > die Seite <guilabel
 >Schrifteinstellungen</guilabel
->, auf der Sie eine neue Schrift auswählen können. Diese Schrift wird für die angezeigten Buchstaben/Silben und auch für das Eingabefeld benutzt. </para>
+>, auf der Sie eine neue Schrift auswählen können. Diese Schrift wird für die angezeigten Buchstaben/Silben und auch für das Eingabefeld verwendet. </para>
 
 <warning>
 <para
@@ -419,7 +419,7 @@
 > <guimenuitem
 >Neue Sprache herunterladen ...</guimenuitem
 ></menuchoice
-> öffnen Sie einen Dialog, der die Liste der verfügbaren Sprachen anzeigt. Um diese Funktion benutzen zu können, müssen Sie mit dem Internet verbunden sein.</para>
+> öffnen Sie einen Dialog, der die Liste der verfügbaren Sprachen anzeigt. Um diese Funktion verwenden zu können, müssen Sie mit dem Internet verbunden sein.</para>
 <screenshot>
 <screeninfo
 >Der Dialog <quote
@@ -828,7 +828,7 @@
 >-Kodierung (in &kate; in dem Auswahlfeld oben rechts).</para>
 
 <para
->Die Laute sollten im ogg- Format vorliegen und lang genug für das Abspielen für die Audiowiedergabe sein, d. h. Dauer der Aufnahme etwa 1,5 bis 2 Sekunden. Packen Sie alle Dateien als tar-Archiv und schicken Sie sie an die Mailingliste <email
+>Die Laute sollten im ogg- Format vorliegen und lang genug für das Abspielen für die Audiowiedergabe sein, d. h. Dauer der Aufnahme etwa 1,5 bis 2 Sekunden. Packen Sie alle Dateien als tar-Archiv und schicken Sie sie an die Mailingliste <email
 >kde-edu@kde.org</email
 >. </para>
 
@@ -864,10 +864,10 @@
 </question>
 <answer>
 <para
->&klettres; braucht für Tschechisch und Slowakisch die Schrift Arial. Haben Sie diese Schrift nicht installiert, suchen Sie sie in Ihrer Distribution.</para
+>&klettres; benötigt für Tschechisch und Slowakisch die Schrift Arial. Haben Sie diese Schrift nicht installiert, suchen Sie sie in Ihrer Distribution.</para
 > 
 <para
->Wenn Sie &Windows; auf Ihrem Computer installiert haben, können Sie dessen TTF-Schriften (Arial ist darin enthalten) benutzen, indem Sie in Systemeinstellungen -&gt; <guilabel
+>Wenn Sie &Windows; auf Ihrem Computer installiert haben, können Sie dessen TTF-Schriften (Arial ist darin enthalten) verwenden, indem Sie in Systemeinstellungen -&gt; <guilabel
 >Systemverwaltung</guilabel
 > -&gt; <guilabel
 >Schriftarteninstallation</guilabel
