@@ -91,7 +91,7 @@ msgid ""
 "File menu, Replay Sound."
 msgstr ""
 "Sie können denselben Laut erneut abspielen, indem Sie auf diesen Knopf "
-"klicken oder den Eintrag „Laut wiederholen“ im Menü Datei benutzen."
+"klicken oder den Eintrag „Laut wiederholen“ im Menü Datei verwenden."
 
 #: klettres.cpp:140
 #, kde-format
