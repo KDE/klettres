@@ -1,0 +1,1040 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klettres" lang="&language;">
+
+<bookinfo>
+<title
+>Руководство пользователя &klettres;</title>
+
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Максим</firstname
+><surname
+>Кузьмин</surname
+><affiliation
+><address
+><email
+>kuzya@isnet.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year
+><year
+>2007</year>
+<holder
+>&Anne-Marie.Mahfouf;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>29 декабря 2020 г.</date>
+<releaseinfo
+>Приложения KDE 20.12</releaseinfo>
+
+<abstract>
+<para
+>&klettres; - это приложение, разработанное специально для того, чтобы помочь пользователю изучить алфавит нового языка и научится читать простые слоги. Пользоваться приложением может как ребёнок в возрасте от двух с половиной лет, так и взрослый, который хочет изучить основы иностранного языка.</para>
+<para
+>В настоящее время доступно двадцать пять языков: арабский, бразильский португальский, чешский, датский, нидерландский, британский английский, американский английский, английский (фонетика), французский, немецкий, иврит, венгерский, итальянский, каннада, нижнесаксонский, малаялам, норвежский букмол, панджаби, луганда, хинди в латинской транскрипции, русский, испанский, словацкий, телугу и украинский, но по умолчанию устанавливаются только английский, французский и ваш язык, если он входит в этот список. </para>
+<para
+>&klettres; очень прост в использовании. Язык можно изменить в меню <guimenu
+>Язык</guimenu
+>. Кроме того, уровень от 1 до 4 можно выбрать в раскрывающемся списке на панели инструментов или в меню <guimenu
+>Уровень</guimenu
+>. Тему (цвет фона и шрифта) можно изменить в раскрывающемся списке или в меню <menuchoice
+><guimenu
+>Внешний вид</guimenu
+> <guimenuitem
+>Темы</guimenuitem
+></menuchoice
+>. Доступны четыре темы: <guimenuitem
+>Детёныш</guimenuitem
+>, <guimenuitem
+>Пустыня</guimenuitem
+>, <guimenuitem
+>Саванна</guimenuitem
+> и <guimenuitem
+>Вода</guimenuitem
+>. Наконец, режим для детей можно сменить на режим для взрослых в меню <guimenu
+>Внешний вид</guimenu
+>. </para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kdeedu</keyword>
+<keyword
+>klettres</keyword>
+<keyword
+>алфавит</keyword>
+<keyword
+>звуки</keyword>
+<keyword
+>язык</keyword>
+<keyword
+>клавиатура</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Введение</title>
+
+<para
+>&klettres; это простое приложение, которое помогает ребёнку или взрослому выучить алфавит и простые звуки на его родном или на любом другом языке. Программа выбирает произвольную букву или слог, отображает её на экране и произносит её. Затем пользователь должен напечатать эту букву или слог. Основное обучение происходит на тех уровнях, на которых буква/слог не показываются на экране, а только произносится соответствующий звук. Пользователю необязательно уметь пользоваться мышкой, поскольку необходима только клавиатура.</para>
+
+<para
+>В настоящее время доступно двадцать пять языков: см. список выше. Если язык &kde; входит в их число, то он будет выбран в программе по умолчанию, иначе по умолчанию будет установлен французский. Любой дополнительный доступный язык можно легко получить с помощью пункта меню <menuchoice
+><guimenu
+>Файл</guimenu
+><guimenuitem
+>Загрузить алфавит нового языка…</guimenuitem
+></menuchoice
+>, при условии, что компьютер подключён к Интернету.</para>
+
+<!-- add a note for the sound, what does KLettres needs -->
+
+<para
+>Два разных режима позволяют приспособить &klettres; к потребностям пользователя: полный обычный интерфейс или упрощённый. В режиме для детей строка меню не показывается: предполагается, что ребёнок не будет сам менять язык, а уровень он выбирает в раскрывающемся списке. В режиме для взрослых фон не такой детский и есть строка меню. Четыре темы (<guimenuitem
+>Детёныш</guimenuitem
+>, <guimenuitem
+>Пустыня</guimenuitem
+>, <guimenuitem
+>Саванна</guimenuitem
+> и <guimenuitem
+>Вода</guimenuitem
+>) задают разные фоны, шрифты и цвета.</para>
+
+<note>
+<para
+>Раскладка клавиатуры, соответствующая языку, больше не нужна, так как для ввода любого специального символа на любом языке можно использовать панель <guilabel
+>Специальные символы</guilabel
+>. Выберите пункт меню <menuchoice
+><guimenu
+>Настройка</guimenu
+> <guisubmenu
+>Видимые панели инструментов</guisubmenu
+><guimenuitem
+>Специальные символы</guimenuitem
+></menuchoice
+>, и панель появится в нижней части &klettres;. Щёлкните по нужной букве, и она появится в поле ввода. Эту панель можно перетаскивать в любое место экрана.</para>
+<para
+>Если предпочтительнее работать с раскладкой, соответствующей языку, используйте &systemsettings;, категория <guilabel
+>Оборудование</guilabel
+>, <guimenu
+>Устройства ввода</guimenu
+> на странице <guimenuitem
+>Клавиатура</guimenuitem
+>, чтобы установить правильную раскладку клавиатуры.</para>
+</note>
+</chapter>
+
+<chapter id="using-klettres">
+<title
+>Использование &klettres;</title>
+<para
+>В &klettres; есть 4 уровня. Уровни 1 и 2 помогают изучить алфавит, а уровни 3 и 4 - слоги. Я предполагаю, что если программой пользуется 2,5 - 4 летний ребёнок, то он сидит у вас на коленях перед компьютером и вы занимаетесь вместе.</para>
+
+<sect1 id="levels1-and2">
+<title
+>Уровни 1 и 2</title>
+
+<screenshot>
+<screeninfo
+>Снимок &klettres; - уровень 1</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres1.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; - уровень 1</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Уровень 1, язык французский, тема «Пустыня», режим <emphasis
+>для взрослых</emphasis
+>.</para>
+<note>
+<para
+>Если язык &kde; входит в число поддерживаемых, то при первом запуске &klettres; будет использоваться именно он. Для других языков по умолчанию используется английский. &klettres; поставляется с английским и французским языками, а также с языком по умолчанию, если он входит в число перечисленных выше; дополнительные языки можно получить с помощью пункта меню <menuchoice
+><guimenu
+>Файл</guimenu
+> <guimenuitem
+>Загрузить алфавит нового языка…</guimenuitem
+></menuchoice
+> при условии, что есть подключение к Интернету. </para>
+</note>
+<para
+>На уровне 1 пользователь видит букву и слышит её. Затем он должен напечатать эту букву в окне. Если введена правильная буква, появляется следующая (без нажатия клавиши &Enter; или какой-либо другой). Если пользователь вводит неправильную букву, то программа снова озвучивает её. На этом уровне пользователь запоминает буквы, связывает их со звуком и находит их на клавиатуре. </para>
+
+<note>
+<para
+>Пользователь может вводить буквы как в нижнем, так и в верхнем регистре. Буквы автоматически преобразуются в верхний регистр, чтобы ребёнок мог сопоставить их с изображёнными на клавиатуре. Одновременно он может вводить только одну букву.</para>
+<para
+>Нажимать &Enter; после ввода буквы в поле не нужно: программа немного ждёт, прежде чем проверить букву. Эта пауза нужна, чтобы маленький ребёнок успел понять, что он напечатал, особенно если буква неверная. Изменить паузу можно на странице <guilabel
+>Задержка</guilabel
+> диалога <menuchoice
+><guimenu
+>Настройка</guimenu
+><guimenuitem
+>Настроить &klettres;…</guimenuitem
+></menuchoice
+>: там задаются два значения, одно для режима для детей и одно для режима для взрослых. </para>
+</note>
+
+<para
+>После первого раза параметры языка сохраняются в файле конфигурации при закрытии &klettres; и загружаются при следующем запуске вместе с уровнем, на котором остановились. </para>
+<para
+>Режим (детский или взрослый) сохраняется в конфигурационном файле до тех пор, пока его не изменят.</para>
+<para
+>Буквы появляются в случайном порядке. Их порядок каждый раз разный.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Снимок &klettres; - уровень 2</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; - уровень 2</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para
+>Это снимок экрана уровня 2 в режиме <emphasis
+>для детей</emphasis
+>, с темой <emphasis
+>Детёныш</emphasis
+> и датским языком.</para>
+
+<para
+>Если выбрать <guilabel
+>Уровень 2</guilabel
+> в раскрывающемся списке уровней или в меню <guimenu
+>Уровень</guimenu
+>, откроется уровень 2. На нём пользователь только слышит произношение буквы и должен её напечатать. Если он ошибается, буква показывается, чтобы помочь ему.</para>
+</sect1>
+
+<sect1 id="levels3-and4">
+<title
+>Уровни 3 и 4</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Снимок &klettres; - уровень 3</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres3.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; - уровень 3</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+
+<para
+>На рисунке изображён &klettres; на уровне 3 в режиме <emphasis
+>для взрослых</emphasis
+>, с темой <emphasis
+>Саванна</emphasis
+> и чешским языком. </para>
+
+<para
+>На 3 уровне пользователь видит и слышит слог. Затем он должен ввести его в окно. Если первая буква введена неверно, то пользователь не может ввести вторую. Буква исчезает и ему приходится пробовать заново. Количество букв 2 или 3, в зависимости от языка.</para>
+
+<screenshot>
+<screeninfo
+>Снимок &klettres; - уровень 4</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres4.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>&klettres; - уровень 4</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>На этом рисунке изображён &klettres; на уровне 4 в режиме <emphasis
+>для детей</emphasis
+>, с темой <emphasis
+>Пустыня</emphasis
+> и словацким языком. </para>
+
+<para
+>Звуки произносятся в произвольном порядке.</para
+> <para
+>Если выбрать <guilabel
+>Уровень 4</guilabel
+> в раскрывающемся списке уровней или в меню <guimenu
+>Уровень</guimenu
+>, откроется уровень 4. На нём пользователь слышит только произношение слога и должен ввести его буквы. Этот уровень довольно сложен для маленького ребёнка.</para>
+
+</sect1>
+
+<sect1 id ="configuring">
+<title
+>Диалог настройки</title>
+<para
+>Диалог настройки состоит из двух страниц: <guilabel
+>Шрифт</guilabel
+> и <guilabel
+>Задержка</guilabel
+>.</para>
+
+<sect2 id="about-font">
+<title
+>О шрифте</title>
+
+<para
+>Шрифт, которым показываются буквы, легко изменить: в некоторых дистрибутивах системный шрифт по умолчанию выглядит просто безобразно. В режиме для взрослых в диалоге <menuchoice
+><guimenu
+>Настройка</guimenu
+><guimenuitem
+>Настроить &klettres;…</guimenuitem
+></menuchoice
+> есть страница <guilabel
+>Шрифт</guilabel
+> с выбором шрифта. Новый шрифт применяется и к показываемой букве или слогу, и к полю ввода. </para>
+
+<warning>
+<para
+>Изменение шрифта также полезно, поскольку некоторые шрифты (например, Helvetica) неправильно показывают восточноевропейские языки, такие как чешский и словацкий. Если некоторые буквы или слоги не показываются, измените шрифт, например, на Arial. </para>
+</warning>
+
+<para
+>Здесь же можно выбрать удобный размер. Он сохраняется в файле конфигурации. </para>
+
+<screenshot>
+<screeninfo
+>Выбор шрифта</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres5.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>Выбор шрифта</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>Здесь вы видите Диалог выбора шрифта программы &klettres; . </para>
+</sect2>
+
+<sect2 id="timers">
+<title
+>Задержка</title>
+
+<para
+>Задержка — это время между двумя буквами, то есть время, в течение которого показывается буква. Оно задаётся в десятых долях секунды. </para>
+
+<para
+>На странице <guilabel
+>Задержка</guilabel
+> диалога <menuchoice
+><guimenu
+>Настройка</guimenu
+> <guimenuitem
+>Настроить &klettres;…</guimenuitem
+></menuchoice
+> задаются два значения: <guilabel
+>Таймер для ребёнка</guilabel
+> и <guilabel
+>Таймер для взрослого</guilabel
+>. По умолчанию это 4 десятых секунды в режиме для детей и 2 десятых секунды в режиме для взрослых. Чем больше задержка, тем больше времени, чтобы увидеть свои ошибки.</para>
+
+<screenshot>
+<screeninfo
+>Снимок &klettres;: параметры задержки</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres6.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Снимок &klettres;: параметры задержки</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+<sect1 id="Get-new-stuff">
+<title
+>Получение нового языка</title>
+<para
+>&klettres; можно использовать для изучения нового языка. При выборе пункта меню <menuchoice
+><guimenu
+>Файл</guimenu
+> <guimenuitem
+>Загрузить алфавит нового языка…</guimenuitem
+></menuchoice
+> появится диалог со списком доступных языков (для использования этой возможности требуется подключение к Интернету).</para>
+<screenshot>
+<screeninfo
+>Диалог получения нового языка</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Диалог получения нового языка</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para
+>Чтобы установить язык, нажмите кнопку <guilabel
+>Установить</guilabel
+> справа от нужного языка.</para>
+<para
+>Учтите, что размер некоторых файлов составляет несколько МБ, поэтому загрузка может быть медленной в зависимости от скорости подключения.</para>
+<para
+>После загрузки файл устанавливается автоматически, а после закрытия диалога загрузки новый язык появится в меню <guimenu
+>Язык</guimenu
+>, и им можно сразу пользоваться.</para>
+
+<para
+>После загрузки языка кнопка <guilabel
+>Установить</guilabel
+> меняется на <guilabel
+>Удалить</guilabel
+>.</para>
+<para
+>На следующем снимке показан установленный датский язык.</para>
+<screenshot>
+<screeninfo
+>Датский язык установлен</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>Датский язык установлен</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>Список команд</title>
+
+<sect1 id="klettres-mainwindow">
+<title
+>Главное окно &klettres;</title>
+
+<sect2>
+<title
+>Меню «Файл»</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>N</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Файл</guimenu
+> <guimenuitem
+>Произнести</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Произносит</action
+> новый звук.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>F5</keycap
+> </shortcut
+> <guimenu
+>Файл</guimenu
+> <guimenuitem
+>Повторить произношение</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Произносит</action
+> тот же звук ещё раз.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Файл</guimenu
+> <guimenuitem
+>Загрузить алфавит нового языка…</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Открывает</action
+> диалог загрузки нового языка для &klettres;.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Файл</guimenu
+> <guimenuitem
+>Выход</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Выход</action
+> из &klettres;.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Меню «Уровень»</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Уровень</guimenu
+> <guimenuitem
+>Уровень 1</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Выбирает</action
+> уровень 1 (буква показывается и произносится).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Уровень</guimenu
+> <guimenuitem
+>Уровень 2</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Выбирает</action
+> уровень 2 (буква не показывается, только звук).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Уровень</guimenu
+> <guimenuitem
+>Уровень 3</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Выбирает</action
+> уровень 3 (слог показывается и произносится).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Уровень</guimenu
+> <guimenuitem
+>Уровень 4</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Выбирает</action
+> уровень 4 (слог не показывается, только звук).</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+<sect2>
+<title
+>Меню «Язык»</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Язык</guimenu
+> <guimenuitem
+>Английский</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Выбирает</action
+> английский язык.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Язык</guimenu
+> <guimenuitem
+>Французский</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Выбирает</action
+> французский язык.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>Меню «Внешний вид»</title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Внешний вид</guimenu
+> <guisubmenu
+>Темы</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>Подменю для <action
+>выбора</action
+> темы: «Детёныш», «Пустыня», «Саванна» или «Вода».</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>K</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Внешний вид</guimenu
+> <guimenuitem
+>Режим для детей</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Включает</action
+> режим для детей: без строки меню.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>G</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Внешний вид</guimenu
+> <guimenuitem
+>Режим для взрослых</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>Включает</action
+> режим для взрослых: обычный интерфейс.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Кроме того, в &klettres; имеются стандартные пункты меню &kde; <guimenu
+>Настройка</guimenu
+> и <guimenu
+>Справка</guimenu
+>; дополнительные сведения приведены в разделах <ulink url="help:/fundamentals/menus.html#menus-settings"
+>Меню «Настройка»</ulink
+> и <ulink url="help:/fundamentals/menus.html#menus-help"
+>Меню «Справка»</ulink
+> руководства «Основы &kde;». </para>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="sounds">
+<title
+>Добавление Звуков в &klettres;</title>
+
+<para
+>Если нужно добавить звуки на своём языке, сделать это очень просто. Запишите звуки алфавита и поместите их в папку с именем «alpha». Затем запишите наиболее употребительные слоги и поместите их в папку с именем «syllab».</para
+> 
+<para
+>Создайте текстовый файл <filename
+>sounds.xml</filename
+>, желательно с помощью &kate; или другого редактора, поддерживающего разные кодировки. Внесите в этот файл все записанные звуки алфавита и слогов, как в этом примере для чешского языка:</para>
+<programlisting
+>&lt;klettres&gt;
+&lt;language code="cs"&gt;
+    &lt;menuitem&gt;
+      &lt;label&gt;&amp;Czech&lt;/label&gt;
+    &lt;/menuitem&gt;
+    &lt;alphabet&gt;
+        &lt;sound name="A" file="cs/alpha/a.ogg" /&gt;
+        ...
+    &lt;/alphabet&gt;
+    &lt;syllables&gt;
+        &lt;sound name="BA" file="cs/syllab/ba.ogg" /&gt;
+        ...
+    &lt;/syllables&gt;
+  &lt;/language&gt;
+&lt;/klettres&gt;</programlisting>
+<para
+>Замените «cs» двухбуквенным кодом, а «Czech» — названием своего языка. Названия звуков записываются специальными символами вашего языка в верхнем регистре в кодировке UTF-8.</para>
+
+<para
+>Кроме того, можно перечислить специальные буквы вашего языка, чтобы по ним создать панель инструментов <guimenuitem
+>Специальные символы</guimenuitem
+>. Создайте текстовый файл <filename
+>cs.txt</filename
+> (замените «cs» двухбуквенным кодом своего языка), в каждой строке которого записана одна специальная буква в верхнем регистре. Сохраните оба текстовых файла в кодировке <quote
+>utf8</quote
+> (её можно выбрать в раскрывающемся списке в правом верхнем углу &kate;).</para>
+
+<para
+>Звуки должны быть в формате ogg и достаточно длинными, чтобы проигрыватель звука смог их воспроизвести (длительностью от 1,5 до 2 секунд; если они слишком короткие, добавьте тишину). Затем создайте архив tar со всем этим и отправьте его в список рассылки <email
+>kde-edu@kde.org</email
+>. </para>
+
+<para
+>Более актуальные инструкции по добавлению нового языка приведены на <ulink url="https://edu.kde.org/klettres/add_language.php"
+>веб-сайте &klettres;</ulink
+>. </para>
+</chapter>
+
+<chapter id="faq">
+<title
+>Вопросы и ответы</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>Не появляется фоновый рисунок.</para>
+</question>
+<answer>
+<para
+>При самостоятельной сборке &klettres; необходимо настроить программу с параметром <option
+>--prefix</option
+>, значение которого — путь к папке &kde;, или добавить эту папку в переменную PATH.</para
+> </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Я не вижу некоторых букв на значках панели <guimenuitem
+>Специальные символы</guimenuitem
+>. Вместо них показываются прямоугольники, или для некоторых языков значки слишком малы.</para>
+</question>
+<answer>
+<para
+>Для работы &klettres; с чешским и словацким языками требуется шрифт Arial, а если этот шрифт не установлен, обратитесь в службу поддержки вашего дистрибутива за разъяснениями, как его установить.</para
+> 
+<para
+>Если на компьютере установлена &Windows;, можно использовать TTF-шрифты из &Windows; (включая Arial) через <guilabel
+>Управление шрифтами</guilabel
+> в категории <guilabel
+>Оформление</guilabel
+> в &systemsettings; и добавить папку шрифтов &Windows;.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>Почему языков всего двадцать пять?</para>
+</question>
+<answer>
+<para
+>Чтобы добавить новый язык, нужны звуки алфавита и некоторых основных слогов. Носитель нового языка должен записать эти звуки в формате ogg. Для уровней 3 и 4 слоги должны быть выбраны учителем или кем-то, кто знает, как обучать детей: это должны быть слоги, которые необходимо изучать сразу после изучения алфавита, чтобы хорошо изучить основы этого языка. Отправьте письмо на адрес <email
+>kde-edu@kde.org</email
+>, если можете это сделать. Подробные инструкции по добавлению нового языка приведены на <ulink url="https://edu.kde.org/klettres/add_language.php"
+>веб-сайте &klettres;</ulink
+>.</para
+> </answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Авторские права и лицензия</title>
+
+<para
+>&klettres; </para>
+<para
+>© &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;, 2001–2007 (программа) </para>
+<para
+>Автор выражает благодарность за помощь по созданию KLettres следующим людям: <itemizedlist>
+<listitem
+><para
+>Звуки для бразильского португальского: Lindonjohnson Monte (отец) и Michelle Monte, 9 лет (сын) <email
+>lindon_johnson@brturbo.com.br</email
+></para
+> </listitem>
+<listitem
+><para
+>Чешские звуки: Eva Mikulčíková <email
+>evmi@seznam.cz</email
+></para
+> </listitem>
+<listitem
+><para
+>Датские звуки: Erik Kjaer Pedersen <email
+>erik@binghamton.edu</email
+></para
+> </listitem>
+<listitem
+><para
+>Немецкие звуки: Geert Stams <email
+>geert@pa3csg.myweb.nl</email
+></para
+> </listitem>
+<listitem
+><para
+>Английские звуки: Robert Wadley <email
+>robntina@juno.com</email
+></para
+></listitem>
+<listitem
+><para
+>Французские звуки: Ludovic Grossard <email
+>grossard@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>Немецкие звуки: Helmut Kriege <email
+>h.kriege@freenet.de</email
+></para
+></listitem>
+<listitem
+><para
+>Звуки для иврита: Assaf Gorgon <email
+>assafgordon@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Итальянские звуки: Pietro Pasotti <email
+>pietro@itopen.it</email
+></para
+></listitem>
+<listitem
+><para
+>Звуки для каннада: Vikram Vincent <email
+>vincentvikram@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Звуки для нижнесаксонского: Manfred Wiese и Sönke Dibbern <email
+>s_dibbern@web.de</email
+></para
+></listitem>
+<listitem
+><para
+>Звуки для луганда: John Magoye и Cormac Lynch <email
+>cormaclynch@eircom.net</email
+></para
+></listitem>
+<listitem
+><para
+>Звуки для хинди в латинской транскрипции: Vikas Kharat <email
+>kharat@sancharnet.in</email
+></para
+></listitem>
+<listitem
+><para
+>Испанские звуки: Ana Belén Caballero и Juan Pedro Paredes <email
+>neneta @iquis.com</email
+></para
+></listitem>
+<listitem
+><para
+>Словацкие звуки: Silvia Motyčková and Jozef Říha <email
+>silviamotycka@seznam.cz</email
+></para
+></listitem>
+<listitem
+><para
+>Звуки для телугу: Pavithran Shakamuri <email
+>pavithran.s@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>Исходные значки: &Primoz.Anzur; <email
+>zerokode@yahoo.com</email
+></para
+></listitem>
+<listitem
+><para
+>Поддержка и руководство по написанию кода: &Robert.Gogolok; &Robert.Gogolok.mail;</para
+></listitem>
+<listitem
+><para
+>Значок &SVG;: Chris Luetchford <email
+>chris@os11.com</email
+></para
+></listitem>
+<listitem
+><para
+>Код для создания значков специальных символов: Peter Hedlund <email
+>peter@peterandlinda.com</email
+></para
+></listitem>
+<listitem
+><para
+>Перенос на KConfig XT, помощь в программировании: &Waldo.Bastian; &Waldo.Bastian.mail;</para
+></listitem>
+<listitem
+><para
+>Значки &SVG; для детей и взрослых, тема «Пустыня»: &Danny.Allen; <email
+>dannya40uk@yahoo.co.uk</email
+></para
+></listitem>
+<listitem
+><para
+>Элемент выбора задержки: Michael Goettsche <email
+>michael.goettsche@kdemail.net</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>© &Anne-Marie.Mahfouf;&Anne-Marie.Mahfouf.mail;, документация, 2001-2006 </para>
+
+<para
+>Перевод: Максим Кузьмин <email
+>kuzya@isnet.ru</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
