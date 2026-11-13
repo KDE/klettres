@@ -1,0 +1,1038 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Arabic "INCLUDE"
+><!-- change language only here -->
+]>
+
+<book id="klettres" lang="&language;">
+
+<bookinfo>
+<title
+>دليل حروفك</title>
+
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2001</year
+><year
+>2007</year>
+<holder
+>&Anne-Marie.Mahfouf;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2020-12-29</date>
+<releaseinfo
+>تطبيقات 20.12</releaseinfo>
+
+<abstract>
+<para
+>حروفك هو تطبيق صُمم خصيصًا لمساعدة المستخدم على تعلم الأبجدية في لغة جديدة ثم تعلم قراءة المقاطع البسيطة. يمكن أن يكون المستخدم طفلًا صغيرًا يبلغ من العمر سنتين ونصف أو بالغًا يرغب في تعلم أساسيات لغة أجنبية.</para>
+<para
+>خمس وعشرون لغة متاحة حاليًا: العربية، البرتغالية البرازيلية، التشيكية، الدنماركية، الهولندية، الإنجليزية البريطانية، الإنجليزية الأمريكية، الإنجليزية الصوتية، الفرنسية، الألمانية، العبرية، المجرية، الإيطالية، الكانادا، الساكسونية المنخفضة، المالايالامية، النرويجية بوكمول، البنجابية، اللوغندية، الهندية الرومانية، الروسية، الإسبانية، السلوفاكية، التيلجو والأوكرانية، ولكن فقط الإنجليزية والفرنسية ولغتك إذا كانت من بين تلك اللغات مثبتة مبدئيًا. </para>
+<para
+>استخدام حروفك سهل حقًا. يمكن تغيير اللغة باستخدام قائمة <guimenu
+>اللغة</guimenu
+>. يمكن للمستخدم أيضًا اختيار المستوى من 1 إلى 4 في مربع مركب في شريط الأدوات أو عبر قائمة <guimenu
+>المستوى</guimenu
+>. يمكن تغيير السمات (الخلفية ولون الخط) في مربع مركب أو في قائمة <menuchoice
+><guimenu
+>المظهر</guimenu
+> <guimenuitem
+>السمات</guimenuitem
+></menuchoice
+>. أربع سمات متاحة: <guimenuitem
+>طفل</guimenuitem
+>، <guimenuitem
+>صحراء</guimenuitem
+>، <guimenuitem
+>سافانا</guimenuitem
+> و<guimenuitem
+>مائي</guimenuitem
+>. أخيرًا، يمكن تغيير الوضع من طفل إلى بالغ باستخدام قائمة <guimenu
+>المظهر</guimenu
+>. </para>
+
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>kdeedu</keyword>
+<keyword
+>حروفك</keyword>
+<keyword
+>الأبجدية</keyword>
+<keyword
+>أصوات</keyword>
+<keyword
+>اللغة</keyword>
+<keyword
+>لوحة المفاتيح</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>مقدمة</title>
+
+<para
+>حروفك هو تطبيق بسيط جدًا يساعد طفلًا أو بالغًا على تعلم الأبجدية وبعض الأصوات البسيطة بلغته الخاصة أو بلغة أخرى. يختار البرنامج حرفًا أو مقطعًا عشوائيًا، ويُعرض هذا الحرف/المقطع ويُشغل الصوت. يجب على المستخدم بعد ذلك كتابة هذا الحرف أو المقطع. يتم التدريب في المستويات التي لا يُعرض فيها الحرف/المقطع، بل يُشغل الصوت فقط. لا يحتاج المستخدم إلى معرفة كيفية استخدام الفأرة، بل لوحة المفاتيح فقط.</para>
+
+<para
+>خمس وعشرون لغة متاحة حاليًا: انظر القائمة أعلاه. إذا كانت لغة كيدي الخاصة بك من بين تلك اللغات، فسيتم اعتبارها مبدئية، وإلا فالفرنسية هي المبدئية. يمكنك بسهولة الحصول على أي لغة إضافية متاحة باستخدام عنصر القائمة <menuchoice
+><guimenu
+>ملف</guimenu
+><guimenuitem
+>الحصول على الأبجدية بلغة جديدة...</guimenuitem
+></menuchoice
+>، بشرط أن يكون حاسوبك متصلًا بالإنترنت.</para>
+
+<!-- add a note for the sound, what does KLettres needs -->
+
+<para
+>يسمح لك وضعان مختلفان بتكييف حروفك حسب حاجتك والحصول على الواجهة الكاملة المعتادة أو واجهة مبسطة. بالنسبة للطفل، لم يعد شريط القوائم مرئيًا. نفترض أن الطفل لن يرغب في ضبط اللغة بنفسه. يسمح له مربع مركب باختيار المستويات المختلفة. بالنسبة للمستخدم الأكبر سنًا، الخلفية ليست طفولية جدًا وشريط القوائم موجود في نمط البالغ. أربع سمات مختلفة (<guimenuitem
+>طفل</guimenuitem
+>، <guimenuitem
+>صحراء</guimenuitem
+>، <guimenuitem
+>سافانا</guimenuitem
+> و<guimenuitem
+>مائي</guimenuitem
+>) تضبط خلفية مختلفة بخطوط وألوان مختلفة.</para>
+
+<note>
+<para
+>لم تعد بحاجة إلى تخطيط لوحة المفاتيح للغة بعد الآن حيث يمكنك استخدام شريط أدوات <guilabel
+>الأحرف الخاصة</guilabel
+> لكتابة أي حرف خاص في كل لغة. حدد عنصر القائمة <menuchoice
+><guimenu
+>الإعدادات</guimenu
+> <guisubmenu
+>أشرطة الأدوات المعروضة</guisubmenu
+><guimenuitem
+>الأحرف الخاصة</guimenuitem
+></menuchoice
+> وسيظهر شريط الأدوات في أسفل حروفك. انقر على الحرف الذي تريده وسيظهر في حقل الإدخال. يمكن سحب شريط الأدوات هذا إلى أي مكان على شاشتك.</para>
+<para
+>إذا كنت تفضل الحصول على تخطيط لوحة المفاتيح للغة، فيرجى استخدام &systemsettings;، في الفئة <guilabel
+>العَتاد</guilabel
+>، <guimenu
+>أجهزة الإدخال</guimenu
+> في الصفحة <guimenuitem
+>لوحة المفاتيح</guimenuitem
+> لضبط تخطيط لوحة المفاتيح الصحيح.</para>
+</note>
+</chapter>
+
+<chapter id="using-klettres">
+<title
+>استخدام حروفك</title>
+<para
+>حروفك لديه 4 مستويات. يتعامل المستويان 1 و2 مع الأبجدية ويتعلق المستويان 3 و4 بالمقاطع. بالنسبة لطفل صغير جدًا (2 1/2 إلى 4)، أقترح أن يجلس على حجرك أمام الحاسوب وأن تلعبا اللعبة معًا.</para>
+
+<sect1 id="levels1-and2">
+<title
+>المستويان 1 و2</title>
+
+<screenshot>
+<screeninfo
+>لقطة شاشة لـ حروفك المستوى 1</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres1.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>حروفك المستوى 1</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>المستوى هو المستوى 1، اللغة هي الفرنسية، السمة هي الصحراء والوضع هو <emphasis
+>بالغ</emphasis
+>.</para>
+<note>
+<para
+>إذا كانت لغة كيدي الخاصة بك من بين اللغات المدعومة، فستكون هذه هي اللغة المبدئية في المرة الأولى التي تشغل فيها حروفك. بالنسبة للغات الأخرى، الإنجليزية هي المبدئية. يأتي حروفك مع الإنجليزية والفرنسية ولغتك المبدئية إذا كانت من بين تلك المذكورة أعلاه ويمكنك الحصول على لغات إضافية عبر عنصر القائمة <menuchoice
+><guimenu
+>ملف</guimenu
+> <guimenuitem
+>الحصول على الأبجدية بلغة جديدة...</guimenuitem
+></menuchoice
+> بشرط أن يكون لديك اتصال بالإنترنت. </para>
+</note>
+<para
+>في المستوى 1، يرى المستخدم الحرف ويسمع الصوت. ثم عليه كتابة الحرف في المربع. إذا كان صحيحًا، يظهر الحرف التالي (دون الحاجة إلى الضغط على &Enter; أو أي شيء). إذا كتب المستخدم الحرف الخطأ، يسمع الصوت مرة أخرى. في هذا المستوى، يحفظ المستخدم الحروف، ويربطها بصوتها ويتعرف عليها على لوحة المفاتيح. </para>
+
+<note>
+<para
+>يمكن للمستخدم كتابة أحرف صغيرة أو كبيرة. تُوضع الحروف آليًا بأحرف كبيرة ليطابقها الطفل مع لوحة المفاتيح. يمكنه كتابة حرف واحد فقط في كل مرة.</para>
+<para
+>عند كتابة حرف في حقل الإدخال، لا حاجة للضغط على &Enter; وينتظر البرنامج لفترة قصيرة قبل اختبار ما إذا كان الحرف صحيحًا. هذه الفترة القصيرة هي لإعطاء وقت لطفل صغير لفهم ما كتبه للتو، خاصة إذا كان هذا هو الحرف الخطأ. يمكنك تغيير هذا الوقت باستخدام عنصر القائمة <menuchoice
+><guimenu
+>الإعدادات</guimenu
+><guimenuitem
+>اضبط حروفك...</guimenuitem
+></menuchoice
+> وصفحة <guilabel
+>المؤقت</guilabel
+> التي ستظهر لك حوارًا حيث يمكنك ضبط وقتين مختلفين: واحد لـ <guilabel
+>وضع الطفل</guilabel
+> وواحد لـ <guilabel
+>وضع البالغ</guilabel
+>. </para>
+</note>
+
+<para
+>بعد المرة الأولى، يُحفظ إعداد اللغة في ملف إعدادات عند إغلاق حروفك ويُحمل في المرة التالية، مع المستوى الذي كنت فيه. </para>
+<para
+>الوضع (طفل أو بالغ) يُحفظ في ملف الإعدادات وبالتالي يبقى حتى تقوم بتغييره.</para>
+<para
+>تظهر الحروف بترتيب عشوائي. ليست متتالية بنفس الترتيب.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>لقطة شاشة لـ حروفك المستوى 2</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres2.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>حروفك المستوى 2</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+<para
+>هذه لقطة شاشة للمستوى 2 مع وضع <emphasis
+>طفل</emphasis
+>، سمة <emphasis
+>طفل</emphasis
+> ولغة دنماركية.</para>
+
+<para
+>النقر في مربع المستوى المركب واختيار <guilabel
+>المستوى 2</guilabel
+> أو استخدام قائمة <guimenu
+>المستوى</guimenu
+> ينقلك إلى المستوى 2. في هذا المستوى، يسمع المستخدم صوت الحرف فقط وعليه كتابة الحرف. إذا أخطأ، يظهر الحرف لمساعدته.</para>
+</sect1>
+
+<sect1 id="levels3-and4">
+<title
+>المستويان 3 و4</title>
+
+<para>
+<screenshot>
+<screeninfo
+>لقطة شاشة لـ حروفك المستوى 3</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres3.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>حروفك المستوى 3</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+</para>
+
+<para
+>هنا يمكنك رؤية حروفك المستوى 3، وضع <emphasis
+>بالغ</emphasis
+>، سمة <emphasis
+>سافانا</emphasis
+> ولغة تشيكية. </para>
+
+<para
+>في المستوى 3، يرى المستخدم المقطع ويسمع الصوت. ثم عليه كتابة الحروف في المربع. إذا كان الحرف الأول من الصوت خاطئًا، لا يمكن للمستخدم كتابة الحرف الثاني. يختفي الحرف وعليه المحاولة مرة أخرى. عدد الحروف هو اثنان أو ثلاثة، ويعتمد ذلك على اللغة.</para>
+
+<screenshot>
+<screeninfo
+>لقطة شاشة لـ حروفك المستوى 4</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres4.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>حروفك المستوى 4</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>هنا يمكنك رؤية حروفك المستوى 4، وضع <emphasis
+>الطفل</emphasis
+>، سمة <emphasis
+>الصحراء</emphasis
+> واللغة السلوفاكية. </para>
+
+<para
+>تظهر الأصوات بترتيب عشوائي.</para
+> <para
+>النقر على مربع المستوى المنسدل أو استخدام قائمة <guimenu
+>المستوى</guimenu
+> في شريط القوائم واختيار <guilabel
+>المستوى 4</guilabel
+> ينقلك إلى المستوى 4. في هذا المستوى، يسمع المستخدم صوت المقطع فقط وعليه كتابة الحروف. هذا المستوى صعب جدًا لطفل صغير.</para>
+
+</sect1>
+
+<sect1 id ="configuring">
+<title
+>حواري الضبط</title>
+<para
+>حوار الضبط يحتوي على صفحتين: واحدة لـ <guilabel
+>الخط</guilabel
+> والأخرى لـ <guilabel
+>المؤقت</guilabel
+>.</para>
+
+<sect2 id="about-font">
+<title
+>حول الخط</title>
+
+<para
+>يمكنك بسهولة تغيير الخط الذي يعرض الحروف. في بعض التوزيعات، الخط المبدئي المستخدم من النظام قبيح حقًا. في وضع البالغين، في عنصر القائمة <menuchoice
+><guimenu
+>الإعدادات</guimenu
+><guimenuitem
+>اضبط حروفك...</guimenuitem
+></menuchoice
+> ستجد صفحة <guilabel
+>الخط</guilabel
+> مع حوار اختيار خط. سيُطبق الخط الجديد على كل من الحرف/المقطع المعروض وحقل المستخدم. </para>
+
+<warning>
+<para
+>تغيير الخط جيد أيضًا لأن بعض الخطوط (مثل Helvetica) لا تعرض اللغات الأوروبية الشرقية مثل التشيكية والسلوفاكية بشكل صحيح. إذا لم تُعرض بعض الحروف أو المقاطع، فيرجى تغيير الخط واختيار Arial مثلًا. </para>
+</warning>
+
+<para
+>يمكنك أيضًا اختيار الحجم الذي تفضله هنا. سيُحتفظ بهذا الحجم في الضبط. </para>
+
+<screenshot>
+<screeninfo
+>لقطة شاشة لحوار اختيار خط حروفك</screeninfo>
+	<mediaobject>
+	  <imageobject>
+	    <imagedata fileref="klettres5.png" format="PNG"/>
+	  </imageobject>
+	   <textobject>
+	    <phrase
+>حوار اختيار خط حروفك</phrase>
+	  </textobject>
+	</mediaobject>
+</screenshot>
+
+<para
+>هنا يمكنك رؤية حوار اختيار خط حروفك. </para>
+</sect2>
+
+<sect2 id="timers">
+<title
+>المؤقّت</title>
+
+<para
+>يضبط المؤقت الوقت بين حرفين أي الوقت الذي يُعرض خلاله الحرف. الوحدات هي أعشار الثانية. </para>
+
+<para
+>صفحة <guilabel
+>المؤقت</guilabel
+> في عنصر القائمة <menuchoice
+><guimenu
+>الإعدادات</guimenu
+> <guimenuitem
+>اضبط حروفك...</guimenuitem
+></menuchoice
+> تحتوي على إعدادين للمؤقت: واحد لـ <guilabel
+>وضع الطفل</guilabel
+> وواحد لـ <guilabel
+>وضع البالغ</guilabel
+>. المبدئيان هما 4 أعشار ثانية لـ <guilabel
+>وضع الطفل</guilabel
+> و2 أعشار ثانية لـ <guilabel
+>وضع البالغ</guilabel
+>. زيادة الوقت تمنحك وقتًا أطول لرؤية أخطائك.</para>
+
+<screenshot>
+<screeninfo
+>لقطة شاشة لإعدادات مؤقت حروفك</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres6.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>لقطة شاشة لإعدادات مؤقت حروفك</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+
+</sect2>
+</sect1>
+<sect1 id="Get-new-stuff">
+<title
+>الحصول على لغة جديدة</title>
+<para
+>قد ترغب في استخدام حروفك لمساعدتك على تعلم لغة جديدة. باستخدام عنصر القائمة <menuchoice
+><guimenu
+>ملف</guimenu
+> <guimenuitem
+>احصل على الأبجدية بلغة جديدة...</guimenuitem
+></menuchoice
+>، سترى حوارًا جديدًا بقائمة اللغات المتاحة (تحتاج إلى الاتصال بالإنترنت لاستخدام هذه الميزة).</para>
+<screenshot>
+<screeninfo
+>حوار الحصول على لغة جديدة</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>حوار الحصول على لغة جديدة</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+<para
+>انقر على زر <guilabel
+>تثبيت</guilabel
+> على يمين اللغة التي تريد تثبيتها.</para>
+<para
+>يرجى ملاحظة أن بعض الملفات حجمها عدة ميغابايت لذا قد يكون التحميل بطيئًا حسب اتصالك.</para>
+<para
+>بعد تنزيل الملف، يُثبت آليًا وعند إغلاق حوار <guilabel
+>احصل على أشياء جديدة رائعة</guilabel
+> سترى اللغة الجديدة في قائمة <guimenu
+>اللغة</guimenu
+> ويمكنك استخدامها فورًا.</para>
+
+<para
+>عند تنزيل لغة، يمكنك رؤية زر <guilabel
+>تثبيت</guilabel
+> يتحول إلى <guilabel
+>إلغاء تثبيت</guilabel
+>.</para>
+<para
+>اللقطة التالية تظهر الدنماركية مثبتة.</para>
+<screenshot>
+<screeninfo
+>الدنماركية مثبتة</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="klettres-newstuff2.png" format="PNG"/>
+      </imageobject>
+       <textobject>
+        <phrase
+>الدنماركية مثبتة</phrase>
+      </textobject>
+    </mediaobject>
+</screenshot>
+</sect1>
+</chapter>
+
+<chapter id="commands">
+<title
+>مرجع الأوامر</title>
+
+<sect1 id="klettres-mainwindow">
+<title
+>النافذة الرئيسة لـ حروفك</title>
+
+<sect2>
+<title
+>قائمة ملف</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>ن</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>ملف</guimenu
+> <guimenuitem
+>صوت جديد</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>شغّل</action
+> صوتًا جديدًا.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycap
+>F5</keycap
+> </shortcut
+> <guimenu
+>ملف</guimenu
+> <guimenuitem
+>أعد تشغيل الصوت</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>شغّل</action
+> الصوت نفسه مرة أخرى.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>ملف</guimenu
+> <guimenuitem
+>احصل على الأبجدية بلغة جديدة...</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>يفتح</action
+> حوار <guilabel
+>احصل على أشياء جديدة رائعة</guilabel
+> لـ حروفك لتنزيل لغة جديدة.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>Q</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>ملف</guimenu
+> <guimenuitem
+>أنهِ</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>يُنهي</action
+> حروفك.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>قائمة المستوى</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>المستوى</guimenu
+> <guimenuitem
+>المستوى 1</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>اختر</action
+> المستوى 1 (عرض الحرف والصوت).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>المستوى</guimenu
+> <guimenuitem
+>المستوى 2</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>اختر</action
+> المستوى 2 (لا يُعرض حرف، صوت فقط).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>المستوى</guimenu
+> <guimenuitem
+>المستوى 3</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>اختر</action
+> المستوى 3 (عرض المقطع والصوت).</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>المستوى</guimenu
+> <guimenuitem
+>المستوى 4</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>اختر</action
+> المستوى 4 (لا يُعرض مقطع، صوت فقط).</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+<sect2>
+<title
+>قائمة اللغة</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>اللغة</guimenu
+> <guimenuitem
+>الإنجليزية</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>اختر</action
+> اللغة الإنجليزية.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>اللغة</guimenu
+> <guimenuitem
+>الفرنسية</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>اختر</action
+> اللغة الفرنسية.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect2>
+
+<sect2>
+<title
+>قائمة المظهر</title>
+
+<variablelist>
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>المظهر</guimenu
+> <guisubmenu
+>السمات</guisubmenu
+> </menuchoice
+></term>
+<listitem
+><para
+>قائمة فرعية لـ <action
+>التبديل</action
+> إلى سمة الطفل، الصحراء، السافانا أو الأكوا.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>ك</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>المظهر</guimenu
+> <guimenuitem
+>وضع الطفل</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>بدّل</action
+> وضع الطفل: لا شريط قوائم.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>غ</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>المظهر</guimenu
+> <guimenuitem
+>وضع البالغ</guimenuitem
+> </menuchoice
+></term>
+<listitem
+><para
+><action
+>بدّل</action
+> وضع البالغ: واجهة عادية.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>بالإضافة إلى ذلك، يحتوي حروفك على عناصر القوائم الشائعة في كيدي <guimenu
+>الإعدادات</guimenu
+> و<guimenu
+>المساعدة</guimenu
+>، لمزيد من المعلومات اقرأ الأقسام حول <ulink url="help:/fundamentals/menus.html#menus-settings"
+>قائمة الإعدادات</ulink
+> و<ulink url="help:/fundamentals/menus.html#menus-help"
+>قائمة المساعدة</ulink
+> من أساسيات كيدي. </para>
+
+</sect2>
+
+</sect1>
+</chapter>
+
+<chapter id="sounds">
+<title
+>إضافة أصوات إلى حروفك</title>
+
+<para
+>إذا أردت إضافة أصوات بلغتك الخاصة، فمن السهل جدًا فعل ذلك. سجّل أصوات الحروف الأبجدية وضعها في مجلد باسم 'alpha'. ثم سجّل المقاطع الأكثر شيوعًا وضعها في مجلد باسم 'syllab'.</para
+> 
+<para
+>أنشئ ملفًا نصيًا <filename
+>sounds.xml</filename
+>، ويفضل استخدام &kate; كمحرر أو محرر آخر قادر على ترميز مختلف. في هذا الملف، اكتب جميع أصوات الحروف الأبجدية والمقاطع الصوتية التي سجلتها، مثل هذا المثال للغة التشيكية:</para>
+<programlisting
+>&lt;klettres&gt;</programlisting>
+<para
+>استبدل "cs" برمز الحرفين و"Czech" باسم لغتك. اكتب أسماء الأصوات بالأحرف الكبيرة مع الأحرف الخاصة بلغتك بترميز utf8.</para>
+
+<para
+>بالإضافة إلى ذلك، يمكنك الإبلاغ عن الأحرف الخاصة في لغتك حتى نتمكن من إنشاء شريط أدوات <guimenuitem
+>الأحرف الخاصة</guimenuitem
+> بسهولة. أنشئ ملفًا نصيًا <filename
+>cs.txt</filename
+> (استبدل "cs" برمز الحرفين للغتك) مع كل حرف خاص من لغتك بالأحرف الكبيرة في سطر واحد. واحفظ كلا الملفين النصيين بترميز <quote
+>utf8</quote
+> (القائمة المنسدلة العلوية اليمنى في &kate; تسمح بذلك).</para>
+
+<para
+>يجب أن تكون الأصوات بصيغة ogg وطويلة بما يكفي لمشغل الصوت لتشغيلها (بين 1.5 و2 ثانية، يُرجى إضافة بعض الصمت إذا كانت قصيرة جدًا). ثم أنشئ حزمة tar لكل ذلك وأرسلها إلى القائمة البريدية <email
+>kde-edu@kde.org</email
+>. </para>
+
+<para
+>انظر <ulink url="https://edu.kde.org/klettres/add_language.php"
+>موقع حروفك</ulink
+> للحصول على تعليمات أحدث حول كيفية إضافة لغة جديدة. </para>
+</chapter>
+
+<chapter id="faq">
+<title
+>أسئلة وأجوبة</title>
+
+<qandaset id="faqlist">
+<qandaentry>
+<question>
+<para
+>صورة الخلفية لا تظهر.</para>
+</question>
+<answer>
+<para
+>إذا بنيت حروفك بنفسك، فأنت بحاجة إلى ضبط الخيار <option
+>--prefix</option
+> على مجلد كيدي الخاص بك أو إضافة هذا المجلد إلى مسارك.</para
+> </answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>لا أرى بعض الحروف على الأيقونات في شريط أدوات <guimenuitem
+>الأحرف الخاصة</guimenuitem
+>. أرى مستطيلات بدلًا من ذلك أو الأيقونات صغيرة جدًا لبعض اللغات.</para>
+</question>
+<answer>
+<para
+>حروفك بالتشيكية والسلوفاكية يحتاج إلى خط Arial، وإذا لم يكن هذا الخط مثبتًا لديك، يُرجى سؤال دعم توزيعتك عن كيفية تثبيته.</para
+> 
+<para
+>إذا كان لديك &Windows; على جهازك، يمكنك استخدام خطوط TTF من &Windows; (Arial من بينها) عبر <guilabel
+>إدارة الخطوط</guilabel
+> في فئة <guilabel
+>المظهر</guilabel
+> في &systemsettings; وأضف مجلد خطوط &Windows;.</para
+></answer>
+</qandaentry>
+<qandaentry>
+<question>
+<para
+>لماذا هناك خمس وعشرون لغة فقط؟</para>
+</question>
+<answer>
+<para
+>لإضافة لغة جديدة، نحتاج إلى أصوات الحروف الأبجدية وبعض المقاطع الأساسية. يجب على شخص يتحدث اللغة الجديدة كلغة أم تسجيل هذه الأصوات بصيغة ogg. للمستويين 3 و4، يجب اختيار المقاطع بواسطة معلم أو شخص يعرف كيف يتعلم الأطفال: هذه هي المقاطع التي يجب تعلمها بعد الحروف الأبجدية مباشرة لتعلم أساسيات هذه اللغة جيدًا. يُرجى إرسال بريد إلكتروني إلى <email
+>kde-edu@kde.org</email
+> إذا كنت قادرًا على فعل ذلك. انظر <ulink url="https://edu.kde.org/klettres/add_language.php"
+>موقع حروفك</ulink
+> للحصول على تعليمات مفصلة حول كيفية إضافة لغة جديدة.</para
+> </answer>
+</qandaentry>
+</qandaset>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>الحقوق والترخيص</title>
+
+<para
+>حروفك </para>
+<para
+>حقوق البرنامج 2001-2007 &Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail; </para>
+<para
+>أنا ممتن جدًا للأشخاص التاليين الذين كانت مساهمتهم ذات قيمة كبيرة: <itemizedlist>
+<listitem
+><para
+>أصوات البرتغالية البرازيلية: Lindonjohnson Monte (الأب) وMichelle Monte 9 سنوات (الابن) <email
+>lindon_johnson@brturbo.com.br</email
+></para
+> </listitem>
+<listitem
+><para
+>أصوات التشيكية: Eva Mikulčíková <email
+>evmi@seznam.cz</email
+></para
+> </listitem>
+<listitem
+><para
+>أصوات الدنماركية: Erik Kjaer Pedersen <email
+>erik@binghamton.edu</email
+></para
+> </listitem>
+<listitem
+><para
+>أصوات الهولندية: Geert Stams <email
+>geert@pa3csg.myweb.nl</email
+></para
+> </listitem>
+<listitem
+><para
+>أصوات الإنجليزية: Robert Wadley <email
+>robntina@juno.com</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات الفرنسية: Ludovic Grossard <email
+>grossard@kde.org</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات الألمانية: Helmut Kriege <email
+>h.kriege@freenet.de</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات العبرية: Assaf Gorgon <email
+>assafgordon@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات الإيطالية: Pietro Pasotti <email
+>pietro@itopen.it</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات الكانادا: Vikram Vincent <email
+>vincentvikram@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات الساكسونية المنخفضة: Manfred Wiese وSönke Dibbern <email
+>s_dibbern@web.de</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات اللوغاندا: John Magoye وCormac Lynch <email
+>cormaclynch@eircom.net</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات الهندية الرومانية: Vikas Kharat <email
+>kharat@sancharnet.in</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات إسبانية: آنا بلين كاباييرو وخوان بيدرو باريدس <email
+>neneta @iquis.com</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات سلوفاكية: سيلفيا موتيشكوفا ويوزيف ريها <email
+>silviamotycka@seznam.cz</email
+></para
+></listitem>
+<listitem
+><para
+>أصوات تيلوغوية: بافيثران شاكاموري <email
+>pavithran.s@gmail.com</email
+></para
+></listitem>
+<listitem
+><para
+>أيقونات أصلية: &Primoz.Anzur; <email
+>zerokode@yahoo.com</email
+></para
+></listitem>
+<listitem
+><para
+>دعم وتوجيه برمجي: &Robert.Gogolok; &Robert.Gogolok.mail;</para
+></listitem>
+<listitem
+><para
+>أيقونة &SVG;: كريس لوتشفورد <email
+>chris@os11.com</email
+></para
+></listitem>
+<listitem
+><para
+>رمز لتوليد أيقونات المحارف الخاصة: بيتر هيدلند <email
+>peter@peterandlinda.com</email
+></para
+></listitem>
+<listitem
+><para
+>نقل إلى KConfig XT، مساعدة برمجية: &Waldo.Bastian; &Waldo.Bastian.mail;</para
+></listitem>
+<listitem
+><para
+>أيقونات &SVG; للأطفال والكبار، سمة الصحراء: &Danny.Allen; <email
+>dannya40uk@yahoo.co.uk</email
+></para
+></listitem>
+<listitem
+><para
+>ودجة ضبط الموقت: مايكل غوتشه <email
+>michael.goettsche@kdemail.net</email
+></para
+></listitem>
+</itemizedlist>
+</para>
+
+<para
+>حقوق نشر الوثائق 2001-2006 &Anne-Marie.Mahfouf;&Anne-Marie.Mahfouf.mail; </para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+-->
