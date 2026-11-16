@@ -1,6 +1,6 @@
 # Translation of klettres.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
-# $Id: klettres.po 1726420 2026-01-03 01:25:59Z scripty $
+# $Id$
 # $Source$
 #
 # Andrej Vernekar <andrej.vernekar@moj.net>, 2002.
