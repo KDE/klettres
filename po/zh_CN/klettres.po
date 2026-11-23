@@ -39,7 +39,7 @@ msgstr ""
 "在 $KDEDIR/share/apps/klettres/\n"
 "中找不到 sounds.xml 文件\n"
 "\n"
-"请先安装此文件并重启启动 KLettres。\n"
+"请先安装此文件并重新启动 KLettres。\n"
 "\n"
 
 #: klettres.cpp:94
