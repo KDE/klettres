@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/klettres/klettres.pot\n"
-"X-Crowdin-File-ID: 45101\n"
+"X-Crowdin-File: /kf6-stable/messages/klettres/klettres.pot\n"
+"X-Crowdin-File-ID: 50962\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,7 +39,7 @@ msgstr ""
 "在 $KDEDIR/share/apps/klettres/\n"
 "中找不到 sounds.xml 文件\n"
 "\n"
-"请先安装此文件并重启启动 KLettres。\n"
+"请先安装此文件并重新启动 KLettres。\n"
 "\n"
 
 #: klettres.cpp:94
